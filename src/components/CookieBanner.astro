@@ -3,7 +3,7 @@
 // ★277/個人情報保護法準拠
 ---
 
-<div id="cookie-banner" style="display:none;" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50">
+<div id="cookie-banner" style="display:block;" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50">
   <div class="max-w-4xl mx-auto">
     <p class="text-sm mb-3">
       🍪 本サイトは解析および広告計測のためにCookieを使用します。
@@ -79,15 +79,25 @@
     if (banner) banner.style.display = 'block';
   }
 
-  // 初期表示判定
-  document.addEventListener('DOMContentLoaded', () => {
+  // 初期表示判定 (fail-safe: 初期 visible・同意済みのみ hide)
+  function initBanner() {
     const consent = getConsent();
-    if (!consent.timestamp) {
-      showBanner();
-    } else {
-      // 既に同意済み → Analyticsに状態を通知
+    if (consent.timestamp) {
+      // 既に同意済み → 非表示・Analyticsに状態通知
+      hideBanner();
       window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: consent }));
     }
+    // 未同意 → 初期 display:block のまま表示継続
+  }
+
+  // DOMContentLoaded or 既に loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBanner);
+  } else {
+    initBanner();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
 
     // ボタンイベント
     document.getElementById('consent-accept-all')?.addEventListener('click', () => {
