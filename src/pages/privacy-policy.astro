@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+const lastUpdated = '2026-04-21';
+const contactEmail = import.meta.env.CONTACT_EMAIL || 'contact@example.com';
+---
+
+<Layout title="プライバシーポリシー｜30-50代男性向け転職比較情報サイト">
+  <main class="prose prose-slate max-w-3xl mx-auto px-4 py-8">
+    <h1>プライバシーポリシー</h1>
+    <p class="text-sm text-gray-600">最終更新: {lastUpdated}</p>
+
+    <h2>1. 個人情報の取扱い</h2>
+    <p>
+      本サイト（NY-squared 運営）は、ユーザーのプライバシーを尊重し、適用される個人情報保護法に従って運営されます。
+    </p>
+
+    <h2>2. 取得する情報と利用目的</h2>
+    <table>
+      <thead>
+        <tr><th>取得手段</th><th>取得項目</th><th>利用目的</th><th>保存期間</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Analytics 4 (GA4)</td>
+          <td>アクセス情報・端末情報・参照元・ページ遷移</td>
+          <td>サイト改善・アクセス解析</td>
+          <td>14ヶ月</td>
+        </tr>
+        <tr>
+          <td>A8.net アフィリエイト計測Cookie</td>
+          <td>クリック情報・referrer・成果情報</td>
+          <td>アフィリエイト成果の計測</td>
+          <td>90日</td>
+        </tr>
+        <tr>
+          <td>Cookie同意ログ</td>
+          <td>同意日時・同意内容（解析/広告の個別同意）・IPアドレスのハッシュ値</td>
+          <td>同意取得の証跡保管</td>
+          <td>90日</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. 第三者提供・外国移転</h2>
+    <ul>
+      <li><strong>Google LLC（米国）</strong>: GA4の解析データ（参照: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
+      <li><strong>株式会社ファンコミュニケーションズ（A8.net・日本）</strong>: アフィリエイト成果計測（参照: <a href="https://www.a8.net/privacy/" target="_blank" rel="noopener">A8.net プライバシーポリシー</a>）</li>
+    </ul>
+
+    <h2>4. Cookie 利用と同意</h2>
+    <p>
+      本サイトでは、解析および広告計測のためにCookieを使用します。初回訪問時に表示されるCookie同意バナーで、以下を個別に選択できます:
+    </p>
+    <ul>
+      <li>必須Cookie（同意管理のため・常時有効）</li>
+      <li>解析Cookie（GA4・任意）</li>
+      <li>広告Cookie（A8.net・任意）</li>
+    </ul>
+    <p>
+      <strong>Cookie同意前は、解析Cookie・広告Cookieは発火しません。</strong>同意の撤回・変更は、フッター「Cookie設定」リンクからいつでも可能です。
+    </p>
+
+    <h2>5. オプトアウト</h2>
+    <ul>
+      <li><strong>GA4オプトアウト</strong>: <a href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">Google アナリティクス オプトアウト アドオン</a></li>
+      <li><strong>A8.net オプトアウト</strong>: A8.netウェブサイトのプライバシー設定で対応</li>
+      <li><strong>Cookie全般</strong>: ブラウザ設定でCookieの無効化が可能</li>
+    </ul>
+
+    <h2>6. 開示・訂正・削除請求</h2>
+    <p>
+      ご自身の個人情報について、開示・訂正・削除・利用停止のご請求は、以下の連絡先までご連絡ください。本人確認の上、合理的な範囲で速やかに対応いたします。
+    </p>
+    <p>
+      <strong>連絡先メールアドレス</strong>: {contactEmail}<br />
+      <strong>対応時間</strong>: 平日 10:00-18:00（3営業日以内に回答）
+    </p>
+
+    <h2>7. EU居住者向け（GDPR対応方針）</h2>
+    <p>
+      本サイトは <strong>日本市場向けに提供しており、EU居住者を主要対象としていません</strong>。EU圏からのアクセスは Cloudflare Page Rules で制限しています。
+    </p>
+    <p>
+      ただし、EU居住者から本ポリシーへの問い合わせがあった場合、上記6の連絡先で対応いたします。
+    </p>
+
+    <h2>8. AI支援の透明性（EU AI Act対応方針）</h2>
+    <p>
+      本サイトの記事執筆には AI（Claude）による支援を利用しています。掲載内容は人間（運営者）が確認の上公開していますが、医療判断・診療内容は必ず公式医療機関でご確認ください。
+    </p>
+
+    <h2>9. 本ポリシーの変更</h2>
+    <p>
+      本ポリシーは適用法令の改正および本サイトの運用変更により、予告なく変更される場合があります。重要な変更時は本ページの「最終更新日」を更新します。
+    </p>
+
+    <h2>10. 運営者情報</h2>
+    <p>
+      <strong>運営者</strong>: NY-squared（個人事業）<br />
+      <strong>責任者</strong>: 新山佳達<br />
+      <strong>連絡先</strong>: {contactEmail}<br />
+      <strong>サイトの位置付け</strong>: 情報提供サイト（職業紹介事業者ではありません）
+    </p>
+
+    <p class="text-sm text-gray-500 mt-8">
+      <a href="/">トップに戻る</a> | <a href="/editorial-policy">編集ポリシー</a> | <a href="/operator-info">運営者情報</a>
+    </p>
+  </main>
+</Layout>

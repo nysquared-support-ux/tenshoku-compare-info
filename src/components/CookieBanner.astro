@@ -1,0 +1,115 @@
+---
+// Cookie同意バナー（個別同意・撤回可能）
+// ★277/個人情報保護法準拠
+---
+
+<div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50">
+  <div class="max-w-4xl mx-auto">
+    <p class="text-sm mb-3">
+      🍪 本サイトは解析および広告計測のためにCookieを使用します。
+      <a href="/privacy-policy" class="underline">プライバシーポリシー</a>をご確認の上、Cookie使用に同意するか選択してください。
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-2 mb-3">
+      <label class="flex items-center gap-2 text-sm">
+        <input type="checkbox" id="consent-analytics" class="cursor-pointer" />
+        <span>解析Cookie（GA4・サイト改善のため）</span>
+      </label>
+      <label class="flex items-center gap-2 text-sm">
+        <input type="checkbox" id="consent-advertising" class="cursor-pointer" />
+        <span>広告Cookie（A8.net・成果計測のため）</span>
+      </label>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      <button id="consent-accept-all" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm">
+        すべて同意
+      </button>
+      <button id="consent-save" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm">
+        選択を保存
+      </button>
+      <button id="consent-reject" class="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded text-sm">
+        すべて拒否
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ★277/個人情報保護法: Cookie同意管理
+  const STORAGE_KEY = 'cookie_consent_v1';
+  const CONSENT_LOG_KEY = 'cookie_consent_log';
+
+  function getConsent() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch {
+      return {};
+    }
+  }
+
+  async function setConsent(consent: { analytics: boolean; advertising: boolean }) {
+    const data = {
+      analytics: consent.analytics,
+      advertising: consent.advertising,
+      timestamp: new Date().toISOString(),
+      version: 'v1',
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+
+    // 同意ログ（IPハッシュは送信時にCloudflare側で取得）
+    const log = JSON.parse(localStorage.getItem(CONSENT_LOG_KEY) || '[]');
+    log.push(data);
+    if (log.length > 10) log.shift(); // 最新10件のみ保持
+    localStorage.setItem(CONSENT_LOG_KEY, JSON.stringify(log));
+
+    // 同意後にAnalytics発火（Custom Event）
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: data }));
+
+    hideBanner();
+  }
+
+  function hideBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.classList.add('hidden');
+  }
+
+  function showBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.classList.remove('hidden');
+  }
+
+  // 初期表示判定
+  document.addEventListener('DOMContentLoaded', () => {
+    const consent = getConsent();
+    if (!consent.timestamp) {
+      showBanner();
+    } else {
+      // 既に同意済み → Analyticsに状態を通知
+      window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: consent }));
+    }
+
+    // ボタンイベント
+    document.getElementById('consent-accept-all')?.addEventListener('click', () => {
+      setConsent({ analytics: true, advertising: true });
+    });
+
+    document.getElementById('consent-save')?.addEventListener('click', () => {
+      const analytics = (document.getElementById('consent-analytics') as HTMLInputElement)?.checked;
+      const advertising = (document.getElementById('consent-advertising') as HTMLInputElement)?.checked;
+      setConsent({ analytics, advertising });
+    });
+
+    document.getElementById('consent-reject')?.addEventListener('click', () => {
+      setConsent({ analytics: false, advertising: false });
+    });
+  });
+
+  // フッター「Cookie設定」リンクから再表示可能
+  (window as any).showCookieSettings = () => {
+    const consent = getConsent();
+    (document.getElementById('consent-analytics') as HTMLInputElement).checked = consent.analytics ?? false;
+    (document.getElementById('consent-advertising') as HTMLInputElement).checked = consent.advertising ?? false;
+    showBanner();
+  };
+</script>

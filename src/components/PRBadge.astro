@@ -1,0 +1,24 @@
+---
+// CTA直近のPR表示・打消し表示
+// ★273/景表法・ステマ規制対応
+interface Props {
+  href: string;
+  label?: string;
+}
+const { href, label = '無料カウンセリングで総額・リスク・術後対応を医師に相談する（公式サイト・PR）' } = Astro.props;
+---
+
+<div class="my-6 p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener nofollow sponsored"
+    data-cta={label}
+    class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+  >
+    {label}
+  </a>
+  <p class="text-xs text-gray-700 mt-2 text-center">
+    PR / 公式サイトへ遷移 / カウンセリングのみ無料 / 診療・治療は自費 / 当日契約は不要 / 持ち帰り検討の可否は予約時にご確認ください
+  </p>
+</div>

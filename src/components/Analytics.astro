@@ -1,0 +1,78 @@
+---
+// GA4 + A8.net アフィリエイト計測（Cookie同意ゲート）
+// ★277/個人情報保護法準拠: 同意前は発火しない
+const GA_ID = import.meta.env.PUBLIC_GA_ID || '';
+const A8_ID = import.meta.env.PUBLIC_A8_ID || '';
+---
+
+<script define:vars={{ GA_ID, A8_ID }}>
+  // ★277: Cookie同意前はタグを発火させない
+  let analyticsLoaded = false;
+  let advertisingLoaded = false;
+
+  function loadGA4() {
+    if (analyticsLoaded || !GA_ID) return;
+    analyticsLoaded = true;
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args) { window.dataLayer.push(args); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, {
+      anonymize_ip: true,        // IP匿名化（GDPR/個人情報保護対応）
+      send_page_view: true,
+    });
+
+    console.log('[Analytics] GA4 loaded with consent');
+  }
+
+  function loadA8() {
+    if (advertisingLoaded || !A8_ID) return;
+    advertisingLoaded = true;
+
+    // A8.net 計測タグ（同意後のみ）
+    const a8script = document.createElement('script');
+    a8script.async = true;
+    a8script.src = `https://statics.a8.net/a8sales/a8sales.js`;
+    a8script.setAttribute('data-a8-id', A8_ID);
+    document.head.appendChild(a8script);
+
+    console.log('[Analytics] A8.net loaded with consent');
+  }
+
+  // CookieBanner からの同意イベントを受信
+  window.addEventListener('cookie-consent-updated', (e) => {
+    const consent = e.detail || {};
+    if (consent.analytics) loadGA4();
+    if (consent.advertising) loadA8();
+  });
+
+  // 初期チェック（再訪問時の同意状態を反映）
+  document.addEventListener('DOMContentLoaded', () => {
+    try {
+      const consent = JSON.parse(localStorage.getItem('cookie_consent_v1') || '{}');
+      if (consent.analytics) loadGA4();
+      if (consent.advertising) loadA8();
+    } catch (e) {
+      console.error('[Analytics] Consent check error:', e);
+    }
+  });
+
+  // CTA クリック計測（同意済みのみ）
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('a[data-cta]');
+    if (!target) return;
+
+    if (analyticsLoaded && window.gtag) {
+      window.gtag('event', 'cta_click', {
+        cta_label: target.dataset.cta,
+        cta_url: target.href,
+      });
+    }
+  });
+</script>

@@ -1,0 +1,17 @@
+---
+/**
+ * BannerAB.astro - Placeholder for tenshoku-compare-info
+ * 転職比較サイトでは A8 個別案件 (TechGo/MyVision/ツインプロ/ユニゾン) ごとに
+ * 個別バナーコンポーネントを使う設計のため、ABC 流用 BannerAB は無効化。
+ *
+ * 各 Spoke ページ内のアフィリリンク誘導は inline placeholder で実装済。
+ * A8 提携承認後 (1-3営業日) に各 Spoke 内へ A8.net 個別 affiliate URL を埋込予定。
+ */
+interface Props {
+  pageSlug?: string;
+  position?: string;
+}
+---
+<div class="hidden" data-banner-ab-placeholder="true">
+  <!-- BannerAB placeholder for tenshoku-compare-info: A8 個別案件提携承認後に各 Spoke へ inline 実装 -->
+</div>
