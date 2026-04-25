@@ -2,10 +2,10 @@
 // CTA直近のPR表示・打消し表示
 // ★273/景表法・ステマ規制対応
 interface Props {
-  href: string;
+  href?: string;
   label?: string;
 }
-const { href, label = '無料カウンセリングで総額・リスク・術後対応を医師に相談する（公式サイト・PR）' } = Astro.props;
+const { href = '#', label = '転職エージェント公式サイトで無料相談する（PR）' } = Astro.props;
 ---
 
 <div class="my-6 p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
@@ -19,6 +19,6 @@ const { href, label = '無料カウンセリングで総額・リスク・術後
     {label}
   </a>
   <p class="text-xs text-gray-700 mt-2 text-center">
-    PR / 公式サイトへ遷移 / カウンセリングのみ無料 / 診療・治療は自費 / 当日契約は不要 / 持ち帰り検討の可否は予約時にご確認ください
+    PR / 公式サイトへ遷移 / 利用料は転職エージェントにより異なります / 在職中相談可 / 退会自由（公式利用規約参照）
   </p>
 </div>
