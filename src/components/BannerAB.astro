@@ -1,17 +1,309 @@
 ---
 /**
- * BannerAB.astro - Placeholder for tenshoku-compare-info
- * 転職比較サイトでは A8 個別案件 (TechGo/MyVision/ツインプロ/ユニゾン) ごとに
- * 個別バナーコンポーネントを使う設計のため、ABC 流用 BannerAB は無効化。
+ * BannerAB.astro - TechGo (ITエンジニアハイクラス転職) A/Bテスト対応CTAコンポーネント
+ * ★299 適用: A8 sitemicros パラメータで EPC 個別計測
  *
- * 各 Spoke ページ内のアフィリリンク誘導は inline placeholder で実装済。
- * A8 提携承認後 (1-3営業日) に各 Spoke 内へ A8.net 個別 affiliate URL を埋込予定。
+ * 4条件ランダム表示:
+ *  A (25%): テキストリンク (素材001 - 「ITエンジニアの転職なら【TechGO】」)
+ *  B (25%): バナー 300×250 (素材003 - 「転職時年収UP額平均138万円」)
+ *  C (25%): バナー 100×60 (素材004 - Tech-Go ロゴ)
+ *  D (25%): バナー 300×250 + スクロール連動フローティング (素材003)
+ *
+ * localStorage で訪問者単位の決定固定（再訪でも同じバリアント）
+ * page_slug プロパティで記事別 sitemicros 識別子を生成
+ *
+ * 作成: 2026-04-25 [ZquFwWImON] / TechGo プログラムID s00000024757003
+ * 提携承認状況: TechGo ✅ 承認済 / MyVision/ツインプロ/ユニゾン 申請中
  */
 interface Props {
-  pageSlug?: string;
-  position?: string;
+  pageSlug?: string;  // 記事別識別子 (例: 'techgo', 'myvision-comparison')
+  position?: 'hero' | 'middle' | 'footer' | 'sticky';
+  label?: string;  // 明示指定する場合の文言（未指定なら10パターン自動ローテーション）
+  ctaRotate?: boolean;  // 10パターンABローテーション有効化（default: true）
 }
+const {
+  pageSlug = 'unknown',
+  position = 'middle',
+  label,
+  ctaRotate = true,
+} = Astro.props;
+
+// CTA 10パターン（転職向け・★299 第二軸ABテスト・戦略書準拠）
+// 設計方針: 法務セーフ + 体験感・共感 + 行動明示 の3軸ブレンド
+const CTA_PATTERNS = [
+  '無料カウンセリングで自分の市場価値を確認する（PR）',                            // 0: コントロール
+  '転職の悩みを、専門家に相談してみる（無料・PR）',                                // 1: 共感型
+  '求人をまだ見ない方が良い 3つの理由（PR）',                                      // 2: 疑問解消型
+  '一人で悩まず、まずプロに相談（PR）',                                            // 3: 背中押し型
+  '30代以降の転職、何が変わるのか（PR）',                                          // 4: 事実訴求型
+  '当日契約は不要・話だけ聞いて持ち帰り可（PR）',                                  // 5: 安心訴求型
+  '年収・働き方・キャリアパスを質問する（PR）',                                    // 6: 具体質問型
+  '同じ業界からのキャリアチェンジ事例（PR）',                                      // 7: 共感連帯型
+  '30-50代の相談多数。プロのサポートを確認（PR）',                                 // 8: ターゲット明示型
+  '後悔しない選択のために、まずプロに相談（PR）',                                  // 9: 決断支援型
+];
+
+const defaultLabel = label || CTA_PATTERNS[0];
 ---
-<div class="hidden" data-banner-ab-placeholder="true">
-  <!-- BannerAB placeholder for tenshoku-compare-info: A8 個別案件提携承認後に各 Spoke へ inline 実装 -->
+
+<div class="banner-ab-root my-6" data-page-slug={pageSlug} data-position={position} data-label={defaultLabel} data-cta-rotate={ctaRotate ? '1' : '0'}>
+  <!-- デフォルト表示（JS実行前/JS無効/JSエラー時のフォールバック） -->
+  <div class="banner-ab-slot">
+    <a href={`https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6&sitemicros=fallback_${pageSlug}_${position}`}
+       target="_blank" rel="noopener nofollow sponsored"
+       class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+       data-variant="fallback" data-material="txt_001">
+      {defaultLabel}
+    </a>
+    <img border="0" width="1" height="1"
+         src="https://www16.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6"
+         alt="" loading="lazy" style="position:absolute;left:-9999px" />
+  </div>
+  <p class="text-xs text-gray-700 mt-2 text-center">
+    PR / TechGo (ITエンジニアハイクラス転職) 公式サイトへ遷移 / カウンセリング無料 / 在職中相談可 / 退会自由
+  </p>
 </div>
+
+<script define:vars={{ pageSlug, position, defaultLabel, ctaRotate, CTA_PATTERNS }}>
+  (function() {
+    const root = document.querySelector(`.banner-ab-root[data-page-slug="${pageSlug}"][data-position="${position}"]`);
+    if (!root) return;
+    const slot = root.querySelector('.banner-ab-slot');
+    if (!slot) return;
+
+    // === URLパラメータによる強制指定（テスト用・★302 検証ツール） ===
+    // ?ab=A|B|C|D で variant 強制、?cta=0-9 で CTA 強制
+    const urlParams = new URLSearchParams(window.location.search);
+    const forcedVariant = urlParams.get('ab');
+    const forcedCta = urlParams.get('cta');
+
+    // === バリアント決定 (URL強制 > localStorage固定・4条件均等分散) ===
+    let variant;
+    if (forcedVariant && ['A', 'B', 'C', 'D'].includes(forcedVariant.toUpperCase())) {
+      variant = forcedVariant.toUpperCase();
+    } else {
+      variant = localStorage.getItem('ab_variant_v1');
+      if (!variant || !['A', 'B', 'C', 'D'].includes(variant)) {
+        const r = Math.random();
+        variant = r < 0.25 ? 'A' : r < 0.50 ? 'B' : r < 0.75 ? 'C' : 'D';
+        localStorage.setItem('ab_variant_v1', variant);
+        localStorage.setItem('ab_variant_v1_set_at', new Date().toISOString());
+      }
+    }
+    root.setAttribute('data-variant', variant);
+
+    // === CTA 10パターン 第二軸決定 ===
+    let ctaIdx;
+    if (forcedCta !== null && !isNaN(parseInt(forcedCta, 10))) {
+      const forced = parseInt(forcedCta, 10);
+      if (forced >= 0 && forced < CTA_PATTERNS.length) {
+        ctaIdx = forced;
+      }
+    }
+    if (ctaIdx === undefined) {
+      ctaIdx = parseInt(localStorage.getItem('ab_cta_v1') || '-1', 10);
+      if (ctaRotate && (isNaN(ctaIdx) || ctaIdx < 0 || ctaIdx >= CTA_PATTERNS.length)) {
+        ctaIdx = Math.floor(Math.random() * CTA_PATTERNS.length);
+        localStorage.setItem('ab_cta_v1', String(ctaIdx));
+        localStorage.setItem('ab_cta_v1_set_at', new Date().toISOString());
+      }
+    }
+    const label = (ctaRotate && ctaIdx >= 0) ? CTA_PATTERNS[ctaIdx] : defaultLabel;
+    root.setAttribute('data-cta-idx', ctaRotate ? String(ctaIdx) : 'fixed');
+
+    // === sitemicros 識別子生成 ===
+    const ctaSuffix = ctaRotate ? `_cta${ctaIdx}` : '_ctafix';
+    const sitemicros = `v${variant}_${pageSlug}_${position}${ctaSuffix}`;
+
+    // === バリアント別HTML定義（TechGo 素材 001/003/004） ===
+    const variants = {
+      A: {
+        // 素材001: テキストリンク (「ITエンジニアの転職なら【TechGO】」訴求軸)
+        material: 'txt_001',
+        html: `
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6&sitemicros=${encodeURIComponent(sitemicros)}"
+             target="_blank" rel="noopener nofollow sponsored"
+             class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
+             data-variant="A" data-material="txt_001">
+            ${label}
+          </a>
+          <img border="0" width="1" height="1"
+               src="https://www16.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6"
+               alt="" loading="lazy" style="position:absolute;left:-9999px" />
+        `,
+      },
+      B: {
+        // 素材003: バナー 300×250 (「転職時年収UP額平均138万円」訴求軸)
+        material: 'banner_003_300x250',
+        html: `
+          <div class="text-center">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}"
+               target="_blank" rel="noopener nofollow sponsored"
+               data-variant="B" data-material="banner_003_300x250">
+              <img border="0" width="300" height="250" alt="TechGo - ITエンジニアハイクラス転職"
+                   src="https://www28.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"
+                   loading="lazy" style="max-width:100%;height:auto;" />
+            </a>
+            <img border="0" width="1" height="1"
+                 src="https://www14.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP"
+                 alt="" loading="lazy" style="position:absolute;left:-9999px" />
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}_text"
+               target="_blank" rel="noopener nofollow sponsored"
+               class="block mt-2 text-sm text-blue-700 underline">
+              ${label}
+            </a>
+          </div>
+        `,
+      },
+      C: {
+        // 素材004: ミニバナー 100×60 (Tech-Go ロゴのみ)
+        material: 'banner_004_100x60',
+        html: `
+          <div class="text-center">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H&sitemicros=${encodeURIComponent(sitemicros)}"
+               target="_blank" rel="noopener nofollow sponsored"
+               data-variant="C" data-material="banner_004_100x60">
+              <img border="0" width="100" height="60" alt="TechGo"
+                   src="https://www22.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003004000&mc=1"
+                   loading="lazy" style="max-width:100%;height:auto;" />
+            </a>
+            <img border="0" width="1" height="1"
+                 src="https://www14.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H"
+                 alt="" loading="lazy" style="position:absolute;left:-9999px" />
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H&sitemicros=${encodeURIComponent(sitemicros)}_text"
+               target="_blank" rel="noopener nofollow sponsored"
+               class="block mt-2 text-sm text-blue-700 underline">
+              ${label}
+            </a>
+          </div>
+        `,
+      },
+      D: {
+        // 素材003: バナー 300×250 + スクロール連動フローティング (位置最適化版)
+        material: 'banner_003_floating',
+        html: `
+          <div class="text-center">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}"
+               target="_blank" rel="noopener nofollow sponsored"
+               data-variant="D" data-material="banner_003_floating">
+              <img border="0" width="300" height="250" alt="TechGo - ITエンジニアハイクラス転職"
+                   src="https://www28.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"
+                   loading="lazy" style="max-width:100%;height:auto;" />
+            </a>
+            <img border="0" width="1" height="1"
+                 src="https://www14.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP"
+                 alt="" loading="lazy" style="position:absolute;left:-9999px" />
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=${encodeURIComponent(sitemicros)}_text"
+               target="_blank" rel="noopener nofollow sponsored"
+               class="block mt-2 text-sm text-blue-700 underline">
+              ${label}
+            </a>
+          </div>
+        `,
+        // スクロール連動フローティングは 'hero' position 時のみ追加表示
+        floatingHtml: position === 'hero' ? `
+          <div id="floating-cta-${pageSlug}" class="floating-cta" style="display:none;">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVV0H&sitemicros=${encodeURIComponent('vD_' + pageSlug + '_floating')}"
+               target="_blank" rel="noopener nofollow sponsored"
+               data-variant="D-float" data-material="banner_004_sticky"
+               class="floating-cta-link">
+              <span class="floating-cta-text">TechGo 無料登録（PR）</span>
+            </a>
+          </div>
+        ` : '',
+      },
+    };
+
+    // === HTML 注入 ===
+    const chosen = variants[variant];
+    slot.innerHTML = chosen.html;
+
+    // === D バリアントのみ: フローティングCTA を body に追加 ===
+    if (variant === 'D' && chosen.floatingHtml && position === 'hero') {
+      if (!document.getElementById(`floating-cta-${pageSlug}`)) {
+        const floatDiv = document.createElement('div');
+        floatDiv.innerHTML = chosen.floatingHtml;
+        document.body.appendChild(floatDiv.firstElementChild);
+
+        // スクロール 30%-95% でフローティング表示
+        const floatEl = document.getElementById(`floating-cta-${pageSlug}`);
+        if (floatEl) {
+          window.addEventListener('scroll', function() {
+            const scrolled = window.scrollY;
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            if (total > 0 && scrolled / total > 0.3 && scrolled / total < 0.95) {
+              floatEl.style.display = 'block';
+            } else {
+              floatEl.style.display = 'none';
+            }
+          }, { passive: true });
+        }
+      }
+    }
+
+    // === GA4 インプレッションイベント送信（Cookie同意済の場合のみ） ===
+    if (typeof window.gtag === 'function' && localStorage.getItem('cookie_consent') === 'granted') {
+      window.gtag('event', 'ab_test_impression', {
+        variant: variant,
+        material: chosen.material,
+        page_slug: pageSlug,
+        position: position,
+        cta_idx: ctaRotate ? ctaIdx : -1,
+        sitemicros: sitemicros,
+      });
+    }
+
+    // === クリック時イベント送信 ===
+    slot.querySelectorAll('a[data-variant]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof window.gtag === 'function' && localStorage.getItem('cookie_consent') === 'granted') {
+          window.gtag('event', 'ab_test_click', {
+            variant: variant,
+            material: chosen.material,
+            page_slug: pageSlug,
+            position: position,
+            cta_idx: ctaRotate ? ctaIdx : -1,
+            sitemicros: sitemicros,
+          });
+        }
+      });
+    });
+  })();
+</script>
+
+<style is:global>
+  .floating-cta {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: calc(100% - 32px);
+    max-width: 420px;
+    background: #2563eb;
+    border: 2px solid #1e40af;
+    border-radius: 9999px;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    animation: floating-cta-slide 0.3s ease-out;
+  }
+  .floating-cta-link {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    color: #ffffff !important;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .floating-cta-link:hover {
+    background: #1e40af;
+    border-radius: 9999px;
+  }
+  @keyframes floating-cta-slide {
+    from { transform: translate(-50%, 100%); opacity: 0; }
+    to { transform: translateX(-50%); opacity: 1; }
+  }
+  @media (max-width: 640px) {
+    .floating-cta-link { font-size: 14px; padding: 10px 16px; }
+  }
+</style>
