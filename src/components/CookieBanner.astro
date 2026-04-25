@@ -3,7 +3,7 @@
 // ★277/個人情報保護法準拠
 ---
 
-<div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50">
+<div id="cookie-banner" style="display:none;" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50">
   <div class="max-w-4xl mx-auto">
     <p class="text-sm mb-3">
       🍪 本サイトは解析および広告計測のためにCookieを使用します。
@@ -71,12 +71,12 @@
 
   function hideBanner() {
     const banner = document.getElementById('cookie-banner');
-    if (banner) banner.classList.add('hidden');
+    if (banner) banner.style.display = 'none';
   }
 
   function showBanner() {
     const banner = document.getElementById('cookie-banner');
-    if (banner) banner.classList.remove('hidden');
+    if (banner) banner.style.display = 'block';
   }
 
   // 初期表示判定
