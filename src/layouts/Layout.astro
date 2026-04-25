@@ -13,7 +13,8 @@ const {
 } = Astro.props;
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://tenshoku-compare-info.pages.dev';
-const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || '';
+// GSC verification: hardcoded (env var fallback も可)
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZPrhT1QR0bRiJrajC2-TjyqlvBl3gDsA';
 ---
 
 <!DOCTYPE html>
