@@ -1,7 +1,8 @@
 ---
 // GA4 + A8.net アフィリエイト計測（Cookie同意ゲート）
 // ★277/個人情報保護法準拠: 同意前は発火しない
-const GA_ID = import.meta.env.PUBLIC_GA_ID || '';
+// GA4 ハードコード (env var fallback も可) - tenshoku-compare-info: G-WVRWKB9N3S
+const GA_ID = import.meta.env.PUBLIC_GA_ID || 'G-WVRWKB9N3S';
 const A8_ID = import.meta.env.PUBLIC_A8_ID || '';
 ---
 
