@@ -40,7 +40,7 @@ const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZ
     'headline': title,
     'description': description,
     'datePublished': '2026-04-25',
-    'dateModified': '2026-04-25',
+    'dateModified': '2026-05-02',
     'author': {
       '@type': 'Organization',
       'name': 'NY-squared',
@@ -49,6 +49,16 @@ const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZ
       '@type': 'Organization',
       'name': 'NY-squared',
     },
+  })} />
+
+  <!-- 構造化データ: BreadcrumbList (★Round Y 2026-05-02 [sdKG2oTfY8]) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+      { '@type': 'ListItem', 'position': 2, 'name': title, 'item': Astro.url.href },
+    ],
   })} />
 
   <title>{title}</title>

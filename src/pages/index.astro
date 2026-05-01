@@ -5,9 +5,44 @@ import BannerAB from '../components/BannerAB.astro';
 
 const title = '30-50代男性向け 転職エージェント業種別整理 (A8.net 提携案件)';
 const description = '30代・40代・50代の男性に関連性のある転職エージェントを業種別 (IT / コンサル / 士業) に整理。A8.net 提携可能な案件のみを取り上げ、各社公式サイトの公開情報を引用しています。市場全体の比較ではありません。';
+
+// ★Round Y FAQPage schema (2026-05-02 [sdKG2oTfY8])
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': '転職エージェントの利用料金は？',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': '多くの転職エージェントは求職者側の利用料は無料です（料金は採用側企業が負担）。ただし、有料職業紹介事業の枠組みは事業者により異なるため、初回面談時に確認することが推奨されます。',
+      },
+    },
+    {
+      '@type': 'Question',
+      'name': '在職中でも利用できますか？',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': '多くのエージェントは在職中の利用に対応しています。夜間・休日のオンライン面談を案内する事業者もあります。在職中であることを伝えれば、現職への配慮（連絡時間帯の調整等）に配慮してもらえるケースが一般的です。',
+      },
+    },
+    {
+      '@type': 'Question',
+      'name': '紹介された求人は必ず応募する必要がありますか？',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': '紹介求人への応募は強制ではありません。希望と異なる場合は理由を伝えて見送ることができ、その情報をもとに次回以降の紹介精度を高めてもらう運用が一般的です。',
+      },
+    },
+  ],
+};
 ---
 
 <Layout title={title} description={description}>
+  <!-- ★Round Y FAQPage schema injection -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 
