@@ -37,11 +37,47 @@ const faqSchema = {
     },
   ],
 };
+
+// ★Round Y EXT Article schema (Hub 記事メタ・[nIJUIzG8Vg] 2026-05-05)
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-04-26',
+  'dateModified': '2026-05-05',
+  'author': {
+    '@type': 'Organization',
+    'name': 'NY-squared',
+    'url': 'https://nysquared.com/',
+  },
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'NY-squared',
+  },
+  'articleSection': '転職エージェント比較',
+};
+
+// ★Round Y EXT ItemList schema (子ページ一覧・[nIJUIzG8Vg] 2026-05-05)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '取り上げる転職エージェント (子ページ)',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'TechGo (IT エンジニア向け)', 'url': '/techgo/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'MyVision (コンサル業界専門)', 'url': '/myvision/' },
+    { '@type': 'ListItem', 'position': 3, 'name': 'Twin Pro (経営層向け)', 'url': '/twin-pro/' },
+    { '@type': 'ListItem', 'position': 4, 'name': 'Unizon IT (IT 業界専門)', 'url': '/unizon-it/' },
+  ],
+};
+
+// ★384 配列形式: 1 script で 3 schema (CWV INP 微改善・★nIJUIzG8Vg)
+const allSchemas = [faqSchema, articleSchema, itemListSchema];
 ---
 
 <Layout title={title} description={description}>
-  <!-- ★Round Y FAQPage schema injection -->
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  <!-- ★Round Y FAQPage + Article + ItemList schema injection (★nIJUIzG8Vg 2026-05-05 配列化) -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(allSchemas)}></script>
 
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />

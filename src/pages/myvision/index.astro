@@ -5,9 +5,26 @@ import BannerAB from '../../components/BannerAB.astro';
 
 const title = 'MyVision｜コンサル業界専門 転職エージェント解説 (公開情報)';
 const description = 'MyVision はコンサルティング業界専門の転職エージェント。事業会社からコンサル、コンサル間移籍を支援。公開情報をもとに対象者・サポート内容を整理。';
+
+// ★Round Y EXT Article schema (子ページ・[nIJUIzG8Vg] 2026-05-05)
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-04-25',
+  'dateModified': '2026-05-05',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職エージェント比較',
+  'about': 'MyVision (コンサル業界専門 転職エージェント)',
+};
 ---
 
 <Layout title={title} description={description}>
+  <!-- ★Round Y EXT Article schema injection [nIJUIzG8Vg] -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 
