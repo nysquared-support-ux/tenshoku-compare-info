@@ -1,0 +1,260 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '転職サイト おすすめ｜エージェント型との違い・選び方 5 基準と 4 タイプ比較完全ガイド (2026年版・PR)';
+const description = '転職サイト選びを検討中の方へ。転職エージェントとの違い・総合型/特化型/ハイクラス/スカウト型 4 タイプ比較・選び方 5 基準・併用戦略を公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各サービスへご相談ください。';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-08',
+  'dateModified': '2026-05-08',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職サイト比較',
+  'about': '転職サイト おすすめ 4 タイプ比較',
+};
+
+const faq = [
+  { q: '転職サイトと転職エージェントの違いは何ですか?', a: '転職サイトは「自分で求人を探して直接応募」する自己応募型サービス、転職エージェントは「キャリアアドバイザーが求人紹介・選考対策を伴走」する仲介型サービスです。転職サイトは自分のペースで活動でき、エージェントは選考対策・年収交渉のサポートを受けられます。両者の併用が一般的に推奨されます。' },
+  { q: '転職サイトは無料で使えますか?', a: '一般的に転職希望者の利用は完全無料です。求人掲載企業からの料金で運営されているビジネスモデルが主流とされています。' },
+  { q: 'スカウト型転職サイトは何がメリットですか?', a: 'プロフィールを登録するだけで企業やヘッドハンターからスカウトが届くため、現職と並行した受動的な転職活動が可能です。市場価値の客観的把握・想定外の業界からのアプローチも期待できます。' },
+  { q: '転職サイトを複数併用すべきですか?', a: '一般的に併用が推奨されます。総合型 1-2 サイト + 業界特化型 1-2 サイト + スカウト型 1 サイト = 計 3-4 サイトの併用で求人カバレッジが最大化されるとされています。' },
+  { q: '転職サイトと転職エージェント、どちらを使うべきですか?', a: '両方併用が推奨されます。転職サイト = 求人情報の幅広い閲覧・自分のペースでの応募 / 転職エージェント = 選考対策・非公開求人・年収交渉、と役割が異なるためです。在職中の方はサイト中心 + エージェント補完が一般的です。' },
+  { q: '転職サイトの登録から内定までの期間は?', a: '一般的に 3-6 ヶ月とされています。書類選考・複数回面接・条件交渉を経るため、20 代でも 3 ヶ月以上、30 代以降は 4-6 ヶ月が標準的とされています。' },
+  { q: 'ハイクラス転職サイトはどんな人向けですか?', a: '年収 800 万円以上のエグゼクティブ層・経営層・専門職向けの求人を中心に扱うサイトです。レジュメ登録 + ヘッドハンタースカウトの形式が一般的で、現職維持しながらの市場価値把握にも有効とされています。' },
+  { q: '転職サイトのプロフィール充実度はどう影響しますか?', a: 'プロフィールの充実度はスカウト数・書類通過率に直結するとされています。職務経歴・実績数値・スキル・希望条件を詳細に登録することで、企業側からのアプローチが大幅に増加するとされています。' },
+];
+
+const services = [
+  {
+    id: 'A',
+    name: '総合型 (リクナビNEXT/doda 等)',
+    type: '総合型',
+    target: '初めての転職・幅広い業界検討',
+    feature: '求人数最多 (50 万件超)・全業界カバー',
+    note: '幅広い業界・職種の求人を網羅。初めての転職活動や業界変更検討時に最適。サイト経由の自己応募が中心。',
+    link: '/osusume/',
+  },
+  {
+    id: 'B',
+    name: '業界特化型 (IT/医療/外資系等)',
+    type: '業界特化型',
+    target: '専門業界での転職希望者',
+    feature: '業界専門性・専門求人多数',
+    note: 'コンサル・IT・医療・金融・外資系等の専門業界に特化。業界専門のキャリアアドバイザー在籍・専門求人多数。',
+    link: '/myvision/',
+  },
+  {
+    id: 'C',
+    name: 'ハイクラス型 (ビズリーチ/JAC 等)',
+    type: 'ハイクラス型',
+    target: '年収 800 万円以上目標',
+    feature: 'エグゼクティブ求人・スカウト中心',
+    note: '年収 800 万円以上のエグゼクティブ層向け。レジュメ登録 + ヘッドハンタースカウトの形式が中心。',
+    link: '/unizon-it/',
+  },
+  {
+    id: 'D',
+    name: 'スカウト型 (LinkedIn/Wantedly 等)',
+    type: 'スカウト型',
+    target: '受動的な転職活動希望者',
+    feature: 'プロフィール登録のみで企業アプローチ',
+    note: 'プロフィール登録だけで企業・ヘッドハンターからスカウト到達。在職中の市場価値把握にも有効。',
+    link: '/twin-pro/',
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 転職サイト おすすめ
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      転職サイト おすすめ｜エージェント型との違い・選び方 5 基準と 4 タイプ比較完全ガイド
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトはサイト運営事業者公式ではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職保証・効果保証ではなく、個別案件の判断は<strong>必ず各サービスへご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-08 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 転職サイト選びで最も重要なのは「自分の目的に合うタイプ (総合型/特化型/ハイクラス/スカウト型) を選び、複数併用する」ことです。総合型 1-2 + 業界特化型 1-2 + スカウト型 1 の計 3-4 サイト併用が推奨されます。転職エージェントとの併用も効果的とされています。</p>
+      <p class="mt-2">本記事では、転職サイトとエージェントの違い・4 タイプの比較・選び方 5 基準・併用戦略・職種別おすすめを整理します。料金は転職希望者は全社無料 (求人掲載企業から料金) のため、複数併用のコストリスクはありません。</p>
+    </section>
+
+    <BannerAB pageSlug="tenshoku-site" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 転職サイトとは (エージェント型との違い)</h2>
+    <p class="mb-3 text-sm">
+      転職サイトは、転職希望者が自分で求人を検索し直接応募する「自己応募型」サービスです。転職エージェントの「アドバイザー仲介型」とは異なり、自分のペースで活動でき、企業選定・応募タイミング・選考対応を全て自分でコントロールできます。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 転職サイト vs 転職エージェント 比較</h3>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-3 py-2 text-left">比較軸</th>
+            <th class="border px-3 py-2 text-left">転職サイト</th>
+            <th class="border px-3 py-2 text-left">転職エージェント</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-3 py-2">利用料金</td><td class="border px-3 py-2">無料 (求人掲載企業から)</td><td class="border px-3 py-2">無料 (成功報酬は採用企業から)</td></tr>
+          <tr><td class="border px-3 py-2">求人検索</td><td class="border px-3 py-2">自分で検索・自由に閲覧</td><td class="border px-3 py-2">アドバイザーが紹介</td></tr>
+          <tr><td class="border px-3 py-2">応募方法</td><td class="border px-3 py-2">自分で直接応募</td><td class="border px-3 py-2">アドバイザー経由で応募</td></tr>
+          <tr><td class="border px-3 py-2">選考対策</td><td class="border px-3 py-2">基本なし (自己責任)</td><td class="border px-3 py-2">職務経歴書添削・面接対策あり</td></tr>
+          <tr><td class="border px-3 py-2">非公開求人</td><td class="border px-3 py-2">なし (公開求人のみ)</td><td class="border px-3 py-2">あり (全求人の 40-60%)</td></tr>
+          <tr><td class="border px-3 py-2">年収交渉</td><td class="border px-3 py-2">自分で交渉</td><td class="border px-3 py-2">アドバイザーが代行</td></tr>
+          <tr><td class="border px-3 py-2">活動ペース</td><td class="border px-3 py-2">自分のペース</td><td class="border px-3 py-2">アドバイザーと相談で決定</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-2. どちらを使うべきか? (併用推奨)</h3>
+    <p class="mb-3 text-sm">
+      一般的には<strong>両方併用</strong>が推奨されます。転職サイト = 求人情報の幅広い閲覧 + 自分のペースでの応募 / 転職エージェント = 選考対策 + 非公開求人 + 年収交渉、と役割が異なるためです。在職中の方はサイト中心 + エージェント補完が現実的とされています。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 転職サイト 失敗しない選び方 (5 基準)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>求人数とカバレッジ</strong>: 自分の希望業界・職種の求人数を事前確認 (公式サイトで業界別求人数公開)</li>
+      <li><strong>サイトのタイプ適合性</strong>: 総合型/特化型/ハイクラス/スカウト型から自分の目的に合うタイプを選択</li>
+      <li><strong>検索機能の使いやすさ</strong>: 業種・職種・年収・勤務地・働き方の絞込精度が活動効率を左右</li>
+      <li><strong>スカウト機能の質</strong>: スカウト数・スカウト企業の質・自動アラート機能の有無</li>
+      <li><strong>口コミ・利用者評価</strong>: 実際の使用感・サポート対応・スカウト精度の口コミを事前確認</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別判断は各サービスの無料登録・利用感で確認することが推奨されます。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 転職サイト 4 タイプ比較</h2>
+    <p class="mb-3 text-sm">
+      転職サイト選択は、料金 (転職希望者は全タイプ無料) ではなく、<strong>タイプ適合性・求人カバレッジ・スカウト機能</strong>の総合比較が推奨されます。下表は 4 タイプの特徴整理です。
+    </p>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">タイプ</th>
+            <th class="border px-2 py-2 text-left">代表例</th>
+            <th class="border px-2 py-2 text-left">対象者</th>
+            <th class="border px-2 py-2 text-left">特徴</th>
+            <th class="border px-2 py-2 text-center">関連</th>
+          </tr>
+        </thead>
+        <tbody>
+          {services.map((s) => (
+            <tr>
+              <td class="border px-2 py-2 font-semibold">{s.type}</td>
+              <td class="border px-2 py-2">{s.name}</td>
+              <td class="border px-2 py-2">{s.target}</td>
+              <td class="border px-2 py-2">{s.feature}</td>
+              <td class="border px-2 py-2 text-center"><a href={s.link} class="underline text-blue-600">関連</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-500 mb-3">※料金は転職希望者は全タイプ無料 (求人掲載企業から料金)。特徴は公式情報の整理 (推定値含む)。</p>
+
+    <BannerAB pageSlug="tenshoku-site" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 転職サイトの利用の流れ (5 ステップ)</h2>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 公式サイトから無料登録 + プロフィール充実 (15-30 分)</h3>
+    <p class="mb-3 text-sm">公式サイトで職務経歴・希望条件・スキルを登録。プロフィールの充実度がスカウト数・書類通過率に直結するため、実績数値・職務記述を詳細に記載することが推奨されます。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: 求人検索 + 気になる求人をブックマーク (随時)</h3>
+    <p class="mb-3 text-sm">業種・職種・年収・勤務地で絞込検索。気になる求人をブックマークし、応募候補リストを作成。新着求人アラートを設定すると効率化できます。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 職務経歴書を作成 + 自己応募 (1-4 週間)</h3>
+    <p class="mb-3 text-sm">職務経歴書は応募職種ごとにカスタマイズ推奨。実績数値・スキルマッチングを応募企業ごとに調整。1 日 5-10 件程度の応募ペースが一般的とされています。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 書類選考 + 面接 (1-2 ヶ月)</h3>
+    <p class="mb-3 text-sm">書類通過後、企業との面接日程調整は自分で対応。Web 面接 / 対面面接の調整・面接対策は自分で準備。エージェント併用時は面接対策のサポートを受けることも可能。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 5: 内定獲得 + 入社条件交渉</h3>
+    <p class="mb-3 text-sm">内定獲得後、年収・入社日・条件の交渉は自分で実施。複数内定の場合は優先順位付け + 退職交渉のスケジュール調整が必要です。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. 転職サイトの失敗例 + 回避策 (5 例)</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">#</th>
+            <th class="border px-2 py-2 text-left">失敗パターン</th>
+            <th class="border px-2 py-2 text-left">原因 (一般的とされる)</th>
+            <th class="border px-2 py-2 text-left">回避策</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">プロフィール手抜きでスカウト来ない</td><td class="border px-2 py-2">職務経歴・スキル登録が最低限のみ</td><td class="border px-2 py-2">実績数値化・スキル詳細記載・希望条件明示</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">単独サイトのみで選択肢狭い</td><td class="border px-2 py-2">1 サイトの求人のみで判断</td><td class="border px-2 py-2">3-4 サイト併用 (タイプを分散)</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">職務経歴書が応募先に合わせていない</td><td class="border px-2 py-2">同一書類を全件流用</td><td class="border px-2 py-2">応募先ごとにスキルマッチング調整</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">面接対策不足で選考通過率低い</td><td class="border px-2 py-2">サイトには対策サポートなし・自己流</td><td class="border px-2 py-2"><a href="/osusume/" class="underline">転職エージェント</a> 併用で模擬面接活用</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">年収交渉が弱く希望年収届かず</td><td class="border px-2 py-2">交渉経験不足・市場相場不明</td><td class="border px-2 py-2">業界相場事前確認 + エージェント経由応募活用</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p class="mb-3">
+        転職サイト選びで重要なのは ①目的に合うタイプ (総合型/特化型/ハイクラス/スカウト型) の選定 ②複数サイト併用 (3-4 サイト) ③転職エージェントとの併用 (選考対策・年収交渉) ④プロフィール充実度の確保 (スカウト精度向上) ⑤応募先ごとの職務経歴書カスタマイズ、の 5 点です。料金は転職希望者は全タイプ無料のため、複数併用のコストリスクはありません。
+      </p>
+      <p class="mb-3">
+        <strong>状況別の推奨タイプ</strong>: ① <strong>初めての転職・業界変更検討</strong> → 総合型中心 + 業界特化型 1 サイト併用 ② <strong>専門業界 (コンサル/IT/医療等)</strong> → 業界特化型中心 (<a href="/myvision/" class="underline">MyVision</a> / <a href="/techgo/" class="underline">TechGo</a> 関連) ③ <strong>年収 800 万円以上目標</strong> → ハイクラス型 (<a href="/unizon-it/" class="underline">Unizon IT</a> 関連) + スカウト型併用 ④ <strong>受動的活動 (現職維持)</strong> → スカウト型中心。状況に応じて 3-4 サイト併用が推奨されます。
+      </p>
+      <p class="mb-3">
+        <strong>転職活動の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の希望条件 (業界/職種/年収/勤務地/働き方) を整理 → <strong>STEP 2</strong> 上記比較表で 3-4 サイトに絞込 + <a href="/osusume/" class="underline">転職エージェント Hub</a> でエージェント 1-2 社併用 → <strong>STEP 3</strong> プロフィール充実 + 求人検索 + 応募 + 内定獲得まで活動継続。サイトとエージェントの役割分担を意識した活用が成功の鍵となります。
+      </p>
+      <p class="text-xs text-gray-600">
+        ※転職エージェント比較は <a href="/osusume/" class="underline">転職エージェント おすすめ Hub</a> ・面接対策は <a href="/mensetsu/" class="underline">転職面接 自己紹介ページ</a> ・30 代向けは <a href="/30dai/" class="underline">30 代向け転職エージェントページ</a> ・40 代向けは <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> もあわせてご参照ください。本記事は転職保証・年収アップ保証ではなく、特定サイトを推奨するものでもありません。
+      </p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>情報源</strong>: 各転職サイト公式サイト ・厚生労働省「労働市場分析レポート」 ・JILPT (労働政策研究・研修機構) ・転職サイト関連の公開統計情報</li>
+      <li><strong>編集方針</strong>: 一次情報優先 (各サイト公式確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+      <li><strong>更新頻度</strong>: 月次レビュー (サービス内容変更・市場動向変化時は随時更新)</li>
+      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
+      <li><strong>E-E-A-T 4 原則</strong>: Experience (転職市場関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (各サイト公式 + 公的機関の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
+    <p class="mb-3 text-sm">
+      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。公的機関情報は各省庁公式サイトのみを採用、サイト情報は各社公式サイトを参照しています。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・有効求人倍率・転職市場動向</li>
+      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・転職率データ</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・キャリア研究</li>
+      <li>各転職サイト公式サイト — サービス内容・対象業界・利用規約の一次情報</li>
+      <li>転職市場関連の公開統計情報 (リクルートワークス研究所「ワークス白書」等)</li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のサービス内容・求人情報は各公式サイトでご確認ください。各サイトの正式名・公式 URL・利用規約等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は転職保証・年収アップ保証・効果保証ではなく、特定サイトを推奨するものでもありません。具体的な利用判断は各サイトの無料登録・利用感を活用し、複数サイトを比較した上でご自身の責任において選択してください。
+    </p>
+  </main>
+</Layout>
