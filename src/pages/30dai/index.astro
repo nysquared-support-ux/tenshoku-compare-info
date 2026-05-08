@@ -1,0 +1,252 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド (2026年版・PR)';
+const description = '30 代の転職エージェント選びを検討中の方へ。20 代との市場の違い・即戦力評価・年収アップ実現の選び方 5 基準・4 社比較・職種別おすすめを公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-08',
+  'dateModified': '2026-05-08',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '30 代転職エージェント比較',
+  'about': '30 代向け 転職エージェント おすすめ 4 社比較',
+};
+
+const faq = [
+  { q: '30 代の転職は遅すぎますか?', a: '30 代の転職市場は活発で、即戦力人材として高く評価されるとされています。20 代の「ポテンシャル採用」から 30 代の「即戦力採用」へシフトするため、これまでの実績・専門性を活かせる転職活動が重要となります。' },
+  { q: '30 代で年収アップは可能ですか?', a: '可能とされています。同じスペックでも転職エージェントの選び方で 100 万円以上の年収差が生まれるケースが報告されています。業界特化型エージェント + 年収交渉サポートの活用が年収アップの鍵となります。' },
+  { q: '30 代の転職で重要なポイントは?', a: '一般的に ① 即戦力としての専門性・実績の明示 ② キャリアの一貫性 (ジョブホッパー回避) ③ マネジメント経験 (30 代後半は特に重要) ④ ポータブルスキル (業界横断的なスキル) の 4 点が重視されるとされています。' },
+  { q: '30 代の転職エージェント選びの判断軸は?', a: '① 30 代向け求人の質と数 ② 業界特化 vs 総合型のバランス ③ アドバイザーの経験年数 ④ 年収交渉サポートの有無 ⑤ 30 代転職の成功事例 の 5 軸で総合判断することが推奨されます。' },
+  { q: '30 代でも未経験業界への転職は可能ですか?', a: '可能ですが、20 代に比べてハードルは上がるとされています。ポータブルスキル (マネジメント・問題解決・リーダーシップ等) を活かせる職種選定・関連業界からの段階的シフトが現実的な戦略となります。' },
+  { q: '30 代後半 (35-39 歳) の転職は厳しいですか?', a: '30 代前半に比べてポジションは限定的になるとされていますが、専門性 + マネジメント経験のセットがあれば管理職・専門職で活躍可能です。ハイクラス型エージェントの活用が推奨されます。' },
+  { q: '複数のエージェントを併用しても良いですか?', a: '一般的に併用が推奨されます。総合型 1 社 + 業界特化型 1-2 社 + ハイクラス型 1 社 = 計 3-4 社の併用で 30 代の求人カバレッジが最大化されるとされています。' },
+  { q: '30 代の転職は何ヶ月かかりますか?', a: '一般的に 3-6 ヶ月とされています。20 代より選考プロセスが慎重になり、書類選考・複数回面接・年収交渉に時間がかかります。在職中の活動を前提に余裕を持ったスケジュールが推奨されます。' },
+];
+
+const services = [
+  {
+    id: 'A',
+    name: 'MyVision (コンサル業界専門)',
+    type: 'コンサル特化型',
+    target: '30 代でコンサル転職・事業会社→コンサル',
+    sapport: '◎ 30 代向けコンサル転職実績多数',
+    online: '◎',
+    note: '30 代のキャリアシフトに対応・コンサル業界の高年収案件を多数保有。事業会社からコンサルへの転職、コンサル間移籍に特化。',
+    link: '/myvision/',
+  },
+  {
+    id: 'B',
+    name: 'TechGo (IT/エンジニア特化)',
+    type: 'IT特化型',
+    target: '30 代エンジニア・テックリード/EM 候補',
+    sapport: '◎ 30 代の即戦力 IT 人材向けサポート',
+    online: '◎',
+    note: '30 代エンジニアの年収アップ・テックリード/エンジニアリングマネージャ転職に強い。技術スタック + マネジメント経験のマッチング。',
+    link: '/techgo/',
+  },
+  {
+    id: 'C',
+    name: 'Twin Pro (営業職特化)',
+    type: '営業特化型',
+    target: '30 代営業 (BtoB/SaaS/ハイクラス営業)',
+    sapport: '○ 30 代営業の年収交渉に強み',
+    online: '◎',
+    note: '30 代営業職の年収アップ転職に特化。BtoB/BtoC/SaaS/医薬等の業界横断求人を多数保有。',
+    link: '/twin-pro/',
+  },
+  {
+    id: 'D',
+    name: 'Unizon IT (ハイクラス IT)',
+    type: 'ハイクラス IT型',
+    target: '30 代後半・年収 800 万円以上目標',
+    sapport: '◎ 30 代後半のエグゼクティブ転職対応',
+    online: '◎',
+    note: '30 代後半の IT 業界ハイクラス転職に特化。年収 800 万円以上のエグゼクティブ層・管理職案件を多数保有。',
+    link: '/unizon-it/',
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 30 代向け 転職エージェント おすすめ
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトはエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職保証・年収アップ保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-08 / 公開情報の整理であり、特定エージェント・特定企業を推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 30 代の転職は「即戦力」評価の時代です。エージェント選びの 5 基準 (専門性・年収交渉・キャリア一貫性・マネジメント経験・ポータブルスキル) で同じスペックでも年収 100 万円以上の差が生まれるとされています。総合型 1 社 + 業界特化型 1-2 社 + ハイクラス型 1 社の 3-4 社併用が推奨されます。</p>
+      <p class="mt-2">本記事では、20 代との市場の違い・選び方 5 基準・4 社の比較・利用の流れ・職種別おすすめを整理します。料金は転職希望者は無料 (企業側から成功報酬) のため、複数併用のコストリスクはありません。</p>
+    </section>
+
+    <BannerAB pageSlug="30dai" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 30 代の転職市場と 20 代との違い</h2>
+    <p class="mb-3 text-sm">
+      30 代の転職市場は、20 代の「ポテンシャル採用」から「即戦力採用」へシフトします。これまでの実績・専門性・マネジメント経験が問われ、未経験業界への転職ハードルは上がる一方、専門性を活かしたキャリアアップでは大幅な年収アップが期待できます。
+    </p>
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 即戦力評価の 4 要素</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>① 専門性・実績の明示</strong>: 担当業務での具体的な実績数値・KPI 達成・プロジェクト規模</li>
+      <li><strong>② キャリアの一貫性</strong>: 業界・職種の選択に納得感ある理由・ジョブホッパー回避</li>
+      <li><strong>③ マネジメント経験</strong>: 30 代後半は特に重要・チーム/組織運営の実績</li>
+      <li><strong>④ ポータブルスキル</strong>: リーダーシップ・問題解決・コミュニケーション等の業界横断的スキル</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 30 代前半 / 後半の戦略の違い</h3>
+    <p class="mb-3 text-sm">
+      <strong>30 代前半 (30-34 歳)</strong>: ポテンシャル + 即戦力のハイブリッド評価。未経験業界への転職もまだ可能性あり。専門性深化 or 業界シフトの分岐点。<br />
+      <strong>30 代後半 (35-39 歳)</strong>: 即戦力 + マネジメント経験が必須。管理職・専門職ポジションが中心。ハイクラス型エージェント活用が推奨されます。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 30 代の転職エージェント 失敗しない選び方 (5 基準)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>30 代向け求人の質と数</strong>: 30 代特化の非公開求人比率を確認</li>
+      <li><strong>業界特化 vs 総合型のバランス</strong>: 専門業界は特化型・幅広く検討は総合型</li>
+      <li><strong>アドバイザーの経験年数</strong>: 30 代の市場知見・年収交渉経験の有無</li>
+      <li><strong>年収交渉サポートの有無</strong>: 30 代は年収アップが転職目的の主要動機</li>
+      <li><strong>30 代転職の成功事例</strong>: 公式サイト/口コミで具体的事例を事前確認</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別判断は各エージェントの無料登録・初回面談で確認することが推奨されます。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 30 代向け おすすめ 4 社比較表</h2>
+    <p class="mb-3 text-sm">
+      30 代の転職エージェント選択は、料金 (転職希望者は全社無料) ではなく、<strong>30 代向け求人の質・業界専門性・年収交渉サポート</strong>の総合比較が推奨されます。下表は業界特化型 3 社 + ハイクラス IT 型 1 社の 4 社比較です。
+    </p>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">エージェント</th>
+            <th class="border px-2 py-2 text-left">タイプ</th>
+            <th class="border px-2 py-2 text-left">30 代の対象者</th>
+            <th class="border px-2 py-2 text-left">30 代向けサポート</th>
+            <th class="border px-2 py-2 text-center">オンライン</th>
+            <th class="border px-2 py-2 text-center">詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          {services.map((s) => (
+            <tr>
+              <td class="border px-2 py-2 font-semibold">{s.name}</td>
+              <td class="border px-2 py-2">{s.type}</td>
+              <td class="border px-2 py-2">{s.target}</td>
+              <td class="border px-2 py-2">{s.sapport}</td>
+              <td class="border px-2 py-2 text-center">{s.online}</td>
+              <td class="border px-2 py-2 text-center"><a href={s.link} class="underline text-blue-600">詳細</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-500 mb-3">※料金は転職希望者は全社無料 (企業側から成功報酬・年収の 30% 程度が一般的)。30 代向けサポート品質は公式情報の整理 (推定値含む)。</p>
+
+    <BannerAB pageSlug="30dai" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 30 代の転職利用の流れ (5 ステップ)</h2>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 公式サイトから無料登録 (5-10 分)</h3>
+    <p class="mb-3 text-sm">公式サイトで職務経歴・希望年収・転職時期を入力。30 代は希望年収レンジを明確に設定することが重要。1-3 営業日で初回面談の日程調整連絡。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: キャリアアドバイザーとの初回面談 (60-90 分)</h3>
+    <p class="mb-3 text-sm">経歴・スキル・希望年収・転職目的を詳細にヒアリング。30 代の市場相場・年収交渉の見込みについてフィードバックを受けます。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 求人紹介と応募 (1-4 週間)</h3>
+    <p class="mb-3 text-sm">30 代向けの求人を 5-15 件程度提示。職務経歴書を 30 代向けに添削 (実績数値強化・マネジメント経験の明示)。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 書類選考と面接対策 (1-2 ヶ月)</h3>
+    <p class="mb-3 text-sm">30 代の面接は専門性・即戦力性・カルチャーマッチの 3 軸で評価。事前対策面談で想定質問・回答方針を準備。</p>
+    <h3 class="text-lg font-bold mt-4 mb-2">Step 5: 内定と年収交渉</h3>
+    <p class="mb-3 text-sm">30 代の年収交渉は転職活動の山場。エージェントが企業との交渉を代行・現年収 + 20-30% アップを目標に交渉します。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. 30 代によくある転職失敗例 + 回避策 (5 例)</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">#</th>
+            <th class="border px-2 py-2 text-left">失敗パターン</th>
+            <th class="border px-2 py-2 text-left">原因 (一般的とされる)</th>
+            <th class="border px-2 py-2 text-left">回避策</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">未経験業界への過度な期待</td><td class="border px-2 py-2">30 代は即戦力評価で 20 代より厳しい</td><td class="border px-2 py-2">関連業界からの段階的シフト・ポータブルスキル活用</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">年収交渉が不十分</td><td class="border px-2 py-2">遠慮して希望年収を低く伝達</td><td class="border px-2 py-2">業界相場 + 自分の市場価値を事前確認・希望レンジ明示</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">焦って入社決定</td><td class="border px-2 py-2">転職活動の長期化への不安</td><td class="border px-2 py-2">複数内定後にじっくり比較・3-6 ヶ月の余裕</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">マネジメント経験のアピール不足</td><td class="border px-2 py-2">30 代後半の評価軸を理解せず</td><td class="border px-2 py-2">チーム規模・成果指標の数値化・組織変革実績</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">単独エージェントのみで選択肢狭い</td><td class="border px-2 py-2">1 社の求人だけで判断・市場全体把握できず</td><td class="border px-2 py-2">3-4 社併用で 30 代向け求人カバレッジ最大化</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p class="mb-3">
+        30 代の転職エージェント選びで重要なのは、①即戦力評価の 4 要素 (専門性/キャリア一貫性/マネジメント経験/ポータブルスキル) ②選び方 5 基準 (求人の質と数/業界特化バランス/アドバイザー経験/年収交渉/成功事例) ③複数併用 (総合型 1 社 + 業界特化型 1-2 社 + ハイクラス型 1 社) の 3 点です。同じスペックでも年収 100 万円以上の差が生まれるケースが報告されています。
+      </p>
+      <p class="mb-3">
+        <strong>状況別の推奨エージェント形態</strong>: ① <strong>30 代前半・専門業界 (コンサル/IT/医療等)</strong> → 業界特化型中心 (<a href="/myvision/" class="underline">MyVision</a> / <a href="/techgo/" class="underline">TechGo</a> 等) ② <strong>30 代前半・営業職特化</strong> → <a href="/twin-pro/" class="underline">Twin Pro</a> 等の営業特化型 ③ <strong>30 代後半・年収 800 万円以上目標</strong> → <a href="/unizon-it/" class="underline">Unizon IT</a> 等のハイクラス型中心 ④ <strong>30 代でキャリアシフト検討</strong> → 総合型 + 業界特化型併用。状況に応じて 3-4 社併用が推奨されます。
+      </p>
+      <p class="mb-3">
+        <strong>30 代の転職活動 行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の希望条件 (業界/職種/年収レンジ/働き方) + 即戦力評価 4 要素を整理 → <strong>STEP 2</strong> 上記比較表で 3-4 社 (総合型 + 特化型 + ハイクラス) に絞込・公式サイトで無料登録 → <strong>STEP 3</strong> 各社の初回面談で対応品質・30 代向け求人の質を比較し、メイン 1-2 社 + サブ 1-2 社の体制を確立。
+      </p>
+      <p class="text-xs text-gray-600">
+        ※全体的な転職エージェント比較は <a href="/osusume/" class="underline">転職エージェント おすすめ Hub</a> ・40 代向けは <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> ・<a href="/40dai-revenge/" class="underline">40 代リベンジ転職ページ</a> ・面接対策は <a href="/mensetsu/" class="underline">転職面接 自己紹介ページ</a> もあわせてご参照ください。本記事は転職保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。
+      </p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>情報源</strong>: 各転職エージェント公式サイト ・厚生労働省「労働市場分析レポート」 ・JILPT (労働政策研究・研修機構) ・30 代転職関連の公開統計情報</li>
+      <li><strong>編集方針</strong>: 一次情報優先 (各エージェント公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
+      <li><strong>更新頻度</strong>: 月次レビュー (サービス内容変更・市場動向変化時は随時更新)</li>
+      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
+      <li><strong>E-E-A-T 4 原則</strong>: Experience (転職市場関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (各エージェント公式 + 公的機関の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
+    <p class="mb-3 text-sm">
+      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。公的機関情報は各省庁公式サイトのみを採用、エージェント情報は各社公式サイトを参照しています。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・年代別有効求人倍率・転職市場動向</li>
+      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・年齢別年収分布データ</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 30 代転職動向分析・キャリア研究</li>
+      <li>各転職エージェント公式サイト — 30 代向けサービス内容・対象業界・成功事例の一次情報</li>
+      <li>30 代転職関連の公開統計情報 (リクルートエージェント転職白書・doda 転職市場予測等)</li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のサービス内容・求人情報は各公式サイトでご確認ください。各エージェントの正式名・公式 URL・利用規約等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は転職保証・年収アップ保証・効果保証ではなく、特定エージェントを推奨するものでもありません。具体的な利用判断は各社の無料登録・初回面談を活用し、複数エージェントを比較した上でご自身の責任において選択してください。
+    </p>
+  </main>
+</Layout>
