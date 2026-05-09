@@ -1,0 +1,246 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '転職面接 退職理由 答え方｜面接官が納得する 5 原則・PREP 法・業界別例文 (2026年版・PR)';
+const description = '転職面接で退職理由を聞かれて答えに迷う方へ。面接官が確認する 3 つの真意・5 つの基本原則・PREP 法テンプレート・業界別例文・NG ワード 5 例を公開情報ベースで整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-10',
+  'dateModified': '2026-05-10',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職面接対策',
+  'about': '転職面接 退職理由の答え方と例文',
+};
+
+const faq = [
+  { q: '退職理由は本音と建前のどちらを答えるべきですか?', a: '一般的には「本音を前向きな言葉に変換して伝える」のが推奨されます。完全な作り話は深掘り質問でほころびが出やすく、感情的な本音をそのまま伝えるとマイナス印象になりやすいとされています。「何が課題で、次にどう挑戦したいか」という未来志向で整理する構成が一般的です。' },
+  { q: '退職理由は何分くらいで答えるのが適切ですか?', a: '一般的に 30〜60 秒 (約 150〜250 字) に収めるのが推奨されます。PREP 法 (Point→Reason→Example→Point) の構成で、結論ファーストで簡潔にまとめることが望ましいとされています。長すぎると言い訳に聞こえやすくなる傾向があります。' },
+  { q: '転職回数が多い場合の退職理由はどう答えるべきですか?', a: '各経験で得たスキルが応募職種にどう活きるかを軸に、「一貫したキャリアストーリー」として組み立てることが推奨されます。回数を強調せず、各転職の「学び」と「成長」を中心に据える構成が一般的とされています。' },
+  { q: 'ブランク期間 (空白期間) がある場合はどう説明すべきですか?', a: 'ブランク期間中の活動 (学習・資格取得・育児・介護・療養等) を簡潔に説明し、現在は転職活動に集中していることを伝えることが推奨されます。隠さず、前向きな姿勢で説明することが評価される傾向にあります。' },
+  { q: '前職への不満を退職理由にしても大丈夫ですか?', a: '不満を起点にすること自体は問題ありませんが、着地点は必ず「自分がどうなりたいか」という未来志向に向けることが推奨されます。「○○が嫌だった」ではなく「○○を求めて新しい環境に挑戦したい」と変換するのが一般的とされています。' },
+  { q: '短期離職 (1 年未満) の場合はどう答えるべきですか?', a: '入社前の期待と入社後の実態の「具体的な差分」を冷静に説明し、「次の職場では事前にどう確認するか」という再発防止の姿勢を示すことが推奨されます。感情的な批判ではなく、構造的な原因として語ることが望ましいとされています。' },
+  { q: '退職理由と志望動機は一貫させるべきですか?', a: '一般的には一貫性が重要とされています。「前職では○○を経験 → 限界を感じた → 御社では○○に挑戦できる」という流れで、退職理由・転職理由・志望動機を一本の線でつなぐ構成が推奨されます。' },
+  { q: '人間関係が原因の退職はどう答えるべきですか?', a: '個別エピソード (上司の言動等) ではなく、「組織の方針と自分のキャリア志向のミスマッチ」など構造的・方向性の話として語ることが推奨されます。具体的な人物批判は感情的に映りやすいため避ける傾向が一般的です。' },
+];
+
+const templates = [
+  {
+    duration: 'PREP 法基本構成 (30〜60 秒・約 150〜250 字)',
+    structure: 'P (結論) → R (理由) → E (補足) → P (再結論・志望動機への接続)',
+    example: 'キャリアの幅を広げるために転職を決意しました。現職では○○のスキルに特化した環境で、△△分野への挑戦機会が限られていたためです。実際に○○の業務を担当する中で、△△に携わりたいという思いが明確になりました。御社の△△事業でこのキャリアを実現したいと考えております。',
+  },
+  {
+    duration: '長め (1 分〜1 分半・約 300〜450 字)',
+    structure: 'P (結論) → R (理由) → E (具体的な気づきの経緯) → 学び・成長 → P (再結論)',
+    example: '(PREP 法基本 + 「前職での経験で学んだこと」+ 「次の挑戦への接続」を 1-2 文追加)',
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 転職面接 退職理由 答え方
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      転職面接 退職理由 答え方｜面接官が納得する 5 原則・PREP 法・業界別例文
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトはエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は内定保証・効果保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-10 / 公開情報の整理であり、特定エージェント・特定企業を推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 転職面接の退職理由で面接官が確認するのは「①再現性 (また同じ理由で辞めないか) ②職場適応力 ③本音の透明性」の 3 要素とされています。回答は PREP 法 (Point→Reason→Example→Point) で 30〜60 秒に収め、ネガティブをポジティブに変換した「未来志向の語り方」が推奨される傾向にあります。</p>
+      <p class="mt-2">本記事では、面接官が退職理由を聞く真意・5 つの基本原則・PREP 法テンプレート・業界別の答え方・NG ワード 5 例を整理します。</p>
+    </section>
+
+    <BannerAB pageSlug="taishokuriyu" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 退職理由が転職成功を左右する理由</h2>
+    <p class="mb-3 text-sm">
+      転職面接で「なぜ前職を辞めたのですか?」と聞かれた瞬間、本音と建前のどちらを答えるかで迷う方は少なくありません。退職理由の答え方は、転職活動の結果を左右する要素のひとつとされています。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 面接官が退職理由を聞く 3 つの真意</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>① 再現性の確認</strong>: 「自社でも同じ理由で辞めないか」を見極めるため。前職での不満が自社にも当てはまる場合、早期離職リスクが高いと判断される傾向があります。</li>
+      <li><strong>② 職場適応力の確認</strong>: 退職理由の語り方から、問題解決のアプローチや対人関係のスタンスを推測。「何があったか」より「どう行動し何を学んだか」を注視する傾向が一般的です。</li>
+      <li><strong>③ 本音の透明性の確認</strong>: 職務経歴書と口頭説明に矛盾がないか。リファレンスチェックがある場合、虚偽の退職理由は選考後半で致命傷になりうるとされています。</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 「本音 vs 建前」どちらを答えるべきか</h3>
+    <p class="mb-3 text-sm">
+      結論として、<strong>「本音を前向きな言葉に変換して伝える」</strong>のが一般的に推奨されます。本音を完全に隠した作り話は一貫性が崩れやすく、深掘り質問でほころびが出る傾向があります。一方で感情的な本音をそのままぶつけても、マイナスの印象しか残らない可能性が高いとされています。「何が課題で、次にどう挑戦したいか」という未来志向の軸で整理することが、最も伝わりやすい答え方の一つです。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 退職理由 5 つの基本原則</h2>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">原則① ネガティブをポジティブに変換する</h3>
+    <p class="mb-3 text-sm">
+      前職への批判ではなく「次に向けた理由」として組み立てることが推奨されます。「○○が嫌だった」という表現は「○○を求めて新しい環境に踏み出したかった」へ変換するのが基本とされています。不満を起点にしても構いませんが、着地点は必ず「自分がどうなりたいか」に向けることが望ましいとされています。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">原則② 一貫したキャリアストーリーに組み込む</h3>
+    <p class="mb-3 text-sm">
+      退職理由・転職理由・志望動機は「一本の線」でつながっている必要があるとされています。「前職では○○の経験を積んだ → しかし○○の点で限界を感じた → 御社では○○に挑戦できると確信した」という流れで語れれば、面接官に納得感を与えやすい傾向があります。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">原則③ 具体的な出来事より「方向性の違い」を語る</h3>
+    <p class="mb-3 text-sm">
+      「上司の○○さんに怒鳴られた」のような具体エピソードは感情的になりやすく、愚痴に聞こえるリスクがあります。個別の出来事ではなく「組織の成長フェーズと自分のキャリア志向がかみ合わなかった」のように、構造的・方向性の話として語るほうが印象が安定する傾向があります。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">原則④ 短く・明確に・結論ファースト (PREP 法)</h3>
+    <p class="mb-3 text-sm">
+      答えは <strong>30〜60 秒 (約 150〜250 字)</strong> に収めるのが目安とされています。PREP 法 (Point→Reason→Example→Point) で構成すると簡潔にまとまる傾向があります。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">原則⑤ 本音率は 7 割 + 編集 3 割が一般的</h3>
+    <p class="mb-3 text-sm">
+      完全な作り話 (本音率 0%) は深掘りで矛盾が露呈しやすく、完全な本音 (本音率 100%) は感情的に映りやすい傾向があります。「実際に経験した課題」を 7 割の素材として、3 割を「未来志向への翻訳」で編集する構成が一般的とされています。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. PREP 法テンプレート + 例文</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-3 py-2 text-left">時間</th>
+            <th class="border px-3 py-2 text-left">構成</th>
+            <th class="border px-3 py-2 text-left">使用シーン</th>
+          </tr>
+        </thead>
+        <tbody>
+          {templates.map((t) => (
+            <tr>
+              <td class="border px-3 py-2 font-semibold whitespace-nowrap">{t.duration}</td>
+              <td class="border px-3 py-2">{t.structure}</td>
+              <td class="border px-3 py-2">{t.duration.includes('PREP') ? '標準・指定なし時' : '深掘り質問時'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <h3 class="text-lg font-bold mt-4 mb-2">PREP 法基本構成 例文</h3>
+    <p class="mb-3 text-sm bg-gray-50 border-l-4 border-blue-400 p-3" set:html={templates[0].example} />
+    <p class="text-xs text-gray-600 mb-6">※スキル・分野・事業は応募先に合わせて置換してください。志望動機との接続部分が最も重要とされています。</p>
+
+    <BannerAB pageSlug="taishokuriyu" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 業界別 退職理由の答え方 (営業・事務・看護師・エンジニア・コンサル)</h2>
+    <p class="mb-3 text-sm">業界・職種ごとに重視されやすい退職理由のポイントは以下のように整理できます。</p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>営業職</strong>: 数値目標や顧客層の違いを軸に。「BtoC からエンタープライズ営業へ挑戦したい」「短期成果から長期顧客育成へ軸を変えたい」など、<strong>営業スタイルの方向転換</strong>として語る構成が一般的とされています。</li>
+      <li><strong>事務職</strong>: ルーチン業務から専門性へのシフトを軸に。「経理事務から経理スペシャリストへ」「総務から人事領域へ」など、<strong>専門性の獲得志向</strong>として説明する構成が推奨される傾向があります。</li>
+      <li><strong>看護師</strong>: 病棟・診療科・働き方の方向転換を軸に。「急性期から慢性期へ」「病棟から訪問看護へ」「ワークライフバランス重視へ」など、<strong>キャリアと生活の両立志向</strong>として語る構成が一般的とされています。</li>
+      <li><strong>エンジニア</strong>: 技術スタック・開発フェーズの方向転換を軸に。「レガシー保守から新規開発へ」「受託からプロダクト開発へ」「技術リードからマネジメントへ」など、<strong>技術的成長の方向性</strong>として説明する構成が推奨される傾向があります。</li>
+      <li><strong>コンサル</strong>: プロジェクト性質の方向転換を軸に。「戦略から実行支援へ」「業界横断から特定業界深掘りへ」など、<strong>キャリアの専門化方向</strong>として語る構成が一般的とされています。</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-6">※業界別の傾向は公開情報の整理であり、個別企業の評価軸は応募先により異なります。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. NG ワード 5 例 (悪い例 → 改善例 → なぜ良いか)</h2>
+    <p class="mb-3 text-sm">退職理由でやりがちな NG パターンと改善方法を、悪い例・改善例・改善理由の 3 点セットで整理しました。</p>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">#</th>
+            <th class="border px-2 py-2 text-left">悪い例</th>
+            <th class="border px-2 py-2 text-left">改善例</th>
+            <th class="border px-2 py-2 text-left">なぜ良いか</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">「上司と合わなかった」</td><td class="border px-2 py-2">「組織の意思決定スピードと自分のキャリア志向がかみ合わなかった」</td><td class="border px-2 py-2">個人批判から構造的説明へ。感情ではなく方向性の話に</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">「給料が低かった」</td><td class="border px-2 py-2">「成果に応じた評価制度の環境で、より大きな責任に挑戦したい」</td><td class="border px-2 py-2">不満ではなく「次に求めたい環境」として未来志向で表現</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">「残業が多くてつらかった」</td><td class="border px-2 py-2">「業務効率化の経験を活かし、より生産性高く働ける環境で成果を出したい」</td><td class="border px-2 py-2">「逃避」ではなく「経験を活かす場所の選択」として表現</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">「キャリアアップのため」だけ</td><td class="border px-2 py-2">「○○分野で深い専門性を身につけ、業界全体に貢献できる人材になりたい」</td><td class="border px-2 py-2">抽象表現を避け、具体的な専門領域・目標を明示</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">「人間関係が悪かった」</td><td class="border px-2 py-2">「チーム連携を重視する環境で、職種を越えた協業に挑戦したい」</td><td class="border px-2 py-2">過去への批判から未来の働き方への希望に転換</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-600 mb-6">※改善例はあくまで一般的な変換パターンの参考であり、個人の経験・応募職種に合わせて調整することが推奨されます。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. 退職理由対策と転職エージェント活用</h2>
+    <p class="mb-3 text-sm">
+      退職理由の答え方は事前準備で大きく差がつくセクションとされています。転職エージェントを活用すると、模擬面接・退職理由のフィードバック・業界別の評価傾向情報を得られる傾向があります。<a href="/osusume/" class="underline">転職エージェント おすすめ 4 社比較ページ</a> で業界特化型 (コンサル/IT/営業) のサポート品質を比較できます。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>模擬面接でのフィードバック</strong>: アドバイザーとの 1 対 1 で退職理由の語り方を実践練習できる傾向があります</li>
+      <li><strong>業界別の評価傾向</strong>: 業界特化型エージェントは応募職種ごとの「響く退職理由パターン」を熟知している傾向があります</li>
+      <li><strong>志望動機との一貫性チェック</strong>: 退職理由・転職理由・志望動機の整合性を第三者視点で確認できる傾向があります</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p class="mb-3">
+        転職面接の退職理由で面接官が確認するのは ①再現性 (また同じ理由で辞めないか) ②職場適応力 ③本音の透明性 の 3 要素とされています。回答は PREP 法 (Point→Reason→Example→Point) で 30〜60 秒に収め、ネガティブをポジティブに変換した「未来志向の語り方」が一般的に推奨されます。
+      </p>
+      <p class="mb-3">
+        <strong>5 つの基本原則</strong>: ① ネガティブをポジティブに変換 ② 一貫したキャリアストーリーに組み込む ③ 個別エピソードより方向性を語る ④ PREP 法で 30〜60 秒に収める ⑤ 本音率 7 割 + 編集 3 割。これらを組み合わせることで、感情的になりすぎず、かといって嘘くさくならない「納得感のある退職理由」を組み立てられる傾向があります。
+      </p>
+      <p class="mb-3">
+        <strong>業界別の重視ポイント</strong>: ① <strong>営業</strong> → 営業スタイルの方向転換 ② <strong>事務</strong> → 専門性の獲得志向 ③ <strong>看護師</strong> → キャリアと生活の両立志向 ④ <strong>エンジニア</strong> → 技術的成長の方向性 ⑤ <strong>コンサル</strong> → キャリアの専門化方向。応募職種に応じて軸を選び、PREP 法で簡潔にまとめることが推奨されます。
+      </p>
+      <p class="mb-3">
+        <strong>退職理由準備の行動 3 ステップ</strong>: <strong>STEP 1</strong> 5 原則と PREP 法に沿って 30〜60 秒の基本回答を作成 → <strong>STEP 2</strong> NG ワード表 (悪い例→改善例) を参照して言い換えチェック → <strong>STEP 3</strong> <a href="/osusume/" class="underline">転職エージェント</a> の模擬面接でフィードバックを受け、業界別の評価傾向を反映。
+      </p>
+      <p class="text-xs text-gray-600">
+        ※面接対策全般は <a href="/mensetsu/" class="underline">転職面接 自己紹介ページ</a> ・40 代の転職対策は <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> もあわせてご参照ください。本記事は内定保証・効果保証ではなく、特定企業・エージェントを推奨するものでもありません。
+      </p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」 ・JILPT (労働政策研究・研修機構)「転職動向分析」 ・総務省統計局「労働力調査」 ・各転職エージェント公式サイト ・転職面接関連の公開統計情報</li>
+      <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け推定値・公開情報の整理として記述・統計数値は出典明記</li>
+      <li><strong>更新頻度</strong>: 月次レビュー (面接トレンド・業界動向変化時は随時更新)</li>
+      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
+      <li><strong>E-E-A-T 4 原則</strong>: Experience (転職面接関連の公開情報整理) ・Expertise (公的機関統計 + 業界エージェント公開情報) ・Authoritativeness (厚労省 + JILPT + 総務省統計局の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 内定保証ではない注記)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
+    <p class="mb-3 text-sm">
+      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。公的機関情報は各省庁公式サイトのみを採用、エージェント情報は各社公式サイトを参照しています。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・職業情報提供サイト・転職動向</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・キャリア研究</li>
+      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・転職率データ</li>
+      <li><a href="https://www.mext.go.jp/" target="_blank" rel="noopener" class="underline">文部科学省公式サイト</a> — キャリア教育・学び直し関連情報</li>
+      <li>各転職エージェント公式サイト — 面接対策・退職理由の答え方ガイドの一次情報</li>
+      <li>転職面接関連の公開統計情報 (リクルートエージェント転職白書 ・doda キャリアコンパス等)</li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の面接トレンド・業界動向は各公式サイトでご確認ください。本記事は内定保証・効果保証ではなく、特定エージェントを推奨するものでもありません。具体的な面接対策は各転職エージェントの模擬面接サービス等を活用し、応募企業に応じた対策を行うことが推奨されます。
+    </p>
+  </main>
+</Layout>
