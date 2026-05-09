@@ -208,7 +208,26 @@ const services = [
       </table>
     </div>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. 利用前に確認したい消費者保護の観点 (国民生活センター情報を踏まえて)</h2>
+    <p class="mb-3 text-sm">
+      国民生活センター (<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">公式サイト</a>) には、転職・人材サービス関連の消費者相談が継続的に寄せられているとされています。転職サイトはほぼ無料で利用できる一方、登録した個人情報・職務経歴の取り扱いには注意が必要との指摘があります。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">6-1. 転職サイト利用前の 4 つの確認ポイント</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>個人情報の取り扱い範囲</strong>: スカウト機能を ON にすると現職企業からも閲覧される可能性。匿名スカウト機能の有無・現職ブロック機能の有無を登録前に確認</li>
+      <li><strong>退会時のデータ削除ポリシー</strong>: 退会後にプロフィールデータがどの期間保管されるか・第三者提供の有無をプライバシーポリシーで確認</li>
+      <li><strong>有料サービスの自動課金</strong>: 「ハイクラス転職」等で月額有料プランがある場合、無料体験後の自動課金条件を契約前に確認</li>
+      <li><strong>提携エージェントへの自動転送</strong>: 一部サイトは登録時に提携エージェントへ情報共有される場合あり。同意項目を初期登録時に確認</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">6-2. PR・アフィリエイト広告に関する透明性</h3>
+    <p class="mb-3 text-sm">
+      本記事内のサービス紹介・比較・ランキング表示には、<strong>アフィリエイト広告 (PR) を含みます</strong>。具体的には、リンク経由でサービスに無料登録された場合、当サイトに紹介報酬が発生する場合があります。ただし、紹介報酬の有無は記事内容・推奨順序に影響しないよう編集方針 (E-E-A-T 原則) に基づいて構成しています。各サービスの正式な評価・選択は、必ずご自身で公式サイト・無料登録時の利用規約をご確認の上、行ってください。
+    </p>
+    <p class="text-xs text-gray-600 mb-6">※本セクションは国民生活センター公開情報および各転職サイトの公開プライバシーポリシーを参考に作成。個別事案の判断は各サイトのサポート窓口・国民生活センター消費者ホットライン (188) へご相談ください。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. よくある質問 (FAQ)</h2>
     {faq.map((item) => (
       <>
         <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
@@ -234,7 +253,7 @@ const services = [
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
     <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 各転職サイト公式サイト ・厚生労働省「労働市場分析レポート」 ・JILPT (労働政策研究・研修機構) ・転職サイト関連の公開統計情報</li>
+      <li><strong>情報源</strong>: 各転職サイト公式サイト ・厚生労働省「労働市場分析レポート」 ・JILPT (労働政策研究・研修機構) ・国民生活センター (転職サービス関連消費者相談情報) ・リクルートワークス研究所「ワークス白書」 ・doda「キャリアコンパス」 ・転職サイト関連の公開統計情報</li>
       <li><strong>編集方針</strong>: 一次情報優先 (各サイト公式確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
       <li><strong>更新頻度</strong>: 月次レビュー (サービス内容変更・市場動向変化時は随時更新)</li>
       <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
@@ -249,8 +268,11 @@ const services = [
       <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・有効求人倍率・転職市場動向</li>
       <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・転職率データ</li>
       <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・キャリア研究</li>
+      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 転職・人材サービス関連の消費者相談情報・契約トラブル参考</li>
+      <li><a href="https://www.works-i.com/" target="_blank" rel="noopener" class="underline">リクルートワークス研究所</a> — ワークス白書・転職市場動向分析</li>
+      <li><a href="https://woman-type.jp/wt/feature/career-compass/" target="_blank" rel="noopener" class="underline">doda キャリアコンパス</a> — 転職市場データ・職種別動向</li>
       <li>各転職サイト公式サイト — サービス内容・対象業界・利用規約の一次情報</li>
-      <li>転職市場関連の公開統計情報 (リクルートワークス研究所「ワークス白書」等)</li>
+      <li>転職市場関連の公開統計情報</li>
     </ul>
 
     <p class="text-xs text-gray-600 mt-6">
