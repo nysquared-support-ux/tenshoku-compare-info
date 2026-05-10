@@ -1,21 +1,4 @@
 ---
-/**
- * ★441-EXT taishokuriyu LP - mensetsu LP (★326 DRY 元) からの流用先
- *
- * 必須保持要素 (5 軸 review 頻出良い点 Top 10・mensetsu 構造継承):
- * 1. PRBadge コンポーネント (cta_honesty 34回)
- * 2. articleSchema JSON-LD (schema_completeness)
- * 3. PR 表示 + 「内定保証・効果保証ではない」明示 (disclaimer 34回)
- * 4. 編集ポリシー + プライバシーポリシー 内部リンク (asp_compliance 33回)
- * 5. BannerAB component (hero/middle のみ・cta_honesty)
- * 6. 結論 section (青ボックス・comparison_fairness 28回)
- * 7. パンくず + 運営者情報 (internal_links 30回)
- * 8. 公的機関 5 出典 (厚労省/JILPT/総務省統計局/文科省/国民生活センター ★435)
- * 9. 内部リンク (/osusume/ + /mensetsu/ + /40dai-koukai/)
- * 10. E-E-A-T 4 原則 編集ポリシー (Authoritativeness 強化)
- *
- * 改造時の事前 review: scripts/lp-creation-checklist.py で確認必須。
- */
 import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
@@ -236,7 +219,7 @@ const templates = [
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
     <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」 ・JILPT (労働政策研究・研修機構)「転職動向分析」 ・総務省統計局「労働力調査」 ・国民生活センター (転職・人材サービス関連消費者相談情報) ・文部科学省 (キャリア教育・学び直し情報) ・各転職エージェント公式サイト ・転職面接関連の公開統計情報</li>
+      <li><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」 ・JILPT (労働政策研究・研修機構)「転職動向分析」 ・総務省統計局「労働力調査」 ・各転職エージェント公式サイト ・転職面接関連の公開統計情報</li>
       <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け推定値・公開情報の整理として記述・統計数値は出典明記</li>
       <li><strong>更新頻度</strong>: 月次レビュー (面接トレンド・業界動向変化時は随時更新)</li>
       <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
@@ -252,7 +235,6 @@ const templates = [
       <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・キャリア研究</li>
       <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・転職率データ</li>
       <li><a href="https://www.mext.go.jp/" target="_blank" rel="noopener" class="underline">文部科学省公式サイト</a> — キャリア教育・学び直し関連情報</li>
-      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 転職・人材サービス関連の消費者相談情報・契約トラブル参考 (★435 体現)</li>
       <li>各転職エージェント公式サイト — 面接対策・退職理由の答え方ガイドの一次情報</li>
       <li>転職面接関連の公開統計情報 (リクルートエージェント転職白書 ・doda キャリアコンパス等)</li>
     </ul>
