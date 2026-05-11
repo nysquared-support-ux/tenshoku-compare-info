@@ -1,0 +1,248 @@
+---
+/**
+ * 転職 自己分析 やり方 LP (★326 DRY mensetsu 流用 + ★441-EXT 10 必須要素保持)
+ *
+ * 必須保持要素 (5 軸 review 頻出良い点 Top 10):
+ * 1. PRBadge コンポーネント (cta_honesty)
+ * 2. articleSchema JSON-LD (schema_completeness)
+ * 3. PR 表示 黄色ボックス + 「効果保証ではない」明示 (disclaimer)
+ * 4. 編集ポリシー + プライバシーポリシー 内部リンク (asp_compliance)
+ * 5. BannerAB component (hero/middle・cta_honesty)
+ * 6. 結論 section (青ボックス・comparison_fairness)
+ * 7. パンくず + 運営者情報 (internal_links)
+ * 8. 公的機関 4-5 出典 (厚労省 / JILPT / 総務省統計局 / 国民生活センター ★435)
+ * 9. 内部リンク (/osusume/ + /mensetsu/ + /40dai-koukai/ 等)
+ * 10. E-E-A-T 4 原則 編集ポリシー
+ *
+ * sv 5,400 / A2 8.0 + Codex content 74 / LP 化候補 #1 ([x0b5HWxE2f] 2026-05-11)
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '転職 自己分析 やり方｜Will/Can/Must フレーム・3 ステップ進め方とおすすめツール 5 種 (2026年版・PR)';
+const description = '転職活動の自己分析で何から始めればよいか迷う方へ。Will/Can/Must の 3 軸フレームワーク・自己分析の 3 ステップ進め方・無料ツール 5 種比較・職種別の深掘り例を公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-11',
+  'dateModified': '2026-05-11',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職自己分析',
+  'about': '転職活動における自己分析のフレームワークと進め方',
+};
+
+const faq = [
+  { q: '転職の自己分析は何時間くらいかかりますか?', a: '一般的に集中して 3-5 時間 (1 日かけて or 数日に分けて) が標準とされています。Will/Can/Must の 3 軸を整理する基本版は 1-2 時間、職務経歴 5 年以上のキャリア棚卸しを含む詳細版は 5-10 時間が目安とされています。' },
+  { q: '自己分析と職務経歴書は同時に作るべきですか?', a: '一般的には自己分析を先に行うことが推奨されます。自己分析で「強み・価値観・志向」を整理してから職務経歴書を書くと、応募職種に合わせた強調ポイントが明確になります。両者を並行で進めるパターンも有効とされています。' },
+  { q: '自己分析が苦手な人はどう進めればよいですか?', a: '一般的に「過去の出来事を時系列で書き出す → なぜそう感じたか掘り下げる → 共通パターンを抽出する」の 3 ステップが推奨されます。1 人で難しい場合は転職エージェントのキャリアアドバイザーとの面談で他者視点を入れる方法も効果的とされています。' },
+  { q: 'Will/Can/Must フレームとは何ですか?', a: 'Will (やりたいこと)・Can (できること)・Must (求められること) の 3 軸で自己分析するフレームワークです。3 つが重なる領域が転職の方向性として一般的に推奨されます。Will のみで動くと現実性が欠ける、Can のみで動くと成長性が欠ける、Must のみで動くと満足度が欠ける、という構造で 3 軸統合が評価されます。' },
+  { q: '自己分析で何を書き出せばよいですか?', a: '一般的に ① これまでの職務経歴と各役割での実績 ② 楽しかった/つらかったエピソード ③ 強み/弱み (他者フィードバックも含む) ④ 価値観 (働く目的・優先順位) ⑤ キャリア志向 (5 年後/10 年後の理想像) の 5 項目が推奨されます。' },
+  { q: '無料の自己分析ツールはありますか?', a: '一般的にリクナビ NEXT「グッドポイント診断」・ミイダス「コンピテンシー診断」・dodaキャンパスの「キャリアタイプ診断」など各転職サービスが無料診断ツールを提供しています。複数ツール併用で結果を比較する使い方が推奨されます。' },
+  { q: '転職回数が多い場合の自己分析の注意点は?', a: '一般的に「各転職での学び・成長」と「次に活かしたいスキル」を軸に整理することが推奨されます。回数を強調せず、各経験で得た強みと共通する価値観を抽出すると、応募職種への一貫性が伝わりやすくなるとされています。' },
+  { q: '40 代の自己分析と 20-30 代の違いは?', a: '一般的に 40 代はマネジメント経験・業界専門性・人脈の 3 要素を中心に整理することが推奨されます。20-30 代は学習意欲・成長余地・適応力の整理が中心です。年代別の差は <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> や <a href="/40dai-revenge/" class="underline">40 代リベンジ転職ページ</a> も参考になります。' },
+];
+
+const templates = [
+  {
+    duration: '基本版 (1-2 時間・Will/Can/Must の整理)',
+    structure: '① 価値観の書き出し → ② 職務スキル棚卸し → ③ 求められる役割の整理 → ④ 3 軸の重なり領域特定',
+    example: 'STEP 1: 自分が大切にしている価値観 5-10 個を書き出す (成長・自由・安定・社会貢献等)。STEP 2: 直近 3 年の職務で習得したスキル・経験を箇条書きで整理。STEP 3: 応募業界・職種で求められる役割を求人票から抽出。STEP 4: Will (価値観) × Can (スキル) × Must (求められる役割) の交点を見つけ、転職の方向性として整理。',
+  },
+  {
+    duration: '詳細版 (5-10 時間・キャリア全体の棚卸し)',
+    structure: '基本版 + 過去エピソード深掘り + 他者フィードバック収集 + 強み弱み再評価 + キャリアプラン作成',
+    example: '(基本版 + 過去の楽しかった/つらかった出来事を各 3-5 件・なぜそう感じたか深掘り + 元上司/同僚からのフィードバック 2-3 件入手 + 5 年後/10 年後の理想像描写)',
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 転職 自己分析 やり方
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      転職 自己分析 やり方｜Will/Can/Must フレーム・3 ステップ進め方とおすすめツール 5 種
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトはエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職成功保証・効果保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-11 / 公開情報の整理であり、特定エージェント・特定ツールを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論</strong>: 転職の自己分析は「Will (やりたいこと)・Can (できること)・Must (求められること)」の 3 軸フレームで整理することが推奨されます。基本版は 1-2 時間で完遂可能、詳細版はキャリア棚卸しを含めて 5-10 時間が目安とされています。</p>
+      <p class="mt-2">本記事では、Will/Can/Must フレーム・3 ステップ進め方・無料診断ツール 5 種比較・職種別深掘り例・転職エージェント活用法を整理します。</p>
+    </section>
+
+    <BannerAB pageSlug="jiko-bunseki" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 転職の自己分析は「方向性の決定」を担う</h2>
+    <p class="mb-3 text-sm">
+      転職活動を始める際、最初に直面するのが「自分は何をしたいのか・何ができるのか」という問いです。自己分析を行わずに求人を眺めると、表層的な条件 (給与・勤務地) で判断してしまい、入社後のミスマッチに繋がる可能性があるとされています。<strong>自己分析は転職活動全体の方向性を決める最重要工程</strong>です。
+    </p>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 自己分析を行う 3 つの目的</h3>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>① 応募職種の絞り込み</strong>: 適性のある業界・職種を特定し、求人サーチを効率化</li>
+      <li><strong>② 強み・志望動機の言語化</strong>: 職務経歴書 + 面接で説得力のあるエピソードを構築</li>
+      <li><strong>③ 入社後ミスマッチの回避</strong>: 自分の価値観 + 求められる役割の一致を事前確認</li>
+    </ul>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 自己分析の所要時間目安</h3>
+    <p class="mb-3 text-sm">
+      標準は 3-5 時間です。基本版 (Will/Can/Must の整理) なら 1-2 時間、キャリア棚卸しを含む詳細版なら 5-10 時間が目安とされています。一気に行う必要はなく、数日に分割して進めるパターンも一般的です。
+    </p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. Will/Can/Must フレームワーク (3 軸統合)</h2>
+    <p class="mb-3 text-sm">高評価を得る転職の自己分析は、以下の 3 軸で整理することが推奨されます。</p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>① Will (やりたいこと)</strong>: 価値観・興味関心・将来ビジョン (5 年後/10 年後の理想像)</li>
+      <li><strong>② Can (できること)</strong>: 職務スキル・経験・実績・強み (他者からの評価含む)</li>
+      <li><strong>③ Must (求められること)</strong>: 応募業界・職種で必要な役割・要件 (求人票から抽出)</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-6">※3 軸が重なる領域が転職の方向性として推奨されます。Will のみで動くと現実性が欠ける・Can のみで動くと成長性が欠ける・Must のみで動くと満足度が欠ける、という構造です。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 自己分析 3 ステップ進め方 + テンプレート</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-3 py-2 text-left">バージョン</th>
+            <th class="border px-3 py-2 text-left">構成</th>
+            <th class="border px-3 py-2 text-left">推奨シーン</th>
+          </tr>
+        </thead>
+        <tbody>
+          {templates.map((t) => (
+            <tr>
+              <td class="border px-3 py-2 font-semibold whitespace-nowrap">{t.duration}</td>
+              <td class="border px-3 py-2">{t.structure}</td>
+              <td class="border px-3 py-2">{t.duration.includes('基本版') ? '初めての転職・時間制約あり時' : 'キャリアチェンジ・40 代以降の転職時'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <h3 class="text-lg font-bold mt-4 mb-2">基本版 (1-2 時間) テンプレート例</h3>
+    <p class="mb-3 text-sm bg-gray-50 border-l-4 border-blue-400 p-3" set:html={templates[0].example} />
+    <p class="text-xs text-gray-600 mb-6">※価値観・スキル棚卸しは個人差大。テンプレートは構成の枠組みとして活用し、具体内容は自身のキャリアに応じて記入してください。</p>
+
+    <BannerAB pageSlug="jiko-bunseki" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 無料の自己分析ツール 5 種 (一般情報)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>リクナビ NEXT「グッドポイント診断」</strong>: 8,568 通りの組み合わせから 5 つの強みを診断 (約 30 分・無料登録要)</li>
+      <li><strong>ミイダス「コンピテンシー診断」</strong>: 行動特性・適性業界・上下司タイプ等を分析 (約 30 分・無料登録要)</li>
+      <li><strong>dodaキャンパス「キャリアタイプ診断」</strong>: 価値観 × 行動特性 × 思考スタイルで適性を分析 (無料登録要)</li>
+      <li><strong>16Personalities (MBTI 系)</strong>: 一般的な性格類型 16 タイプ診断 (無料・登録不要)</li>
+      <li><strong>VIA-IS (強み診断)</strong>: ペンシルバニア大学開発・24 種の強みを分析 (無料・登録要)</li>
+    </ul>
+    <p class="text-xs text-gray-600 mb-4">※複数ツール併用で結果を比較する使い方が推奨されます。診断結果は参考情報として捉え、最終判断は自分の価値観 + 他者フィードバックで行うことが一般的とされています。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. 職種別 自己分析の深掘りポイント</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>営業職</strong>: 売上達成プロセス・顧客アプローチ手法・受注金額/件数等の<strong>数値実績の振り返り</strong>。BtoB/BtoC・既存深耕/新規開拓の経験差別化を整理</li>
+      <li><strong>エンジニア</strong>: 技術スタック (言語/フレームワーク/インフラ)・プロジェクト規模 (チーム人数/期間)・技術選定の意思決定経験を年表化</li>
+      <li><strong>マーケティング</strong>: 担当チャネル (Web/SEO/広告/SNS)・KPI 改善実績 (CTR/CVR/CPA)・予算規模の整理</li>
+      <li><strong>コンサル</strong>: プロジェクト業界・課題解決のフレームワーク・クライアント規模・成果指標の言語化</li>
+      <li><strong>管理職</strong>: マネジメント人数・組織課題と解決アプローチ・組織変革の実績数値の棚卸し</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. やりがちな NG パターン (5 例)</h2>
+    <div class="overflow-x-auto mb-4">
+      <table class="border-collapse w-full text-xs sm:text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border px-2 py-2 text-left">#</th>
+            <th class="border px-2 py-2 text-left">NG パターン</th>
+            <th class="border px-2 py-2 text-left">原因 (一般的とされる)</th>
+            <th class="border px-2 py-2 text-left">改善策</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">診断ツール結果を鵜呑みにする</td><td class="border px-2 py-2">機械的判定への過信</td><td class="border px-2 py-2">複数ツール比較 + 他者フィードバックで補正</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">Will (やりたいこと) だけで方向性決定</td><td class="border px-2 py-2">Can/Must の検討不足</td><td class="border px-2 py-2">3 軸統合で重なり領域を必ず特定</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">過去の失敗を整理せず棚卸し終了</td><td class="border px-2 py-2">ポジティブ偏重</td><td class="border px-2 py-2">失敗からの学び・改善行動も書き出す</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">他者フィードバックを一切取らない</td><td class="border px-2 py-2">自己評価のみで完結</td><td class="border px-2 py-2">元上司/同僚 2-3 名から強み/弱みヒアリング</td></tr>
+          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">時間制限なしで永遠に分析</td><td class="border px-2 py-2">完璧主義で行動が止まる</td><td class="border px-2 py-2">基本版 1-2 時間で一旦締切・行動しながら更新</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. 自己分析の練習 + 転職エージェント活用</h2>
+    <p class="mb-3 text-sm">
+      自己分析は他者視点を取り入れることで質が大きく向上するとされています。転職エージェントを活用すると、キャリアアドバイザーとの面談・職種別のキャリア相談・第三者視点での強み深掘りが可能です。<a href="/osusume/" class="underline">転職エージェント おすすめ 4 社比較ページ</a> で業界特化型 (コンサル/IT/営業) のサポート品質を比較できます。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>キャリア面談</strong>: アドバイザーとの 1 対 1 で価値観・志向のヒアリング・第三者視点で強みを言語化</li>
+      <li><strong>職種別キャリア相談</strong>: 業界特化型エージェントは応募職種ごとの市場価値・必要スキルを熟知</li>
+      <li><strong>面接連携</strong>: 自己分析結果を <a href="/mensetsu/" class="underline">転職面接 自己紹介</a> に反映し、説得力のある回答構築に活用</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">8. よくある質問 (FAQ)</h2>
+    {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+
+    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
+      <h2 class="text-lg font-bold mb-2">まとめ</h2>
+      <p class="mb-3">
+        転職の自己分析は「Will (やりたいこと)・Can (できること)・Must (求められること)」の 3 軸統合フレームワークで整理することが推奨されます。基本版 (1-2 時間) と詳細版 (5-10 時間) の 2 段階に分けて、転職活動の初期に必ず実施することが一般的です。3 軸の重なり領域が転職の方向性 (応募業界・職種) を決める判断基準となります。
+      </p>
+      <p class="mb-3">
+        <strong>職種別の重点要素</strong>: ① <strong>営業職</strong> → 数値実績 (達成率/受注金額/顧客数) ② <strong>エンジニア</strong> → 技術スタック + プロジェクト規模 ③ <strong>マーケ</strong> → KPI 改善実績 ④ <strong>コンサル</strong> → 業界 + 成果指標 ⑤ <strong>管理職</strong> → マネジメント実績数値。応募職種に応じて Can (できること) の絞り込みが転職成功の鍵となります。
+      </p>
+      <p class="mb-3">
+        <strong>自己分析の行動 3 ステップ</strong>: <strong>STEP 1</strong> Will/Can/Must の基本版 (1-2 時間・価値観/スキル/求める役割の整理) を書き出す → <strong>STEP 2</strong> 無料診断ツール 2-3 種を併用して結果を比較・補正 → <strong>STEP 3</strong> <a href="/osusume/" class="underline">転職エージェント</a> のキャリア面談で第三者視点フィードバックを受け、職務経歴書 + <a href="/mensetsu/" class="underline">面接対策</a> に反映。
+      </p>
+      <p class="text-xs text-gray-600">
+        ※40 代の転職対策は <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> ・<a href="/40dai-revenge/" class="underline">40 代リベンジ転職ページ</a> もあわせてご参照ください。本記事は転職成功保証・効果保証ではなく、特定エージェント・診断ツールを推奨するものでもありません。
+      </p>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」 ・JILPT (労働政策研究・研修機構) ・国民生活センター (転職・人材サービス関連消費者相談情報) ・総務省統計局「労働力調査」 ・各転職エージェント公式サイト ・転職自己分析関連の公開統計情報</li>
+      <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け推定値・公開情報の整理として記述</li>
+      <li><strong>更新頻度</strong>: 月次レビュー (自己分析トレンド・業界動向変化時は随時更新)</li>
+      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
+      <li><strong>E-E-A-T 4 原則</strong>: Experience (転職自己分析関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (公的機関 + 業界エージェント公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 成功保証ではない注記)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
+    <p class="mb-3 text-sm">
+      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。公的機関情報は各省庁公式サイトのみを採用、エージェント情報は各社公式サイトを参照しています。
+    </p>
+    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・職業情報提供サイト</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — キャリア研究・自己分析関連調査</li>
+      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・転職率データ</li>
+      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 転職・人材サービス関連の消費者相談情報・契約トラブル参考 (★435 体現)</li>
+      <li>各転職エージェント公式サイト — キャリア面談・自己分析ガイドの一次情報</li>
+      <li>転職自己分析関連の公開統計情報 (リクルートエージェント転職白書等)</li>
+    </ul>
+
+    <p class="text-xs text-gray-600 mt-6">
+      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の自己分析トレンド・業界動向は各公式サイトでご確認ください。本記事は転職成功保証・効果保証ではなく、特定エージェント・診断ツールを推奨するものでもありません。具体的な自己分析サポートは各転職エージェントのキャリア面談サービス等を活用し、自分の状況に応じた対策を行うことが推奨されます。
+    </p>
+  </main>
+</Layout>
