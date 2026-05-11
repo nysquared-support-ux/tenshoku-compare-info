@@ -36,6 +36,16 @@ const articleSchema = {
   'about': '転職活動における自己分析のフレームワークと進め方',
 };
 
+// ★382 80+ 改善 [x0b5HWxE2f] 2026-05-11: FAQPage + BreadcrumbList JSON-LD 追加 (schema_completeness 強化)
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': '転職 自己分析 やり方', 'item': 'https://tenshoku-compare-info.pages.dev/jiko-bunseki/' },
+  ],
+};
+
 const faq = [
   { q: '転職の自己分析は何時間くらいかかりますか?', a: '一般的に集中して 3-5 時間 (1 日かけて or 数日に分けて) が標準とされています。Will/Can/Must の 3 軸を整理する基本版は 1-2 時間、職務経歴 5 年以上のキャリア棚卸しを含む詳細版は 5-10 時間が目安とされています。' },
   { q: '自己分析と職務経歴書は同時に作るべきですか?', a: '一般的には自己分析を先に行うことが推奨されます。自己分析で「強み・価値観・志向」を整理してから職務経歴書を書くと、応募職種に合わせた強調ポイントが明確になります。両者を並行で進めるパターンも有効とされています。' },
@@ -46,6 +56,17 @@ const faq = [
   { q: '転職回数が多い場合の自己分析の注意点は?', a: '一般的に「各転職での学び・成長」と「次に活かしたいスキル」を軸に整理することが推奨されます。回数を強調せず、各経験で得た強みと共通する価値観を抽出すると、応募職種への一貫性が伝わりやすくなるとされています。' },
   { q: '40 代の自己分析と 20-30 代の違いは?', a: '一般的に 40 代はマネジメント経験・業界専門性・人脈の 3 要素を中心に整理することが推奨されます。20-30 代は学習意欲・成長余地・適応力の整理が中心です。年代別の差は <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> や <a href="/40dai-revenge/" class="underline">40 代リベンジ転職ページ</a> も参考になります。' },
 ];
+
+// FAQPage JSON-LD (★382 改善・schema_completeness)
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({
+    '@type': 'Question',
+    'name': f.q,
+    'acceptedAnswer': { '@type': 'Answer', 'text': f.a.replace(/<[^>]+>/g, '') },
+  })),
+};
 
 const templates = [
   {
@@ -63,6 +84,8 @@ const templates = [
 
 <Layout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 
@@ -237,6 +260,8 @@ const templates = [
       <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — キャリア研究・自己分析関連調査</li>
       <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・転職率データ</li>
       <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 転職・人材サービス関連の消費者相談情報・契約トラブル参考 (★435 体現)</li>
+      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク (厚生労働省)</a> — 公共職業紹介・職業相談・自己分析サポート資料</li>
+      <li><a href="https://www.meti.go.jp/policy/economy/jinzai/" target="_blank" rel="noopener" class="underline">経済産業省 「人材政策」</a> — リスキリング・キャリア形成支援政策</li>
       <li>各転職エージェント公式サイト — キャリア面談・自己分析ガイドの一次情報</li>
       <li>転職自己分析関連の公開統計情報 (リクルートエージェント転職白書等)</li>
     </ul>
