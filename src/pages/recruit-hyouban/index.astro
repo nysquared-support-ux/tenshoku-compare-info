@@ -38,6 +38,13 @@ const itemListSchema = {
   ],
 };
 
+// ★441-EXT v3: FAQ +3 件追加 (★382 80+ 試行・[21s0vjlWNY] 2026-05-12)
+const faqExtra = [
+  { q: 'リクルートエージェントの登録から内定までの期間は?', a: '一般的に 3-4 ヶ月が目安とされています (公開情報整理)。① 登録 + 担当者面談 1-2 週間 → ② 求人紹介 + 書類応募 1-2 ヶ月 → ③ 面接 + 内定 1-2 ヶ月の流れが標準的とされています。' },
+  { q: '断られても再登録できますか?', a: '一般的に再登録は可能とされていますが、前回の活動状況・職務経歴等によって対応が異なる場合があるとされています。具体的な再登録条件は公式サイト・問い合わせ窓口でご確認ください。' },
+  { q: '担当者を変更したい場合は?', a: '一般的にカスタマーセンターへの連絡で担当者変更の相談が可能とされています。エージェントとの相性も転職活動の重要な要素とされており、無理せず相談することが推奨されています。' },
+];
+
 const otherAgents = [
   { name: 'doda', target: '20-30 代中堅', strength: '求人数 + 自己分析サポート', point: 'スカウト機能 + エージェント機能の両軸' },
   { name: 'マイナビエージェント', target: '20 代第二新卒', strength: '若手特化・面接サポート', point: '中小企業求人多・親身な対応評' },
@@ -157,6 +164,12 @@ const otherAgents = [
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
     {faq.map((item) => (
+      <>
+        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
+        <p class="mb-3 text-sm" set:html={item.a} />
+      </>
+    ))}
+    {faqExtra.map((item) => (
       <>
         <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
         <p class="mb-3 text-sm" set:html={item.a} />
