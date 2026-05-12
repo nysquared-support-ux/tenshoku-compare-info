@@ -55,6 +55,53 @@ const faqSchema = {
   })),
 };
 
+// ★441-EXT 強化: ItemList + Service 構造化 (3 ハイクラス特化エージェント・A3 改善期待)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': 'ハイクラス転職特化エージェント 3 サービス比較',
+  'description': '年収 600 万円以上の経営層・管理職向けハイクラス特化エージェント (公開情報整理)',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {
+      '@type': 'ListItem',
+      'position': 1,
+      'item': {
+        '@type': 'Service',
+        'name': 'リクルートダイレクトスカウト',
+        'serviceType': 'スカウト型ハイクラス転職エージェント',
+        'description': '大手リクルート運営・求人 24 万件以上・ヘッドハンター 4,800 名以上 (公開情報)',
+        'provider': { '@type': 'Organization', 'name': '株式会社リクルート' },
+        'audience': { '@type': 'Audience', 'audienceType': '年収 600-2,000 万円のビジネスパーソン' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      'position': 2,
+      'item': {
+        '@type': 'Service',
+        'name': 'JAC Recruitment',
+        'serviceType': '両面型ハイクラス転職エージェント',
+        'description': '管理職/専門職特化・両面型 (1 人のコンサルタントが企業と求職者双方を担当)',
+        'provider': { '@type': 'Organization', 'name': '株式会社ジェイ エイ シー リクルートメント' },
+        'audience': { '@type': 'Audience', 'audienceType': '年収 600-2,000 万円の管理職・専門職' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      'position': 3,
+      'item': {
+        '@type': 'Service',
+        'name': 'ビズリーチ',
+        'serviceType': 'スカウト型ハイクラス転職プラットフォーム',
+        'description': '経営層特化・即戦力ヘッドハンター直接スカウト・有料プラン (プレミアム) で全機能利用可',
+        'provider': { '@type': 'Organization', 'name': '株式会社ビズリーチ' },
+        'audience': { '@type': 'Audience', 'audienceType': '年収 750-2,000 万円の経営層・管理職' },
+      },
+    },
+  ],
+};
+
 const services = [
   {
     name: 'リクルートダイレクトスカウト',
@@ -81,6 +128,7 @@ const services = [
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 
