@@ -23,6 +23,21 @@ const faq = [
   { q: '無料で利用できる仕組みは何故ですか?', a: '一般的に転職エージェントは採用企業から成功報酬 (年収の 30-35%) を受け取るビジネスモデルのため、求職者は無料で利用できる仕組みとされています。' },
 ];
 
+// ★441-EXT 強化: 4 転職エージェント Service 構造化 (A3 改善期待)
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '転職エージェント主要 4 サービス比較',
+  'description': '主要転職エージェント (リクルート / doda / マイナビ / JAC) の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '転職エージェント (中堅 20-40代)', 'description': '求人数 60 万件+ (公開 30 万件 + 非公開 30 万件)・全業界対応', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'doda', 'serviceType': '転職エージェント + スカウト型', 'description': '20-30 代中堅・スカウト機能 + エージェント機能の両軸', 'provider': {'@type': 'Organization', 'name': 'パーソルキャリア株式会社'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'マイナビエージェント', 'serviceType': '転職エージェント (20代特化)', 'description': '20 代第二新卒・若手特化・面接サポート', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'JAC Recruitment', 'serviceType': '両面型ハイクラス転職エージェント', 'description': '30-40 代管理職/専門職・コンサル/IT/金融特化', 'provider': {'@type': 'Organization', 'name': '株式会社ジェイ エイ シー リクルートメント'}}},
+  ],
+};
+
 const otherAgents = [
   { name: 'doda', target: '20-30 代中堅', strength: '求人数 + 自己分析サポート', point: 'スカウト機能 + エージェント機能の両軸' },
   { name: 'マイナビエージェント', target: '20 代第二新卒', strength: '若手特化・面接サポート', point: '中小企業求人多・親身な対応評' },
@@ -32,6 +47,7 @@ const otherAgents = [
 ---
 
 <Layout title={title} description={description} publishedDate="2026-05-12" modifiedDate="2026-05-12" breadcrumb={breadcrumb} faq={faq}>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge />
 
@@ -40,8 +56,12 @@ const otherAgents = [
     </nav>
 
     <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight" style="color: #1E3A8A;">
-      リクルートエージェントの評判は？利用者口コミで判明した真実2026年最新
+      リクルートエージェントの評判は？公開情報と利用者傾向の整理2026年最新
     </h1>
+
+    <p class="text-xs text-gray-500 mb-3">
+      ※本記事は公式公開情報・各メディア公開口コミ傾向の整理であり、独自の口コミ調査結果ではありません。具体的な評価は各エージェント公式サイト・利用者個別の経験を参考にしてください。
+    </p>
 
     <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
       <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトはリクルートエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職成功保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
@@ -55,16 +75,20 @@ const otherAgents = [
     </p>
 
     <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: リクルートエージェントは <strong>求人数業界最大級 (60 万件以上)</strong> + キャリアアドバイザーの質 + 面接対策の充実が評価される一方、担当者の質にバラつき・求人紹介スピードへの指摘があるとされています。<strong>20-40 代の中堅層に最適</strong>・ハイクラス特化なら他社併用が推奨されます。</p>
+      <p><strong>結論</strong>: リクルートエージェントは <strong>求人数業界主要候補・公開情報ベース (60 万件以上)</strong> + キャリアアドバイザーの質 + 面接対策の充実が評価される一方、担当者の質にバラつき・求人紹介スピードへの指摘があるとされています。<strong>20-40 代の中堅層に最適</strong>・ハイクラス特化なら他社併用が推奨されます。</p>
       <p class="mt-2">本記事では良い評判・悪い評判の両面・他社エージェントとの比較・向いている人/向かない人の判断基準を整理します。</p>
     </section>
 
+    <div class="bg-green-50 border border-green-300 rounded p-3 mb-4 text-sm">
+      <p class="font-bold mb-2">🎯 公式サイトで最新求人を確認</p>
+      <p class="text-xs text-gray-700">完全無料 / オンライン完結 / 登録 3 分・キャリア相談無料</p>
+    </div>
     <BannerAB pageSlug="recruit-hyouban" position="hero" />
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. リクルートエージェントの基本情報・特徴</h2>
     <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
       <li><strong>運営会社</strong>: 株式会社リクルート (1960 年創業・東証プライム上場)</li>
-      <li><strong>公開求人数</strong>: 30 万件以上 (業界最大級・2026 年公開情報)</li>
+      <li><strong>公開求人数</strong>: 30 万件以上 (業界主要候補・公開情報ベース・2026 年公開情報)</li>
       <li><strong>非公開求人数</strong>: 30 万件以上 (登録後に紹介)</li>
       <li><strong>対応年代</strong>: 20-40 代中心 (50 代対応もあり)</li>
       <li><strong>対応職種</strong>: 全業界・全職種 (IT/Web・金融・コンサル・メーカー等)</li>
@@ -74,7 +98,7 @@ const otherAgents = [
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 良い評判・口コミ：リクルートエージェントが選ばれる理由</h2>
 
     <h3 class="text-lg font-bold mt-4 mb-2">① 求人数の多さと非公開求人の質</h3>
-    <p class="mb-3 text-sm">一般的に求人数 60 万件以上は業界最大級とされており、特に非公開求人 (経営層・管理職・専門職) の質が評価されています。複数業界・複数職種を比較検討したいユーザーに適しているとされています。</p>
+    <p class="mb-3 text-sm">一般的に求人数 60 万件以上は業界主要候補・公開情報ベースとされており、特に非公開求人 (経営層・管理職・専門職) の質が評価されています。複数業界・複数職種を比較検討したいユーザーに適しているとされています。</p>
 
     <h3 class="text-lg font-bold mt-4 mb-2">② 転職市場の知識が豊富なキャリアアドバイザー</h3>
     <p class="mb-3 text-sm">一般的に転職市場・年収相場・各企業の社風等の知見が豊富なキャリアアドバイザーが多いとされており、特に業界経験者のアドバイザーへの評価が高いとされています。</p>
@@ -105,7 +129,7 @@ const otherAgents = [
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-blue-50"><td class="border px-3 py-2 font-semibold">リクルートエージェント</td><td class="border px-3 py-2">20-40 代全般</td><td class="border px-3 py-2 font-bold text-blue-700">求人数 60 万件+</td><td class="border px-3 py-2">業界最大級・全業界対応・キャリアアドバイザー充実</td></tr>
+          <tr class="bg-blue-50"><td class="border px-3 py-2 font-semibold">リクルートエージェント</td><td class="border px-3 py-2">20-40 代全般</td><td class="border px-3 py-2 font-bold text-blue-700">求人数 60 万件+</td><td class="border px-3 py-2">業界主要候補・公開情報ベース・全業界対応・キャリアアドバイザー充実</td></tr>
           {otherAgents.map((a) => (
             <tr><td class="border px-3 py-2 font-semibold">{a.name}</td><td class="border px-3 py-2">{a.target}</td><td class="border px-3 py-2">{a.strength}</td><td class="border px-3 py-2">{a.point}</td></tr>
           ))}
@@ -138,10 +162,16 @@ const otherAgents = [
       </>
     ))}
 
+    <div class="bg-green-50 border border-green-300 rounded p-4 mb-6 text-sm">
+      <p class="font-bold mb-2">🎯 公式サイトで最新求人を確認 (再掲)</p>
+      <p class="text-xs text-gray-700 mb-2">向いている人: 20-40 代中堅・幅広い業界検討・初回転職</p>
+      <p class="text-xs text-gray-600">完全無料 / オンライン完結 / 登録 3 分・キャリア相談無料 / 退会いつでも可能</p>
+    </div>
+
     <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
       <h2 class="text-lg font-bold mb-2">まとめ</h2>
       <p class="mb-3">
-        リクルートエージェントは <strong>求人数 60 万件以上 (業界最大級)</strong> + キャリアアドバイザーの質 + 面接対策の充実が評価される一方、担当者の質バラつき・求人紹介スピードの速さ・ハイクラス特化での他社優勢の 3 点が指摘されているとされています。
+        リクルートエージェントは <strong>求人数 60 万件以上 (業界主要候補・公開情報ベース)</strong> + キャリアアドバイザーの質 + 面接対策の充実が評価される一方、担当者の質バラつき・求人紹介スピードの速さ・ハイクラス特化での他社優勢の 3 点が指摘されているとされています。
       </p>
       <p class="mb-3">
         <strong>3 軸併用戦略</strong>: <strong>STEP 1</strong> リクルート (求人数) + 業界特化型 (専門性) + ハイクラス型 (年収アップ) の 3 社並行登録 → <strong>STEP 2</strong> 担当者との相性確認 (合わない場合は変更依頼) → <strong>STEP 3</strong> 3-5 社面接で比較 → <a href="/osusume/" class="underline">転職エージェント比較</a> も参考に最終判断。
