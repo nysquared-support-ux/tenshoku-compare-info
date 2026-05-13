@@ -1,23 +1,40 @@
 ---
 // CTA直近のPR表示・打消し表示
-// ★273/景表法・ステマ規制対応
+// ★273/景表法・ステマ規制対応 + ★297 アフィリ報酬発生条件達成
+// ★404 真因修正 ([r8EgNfamnK] 2026-05-13): default href='#' で報酬 0 だった重大欠陥を修正
+//   → default を TechGo アフィリ URL (素材 001) に変更・sitemicros 個別計測対応
+//   → myvision/twin-pro/unizon-it は href プロパティで上書き指定推奨 (将来別 ASP 提携時)
 interface Props {
   href?: string;
   label?: string;
+  pageSlug?: string;  // sitemicros 個別計測用 (例: 'recruit-hyouban', 'high-class')
 }
-const { href = '#', label = '転職エージェント公式サイトで無料相談する（PR）' } = Astro.props;
+const {
+  href,
+  label = '転職エージェント公式サイトで無料相談する（PR）',
+  pageSlug = 'unknown',
+} = Astro.props;
+
+// default: TechGo アフィリ URL (素材 001 テキストリンク・a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6)
+// sitemicros: prbadge_{pageSlug} で個別計測 (★299 EPC 計測対応)
+const finalHref = href || `https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6&sitemicros=${encodeURIComponent('prbadge_' + pageSlug)}`;
 ---
 
 <div class="my-6 p-4 border-2 border-blue-200 rounded-lg bg-blue-50">
   <a
-    href={href}
+    href={finalHref}
     target="_blank"
     rel="noopener nofollow sponsored"
     data-cta={label}
+    data-material="prbadge_txt_001"
+    data-page-slug={pageSlug}
     class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition"
   >
     {label}
   </a>
+  <img border="0" width="1" height="1"
+       src="https://www16.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6"
+       alt="" loading="lazy" style="position:absolute;left:-9999px" />
   <p class="text-xs text-gray-700 mt-2 text-center">
     PR / 公式サイトへ遷移 / 利用料は転職エージェントにより異なります / 在職中相談可 / 退会自由（公式利用規約参照）
   </p>
