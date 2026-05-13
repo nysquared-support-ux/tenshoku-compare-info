@@ -85,7 +85,7 @@ const services = [
 <Layout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
   <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge />
+    <PRBadge pageSlug="osusume" />
 
     <nav class="text-sm text-gray-500 mb-4">
       <a href="/" class="underline">トップ</a> &gt; 転職エージェント おすすめ
@@ -224,6 +224,9 @@ const services = [
         ※40 代向けの転職対策は <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> ・<a href="/40dai-revenge/" class="underline">40 代リベンジ転職ページ</a> もあわせてご参照ください。本記事は転職保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。
       </p>
     </section>
+
+    <BannerAB pageSlug="osusume" position="footer" />
+
 
     <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
     <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
