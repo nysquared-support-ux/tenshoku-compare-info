@@ -12,12 +12,12 @@ const breadcrumb = [
   { name: '経理マネージャー転職', url: 'https://tenshoku-compare-info.pages.dev/keiri-manager-tenshoku/' },
 ];
 
-// ★441-EXT ItemList Schema (A3 +10pt 期待)
+// ★441-EXT ItemList Schema (A3 +10pt 期待) + ★480 Codex must 5 反映 (2026-05-14 [3wLgHdY89M])
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  'name': '士業転職エージェント主要 4 サービス比較',
-  'description': '会計士・税理士・簿記資格者向け転職エージェント 4 社の公開情報整理',
+  'name': '経理マネージャー転職おすすめ 4 サービス比較 (士業有資格者含む)',
+  'description': '経理 5-10 年・経理マネージャー候補・チームリーダー候補向け転職エージェント 4 社の公開情報整理 (簿記資格者・会計士・税理士有資格者も対象)',
   'itemListOrder': 'https://schema.org/ItemListUnordered',
   'itemListElement': [
     {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・年収アップ実績', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
@@ -43,11 +43,12 @@ const faqExtra = [
   { q: '会計事務所から税理士法人への転職は可能ですか?', a: '公開情報上、会計事務所 (中小) から税理士法人 (Big4・大手) への転職は可能とされていますが、実務経験・スキル・年齢により難易度が異なるとされています。税理士有資格者の場合は比較的選択肢が広いとされています。詳細は士業特化エージェントへご相談ください。' },
 ];
 
+// ★480 Codex must 2 反映 (2026-05-14 [3wLgHdY89M]): 経理マネージャー文脈強化 + 簿記/士業有資格者対応明示
 const services = [
-  { name: 'ツインプロ', target: '会計士・税理士・簿記資格者', strength: '士業特化・無料キャリア面談', point: 'MyVision 社運営・士業有資格者向け転職エージェント (公開情報)', recommended: true },
-  { name: 'マイナビ会計士', target: '公認会計士・税理士', strength: '大手系列・求人数', point: '株式会社マイナビ運営・若手中堅対応 (公開情報)', recommended: false },
-  { name: 'MS-Japan', target: '経理・財務・会計士・税理士', strength: '管理部門特化', point: '事業会社経理転職に強み・MS-Japan 社運営 (公開情報)', recommended: false },
-  { name: 'リクルートエージェント', target: '総合型 (士業含む)', strength: '求人数 60 万件+', point: '士業求人も一部カバー・併用推奨 (公開情報)', recommended: false },
+  { name: 'MS-Japan', target: '経理マネージャー候補・経理・財務・会計士・税理士', strength: '管理部門特化・事業会社経理転職', point: '株式会社 MS-Japan 運営・経理マネージャー求人に強み (公開情報)', recommended: true },
+  { name: 'ツインプロ', target: '簿記資格者・会計士・税理士・経理経験者 (士業有資格者向け)', strength: '士業特化・無料キャリア面談', point: 'MyVision 社運営・簿記/士業有資格者の経理マネージャー転職も対象 (公開情報)', recommended: false },
+  { name: 'マイナビ会計士', target: '公認会計士・税理士・簿記資格者', strength: '大手系列・求人数', point: '株式会社マイナビ運営・若手中堅対応 (公開情報)', recommended: false },
+  { name: 'リクルートエージェント', target: '総合型 (経理マネージャー・士業含む)', strength: '求人数 60 万件+', point: '経理マネージャー求人も多くカバー・併用推奨 (公開情報)', recommended: false },
 ];
 ---
 
@@ -56,7 +57,7 @@ const services = [
   <main class="max-w-3xl mx-auto px-4 py-8">
     <PRBadge pageSlug="keiri-manager-tenshoku"
              href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE&sitemicros=prbadge_keiri-manager-tenshoku"
-             label="会計士・税理士特化の転職エージェント・無料キャリア面談（PR）" />
+             label="経理マネージャー候補も対象・士業特化転職エージェントで無料キャリア面談（PR）" />
 
     <nav class="text-sm text-gray-500 mb-4">
       <a href="/" class="underline">トップ</a> &gt; <a href="/osusume/" class="underline">転職エージェント</a> &gt; 経理マネージャー転職
@@ -66,16 +67,16 @@ const services = [
       経理マネージャー転職おすすめ4社比較｜経理5-10年・チームリーダー候補向け選び方5基準
     </h1>
 
-    <!-- ★Codex 採用必須: 冒頭フック強化 (失敗3点 + 比較判断便益を先に) -->
+    <!-- ★Codex 採用必須: 冒頭フック強化 (失敗3点 + 比較判断便益を先に) + ★480 Codex must 3 反映 -->
     <section class="mb-6 bg-red-50 border-l-4 border-red-400 p-4 text-sm">
-      <p class="font-bold mb-2" style="color: #B91C1C;">💡 士業転職で失敗しやすい 3 点 (本記事で回避可能)</p>
+      <p class="font-bold mb-2" style="color: #B91C1C;">💡 経理マネージャー転職で失敗しやすい 3 点 (本記事で回避可能)</p>
       <ol class="list-decimal pl-5 space-y-1">
-        <li><strong>プレイングマネージャー期待で実務専念</strong> → マネジメント比率事前確認 (60-70% 目安)・面接でチーム規模 + 業務分担確認</li>
-        <li><strong>経理 vs 財務 vs 内部統制マネージャー差異把握不足</strong> → 各職種を 4 軸 (担当範囲・スキル・年収・キャリアパス) で比較</li>
+        <li><strong>プレイングマネージャー期待で実務専念</strong> → 経理マネージャー候補ポジションのマネジメント比率事前確認 (60-70% 目安)・面接でチーム規模 + 業務分担確認</li>
+        <li><strong>経理マネージャー vs 財務マネージャー vs 内部統制マネージャー差異把握不足</strong> → 各職種を 4 軸 (担当範囲・スキル・年収・キャリアパス) で比較</li>
         <li><strong>業種別経理スキル偏重で横展開困難</strong> → 連結 + 税務 + IPO 準備 + 内部統制 を横展開可能スキルとして整理</li>
       </ol>
       <p class="text-xs text-gray-700 mt-2">
-        本記事で得られる判断 (経理 5-10 年・チームリーダー候補 向け): ① 経理マネージャー転職 に最適なエージェント 4 社比較 ② 失敗回避 5 基準 ③ 利用の流れ ④ タイミング判断軸
+        本記事で得られる判断 (経理 5-10 年・経理マネージャー候補・チームリーダー候補 向け): ① 経理マネージャー転職 に最適なエージェント 4 社比較 (簿記資格者・会計士・税理士有資格者含む) ② 失敗回避 5 基準 ③ 利用の流れ ④ タイミング判断軸
       </p>
     </section>
 
@@ -96,8 +97,8 @@ const services = [
     </p>
 
     <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 会計士・税理士・簿記資格者の転職は <strong>① 士業特化エージェント (ツインプロ等)</strong> ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の <strong>3 軸組合せ</strong>が推奨されます。本記事では士業有資格者向け転職エージェント 4 社比較と選び方 5 基準を整理します。</p>
-      <p class="mt-2">会計士・税理士の専門性 + 業界知見 + 非公開求人アクセスの 3 点で士業特化型が強みとされ、求人数の多さで総合型が補完するとされています。</p>
+      <p><strong>結論 (経理マネージャー転職 向け)</strong>: 経理 5-10 年・経理マネージャー候補・チームリーダー候補の転職は <strong>① 管理部門特化エージェント (MS-Japan 等)</strong> ② 士業有資格者は士業特化併用 (ツインプロ等) ③ 総合型併用 (リクルート等) の <strong>3 軸組合せ</strong>が推奨されます。本記事では経理マネージャー転職向けエージェント 4 社比較と選び方 5 基準を整理します。</p>
+      <p class="mt-2">経理マネージャー転職では、管理部門特化型が ① 経理職の実務知見 ② 事業会社経理マネージャー求人 ③ 連結/IPO/内部統制スキル評価で強みとされ、簿記資格者・会計士・税理士有資格者は士業特化型も併用で求人カバレッジ最大化が推奨されるとされています。</p>
     </section>
 
     <!-- ツインプロ専用バナー hero (素材 003 高解像度・★326 DRY 流用) -->
