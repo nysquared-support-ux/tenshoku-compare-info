@@ -44,32 +44,12 @@ const faqExtra = [
 ];
 
 // ★480 Codex must 2 反映 (2026-05-14 [3wLgHdY89M]): 経理マネージャー文脈強化 + 簿記/士業有資格者対応明示
-// ★480 残 must 1 反映 (本ターン): MS-Japan 説明量増 + 公式利用規約リンク + 公的統計引用 (★435 体現)
 const services = [
-  { name: 'MS-Japan', target: '経理マネージャー候補・経理・財務・会計士・税理士', strength: '管理部門特化・事業会社経理転職に強み (経理マネージャー求人非公開比率が高いとされる・年収交渉支援・在職中相談可)', point: '株式会社 MS-Japan 運営・1990 年設立・管理部門特化転職エージェントとして公開情報上 25 年以上の業界経験・経理マネージャー候補ポジション求人 (年収 600-1,200 万円帯) を多くカバーとされる (公開情報・<a href="https://www.jmsc.co.jp/" target="_blank" rel="noopener" class="underline">MS-Japan 公式</a> / <a href="https://www.jmsc.co.jp/agreement/" target="_blank" rel="noopener" class="underline">利用規約</a>)', recommended: true },
-  { name: 'ツインプロ', target: '簿記資格者・会計士・税理士・経理経験者 (士業有資格者向け)', strength: '士業特化・無料キャリア面談', point: 'MyVision 社運営・簿記/士業有資格者の経理マネージャー転職も対象 (公開情報・<a href="https://www.coreda.jp/" target="_blank" rel="noopener" class="underline">coreda.jp</a> 経由)', recommended: false },
-  { name: 'マイナビ会計士', target: '公認会計士・税理士・簿記資格者', strength: '大手系列・求人数', point: '株式会社マイナビ運営・若手中堅対応 (公開情報・<a href="https://mynavi-agent.jp/kaikeishi/" target="_blank" rel="noopener" class="underline">公式</a>)', recommended: false },
-  { name: 'リクルートエージェント', target: '総合型 (経理マネージャー・士業含む)', strength: '求人数 60 万件+', point: '株式会社リクルート運営・経理マネージャー求人も多くカバー・併用推奨 (公開情報・<a href="https://www.r-agent.com/" target="_blank" rel="noopener" class="underline">公式</a> / <a href="https://www.r-agent.com/guide/" target="_blank" rel="noopener" class="underline">利用規約</a>)', recommended: false },
+  { name: 'MS-Japan', target: '経理マネージャー候補・経理・財務・会計士・税理士', strength: '管理部門特化・事業会社経理転職', point: '株式会社 MS-Japan 運営・経理マネージャー求人に強み (公開情報)', recommended: true },
+  { name: 'ツインプロ', target: '簿記資格者・会計士・税理士・経理経験者 (士業有資格者向け)', strength: '士業特化・無料キャリア面談', point: 'MyVision 社運営・簿記/士業有資格者の経理マネージャー転職も対象 (公開情報)', recommended: false },
+  { name: 'マイナビ会計士', target: '公認会計士・税理士・簿記資格者', strength: '大手系列・求人数', point: '株式会社マイナビ運営・若手中堅対応 (公開情報)', recommended: false },
+  { name: 'リクルートエージェント', target: '総合型 (経理マネージャー・士業含む)', strength: '求人数 60 万件+', point: '経理マネージャー求人も多くカバー・併用推奨 (公開情報)', recommended: false },
 ];
-
-// ★480 残 must 4 反映 (本ターン・★435 体現): 公的統計引用追加・年収/求人数根拠
-const officialStats = {
-  jilpt_keiri_stats: {
-    title: 'JILPT 労働政策研究・研修機構',
-    url: 'https://www.jil.go.jp/',
-    point: '経理職転職動向・年収統計・公開情報',
-  },
-  stat_go_jp: {
-    title: '総務省統計局 労働力調査',
-    url: 'https://www.stat.go.jp/',
-    point: '管理部門役職別年収データ・公開情報',
-  },
-  mhlw_jobinfo: {
-    title: '厚生労働省 職業情報提供サイト',
-    url: 'https://shigoto.mhlw.go.jp/',
-    point: '経理職・経理マネージャーの職業情報・賃金構造基本統計調査',
-  },
-};
 ---
 
 <Layout title={title} description={description} publishedDate="2026-05-13" modifiedDate="2026-05-13" breadcrumb={breadcrumb} faq={faq}>
