@@ -1,0 +1,144 @@
+---
+/**
+ * エンジニア 職務経歴書 書き方 LP (TechGo 行動段階・★326 DRY jiko-bunseki + ses-dasshutsu 流用)
+ * sv 推定 1,600 / 検索意図: エンジニア向け職務経歴書作成方法
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）';
+const description = 'IT エンジニア向け職務経歴書の書き方を、STAR フレームワーク + 技術スタック記載方法 + 採用担当者が見るポイント + NG パターンで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'エンジニア 職務経歴書ガイド', url: 'https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/' },
+];
+
+const faq = [
+  { q: 'エンジニアの職務経歴書は何枚が目安ですか?', a: '一般的に A4 サイズで 2-3 枚が目安とされています。実務 10 年以上のシニアでも 4 枚以内に収めることが推奨されます。' },
+  { q: '実績の書き方が分かりません', a: 'STAR フレームワーク (Situation/Task/Action/Result) で構造化することが一般的に推奨されています。数値 (パフォーマンス改善 X% / コスト削減 Y 円 / ユーザー数 Z) で具体性を担保します。' },
+  { q: '技術スタックはどう書けば良いですか?', a: '一般的にカテゴリ別 (言語 / フレームワーク / DB / インフラ / ツール) に整理 + 各項目の習熟度 (実務 N 年 / 業務利用 / 学習中) を明示することが推奨されています。' },
+  { q: '副業・個人開発の実績は書くべきですか?', a: '一般的にエンジニア採用では副業・個人開発・OSS コントリビュートの実績は積極的に書くことが推奨されているとされています。但し本業の業務情報との切り分けに注意が必要です。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="engineer-shokumukeirekisho" />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; エンジニア 職務経歴書ガイド
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-15 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: エンジニアの職務経歴書は<strong>実績 + 数値 + 技術スタック</strong>の 3 軸が転職成否を決めると一般的に言われています。</p>
+      <p class="mt-2">本記事では STAR フレームワーク + 技術スタック記載方法 + 採用担当者が見るポイント + NG パターンを整理します。</p>
+    </section>
+
+    <BannerAB pageSlug="engineer-shokumukeirekisho" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 職務経歴書の基本構成</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>表紙 (1 ページ目)</strong>: 氏名 + 連絡先 + 職務要約 (3-5 行)</li>
+      <li><strong>職務経歴 (2-3 ページ目)</strong>: 時系列 (新→旧 or 旧→新) でプロジェクト記載</li>
+      <li><strong>技術スタック</strong>: カテゴリ別整理 + 習熟度</li>
+      <li><strong>保有資格 + 自己 PR</strong>: 端的に</li>
+      <li><strong>アウトプット</strong>: GitHub / 技術ブログ / 登壇等の URL</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 実績の STAR フレームワーク</h2>
+    <p class="mb-3 text-sm">
+      実績を構造化するための STAR フレームワーク (Situation / Task / Action / Result) は職務経歴書に一般的に推奨されているとされています。
+    </p>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
+      <li><strong>Situation (状況)</strong>: プロジェクト規模・チーム構成・課題背景</li>
+      <li><strong>Task (タスク)</strong>: 自身の担当範囲・責任範囲</li>
+      <li><strong>Action (行動)</strong>: 具体的に行った技術選定・実装・調整</li>
+      <li><strong>Result (結果)</strong>: 数値で示す成果 (パフォーマンス X% / コスト Y 円 / ユーザー Z)</li>
+    </ul>
+    <p class="text-xs text-gray-500">例: 「決済システムのレスポンスタイム改善 (Situation: ピーク時 3 秒超 / Task: 1 秒以内目標 / Action: DB クエリ最適化 + キャッシュ層導入 / Result: 平均 0.4 秒・99 パーセンタイル 0.8 秒達成)」</p>
+
+    <BannerAB pageSlug="engineer-shokumukeirekisho" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 技術スタックの書き方</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100">
+          <tr><th class="border border-gray-300 p-2">カテゴリ</th><th class="border border-gray-300 p-2">記載例</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">言語</td><td class="border border-gray-300 p-2">TypeScript (実務 5 年) / Python (実務 3 年) / Go (業務利用)</td></tr>
+          <tr><td class="border border-gray-300 p-2">フレームワーク</td><td class="border border-gray-300 p-2">Next.js / Django / React / Vue</td></tr>
+          <tr><td class="border border-gray-300 p-2">DB</td><td class="border border-gray-300 p-2">PostgreSQL / MySQL / Redis / Elasticsearch</td></tr>
+          <tr><td class="border border-gray-300 p-2">インフラ</td><td class="border border-gray-300 p-2">AWS (ECS/Lambda/RDS) / Docker / Kubernetes / Terraform</td></tr>
+          <tr><td class="border border-gray-300 p-2">ツール</td><td class="border border-gray-300 p-2">GitHub Actions / Datadog / Sentry / Linear</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 採用担当者が見るポイント 5 つ</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>主要言語の実務年数</strong>: 1-2 言語の深い実務経験 (3 年+) が重視される</li>
+      <li><strong>規模感の数値</strong>: チーム規模 / ユーザー数 / トラフィック数</li>
+      <li><strong>役割の明確性</strong>: メンバー / リード / マネジメント の区別</li>
+      <li><strong>アウトプット</strong>: GitHub / ブログ / 登壇 の有無</li>
+      <li><strong>キャリアの一貫性</strong>: 大きな飛び (業界・職種) には理由説明</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. NG パターン (回避すべき)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>誇張・嘘</strong>: 経験年数・実績水増し (リファレンスチェックで発覚リスク)</li>
+      <li><strong>抽象表現</strong>: 「大きく貢献」「効率化を実現」等の数値なし表現</li>
+      <li><strong>長文</strong>: A4 5 枚以上 (採用担当者の読了率低下)</li>
+      <li><strong>技術名の羅列</strong>: 習熟度なし・実務利用なしのキーワード列挙</li>
+      <li><strong>誤字脱字</strong>: 細部の注意力不足を疑われる</li>
+    </ul>
+
+    <BannerAB pageSlug="engineer-shokumukeirekisho" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/ses-dasshutsu/" class="underline">SES 脱出 完全ガイド</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/full-remote-engineer/" class="underline">フルリモート エンジニア 転職ガイド</a></li>
+      <li><a href="/jiko-bunseki/" class="underline">転職 自己分析 やり方</a></li>
+      <li><a href="/mensetsu/" class="underline">面接対策ガイド</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク</a> — 職務経歴書テンプレート提供</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> — 労働市場情報</li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> — 職業情報サイト (job tag)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (
+      <details class="mb-3 border border-gray-200 rounded p-3">
+        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
+        <p class="mt-2 text-sm">{item.a}</p>
+      </details>
+    ))}
+
+    <p class="text-xs text-gray-500 mt-8">
+      ※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。
+    </p>
+  </main>
+</Layout>
