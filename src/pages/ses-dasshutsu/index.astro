@@ -1,0 +1,151 @@
+---
+/**
+ * SES 脱出 LP (TechGo IT エンジニアハイクラス転職・★326 DRY nenshu-up 流用)
+ * sv 推定 2,400 / 検索意図: SES から自社開発・元請への転職
+ * ★365 重複 verify ✅ 新規 / 6 段階フロー: KW検討✅→骨格→本文→Claude review→Codex review→修正
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'SES 脱出 完全ガイド｜自社開発・元請への転職判断と年収アップの目安（2026年版・PR）';
+const description = 'SES (システムエンジニアリングサービス) から自社開発・元請企業への転職を検討中の IT エンジニア向け。脱出理由・判断軸・転職活動の流れ・年収アップ目安を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'SES 脱出ガイド', url: 'https://tenshoku-compare-info.pages.dev/ses-dasshutsu/' },
+];
+
+const faq = [
+  { q: 'SES と自社開発はどう違いますか?', a: '一般的に SES は他社プロジェクトへ常駐する形態・自社開発は自社サービスを開発する形態とされています。SES はプロジェクト多様性 + 顧客折衝経験を積める一方、技術選定の自由度・スキル蓄積の継続性は自社開発が優位とされています。' },
+  { q: 'SES 脱出のベストタイミングは?', a: '一般的には実務経験 2-3 年・1-2 個の主要言語/フレームワーク習得後が脱出タイミングとされています。但しスキル・年収・キャリア志向により判断は異なるため、エージェント相談が推奨されます。' },
+  { q: 'SES 脱出で年収はどれくらいアップしますか?', a: '個別状況により大きく異なるとされていますが、一般的には自社開発・元請への転職で年収 50-150 万円アップの事例が多いとされています。但し業界・スキル・職位により異なります。具体額は各エージェントのキャリア面談でご確認ください。' },
+  { q: 'スキル不足でも SES 脱出は可能ですか?', a: '実務 1 年以上 + 基礎スキル習得済であれば、ポテンシャル採用枠が一般的に存在するとされています。但し選択肢は実務 3 年以上の経験者と比較して限定的になる傾向があるとされています。' },
+  { q: 'SES に居続けるメリットはありますか?', a: '一般的にプロジェクト多様性 + 多様な企業文化経験 + 顧客折衝スキル習得が SES のメリットとされています。但し長期的なスキル蓄積・年収アップを優先する場合は自社開発・元請への転職を検討されることが多いとされています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="ses-dasshutsu" />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; SES 脱出 完全ガイド
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      SES 脱出 完全ガイド｜自社開発・元請への転職判断と年収アップの目安
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-15 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: SES から自社開発・元請への転職は、実務 2-3 年経験 + 主要スキル習得後が一つの目安とされています。年収アップ + 技術選定の自由度 + 長期キャリア構築が主要メリットとされています。</p>
+      <p class="mt-2">但し個別状況により判断は大きく異なるため、IT エンジニア特化転職エージェントへの相談が推奨されます。</p>
+    </section>
+
+    <BannerAB pageSlug="ses-dasshutsu" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. SES から脱出を検討する 5 つの理由</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
+      <li><strong>年収アップ</strong>: 中間マージン回避で同じスキルでも年収 50-150 万円アップ事例が一般的</li>
+      <li><strong>技術選定の自由度</strong>: 自社開発はモダン技術スタック採用が活発</li>
+      <li><strong>長期スキル蓄積</strong>: 同じプロダクトを長期間担当でドメイン知識深化</li>
+      <li><strong>キャリアパス明確化</strong>: テックリード・PM・CTO 候補等の昇進ルート</li>
+      <li><strong>ライフスタイル</strong>: フルリモート・フレックス制度普及が進む傾向</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. SES 脱出の判断軸 4 つ</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-2">
+      <li><strong>スキル成熟度</strong>: 1-2 個の主要言語/フレームワーク習得 + 実務 2 年以上</li>
+      <li><strong>市場価値</strong>: GitHub・技術ブログ・LT 登壇等のアウトプット</li>
+      <li><strong>キャリア志向</strong>: スペシャリスト or マネジメント路線の明確化</li>
+      <li><strong>ライフイベント</strong>: 結婚・家族計画・住宅購入のタイミング</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 転職活動の流れ (一般的目安)</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-2">
+      <li><strong>3 ヶ月前</strong>: エージェント登録 + 職務経歴書作成 + ポートフォリオ整備</li>
+      <li><strong>2 ヶ月前</strong>: カジュアル面談 + コーディングテスト対策</li>
+      <li><strong>1 ヶ月前</strong>: 本面接 + 内定 + 条件交渉</li>
+      <li><strong>退職通告 → 引き継ぎ</strong>: 1-2 ヶ月の引き継ぎ期間が一般的</li>
+    </ol>
+
+    <BannerAB pageSlug="ses-dasshutsu" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 年収アップ目安</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100">
+          <tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">SES 年収帯</th><th class="border border-gray-300 p-2">自社開発 年収帯</th><th class="border border-gray-300 p-2">差分目安</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">1-2 年</td><td class="border border-gray-300 p-2">300-400 万</td><td class="border border-gray-300 p-2">400-500 万</td><td class="border border-gray-300 p-2">+50-100 万</td></tr>
+          <tr><td class="border border-gray-300 p-2">3-5 年</td><td class="border border-gray-300 p-2">400-550 万</td><td class="border border-gray-300 p-2">550-750 万</td><td class="border border-gray-300 p-2">+100-200 万</td></tr>
+          <tr><td class="border border-gray-300 p-2">5-10 年</td><td class="border border-gray-300 p-2">500-700 万</td><td class="border border-gray-300 p-2">700-1,000 万+</td><td class="border border-gray-300 p-2">+200-300 万</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-500">※ 公開情報・業界平均値の整理であり、個別状況により大きく異なります。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. 脱出後に多い転職先カテゴリ</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>Web 系自社開発企業</strong>: モダン技術・フルリモート・フレックス</li>
+      <li><strong>事業会社の社内 SE</strong>: 上流工程 + DX 推進・年収安定</li>
+      <li><strong>SaaS スタートアップ</strong>: ストックオプション + 急成長環境</li>
+      <li><strong>外資系 IT 企業</strong>: 高年収 + グローバル経験</li>
+      <li><strong>元請 SI (一次請け)</strong>: 上流工程 + 大規模プロジェクト</li>
+    </ul>
+
+    <BannerAB pageSlug="ses-dasshutsu" position="footer" />
+
+    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <h3 class="font-bold mb-2">まとめ</h3>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>SES 脱出のタイミングは実務 2-3 年 + 主要スキル習得後が一般的目安</li>
+        <li>年収アップ + 技術選定自由度 + 長期スキル蓄積が主要メリット</li>
+        <li>判断軸はスキル / 市場価値 / キャリア志向 / ライフイベント の 4 軸</li>
+        <li>転職活動は退職予定日 3 ヶ月前から開始が一般的</li>
+      </ul>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万への道</a></li>
+      <li><a href="/full-remote-engineer/" class="underline">フルリモート エンジニア 転職ガイド</a></li>
+      <li><a href="/engineer-shokumukeirekisho/" class="underline">エンジニア 職務経歴書 書き方</a></li>
+      <li><a href="/high-class/" class="underline">ハイクラス転職ガイド</a></li>
+      <li><a href="/nenshu-up/" class="underline">転職 年収アップ完全ガイド</a></li>
+      <li><a href="/techgo/" class="underline">TechGo (テックゴー) 紹介</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク</a> — 公的職業紹介</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究・研修機構</a> — IT 業界統計</li>
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA (情報処理推進機構)</a> — IT 人材白書</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (
+      <details class="mb-3 border border-gray-200 rounded p-3">
+        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
+        <p class="mt-2 text-sm">{item.a}</p>
+      </details>
+    ))}
+
+    <p class="text-xs text-gray-500 mt-8">
+      ※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。
+    </p>
+  </main>
+</Layout>
