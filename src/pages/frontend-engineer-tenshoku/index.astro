@@ -1,0 +1,106 @@
+---
+/**
+ * フロントエンドエンジニア 転職 LP (TechGo 第 3 弾・★326 DRY 出典注記強化版)
+ * sv 推定 2,400 / 検索意図: React/Vue/Next.js エンジニアの転職
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'フロントエンドエンジニア 転職完全ガイド｜React/Vue/Next.js 年収帯とキャリアパス（2026年版・PR）';
+const description = 'React / Vue / Next.js フロントエンドエンジニアの転職を検討中の方向け。必須スキル + 業界別年収帯 + ポートフォリオ + 転職戦略を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'フロントエンドエンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/frontend-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: 'フロントエンドエンジニアの年収はどれくらいですか?', a: '一般的に実務 3 年で 500-750 万円・5 年以上で 700-1,200 万円とされ、React/Next.js 専門は高単価帯傾向があるとされています。' },
+  { q: 'React と Vue どちらを学ぶべきですか?', a: '一般的に国内では React + Next.js 求人が多い・Vue + Nuxt はスタートアップで活用されているとされています。キャリア目標により選定が推奨されます。' },
+  { q: 'デザイナーから転身できますか?', a: '一般的に HTML/CSS + JavaScript 基礎 + React 学習 + 個人開発 で転身事例があるとされています。但しキャリア初期は厳しい傾向もあります。' },
+  { q: 'TypeScript は必須ですか?', a: '一般的に 2026 年現在、TypeScript は React/Next.js 案件で標準採用とされ、必須スキルに近い傾向があるとされています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="frontend-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; フロントエンドエンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">フロントエンドエンジニア 転職完全ガイド｜React/Vue/Next.js 年収帯とキャリアパス</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: フロントエンドエンジニアは Web 主流で需要安定とされ、React/Next.js + TypeScript + パフォーマンス最適化スキルが転職市場価値を決める一般的傾向です。年収 500-1,200 万円帯が活発な傾向です。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+    </section>
+
+    <BannerAB pageSlug="frontend-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 必須スキル</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>React / Vue / Angular いずれか + Next.js / Nuxt</li>
+      <li>TypeScript (2026 年標準採用)</li>
+      <li>状態管理 (Redux / Zustand / Pinia)</li>
+      <li>CSS-in-JS / Tailwind / CSS Modules</li>
+      <li>テスト (Jest / Vitest / Playwright)</li>
+      <li>パフォーマンス最適化 (Lighthouse / Core Web Vitals)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 年収帯 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">年収帯</th><th class="border border-gray-300 p-2">主要転職先</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">1-2 年</td><td class="border border-gray-300 p-2">400-550 万</td><td class="border border-gray-300 p-2">Web 自社開発・受託</td></tr>
+          <tr><td class="border border-gray-300 p-2">3-5 年</td><td class="border border-gray-300 p-2">500-750 万</td><td class="border border-gray-300 p-2">SaaS / EC / メディア</td></tr>
+          <tr><td class="border border-gray-300 p-2">5-10 年</td><td class="border border-gray-300 p-2">700-1,200 万</td><td class="border border-gray-300 p-2">SaaS Senior / 外資 IT / リード</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <BannerAB pageSlug="frontend-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 業界別 求人傾向</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>SaaS スタートアップ</strong>: React/Next.js + TypeScript・モダン技術</li>
+      <li><strong>EC / メディア</strong>: 大規模トラフィック + パフォーマンス最適化</li>
+      <li><strong>外資 IT</strong>: React + Design System + 高単価</li>
+      <li><strong>受託・SI</strong>: Vue/Angular 含む + 複数プロジェクト経験</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li>GitHub に React/Next.js 個人開発作品 + デプロイ URL 公開</li>
+      <li>技術ブログで設計意図・パフォーマンス施策を発信</li>
+      <li>OSS PR + コミット履歴で実装力を示す</li>
+      <li>フロントエンド特化エージェント + スカウト型併用</li>
+    </ol>
+
+    <BannerAB pageSlug="frontend-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/full-remote-engineer/" class="underline">フルリモート エンジニア 転職</a></li>
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
+  </main>
+</Layout>

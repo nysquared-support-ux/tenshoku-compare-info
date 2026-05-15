@@ -1,0 +1,110 @@
+---
+/**
+ * 外資 IT エンジニア 転職 LP (TechGo 第 3 弾・★326 DRY 出典注記強化版)
+ * sv 推定 1,300 / 検索意図: GAFA/MSFT/外資 IT 系エンジニアの転職
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '外資 IT エンジニア 転職完全ガイド｜GAFA/MSFT 年収 2000 万への道（2026年版・PR）';
+const description = 'GAFA/Microsoft/外資 IT エンジニアの転職を検討中の方向け。必須スキル + コーディング面接対策 + 業界別年収帯 + ビザ/英語要件を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: '外資 IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/gaishi-it-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: '外資 IT エンジニアの年収はどれくらいですか?', a: '一般的に外資 IT エンジニアの年収は実務 3 年で 900-1,500 万円・5 年以上で 1,500-3,000 万円とされ、ストックオプション + RSU 含むパッケージで高単価傾向があるとされています。' },
+  { q: 'コーディング面接対策は必要ですか?', a: '一般的に GAFA/Microsoft 等は LeetCode 系のコーディング面接 + システムデザイン面接が標準とされています。3-6 ヶ月の集中対策が推奨される傾向です。' },
+  { q: '英語力はどの程度必要ですか?', a: '一般的に外資日本法人 (Japan オフィス) は日本語中心も可・本社 (US/EU) 採用は英語ビジネスレベル必須とされています。' },
+  { q: 'ビザサポートはありますか?', a: '一般的に GAFA/Microsoft 等は H1B/Work Visa サポートが標準とされていますが、抽選/制限があるため早期エージェント相談が推奨されます。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="gaishi-it-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; 外資 IT エンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">外資 IT エンジニア 転職完全ガイド｜GAFA/MSFT 年収 2000 万への道</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: 外資 IT (GAFA/Microsoft/Oracle/Salesforce 等) は年収 900-3,000 万円帯の求人が活発で、ストックオプション + RSU 含むパッケージで日系を大きく上回る傾向とされています。コーディング面接対策 + システムデザイン + 英語力が転職成否を決める一般的傾向です。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+    </section>
+
+    <BannerAB pageSlug="gaishi-it-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 外資 IT 主要企業 (公開情報ベース)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>GAFA</strong>: Google / Apple / Facebook (Meta) / Amazon</li>
+      <li><strong>Microsoft</strong>: Azure / Office 365 / GitHub / OpenAI 投資</li>
+      <li><strong>Salesforce / Oracle / SAP</strong>: エンタープライズ SaaS / DB</li>
+      <li><strong>Netflix / Uber / Airbnb</strong>: ユニコーン系</li>
+      <li><strong>AI ネイティブ (OpenAI / Anthropic / Mistral)</strong>: 2026 年最高単価</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 採用プロセス (一般的目安)</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>スカウト / 応募</strong>: LinkedIn / Recruiter 経由が一般的</li>
+      <li><strong>Recruiter Screening</strong>: 経歴 + キャリア整合確認</li>
+      <li><strong>コーディング面接 (1-3 回)</strong>: LeetCode 中-難レベル</li>
+      <li><strong>システムデザイン面接</strong>: スケーラブル設計力</li>
+      <li><strong>Hiring Manager 面接</strong>: チームフィット + 動機</li>
+      <li><strong>Bar Raiser / Onsite</strong>: 最終評価</li>
+      <li><strong>Offer 交渉</strong>: 年収 + RSU + サインオン</li>
+    </ol>
+
+    <BannerAB pageSlug="gaishi-it-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">レベル</th><th class="border border-gray-300 p-2">年収帯 (Base+RSU)</th><th class="border border-gray-300 p-2">主な企業層</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">L3-L4 (Junior)</td><td class="border border-gray-300 p-2">900-1,400 万</td><td class="border border-gray-300 p-2">GAFA 日本法人 / Microsoft</td></tr>
+          <tr><td class="border border-gray-300 p-2">L5 (Senior)</td><td class="border border-gray-300 p-2">1,400-2,200 万</td><td class="border border-gray-300 p-2">GAFA / 大手 SaaS</td></tr>
+          <tr><td class="border border-gray-300 p-2">L6+ (Staff)</td><td class="border border-gray-300 p-2">2,200-3,500 万+</td><td class="border border-gray-300 p-2">テックリード / アーキテクト</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>3-6 ヶ月集中対策</strong>: LeetCode 200 問 + システムデザイン書籍</li>
+      <li><strong>LinkedIn 最適化</strong>: 英語 + 実績数値化 + キーワード整備</li>
+      <li><strong>OSS / GitHub 実績</strong>: 技術力の客観証明</li>
+      <li><strong>外資特化エージェント</strong>: コーディング面接対策含むサポート</li>
+      <li><strong>英語面接対策</strong>: 模擬面接 + 業界用語</li>
+    </ol>
+
+    <BannerAB pageSlug="gaishi-it-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/ai-engineer-tenshoku/" class="underline">AI エンジニア 転職</a></li>
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職</a></li>
+      <li><a href="/high-class/" class="underline">ハイクラス転職ガイド</a></li>
+      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> / <a href="https://www.meti.go.jp/" target="_blank" rel="noopener" class="underline">経済産業省</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
+  </main>
+</Layout>

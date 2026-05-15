@@ -1,0 +1,106 @@
+---
+/**
+ * データエンジニア 転職 LP (TechGo 第 3 弾・★326 DRY 出典注記強化版)
+ * sv 推定 880 / 検索意図: データ基盤・データパイプラインエンジニアの転職
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）';
+const description = 'データエンジニアの転職を検討中の方向け。DWH/ETL/Spark 必須スキル + 業界別年収帯 + データ駆動企業のキャリアパスを公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'データエンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: 'データエンジニアの年収はどれくらいですか?', a: '一般的に実務 3 年で 600-900 万円・5 年以上で 800-1,400 万円とされ、AI/ML 補完の役割で高単価傾向があるとされています。' },
+  { q: 'データサイエンティストとの違いは?', a: '一般的にデータエンジニアはデータ基盤構築 (パイプライン/DWH)・データサイエンティストは分析/モデリングが主軸とされています。但し業界により役割は重複する傾向もあります。' },
+  { q: '必須スキルは?', a: '一般的に SQL + Python + DWH (BigQuery/Snowflake/Redshift) + ETL (Airflow/dbt) + Spark/Kafka 等が評価されているとされています。' },
+  { q: 'AI 時代でも需要は続きますか?', a: '一般的に AI 活用には高品質なデータ基盤が前提のため、データエンジニアの需要は AI 時代でも継続・拡大傾向とされています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="data-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; データエンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: データエンジニアは AI 時代のデータ基盤需要拡大で年収 600-1,400 万円帯の求人が活発な傾向です。SQL + Python + クラウド DWH + ETL (dbt/Airflow) の 4 軸が転職市場価値を決める一般的傾向です。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+    </section>
+
+    <BannerAB pageSlug="data-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. データエンジニアの 3 種類</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>データパイプラインエンジニア</strong>: ETL/ELT 設計・運用</li>
+      <li><strong>データ基盤エンジニア (DWH)</strong>: BigQuery/Snowflake/Redshift 設計</li>
+      <li><strong>アナリティクスエンジニア</strong>: dbt + データモデリング + BI 連携</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>SQL (パフォーマンスチューニング含)</li>
+      <li>Python (Pandas / PySpark)</li>
+      <li>DWH (BigQuery / Snowflake / Redshift / Databricks)</li>
+      <li>ETL/ELT (Airflow / dbt / Fivetran / Embulk)</li>
+      <li>ストリーミング (Kafka / Kinesis / Pub/Sub)</li>
+      <li>クラウド (AWS/GCP) データサービス</li>
+    </ul>
+
+    <BannerAB pageSlug="data-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">年収帯</th><th class="border border-gray-300 p-2">主要転職先</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">1-2 年</td><td class="border border-gray-300 p-2">450-650 万</td><td class="border border-gray-300 p-2">Web 自社開発・SaaS</td></tr>
+          <tr><td class="border border-gray-300 p-2">3-5 年</td><td class="border border-gray-300 p-2">600-900 万</td><td class="border border-gray-300 p-2">SaaS / 大手 IT / AI スタートアップ</td></tr>
+          <tr><td class="border border-gray-300 p-2">5-10 年</td><td class="border border-gray-300 p-2">800-1,400 万</td><td class="border border-gray-300 p-2">外資 IT / データ部門リード</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 業界別 求人傾向</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>SaaS / Web</strong>: データ駆動意思決定の基盤構築</li>
+      <li><strong>金融 / FinTech</strong>: 大量データ処理 + 規制対応</li>
+      <li><strong>EC / メディア</strong>: レコメンド + パーソナライゼーション</li>
+      <li><strong>AI / ML 企業</strong>: 学習データパイプライン構築</li>
+      <li><strong>外資 IT</strong>: グローバル規模 + 高単価</li>
+    </ul>
+
+    <BannerAB pageSlug="data-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/ai-engineer-tenshoku/" class="underline">AI エンジニア 転職</a></li>
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職</a></li>
+      <li><a href="/infra-engineer-tenshoku/" class="underline">インフラエンジニア 転職</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> / <a href="https://www.meti.go.jp/" target="_blank" rel="noopener" class="underline">経済産業省</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
+  </main>
+</Layout>
