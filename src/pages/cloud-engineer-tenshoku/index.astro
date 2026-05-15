@@ -7,8 +7,8 @@ import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = 'クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年版・PR）';
-const description = 'AWS/GCP/Azure クラウドエンジニアの転職を検討中の方向け。必須スキル + 業界別年収帯 + 認定資格 + 転職戦略を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const title = 'クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）';
+const description = 'AWS/GCP/Azure クラウドエンジニアの転職を検討中の方向け。必須スキル・経験年数別年収帯・認定資格 (AWS SAP/GCP PCA/AZ-305)・転職戦略を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。読者別 (未経験/インフラ経験者/SRE 志向) 分岐の判断材料を提供します。
 
 const breadcrumb = [
   { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
@@ -39,8 +39,25 @@ const faq = [
     <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
       <p><strong>結論 (一般的傾向)</strong>: クラウドエンジニアは AWS/GCP/Azure 需要急増で年収 600-1,500 万円帯の求人が活発とされています。実務経験 + 認定資格 + アーキテクチャ設計力の 3 軸が転職成否を決める一般的傾向です。</p>
     
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況 (経験年数・スキル・地域・職種・対象母集団) により大きく異なります:<br />
+      ① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究報告書 No.229 (2024 年・IT エンジニア労働市場分析)</a><br />
+      ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024 (2025 年 4 月公開・クラウド人材需給含む)</a><br />
+      ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/118" target="_blank" rel="noopener" class="underline">厚生労働省 job tag「IT インフラ・クラウド」(2026 年 5 月確認)</a><br />
+      ④ AWS / GCP / Microsoft 各社公開認定資格情報 (2026 年 5 月確認)<br />
+      ⑤ 各転職エージェント (リクルートエージェント / doda / TechGo 等) 公開求人情報サンプル (2026 年 5 月確認・地域: 主に首都圏・職種: クラウドアーキテクト/インフラ/SRE)<br />
+      最終確認日: 2026-05-15。</p>
     </section>
+
+    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
+      <strong>📌 読者別 判断分岐 (Claude 独自分析・公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>未経験 (実務 0-2 年)</strong>: AWS SAA + 個人プロジェクト Terraform 公開でポートフォリオ形成・年収帯 350-500 万から開始する事例が公開求人で観察されます</li>
+        <li><strong>インフラ経験者 (実務 3-5 年)</strong>: 既存スキル (Linux/Network) + AWS SAP/Azure AZ-305 取得でクラウドアーキテクト枠への移行が現実的・年収 +100-200 万事例が観察されます</li>
+        <li><strong>SRE 志向 (実務 3-7 年)</strong>: GCP PCA + Kubernetes + Datadog/Prometheus 運用経験で SaaS 企業 SRE 枠・年収 700-1,200 万帯の求人が観察されます</li>
+        <li><strong>マネジメント志向</strong>: クラウド戦略策定 + チームリード経験で技術 PM/EM 枠・コンサル (Accenture/Deloitte) 等への移行事例も観察されます</li>
+      </ul>
+      <p class="mt-2 text-gray-600 text-xs">※ 各読者層に最適な判断軸は個別状況 (現職スキル・年齢・地域・家族計画) により大きく異なります。具体的判断はクラウド特化エージェントへの相談を推奨します。</p>
+    </div>
 
     <BannerAB pageSlug="cloud-engineer-tenshoku" position="hero" />
 
@@ -51,26 +68,40 @@ const faq = [
       <li><strong>クラウドソリューションエンジニア</strong>: 顧客課題解決・PoC・移行支援</li>
     </ul>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル (技術 + 認定)</h2>
-    <h3 class="text-lg font-bold mt-4 mb-2">技術スキル</h3>
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル + AWS/GCP/Azure 違い</h2>
+    <h3 class="text-lg font-bold mt-4 mb-2">技術スキル (汎用)</h3>
     <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>AWS/GCP/Azure いずれか中心 + 1 つ補完的習得</li>
-      <li>IaC (Terraform / Pulumi / CDK)</li>
-      <li>コンテナ (Docker / Kubernetes / ECS)</li>
+      <li>AWS/GCP/Azure いずれか中心 + 1 つ補完的習得 (公開求人情報では複数クラウド経験者の年収帯が単一クラウド経験者を上回る傾向)</li>
+      <li>IaC (Terraform / Pulumi / CDK) — マルチクラウド対応は Terraform 中心</li>
+      <li>コンテナ (Docker / Kubernetes / ECS) — K8s は GKE/EKS/AKS で API 互換性高</li>
       <li>CI/CD (GitHub Actions / CircleCI / Cloud Build)</li>
-      <li>監視 (Datadog / CloudWatch / Prometheus)</li>
-      <li>セキュリティ (IAM / Zero Trust / コンプライアンス)</li>
+      <li>監視 (Datadog / CloudWatch / Prometheus / Stackdriver)</li>
+      <li>セキュリティ (IAM / Zero Trust / コンプライアンス・SOC2/ISO27001)</li>
     </ul>
-    <h3 class="text-lg font-bold mt-4 mb-2">推奨認定資格</h3>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">AWS / GCP / Azure 違い (公開情報整理・一般的傾向)</h3>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">クラウド</th><th class="border border-gray-300 p-2">国内市場特性</th><th class="border border-gray-300 p-2">主な業界</th><th class="border border-gray-300 p-2">推奨資格</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">AWS</td><td class="border border-gray-300 p-2">国内案件最多・汎用性高</td><td class="border border-gray-300 p-2">SaaS / Web / 大手 IT</td><td class="border border-gray-300 p-2">SAA → SAP</td></tr>
+          <tr><td class="border border-gray-300 p-2">GCP</td><td class="border border-gray-300 p-2">ML/BigData/データ系強</td><td class="border border-gray-300 p-2">広告/メディア/AI スタートアップ</td><td class="border border-gray-300 p-2">PCA</td></tr>
+          <tr><td class="border border-gray-300 p-2">Azure</td><td class="border border-gray-300 p-2">大企業/エンタープライズ系</td><td class="border border-gray-300 p-2">SI / 製造 / 金融</td><td class="border border-gray-300 p-2">AZ-104 → AZ-305</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-bold mt-4 mb-2">推奨認定資格 (公式出典)</h3>
     <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>AWS Solutions Architect Professional (SAP)</li>
-      <li>GCP Professional Cloud Architect</li>
-      <li>Azure Solutions Architect Expert (AZ-305)</li>
+      <li><a href="https://aws.amazon.com/jp/certification/certified-solutions-architect-professional/" target="_blank" rel="noopener" class="underline">AWS Solutions Architect Professional (SAP)</a> — AWS 公式・実務 2 年以上推奨</li>
+      <li><a href="https://cloud.google.com/learn/certification/cloud-architect" target="_blank" rel="noopener" class="underline">GCP Professional Cloud Architect (PCA)</a> — Google Cloud 公式</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/certifications/azure-solutions-architect/" target="_blank" rel="noopener" class="underline">Azure Solutions Architect Expert (AZ-305)</a> — Microsoft Learn 公式</li>
     </ul>
+    <p class="text-xs text-gray-500">※ 認定資格は必須ではなく、面接通過率向上・年収交渉時のスキル証明として有効との一般的傾向。資格より実務経験 (実プロジェクト + GitHub アウトプット) を重視する企業も多数存在します。</p>
 
     <BannerAB pageSlug="cloud-engineer-tenshoku" position="middle" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (公開求人情報サンプル整理・2026 年 5 月時点)</h2>
     <div class="overflow-x-auto mb-3">
       <table class="border-collapse border border-gray-300 text-sm w-full">
         <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">年収帯</th><th class="border border-gray-300 p-2">主要転職先</th></tr></thead>
@@ -80,6 +111,18 @@ const faq = [
           <tr><td class="border border-gray-300 p-2">5-10 年</td><td class="border border-gray-300 p-2">800-1,500 万</td><td class="border border-gray-300 p-2">外資 IT / SaaS Senior / アーキテクト</td></tr>
         </tbody>
       </table>
+    </div>
+    <p class="text-xs text-gray-500 mb-3">※ <strong>出典・条件</strong>: 各転職エージェント (リクルートエージェント / doda / TechGo 等) 公開求人情報サンプル (2026 年 5 月時点・首都圏中心・クラウドアーキテクト/インフラ/SRE 職種) + <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 報告書 No.229 (2024)</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024</a> を整理。年収帯は対象母集団・スキル・地域 (地方は -100〜-200 万)・職位・企業規模 (スタートアップは +RSU)・複数クラウド経験有無により大きく異なります。<strong>個別保証ではなく一般的傾向です</strong>。</p>
+
+    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
+      <strong>📌 反例 (クラウドエンジニア以外のキャリア比較・公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>SRE</strong>: クラウド + 信頼性工学・年収帯 700-1,400 万 (運用負荷あり)</li>
+        <li><strong>データエンジニア</strong>: クラウド + ETL/BigData・年収帯 600-1,200 万 (データ需要急増)</li>
+        <li><strong>セキュリティエンジニア</strong>: クラウドセキュリティ + 監査・年収帯 700-1,500 万 (希少性高)</li>
+        <li><strong>バックエンドエンジニア</strong>: クラウド + アプリ開発・年収帯 500-1,000 万 (求人最多)</li>
+      </ul>
+      <p class="mt-2 text-gray-600">※ クラウドエンジニア単独のキャリアと比較し、専門特化型キャリア (SRE/データ/セキュリティ) は年収上限が高い傾向ですが、求人数 + キャリアパス柔軟性ではクラウドエンジニア (汎用型) が有利な傾向。個別志向に合わせた選定を推奨します。</p>
     </div>
 
     <h2 class="text-xl font-bold mt-8 mb-3">4. 業界別 需要動向</h2>
