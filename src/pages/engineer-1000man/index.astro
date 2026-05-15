@@ -7,8 +7,8 @@ import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
 
-const title = 'エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年版・PR）';
-const description = '年収 1000 万円超を目指す IT エンジニア向け。キャリアパス 5 種 (スペシャリスト / マネジメント / 外資 / SaaS / フリーランス) + 必須スキル + 業界別年収帯を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const title = 'エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）';
+const description = '年収 1000 万円超を目指す IT エンジニア向け。キャリアパス 5 種 (スペシャリスト / マネジメント / 外資 / SaaS / フリーランス) + 必須スキル + 業界別年収帯を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。読者別 (BE/EM/外資/フリーランス) 分岐の判断材料を提供します。
 
 const breadcrumb = [
   { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
@@ -51,8 +51,24 @@ const faq = [
       <p><strong>結論 (一般的傾向)</strong>: エンジニア年収 1000 万円超は、実務 5-10 年 + 専門スキル (AI/クラウド/SRE 等) + ターゲット業界 (外資・SaaS・大手 IT) の組合せで実現可能とされています。</p>
       <p class="mt-2">本記事ではキャリアパス 5 種 + 必須スキル + 業界別年収帯を整理します。</p>
     
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況 (経験年数・スキル・地域・職種・対象母集団) により大きく異なります:<br />
+      ① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究報告書 No.229 (2024 年・IT エンジニア労働市場分析)</a><br />
+      ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024 (2025 年 4 月公開・ハイクラス人材需給含む)</a><br />
+      ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener" class="underline">厚生労働省 job tag「システムエンジニア」(2026 年 5 月確認)</a><br />
+      ④ 各転職エージェント (リクルートダイレクトスカウト / ビズリーチ / TechGo 等ハイクラス特化) 公開求人情報サンプル (2026 年 5 月確認・地域: 主に首都圏・職種: スペシャリスト/EM/外資/SaaS)<br />
+      最終確認日: 2026-05-15。</p>
     </section>
+
+    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
+      <strong>📌 読者別 判断分岐 (公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>バックエンド (BE) 実務 5-10 年</strong>: 大規模アーキテクチャ + 言語ハイブリッド (Go/Rust/TS) で SaaS Senior 枠・年収 800-1,200 万帯の公開求人が観察されます</li>
+        <li><strong>EM (エンジニアリングマネージャー) 志向</strong>: 5-15 人組織管理 + 1on1/採用経験で SaaS/Web EM 枠・年収 1,000-1,500 万帯の公開求人が観察されます</li>
+        <li><strong>外資 IT 志向</strong>: 英語 (TOEIC 800+ or 面接対応可) + GAFAM/外資 SaaS 経験で 1,200-2,500 万帯の公開求人が観察されます (但し競争激しい)</li>
+        <li><strong>高単価フリーランス志向</strong>: 専門領域 (AI/SRE/セキュリティ) + 個人ブランド + 既存クライアント網で月単価 80-200 万円の案件が観察されます (但し収入安定性に課題あり)</li>
+      </ul>
+      <p class="mt-2 text-gray-600 text-xs">※ 各読者層に最適な判断軸は個別状況 (現職スキル・年齢・地域・家族計画) により大きく異なります。具体的判断はハイクラス特化エージェントへの相談を推奨します。</p>
+    </div>
 
     <BannerAB pageSlug="engineer-1000man" position="hero" />
 
@@ -84,21 +100,34 @@ const faq = [
 
     <BannerAB pageSlug="engineer-1000man" position="middle" />
 
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 業界別 年収帯比較</h2>
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 業界別 年収帯比較 (公開求人情報サンプル整理・2026 年 5 月時点)</h2>
     <div class="overflow-x-auto mb-3">
       <table class="border-collapse border border-gray-300 text-sm w-full">
         <thead class="bg-gray-100">
-          <tr><th class="border border-gray-300 p-2">業界</th><th class="border border-gray-300 p-2">年収中央値</th><th class="border border-gray-300 p-2">1000 万円達成率</th></tr>
+          <tr><th class="border border-gray-300 p-2">業界</th><th class="border border-gray-300 p-2">年収中央値 (一般的目安)</th><th class="border border-gray-300 p-2">1000 万円到達確率傾向</th></tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-2">外資 IT (GAFAM 等)</td><td class="border border-gray-300 p-2">1,200-2,500 万</td><td class="border border-gray-300 p-2">高 (実務 5 年+で多数)</td></tr>
-          <tr><td class="border border-gray-300 p-2">SaaS スタートアップ</td><td class="border border-gray-300 p-2">700-1,500 万 + RSU</td><td class="border border-gray-300 p-2">中 (EM/Senior+)</td></tr>
-          <tr><td class="border border-gray-300 p-2">大手 IT (国内)</td><td class="border border-gray-300 p-2">600-1,200 万</td><td class="border border-gray-300 p-2">中 (管理職)</td></tr>
-          <tr><td class="border border-gray-300 p-2">Web 自社開発</td><td class="border border-gray-300 p-2">500-900 万</td><td class="border border-gray-300 p-2">低-中 (テックリード以上)</td></tr>
-          <tr><td class="border border-gray-300 p-2">SI / SES</td><td class="border border-gray-300 p-2">400-700 万</td><td class="border border-gray-300 p-2">低 (PM 以上で稀)</td></tr>
-          <tr><td class="border border-gray-300 p-2">高単価フリーランス</td><td class="border border-gray-300 p-2">1,000-2,000 万</td><td class="border border-gray-300 p-2">中-高 (案件次第)</td></tr>
+          <tr><td class="border border-gray-300 p-2">外資 IT (GAFAM 等)</td><td class="border border-gray-300 p-2">1,200-2,500 万</td><td class="border border-gray-300 p-2">一部求人で観察 (実務 5 年+・但し競争激しい)</td></tr>
+          <tr><td class="border border-gray-300 p-2">SaaS スタートアップ</td><td class="border border-gray-300 p-2">700-1,500 万 + RSU</td><td class="border border-gray-300 p-2">EM/Senior+ で一部観察 (RSU 価値変動リスク)</td></tr>
+          <tr><td class="border border-gray-300 p-2">大手 IT (国内)</td><td class="border border-gray-300 p-2">600-1,200 万</td><td class="border border-gray-300 p-2">管理職クラスで一部観察</td></tr>
+          <tr><td class="border border-gray-300 p-2">Web 自社開発</td><td class="border border-gray-300 p-2">500-900 万</td><td class="border border-gray-300 p-2">テックリード以上で一部観察</td></tr>
+          <tr><td class="border border-gray-300 p-2">SI / SES</td><td class="border border-gray-300 p-2">400-700 万</td><td class="border border-gray-300 p-2">PM 以上で稀に観察</td></tr>
+          <tr><td class="border border-gray-300 p-2">高単価フリーランス</td><td class="border border-gray-300 p-2">1,000-2,000 万</td><td class="border border-gray-300 p-2">案件次第で観察 (収入安定性に課題)</td></tr>
         </tbody>
       </table>
+    </div>
+    <p class="text-xs text-gray-500 mb-3">※ <strong>出典・条件</strong>: 各転職エージェント (リクルートダイレクトスカウト / ビズリーチ / TechGo 等ハイクラス特化) 公開求人情報サンプル (2026 年 5 月時点・首都圏中心・実務 5-15 年) + <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 報告書 No.229 (2024)</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024</a> を整理。年収帯は対象母集団・スキル・地域 (地方は -100〜-300 万)・職位・企業規模・RSU 価値変動・為替 (外資) により大きく異なります。<strong>個別保証ではなく一般的傾向です・成功確約ではありません</strong>。</p>
+
+    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
+      <strong>📌 反例 (年収 1000 万円到達しない場合のリスク・公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>過剰な転職リスク</strong>: 短期間複数回転職は職務経歴書評価でマイナス傾向</li>
+        <li><strong>スペシャリスト方向の市場縮小</strong>: 特定技術 (例: COBOL/Flash) 衰退で年収減少リスク</li>
+        <li><strong>外資 IT のレイオフリスク</strong>: 業績不振時の早期希望退職パッケージ提示事例 (2022-2024 多発)</li>
+        <li><strong>フリーランスの収入不安定性</strong>: 案件減少・契約終了で月収 0 期間発生リスク</li>
+        <li><strong>ライフイベント衝突</strong>: 結婚/家族計画/介護で長時間労働継続困難になる事例</li>
+      </ul>
+      <p class="mt-2 text-gray-600">※ 年収 1000 万円超は目的ではなく手段の一つです。ワークライフバランス・スキル成長・健康・家族との時間を含めた総合的キャリア設計を推奨します。</p>
     </div>
 
     <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略 (ハイクラス転職)</h2>
