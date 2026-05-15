@@ -1,0 +1,124 @@
+---
+/**
+ * インフラエンジニア 転職 LP (TechGo・★326 DRY cloud-engineer-tenshoku 流用)
+ * sv 推定 2,400 / 検索意図: SRE/DevOps/インフラ系エンジニアの転職
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'インフラエンジニア 転職完全ガイド｜SRE/DevOps キャリアパスと年収帯（2026年版・PR）';
+const description = 'インフラ・SRE・DevOps エンジニアの転職を検討中の方向け。オンプレ vs クラウド + 必須スキル + 業界別年収帯 + キャリアパスを公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'インフラエンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/infra-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: 'インフラエンジニアの年収はどれくらいですか?', a: '一般的にインフラエンジニアの年収は実務 3 年で 500-800 万円・5 年以上で 700-1,500 万円とされ、SRE/DevOps 系はさらに高単価帯の傾向があるとされています。' },
+  { q: 'オンプレとクラウド どちらが将来性ありますか?', a: '一般的にクラウド (AWS/GCP/Azure) の需要が高い傾向ですが、オンプレ + クラウドのハイブリッド経験者も大企業・金融・製造業で重宝されているとされています。' },
+  { q: 'インフラから SRE / DevOps へキャリアアップする方法は?', a: '一般的にコード化 (IaC: Terraform 等) + CI/CD + 監視 (Datadog 等) + 自動化スキル習得で SRE / DevOps 転身が可能とされています。' },
+  { q: 'インフラエンジニアに資格は必要ですか?', a: '一般的に LPIC / CCNA / AWS SAA / Kubernetes CKA などが評価されているとされています。但し実務経験 + GitHub 公開 IaC のほうが優先される傾向です。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="infra-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; インフラエンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">インフラエンジニア 転職完全ガイド｜SRE/DevOps キャリアパスと年収帯</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: インフラエンジニアは SRE / DevOps への進化と年収アップの両立が可能な領域とされ、年収 500-1,500 万円帯の求人が活発な傾向です。コード化 (IaC) + 自動化 + 監視の 3 軸習得が転職成否を決める一般的傾向です。</p>
+    </section>
+
+    <BannerAB pageSlug="infra-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. インフラエンジニアの 4 種類</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>オンプレ インフラエンジニア</strong>: 物理サーバー / ネットワーク / DC 運用</li>
+      <li><strong>クラウドインフラエンジニア</strong>: AWS/GCP/Azure 設計・構築</li>
+      <li><strong>SRE (Site Reliability Engineer)</strong>: 信頼性 + 自動化 + パフォーマンス</li>
+      <li><strong>DevOps エンジニア</strong>: 開発 + 運用統合・CI/CD 設計</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル (オンプレ + クラウド + SRE/DevOps)</h2>
+    <h3 class="text-lg font-bold mt-4 mb-2">基礎スキル</h3>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>Linux (RHEL / Ubuntu) + ネットワーク (TCP/IP / DNS / Load Balancer)</li>
+      <li>シェル (Bash) + スクリプト (Python)</li>
+      <li>DB (MySQL / PostgreSQL) + メッセージング (Kafka / RabbitMQ)</li>
+    </ul>
+    <h3 class="text-lg font-bold mt-4 mb-2">SRE/DevOps スキル</h3>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>IaC (Terraform / Ansible / Pulumi)</li>
+      <li>コンテナ (Docker / Kubernetes)</li>
+      <li>CI/CD (GitHub Actions / Jenkins / ArgoCD)</li>
+      <li>監視 (Datadog / Prometheus / Grafana / Elasticsearch)</li>
+      <li>クラウド (AWS / GCP / Azure いずれか + 補完)</li>
+    </ul>
+
+    <BannerAB pageSlug="infra-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">職種</th><th class="border border-gray-300 p-2">3 年</th><th class="border border-gray-300 p-2">5 年</th><th class="border border-gray-300 p-2">10 年</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">オンプレ インフラ</td><td class="border border-gray-300 p-2">400-550 万</td><td class="border border-gray-300 p-2">500-700 万</td><td class="border border-gray-300 p-2">650-900 万</td></tr>
+          <tr><td class="border border-gray-300 p-2">クラウド インフラ</td><td class="border border-gray-300 p-2">500-700 万</td><td class="border border-gray-300 p-2">650-900 万</td><td class="border border-gray-300 p-2">800-1,200 万</td></tr>
+          <tr><td class="border border-gray-300 p-2">SRE</td><td class="border border-gray-300 p-2">600-850 万</td><td class="border border-gray-300 p-2">800-1,200 万</td><td class="border border-gray-300 p-2">1,000-1,500 万+</td></tr>
+          <tr><td class="border border-gray-300 p-2">DevOps</td><td class="border border-gray-300 p-2">550-800 万</td><td class="border border-gray-300 p-2">750-1,100 万</td><td class="border border-gray-300 p-2">900-1,400 万</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 業界別 求人傾向</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>SaaS スタートアップ</strong>: SRE / DevOps 中心・自動化必須</li>
+      <li><strong>Web 自社開発</strong>: クラウドインフラ + 監視 + 信頼性</li>
+      <li><strong>金融 / 製造</strong>: オンプレ + ハイブリッド + セキュリティ</li>
+      <li><strong>外資 IT</strong>: SRE / Platform Engineering 高単価</li>
+      <li><strong>大手 IT / SI</strong>: クラウド移行プロジェクト需要高</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. 転職戦略 (キャリアパス別)</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>オンプレ → クラウド</strong>: AWS SAA + 個人クラウド検証 + GitHub IaC 公開</li>
+      <li><strong>クラウド → SRE</strong>: 監視/Observability スキル + Kubernetes 実務</li>
+      <li><strong>インフラ → DevOps</strong>: CI/CD + IaC + プログラミング (Python/Go)</li>
+      <li><strong>SRE → Platform Engineer</strong>: 社内基盤設計 + Developer Experience</li>
+    </ol>
+
+    <BannerAB pageSlug="infra-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職ガイド</a></li>
+      <li><a href="/ai-engineer-tenshoku/" class="underline">AI エンジニア 転職ガイド</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/ses-dasshutsu/" class="underline">SES 脱出 完全ガイド</a></li>
+      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> — IT スキル標準・基本/応用情報</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> — IT 業界年収統計</li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> — 職業情報サイト</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。</p>
+  </main>
+</Layout>

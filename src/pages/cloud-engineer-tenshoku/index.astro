@@ -1,0 +1,124 @@
+---
+/**
+ * クラウドエンジニア 転職 LP (TechGo・★326 DRY ses-dasshutsu 流用)
+ * sv 推定 1,300 / 検索意図: AWS/GCP/Azure エンジニアの転職
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年版・PR）';
+const description = 'AWS/GCP/Azure クラウドエンジニアの転職を検討中の方向け。必須スキル + 業界別年収帯 + 認定資格 + 転職戦略を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'クラウドエンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: 'クラウドエンジニアの年収はどれくらいですか?', a: '一般的にクラウドエンジニアの年収は実務 3 年で 600-900 万円・5 年以上で 800-1,500 万円とされています。但しスキル・業界・企業により異なります。' },
+  { q: 'AWS / GCP / Azure どれを学ぶべきですか?', a: '一般的に国内市場では AWS 案件が最多・GCP は機械学習/ビッグデータ系・Azure は大企業/エンタープライズ系の傾向があるとされています。キャリア目標により選定が推奨されます。' },
+  { q: 'クラウド認定資格は必須ですか?', a: '一般的に認定資格 (AWS SAA/SAP・GCP Professional・Azure AZ-104 等) は必須ではないが、スキル証明・面接通過率向上に有効とされています。' },
+  { q: '未経験からクラウドエンジニアになれますか?', a: '一般的に実務経験 (バックエンド/インフラ等) 2-3 年 + クラウド基礎学習でクラウドエンジニア転身が現実的とされています。完全未経験は厳しい傾向があります。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="cloud-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; クラウドエンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: クラウドエンジニアは AWS/GCP/Azure 需要急増で年収 600-1,500 万円帯の求人が活発とされています。実務経験 + 認定資格 + アーキテクチャ設計力の 3 軸が転職成否を決める一般的傾向です。</p>
+    </section>
+
+    <BannerAB pageSlug="cloud-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. クラウドエンジニアの 3 種類</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>クラウドアーキテクト</strong>: システム全体設計・ベストプラクティス策定</li>
+      <li><strong>クラウドインフラエンジニア</strong>: IaC (Terraform/CloudFormation) + 運用</li>
+      <li><strong>クラウドソリューションエンジニア</strong>: 顧客課題解決・PoC・移行支援</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル (技術 + 認定)</h2>
+    <h3 class="text-lg font-bold mt-4 mb-2">技術スキル</h3>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>AWS/GCP/Azure いずれか中心 + 1 つ補完的習得</li>
+      <li>IaC (Terraform / Pulumi / CDK)</li>
+      <li>コンテナ (Docker / Kubernetes / ECS)</li>
+      <li>CI/CD (GitHub Actions / CircleCI / Cloud Build)</li>
+      <li>監視 (Datadog / CloudWatch / Prometheus)</li>
+      <li>セキュリティ (IAM / Zero Trust / コンプライアンス)</li>
+    </ul>
+    <h3 class="text-lg font-bold mt-4 mb-2">推奨認定資格</h3>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>AWS Solutions Architect Professional (SAP)</li>
+      <li>GCP Professional Cloud Architect</li>
+      <li>Azure Solutions Architect Expert (AZ-305)</li>
+    </ul>
+
+    <BannerAB pageSlug="cloud-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">年収帯</th><th class="border border-gray-300 p-2">主要転職先</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">1-2 年</td><td class="border border-gray-300 p-2">450-650 万</td><td class="border border-gray-300 p-2">Web 自社開発・SaaS</td></tr>
+          <tr><td class="border border-gray-300 p-2">3-5 年</td><td class="border border-gray-300 p-2">600-900 万</td><td class="border border-gray-300 p-2">SaaS テックリード・大手 IT</td></tr>
+          <tr><td class="border border-gray-300 p-2">5-10 年</td><td class="border border-gray-300 p-2">800-1,500 万</td><td class="border border-gray-300 p-2">外資 IT / SaaS Senior / アーキテクト</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 業界別 需要動向</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>SaaS スタートアップ</strong>: クラウドネイティブ前提・年収 + RSU</li>
+      <li><strong>Web 自社開発</strong>: 既存システムのクラウド化推進</li>
+      <li><strong>大手 IT / SI</strong>: 大企業のクラウド移行プロジェクト</li>
+      <li><strong>外資 IT (AWS/GCP/Microsoft)</strong>: 自社プラットフォーム開発</li>
+      <li><strong>コンサル (Accenture/Deloitte 等)</strong>: 顧客向けクラウド戦略策定</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. 転職戦略</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li>実務経験 + 認定資格でスキル証明</li>
+      <li>GitHub にインフラ as Code (Terraform 等) 公開</li>
+      <li>クラウド特化エージェント + スカウト型併用</li>
+      <li>カジュアル面談で複数社比較</li>
+      <li>年収交渉では市場価値 + 実績を数値で示す</li>
+    </ol>
+
+    <BannerAB pageSlug="cloud-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/ai-engineer-tenshoku/" class="underline">AI エンジニア 転職ガイド</a></li>
+      <li><a href="/infra-engineer-tenshoku/" class="underline">インフラエンジニア 転職ガイド</a></li>
+      <li><a href="/ses-dasshutsu/" class="underline">SES 脱出 完全ガイド</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> — IT 人材白書・クラウド技術動向</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> — IT 業界年収統計</li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> — 職業情報サイト</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。</p>
+  </main>
+</Layout>
