@@ -1,0 +1,115 @@
+---
+/**
+ * エンジニア 35 歳限界説 LP (TechGo 第 4 弾・★326 DRY 出典注記強化版)
+ * sv 推定 590 / 検索意図: 35 歳前後エンジニアの転職可否
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'エンジニア 35 歳限界説の真偽｜30 代後半-40 代の転職市場と戦略（2026年版・PR）';
+const description = '「エンジニア 35 歳限界説」の真偽を、30 代後半-40 代の転職市場・必要スキル・キャリアパスで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: '35 歳限界説の真偽', url: 'https://tenshoku-compare-info.pages.dev/engineer-35sai-genkai/' },
+];
+
+const faq = [
+  { q: 'エンジニア 35 歳限界説は本当ですか?', a: '一般的に「35 歳でエンジニア寿命」は古い概念とされ、2026 年現在はハイクラス・専門特化エンジニアは 40 代・50 代でも市場価値が継続する傾向とされています。但しポテンシャル採用枠は減少傾向です。' },
+  { q: '35 歳以降の転職で重視されることは?', a: '一般的にマネジメント力・専門特化スキル・実績の数値化が評価されているとされています。コードを書ける + 設計力 + チーム牽引力の組合せで高単価獲得事例があります。' },
+  { q: '35 歳で未経験職種転職は可能ですか?', a: '一般的に 35 歳以降の完全未経験職種転職は厳しい傾向とされています。但し関連スキル + 学習意欲 + ネットワークでブリッジ転職事例はあるとされています。' },
+  { q: 'マネジメント志向 vs スペシャリスト どちらが有利ですか?', a: '一般的に両方需要があり、年収面ではマネジメント (EM/CTO) + スペシャリスト (アーキテクト) ともに高単価帯とされています。自身の志向で選定が推奨されます。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="engineer-35sai-genkai" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; 35 歳限界説の真偽</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">エンジニア 35 歳限界説の真偽｜30 代後半-40 代の転職市場と戦略</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: 「エンジニア 35 歳限界説」は <strong>過去の概念</strong>とされ、2026 年現在は専門特化 (アーキテクト/CTO 候補/スペシャリスト) で 40 代・50 代でも市場価値継続の傾向です。但しポテンシャル採用枠は縮小・マネジメント or 専門特化への戦略的シフトが必要な一般的傾向とされています。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+    </section>
+
+    <BannerAB pageSlug="engineer-35sai-genkai" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 35 歳限界説の起源と現状</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>起源</strong>: 旧 SI 業界の年功序列 + ピラミッド構造由来とされる</li>
+      <li><strong>現状</strong>: Web/SaaS/外資 IT では年齢制限なし傾向</li>
+      <li><strong>例外</strong>: ポテンシャル採用枠は 30 代前半までが一般的</li>
+      <li><strong>真の壁</strong>: 35 歳 ≠ 年齢・スキル成熟度の壁とされる</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 35 歳以降に有利なキャリアパス 4 種</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>スペシャリスト (アーキテクト)</strong>: 専門技術深化・年収 1,000-1,500 万</li>
+      <li><strong>エンジニアリングマネージャー (EM)</strong>: 5-15 人規模リード・年収 900-1,400 万</li>
+      <li><strong>CTO 候補 (VPoE)</strong>: スタートアップ経営層・年収 1,500-3,000 万</li>
+      <li><strong>テクニカルコンサルタント</strong>: 業界横断助言・年収 1,200-2,000 万</li>
+    </ol>
+
+    <BannerAB pageSlug="engineer-35sai-genkai" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年代別 転職市場価値 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">年代</th><th class="border border-gray-300 p-2">市場価値</th><th class="border border-gray-300 p-2">主要キャリアパス</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">25-30</td><td class="border border-gray-300 p-2">ポテンシャル + スキル</td><td class="border border-gray-300 p-2">転職選択肢最大</td></tr>
+          <tr><td class="border border-gray-300 p-2">30-35</td><td class="border border-gray-300 p-2">⭐ スキル成熟ピーク</td><td class="border border-gray-300 p-2">スペシャリスト or マネジメント</td></tr>
+          <tr><td class="border border-gray-300 p-2">35-40</td><td class="border border-gray-300 p-2">専門特化 + 実績</td><td class="border border-gray-300 p-2">アーキテクト / EM / VPoE</td></tr>
+          <tr><td class="border border-gray-300 p-2">40-50</td><td class="border border-gray-300 p-2">経営層 + ハイクラス</td><td class="border border-gray-300 p-2">CTO / 経営層 / コンサル</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 35 歳以降の転職戦略</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>専門特化選定</strong>: 1-2 領域 (例: AI/SRE/セキュリティ) で第一人者を目指す</li>
+      <li><strong>実績の数値化</strong>: 「○○ システムを M→T スケール / ○○ 円コスト削減」</li>
+      <li><strong>ハイクラスエージェント</strong>: ヘッドハンター + スカウト型 (LinkedIn) 併用</li>
+      <li><strong>ネットワーク活用</strong>: 元同僚・OSS 仲間からの推薦案件</li>
+      <li><strong>カジュアル面談 5-10 社</strong>: 比較判断で年収交渉力強化</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. 35 歳以降に避けるべきパターン</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>完全未経験職種への大幅転身</li>
+      <li>「給与だけ」の理由による転職 (キャリア整合性弱)</li>
+      <li>ポテンシャル採用枠への応募 (年齢制限あり)</li>
+      <li>準備不足での退職 (経済的不安で焦り判断)</li>
+    </ul>
+
+    <BannerAB pageSlug="engineer-35sai-genkai" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/40dai-koukai/" class="underline">40 代エンジニア 転職後悔</a></li>
+      <li><a href="/40dai-revenge/" class="underline">40 代転職リベンジガイド</a></li>
+      <li><a href="/high-class/" class="underline">ハイクラス転職ガイド</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万</a></li>
+      <li><a href="/gaishi-it-engineer-tenshoku/" class="underline">外資 IT エンジニア 転職</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
+  </main>
+</Layout>

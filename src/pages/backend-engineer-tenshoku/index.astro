@@ -1,0 +1,107 @@
+---
+/**
+ * バックエンドエンジニア 転職 LP (TechGo 第 4 弾・★326 DRY 出典注記強化版)
+ * sv 推定 1,300
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）';
+const description = 'バックエンドエンジニアの転職を検討中の方向け。Go/Python/Java/Rust 言語別 + API/マイクロサービス + 業界別年収帯を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'バックエンドエンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: 'バックエンドエンジニアの年収はどれくらいですか?', a: '一般的に実務 3 年で 500-750 万円・5 年以上で 700-1,300 万円とされ、Go/Rust 専門は高単価傾向があるとされています。' },
+  { q: 'どの言語を学ぶべきですか?', a: '一般的に国内では Go / Python / Java / TypeScript 求人が多い・Rust は外資 + 新規 SaaS で急増中とされています。' },
+  { q: 'マイクロサービス経験は必須ですか?', a: '一般的に SaaS / 大規模 Web では必須要件化が進んでいる傾向とされています。但しモノリス + 段階的分割の設計力も評価されます。' },
+  { q: 'フロントエンドからバックエンドへ転身できますか?', a: '一般的に Node.js / Next.js API Routes + DB 基礎学習で転身事例があるとされています。フルスタック志向の場合は両方継続が選択肢とされています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="backend-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; バックエンドエンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: バックエンドエンジニアは API/分散システム/DB 設計の需要が安定的で、年収 500-1,300 万円帯の求人が活発な傾向です。言語選定 (Go/Python/Java/Rust) + マイクロサービス + クラウドの 3 軸が転職市場価値を決める一般的傾向です。</p>
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+    </section>
+
+    <BannerAB pageSlug="backend-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 必須スキル</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>言語: Go / Python / Java / Node.js / Rust / Kotlin いずれか</li>
+      <li>API 設計 (REST / GraphQL / gRPC)</li>
+      <li>DB (RDB: PostgreSQL/MySQL + NoSQL: Redis/MongoDB/DynamoDB)</li>
+      <li>マイクロサービス + メッセージング (Kafka / RabbitMQ)</li>
+      <li>クラウド (AWS/GCP) サーバーレス + コンテナ</li>
+      <li>テスト + CI/CD + 監視</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 言語別 年収帯 (一般的目安)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">言語</th><th class="border border-gray-300 p-2">3 年</th><th class="border border-gray-300 p-2">5 年</th><th class="border border-gray-300 p-2">10 年</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">Go</td><td class="border border-gray-300 p-2">550-800 万</td><td class="border border-gray-300 p-2">750-1,200 万</td><td class="border border-gray-300 p-2">1,000-1,500 万+</td></tr>
+          <tr><td class="border border-gray-300 p-2">Python</td><td class="border border-gray-300 p-2">500-750 万</td><td class="border border-gray-300 p-2">700-1,100 万</td><td class="border border-gray-300 p-2">900-1,400 万</td></tr>
+          <tr><td class="border border-gray-300 p-2">Java</td><td class="border border-gray-300 p-2">450-700 万</td><td class="border border-gray-300 p-2">650-1,000 万</td><td class="border border-gray-300 p-2">850-1,300 万</td></tr>
+          <tr><td class="border border-gray-300 p-2">Rust</td><td class="border border-gray-300 p-2">600-900 万</td><td class="border border-gray-300 p-2">850-1,400 万</td><td class="border border-gray-300 p-2">1,100-1,800 万+</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <BannerAB pageSlug="backend-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 業界別 求人傾向</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>SaaS</strong>: マイクロサービス + 高単価</li>
+      <li><strong>FinTech / 決済</strong>: 信頼性 + セキュリティ + 高単価</li>
+      <li><strong>ゲーム / リアルタイム</strong>: 低レイテンシ + Rust/Go</li>
+      <li><strong>外資 IT</strong>: 大規模分散 + 高単価</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li>GitHub に API 設計 + DB 設計の個人開発作品公開</li>
+      <li>OSS PR + 技術ブログ (Zenn/Qiita) で実装力示す</li>
+      <li>システムデザイン面接対策 (5-10 件のシナリオ)</li>
+      <li>バックエンド特化エージェント + スカウト型併用</li>
+    </ol>
+
+    <BannerAB pageSlug="backend-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/frontend-engineer-tenshoku/" class="underline">フロントエンドエンジニア 転職</a></li>
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万</a></li>
+      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
+  </main>
+</Layout>
