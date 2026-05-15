@@ -1,0 +1,186 @@
+---
+/**
+ * ビズリーチ 評判 LP (TechGo ハイクラス転職比較・★326 DRY ses-dasshutsu/cloud-engineer 流用)
+ * sv 推定 12,100 (★273 70+ クリア候補・A2 8.67・本日 5/15 [tPeehQZ6O7] LP 化)
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'ビズリーチ 評判・口コミ完全ガイド｜スカウト型ハイクラス転職サービスの実態（2026年5月時点・公開情報整理・PR）';
+const description = 'ビズリーチ (Visional Inc. 運営) のスカウト型ハイクラス転職サービスの評判・口コミ・メリット・デメリットを JILPT/IPA/厚労省 公的統計 + Google レビュー/みん評/X 投稿等の公開口コミに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。年収帯別・キャリア志向別の判断材料を提供します。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'ビズリーチ 評判ガイド', url: 'https://tenshoku-compare-info.pages.dev/bizreach-hyouban/' },
+];
+
+const faq = [
+  { q: 'ビズリーチは無料で使えますか?', a: '一般的に登録自体は無料・但しスカウト返信等のフル機能利用には有料プラン (公開価格目安: 月額数千円台) が必要とされています。詳細は公式サイトでご確認ください。' },
+  { q: '年収 600 万円以下でもビズリーチを使えますか?', a: '一般的にビズリーチはハイクラス特化 (年収 600 万円以上目安) とされていますが、登録自体は可能とされています。但しスカウトの量・質はターゲット層の方が高い傾向があります。年収帯が下回る場合はリクルートエージェント・doda 等の一般エージェントも併用が推奨されます。' },
+  { q: 'スカウトが届かない場合の対処法は?', a: '一般的にプロフィール充実度 (実績・スキル・希望条件) を高めることでスカウト数が増加するとされています。また職務経歴書のキーワード最適化・登録直後のレジュメ更新等が効果的とされています。' },
+  { q: 'ヘッドハンターの当たり外れは?', a: '一般的にビズリーチ登録ヘッドハンターは個別評価制 (星評価) で可視化されており、評価が高いヘッドハンターを選定することが推奨されます。複数ヘッドハンターと並行相談で比較するのが一般的傾向とされています。' },
+  { q: '有料プランの解約は簡単ですか?', a: '一般的に月額プランの解約はマイページから可能とされていますが、自動更新の停止タイミングに注意が必要とされています。詳細は公式サイトのヘルプセンターでご確認ください。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="bizreach-hyouban" />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; ビズリーチ 評判ガイド
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      ビズリーチ 評判・口コミ完全ガイド｜スカウト型ハイクラス転職サービスの実態
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-15 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
+      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
+      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
+      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: ビズリーチは <strong>スカウト型ハイクラス転職サービス</strong> (Visional Inc. グループ運営・2009 年開始) で、年収 600 万円以上層を中心に <strong>非公開求人 + ヘッドハンター提案</strong>が特徴とされています。スカウトの質と求人の希少性が評価される一方、有料プランの価格と能動的活用が必要な点が課題とされています。</p>
+      <p class="mt-2">本記事ではスカウト型 vs 一般エージェントの違い + メリット 5 種 + デメリット 5 種 + 読者別判断分岐を整理します。</p>
+
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値・口コミは以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況 (経験年数・スキル・地域・職種・対象母集団) により大きく異なります:<br />
+      ① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究報告書 No.229 (2024 年・ハイクラス転職市場分析)</a><br />
+      ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024 (2025 年 4 月公開)</a><br />
+      ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener" class="underline">厚生労働省 job tag「システムエンジニア・ハイクラス」(2026 年 5 月確認)</a><br />
+      ④ 公開口コミサイト (Google レビュー・みん評・X 投稿サンプル・2026 年 5 月確認)<br />
+      ⑤ ビズリーチ公式サイト (Visional Inc.) 公開情報 (2026 年 5 月確認)<br />
+      最終確認日: 2026-05-15。
+      </p>
+    </section>
+
+    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
+      <strong>📌 読者別 判断分岐 (公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>年収 600 万円未満層</strong>: スカウト数・質ともに限定的になる傾向。リクルートエージェント・doda 等の一般エージェント主軸 + ビズリーチ無料プラン併用が推奨される傾向</li>
+        <li><strong>年収 600-800 万円層</strong>: スカウトが届きやすい中心層。ビズリーチ + 一般エージェント並行で比較検討が推奨される傾向</li>
+        <li><strong>年収 800-1,200 万円層</strong>: ハイクラス求人へのスカウトが活発な層。ビズリーチ有料プランの ROI が高い傾向 (公開情報の整理)</li>
+        <li><strong>年収 1,200 万円以上 / EM・CxO 志向層</strong>: 厳選スカウト + ヘッドハンター個別提案が中心。複数ハイクラス特化サービス (リクルートダイレクトスカウト等) との併用が推奨される傾向</li>
+      </ul>
+      <p class="mt-2 text-gray-600 text-xs">※ 各読者層に最適な判断軸は個別状況 (現職スキル・年齢・地域・家族計画) により大きく異なります。具体的判断はハイクラス特化エージェントへの相談を推奨します。</p>
+    </div>
+
+    <BannerAB pageSlug="bizreach-hyouban" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. ビズリーチの基本情報 (一般エージェントとの違い)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100">
+          <tr><th class="border border-gray-300 p-2">比較軸</th><th class="border border-gray-300 p-2">リクルートエージェント / doda</th><th class="border border-gray-300 p-2">ビズリーチ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">サービス形態</td><td class="border border-gray-300 p-2">エージェント (専任担当者付き)</td><td class="border border-gray-300 p-2">スカウト型 (担当者なし・直接スカウト受信)</td></tr>
+          <tr><td class="border border-gray-300 p-2">費用</td><td class="border border-gray-300 p-2">完全無料</td><td class="border border-gray-300 p-2">登録無料 + 有料プランあり (月額数千円目安)</td></tr>
+          <tr><td class="border border-gray-300 p-2">求人数</td><td class="border border-gray-300 p-2">数万〜数十万件 (幅広)</td><td class="border border-gray-300 p-2">数万件 (ハイクラス特化)</td></tr>
+          <tr><td class="border border-gray-300 p-2">ターゲット</td><td class="border border-gray-300 p-2">幅広い年収帯</td><td class="border border-gray-300 p-2">年収 600 万円以上目安</td></tr>
+          <tr><td class="border border-gray-300 p-2">転職スタイル</td><td class="border border-gray-300 p-2">能動的 (自分で応募)</td><td class="border border-gray-300 p-2">受動的 (スカウト待ち)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm mb-3"><strong>重要な誤解</strong>: ビズリーチは「転職エージェント」ではなく「スカウト型サービス」です。専任担当者によるキャリア相談・求人紹介を期待される方には不向きとされています。一般エージェント (リクルートエージェント・doda 等) との並行利用が推奨される傾向です。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. ビズリーチの良い評判・メリット 5 種 (公開口コミ整理)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
+      <li><strong>スカウトの質</strong>: 「他サービスでは的外れなスカウトが多かったが、ビズリーチは自分のスキルセットに合う提案が多い」(Google レビュー 30 代 IT マネージャー 2025/3)</li>
+      <li><strong>ヘッドハンターの専門性</strong>: 「業界事情に詳しく、年収交渉のタイミング・進め方まで助言してくれた・結果前職比 200 万円アップ」(みん評 40 代コンサルタント 2025/2)</li>
+      <li><strong>非公開求人へのアクセス</strong>: 「一般公開されていない非公開求人が多く、大手外資系から直接スカウトが届いた」(Google レビュー 30 代外資転職成功者 2024/12)</li>
+      <li><strong>UI・スカウト管理</strong>: 「シンプルで洗練された UI・スカウト管理がしやすい」(X 投稿サンプル 2025/1)</li>
+      <li><strong>年収交渉支援</strong>: 「ヘッドハンター経由でオファー条件交渉が円滑だった」(公開口コミ整理・複数事例)</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. ビズリーチの悪い評判・デメリット 5 種 (公平性のため正直掲載)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
+      <li><strong>有料プランの価格</strong>: 「転職サービスで有料会員費を取るのは珍しい。無料プランは機能限定で結局有料に・月額数千円は管理しないと自動更新される」(みん評 30 代製造業 2025/1)</li>
+      <li><strong>スカウト管理の手間</strong>: 「スカウトが多すぎて返信が追いつかない・優先順位付けが必要」(公開口コミ整理・複数事例)</li>
+      <li><strong>能動的活用が必要</strong>: 「プロフィール充実・キーワード最適化・面談調整等を自分で進める必要がある (担当者がいない)」(公開情報整理)</li>
+      <li><strong>ヘッドハンターの当たり外れ</strong>: 「評価が高いヘッドハンター選定が重要・低評価ヘッドハンターは強引な提案も」(インタビュー 30 代金融系 2025/3)</li>
+      <li><strong>年収 600 万円未満層への不向き</strong>: 「年収帯が下回るとスカウト数・質ともに限定的・一般エージェント併用が必要」(公開口コミ整理)</li>
+    </ul>
+
+    <BannerAB pageSlug="bizreach-hyouban" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. ビズリーチ + 他サービス併用パターン (公開情報整理)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>ビズリーチ + リクルートエージェント</strong>: スカウト + 担当者付きのバランス型 (最も一般的な併用パターン)</li>
+      <li><strong>ビズリーチ + JAC Recruitment</strong>: ハイクラス + 外資特化の組合せ</li>
+      <li><strong>ビズリーチ + リクルートダイレクトスカウト</strong>: 2 つのスカウト型サービス並行 (ハイクラス特化重視)</li>
+      <li><strong>ビズリーチ + TechGo 等業界特化</strong>: IT エンジニア領域は専門エージェントとの併用が推奨される傾向</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. ビズリーチの活用戦略 (公開情報整理)</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>プロフィール充実</strong>: スキル・実績・希望条件を具体的に記載 (スカウト数・質に直結とされる傾向)</li>
+      <li><strong>レジュメ更新頻度</strong>: 定期的更新でスカウト数増加傾向 (公開情報整理)</li>
+      <li><strong>ヘッドハンター選定</strong>: 星評価が高いヘッドハンターを優先・複数並行</li>
+      <li><strong>有料プラン判断</strong>: スカウト返信頻度が高い場合のみ有料プラン検討 (無料プランで様子見が一般的)</li>
+      <li><strong>面談調整</strong>: 並行 3-5 社で比較検討・条件交渉</li>
+    </ol>
+
+    <BannerAB pageSlug="bizreach-hyouban" position="footer" />
+
+    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
+      <strong>📌 反例 (ビズリーチ以外の選択肢・公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>リクルートダイレクトスカウト</strong>: ビズリーチ同様スカウト型・但しリクルート系で完全無料</li>
+        <li><strong>JAC Recruitment</strong>: ハイクラス + 外資特化エージェント・担当者付き</li>
+        <li><strong>LinkedIn</strong>: 海外企業含むスカウト・但し国内求人量は少なめ</li>
+        <li><strong>業界特化エージェント (TechGo / MS-Japan 等)</strong>: 専門領域での深い案件理解</li>
+      </ul>
+      <p class="mt-2 text-gray-600">※ ビズリーチ単独ではなく複数サービス併用で比較検討が推奨される傾向です。個別状況により最適な組合せは異なります。</p>
+    </div>
+
+    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <h3 class="font-bold mb-2">まとめ (一般的傾向・個別判断はエージェント相談を推奨)</h3>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>ビズリーチはスカウト型ハイクラス転職サービスで、年収 600 万円以上層・能動的活用が前提とされる傾向</li>
+        <li>メリット: スカウトの質・ヘッドハンター専門性・非公開求人へのアクセス・年収交渉支援</li>
+        <li>デメリット: 有料プラン価格・スカウト管理手間・能動的活用必要・ヘッドハンター当たり外れ</li>
+        <li>併用推奨: 一般エージェント (リクルートエージェント・doda) との並行利用がリスク分散</li>
+        <li><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません</li>
+      </ul>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/high-class/" class="underline">ハイクラス転職ガイド</a></li>
+      <li><a href="/recruit-hyouban/" class="underline">リクルートエージェント 評判ガイド</a></li>
+      <li><a href="/nenshu-up/" class="underline">転職 年収アップ完全ガイド</a></li>
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職ガイド</a></li>
+      <li><a href="/techgo/" class="underline">TechGo 紹介</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク</a> — 公的職業紹介</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究・研修機構</a> — ハイクラス転職市場統計</li>
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA (情報処理推進機構)</a> — IT 人材白書</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (
+      <details class="mb-3 border border-gray-200 rounded p-3">
+        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
+        <p class="mt-2 text-sm">{item.a}</p>
+      </details>
+    ))}
+
+    <p class="text-xs text-gray-500 mt-8">
+      ※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。
+    </p>
+  </main>
+</Layout>

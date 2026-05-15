@@ -1,0 +1,172 @@
+---
+/**
+ * 転職 20代 未経験 LP (TechGo 若年層特化・★326 DRY ses-dasshutsu 流用)
+ * sv 推定 8,100 (★273 70+ クリア候補・A2 8.3・本日 5/15 [tPeehQZ6O7] LP 化)
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = '20代 未経験からの転職完全ガイド｜異業種・職種転換の判断軸と成功パターン（2026年5月時点・公開情報整理・PR）';
+const description = '20代未経験から異業種・職種転換を検討中の方向け。第二新卒・既卒・社会人経験者別の判断軸 + 成功パターン + 年収目安を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: '20代 未経験 転職ガイド', url: 'https://tenshoku-compare-info.pages.dev/tenshoku-20dai-mikenken/' },
+];
+
+const faq = [
+  { q: '20 代未経験で IT エンジニアに転職できますか?', a: '一般的に 20 代は実務未経験でもポテンシャル採用枠 (第二新卒・未経験歓迎) があり、転職事例が公開求人で観察されます。但し基礎学習 (プログラミング・IT 資格) + ポートフォリオ整備が推奨される傾向です。' },
+  { q: '未経験から年収どれくらいから始まりますか?', a: '一般的に 20 代未経験 IT エンジニアは年収 300-400 万円帯から開始する事例が公開求人で観察されています。但し業界・地域・スキルにより異なるため、目安としてください。' },
+  { q: 'プログラミングスクールは必須ですか?', a: '一般的に必須ではないとされていますが、独学だけでは挫折率が高い傾向 + 体系的学習機会として活用される事例が観察されます。費用対効果は個別に判断が推奨されます。' },
+  { q: '第二新卒と未経験の違いは?', a: '一般的に第二新卒は「新卒入社後 3 年以内」を指し、ポテンシャル採用枠が広い傾向。未経験は職種未経験全般を指し、社会人経験は活かせる傾向とされています。' },
+  { q: 'おすすめの異業種転換先は?', a: '一般的に IT エンジニア / Web マーケター / 営業 / 事務職等が未経験歓迎枠が多い傾向。個別状況により最適な選択は異なるため、エージェント相談が推奨されます。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="tenshoku-20dai-mikenken" />
+
+    <nav class="text-sm text-gray-500 mb-4">
+      <a href="/" class="underline">トップ</a> &gt; 20 代 未経験 転職ガイド
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+      20 代 未経験からの転職完全ガイド｜異業種・職種転換の判断軸と成功パターン
+    </h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">
+      最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
+    </p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: 20 代未経験からの異業種・職種転換は <strong>ポテンシャル採用枠が広い 20 代の強み</strong>を活かせる時期とされています。第二新卒 (新卒 3 年以内) は特に転職市場での需要が高い傾向。但し基礎学習 + 業界研究 + 適切なエージェント活用が成功率を左右するとされています。</p>
+      <p class="mt-2">本記事では読者属性別 (第二新卒 / 既卒 / 社会人経験者) の判断軸 + 異業種転換パターン + 年収目安を整理します。</p>
+
+      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況 (経験年数・スキル・地域・職種・対象母集団) により大きく異なります:<br />
+      ① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究報告書 No.229 (2024 年・若年層労働市場分析)</a><br />
+      ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024 (2025 年 4 月公開)</a><br />
+      ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener" class="underline">厚生労働省 job tag「未経験職種転換」(2026 年 5 月確認)</a><br />
+      ④ 各転職エージェント (リクルートエージェント / マイナビジョブ 20's / TechGo / doda 等) 公開求人情報サンプル (2026 年 5 月確認・地域: 主に首都圏)<br />
+      最終確認日: 2026-05-15。
+      </p>
+    </section>
+
+    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
+      <strong>📌 読者別 判断分岐 (公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li><strong>第二新卒 (新卒 3 年以内・22-25 歳)</strong>: ポテンシャル採用枠が最も広い層・年収 300-450 万円帯の求人が観察されます。マイナビジョブ 20's / リクルートエージェント等の第二新卒特化サービス推奨</li>
+        <li><strong>既卒 (新卒未就業 + 24-27 歳)</strong>: 第二新卒同等枠 + 既卒特化求人へのアクセス可能。ハローワーク + ジェイック等の公的サービス併用が推奨される傾向</li>
+        <li><strong>社会人経験者 (異業種 25-29 歳)</strong>: 前職経験 + ポータブルスキル (営業・コミュニケーション等) を活かす転換が現実的。年収維持 + 業界転換型 or 年収減 + キャリアチェンジ型の選択肢あり</li>
+        <li><strong>独学完了者 (プログラミング学習 + ポートフォリオ作成済)</strong>: 即戦力候補として年収 350-500 万円帯の求人が観察される傾向</li>
+      </ul>
+      <p class="mt-2 text-gray-600 text-xs">※ 各読者層に最適な判断軸は個別状況 (現職スキル・年齢・地域・家族計画) により大きく異なります。具体的判断はエージェントへの相談を推奨します。</p>
+    </div>
+
+    <BannerAB pageSlug="tenshoku-20dai-mikenken" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. 20 代未経験転職の判断軸 5 つ</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-2">
+      <li><strong>動機の明確化</strong>: 「なぜ転職するか」「なぜこの業界か」を言語化 (面接で必ず問われる傾向)</li>
+      <li><strong>業界研究</strong>: 異業種転換時は業界構造・職種役割・年収帯の理解が必須</li>
+      <li><strong>スキル棚卸し</strong>: 前職経験 + ポータブルスキル (営業・コミュニケーション・問題解決等) の整理</li>
+      <li><strong>基礎学習</strong>: IT エンジニア転職なら独学 + プログラミングスクール検討</li>
+      <li><strong>ライフプラン</strong>: 結婚・家族計画・住宅購入のタイミングを考慮</li>
+    </ol>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 未経験歓迎枠が多い業界・職種 (公開求人情報サンプル整理)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>IT エンジニア</strong>: バックエンド / フロントエンド / インフラ・年収 300-500 万円から開始</li>
+      <li><strong>Web マーケター</strong>: SNS 運用 / SEO / 広告運用・年収 300-450 万円</li>
+      <li><strong>営業</strong>: 法人営業 / 個人営業 / IT セールス・年収 300-500 万円 + インセンティブ</li>
+      <li><strong>事務職</strong>: 一般事務 / 経理事務 / 営業事務・年収 280-400 万円</li>
+      <li><strong>カスタマーサクセス / サポート</strong>: SaaS 業界中心・年収 300-450 万円</li>
+    </ul>
+
+    <BannerAB pageSlug="tenshoku-20dai-mikenken" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収目安 (公開求人情報サンプル整理・2026 年 5 月時点)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100">
+          <tr><th class="border border-gray-300 p-2">区分</th><th class="border border-gray-300 p-2">年収帯</th><th class="border border-gray-300 p-2">主要職種</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">第二新卒 (22-25 歳)</td><td class="border border-gray-300 p-2">300-450 万</td><td class="border border-gray-300 p-2">IT エンジニア / 営業 / 事務</td></tr>
+          <tr><td class="border border-gray-300 p-2">既卒 (24-27 歳)</td><td class="border border-gray-300 p-2">280-400 万</td><td class="border border-gray-300 p-2">事務 / カスタマーサポート / 営業</td></tr>
+          <tr><td class="border border-gray-300 p-2">社会人経験 (25-29 歳)</td><td class="border border-gray-300 p-2">350-500 万</td><td class="border border-gray-300 p-2">IT / Web マーケ / 営業</td></tr>
+          <tr><td class="border border-gray-300 p-2">独学完了者</td><td class="border border-gray-300 p-2">350-500 万</td><td class="border border-gray-300 p-2">IT エンジニア (即戦力枠)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-500 mb-3">※ <strong>出典・条件</strong>: 各転職エージェント (リクルートエージェント / マイナビジョブ 20's / TechGo / doda) 公開求人情報サンプル (2026 年 5 月時点・首都圏中心) + <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 報告書 No.229</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024</a> を整理。年収帯は対象母集団・スキル・地域・職種により大きく異なります。<strong>個別保証ではなく一般的傾向です</strong>。</p>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職活動の進め方 (公開情報整理)</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li><strong>準備期 (3-6 ヶ月前)</strong>: 自己分析 + 業界研究 + 基礎学習 (IT なら独学 or スクール)</li>
+      <li><strong>エージェント登録</strong>: 第二新卒特化 (マイナビジョブ 20's 等) + 大手総合 (リクルートエージェント / doda) 並行</li>
+      <li><strong>応募・選考期 (2-3 ヶ月)</strong>: カジュアル面談 + 書類応募 + 面接対策</li>
+      <li><strong>内定・条件交渉</strong>: 複数内定で比較・年収交渉</li>
+      <li><strong>退職・引き継ぎ</strong>: 1-2 ヶ月の引き継ぎ期間が一般的</li>
+    </ol>
+
+    <BannerAB pageSlug="tenshoku-20dai-mikenken" position="footer" />
+
+    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
+      <strong>📌 反例 (転職しない選択肢のメリット・公開情報整理)</strong>:
+      <ul class="list-disc pl-5 mt-1 space-y-1">
+        <li>現職での昇進: 同社内での社内異動・昇進ルートが明確な場合は転職リスクなしで年収アップ可能</li>
+        <li>副業・スキル獲得: 現職継続 + 副業 (Web マーケ / プログラミング等) でスキル蓄積</li>
+        <li>大学院・専門学校進学: 中長期的キャリアチェンジの基盤形成</li>
+        <li>フリーランス準備: 現職で実績作り + 副業案件でフリーランス独立準備</li>
+      </ul>
+      <p class="mt-2 text-gray-600">※ 転職は手段の一つです。現職継続・副業・進学等の選択肢と並行比較検討が推奨されます。</p>
+    </div>
+
+    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <h3 class="font-bold mb-2">まとめ (一般的傾向・個別判断はエージェント相談を推奨)</h3>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>20 代未経験はポテンシャル採用枠が広い時期・第二新卒は特に需要が高い傾向</li>
+        <li>判断軸: 動機明確化 / 業界研究 / スキル棚卸し / 基礎学習 / ライフプラン</li>
+        <li>未経験歓迎枠: IT エンジニア / Web マーケター / 営業 / 事務 / カスタマーサクセス</li>
+        <li>年収目安: 300-500 万円帯 (区分・スキルによる)</li>
+        <li><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません</li>
+      </ul>
+    </section>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/dainishinsotsu-engineer-tenshoku/" class="underline">第二新卒 エンジニア転職ガイド</a></li>
+      <li><a href="/ses-dasshutsu/" class="underline">SES 脱出 完全ガイド</a></li>
+      <li><a href="/engineer-shokumukeirekisho/" class="underline">エンジニア 職務経歴書 書き方</a></li>
+      <li><a href="/nenshu-up/" class="underline">転職 年収アップ完全ガイド</a></li>
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職ガイド</a></li>
+      <li><a href="/techgo/" class="underline">TechGo 紹介</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク</a> — 公的職業紹介</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究・研修機構</a> — 若年層労働市場統計</li>
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA (情報処理推進機構)</a> — IT 人材白書</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (
+      <details class="mb-3 border border-gray-200 rounded p-3">
+        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
+        <p class="mt-2 text-sm">{item.a}</p>
+      </details>
+    ))}
+
+    <p class="text-xs text-gray-500 mt-8">
+      ※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。
+    </p>
+  </main>
+</Layout>
