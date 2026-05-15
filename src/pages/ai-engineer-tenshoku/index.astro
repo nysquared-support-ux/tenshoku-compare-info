@@ -1,0 +1,124 @@
+---
+/**
+ * AI エンジニア 転職 LP (TechGo・★326 DRY cloud-engineer-tenshoku 流用)
+ * sv 推定 1,900 / 検索意図: AI/ML エンジニアの転職市場
+ */
+import Layout from '../../layouts/Layout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const title = 'AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）';
+const description = 'AI / 機械学習エンジニアの転職を検討中の方向け。LLM 時代の必須スキル + 業界別年収帯 + キャリアパス + 求人傾向を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+
+const breadcrumb = [
+  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
+  { name: 'AI エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/' },
+];
+
+const faq = [
+  { q: 'AI エンジニアの年収はどれくらいですか?', a: '一般的に AI エンジニアの年収は実務 3 年で 700-1,100 万円・5 年以上で 900-2,000 万円とされ、業界・スキルにより高単価帯が多いとされています。' },
+  { q: 'LLM (大規模言語モデル) 活用スキルは必須ですか?', a: '一般的に 2026 年現在、LLM (GPT/Claude/Gemini 等) の API 活用・プロンプト設計・RAG 実装スキルは AI エンジニア求人で頻繁に要求されているとされています。' },
+  { q: '機械学習 vs LLM どちらを学ぶべきですか?', a: '一般的に基礎 ML (教師あり/教師なし) + Deep Learning + LLM 活用の 3 段階で習得が推奨されています。求人によりフォーカスが異なります。' },
+  { q: '文系出身でも AI エンジニアになれますか?', a: '一般的に数学 (線形代数・確率統計) の基礎 + プログラミング (Python) + ML フレームワーク (PyTorch/TF) 習得で文系出身でも転身事例があるとされています。但しキャリア初期は厳しい傾向もあるとされています。' },
+];
+---
+
+<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <PRBadge pageSlug="ai-engineer-tenshoku" />
+    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; AI エンジニア転職</nav>
+    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯</h1>
+
+    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
+      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+    </div>
+
+    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+
+    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
+      <p><strong>結論 (一般的傾向)</strong>: 2026 年現在、AI エンジニア市場は LLM (生成 AI) 急成長で需要急増中とされ、年収 700-2,000 万円帯の求人が活発な傾向です。ML 基礎 + Deep Learning + LLM 活用の 3 段階スキルが転職成否を決める一般的傾向です。</p>
+    </section>
+
+    <BannerAB pageSlug="ai-engineer-tenshoku" position="hero" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">1. AI エンジニアの 4 種類</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>ML エンジニア</strong>: モデル設計・学習・チューニング</li>
+      <li><strong>MLOps エンジニア</strong>: 機械学習基盤・継続学習パイプライン</li>
+      <li><strong>LLM アプリケーションエンジニア</strong>: GPT/Claude API + RAG + Agent 実装</li>
+      <li><strong>データサイエンティスト</strong>: 統計分析 + ビジネス課題解決</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル (LLM 時代)</h2>
+    <h3 class="text-lg font-bold mt-4 mb-2">技術スキル</h3>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>Python + ML フレームワーク (PyTorch / TensorFlow / scikit-learn)</li>
+      <li>LLM API (OpenAI / Anthropic / Google)</li>
+      <li>RAG (Retrieval-Augmented Generation) + ベクトル DB (Pinecone / Weaviate)</li>
+      <li>プロンプトエンジニアリング + Few-shot / Chain-of-Thought</li>
+      <li>MLOps (MLflow / Vertex AI / SageMaker)</li>
+      <li>クラウド (AWS/GCP) ML サービス</li>
+    </ul>
+    <h3 class="text-lg font-bold mt-4 mb-2">数学・統計基礎</h3>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li>線形代数 / 確率統計 / 微分積分</li>
+      <li>機械学習アルゴリズム理解 (教師あり/教師なし/強化学習)</li>
+    </ul>
+
+    <BannerAB pageSlug="ai-engineer-tenshoku" position="middle" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安・2026 年)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="border-collapse border border-gray-300 text-sm w-full">
+        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">年収帯</th><th class="border border-gray-300 p-2">主要転職先</th></tr></thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-2">1-2 年</td><td class="border border-gray-300 p-2">500-800 万</td><td class="border border-gray-300 p-2">SaaS / Web 自社開発</td></tr>
+          <tr><td class="border border-gray-300 p-2">3-5 年</td><td class="border border-gray-300 p-2">700-1,200 万</td><td class="border border-gray-300 p-2">SaaS Senior / 大手 IT / AI スタートアップ</td></tr>
+          <tr><td class="border border-gray-300 p-2">5-10 年</td><td class="border border-gray-300 p-2">1,000-2,000 万</td><td class="border border-gray-300 p-2">外資 IT / 研究機関 / リサーチエンジニア</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">4. 業界別 求人傾向 (2026 年)</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><strong>AI スタートアップ</strong>: LLM アプリ・新規プロダクト開発</li>
+      <li><strong>SaaS</strong>: 既存プロダクトの AI 機能組込・コパイロット化</li>
+      <li><strong>大手 IT / Web</strong>: 社内 LLM 基盤・社内データ活用</li>
+      <li><strong>金融 / 製造</strong>: 業界 DX + AI 活用 PoC</li>
+      <li><strong>外資 IT (OpenAI/Anthropic 等)</strong>: 基盤モデル研究・大規模学習</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">5. 転職戦略</h2>
+    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
+      <li>GitHub に ML プロジェクト + Kaggle / SIGNATE 実績公開</li>
+      <li>LLM 活用個人開発 (RAG / Agent) でアウトプット</li>
+      <li>論文輪読 + 技術ブログ / Zenn 投稿</li>
+      <li>AI 特化エージェント + スカウト型 (LinkedIn) 併用</li>
+      <li>年収交渉では市場価値 + 実績 + 論文/OSS で示す</li>
+    </ol>
+
+    <BannerAB pageSlug="ai-engineer-tenshoku" position="footer" />
+
+    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職ガイド</a></li>
+      <li><a href="/infra-engineer-tenshoku/" class="underline">インフラエンジニア 転職ガイド</a></li>
+      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
+      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
+      <li><a href="/full-remote-engineer/" class="underline">フルリモート エンジニア 転職</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
+    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> — IT 人材白書・AI 人材動向</li>
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> — AI/IT 業界年収統計</li>
+      <li><a href="https://www.meti.go.jp/" target="_blank" rel="noopener" class="underline">経済産業省</a> — AI 戦略・産業政策</li>
+    </ul>
+
+    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
+    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
+
+    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。</p>
+  </main>
+</Layout>
