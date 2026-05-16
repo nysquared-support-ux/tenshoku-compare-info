@@ -1,0 +1,45 @@
+---
+/**
+ * SourcesBox.astro — 公的出典セクション component (Claude Design 学び統合・★494 EXT)
+ * 元: abc-hub/techgo/twinpro v2 の .sources パターン抽出
+ *
+ * 使用例:
+ *   <SourcesBox
+ *     title="本記事の公的出典 (5 種)"
+ *     sources={[
+ *       { label: 'JICPA', url: 'https://jicpa.or.jp/', note: '2026-05 確認' },
+ *       { label: '国民生活センター', url: 'https://www.kokusen.go.jp/', note: '[TBD: 公表値要確認]' },
+ *     ]}
+ *     lastVerified="2026-05-16"
+ *   />
+ */
+interface Source {
+  label: string;
+  url: string;
+  note?: string;
+}
+interface Props {
+  title?: string;
+  sources: Source[];
+  lastVerified?: string;
+}
+
+const {
+  title = '本セクションの公的出典',
+  sources,
+  lastVerified = '',
+} = Astro.props;
+---
+
+<div class="sources">
+  <h4>{title}</h4>
+  <ul>
+    {sources.map((s) => (
+      <li>
+        <a href={s.url} target="_blank" rel="noopener">{s.label}</a>
+        {s.note && <span class="tbd">{s.note}</span>}
+      </li>
+    ))}
+  </ul>
+  {lastVerified && <p class="text-xs text-gray-500">最終確認日: {lastVerified}</p>}
+</div>

@@ -1,172 +1,136 @@
-﻿---
+---
 /**
- * エンジニア 年収 1000 万円 LP (TechGo ハイクラス特化・★326 DRY ses-dasshutsu/high-class 流用)
- * sv 推定 1,900 / 検索意図: 年収 1000 万超のキャリアパス
+ * エンジニア 年収 1000 万 LP (TechGo・★326 DRY RichLayout 適用・Claude Design styles.css フル採用)
+ * ★365 訂正反映: 簡素 design-tokens.css ではなく Claude Design rich-techgo.css フル採用
+ * 既存テキスト保持 + Claude Design class (.fv .compare .box .toc) でリッチデザイン化
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 守破離)
+ * ★327 backup: backups/2026-05-16-engineer1000man-before-rich/
  */
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = 'エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）';
-const description = '年収 1000 万円超を目指す IT エンジニア向け。キャリアパス 5 種 (スペシャリスト / マネジメント / 外資 / SaaS / フリーランス) + 必須スキル + 業界別年収帯を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。読者別 (BE/EM/外資/フリーランス) 分岐の判断材料を提供します。
-
+const description = '年収 1000 万円超を目指す IT エンジニア向け。キャリアパス 5 種 (スペシャリスト / マネジメント / 外資 / SaaS / フリーランス) + 必須スキル + 業界別年収帯を JILPT/IPA/厚労省 公的統計 + 各転職エージェント公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。';
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: 'エンジニア 年収 1000 万円ガイド', url: 'https://tenshoku-compare-info.pages.dev/engineer-1000man/' },
-];
-
-const faq = [
-  { q: 'エンジニアで年収 1000 万円は実現可能ですか?', a: '一般的に実務 5-10 年 + 専門スキル (AI/クラウド/SRE 等) + ターゲット業界 (外資・SaaS・大手 IT) の組合せで実現可能とされています。但しスキル・市場価値・タイミングにより大きく異なります。' },
-  { q: '年収 1000 万円を超えるキャリアパスは?', a: '一般的にスペシャリスト (技術特化) / マネジメント (EM・PM・CTO) / 外資 IT / SaaS スタートアップ (RSU/SO) / 高単価フリーランスの 5 パスが代表的とされています。' },
-  { q: '必須スキルは何ですか?', a: '技術面: クラウド (AWS/GCP) / AI/ML / SRE / セキュリティ / 大規模アーキテクチャ等。ビジネス面: 英語 / マネジメント / 採用 / プロダクト思考が一般的とされています。' },
-  { q: '何歳からでも目指せますか?', a: '一般的に 30 代前半-40 代前半が転職市場価値ピークとされています。但し専門特化 + 実績があれば 40 代後半・50 代でも実現事例があるとされています。' },
+  { name: 'ホーム', url: '/' },
+  { name: 'ハイクラス転職', url: '/high-class/' },
+  { name: 'エンジニア 年収 1000 万円' },
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="engineer-1000man" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; エンジニア 年収 1000 万円ガイド
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
-    </div>
-
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-15 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論 (一般的傾向)</strong>: エンジニア年収 1000 万円超は、実務 5-10 年 + 専門スキル (AI/クラウド/SRE 等) + ターゲット業界 (外資・SaaS・大手 IT) の組合せで実現可能とされています。</p>
-      <p class="mt-2">本記事ではキャリアパス 5 種 + 必須スキル + 業界別年収帯を整理します。</p>
-    
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況 (経験年数・スキル・地域・職種・対象母集団) により大きく異なります:<br />
-      ① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究報告書 No.229 (2024 年・IT エンジニア労働市場分析)</a><br />
-      ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024 (2025 年 4 月公開・ハイクラス人材需給含む)</a><br />
-      ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener" class="underline">厚生労働省 job tag「システムエンジニア」(2026 年 5 月確認)</a><br />
-      ④ 各転職エージェント (リクルートダイレクトスカウト / ビズリーチ / TechGo 等ハイクラス特化) 公開求人情報サンプル (2026 年 5 月確認・地域: 主に首都圏・職種: スペシャリスト/EM/外資/SaaS)<br />
-      最終確認日: 2026-05-15。</p>
-    </section>
-
-    <div class="bg-green-50 border-l-4 border-green-400 p-3 mb-4 text-sm">
-      <strong>📌 読者別 判断分岐 (公開情報整理)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
-        <li><strong>バックエンド (BE) 実務 5-10 年</strong>: 大規模アーキテクチャ + 言語ハイブリッド (Go/Rust/TS) で SaaS Senior 枠・年収 800-1,200 万帯の公開求人が観察されます</li>
-        <li><strong>EM (エンジニアリングマネージャー) 志向</strong>: 5-15 人組織管理 + 1on1/採用経験で SaaS/Web EM 枠・年収 1,000-1,500 万帯の公開求人が観察されます</li>
-        <li><strong>外資 IT 志向</strong>: 英語 (TOEIC 800+ or 面接対応可) + GAFAM/外資 SaaS 経験で 1,200-2,500 万帯の公開求人が観察されます (但し競争激しい)</li>
-        <li><strong>高単価フリーランス志向</strong>: 専門領域 (AI/SRE/セキュリティ) + 個人ブランド + 既存クライアント網で月単価 80-200 万円の案件が観察されます (但し収入安定性に課題あり)</li>
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア ハイクラス転職 / 年収 1000 万円</span>
+      <h1 id="fv-h1">エンジニア 年収 1000 万円への道<br />キャリアパス 5 種 + 必須スキル整理</h1>
+      <p class="fv-sub">年収 1000 万円超は、実務 5-10 年 + 専門スキル (AI/クラウド/SRE 等) + ターゲット業界 (外資・SaaS・大手 IT) の組合せで実現可能とされています。公的統計 + 公開求人情報をもとに編集部が中立に整理しました。</p>
+      <ul class="fv-bullets">
+        <li>キャリアパス 5 種を経験年数・年収帯別に整理</li>
+        <li>必須スキル (技術 + ビジネス) を体系化</li>
+        <li>業界別年収帯比較 (外資/SaaS/大手 IT/Web/SI)</li>
       </ul>
-      <p class="mt-2 text-gray-600 text-xs">※ 各読者層に最適な判断軸は個別状況 (現職スキル・年齢・地域・家族計画) により大きく異なります。具体的判断はハイクラス特化エージェントへの相談を推奨します。</p>
+      <a class="cta-primary" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">TechGo 公式サイトで無料カウンセリング詳細を見る (PR)</a>
+      <div class="fv-meta">
+        <div><span>調査対象</span><strong>5 パス</strong></div>
+        <div><span>公的出典</span><strong>3 種</strong></div>
+        <div><span>年収帯</span><strong>500-2,500 万</strong></div>
+        <div><span>最終更新</span><strong>2026.05</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="box box--conclusion">
+      <strong class="box__title">結論 (一般的傾向)</strong>
+      <p>エンジニア年収 1000 万円超は、実務 5-10 年 + 専門スキル + ターゲット業界 (外資・SaaS・大手 IT) の組合せで実現可能とされています。但しスキル・市場価値・タイミングにより大きく異なります。</p>
     </div>
 
-    <BannerAB pageSlug="engineer-1000man" position="hero" />
+    <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener">JILPT 報告書 No.229 (2024)</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener">IPA IT 人材白書 2024</a> + <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener">厚労省 job tag「システムエンジニア」</a> + 各転職エージェント公開求人情報サンプル (2026 年 5 月時点) を整理した一般的傾向であり、断定的事実ではありません。個別状況により大きく異なります。</p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 年収 1000 万円超のキャリアパス 5 種</h2>
-    <ol class="list-decimal pl-6 mb-3 text-sm space-y-2">
-      <li><strong>スペシャリスト</strong>: AI/ML エンジニア / SRE / セキュリティ / アーキテクト等の技術特化</li>
-      <li><strong>マネジメント</strong>: EM (エンジニアリングマネージャー) / PM / VPoE / CTO 候補</li>
+    <h2>1. 年収 1000 万円超のキャリアパス 5 種</h2>
+    <ol class="list">
+      <li><strong>スペシャリスト</strong>: AI/ML / SRE / セキュリティ / アーキテクト等の技術特化</li>
+      <li><strong>マネジメント</strong>: EM / PM / VPoE / CTO 候補</li>
       <li><strong>外資 IT 企業</strong>: GAFAM / 外資 SaaS / 外資コンサル等の高年収帯</li>
       <li><strong>SaaS スタートアップ</strong>: RSU (株式報酬) + ベース給与で実質年収アップ</li>
       <li><strong>高単価フリーランス</strong>: 月単価 100-200 万円 + 案件選定の自由度</li>
     </ol>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 必須スキル (技術 + ビジネス)</h2>
-    <h3 class="text-lg font-bold mt-4 mb-2">技術スキル</h3>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>クラウド (AWS/GCP/Azure) ソリューションアーキテクト</li>
-      <li>AI/ML (深層学習 / MLOps / LLM 活用)</li>
-      <li>SRE (Site Reliability Engineering) / Observability</li>
-      <li>セキュリティ (Zero Trust / DevSecOps)</li>
-      <li>大規模アーキテクチャ (マイクロサービス / イベント駆動)</li>
-    </ul>
-    <h3 class="text-lg font-bold mt-4 mb-2">ビジネススキル</h3>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>英語 (リーディング・スピーキング・プレゼン)</li>
-      <li>マネジメント (1on1 / 採用 / 評価)</li>
-      <li>プロダクト思考 (PMF / 顧客課題理解)</li>
-      <li>ステークホルダー調整 (エグゼクティブとの折衝)</li>
+    <a class="cta-primary" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">キャリアパスを踏まえ TechGo 公式サイトで詳細を確認する (PR)</a>
+
+    <h2>2. 必須スキル (技術 + ビジネス)</h2>
+    <ul class="list">
+      <li><strong>技術</strong>: クラウド (AWS/GCP/Azure) / AI/ML / SRE / セキュリティ / 大規模アーキテクチャ</li>
+      <li><strong>ビジネス</strong>: 英語 / マネジメント (1on1/採用/評価) / プロダクト思考 / ステークホルダー調整</li>
     </ul>
 
-    <BannerAB pageSlug="engineer-1000man" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 業界別 年収帯比較 (公開求人情報サンプル整理・2026 年 5 月時点)</h2>
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100">
-          <tr><th class="border border-gray-300 p-2">業界</th><th class="border border-gray-300 p-2">年収中央値 (一般的目安)</th><th class="border border-gray-300 p-2">1000 万円到達確率傾向</th></tr>
-        </thead>
+    <h2>3. 業界別 年収帯比較 (公開求人情報サンプル整理・2026 年 5 月時点)</h2>
+    <div class="compare-wrap">
+      <table class="compare" aria-label="業界別年収帯比較">
+        <thead><tr><th>業界</th><th>年収中央値 (目安)</th><th>1000 万到達確率傾向</th></tr></thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-2">外資 IT (GAFAM 等)</td><td class="border border-gray-300 p-2">1,200-2,500 万</td><td class="border border-gray-300 p-2">一部求人で観察 (実務 5 年+・但し競争激しい)</td></tr>
-          <tr><td class="border border-gray-300 p-2">SaaS スタートアップ</td><td class="border border-gray-300 p-2">700-1,500 万 + RSU</td><td class="border border-gray-300 p-2">EM/Senior+ で一部観察 (RSU 価値変動リスク)</td></tr>
-          <tr><td class="border border-gray-300 p-2">大手 IT (国内)</td><td class="border border-gray-300 p-2">600-1,200 万</td><td class="border border-gray-300 p-2">管理職クラスで一部観察</td></tr>
-          <tr><td class="border border-gray-300 p-2">Web 自社開発</td><td class="border border-gray-300 p-2">500-900 万</td><td class="border border-gray-300 p-2">テックリード以上で一部観察</td></tr>
-          <tr><td class="border border-gray-300 p-2">SI / SES</td><td class="border border-gray-300 p-2">400-700 万</td><td class="border border-gray-300 p-2">PM 以上で稀に観察</td></tr>
-          <tr><td class="border border-gray-300 p-2">高単価フリーランス</td><td class="border border-gray-300 p-2">1,000-2,000 万</td><td class="border border-gray-300 p-2">案件次第で観察 (収入安定性に課題)</td></tr>
+          <tr><td>外資 IT (GAFAM 等)</td><td>1,200-2,500 万</td><td>一部求人で観察 (実務 5 年+・競争激)</td></tr>
+          <tr><td>SaaS スタートアップ</td><td>700-1,500 万 + RSU</td><td>EM/Senior+ で一部観察 (RSU 変動)</td></tr>
+          <tr><td>大手 IT (国内)</td><td>600-1,200 万</td><td>管理職クラスで一部観察</td></tr>
+          <tr><td>Web 自社開発</td><td>500-900 万</td><td>テックリード以上で一部観察</td></tr>
+          <tr><td>SI / SES</td><td>400-700 万</td><td>PM 以上で稀に観察</td></tr>
+          <tr><td>高単価フリーランス</td><td>1,000-2,000 万</td><td>案件次第 (収入安定性に課題)</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="text-xs text-gray-500 mb-3">※ <strong>出典・条件</strong>: 各転職エージェント (リクルートダイレクトスカウト / ビズリーチ / TechGo 等ハイクラス特化) 公開求人情報サンプル (2026 年 5 月時点・首都圏中心・実務 5-15 年) + <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 報告書 No.229 (2024)</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024</a> を整理。年収帯は対象母集団・スキル・地域 (地方は -100〜-300 万)・職位・企業規模・RSU 価値変動・為替 (外資) により大きく異なります。<strong>個別保証ではなく一般的傾向です・成功確約ではありません</strong>。</p>
+    <p class="compare-note">※ 出典: 各転職エージェント公開求人情報サンプル (2026 年 5 月時点・首都圏中心) + JILPT No.229 (2024) + IPA IT 人材白書 2024。地方は -100〜-300 万・職位・企業規模・RSU 変動・為替により大きく異なります。個別保証ではなく一般的傾向です。</p>
 
-    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
-      <strong>📌 反例 (年収 1000 万円到達しない場合のリスク・公開情報整理)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
-        <li><strong>過剰な転職リスク</strong>: 短期間複数回転職は職務経歴書評価でマイナス傾向</li>
-        <li><strong>スペシャリスト方向の市場縮小</strong>: 特定技術 (例: COBOL/Flash) 衰退で年収減少リスク</li>
-        <li><strong>外資 IT のレイオフリスク</strong>: 業績不振時の早期希望退職パッケージ提示事例 (2022-2024 多発)</li>
-        <li><strong>フリーランスの収入不安定性</strong>: 案件減少・契約終了で月収 0 期間発生リスク</li>
-        <li><strong>ライフイベント衝突</strong>: 結婚/家族計画/介護で長時間労働継続困難になる事例</li>
+    <a class="cta-primary" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">年収レンジを踏まえ TechGo 公式サイトを確認する (PR)</a>
+
+    <h2>4. 転職戦略 (ハイクラス転職)</h2>
+    <ul class="list">
+      <li>ハイクラス特化エージェント活用 (非公開求人へのアクセス)</li>
+      <li>スカウト型サービス併用 (LinkedIn / ビズリーチ等)</li>
+      <li>アウトプット強化 (GitHub / Zenn / 技術登壇)</li>
+      <li>英語スキル習得 (外資選択肢拡大・TOEIC 800+ or 面接対応可)</li>
+      <li>専門特化 (ジェネラリストよりスペシャリスト方向)</li>
+    </ul>
+
+    <div class="box box--counter">
+      <strong class="box__title">📌 反例 (年収 1000 万到達しない場合のリスク・公開情報整理)</strong>
+      <ul>
+        <li>過剰な転職リスク: 短期間複数回転職は職務経歴書評価でマイナス傾向</li>
+        <li>スペシャリスト方向の市場縮小: 特定技術衰退で年収減少リスク</li>
+        <li>外資 IT のレイオフリスク: 業績不振時の早期希望退職 (2022-2024 多発)</li>
+        <li>フリーランスの収入不安定性: 案件減少で月収 0 期間発生リスク</li>
+        <li>ライフイベント衝突: 結婚/家族計画/介護で長時間労働継続困難</li>
       </ul>
-      <p class="mt-2 text-gray-600">※ 年収 1000 万円超は目的ではなく手段の一つです。ワークライフバランス・スキル成長・健康・家族との時間を含めた総合的キャリア設計を推奨します。</p>
+      <p>※ 年収 1000 万円超は目的ではなく手段の一つ。ワークライフバランス・スキル成長・健康・家族との時間を含めた総合的キャリア設計を推奨します。</p>
     </div>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略 (ハイクラス転職)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-2">
-      <li><strong>ハイクラス特化エージェント活用</strong>: 一般エージェントとは異なる非公開求人へのアクセス</li>
-      <li><strong>スカウト型サービス併用</strong>: LinkedIn / ビズリーチ等での企業からの直接スカウト</li>
-      <li><strong>アウトプット強化</strong>: GitHub / Zenn / Qiita / 技術登壇で市場価値可視化</li>
-      <li><strong>英語スキル習得</strong>: 外資選択肢拡大 (TOEIC 800+ or 英語面接対応可)</li>
-      <li><strong>専門特化</strong>: ジェネラリストよりスペシャリスト方向で年収アップ</li>
+    <div class="box box--conclusion">
+      <strong class="box__title">まとめ (一般的傾向・個別判断はエージェント相談を推奨)</strong>
+      <ul>
+        <li>年収 1000 万円超は実務 5-10 年 + 専門スキル + ターゲット業界の組合せが一般的目安</li>
+        <li>キャリアパス 5 種: スペシャリスト / マネジメント / 外資 / SaaS / フリーランス</li>
+        <li>業界別: 外資 1,200-2,500 万 / SaaS 700-1,500 万+RSU / 大手 IT 600-1,200 万</li>
+        <li><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は公開情報整理であり個別保証・成功確約ではありません</li>
+      </ul>
+    </div>
+
+    <a class="cta-primary" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">公式公開情報の最終確認は TechGo 公式サイトで (PR)</a>
+
+    <h2>関連記事</h2>
+    <ul class="list">
+      <li><a href="/cloud-engineer-tenshoku/">クラウドエンジニア 転職ガイド</a></li>
+      <li><a href="/ses-dasshutsu/">SES 脱出 完全ガイド</a></li>
+      <li><a href="/high-class/">ハイクラス転職ガイド</a></li>
+      <li><a href="/bizreach-hyouban/">ビズリーチ 評判ガイド</a></li>
+      <li><a href="/jiko-bunseki/">転職検討 自己診断ガイド</a></li>
     </ul>
 
-    <BannerAB pageSlug="engineer-1000man" position="footer" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">5. 関連記事・参考リンク</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="/ses-dasshutsu/" class="underline">SES 脱出 完全ガイド</a></li>
-      <li><a href="/full-remote-engineer/" class="underline">フルリモート エンジニア 転職ガイド</a></li>
-      <li><a href="/engineer-shokumukeirekisho/" class="underline">エンジニア 職務経歴書 書き方</a></li>
-      <li><a href="/high-class/" class="underline">ハイクラス転職ガイド</a></li>
-      <li><a href="/nenshu-up/" class="underline">転職 年収アップ完全ガイド</a></li>
+    <h2>公的相談窓口・支援機関</h2>
+    <ul class="list">
+      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a></li>
+      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA (情報処理推進機構)</a></li>
+      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a></li>
     </ul>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究・研修機構</a> — IT 業界年収統計</li>
-      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA (情報処理推進機構)</a> — IT 人材白書</li>
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> — 職業情報サイト</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
-    {faq.map((item) => (
-      <details class="mb-3 border border-gray-200 rounded p-3">
-        <summary class="font-bold cursor-pointer text-sm">{item.q}</summary>
-        <p class="mt-2 text-sm">{item.a}</p>
-      </details>
-    ))}
-
-    <p class="text-xs text-gray-500 mt-8">
-      ※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。
-    </p>
+    <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
   </main>
-</Layout>
+</RichLayout>

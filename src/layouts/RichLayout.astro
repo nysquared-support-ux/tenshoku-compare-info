@@ -1,0 +1,148 @@
+---
+/**
+ * RichLayout.astro — Claude Design techgo デザインフル採用 Layout (★326 DRY 核)
+ *
+ * ★365 訂正反映: design-tokens.css 簡素抽出 (Phase 1-3 失敗) ではなく
+ *   Claude Design styles.css フル採用 (public/rich-techgo.css・708 行) + header/footer/Cookie を Astro 化
+ *
+ * 既存 Astro 基盤保持:
+ *   - GSC verification / sitemap / OGP は head に内蔵 (Layout.astro 相当)
+ *   - rich-techgo.css リンク (Claude Design リッチデザイン)
+ *
+ * 使用例 (各 LP の index.astro):
+ *   ---
+ *   import RichLayout from '../../layouts/RichLayout.astro';
+ *   const breadcrumb = [{name:'ホーム',url:'/'},{name:'ハイクラス転職',url:'/high-class/'},{name:'エンジニア年収1000万'}];
+ *   ---
+ *   <RichLayout title="..." description="..." breadcrumb={breadcrumb}>
+ *     <section class="fv" aria-labelledby="fv-h1"> ... Claude Design class 使用 ... </section>
+ *     <main> ... <table class="compare"> ... </main>
+ *   </RichLayout>
+ *
+ * → Claude Design の .fv .compare .toc .box 等 class が rich-techgo.css で全適用
+ */
+interface BreadcrumbItem { name: string; url?: string; }
+interface Props {
+  title: string;
+  description?: string;
+  breadcrumb?: BreadcrumbItem[];
+  ogUrl?: string;
+}
+
+const {
+  title,
+  description = 'IT エンジニアのハイクラス転職を公的出典で整理。公開情報ベースの中立的判断材料を提供します。',
+  breadcrumb = [{ name: 'ホーム', url: '/' }],
+  ogUrl = '',
+} = Astro.props;
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://tenshoku-compare-info.pages.dev';
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION || 'HRlkPakHcDHZPrhT1QR0bRiJrajC2-TjyqlvBl3gDsA';
+const canonical = ogUrl || Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  {gscVerification && <meta name="google-site-verification" content={gscVerification} />}
+  <link rel="canonical" href={canonical} />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:site_name" content="tenshoku-compare-info" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Claude Design リッチデザイン (★365 訂正・フル採用・簡素化しない) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="/rich-techgo.css" />
+
+  <title>{title}</title>
+  <slot name="head" />
+</head>
+<body>
+  <!-- グローバル PR表示 -->
+  <div class="pr-global-bar">
+    PR：本ページはアフィリエイト広告を利用しています | 各転職エージェント公式サイトではありません
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">NY-squared 編集部<small>tenshoku-compare-info</small></a>
+      <nav class="breadcrumb" aria-label="パンくず">
+        <ol>
+          {breadcrumb.map((b, i) => (
+            <li>
+              {b.url && i < breadcrumb.length - 1
+                ? <a href={b.url}>{b.name}</a>
+                : b.name}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h5>NY-squared 編集部</h5>
+          <p>IT エンジニアのキャリア・転職領域における中立的な情報整理を行う編集部です。公的統計・公開情報に基づき、特定エージェント推薦ではなく判断材料の提供を目的としています。</p>
+          <p>運営：NY-squared Editorial Team / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy/">プライバシーポリシー</a> / <a href="/contact/">お問い合わせ</a></p>
+        </div>
+        <div>
+          <h5>関連 Spoke LP</h5>
+          <ul>
+            <li><a href="/high-class/">ハイクラス転職</a></li>
+            <li><a href="/engineer-1000man/">年収 1,000 万エンジニア</a></li>
+            <li><a href="/cloud-engineer-tenshoku/">クラウドエンジニア</a></li>
+            <li><a href="/ai-engineer-tenshoku/">AI エンジニア</a></li>
+            <li><a href="/security-engineer-tenshoku/">セキュリティエンジニア</a></li>
+            <li><a href="/ses-dasshutsu/">SES 脱出</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>キャリア準備</h5>
+          <ul>
+            <li><a href="/jiko-bunseki/">自己分析</a></li>
+            <li><a href="/engineer-shokumukeirekisho/">職務経歴書</a></li>
+            <li><a href="/engineer-portfolio/">ポートフォリオ</a></li>
+            <li><a href="/shippai/">失敗事例</a></li>
+            <li><a href="/full-remote-engineer/">フルリモート</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© 2026 NY-squared Editorial Team. 本ページは A8.net 経由のアフィリエイトリンクを含む PR 記事です。掲載情報は公開時点のものです。</p>
+    </div>
+  </footer>
+
+  <!-- Cookie 同意バナー (★277/★323 CMP プレースホルダ・本番 OneTrust 等差替) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie 利用について" style="display:none;">
+    <p>本サイトはユーザー体験の改善と広告効果測定のために Cookie を使用します。詳細は<a href="/privacy/">プライバシーポリシー</a>をご確認ください。</p>
+    <div class="cookie-actions">
+      <button type="button" class="secondary" id="cookieReject">必須のみ</button>
+      <button type="button" id="cookieAccept">すべて許可</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var b=document.getElementById('cookieBanner');
+      if(!localStorage.getItem('cookieConsent')){ b.style.display='flex'; }
+      function set(v){ localStorage.setItem('cookieConsent',v); b.style.display='none'; }
+      document.getElementById('cookieAccept').onclick=function(){set('all');};
+      document.getElementById('cookieReject').onclick=function(){set('essential');};
+    })();
+  </script>
+</body>
+</html>
