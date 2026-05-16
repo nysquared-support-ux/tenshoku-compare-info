@@ -1,0 +1,41 @@
+---
+/**
+ * ConclusionBox.astro — 結論 box 共通 component (Claude Design 学び統合)
+ * 元: abc-hub/techgo/twinpro v2 の .box.box--conclusion パターン抽出
+ * 用途: LP 上部の「結論 (一般的傾向)」box 統一
+ *
+ * variant:
+ *   - default (青系・結論)
+ *   - counter (暖色・反例)
+ *   - branch  (緑系・読者別分岐)
+ *
+ * 使用例:
+ *   <ConclusionBox title="結論 (一般的傾向)" variant="default">
+ *     <p>本記事の主張...</p>
+ *   </ConclusionBox>
+ */
+interface Props {
+  title?: string;
+  variant?: 'default' | 'counter' | 'branch';
+  icon?: string;
+}
+
+const {
+  title = '結論 (一般的傾向)',
+  variant = 'default',
+  icon = '',
+} = Astro.props;
+
+const variantClass = variant === 'counter' ? 'box--counter'
+                   : variant === 'branch'  ? 'box--branch'
+                   : 'box--conclusion';
+const defaultIcon = variant === 'counter' ? '📌 反例 / 別の選択肢'
+                  : variant === 'branch'  ? '📌 読者別 判断分岐'
+                  : '';
+const titleText = icon ? `${icon} ${title}` : (defaultIcon || title);
+---
+
+<section class={`box ${variantClass}`}>
+  {titleText && <strong class="box__title">{titleText}</strong>}
+  <slot />
+</section>

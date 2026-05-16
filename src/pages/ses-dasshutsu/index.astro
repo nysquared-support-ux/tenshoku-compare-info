@@ -7,6 +7,8 @@
 import Layout from '../../layouts/Layout.astro';
 import PRBadge from '../../components/PRBadge.astro';
 import BannerAB from '../../components/BannerAB.astro';
+import ConclusionBox from '../../components/ConclusionBox.astro';
+import SourcesBox from '../../components/SourcesBox.astro';
 
 const title = 'SES 脱出 完全ガイド｜自社開発・元請への転職判断と年収アップの目安（2026年5月時点・公開情報整理・PR）';
 const description = 'SES (システムエンジニアリングサービス) から自社開発・元請企業への転職を検討中の IT エンジニア向け。脱出理由・判断軸・転職活動の流れ・年収アップ目安を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別状況により判断は異なるためエージェント相談を推奨します。';
@@ -49,17 +51,21 @@ const faq = [
       <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
     </p>
 
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論 (一般的傾向)</strong>: SES から自社開発・元請への転職は、実務 2-3 年経験 + 主要スキル習得後が一つの目安とされています。年収アップ + 技術選定の自由度 + 長期キャリア構築が主要メリットとされています。</p>
+    <ConclusionBox variant="default" title="結論 (一般的傾向)">
+      <p>SES から自社開発・元請への転職は、実務 2-3 年経験 + 主要スキル習得後が一つの目安とされています。年収アップ + 技術選定の自由度 + 長期キャリア構築が主要メリットとされています。</p>
       <p class="mt-2">但し個別状況により判断は大きく異なるため、IT エンジニア特化転職エージェントへの相談が推奨されます。</p>
-    
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は以下を整理した <strong>2026 年 5 月時点の一般論</strong>であり、断定的事実ではありません。個別状況 (経験年数・スキル・地域・職種・対象母集団) により大きく異なります:<br />
-      ① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究報告書 No.229 (2024 年・IT エンジニア労働市場分析)</a><br />
-      ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書 2024 (2025 年 4 月公開)</a><br />
-      ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener" class="underline">厚生労働省 job tag「システムエンジニア」(2026 年 5 月確認)</a><br />
-      ④ 各転職エージェント (リクルートエージェント / doda / TechGo 等) 公開求人情報サンプル (2026 年 5 月確認・地域: 主に首都圏・職種: バックエンド/フロントエンド/インフラ)<br />
-      最終確認日: 2026-05-15。</p>
-    </section>
+    </ConclusionBox>
+
+    <SourcesBox
+      title="本記事の数値根拠 (公的出典 + 求人サンプル・2026 年 5 月時点)"
+      sources={[
+        { label: 'JILPT 労働政策研究報告書 No.229 (2024 年・IT エンジニア労働市場分析)', url: 'https://www.jil.go.jp/institute/research/2024/229.html' },
+        { label: 'IPA IT 人材白書 2024 (2025 年 4 月公開)', url: 'https://www.ipa.go.jp/jinzai/whitepaper/2024/' },
+        { label: '厚生労働省 job tag「システムエンジニア」', url: 'https://shigoto.mhlw.go.jp/User/Occupation/Detail/108', note: '2026 年 5 月確認' },
+        { label: '各転職エージェント (リクルートエージェント / doda / TechGo 等) 公開求人情報サンプル', url: '#', note: '2026 年 5 月確認・首都圏・BE/FE/インフラ' },
+      ]}
+      lastVerified="2026-05-15"
+    />
 
     <BannerAB pageSlug="ses-dasshutsu" position="hero" />
 
@@ -72,16 +78,15 @@ const faq = [
       <li><strong>ライフスタイル</strong>: 公開求人情報ではフルリモート・フレックス制度を提示する企業が観察されます (但し職種・プロジェクト性質により異なります)</li>
     </ul>
 
-    <div class="bg-amber-50 border-l-4 border-amber-400 p-3 mb-4 text-xs">
-      <strong>📌 反例 (SES に居続けるメリット・公開情報整理)</strong>:
-      <ul class="list-disc pl-5 mt-1 space-y-1">
+    <ConclusionBox variant="counter" title="SES に居続けるメリット (公開情報整理)">
+      <ul>
         <li>プロジェクト多様性: 短期間で複数業界・企業文化を経験可能</li>
         <li>顧客折衝スキル: クライアント直接対応で対人スキル蓄積</li>
         <li>転職市場での実績アピール: 多様な案件経験は経歴書差別化要素</li>
         <li>福利厚生: 大手 SES 企業では教育研修・資格支援が充実する傾向</li>
       </ul>
-      <p class="mt-2 text-gray-600">※ SES vs 自社開発はキャリア志向・スキル・年収・ライフイベントを統合的に判断する事項です。一方的な脱出推奨ではなく、両面比較を推奨します。</p>
-    </div>
+      <p class="mt-2 text-gray-600 text-xs">※ SES vs 自社開発はキャリア志向・スキル・年収・ライフイベントを統合的に判断する事項です。一方的な脱出推奨ではなく、両面比較を推奨します。</p>
+    </ConclusionBox>
 
     <h2 class="text-xl font-bold mt-8 mb-3">2. SES 脱出の判断軸 4 つ</h2>
     <ol class="list-decimal pl-6 mb-3 text-sm space-y-2">
