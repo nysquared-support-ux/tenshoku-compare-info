@@ -1,0 +1,39 @@
+---
+/**
+ * FVHeader.astro — ファーストビュー (FV) component (Claude Design 学び統合)
+ * 元: abc-hub/techgo/twinpro v2 の .fv + キャッチ + サブ + CTA パターン抽出
+ *
+ * 使用例:
+ *   <FVHeader
+ *     title="ツインプロで会計士・税理士ハイクラス転職を検討する方へ"
+ *     sub="公的出典で整理する判断材料 (BIG4 / FAS / CFO 候補)"
+ *     ctaText="ツインプロ公式サイトで無料カウンセリング詳細を見る (PR)"
+ *     ctaHref="https://px.a8.net/svt/ejp?a8mat=...&sitemicros=hub_fv"
+ *   />
+ */
+interface Props {
+  title: string;
+  sub?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const { title, sub = '', ctaText = '', ctaHref = '' } = Astro.props;
+---
+
+<section class="fv">
+  <h1 class="fv__title">{title}</h1>
+  {sub && <p class="fv__sub">{sub}</p>}
+  <slot />
+  {ctaText && ctaHref && (
+    <a
+      class="btn-cta"
+      href={ctaHref}
+      rel="sponsored nofollow noopener"
+      target="_blank"
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+      {ctaText}
+    </a>
+  )}
+</section>
