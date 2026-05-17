@@ -1,188 +1,145 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+/**
+ * twin-pro LP (ツインプロ・Claude Design 完全 class 構造準拠・★503 案2 bespoke)
+ * 非標準 (profile ページ・4社比較ではない) のため converter 非適用・手動 RichLayout 化
+ * ★326 DRY rich-techgo.css 汎用流用・★480 ツインプロ a8mat verbatim 保持 (BWVTE/BXB8X)
+ * ★327 backup: backups/2026-05-17-twin-pro-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
 const title = 'ツインプロ｜会計士・税理士特化 転職エージェント解説 (公開情報)';
 const description = 'ツインプロは会計士・税理士など士業有資格者特化の転職エージェント。公開情報をもとに対象者・サポート内容・利用の流れを整理。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: 'ツインプロ解説' },
+];
+const faq = [
+  { q: '科目合格者でも利用できますか？', a: '公式サイトでは科目合格者向けの求人も扱う旨が案内されている場合があります。具体的な対応範囲は公式サイトでご確認ください。' },
+  { q: '利用料金はかかりますか？', a: '転職エージェントの一般的な慣行として、求職者側の利用料は無料の場合が多いです。正確な条件は公式サイトの利用規約をご確認ください。' },
+  { q: '独立志望の方も相談できますか？', a: '士業特化エージェントの中には、独立準備段階のキャリア相談に対応する場合があります。具体的な相談範囲は公式サイトでご確認ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
 ---
 
-<Layout title={title} description={description}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="twin-pro"
-             href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE&sitemicros=prbadge_twin-pro"
-             label="会計士・税理士特化の転職エージェント・無料キャリア面談（PR）" />
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
 
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      ツインプロ｜会計士・税理士特化 転職エージェント解説
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告を含みます。
-      本サイト経由でリンク先 ツインプロ 公式へお申込みが成立した場合、運営者は提携先 (A8.net) より報酬を受け取ります。
-      本サイトは ツインプロ 公式サイトではありません。順位・推奨は公開情報・公式の専門性表記に基づくものであり、報酬額により内容を変えることはしていません。
-    </div>
-
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-04-25 / 出典: ツインプロ 公式サイト・公開情報<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-8 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p class="font-semibold mb-2">本ページの位置付け</p>
-      <ul class="list-disc pl-5 space-y-1">
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">士業転職 / 会計士・税理士特化エージェント解説</span>
+      <h1 id="fv-h1"><span class="accent">ツインプロ</span>｜会計士・税理士特化 転職エージェント解説</h1>
+      <p class="lede">ツインプロは、公認会計士・税理士など士業有資格者向けに特化した転職エージェントとして公式サイトで案内されています。会計事務所・税理士法人・コンサルティングファーム・事業会社経理財務など、士業資格を活かせる多様な転職先を扱います。本ページはツインプロの公開情報を整理した解説ページです (公式サイトではありません)。</p>
+      <ul class="fv-bullets">
         <li>ツインプロの公開情報を整理した解説ページ（公式サイトではありません）</li>
         <li>記載内容は2026-04-25時点。最新情報は公式サイトでご確認ください</li>
         <li>転職結果は個別状況により異なります</li>
       </ul>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">ツインプロの特徴（公開情報ベース）</h2>
-    <p class="mb-3">
-      ツインプロは、公認会計士・税理士など士業有資格者向けに特化した転職エージェントとして公式サイトで案内されています。
-      会計事務所・税理士法人・コンサルティングファーム・事業会社経理財務など、士業資格を活かせる多様な転職先を扱います。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">主な対象者（公式サイト記載）</h2>
-    <ul class="list-disc pl-5 mb-4 space-y-1">
-      <li>公認会計士（USCPA含む有資格者・科目合格者）</li>
-      <li>税理士・税理士科目合格者</li>
-      <li>監査法人在籍の会計士</li>
-      <li>会計事務所・税理士法人在籍者</li>
-      <li>事業会社経理財務でキャリアアップを目指す士業有資格者</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">サポート内容の概要（公開情報）</h2>
-    <ul class="list-disc pl-5 mb-4 space-y-1">
-      <li>士業業界出身者によるキャリア相談</li>
-      <li>会計事務所・税理士法人・事業会社などの非公開求人紹介</li>
-      <li>書類添削・面接対策</li>
-      <li>給与・待遇条件の交渉サポート</li>
-      <li>士業特有のキャリアパス（独立・パートナー昇進等）の相談</li>
-    </ul>
-    <p class="text-xs text-gray-600 mb-6">※詳細なサポート範囲は公式サイトでご確認ください。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">士業転職市場の特徴</h2>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">1. 業界・職種が多岐にわたる</h3>
-    <p class="mb-3">
-      会計士・税理士の転職先は、会計事務所・税理士法人だけでなく、Big4監査法人、コンサルティングファーム（FAS等）、
-      事業会社経理財務、ベンチャーCFO、独立支援、業界特化型ファンドなど多岐にわたります。
-      業界知識のあるエージェントを利用することで、自分のキャリア志向に合わせた紹介を受けやすくなります。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">2. 繁忙期・閑散期を考慮した転職活動</h3>
-    <p class="mb-3">
-      会計業界には監査・税務の繁忙期があり、現職の業務負荷が高い時期は転職活動が難しい傾向があります。
-      在職中でも応募できるエージェントを利用し、繁忙期前後にピークを合わせた活動が一般的です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">3. 30-50代の士業キャリアパス</h3>
-    <p class="mb-3">
-      30代は事業会社・FAS・コンサルへの転換、40代はマネージャー・パートナー昇進、CFO候補、
-      50代は独立・顧問・経営参画など、年代により求人傾向が変化します。
-      公式サイトの実績ページで自分の年代・経験に近い事例が紹介されているか確認することが推奨されます。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">利用の流れ（一般的なエージェント利用フロー）</h2>
-    <ol class="list-decimal pl-5 mb-4 space-y-1">
-      <li>公式サイトから無料登録（保有資格・経験を入力）</li>
-      <li>キャリアアドバイザーとの初回面談</li>
-      <li>志望業界・キャリアパスの確認</li>
-      <li>非公開求人の紹介</li>
-      <li>応募・選考・内定</li>
-      <li>条件交渉・入社</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 科目合格者でも利用できますか？</h3>
-    <p class="mb-3">
-      公式サイトでは科目合格者向けの求人も扱う旨が案内されている場合があります。
-      具体的な対応範囲は公式サイトでご確認ください。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 利用料金はかかりますか？</h3>
-    <p class="mb-3">
-      転職エージェントの一般的な慣行として、求職者側の利用料は無料の場合が多いです。
-      正確な条件は公式サイトの利用規約をご確認ください。
-    </p>
-
-    <h3 class="text-lg font-bold mt-6 mb-2">Q. 独立志望の方も相談できますか？</h3>
-    <p class="mb-3">
-      士業特化エージェントの中には、独立準備段階のキャリア相談に対応する場合があります。
-      具体的な相談範囲は公式サイトでご確認ください。
-    </p>
-
-    <!-- ツインプロ専用バナー (素材 003 高解像度・MyVision プログラム s00000024757002・CTR 5%+ / EPC 475 / 確定率 80.95%) -->
-    <div class="my-8 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_twin-pro_middle"
-         target="_blank" rel="nofollow"
-         data-cta="ツインプロ公式" data-material="banner_003_300x250" data-page-slug="twin-pro">
-        <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント"
-             src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
-             loading="lazy" style="max-width:100%;height:auto;" />
-      </a>
-      <img border="0" width="1" height="1"
-           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
-           alt="" loading="lazy" style="position:absolute;left:-9999px" />
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_twin-pro_middle_text"
-         target="_blank" rel="nofollow"
-         class="block mt-2 text-sm text-blue-700 underline">
-        会計士・税理士特化の転職エージェントで無料キャリア面談（PR）
-      </a>
-      <p class="text-xs text-gray-700 mt-2 text-center">
-        PR / 公開情報サイト (coreda.jp) 経由でツインプロ公式へ / 無料キャリア面談 / 在職中相談可 / 退会自由
-      </p>
-    </div>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">公式サイトで詳細を確認する</h2>
-    <p class="mb-3">
-      士業特化エージェントの最新求人・サポート内容は、ツインプロ公式サイトの最新情報をご確認ください。
-      無料登録後にキャリアアドバイザーとの面談に進む流れが一般的です。
-    </p>
-
-    <div class="bg-yellow-50 border border-yellow-300 rounded p-4 my-6 text-center">
-      <p class="text-sm text-gray-700 mb-3">
-        ※下記リンクはアフィリエイト広告です（PR）
-      </p>
-      <p class="text-xs text-gray-600">
-        ツインプロ 公式サイトで詳細を確認するには、本サイト経由のリンクからアクセスできます。
-        実際の登録・面談・求人紹介はすべて ツインプロ 公式が行います。
-      </p>
-      <p class="text-xs text-gray-600 mt-3">
-        ※本セクションのアフィリエイトリンクは、A8.net 提携承認後に有効化されます。
-      </p>
-    </div>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">関連ページ・他のエージェントを比較</h2>
-    <section aria-label="次のアクション (Round Y EXT2 [nIJUIzG8Vg])" class="mb-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a href="/" class="block bg-blue-600 text-white p-5 rounded-lg shadow hover:bg-blue-700 transition text-center">
-          <div class="text-2xl mb-2" aria-hidden="true">📊</div>
-          <h3 class="font-bold text-base mb-1">業種別比較ガイド (Hub)</h3>
-          <p class="text-xs opacity-90">30-50代向け転職エージェント業種別整理</p>
-          <span class="inline-block mt-2 text-xs font-semibold underline">Hub に戻る →</span>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=prbadge_twin-pro`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>会計士・税理士特化の転職エージェント・無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <a href="/myvision/" class="block bg-white border-2 border-blue-600 text-blue-700 p-5 rounded-lg shadow hover:bg-blue-50 transition text-center">
-          <div class="text-2xl mb-2" aria-hidden="true">🔗</div>
-          <h3 class="font-bold text-base mb-1">MyVision</h3>
-          <p class="text-xs">コンサル業界専門エージェント</p>
-          <span class="inline-block mt-2 text-xs font-semibold underline">解説を見る →</span>
-        </a>
-        <a href="/techgo/" class="block bg-gray-50 border border-gray-300 text-gray-800 p-5 rounded-lg shadow hover:bg-gray-100 transition text-center">
-          <div class="text-2xl mb-2" aria-hidden="true">💼</div>
-          <h3 class="font-bold text-base mb-1">TechGo</h3>
-          <p class="text-xs">IT エンジニアハイクラス層向け</p>
-          <span class="inline-block mt-2 text-xs font-semibold underline">解説を見る →</span>
+        <p class="btn-cta-sub">&#8251; 本ページはアフィリエイト広告を含みます。本サイト経由でリンク先 ツインプロ 公式へお申込みが成立した場合、運営者は提携先 (A8.net) より報酬を受け取ります。本サイトは ツインプロ 公式サイトではありません。順位・推奨は公開情報・公式の専門性表記に基づくものであり、報酬額により内容を変えることはしていません。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>最終確認日</b> 2026-04-25</span>
+        <span><b>出典</b> ツインプロ 公式サイト・公開情報</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ツインプロの特徴・主な対象者・サポート内容（公開情報）</h2>
+      <p class="section-lede">ツインプロは公認会計士・税理士など士業有資格者向けに特化した転職エージェントとして公式サイトで案内されています。士業資格を活かせる多様な転職先を扱います。</p>
+      <div class="card-grid">
+        <div class="card"><h3>主な対象者（公式サイト記載）</h3><p>公認会計士（USCPA含む有資格者・科目合格者）<br />税理士・税理士科目合格者<br />監査法人在籍の会計士<br />会計事務所・税理士法人在籍者<br />事業会社経理財務でキャリアアップを目指す士業有資格者</p></div>
+        <div class="card"><h3>サポート内容の概要（公開情報）</h3><p>士業業界出身者によるキャリア相談<br />会計事務所・税理士法人・事業会社などの非公開求人紹介<br />書類添削・面接対策<br />給与・待遇条件の交渉サポート<br />士業特有のキャリアパス（独立・パートナー昇進等）の相談<br /><span style="font-size:13px;color:var(--c-text-sub);">※詳細なサポート範囲は公式サイトでご確認ください。</span></p></div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>ツインプロ公式で会計士・税理士特化の無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <p class="text-xs text-gray-500 mt-8">
-      ※本ページの内容は2026-04-25時点の公開情報をもとにしています。最新の対象範囲・サポート内容は ツインプロ 公式サイトで必ずご確認ください。
-    </p>
-  </main>
-</Layout>
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">士業転職市場の特徴</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特徴1</span><h4>業界・職種が多岐にわたる</h4><p>会計士・税理士の転職先は、会計事務所・税理士法人だけでなく、Big4監査法人、コンサルティングファーム（FAS等）、事業会社経理財務、ベンチャーCFO、独立支援、業界特化型ファンドなど多岐にわたります。業界知識のあるエージェントを利用することで、自分のキャリア志向に合わせた紹介を受けやすくなります。</p></article>
+        <article class="branch"><span class="tag">特徴2</span><h4>繁忙期・閑散期を考慮した転職活動</h4><p>会計業界には監査・税務の繁忙期があり、現職の業務負荷が高い時期は転職活動が難しい傾向があります。在職中でも応募できるエージェントを利用し、繁忙期前後にピークを合わせた活動が一般的です。</p></article>
+        <article class="branch"><span class="tag">特徴3</span><h4>30-50代の士業キャリアパス</h4><p>30代は事業会社・FAS・コンサルへの転換、40代はマネージャー・パートナー昇進、CFO候補、50代は独立・顧問・経営参画など、年代により求人傾向が変化します。公式サイトの実績ページで自分の年代・経験に近い事例が紹介されているか確認することが推奨されます。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_twin-pro_middle"
+           target="_blank" rel="nofollow"
+           data-cta="ツインプロ公式" data-material="banner_003_300x250" data-page-slug="twin-pro">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント"
+               src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
+               loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1"
+             src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
+             alt="" loading="lazy" style="position:absolute;left:-9999px" />
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_twin-pro_middle_text"
+           target="_blank" rel="nofollow"
+           style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
+          会計士・税理士特化の転職エージェントで無料キャリア面談（PR）
+        </a>
+        <p style="font-size:12px;color:var(--c-text-sub,#6b7280);margin-top:8px;">
+          PR / 公開情報サイト (coreda.jp) 経由でツインプロ公式へ / 無料キャリア面談 / 在職中相談可 / 退会自由
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">利用の流れ（一般的なエージェント利用フロー）</h2>
+      <div class="card-grid">
+        <div class="card"><h3>利用の流れ 6 ステップ</h3><p><strong>STEP 1</strong> 公式サイトから無料登録（保有資格・経験を入力）<br /><strong>STEP 2</strong> キャリアアドバイザーとの初回面談<br /><strong>STEP 3</strong> 志望業界・キャリアパスの確認<br /><strong>STEP 4</strong> 非公開求人の紹介<br /><strong>STEP 5</strong> 応募・選考・内定<br /><strong>STEP 6</strong> 条件交渉・入社</p></div>
+        <div class="card"><h3>公式サイトで詳細を確認する</h3><p>士業特化エージェントの最新求人・サポート内容は、ツインプロ公式サイトの最新情報をご確認ください。無料登録後にキャリアアドバイザーとの面談に進む流れが一般的です。実際の登録・面談・求人紹介はすべて ツインプロ 公式が行います。</p></div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>ツインプロ公式で無料キャリア面談に進む</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問・関連ページ・編集ポリシー</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div set:html={item.a} /></details>
+        ))}
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>関連ページ・他のエージェントを比較</h3><p><a href="/">業種別比較ガイド (Hub) — 30-50代向け転職エージェント業種別整理</a><br /><a href="/myvision/">MyVision — コンサル業界専門エージェント</a><br /><a href="/techgo/">TechGo — IT エンジニアハイクラス層向け</a></p></div>
+        <div class="card"><h3>編集ポリシー・出典</h3><p>本ページの内容は2026-04-25時点の公開情報をもとにしています。最新の対象範囲・サポート内容は ツインプロ 公式サイトで必ずご確認ください。出典: ツインプロ 公式サイト・公開情報。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p></div>
+      </div>
+      <p class="compare-note">&#8251; 本ページはアフィリエイト広告（PR）を含みます。本サイトは各転職エージェント公式サイトではなく、公開情報を整理した解説ページです。順位・推奨は公開情報・公式の専門性表記に基づくものであり、報酬額により内容を変えることはしていません。</p>
+    </div>
+  </section>
+</RichLayout>
