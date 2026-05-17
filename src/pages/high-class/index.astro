@@ -1,40 +1,36 @@
 ---
 /**
- * ハイクラス転職 サービス比較 LP (★326 DRY mensetsu 流用 + 本格書換)
- *
- * sv: LP-CANDIDATES Tier S Codex 84.0 / NEW-23 [x0b5HWxE2f] 2026-05-11 本格書換
- * ★441-EXT 10 必須要素全保持 (本日 7 LP 80+ 達成パターン適用)
- * 流用元 sed 書換版 (5 軸 71.1・Cxc 38 NG) → 完全書換で ★382 80+ 目標
+ * ハイクラス転職 サービス比較 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv: LP-CANDIDATES Tier S Codex 84.0 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 4種 (Article/Breadcrumb/FAQPage/ItemList) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-highclass-before-rich/
  */
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = 'ハイクラス転職 サービス比較｜年収 600 万円以上の経営層・管理職向け 3 サービス + 転職 5 ステップ (2026年版・PR)';
 const description = '年収 600 万円以上のハイクラス転職を検討中の経営層・管理職の方へ。ハイクラス特化エージェント 3 サービス (リクルートダイレクトスカウト・JAC Recruitment・ビズリーチ) の特徴比較・転職 5 ステップ・スカウト活用法・年収交渉のコツを公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'ハイクラス転職 サービス比較' },
+];
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  'headline': title,
-  'description': description,
-  'datePublished': '2026-05-11',
-  'dateModified': '2026-05-11',
+  '@context': 'https://schema.org', '@type': 'Article', 'headline': title, 'description': description,
+  'datePublished': '2026-05-11', 'dateModified': '2026-05-11',
   'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
   'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
-  'articleSection': 'ハイクラス転職',
-  'about': '年収 600 万円以上のハイクラス転職サービスと進め方',
+  'articleSection': 'ハイクラス転職', 'about': '年収 600 万円以上のハイクラス転職サービスと進め方',
 };
-
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   'itemListElement': [
     { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
     { '@type': 'ListItem', 'position': 2, 'name': 'ハイクラス転職 サービス比較', 'item': 'https://tenshoku-compare-info.pages.dev/high-class/' },
   ],
 };
-
 const faq = [
   { q: 'ハイクラス転職とは何ですか?', a: '一般的に年収 600 万円以上・経営層/管理職/専門職向けの転職を指すとされています。エージェントによっては「年収 800 万円以上」「役職経験者」等の独自基準もありますが、年収 600 万円が業界一般的な目安とされています。' },
   { q: '一般転職との違いは?', a: '一般的に ① 求人の非公開比率が高い (80%+ が非公開) ② スカウト型 (登録待機) が主流 ③ 役職/年収交渉が前提 ④ 業界特化エージェントが多い、の 4 点が違いとされています。一般転職サイトとは別軸で活用することが推奨されます。' },
@@ -45,253 +41,219 @@ const faq = [
   { q: '年収交渉のコツは?', a: '一般的に ① 現年収 + 業界相場の事前調査 ② 希望年収の根拠 (実績/市場価値) 準備 ③ エージェント経由での交渉依頼 (直接交渉を避ける) ④ 内定後の最終交渉タイミング が推奨されます。' },
   { q: '転職活動はどのくらいの期間が目安ですか?', a: '一般的にハイクラス転職は 3-6 ヶ月が標準とされています。スカウト待機期間 1-2 ヶ月 + 面談/面接 2-3 ヶ月 + 退職交渉 1 ヶ月の合計が目安です。早期転職の場合は 1-2 ヶ月で完了するケースもあるとされています。' },
 ];
-
 const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  'mainEntity': faq.map(f => ({
-    '@type': 'Question', 'name': f.q,
-    'acceptedAnswer': { '@type': 'Answer', 'text': f.a.replace(/<[^>]+>/g, '') },
-  })),
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
 };
-
-// ★441-EXT 強化: ItemList + Service 構造化 (3 ハイクラス特化エージェント・A3 改善期待)
 const itemListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
+  '@context': 'https://schema.org', '@type': 'ItemList',
   'name': 'ハイクラス転職特化エージェント 3 サービス比較',
   'description': '年収 600 万円以上の経営層・管理職向けハイクラス特化エージェント (公開情報整理)',
   'itemListOrder': 'https://schema.org/ItemListUnordered',
   'itemListElement': [
-    {
-      '@type': 'ListItem',
-      'position': 1,
-      'item': {
-        '@type': 'Service',
-        'name': 'リクルートダイレクトスカウト',
-        'serviceType': 'スカウト型ハイクラス転職エージェント',
-        'description': '大手リクルート運営・求人 24 万件以上・ヘッドハンター 4,800 名以上 (公開情報)',
-        'provider': { '@type': 'Organization', 'name': '株式会社リクルート' },
-        'audience': { '@type': 'Audience', 'audienceType': '年収 600-2,000 万円のビジネスパーソン' },
-      },
-    },
-    {
-      '@type': 'ListItem',
-      'position': 2,
-      'item': {
-        '@type': 'Service',
-        'name': 'JAC Recruitment',
-        'serviceType': '両面型ハイクラス転職エージェント',
-        'description': '管理職/専門職特化・両面型 (1 人のコンサルタントが企業と求職者双方を担当)',
-        'provider': { '@type': 'Organization', 'name': '株式会社ジェイ エイ シー リクルートメント' },
-        'audience': { '@type': 'Audience', 'audienceType': '年収 600-2,000 万円の管理職・専門職' },
-      },
-    },
-    {
-      '@type': 'ListItem',
-      'position': 3,
-      'item': {
-        '@type': 'Service',
-        'name': 'ビズリーチ',
-        'serviceType': 'スカウト型ハイクラス転職プラットフォーム',
-        'description': '経営層特化・即戦力ヘッドハンター直接スカウト・有料プラン (プレミアム) で全機能利用可',
-        'provider': { '@type': 'Organization', 'name': '株式会社ビズリーチ' },
-        'audience': { '@type': 'Audience', 'audienceType': '年収 750-2,000 万円の経営層・管理職' },
-      },
-    },
+    { '@type': 'ListItem', 'position': 1, 'item': { '@type': 'Service', 'name': 'リクルートダイレクトスカウト', 'serviceType': 'スカウト型ハイクラス転職エージェント', 'description': '大手リクルート運営・求人 24 万件以上・ヘッドハンター 4,800 名以上 (公開情報)', 'provider': { '@type': 'Organization', 'name': '株式会社リクルート' }, 'audience': { '@type': 'Audience', 'audienceType': '年収 600-2,000 万円のビジネスパーソン' } } },
+    { '@type': 'ListItem', 'position': 2, 'item': { '@type': 'Service', 'name': 'JAC Recruitment', 'serviceType': '両面型ハイクラス転職エージェント', 'description': '管理職/専門職特化・両面型 (1 人のコンサルタントが企業と求職者双方を担当)', 'provider': { '@type': 'Organization', 'name': '株式会社ジェイ エイ シー リクルートメント' }, 'audience': { '@type': 'Audience', 'audienceType': '年収 600-2,000 万円の管理職・専門職' } } },
+    { '@type': 'ListItem', 'position': 3, 'item': { '@type': 'Service', 'name': 'ビズリーチ', 'serviceType': 'スカウト型ハイクラス転職プラットフォーム', 'description': '経営層特化・即戦力ヘッドハンター直接スカウト・有料プラン (プレミアム) で全機能利用可', 'provider': { '@type': 'Organization', 'name': '株式会社ビズリーチ' }, 'audience': { '@type': 'Audience', 'audienceType': '年収 750-2,000 万円の経営層・管理職' } } },
   ],
 };
-
-const services = [
-  {
-    name: 'リクルートダイレクトスカウト',
-    type: 'スカウト型',
-    target: '年収 600-2,000 万円',
-    feature: '大手リクルート運営・求人 24 万件以上・ヘッドハンター 4,800 名以上 (公開情報)',
-  },
-  {
-    name: 'JAC Recruitment',
-    type: '両面型',
-    target: '年収 600-2,000 万円',
-    feature: '管理職/専門職特化・両面型 (1 人のコンサルタントが企業と求職者双方を担当)',
-  },
-  {
-    name: 'ビズリーチ',
-    type: 'スカウト型 (有料プラン併設)',
-    target: '年収 750-2,000 万円',
-    feature: '経営層特化・即戦力ヘッドハンター直接スカウト・有料プラン (プレミアム) で全機能利用可',
-  },
-];
 ---
 
-<Layout title={title} description={description}>
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="high-class" />
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+  </Fragment>
 
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; ハイクラス転職 サービス比較
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      ハイクラス転職 サービス比較｜年収 600 万円以上の経営層・管理職向け 3 サービス + 転職 5 ステップ
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトはエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職成功保証・効果保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">ハイクラス転職 / 年収 600 万円以上</span>
+      <h1 id="fv-h1">
+        <span class="accent">ハイクラス転職</span>サービス比較<br />
+        経営層・管理職向け 3 サービス + 転職 5 ステップ
+      </h1>
+      <p class="lede">
+        ハイクラス転職 (年収 600 万円以上) は「スカウト型」3 サービス (リクルートダイレクトスカウト・JAC Recruitment・ビズリーチ) の複数並行登録が推奨されます。
+        一般転職サイトとは別軸で、非公開求人 80% + ヘッドハンター直接スカウトで進めるのが効率的とされています。
+      </p>
+      <ul class="fv-bullets">
+        <li>ハイクラス特化 3 サービスの特徴比較</li>
+        <li>転職 5 ステップ進め方</li>
+        <li>スカウト活用 4 ポイント + 年収交渉 4 ステップ</li>
+        <li>厚労省・JILPT・総務省・国民生活センター 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-11</span>
+        <span><b>最終更新</b> 2026-05-11</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-11 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: ハイクラス転職 (年収 600 万円以上) は「スカウト型」3 サービス (リクルートダイレクトスカウト・JAC Recruitment・ビズリーチ) の **複数並行登録**が推奨されます。一般転職サイトとは別軸で、非公開求人 80% + ヘッドハンター直接スカウトで進めるのが効率的とされています。</p>
-      <p class="mt-2">本記事ではハイクラス特化 3 サービスの特徴比較・転職 5 ステップ・スカウト活用法・年収交渉のコツを整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="high-class" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. ハイクラス転職とは (年収 600 万円以上の経営層・管理職向け)</h2>
-    <p class="mb-3 text-sm">
-      ハイクラス転職は一般的に <strong>年収 600 万円以上 + 経営層/管理職/専門職</strong> 向けの転職を指すとされています。一般転職と異なり ① 求人の非公開比率が 80% 以上 ② スカウト型 (登録待機) が主流 ③ 役職/年収交渉が前提 ④ 業界特化エージェントが多い、という特徴があるとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. ハイクラス転職と一般転職の 4 つの違い</h3>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>① 非公開求人比率</strong>: 一般 30-50% → ハイクラス 80%+ (経営層ポジションは公開不可が多い)</li>
-      <li><strong>② スカウト型主流</strong>: 一般は応募型 → ハイクラスはヘッドハンター直接スカウト</li>
-      <li><strong>③ 役職/年収交渉が前提</strong>: 求人票が概算範囲のみ・内定後の個別交渉</li>
-      <li><strong>④ 業界特化エージェント</strong>: コンサル/IT/金融/メーカー等の特化型が多い</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. ハイクラス特化 3 サービス比較</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-3 py-2 text-left">サービス</th>
-            <th class="border px-3 py-2 text-left">タイプ</th>
-            <th class="border px-3 py-2 text-left">想定年収</th>
-            <th class="border px-3 py-2 text-left">特徴 (公開情報)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {services.map((s) => (
-            <tr>
-              <td class="border px-3 py-2 font-semibold whitespace-nowrap">{s.name}</td>
-              <td class="border px-3 py-2">{s.type}</td>
-              <td class="border px-3 py-2 whitespace-nowrap">{s.target}</td>
-              <td class="border px-3 py-2">{s.feature}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+  <!-- ============ SECTION 01 ハイクラス転職とは + 4違い ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ハイクラス転職とは — 一般転職との 4 つの違い</h2>
+      <p class="section-lede">
+        ハイクラス転職は一般的に年収 600 万円以上 + 経営層/管理職/専門職向けの転職を指すとされています。一般転職と異なる 4 つの特徴があります。
+      </p>
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">① 非公開求人比率</span>
+          <h4>一般 30-50% → ハイクラス 80%+</h4>
+          <p>経営層ポジションは公開不可が多く、非公開求人へのアクセスが転職成否を左右します。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">② スカウト型主流</span>
+          <h4>応募型ではなく直接スカウト</h4>
+          <p>一般は応募型 → ハイクラスはヘッドハンター直接スカウトが主流。登録待機型の活用が前提。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">③ 役職/年収交渉が前提</span>
+          <h4>求人票は概算範囲のみ</h4>
+          <p>求人票が概算範囲のみで、内定後の個別交渉が前提となるレンジ。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">④ 業界特化エージェント</span>
+          <h4>コンサル/IT/金融/メーカー特化</h4>
+          <p>業界特化型エージェントが多く、専門領域での深い案件理解が強みになります。</p>
+        </article>
+      </div>
     </div>
-    <p class="text-xs text-gray-600 mb-6">※サービス内容・求人数は公開情報の整理です。最新情報は各エージェント公式サイトでご確認ください。複数登録で求人カバレッジ最大化が推奨されます。</p>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. ハイクラス転職 5 ステップ進め方</h2>
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>STEP 1: 年収査定 + 市場価値把握</strong> (1-2 週間)・ミイダス等の市場価値診断で現在の市場価値を把握</li>
-      <li><strong>STEP 2: ハイクラス特化エージェント 3 社並行登録</strong> (1 日)・職務経歴書を充実化 + 登録</li>
-      <li><strong>STEP 3: スカウト受信 + 面談</strong> (1-2 ヶ月)・ヘッドハンター複数と面談・希望条件を擦り合わせ</li>
-      <li><strong>STEP 4: 求人選定 + 面接</strong> (2-3 ヶ月)・3-5 社に絞り込んで面接実施</li>
-      <li><strong>STEP 5: 内定 + 年収交渉 + 退職交渉</strong> (1 ヶ月)・エージェント経由で年収交渉・退職代行検討</li>
-    </ol>
-    <p class="text-xs text-gray-600 mb-6">※全体期間は 3-6 ヶ月が標準とされています。早期転職の場合は 1-2 ヶ月で完了するケースもあるとされています。</p>
-
-    <BannerAB pageSlug="high-class" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. スカウト活用法 (受信率最大化の 4 ポイント)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>① 職務経歴書の充実</strong>: 実績数値必須 (売上達成率/規模/期間)・職務内容の具体化</li>
-      <li><strong>② スキル/資格の最新化</strong>: 業界標準資格 (MBA/CFP/PMP 等)・最新スキル (DX/AI/データ分析)</li>
-      <li><strong>③ 希望年収の妥当性確認</strong>: 業界相場の事前調査・現年収 + 10-20% が一般的とされる</li>
-      <li><strong>④ 複数サービス並行登録</strong>: 3 サービス以上で求人カバレッジ最大化</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. 年収交渉のコツ (4 ステップ)</h2>
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>事前準備</strong>: 業界相場 + 現年収 + 希望年収の根拠 (実績/市場価値) を整理</li>
-      <li><strong>エージェント経由</strong>: 直接交渉を避け、エージェントに交渉を依頼する</li>
-      <li><strong>タイミング</strong>: 内定後の最終交渉が最適 (面接段階での金額提示は避ける)</li>
-      <li><strong>柔軟性</strong>: 年収のみでなく賞与/ストックオプション/リモート等の条件も交渉対象</li>
-    </ol>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. やりがちな NG パターン (5 例)</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">#</th>
-            <th class="border px-2 py-2 text-left">NG パターン</th>
-            <th class="border px-2 py-2 text-left">改善策</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">一般転職サイトのみで活動</td><td class="border px-2 py-2">ハイクラス特化エージェント 3 社並行登録</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">職務経歴書に数値実績なし</td><td class="border px-2 py-2">売上達成率/規模/期間を必ず数値化</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">スカウト即決で他社比較せず</td><td class="border px-2 py-2">3-5 社の面接で比較してから判断</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">面接段階で年収交渉</td><td class="border px-2 py-2">内定後の最終交渉でエージェント経由</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">退職交渉を先に進める</td><td class="border px-2 py-2">内定確定後に退職交渉開始 (順序遵守)</td></tr>
-        </tbody>
-      </table>
+  <!-- ============ SECTION 02 3サービス比較 ============ -->
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ハイクラス特化 3 サービス比較</h2>
+      <p class="section-lede">代表的なハイクラス特化エージェント 3 サービス。複数並行登録で求人カバレッジ最大化が推奨されます。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ハイクラス特化 3 サービス比較">
+          <thead><tr><th>サービス</th><th>タイプ</th><th>想定年収</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>リクルートダイレクトスカウト</td><td>スカウト型</td><td>年収 600-2,000 万円</td><td>大手リクルート運営・求人 24 万件以上・ヘッドハンター 4,800 名以上 (公開情報)</td></tr>
+            <tr><td>JAC Recruitment</td><td>両面型</td><td>年収 600-2,000 万円</td><td>管理職/専門職特化・両面型 (1 人のコンサルタントが企業と求職者双方を担当)</td></tr>
+            <tr><td>ビズリーチ</td><td>スカウト型 (有料プラン併設)</td><td>年収 750-2,000 万円</td><td>経営層特化・即戦力ヘッドハンター直接スカウト・有料プラン (プレミアム) で全機能利用可</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ サービス内容・求人数は公開情報の整理です。最新情報は各エージェント公式サイトでご確認ください。複数登録で求人カバレッジ最大化が推奨されます。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>サービス比較を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. よくある質問 (FAQ)</h2>
-    {faq.map((item) => (
-      <>
-        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
-        <p class="mb-3 text-sm" set:html={item.a} />
-      </>
-    ))}
+  <!-- ============ SECTION 03 5ステップ + スカウト活用 + 年収交渉 ============ -->
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">転職 5 ステップ・スカウト活用・年収交渉</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>ハイクラス転職 5 ステップ</h3>
+          <p><strong>STEP 1</strong> 年収査定 + 市場価値把握 (1-2 週間)<br /><strong>STEP 2</strong> 特化エージェント 3 社並行登録 (1 日)<br /><strong>STEP 3</strong> スカウト受信 + ヘッドハンター面談 (1-2 ヶ月)<br /><strong>STEP 4</strong> 求人選定 + 面接 3-5 社 (2-3 ヶ月)<br /><strong>STEP 5</strong> 内定 + 年収交渉 + 退職交渉 (1 ヶ月)。全体 3-6 ヶ月が標準。</p>
+        </div>
+        <div class="card">
+          <h3>スカウト活用 4 ポイント</h3>
+          <p><strong>① 職務経歴書の充実</strong>: 実績数値必須 (売上達成率/規模/期間)<br /><strong>② スキル/資格の最新化</strong>: MBA/CFP/PMP・DX/AI/データ分析<br /><strong>③ 希望年収の妥当性確認</strong>: 現年収 + 10-20% が一般的<br /><strong>④ 複数サービス並行登録</strong>: 3 サービス以上でカバレッジ最大化</p>
+        </div>
+        <div class="card">
+          <h3>年収交渉 4 ステップ</h3>
+          <p><strong>① 事前準備</strong>: 業界相場 + 現年収 + 希望年収の根拠を整理<br /><strong>② エージェント経由</strong>: 直接交渉を避け交渉を依頼<br /><strong>③ タイミング</strong>: 内定後の最終交渉が最適<br /><strong>④ 柔軟性</strong>: 賞与/ストックオプション/リモート等も交渉対象</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        ハイクラス転職 (年収 600 万円以上) は ① ハイクラス特化エージェント 3 サービス並行登録 ② 5 ステップ進め方 (年収査定→登録→スカウト→面接→交渉) ③ スカウト活用 4 ポイント ④ 年収交渉 4 ステップ の組み合わせで進めることが推奨されます。
-      </p>
-      <p class="mb-3">
-        <strong>3 サービス特化要素</strong>: ① <strong>リクルートダイレクトスカウト</strong> → 大手・求人 24 万件以上 ② <strong>JAC Recruitment</strong> → 両面型・専門職特化 ③ <strong>ビズリーチ</strong> → 経営層特化。複数並行登録で求人カバレッジ最大化が転職成功の鍵となります。
-      </p>
-      <p class="mb-3">
-        <strong>転職活動 3 ステップ</strong>: <strong>STEP 1</strong> 市場価値診断 + ハイクラス 3 サービス並行登録 → <strong>STEP 2</strong> ヘッドハンター複数面談で希望条件擦り合わせ → <strong>STEP 3</strong> 3-5 社面接で比較 → <a href="/myvision/" class="underline">転職エージェント比較</a> も参考に最終判断。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※自己分析の進め方は <a href="/jiko-bunseki/" class="underline">転職 自己分析ページ</a> ・面接対策は <a href="/mensetsu/" class="underline">転職面接ページ</a> もあわせてご参照ください。本記事は転職成功保証・効果保証ではなく、特定エージェントを推奨するものでもありません。
-      </p>
-    </section>
+  <!-- ============ SECTION 04 NGパターン ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">やりがちな NG パターン 5 例</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="NG パターンと改善策">
+          <thead><tr><th>#</th><th>NG パターン</th><th>改善策</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>一般転職サイトのみで活動</td><td>ハイクラス特化エージェント 3 社並行登録</td></tr>
+            <tr><td>2</td><td>職務経歴書に数値実績なし</td><td>売上達成率/規模/期間を必ず数値化</td></tr>
+            <tr><td>3</td><td>スカウト即決で他社比較せず</td><td>3-5 社の面接で比較してから判断</td></tr>
+            <tr><td>4</td><td>面接段階で年収交渉</td><td>内定後の最終交渉でエージェント経由</td></tr>
+            <tr><td>5</td><td>退職交渉を先に進める</td><td>内定確定後に退職交渉開始 (順序遵守)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断はエージェント相談を推奨)</h3>
+        <div class="row"><b>3 サービス並行</b><span>リクルートダイレクトスカウト (大手 24 万件+) / JAC (両面型・専門職) / ビズリーチ (経営層)</span></div>
+        <div class="row"><b>5 ステップ</b><span>年収査定→登録→スカウト→面接→交渉 (全体 3-6 ヶ月)</span></div>
+        <div class="row"><b>スカウト活用</b><span>職務経歴書数値化 + スキル最新化 + 妥当年収 + 複数並行</span></div>
+        <div class="row"><b>年収交渉</b><span>事前準備 + エージェント経由 + 内定後タイミング + 条件柔軟性</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。35 歳定年説は形骸化しており 40-50 代でもマネジメント経験・専門性で転職成功するケースが増加傾向とされています。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・効果保証ではなく、特定エージェントを推奨するものでもありません。具体的な転職サポートは各エージェントの面談サービス等を活用ください。最終確認日: 2026-05-11。</p>
+      </div>
+    </div>
+  </section>
 
-    <BannerAB pageSlug="high-class" position="footer" />
+  <!-- ============ SECTION 05 FAQ + 出典 + 関連 ============ -->
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・出典・関連記事</h2>
 
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div>{item.a}</div></details>
+        ))}
+      </div>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」 ・JILPT (労働政策研究・研修機構) ・国民生活センター (転職・人材サービス関連消費者相談情報) ・総務省統計局「労働力調査」 ・各ハイクラス転職エージェント公式サイト</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界統計) ・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (ハイクラス転職市場動向変化時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (ハイクラス転職関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (公的機関 + 業界エージェント公式の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 成功保証ではない注記)</li>
-    </ul>
+      <div class="card-grid">
+        <div class="card">
+          <h3>関連 Spoke LP</h3>
+          <p>
+            <a href="/bizreach-hyouban/">ビズリーチ 評判ガイド</a> /
+            <a href="/engineer-1000man/">エンジニア 年収 1000 万円への道</a> /
+            <a href="/jiko-bunseki/">転職 自己分析</a> /
+            <a href="/mensetsu/">転職面接ガイド</a> /
+            <a href="/nenshu-up/">転職 年収アップ完全ガイド</a> /
+            <a href="/techgo/">TechGo 紹介</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>出典・参考情報 (公的機関・公開情報)</h3>
+          <p>
+            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (職業情報提供サイト) /
+            <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> (ハイクラス転職統計) /
+            <a href="https://www.stat.go.jp/" target="_blank" rel="noopener">総務省統計局</a> (労働力調査) /
+            <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> (消費者相談情報・★435) /
+            <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> (公共職業紹介)
+          </p>
+        </div>
+      </div>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・職業情報提供サイト</li>
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・ハイクラス転職統計</li>
-      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・年収/役職別データ</li>
-      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 転職・人材サービス関連の消費者相談情報・契約トラブル参考 (★435 体現)</li>
-      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク (厚生労働省)</a> — 公共職業紹介・職業相談</li>
-      <li>各ハイクラス転職エージェント公式サイト — 求人数・スカウト機能・特徴の一次情報</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のハイクラス転職市場動向は各エージェント公式サイトでご確認ください。本記事は転職成功保証・効果保証ではなく、特定エージェントを推奨するものでもありません。具体的な転職サポートは各エージェントの面談サービス等を活用し、自分の状況に応じた対策を行うことが推奨されます。
-    </p>
-  </main>
-</Layout>
+      <p class="compare-note">※ 本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のハイクラス転職市場動向は各エージェント公式サイトでご確認ください。本記事は転職成功保証・効果保証ではなく、特定エージェントを推奨するものでもありません。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+    </div>
+  </section>
+</RichLayout>
