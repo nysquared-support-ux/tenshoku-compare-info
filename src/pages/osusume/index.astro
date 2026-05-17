@@ -1,24 +1,29 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+/**
+ * 転職エージェント おすすめ Hub LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * articleSchema を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-osusume-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = '転職エージェント おすすめ｜失敗しない選び方 5 基準と 4 社比較・利用の流れ完全ガイド (2026年版・PR)';
 const description = '転職エージェントを比較検討中の方へ。総合型・業界特化型・ハイクラス型の違い、失敗しない 5 つの選び方、料金・サポート内容を中立的に整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '転職エージェント おすすめ' },
+];
 
 const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  'headline': title,
-  'description': description,
-  'datePublished': '2026-05-08',
-  'dateModified': '2026-05-08',
+  '@context': 'https://schema.org', '@type': 'Article', 'headline': title, 'description': description,
+  'datePublished': '2026-05-08', 'dateModified': '2026-05-08',
   'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
   'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
-  'articleSection': '転職エージェント比較',
-  'about': '転職エージェント おすすめ 4 社比較',
+  'articleSection': '転職エージェント比較', 'about': '転職エージェント おすすめ 4 社比較',
 };
-
 const faq = [
   { q: '転職エージェントはどんな人におすすめですか?', a: '転職活動が初めての方・現職と並行して効率的に転職活動したい方・年収アップや特定業界への転職を狙う方・職務経歴書の書き方や面接対策に不安がある方などが主な対象とされています。' },
   { q: '総合型・業界特化型・ハイクラス型で何が違いますか?', a: '総合型は求人数が多く幅広い業界をカバー、業界特化型はコンサル/IT/医療等の専門業界に深い知見、ハイクラス型は年収 800 万円以上のエグゼクティブ層に特化、とされています。' },
@@ -27,230 +32,144 @@ const faq = [
   { q: '転職エージェントを使うと内定獲得率は上がりますか?', a: 'エージェント経由の応募は書類通過率・面接通過率が高い傾向があるとされています。理由は ① 企業側が求めるスキル/カルチャーに合う候補を選別 ② 職務経歴書の改善支援 ③ 面接対策の事前準備、の 3 点とされています。' },
   { q: '転職エージェントを断ることはできますか?', a: 'いつでも断ることが可能です。応募中の選考辞退・エージェント自体の利用停止・他エージェントへの切替も自由とされています。連絡が頻繁すぎる場合は連絡頻度の調整を依頼することも一般的です。' },
   { q: '転職エージェントとの面談はオンラインで可能ですか?', a: '多くのエージェントが Zoom や Google Meet 等のオンライン面談に対応しているとされています。地方在住者・在職中の方でも利用しやすい環境が整いつつあります。' },
-  { q: '転職エージェントの選び方の判断軸は?', a: '① 業界/職種カバレッジ ② キャリアアドバイザーの専門性 ③ 求人の質と数 ④ サポート体制 (書類添削/面接対策) ⑤ 利用者の口コミ、の 5 軸で総合判断することが推奨されます。詳細は本ページ上部「失敗しない選び方 5 基準」を参照ください。' },
+  { q: '転職エージェントの選び方の判断軸は?', a: '① 業界/職種カバレッジ ② キャリアアドバイザーの専門性 ③ 求人の質と数 ④ サポート体制 (書類添削/面接対策) ⑤ 利用者の口コミ、の 5 軸で総合判断することが推奨されます。詳細は本ページ「失敗しない選び方 5 基準」を参照ください。' },
 ];
-
-const services = [
-  {
-    id: 'A',
-    name: 'MyVision (コンサル業界専門)',
-    type: 'コンサル特化型',
-    typeKey: 'consul',
-    price: '無料 (成功報酬は企業負担)',
-    target: 'コンサル志望/事業会社→コンサル/コンサル間移籍',
-    sapport: '◎ コンサル業界深い知見',
-    online: '◎',
-    note: 'コンサル業界専門のエージェント。事業会社からコンサルへの転職、コンサル間の移籍に特化したサポート。',
-    link: '/myvision/',
-  },
-  {
-    id: 'B',
-    name: 'TechGo (IT/エンジニア特化)',
-    type: 'IT特化型',
-    typeKey: 'tech',
-    price: '無料',
-    target: 'エンジニア/IT専門職',
-    sapport: '◎ IT業界専門アドバイザー',
-    online: '◎',
-    note: 'IT/エンジニア特化型。技術職の転職に特化し、技術スタックや開発環境を踏まえたマッチングを実施。',
-    link: '/techgo/',
-  },
-  {
-    id: 'C',
-    name: 'Twin Pro (営業職特化)',
-    type: '営業特化型',
-    typeKey: 'sales',
-    price: '無料',
-    target: '営業職全般 (BtoB/BtoC/SaaS等)',
-    sapport: '○ 営業職の業界横断知見',
-    online: '◎',
-    note: '営業職に特化したエージェント。業界横断の営業職 (BtoB/BtoC/SaaS/医薬等) の求人カバレッジ。',
-    link: '/twin-pro/',
-  },
-  {
-    id: 'D',
-    name: 'Unizon IT (ハイクラス IT)',
-    type: 'ハイクラス IT型',
-    typeKey: 'unizon',
-    price: '無料',
-    target: 'IT 系年収 800 万円以上のハイクラス層',
-    sapport: '◎ エグゼクティブ層特化',
-    online: '◎',
-    note: 'IT 業界のハイクラス転職に特化。年収 800 万円以上のエグゼクティブ層の求人を多数保有。',
-    link: '/unizon-it/',
-  },
-];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
 ---
 
-<Layout title={title} description={description}>
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="osusume" />
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
 
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 転職エージェント おすすめ
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      転職エージェント おすすめ｜失敗しない選び方 5 基準と 4 社比較・利用の流れ完全ガイド
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。本サイトはエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職保証・年収アップ保証・効果保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">転職エージェント比較 / おすすめ</span>
+      <h1 id="fv-h1">
+        <span class="accent">転職エージェント</span>おすすめ<br />
+        失敗しない選び方 5 基準と 4 社比較
+      </h1>
+      <p class="lede">
+        転職エージェント選びで最も重要なのは「自分の目的に合う型 (総合型・業界特化型・ハイクラス型) を選び、複数併用する」ことです。
+        総合型 1-2 社 + 業界特化型 1-2 社の計 3-4 社併用が一般的に推奨されています。料金は転職希望者は無料 (企業側から成功報酬) のため、複数併用のコストリスクはありません。
+      </p>
+      <ul class="fv-bullets">
+        <li>総合型/業界特化型/ハイクラス型 3 種の違い</li>
+        <li>失敗しない選び方 5 基準</li>
+        <li>業界特化 + ハイクラス 4 社比較表</li>
+        <li>利用の流れ 5 ステップ + 失敗例 5 例</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-08</span>
+        <span><b>最終更新</b> 2026-05-08</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 7 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-08 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 転職エージェント選びで最も重要なのは「自分の目的に合う型 (総合型・業界特化型・ハイクラス型) を選び、複数併用する」ことです。総合型 1-2 社 + 業界特化型 1-2 社の計 3-4 社併用が一般的に推奨されています。</p>
-      <p class="mt-2">本記事では、失敗しない選び方 5 基準・4 社の比較・利用の流れ・よくある失敗例を整理します。料金は転職希望者は無料 (企業側から成功報酬) のため、複数併用のコストリスクはありません。</p>
-    </section>
-
-    <BannerAB pageSlug="osusume" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 転職エージェントとは (3 種類の特徴)</h2>
-    <p class="mb-3 text-sm">
-      転職エージェントは、転職希望者と企業をマッチングする人材紹介サービスです。希望者は無料で利用でき、エージェント側は採用が決定した企業から成功報酬 (年収の 30% 程度が一般的) を受け取るビジネスモデルです。求人紹介・職務経歴書添削・面接対策・年収交渉等のサポートを総合的に受けられます。
-    </p>
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 総合型 (リクルート/dodaなど)</h3>
-    <p class="mb-3 text-sm">求人数が多く、幅広い業界・職種をカバー。初めての転職や業界変更を検討する方に向いています。求人の選択肢が広い反面、担当アドバイザーの業界専門性は限定的なケースもあります。</p>
-    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 業界特化型 (コンサル/IT/医療等)</h3>
-    <p class="mb-3 text-sm">特定業界 (コンサル・IT・医療・金融・営業等) に深い専門知見を持つエージェント。業界用語・キャリアパス・年収相場を熟知したアドバイザーが伴走します。専門業界への転職を狙う方に推奨されます。</p>
-    <h3 class="text-lg font-bold mt-4 mb-2">1-3. ハイクラス型 (年収 800 万円以上)</h3>
-    <p class="mb-3 text-sm">年収 800 万円以上のエグゼクティブ層に特化。経営層・部長クラス・専門職のヘッドハンティング案件を多数保有。スカウト型 (LinkedIn 等経由) のサービスが多い傾向にあります。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 失敗しない選び方 (5 基準)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>業界/職種カバレッジ</strong>: 自分の希望業界・職種の求人数を確認 (公式サイトで業界別求人数公開のエージェントを優先)</li>
-      <li><strong>キャリアアドバイザーの専門性</strong>: 業界特化型は特に重要・初回面談で業界知見を確認することが推奨</li>
-      <li><strong>求人の質と数</strong>: 非公開求人の比率・年収レンジ・大手/ベンチャー比率を事前確認</li>
-      <li><strong>サポート体制</strong>: 職務経歴書添削・面接対策・企業との年収交渉対応の有無</li>
-      <li><strong>利用者の口コミ</strong>: Google レビュー・口コミサイト等で実際の対応品質を事前確認</li>
-    </ul>
-    <p class="text-xs text-gray-600 mb-6">※上記は一般論の整理です。個別判断は各エージェントの無料登録・初回面談で確認することが推奨されます。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. おすすめ 4 社比較表 (業界特化型 + ハイクラス)</h2>
-    <p class="mb-3 text-sm">
-      転職エージェントの選択は、料金 (転職希望者は全社無料) ではなく、<strong>業界専門性・カバレッジ・サポート品質</strong>の総合比較が推奨されます。下表は業界特化型 3 社 + ハイクラス IT 型 1 社の 4 社比較で、各社の対象者と特徴を整理しています。
-    </p>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">エージェント</th>
-            <th class="border px-2 py-2 text-left">タイプ</th>
-            <th class="border px-2 py-2 text-left">対象者</th>
-            <th class="border px-2 py-2 text-left">サポート</th>
-            <th class="border px-2 py-2 text-center">オンライン面談</th>
-            <th class="border px-2 py-2 text-center">詳細</th>
-          </tr>
-        </thead>
-        <tbody>
-          {services.map((s) => (
-            <tr>
-              <td class="border px-2 py-2 font-semibold">{s.name}</td>
-              <td class="border px-2 py-2">{s.type}</td>
-              <td class="border px-2 py-2">{s.target}</td>
-              <td class="border px-2 py-2">{s.sapport}</td>
-              <td class="border px-2 py-2 text-center">{s.online}</td>
-              <td class="border px-2 py-2 text-center"><a href={s.link} class="underline text-blue-600">詳細</a></td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職エージェントとは — 3 種類の特徴</h2>
+      <p class="section-lede">転職エージェントは転職希望者と企業をマッチングする人材紹介サービス。希望者は無料 (企業側から成功報酬・年収の 30% 程度)。求人紹介・職務経歴書添削・面接対策・年収交渉を総合サポート。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">総合型</span><h4>リクルート / doda 等</h4><p>求人数が多く幅広い業界・職種をカバー。初めての転職や業界変更を検討する方に。担当の業界専門性は限定的なケースも。</p></article>
+        <article class="branch"><span class="tag">業界特化型</span><h4>コンサル / IT / 医療 等</h4><p>特定業界に深い専門知見。業界用語・キャリアパス・年収相場を熟知したアドバイザーが伴走。専門業界転職に推奨。</p></article>
+        <article class="branch"><span class="tag">ハイクラス型</span><h4>年収 800 万円以上</h4><p>エグゼクティブ層特化。経営層・部長クラス・専門職のヘッドハンティング案件。スカウト型サービスが多い傾向。</p></article>
+      </div>
+      <p class="compare-note">※ 上記は一般論の整理です。個別判断は各エージェントの無料登録・初回面談で確認することが推奨されます。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>3 種類を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
-    <p class="text-xs text-gray-500 mb-3">※料金は転職希望者は全社無料 (企業側から成功報酬・年収の 30% 程度が一般的)。サポートは公式情報の整理 (推定値含む)。</p>
+  </section>
 
-    <BannerAB pageSlug="osusume" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 利用の流れ (5 ステップ)</h2>
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 公式サイトから無料登録 (5-10 分)</h3>
-    <p class="mb-3 text-sm">公式サイトで職務経歴・希望条件・転職時期を入力。多くのエージェントは登録から 1-3 営業日で初回面談の日程調整連絡が来ます。</p>
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: キャリアアドバイザーとの初回面談 (60-90 分)</h3>
-    <p class="mb-3 text-sm">オンラインまたは対面で実施。経歴・スキル・希望条件・年収希望を詳細にヒアリング。アドバイザーから市場動向・年収相場のフィードバックを受けます。</p>
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: 求人紹介と応募 (1-4 週間)</h3>
-    <p class="mb-3 text-sm">面談後に求人紹介。希望条件に合う 3-10 件程度を提示するエージェントが一般的。職務経歴書をアドバイザーが添削し、応募書類を提出します。</p>
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 書類選考と面接対策 (1-2 ヶ月)</h3>
-    <p class="mb-3 text-sm">書類通過後、企業との面接日程調整をエージェントが代行。面接前に企業情報・想定質問・回答方針の事前対策面談 (30-60 分) を実施するエージェントが多いです。</p>
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 5: 内定と年収交渉</h3>
-    <p class="mb-3 text-sm">内定後、エージェントが企業との年収交渉を代行。退職交渉・入社日調整も含めてサポートを受けられます。複数内定の場合は、優先順位付けも相談可能です。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 + 回避策 (5 例)</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-2 py-2 text-left">#</th>
-            <th class="border px-2 py-2 text-left">失敗パターン</th>
-            <th class="border px-2 py-2 text-left">原因 (一般的とされる)</th>
-            <th class="border px-2 py-2 text-left">回避策</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">単独エージェントのみで選択肢狭い</td><td class="border px-2 py-2">1 社の求人だけで判断・市場全体を把握できず</td><td class="border px-2 py-2">3-4 社併用で求人カバレッジ拡大</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">アドバイザーとの相性ミスマッチ</td><td class="border px-2 py-2">業界知見不足・連絡頻度過多/過少</td><td class="border px-2 py-2">担当変更を依頼または別エージェント併用</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">急かされて焦って入社決定</td><td class="border px-2 py-2">エージェントの成功報酬構造で入社圧力</td><td class="border px-2 py-2">複数内定後にじっくり比較・即決しない</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">職務経歴書がアピール不足</td><td class="border px-2 py-2">アドバイザー添削を受けずに自己流提出</td><td class="border px-2 py-2">必ず添削依頼・実績数値化・職務記述具体化</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">年収交渉が弱い</td><td class="border px-2 py-2">エージェントに任せきり・希望年収不明確</td><td class="border px-2 py-2">希望年収レンジ事前提示・市場相場確認</td></tr>
-        </tbody>
-      </table>
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">失敗しない選び方 5 基準と 4 社比較</h2>
+      <div class="card-grid">
+        <div class="card"><h3>失敗しない選び方 5 基準</h3><p><strong>① 業界/職種カバレッジ</strong>: 希望業界・職種の求人数を確認<br /><strong>② アドバイザーの専門性</strong>: 初回面談で業界知見を確認<br /><strong>③ 求人の質と数</strong>: 非公開求人比率・年収レンジを事前確認<br /><strong>④ サポート体制</strong>: 職務経歴書添削・面接対策・年収交渉対応<br /><strong>⑤ 利用者の口コミ</strong>: Google レビュー等で対応品質を確認</p></div>
+        <div class="card"><h3>おすすめ 4 社 (業界特化 + ハイクラス)</h3><p><strong>MyVision</strong> (コンサル特化型・コンサル志望/移籍) / <strong>TechGo</strong> (IT特化型・エンジニア/IT専門職) / <strong>Twin Pro</strong> (営業特化型・営業職全般 BtoB/BtoC/SaaS) / <strong>Unizon IT</strong> (ハイクラス IT型・年収 800 万円以上のエグゼクティブ層)。料金は全社無料 (企業側から成功報酬)。</p></div>
+      </div>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="おすすめ 4 社比較">
+          <thead><tr><th>エージェント</th><th>タイプ</th><th>対象者</th><th>サポート</th><th>オンライン面談</th></tr></thead>
+          <tbody>
+            <tr><td>MyVision</td><td>コンサル特化型</td><td>コンサル志望/事業会社→コンサル/コンサル間移籍</td><td>◎ コンサル業界深い知見</td><td>◎</td></tr>
+            <tr><td>TechGo</td><td>IT特化型</td><td>エンジニア/IT専門職</td><td>◎ IT業界専門アドバイザー</td><td>◎</td></tr>
+            <tr><td>Twin Pro</td><td>営業特化型</td><td>営業職全般 (BtoB/BtoC/SaaS等)</td><td>○ 営業職の業界横断知見</td><td>◎</td></tr>
+            <tr><td>Unizon IT</td><td>ハイクラス IT型</td><td>IT 系年収 800 万円以上のハイクラス層</td><td>◎ エグゼクティブ層特化</td><td>◎</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 料金は転職希望者は全社無料 (企業側から成功報酬・年収の 30% 程度が一般的)。サポートは公式情報の整理 (推定値含む)。詳細は各エージェント公式サイトでご確認ください。</p>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
-    {faq.map((item) => (
-      <>
-        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
-        <p class="mb-3 text-sm" set:html={item.a} />
-      </>
-    ))}
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">利用の流れ 5 ステップと失敗例 5 例</h2>
+      <div class="card-grid">
+        <div class="card"><h3>利用の流れ 5 ステップ</h3><p><strong>Step 1</strong> 公式サイトから無料登録 (5-10 分)<br /><strong>Step 2</strong> キャリアアドバイザーとの初回面談 (60-90 分)<br /><strong>Step 3</strong> 求人紹介と応募 (1-4 週間)<br /><strong>Step 4</strong> 書類選考と面接対策 (1-2 ヶ月)<br /><strong>Step 5</strong> 内定と年収交渉 (エージェントが代行・退職交渉・入社日調整も)</p></div>
+        <div class="card"><h3>よくある失敗例 + 回避策 5 例</h3><p>① 単独エージェントのみで選択肢狭い → 3-4 社併用<br />② アドバイザー相性ミスマッチ → 担当変更/別社併用<br />③ 急かされて焦って入社決定 → 複数内定後にじっくり比較<br />④ 職務経歴書がアピール不足 → 必ず添削依頼・実績数値化<br />⑤ 年収交渉が弱い → 希望年収レンジ事前提示・市場相場確認</p></div>
+      </div>
+    </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        転職エージェント選びで重要なのは、①目的に合う型 (総合型/業界特化型/ハイクラス型) の選定 ②複数併用 (3-4 社) ③キャリアアドバイザーの専門性確認 ④職務経歴書の添削必須 ⑤希望年収の事前明確化、の 5 点です。料金は転職希望者は全社無料のため、併用のコストリスクはありません。
-      </p>
-      <p class="mb-3">
-        <strong>状況別の推奨エージェント形態</strong>: ① <strong>初めての転職・業界変更</strong> → 総合型 (リクルート/doda 等) 中心 + 業界特化型 1-2 社併用 ② <strong>専門業界 (コンサル/IT/医療等)</strong> → 業界特化型中心 (<a href="/myvision/" class="underline">MyVision</a> / <a href="/techgo/" class="underline">TechGo</a> 等) ③ <strong>年収 800 万円以上</strong> → ハイクラス型 (<a href="/unizon-it/" class="underline">Unizon IT</a> 等) ④ <strong>営業職特化</strong> → <a href="/twin-pro/" class="underline">Twin Pro</a> 等の営業特化型。状況に応じて 3-4 社併用が推奨されます。
-      </p>
-      <p class="mb-3">
-        <strong>転職活動の行動 3 ステップ</strong>: <strong>STEP 1</strong> 自分の希望条件 (業界/職種/年収/勤務地/働き方) を整理 → <strong>STEP 2</strong> 上記比較表で 3-4 社 (総合型 + 特化型) に絞込・公式サイトで無料登録 → <strong>STEP 3</strong> 各社の初回面談で対応品質・求人の質を比較し、メイン 1-2 社 + サブ 1-2 社の体制を確立。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※40 代向けの転職対策は <a href="/40dai-koukai/" class="underline">40 代後悔回避ページ</a> ・<a href="/40dai-revenge/" class="underline">40 代リベンジ転職ページ</a> もあわせてご参照ください。本記事は転職保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。
-      </p>
-    </section>
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">状況別の推奨と注意点</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>初めての転職・業界変更</b><span>総合型 (リクルート/doda 等) 中心 + 業界特化型 1-2 社併用</span></div>
+        <div class="row"><b>専門業界 (コンサル/IT/医療等)</b><span>業界特化型中心 (MyVision / TechGo 等)</span></div>
+        <div class="row"><b>年収 800 万円以上</b><span>ハイクラス型 (Unizon IT 等)</span></div>
+        <div class="row"><b>営業職特化</b><span>Twin Pro 等の営業特化型・状況に応じ 3-4 社併用</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動の行動 3 ステップ: STEP 1 希望条件 (業界/職種/年収/勤務地/働き方) 整理 → STEP 2 比較表で 3-4 社に絞込・無料登録 → STEP 3 各社初回面談で対応品質・求人の質を比較しメイン 1-2 社 + サブ 1-2 社の体制確立。<br /><strong>編集ポリシー (E-E-A-T)</strong>: 情報源=各エージェント公式 + 厚労省労働市場分析 + 公開統計 / 一次情報優先・断定回避・推定値明示 / 月次レビュー / 運営: NY-squared (個人事業)。本記事は転職保証・年収アップ保証ではなく特定エージェントを推奨するものでもありません。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のサービス内容・求人情報は各公式サイトでご確認ください。具体的な利用判断は各社の無料登録・初回面談を活用し、複数エージェントを比較した上でご自身の責任において選択してください。</p>
+      </div>
+    </div>
+  </section>
 
-    <BannerAB pageSlug="osusume" position="footer" />
-
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 各転職エージェント公式サイト ・厚生労働省「労働市場分析レポート」 ・転職エージェント関連の公開統計情報</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (各エージェント公式サイト確認) ・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (サービス内容変更・市場動向変化時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (転職市場関連の公開情報整理) ・Expertise (業界公開統計 + 公的機関データ) ・Authoritativeness (各エージェント公式 + 公的機関の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 効果保証ではない注記)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・公開情報)</h2>
-    <p class="mb-3 text-sm">
-      本記事の信頼性確保のため、以下の一次情報を出典として参照しています。公的機関情報は各省庁公式サイトのみを採用、エージェント情報は各社公式サイトを参照しています。
-    </p>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・有効求人倍率・転職市場動向</li>
-      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・年収分布データ</li>
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・キャリア研究</li>
-      <li>各転職エージェント公式サイト — サービス内容・対象業界・サポート体制の一次情報</li>
-      <li>転職エージェント関連の公開統計情報 (リクルートエージェント転職白書等)</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のサービス内容・求人情報は各公式サイトでご確認ください。各エージェントの正式名・公式 URL・利用規約等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は転職保証・年収アップ保証・効果保証ではなく、特定エージェントを推奨するものでもありません。具体的な利用判断は各社の無料登録・初回面談を活用し、複数エージェントを比較した上でご自身の責任において選択してください。
-    </p>
-  </main>
-</Layout>
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事・出典</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div>{item.a}</div></details>
+        ))}
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>関連 Spoke LP</h3><p><a href="/myvision/">MyVision (コンサル特化)</a> / <a href="/techgo/">TechGo (IT特化)</a> / <a href="/twin-pro/">Twin Pro (営業特化)</a> / <a href="/unizon-it/">Unizon IT (ハイクラスIT)</a> / <a href="/mensetsu/">転職面接ガイド</a> / <a href="/jiko-bunseki/">転職 自己分析</a> / <a href="/40dai-koukai/">40 代後悔回避</a> / <a href="/40dai-revenge/">40 代リベンジ転職</a></p></div>
+        <div class="card"><h3>出典・参考情報 (公的機関・公開情報)</h3><p><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (労働市場分析・有効求人倍率) / <a href="https://www.stat.go.jp/" target="_blank" rel="noopener">総務省統計局</a> (労働力調査) / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> (転職動向分析) / 各転職エージェント公式サイト (一次情報) / 転職白書等の公開統計情報</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は 2026 年 5 月時点の公開情報をもとに作成。各エージェントの正式名・公式 URL・利用規約等は提携承認後に順次反映します (PR・アフィリエイト広告を含みます)。本記事は転職保証・年収アップ保証・効果保証ではなく、特定エージェントを推奨するものでもありません。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+    </div>
+  </section>
+</RichLayout>
