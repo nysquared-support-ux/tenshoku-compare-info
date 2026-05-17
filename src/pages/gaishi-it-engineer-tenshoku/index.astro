@@ -1,110 +1,144 @@
 ---
 /**
- * 外資 IT エンジニア 転職 LP (TechGo 第 3 弾・★326 DRY 出典注記強化版)
- * sv 推定 1,300 / 検索意図: GAFA/MSFT/外資 IT 系エンジニアの転職
+ * 外資 IT エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 1,300 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-gaishi-it-engineer-before-rich/
  */
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = '外資 IT エンジニア 転職完全ガイド｜GAFA/MSFT 年収 2000 万への道（2026年版・PR）';
 const description = 'GAFA/Microsoft/外資 IT エンジニアの転職を検討中の方向け。必須スキル + コーディング面接対策 + 業界別年収帯 + ビザ/英語要件を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
-
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: '外資 IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/gaishi-it-engineer-tenshoku/' },
-];
-
-const faq = [
-  { q: '外資 IT エンジニアの年収はどれくらいですか?', a: '一般的に外資 IT エンジニアの年収は実務 3 年で 900-1,500 万円・5 年以上で 1,500-3,000 万円とされ、ストックオプション + RSU 含むパッケージで高単価傾向があるとされています。' },
-  { q: 'コーディング面接対策は必要ですか?', a: '一般的に GAFA/Microsoft 等は LeetCode 系のコーディング面接 + システムデザイン面接が標準とされています。3-6 ヶ月の集中対策が推奨される傾向です。' },
-  { q: '英語力はどの程度必要ですか?', a: '一般的に外資日本法人 (Japan オフィス) は日本語中心も可・本社 (US/EU) 採用は英語ビジネスレベル必須とされています。' },
-  { q: 'ビザサポートはありますか?', a: '一般的に GAFA/Microsoft 等は H1B/Work Visa サポートが標準とされていますが、抽選/制限があるため早期エージェント相談が推奨されます。' },
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '外資 IT エンジニア転職' },
 ];
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="gaishi-it-engineer-tenshoku" />
-    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; 外資 IT エンジニア転職</nav>
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">外資 IT エンジニア 転職完全ガイド｜GAFA/MSFT 年収 2000 万への道</h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / 外資 IT</span>
+      <h1 id="fv-h1">
+        <span class="accent">外資 IT エンジニア</span>転職完全ガイド<br />
+        GAFA/MSFT 年収 2000 万への道
+      </h1>
+      <p class="lede">
+        外資 IT (GAFA/Microsoft/Oracle/Salesforce 等) は年収 900-3,000 万円帯の求人が活発で、ストックオプション + RSU 含むパッケージで日系を大きく上回る傾向とされています。
+        コーディング面接対策 + システムデザイン + 英語力が転職成否を決める一般的傾向です。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>外資 IT 主要企業 + 採用プロセス整理</li>
+        <li>レベル別 年収帯 (Base+RSU)</li>
+        <li>コーディング面接 + 英語 + ビザ要件</li>
+        <li>JILPT・IPA・経産省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論 (一般的傾向)</strong>: 外資 IT (GAFA/Microsoft/Oracle/Salesforce 等) は年収 900-3,000 万円帯の求人が活発で、ストックオプション + RSU 含むパッケージで日系を大きく上回る傾向とされています。コーディング面接対策 + システムデザイン + 英語力が転職成否を決める一般的傾向です。</p>
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
-    </section>
-
-    <BannerAB pageSlug="gaishi-it-engineer-tenshoku" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 外資 IT 主要企業 (公開情報ベース)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>GAFA</strong>: Google / Apple / Facebook (Meta) / Amazon</li>
-      <li><strong>Microsoft</strong>: Azure / Office 365 / GitHub / OpenAI 投資</li>
-      <li><strong>Salesforce / Oracle / SAP</strong>: エンタープライズ SaaS / DB</li>
-      <li><strong>Netflix / Uber / Airbnb</strong>: ユニコーン系</li>
-      <li><strong>AI ネイティブ (OpenAI / Anthropic / Mistral)</strong>: 2026 年最高単価</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 採用プロセス (一般的目安)</h2>
-    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
-      <li><strong>スカウト / 応募</strong>: LinkedIn / Recruiter 経由が一般的</li>
-      <li><strong>Recruiter Screening</strong>: 経歴 + キャリア整合確認</li>
-      <li><strong>コーディング面接 (1-3 回)</strong>: LeetCode 中-難レベル</li>
-      <li><strong>システムデザイン面接</strong>: スケーラブル設計力</li>
-      <li><strong>Hiring Manager 面接</strong>: チームフィット + 動機</li>
-      <li><strong>Bar Raiser / Onsite</strong>: 最終評価</li>
-      <li><strong>Offer 交渉</strong>: 年収 + RSU + サインオン</li>
-    </ol>
-
-    <BannerAB pageSlug="gaishi-it-engineer-tenshoku" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">レベル</th><th class="border border-gray-300 p-2">年収帯 (Base+RSU)</th><th class="border border-gray-300 p-2">主な企業層</th></tr></thead>
-        <tbody>
-          <tr><td class="border border-gray-300 p-2">L3-L4 (Junior)</td><td class="border border-gray-300 p-2">900-1,400 万</td><td class="border border-gray-300 p-2">GAFA 日本法人 / Microsoft</td></tr>
-          <tr><td class="border border-gray-300 p-2">L5 (Senior)</td><td class="border border-gray-300 p-2">1,400-2,200 万</td><td class="border border-gray-300 p-2">GAFA / 大手 SaaS</td></tr>
-          <tr><td class="border border-gray-300 p-2">L6+ (Staff)</td><td class="border border-gray-300 p-2">2,200-3,500 万+</td><td class="border border-gray-300 p-2">テックリード / アーキテクト</td></tr>
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と外資 IT 主要企業</h2>
+      <p class="section-lede">外資 IT は年収 900-3,000 万円帯が活発で、RSU 含むパッケージで日系を大きく上回る傾向。主要企業層は 5 カテゴリに分類されます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">GAFA</span><h4>Google / Apple / Meta / Amazon</h4><p>最大規模の外資 IT。コーディング面接 + システムデザインが標準。L3-L6+ のレベル制。</p></article>
+        <article class="branch"><span class="tag">Microsoft</span><h4>Azure / Office 365 / GitHub / OpenAI 投資</h4><p>クラウド + 開発者ツール + AI 投資。日本法人は日本語中心も可。</p></article>
+        <article class="branch"><span class="tag">エンタープライズ SaaS</span><h4>Salesforce / Oracle / SAP</h4><p>エンタープライズ SaaS / DB。業務知識 + 技術力の両立が評価される。</p></article>
+        <article class="branch"><span class="tag">ユニコーン / AI ネイティブ</span><h4>Netflix/Uber/Airbnb・OpenAI/Anthropic</h4><p>ユニコーン系 + AI ネイティブ (OpenAI/Anthropic/Mistral) は 2026 年最高単価帯。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>企業層を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略</h2>
-    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
-      <li><strong>3-6 ヶ月集中対策</strong>: LeetCode 200 問 + システムデザイン書籍</li>
-      <li><strong>LinkedIn 最適化</strong>: 英語 + 実績数値化 + キーワード整備</li>
-      <li><strong>OSS / GitHub 実績</strong>: 技術力の客観証明</li>
-      <li><strong>外資特化エージェント</strong>: コーディング面接対策含むサポート</li>
-      <li><strong>英語面接対策</strong>: 模擬面接 + 業界用語</li>
-    </ol>
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">採用プロセスと転職戦略</h2>
+      <div class="card-grid">
+        <div class="card"><h3>採用プロセス (一般的目安)</h3><p>① スカウト / 応募 (LinkedIn / Recruiter 経由)<br />② Recruiter Screening (経歴 + キャリア整合)<br />③ コーディング面接 1-3 回 (LeetCode 中-難)<br />④ システムデザイン面接 (スケーラブル設計力)<br />⑤ Hiring Manager 面接 (チームフィット + 動機)<br />⑥ Bar Raiser / Onsite (最終評価)<br />⑦ Offer 交渉 (年収 + RSU + サインオン)</p></div>
+        <div class="card"><h3>転職戦略 5 ステップ</h3><p>① 3-6 ヶ月集中対策: LeetCode 200 問 + システムデザイン書籍<br />② LinkedIn 最適化: 英語 + 実績数値化 + キーワード整備<br />③ OSS / GitHub 実績: 技術力の客観証明<br />④ 外資特化エージェント: コーディング面接対策含むサポート<br />⑤ 英語面接対策: 模擬面接 + 業界用語</p></div>
+      </div>
+    </div>
+  </section>
 
-    <BannerAB pageSlug="gaishi-it-engineer-tenshoku" position="footer" />
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">年収帯 (一般的目安・Base+RSU)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="レベル別 外資 IT 年収帯">
+          <thead><tr><th>レベル</th><th>年収帯 (Base+RSU)</th><th>主な企業層</th></tr></thead>
+          <tbody>
+            <tr><td>L3-L4 (Junior)</td><td>900-1,400 万</td><td>GAFA 日本法人 / Microsoft</td></tr>
+            <tr><td>L5 (Senior)</td><td>1,400-2,200 万</td><td>GAFA / 大手 SaaS</td></tr>
+            <tr><td>L6+ (Staff)</td><td>2,200-3,500 万+</td><td>テックリード / アーキテクト</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 出典: 各転職エージェント公開求人情報サンプル (2026 年 5 月時点) + JILPT + IPA IT 人材白書。年収帯は Base + RSU + サインオンを含む総額目安・対象母集団・スキル・レベル・RSU 変動・為替により大きく異なります。個別保証ではなく一般的傾向です。</p>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="/engineer-1000man/" class="underline">エンジニア 年収 1000 万円への道</a></li>
-      <li><a href="/ai-engineer-tenshoku/" class="underline">AI エンジニア 転職</a></li>
-      <li><a href="/cloud-engineer-tenshoku/" class="underline">クラウドエンジニア 転職</a></li>
-      <li><a href="/high-class/" class="underline">ハイクラス転職ガイド</a></li>
-      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
-    </ul>
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意点と公平な判断材料</h2>
+      <div class="counter-box">
+        <h3>📌 補足 (公開情報整理・公平な判断材料)</h3>
+        <div class="row"><b>コーディング面接</b><span>GAFA/Microsoft は LeetCode 系 + システムデザイン面接が標準・3-6 ヶ月集中対策推奨</span></div>
+        <div class="row"><b>英語力</b><span>外資日本法人は日本語中心も可・本社 (US/EU) 採用は英語ビジネスレベル必須</span></div>
+        <div class="row"><b>ビザサポート</b><span>GAFA/Microsoft は H1B/Work Visa サポート標準・但し抽選/制限あり早期相談推奨</span></div>
+        <div class="row"><b>RSU 変動リスク</b><span>年収の RSU 比率が高く株価変動で総額が変動・総額評価が重要</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。外資 IT はレイオフリスクもあり総合的なキャリア設計を推奨します。具体的判断は外資特化エージェントへの相談を推奨します。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> / <a href="https://www.meti.go.jp/" target="_blank" rel="noopener" class="underline">経済産業省</a></li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
-    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
-
-    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
-  </main>
-</Layout>
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事・公的相談窓口</h2>
+      <div class="faq">
+        <details><summary>外資 IT エンジニアの年収はどれくらいですか?</summary><div>一般的に外資 IT エンジニアの年収は実務 3 年で 900-1,500 万円・5 年以上で 1,500-3,000 万円とされ、ストックオプション + RSU 含むパッケージで高単価傾向があるとされています。</div></details>
+        <details><summary>コーディング面接対策は必要ですか?</summary><div>一般的に GAFA/Microsoft 等は LeetCode 系のコーディング面接 + システムデザイン面接が標準とされています。3-6 ヶ月の集中対策が推奨される傾向です。</div></details>
+        <details><summary>英語力はどの程度必要ですか?</summary><div>一般的に外資日本法人 (Japan オフィス) は日本語中心も可・本社 (US/EU) 採用は英語ビジネスレベル必須とされています。</div></details>
+        <details><summary>ビザサポートはありますか?</summary><div>一般的に GAFA/Microsoft 等は H1B/Work Visa サポートが標準とされていますが、抽選/制限があるため早期エージェント相談が推奨されます。</div></details>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>関連 Spoke LP</h3><p><a href="/engineer-1000man/">エンジニア 年収 1000 万円への道</a> / <a href="/ai-engineer-tenshoku/">AI エンジニア 転職</a> / <a href="/cloud-engineer-tenshoku/">クラウドエンジニア 転職</a> / <a href="/high-class/">ハイクラス転職ガイド</a> / <a href="/engineer-portfolio/">エンジニア ポートフォリオ 作り方</a></p></div>
+        <div class="card"><h3>公的相談窓口・支援機関</h3><p><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA</a> (IT 人材白書) / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> (IT 業界年収統計) / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> (職業情報) / <a href="https://www.meti.go.jp/" target="_blank" rel="noopener">経済産業省</a> (産業政策)</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+    </div>
+  </section>
+</RichLayout>
