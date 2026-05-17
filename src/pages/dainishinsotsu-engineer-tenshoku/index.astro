@@ -1,114 +1,223 @@
 ---
 /**
- * 第二新卒 エンジニア 転職 LP (TechGo 第 4 弾・★326 DRY 出典注記強化版)
- * sv 推定 1,300
+ * 第二新卒 エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-dainishinsotsu-engineer-tenshoku-before-rich/
  */
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = '第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）';
 const description = '第二新卒 (新卒入社後 1-3 年) のエンジニア転職を検討中の方向け。第二新卒の市場価値 + 必須スキル + 求人傾向 + 注意点を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
-
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: 'IT エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: '第二新卒エンジニア転職', url: 'https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/' },
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '第二新卒エンジニア転職' },
 ];
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': '第二新卒エンジニア転職', 'item': 'https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/' },
+  ],
+};
 const faq = [
   { q: '第二新卒エンジニアの年収はどれくらいですか?', a: '一般的に新卒 1-3 年で 350-500 万円・転職で +50-150 万円のアップ事例があるとされています。但しスキル・転職先によって大きく異なります。' },
   { q: 'スキル不足でも転職できますか?', a: '一般的に第二新卒はポテンシャル採用枠が存在するとされ、基礎スキル + 学習姿勢で転職事例が多数あります。実務 1 年以上が一つの目安とされています。' },
   { q: '退職前に転職活動すべきですか?', a: '一般的に在職中の転職活動が推奨されているとされています。退職後は経済的不安 + 期間制約で焦り判断のリスクがあるとされています。' },
   { q: 'SES → 自社開発は可能ですか?', a: '一般的に第二新卒の SES → 自社開発転身事例は多いとされています。技術スタック学習 + ポートフォリオ + 主体性アピールが評価される傾向とされています。' },
 ];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="dainishinsotsu-engineer-tenshoku" />
-    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; 第二新卒エンジニア転職</nav>
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">第二新卒 エンジニア 転職完全ガイド｜20 代前半のキャリアアップ戦略</h1>
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
 
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">第二新卒 エンジニア 転職 / 20 代前半キャリアアップ</span>
+      <h1 id="fv-h1">
+        <span class="accent">第二新卒 エンジニア 転職</span>完全ガイド<br />
+        20 代前半のキャリアアップ戦略
+      </h1>
+      <p class="lede">
+        第二新卒エンジニア (新卒 1-3 年) はポテンシャル採用 + 第二新卒枠で選択肢が広い時期とされ、年収 350-650 万円帯の求人が活発な傾向です。基礎スキル + 学習姿勢 + 退職理由の整理が転職成否を決める一般的傾向です。
+      </p>
+      <ul class="fv-bullets">
+        <li>第二新卒の市場価値 4 点を整理</li>
+        <li>よくある転職理由 (退職理由の整理) を体系化</li>
+        <li>年収帯 (一般的目安) を経験年数別に提示</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-15 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+  <!-- ============ SECTION 01 市場価値 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">第二新卒の市場価値</h2>
+      <p class="section-lede">第二新卒 (新卒 1-3 年) は以下の市場価値を持つとされています。</p>
 
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論 (一般的傾向)</strong>: 第二新卒エンジニア (新卒 1-3 年) はポテンシャル採用 + 第二新卒枠で選択肢が広い時期とされ、年収 350-650 万円帯の求人が活発な傾向です。基礎スキル + 学習姿勢 + 退職理由の整理が転職成否を決める一般的傾向です。</p>
-      <p class="mt-2 text-xs text-gray-600">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
-    </section>
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">市場価値 ①</span>
+          <h4>ポテンシャル採用枠</h4>
+          <p>スキル不足でも学習姿勢で採用される。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場価値 ②</span>
+          <h4>第二新卒専門枠</h4>
+          <p>新卒 1-3 年向け求人多数。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場価値 ③</span>
+          <h4>柔軟性</h4>
+          <p>新しい技術スタック習得が早い。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場価値 ④</span>
+          <h4>カルチャー適応</h4>
+          <p>旧来の慣習に染まっていない強み。</p>
+        </article>
+      </div>
 
-    <BannerAB pageSlug="dainishinsotsu-engineer-tenshoku" position="hero" />
+      <p class="compare-note">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 第二新卒の市場価値</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>ポテンシャル採用枠</strong>: スキル不足でも学習姿勢で採用される</li>
-      <li><strong>第二新卒専門枠</strong>: 新卒 1-3 年向け求人多数</li>
-      <li><strong>柔軟性</strong>: 新しい技術スタック習得が早い</li>
-      <li><strong>カルチャー適応</strong>: 旧来の慣習に染まっていない強み</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. よくある転職理由 (退職理由の整理)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>SES からの脱出 (自社開発志向)</li>
-      <li>技術スタックのミスマッチ (レガシー → モダン)</li>
-      <li>キャリアパス不明確</li>
-      <li>給与・労働環境</li>
-      <li>リモートワーク・柔軟な働き方</li>
-    </ul>
-
-    <BannerAB pageSlug="dainishinsotsu-engineer-tenshoku" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 年収帯 (一般的目安)</h2>
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100"><tr><th class="border border-gray-300 p-2">経験年数</th><th class="border border-gray-300 p-2">現職年収</th><th class="border border-gray-300 p-2">転職後年収</th></tr></thead>
-        <tbody>
-          <tr><td class="border border-gray-300 p-2">1 年 (新卒 +1)</td><td class="border border-gray-300 p-2">350-450 万</td><td class="border border-gray-300 p-2">400-550 万 (+50-100)</td></tr>
-          <tr><td class="border border-gray-300 p-2">2 年</td><td class="border border-gray-300 p-2">400-500 万</td><td class="border border-gray-300 p-2">450-600 万 (+50-150)</td></tr>
-          <tr><td class="border border-gray-300 p-2">3 年</td><td class="border border-gray-300 p-2">450-550 万</td><td class="border border-gray-300 p-2">500-700 万 (+50-200)</td></tr>
-        </tbody>
-      </table>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>市場価値を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 転職戦略 (第二新卒向け)</h2>
-    <ol class="list-decimal pl-6 mb-3 text-sm space-y-1">
-      <li>退職理由を「不満」ではなく「成長志向」で整理</li>
-      <li>基礎スキル (言語 1 + フレームワーク 1) + 個人開発作品</li>
-      <li>第二新卒専門エージェント + 一般エージェント併用</li>
-      <li>在職中転職活動 (経済的安定 + 焦り判断回避)</li>
-      <li>3-4 社並行検討で比較判断</li>
-    </ol>
+  <!-- ============ SECTION 02 転職理由 + 戦略 ============ -->
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">よくある転職理由と転職戦略</h2>
+      <p class="section-lede">第二新卒の退職理由整理 + 転職戦略は以下の通りとされています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>よくある転職理由 (退職理由の整理)</h3>
+          <p>SES からの脱出 (自社開発志向) / 技術スタックのミスマッチ (レガシー → モダン) / キャリアパス不明確 / 給与・労働環境 / リモートワーク・柔軟な働き方</p>
+        </div>
+        <div class="card">
+          <h3>転職戦略 (第二新卒向け)</h3>
+          <p>① 退職理由を「不満」ではなく「成長志向」で整理 / ② 基礎スキル (言語 1 + フレームワーク 1) + 個人開発作品 / ③ 第二新卒専門エージェント + 一般エージェント併用 / ④ 在職中転職活動 (経済的安定 + 焦り判断回避) / ⑤ 3-4 社並行検討で比較判断</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">5. 注意点</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li>短期離職を不安要素とする企業もある (理由を明確化)</li>
-      <li>給与・福利厚生だけでなくキャリアパスも確認</li>
-      <li>面接で「前職批判」は減点リスク</li>
-      <li>未経験職種への大幅転身は厳しい傾向</li>
-    </ul>
+  <!-- ============ SECTION 03 年収帯 ============ -->
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">年収帯 (一般的目安)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="第二新卒エンジニア年収帯目安">
+          <thead><tr><th>経験年数</th><th>現職年収</th><th>転職後年収</th></tr></thead>
+          <tbody>
+            <tr><td>1 年 (新卒 +1)</td><td>350-450 万</td><td>400-550 万 (+50-100)</td></tr>
+            <tr><td>2 年</td><td>400-500 万</td><td>450-600 万 (+50-150)</td></tr>
+            <tr><td>3 年</td><td>450-550 万</td><td>500-700 万 (+50-200)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 一般的目安であり個別保証ではありません。スキル・転職先により大きく異なります。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
+          <span>年収帯を踏まえ TechGo 公式サイトを確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <BannerAB pageSlug="dainishinsotsu-engineer-tenshoku" position="footer" />
+  <!-- ============ SECTION 04 注意点 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">第二新卒転職の注意点</h2>
+      <div class="counter-box">
+        <h3>📌 注意点 (公開情報整理)</h3>
+        <div class="row"><b>短期離職への懸念</b><span>短期離職を不安要素とする企業もある (理由を明確化)</span></div>
+        <div class="row"><b>キャリアパス確認</b><span>給与・福利厚生だけでなくキャリアパスも確認</span></div>
+        <div class="row"><b>前職批判は減点</b><span>面接で「前職批判」は減点リスク</span></div>
+        <div class="row"><b>大幅転身は厳しい</b><span>未経験職種への大幅転身は厳しい傾向</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">関連記事</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="/30dai/" class="underline">30 代エンジニア 転職</a></li>
-      <li><a href="/ses-dasshutsu/" class="underline">SES 脱出 完全ガイド</a></li>
-      <li><a href="/engineer-shokumukeirekisho/" class="underline">エンジニア 職務経歴書 書き方</a></li>
-      <li><a href="/engineer-portfolio/" class="underline">エンジニア ポートフォリオ 作り方</a></li>
-    </ul>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="underline">IPA</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a></li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問</h2>
-    {faq.map((item) => (<details class="mb-3 border border-gray-200 rounded p-3"><summary class="font-bold cursor-pointer text-sm">{item.q}</summary><p class="mt-2 text-sm">{item.a}</p></details>))}
-
-    <p class="text-xs text-gray-500 mt-8">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。</p>
-  </main>
-</Layout>
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事</h2>
+      {faq.map((item) => (
+        <div class="faq">
+          <details>
+            <summary>{item.q}</summary>
+            <div>{item.a}</div>
+          </details>
+        </div>
+      ))}
+      <div class="card-grid">
+        <div class="card">
+          <h3>関連 Spoke LP</h3>
+          <p>
+            <a href="/30dai/">30 代エンジニア 転職</a> /
+            <a href="/ses-dasshutsu/">SES 脱出 完全ガイド</a> /
+            <a href="/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方</a> /
+            <a href="/engineer-portfolio/">エンジニア ポートフォリオ 作り方</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>公的相談窓口・支援機関</h3>
+          <p>
+            <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> /
+            <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA</a> /
+            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>
+          </p>
+        </div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。</p>
+    </div>
+  </section>
+</RichLayout>
