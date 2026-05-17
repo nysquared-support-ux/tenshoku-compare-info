@@ -1,18 +1,19 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
+/**
+ * kansa-houjin-zangyou LP (ツインプロ・Claude Design 完全 class 構造準拠・★503 案2)
+ * ★326 DRY rich-techgo.css 汎用流用・★480 ツインプロ a8mat verbatim 保持
+ * ★327 backup: backups/2026-05-17-kansa-houjin-zangyou-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
 
-// ★Codex review (2026-05-13・68/REVISE) 採用必須 4 件反映: タイトル短縮 + メタ短縮 + 冒頭フック強化 + 出典具体化
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
 const title = '監査法人の残業 実態と対策｜Big4・準大手・中堅監査法人の労働時間と転職タイミング判断【公開情報】';
 const description = '監査法人 (Big4・準大手・中堅) の残業実態を公開情報で整理。繁忙期の労働時間 + 転職タイミング 3 パターン + 残業疲弊からの転職判断 3 基準。退職前のキャリア相談はツインプロ等で(PR)。';
-
 const breadcrumb = [
-  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: '転職エージェント', url: 'https://tenshoku-compare-info.pages.dev/osusume/' },
-  { name: '監査法人残業', url: 'https://tenshoku-compare-info.pages.dev/kansa-houjin-zangyou/' },
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '監査法人残業' },
 ];
-
-// ★441-EXT ItemList Schema (A3 +10pt 期待)
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -37,72 +38,79 @@ const faq = [
   { q: 'ハイクラス求人 (年収 1,000 万円+) はありますか?', a: '公開情報上、監査法人パートナー候補・税理士法人マネージャー・事業会社 CFO 候補等の年収 1,000 万円超求人は士業特化エージェントの非公開求人として一定数存在するとされています。但し求人の有無・条件は時期により変動します。' },
   { q: '転職を急がない場合の相談だけでも可能ですか?', a: '公開情報上、多くの転職エージェントは「情報収集目的」の相談を受け付けているとされています。ツインプロ等も無料キャリア面談を提供しているとされています。在職中相談可・退会自由が一般的な利用規約とされています。' },
 ];
-
 const faqExtra = [
   { q: '士業特化と総合型エージェントの違いは?', a: '公開情報上、士業特化エージェントは ①担当者の士業知見が深い ②監査法人・税理士法人ハイクラス非公開求人へのアクセス ③年収交渉時の業界相場知見、の 3 点が強みとされています。一方、総合型は求人数の多さ・他業界比較が強みとされています。両者併用が推奨されるケースが多いとされています。' },
   { q: '会計事務所から税理士法人への転職は可能ですか?', a: '公開情報上、会計事務所 (中小) から税理士法人 (Big4・大手) への転職は可能とされていますが、実務経験・スキル・年齢により難易度が異なるとされています。税理士有資格者の場合は比較的選択肢が広いとされています。詳細は士業特化エージェントへご相談ください。' },
 ];
-
-const services = [
-  { name: 'ツインプロ', target: '会計士・税理士・簿記資格者', strength: '士業特化・無料キャリア面談', point: 'MyVision 社運営・士業有資格者向け転職エージェント (公開情報)', recommended: true },
-  { name: 'マイナビ会計士', target: '公認会計士・税理士', strength: '大手系列・求人数', point: '株式会社マイナビ運営・若手中堅対応 (公開情報)', recommended: false },
-  { name: 'MS-Japan', target: '経理・財務・会計士・税理士', strength: '管理部門特化', point: '事業会社経理転職に強み・MS-Japan 社運営 (公開情報)', recommended: false },
-  { name: 'リクルートエージェント', target: '総合型 (士業含む)', strength: '求人数 60 万件+', point: '士業求人も一部カバー・併用推奨 (公開情報)', recommended: false },
-];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.concat(faqExtra).map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-13" modifiedDate="2026-05-13" breadcrumb={breadcrumb} faq={faq}>
-  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="kansa-houjin-zangyou"
-             href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE&sitemicros=prbadge_kansa-houjin-zangyou"
-             label="監査法人残業対策・転職タイミング対応・士業特化転職エージェント・無料キャリア面談（PR）" />
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
 
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; <a href="/osusume/" class="underline">転職エージェント</a> &gt; 監査法人残業
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight" style="color: #1E3A8A;">
-      監査法人の残業 実態と対策｜Big4・準大手・中堅監査法人の労働時間と転職タイミング判断
-    </h1>
-
-    <!-- ★Codex 採用必須: 冒頭フック強化 (失敗3点 + 比較判断便益を先に) -->
-    <section class="mb-6 bg-red-50 border-l-4 border-red-400 p-4 text-sm">
-      <p class="font-bold mb-2" style="color: #B91C1C;">💡 士業転職で失敗しやすい 3 点 (本記事で回避可能)</p>
-      <ol class="list-decimal pl-5 space-y-1">
-        <li><strong>残業疲弊で性急転職</strong> → 期末後 (7-9 月) の冷静判断推奨・3-6 ヶ月のエージェント相談期間確保</li>
-        <li><strong>事業会社経理で残業減期待</strong> → IPO 準備中企業・グローバル企業経理マネージャーは繁忙期残業継続可能性</li>
-        <li><strong>独立で残業ゼロ期待</strong> → 顧問先確保期 (1-3 年) は労働時間長期化リスク・雇用継続の安全策も検討</li>
-      </ol>
-      <p class="text-xs text-gray-700 mt-2">
-        本記事で得られる判断 (Big4・準大手・中堅監査法人在籍者 向け): ① 監査法人残業対策 に最適なエージェント 4 社比較 ② 失敗回避 5 基準 ③ 利用の流れ ④ タイミング判断軸
-      </p>
-    </section>
-
-    <p class="text-xs text-gray-500 mb-3">
-      ※本記事は公式公開情報・各エージェント公開情報の整理であり、独自の口コミ調査結果ではありません。具体的な評価は各エージェント公式サイト・利用者個別の経験を参考にしてください。<br />
-      <strong>情報源</strong>: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> ・<a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener" class="underline">日本公認会計士協会</a> ・<a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener" class="underline">日本税理士会連合会</a> ・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> ・各エージェント公式サイト / <strong>最終レビュー日</strong>: 2026-05-13 / <strong>編集体制</strong>: NY-squared (個人事業) 編集部・公開情報優先方針 (<a href="/editorial-policy/" class="underline">編集ポリシー</a> 参照)
-    </p>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは各転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職成功保証・年収アップ保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">士業転職 / 会計士・税理士・簿記資格者</span>
+      <h1 id="fv-h1">監査法人の残業 実態と対策｜Big4・準大手・中堅監査法人の労働時間と転職タイミング判断</h1>
+      <p class="lede"><strong>結論</strong>: 会計士・税理士・簿記資格者の転職は <strong>① 士業特化エージェント (ツインプロ等)</strong> ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の <strong>3 軸組合せ</strong>が推奨されます。本記事では士業有資格者向け転職エージェント 4 社比較と選び方 5 基準を整理します。 会計士・税理士の専門性 + 業界知見 + 非公開求人アクセスの 3 点で士業特化型が強みとされ、求人数の多さで総合型が補完するとされています。</p>
+      <ul class="fv-bullets">
+        <li>士業転職で失敗しやすい点と回避法</li>
+        <li>4 社の対象・強み比較 + 選び方 5 基準</li>
+        <li>利用の流れ 5 ステップ + 転職タイミング</li>
+        <li>公認会計士協会・税理士会連合会 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>ツインプロ公式で会計士・税理士特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">&#8251; 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-13</span>
+        <span><b>最終更新</b> 2026-05-17</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-13 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">士業転職で失敗しやすい点・基本情報・選び方 5 基準</h2>
+      <p class="section-lede">① 監査法人残業対策 に最適なエージェント 4 社比較 ② 失敗回避 5 基準 ③ 利用の流れ ④ タイミング判断軸</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">失敗1</span><h4>残業疲弊で性急転職</h4><p>期末後 (7-9 月) の冷静判断推奨・3-6 ヶ月のエージェント相談期間確保</p></article><article class="branch"><span class="tag">失敗2</span><h4>事業会社経理で残業減期待</h4><p>IPO 準備中企業・グローバル企業経理マネージャーは繁忙期残業継続可能性</p></article><article class="branch"><span class="tag">失敗3</span><h4>独立で残業ゼロ期待</h4><p>顧問先確保期 (1-3 年) は労働時間長期化リスク・雇用継続の安全策も検討</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>士業転職の基本情報</h3><p><strong>主な求人タイプ</strong>: ① 監査法人 (Big4・準大手・中堅) ② 税理士法人 (大手・中堅・個人) ③ 事業会社経理 (CFO 候補・経理マネージャー) ④ コンサルティングファーム (FAS・税務 DD 等)<br /><strong>年収相場 (推定・公開情報ベース)</strong>: 600 万-1,500 万円 (経験年数・役職・業態別で大きく異なる・JILPT 公開統計参考)<br /><strong>転職タイミング 3 パターン</strong>: ① 繁忙期前 (4-5 月) ② 期末後 (7-9 月) ③ 異動シーズン (10-12 月)<br /><strong>必要書類</strong>: 履歴書 + 職務経歴書 + 各種資格証明書 (公認会計士登録・税理士登録・修了考査合格証等)<br /><strong>会員数 (参考)</strong>: 公認会計士 約 4 万人 (日本公認会計士協会・公開情報) / 税理士 約 8 万人 (日本税理士会連合会・公開情報)</p></div>
+        <div class="card"><h3>失敗しない選び方 5 基準</h3><p><strong>① 士業特化度</strong>: 担当者が業界経験者か (会計士・税理士・経理出身) を確認・士業特化エージェントは知見が深いとされる<br /><strong>② 非公開求人比率</strong>: 監査法人パートナー候補・税理士法人マネージャー等のハイクラス求人は非公開比率が高いとされる<br /><strong>③ 年収交渉力</strong>: 業界相場の知見 + 過去の成約実績で年収交渉の質が決まるとされる<br /><strong>④ アフター対応</strong>: 入社後フォロー (3 ヶ月-1 年) の有無・カウンセリング体制を確認<br /><strong>⑤ 求人数 vs 専門性のバランス</strong>: 士業特化型 (専門性) + 総合型 (求人数) の組合せが推奨されるケースが多い</p></div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>選び方を踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 会計士・税理士・簿記資格者の転職は <strong>① 士業特化エージェント (ツインプロ等)</strong> ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の <strong>3 軸組合せ</strong>が推奨されます。本記事では士業有資格者向け転職エージェント 4 社比較と選び方 5 基準を整理します。</p>
-      <p class="mt-2">会計士・税理士の専門性 + 業界知見 + 非公開求人アクセスの 3 点で士業特化型が強みとされ、求人数の多さで総合型が補完するとされています。</p>
-    </section>
-
-    <!-- ツインプロ専用バナー hero (素材 003 高解像度・★326 DRY 流用) -->
-    <div class="my-8 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kansa-houjin-zangyou_hero"
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap"><table class="compare" aria-label="士業転職エージェント比較"><thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead><tbody><tr><td>&#11088; ツインプロ</td><td>会計士・税理士・簿記資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け転職エージェント (公開情報)</td></tr><tr><td>マイナビ会計士</td><td>公認会計士・税理士</td><td>大手系列・求人数</td><td>株式会社マイナビ運営・若手中堅対応 (公開情報)</td></tr><tr><td>MS-Japan</td><td>経理・財務・会計士・税理士</td><td>管理部門特化</td><td>事業会社経理転職に強み・MS-Japan 社運営 (公開情報)</td></tr><tr><td>リクルートエージェント</td><td>総合型 (士業含む)</td><td>求人数 60 万件+</td><td>士業求人も一部カバー・併用推奨 (公開情報)</td></tr></tbody></table></div>
+      <p class="compare-note">&#8251; 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kansa-houjin-zangyou_hero"
          target="_blank" rel="nofollow"
          data-cta="ツインプロ公式" data-material="banner_003_300x250" data-page-slug="shigyo-tenshoku">
         <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント"
@@ -114,56 +122,26 @@ const services = [
            alt="" loading="lazy" style="position:absolute;left:-9999px" />
       <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kansa-houjin-zangyou_hero_text"
          target="_blank" rel="nofollow"
-         class="block mt-2 text-sm text-blue-700 underline">
+         style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
         会計士・税理士特化の転職エージェントで無料キャリア面談（PR）
       </a>
-      <p class="text-xs text-gray-700 mt-2 text-center">
+      <p style="font-size:12px;color:var(--c-text-sub,#6b7280);margin-top:8px;">
         PR / 公開情報サイト (coreda.jp) 経由でツインプロ公式へ / 無料キャリア面談 / 在職中相談可 / 退会自由
       </p>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 士業転職の基本情報 (会計士・税理士・簿記資格者)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>主な求人タイプ</strong>: ① 監査法人 (Big4・準大手・中堅) ② 税理士法人 (大手・中堅・個人) ③ 事業会社経理 (CFO 候補・経理マネージャー) ④ コンサルティングファーム (FAS・税務 DD 等)</li>
-      <li><strong>年収相場 (推定・公開情報ベース)</strong>: 600 万-1,500 万円 (経験年数・役職・業態別で大きく異なる・JILPT 公開統計参考)</li>
-      <li><strong>転職タイミング 3 パターン</strong>: ① 繁忙期前 (4-5 月) ② 期末後 (7-9 月) ③ 異動シーズン (10-12 月)</li>
-      <li><strong>必要書類</strong>: 履歴書 + 職務経歴書 + 各種資格証明書 (公認会計士登録・税理士登録・修了考査合格証等)</li>
-      <li><strong>会員数 (参考)</strong>: 公認会計士 約 4 万人 (日本公認会計士協会・公開情報) / 税理士 約 8 万人 (日本税理士会連合会・公開情報)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 失敗しない選び方 (5 基準)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>① 士業特化度</strong>: 担当者が業界経験者か (会計士・税理士・経理出身) を確認・士業特化エージェントは知見が深いとされる</li>
-      <li><strong>② 非公開求人比率</strong>: 監査法人パートナー候補・税理士法人マネージャー等のハイクラス求人は非公開比率が高いとされる</li>
-      <li><strong>③ 年収交渉力</strong>: 業界相場の知見 + 過去の成約実績で年収交渉の質が決まるとされる</li>
-      <li><strong>④ アフター対応</strong>: 入社後フォロー (3 ヶ月-1 年) の有無・カウンセリング体制を確認</li>
-      <li><strong>⑤ 求人数 vs 専門性のバランス</strong>: 士業特化型 (専門性) + 総合型 (求人数) の組合せが推奨されるケースが多い</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead>
-          <tr class="bg-gray-100">
-            <th class="border px-3 py-2 text-left">エージェント</th>
-            <th class="border px-3 py-2 text-left">対象</th>
-            <th class="border px-3 py-2 text-left">強み</th>
-            <th class="border px-3 py-2 text-left">特徴 (公開情報)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-blue-50"><td class="border px-3 py-2 font-semibold">⭐ ツインプロ</td><td class="border px-3 py-2">会計士・税理士・簿記資格者</td><td class="border px-3 py-2 font-bold text-blue-700">士業特化・無料キャリア面談</td><td class="border px-3 py-2">MyVision 社運営・士業有資格者向け転職エージェント (公開情報)</td></tr>
-          {services.slice(1).map((s) => (
-            <tr><td class="border px-3 py-2 font-semibold">{s.name}</td><td class="border px-3 py-2">{s.target}</td><td class="border px-3 py-2">{s.strength}</td><td class="border px-3 py-2">{s.point}</td></tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-    <p class="text-xs text-gray-600 mb-6">※比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
-
-    <!-- ツインプロ専用バナー middle (素材 006 経理特化・人物像) -->
-    <div class="my-8 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kansa-houjin-zangyou_middle"
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">利用の流れ 5 ステップとよくある失敗例 5 例</h2>
+      <div class="card-grid">
+        <div class="card"><h3>利用の流れ 5 ステップ</h3><p><strong>STEP 1: エージェント登録 + キャリア面談予約</strong> (公式サイトから 3-5 分で登録可)<br /><strong>STEP 2: キャリア面談 (無料・60-90 分)</strong> 経験・希望条件・タイミング相談<br /><strong>STEP 3: 求人紹介 + 書類添削</strong> 公開 + 非公開求人から選定・職務経歴書添削<br /><strong>STEP 4: 面接対策 + 企業面接</strong> 業界別対策・模擬面接 + 実面接<br /><strong>STEP 5: 内定後の条件交渉 + 入社後フォロー</strong> 年収交渉 + 引継ぎサポート</p></div>
+        <div class="card"><h3>よくある失敗例 + 回避策 5 例</h3><p><strong>失敗 1: 1 社のみ登録で求人数不足</strong> → 2-3 社並行登録 (士業特化 + 総合型) で求人カバレッジ最大化<br /><strong>失敗 2: 担当者と相性が合わず情報不足</strong> → 公式に担当者変更依頼可能 (我慢せず相談)<br /><strong>失敗 3: 年収交渉なしで内定承諾</strong> → 業界相場を事前確認 + エージェントに交渉依頼<br /><strong>失敗 4: 退職前にエージェント未活用</strong> → 在職中相談 OK・並行で情報収集が一般的<br /><strong>失敗 5: アフターケアなしのエージェントで入社後ミスマッチ</strong> → 入社後 3 ヶ月-1 年フォロー有無を事前確認</p></div>
+      </div>
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kansa-houjin-zangyou_middle"
          target="_blank" rel="nofollow"
          data-cta="ツインプロ公式" data-material="banner_006_300x250" data-page-slug="shigyo-tenshoku">
         <img border="0" width="300" height="250" alt="ツインプロ - 経理特化の転職エージェント"
@@ -175,69 +153,24 @@ const services = [
            alt="" loading="lazy" style="position:absolute;left:-9999px" />
       <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kansa-houjin-zangyou_middle_text"
          target="_blank" rel="nofollow"
-         class="block mt-2 text-sm text-blue-700 underline">
+         style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
         会計事務所への転職はツインプロ・無料キャリア面談（PR）
       </a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 利用の流れ (5 ステップ)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>STEP 1: エージェント登録 + キャリア面談予約</strong> (公式サイトから 3-5 分で登録可)</li>
-      <li><strong>STEP 2: キャリア面談 (無料・60-90 分)</strong> 経験・希望条件・タイミング相談</li>
-      <li><strong>STEP 3: 求人紹介 + 書類添削</strong> 公開 + 非公開求人から選定・職務経歴書添削</li>
-      <li><strong>STEP 4: 面接対策 + 企業面接</strong> 業界別対策・模擬面接 + 実面接</li>
-      <li><strong>STEP 5: 内定後の条件交渉 + 入社後フォロー</strong> 年収交渉 + 引継ぎサポート</li>
-    </ul>
-    <p class="text-xs text-gray-600 mb-6">※利用料金は完全無料 (採用企業からの成功報酬モデル)・在職中相談可・退会自由が一般的な利用規約とされています。</p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. よくある失敗例 + 回避策 (5 例)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>失敗 1: 1 社のみ登録で求人数不足</strong> → 2-3 社並行登録 (士業特化 + 総合型) で求人カバレッジ最大化</li>
-      <li><strong>失敗 2: 担当者と相性が合わず情報不足</strong> → 公式に担当者変更依頼可能 (我慢せず相談)</li>
-      <li><strong>失敗 3: 年収交渉なしで内定承諾</strong> → 業界相場を事前確認 + エージェントに交渉依頼</li>
-      <li><strong>失敗 4: 退職前にエージェント未活用</strong> → 在職中相談 OK・並行で情報収集が一般的</li>
-      <li><strong>失敗 5: アフターケアなしのエージェントで入社後ミスマッチ</strong> → 入社後 3 ヶ月-1 年フォロー有無を事前確認</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. よくある質問 (FAQ)</h2>
-    {faq.map((item) => (
-      <>
-        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
-        <p class="mb-3 text-sm" set:html={item.a} />
-      </>
-    ))}
-    {faqExtra.map((item) => (
-      <>
-        <h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3>
-        <p class="mb-3 text-sm" set:html={item.a} />
-      </>
-    ))}
-
-    <div class="bg-green-50 border border-green-300 rounded p-4 mb-6 text-sm">
-      <p class="font-bold mb-2">🎯 ツインプロで無料キャリア面談を予約</p>
-      <p class="text-xs text-gray-700 mb-2">向いている人: 会計士・税理士・簿記資格者で士業特化サポートを希望する方</p>
-      <p class="text-xs text-gray-600">完全無料 / オンライン完結 / 在職中相談可 / 退会自由 / 担当者は士業有資格者 (公開情報)</p>
-    </div>
-
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">
-        会計士・税理士・簿記資格者の転職は <strong>士業特化エージェント (ツインプロ等) + 総合型 (リクルート等) の併用</strong> が推奨されます。士業特化は ① 業界知見の深さ ② 非公開ハイクラス求人 ③ 業界相場ベースの年収交渉力 で強みを持つとされる一方、総合型は ① 求人数 60 万件以上 ② 他業界比較 で補完するとされています。
-      </p>
-      <p class="mb-3">
-        <strong>3 軸併用戦略</strong>: <strong>STEP 1</strong> ツインプロ (士業特化) + マイナビ会計士 or MS-Japan (専門性) + リクルート (求人数) の 3 社並行登録 → <strong>STEP 2</strong> 各担当者との面談で希望条件擦り合わせ → <strong>STEP 3</strong> 3-5 社面接で比較 → <a href="/osusume/" class="underline">転職エージェント全般比較</a> も参考に最終判断。
-      </p>
-      <p class="mb-3">
-        <strong>向いている人</strong>: 会計士・税理士有資格者・簿記 1 級保持者・士業特化サポート希望 / <strong>向かない人</strong>: 士業未経験で他業界転職検討中の方は総合型を優先。
-      </p>
-      <p class="text-xs text-gray-600">
-        ※関連情報: <a href="/recruit-hyouban/" class="underline">リクルートエージェント評判</a> ・<a href="/high-class/" class="underline">ハイクラス転職</a> ・<a href="/nenshu-up/" class="underline">転職 年収アップ</a> もあわせてご参照ください。本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。
-      </p>
-    </section>
-
-    <!-- ツインプロ専用バナー footer (素材 003 高解像度・hero と同じ) -->
-    <div class="my-8 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kansa-houjin-zangyou_footer"
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ &mdash; 3 軸併用戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>&#128204; まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><span>会計士・税理士・簿記資格者の転職は <strong>士業特化エージェント (ツインプロ等) + 総合型 (リクルート等) の併用</strong> が推奨されます。士業特化は ① 業界知見の深さ ② 非公開ハイクラス求人 ③ 業界相場ベースの年収交渉力 で強みを持つとされる一方、総合型は ① 求人数 60 万件以上 ② 他業界比較 で補完するとされています。</span></div><div class="row"><span><strong>3 軸併用戦略</strong>: <strong>STEP 1</strong> ツインプロ (士業特化) + マイナビ会計士 or MS-Japan (専門性) + リクルート (求人数) の 3 社並行登録 → <strong>STEP 2</strong> 各担当者との面談で希望条件擦り合わせ → <strong>STEP 3</strong> 3-5 社面接で比較 → <a href="/osusume/" class="underline">転職エージェント全般比較</a> も参考に最終判断。</span></div><div class="row"><span><strong>向いている人</strong>: 会計士・税理士有資格者・簿記 1 級保持者・士業特化サポート希望 / <strong>向かない人</strong>: 士業未経験で他業界転職検討中の方は総合型を優先。</span></div><div class="row"><span>※関連情報: <a href="/recruit-hyouban/" class="underline">リクルートエージェント評判</a> ・<a href="/high-class/" class="underline">ハイクラス転職</a> ・<a href="/nenshu-up/" class="underline">転職 年収アップ</a> もあわせてご参照ください。本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">向いている人: 会計士・税理士・簿記資格者で士業特化サポートを希望する方</p>
+      </div>
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kansa-houjin-zangyou_footer"
          target="_blank" rel="nofollow"
          data-cta="ツインプロ公式" data-material="banner_003_300x250" data-page-slug="shigyo-tenshoku">
         <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント"
@@ -249,28 +182,36 @@ const services = [
            alt="" loading="lazy" style="position:absolute;left:-9999px" />
       <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kansa-houjin-zangyou_footer_text"
          target="_blank" rel="nofollow"
-         class="block mt-2 text-sm text-blue-700 underline">
+         style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
         後悔しない選択のために、まず無料キャリア面談（PR）
       </a>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」・日本公認会計士協会 (公開情報)・日本税理士会連合会 (公開情報)・JILPT (労働政策研究・研修機構)・各転職エージェント公式サイト</li>
-      <li><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界団体) ・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー (士業転職市場動向変化時は随時更新)</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照</li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (士業転職関連の公開情報整理) ・Expertise (業界統計 + 公的機関 + 業界団体データ) ・Authoritativeness (公認会計士協会・税理士会連合会・厚労省の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 成功保証ではない注記)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報 (公的機関・業界団体・公開情報)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・職業情報提供サイト</li>
-      <li><a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener" class="underline">日本公認会計士協会</a> — 公認会計士登録・業務動向統計 (★435 体現)</li>
-      <li><a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener" class="underline">日本税理士会連合会</a> — 税理士登録・業界統計</li>
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・士業転職統計</li>
-      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・年収/役職別データ</li>
-      <li>各転職エージェント公式サイト — 求人数・対応範囲・特徴の一次情報 (公開情報)</li>
-    </ul>
-  </main>
-</Layout>
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・編集ポリシー・出典</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary>{item.q}</summary><div set:html={item.a} /></details>
+        ))}
+        {faqExtra.map((item) => (
+          <details><summary>{item.q}</summary><div set:html={item.a} /></details>
+        ))}
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>編集ポリシー (E-E-A-T)</h3><p><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」・日本公認会計士協会 (公開情報)・日本税理士会連合会 (公開情報)・JILPT (労働政策研究・研修機構)・各転職エージェント公式サイト<br /><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界団体) ・断定表現を避け推定値・公開情報の整理として記述<br /><strong>更新頻度</strong>: 月次レビュー (士業転職市場動向変化時は随時更新)<br /><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照<br /><strong>E-E-A-T 4 原則</strong>: Experience (士業転職関連の公開情報整理) ・Expertise (業界統計 + 公的機関 + 業界団体データ) ・Authoritativeness (公認会計士協会・税理士会連合会・厚労省の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 成功保証ではない注記)</p></div>
+        <div class="card"><h3>出典・参考情報 + 関連</h3><p><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・職業情報提供サイト<br /><a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener" class="underline">日本公認会計士協会</a> — 公認会計士登録・業務動向統計 (★435 体現)<br /><a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener" class="underline">日本税理士会連合会</a> — 税理士登録・業界統計<br /><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・士業転職統計<br /><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・年収/役職別データ<br />各転職エージェント公式サイト — 求人数・対応範囲・特徴の一次情報 (公開情報)<br />関連: <a href="/recruit-hyouban/">リクルート評判</a> / <a href="/high-class/">ハイクラス転職</a> / <a href="/nenshu-up/">年収アップ</a> / <a href="/osusume/">転職エージェント全般比較</a></p></div>
+      </div>
+      <p class="compare-note">&#8251; 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+    </div>
+  </section>
+</RichLayout>
