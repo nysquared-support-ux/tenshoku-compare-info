@@ -1,135 +1,212 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+/**
+ * 40代転職リベンジ LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-40dai-revenge-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = '40代転職リベンジ｜失敗からの復活ガイド (公開情報・PR)';
 const description = '40代で転職に失敗した方のリベンジ転職を、市場動向・5ステップ・成功事例・注意点で整理した情報提供記事です（PR・アフィリエイト広告を含みます）。個別判断は各エージェントへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '40代転職リベンジ' },
+];
 ---
 
-<Layout title={title} description={description}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="40dai-revenge" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 40代転職リベンジ
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      40代転職リベンジ｜失敗からの復活を整理 (2026年版)
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトはエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職保証・効果保証ではなく、個別案件の判断は<strong>必ず各エージェントへご相談ください</strong>。
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">40 代 転職 / リベンジ転職ガイド</span>
+      <h1 id="fv-h1">
+        <span class="accent">40代転職リベンジ</span><br />
+        失敗からの復活を整理 (2026年版)
+      </h1>
+      <p class="lede">
+        40代で転職に失敗した経験は、多くの方が抱える悩みとされています。しかし、リベンジ転職は決して不可能ではないと公開情報で説明されています。本記事では、リベンジ転職の市場動向・5 ステップ・成功事例・注意点を整理します。個別案件の最終判断は各エージェントへご相談ください。
+      </p>
+      <ul class="fv-bullets">
+        <li>40代転職リベンジが可能な背景 4 点を整理</li>
+        <li>成功させる 5 ステップを体系化</li>
+        <li>後悔しない 3 つの注意点を明示</li>
+        <li>厚生労働省 教育訓練給付制度等 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-02</span>
+        <span><b>最終更新</b> 2026-05-02</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-02 / 公開情報の整理であり、特定サービスを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
+  <!-- ============ SECTION 01 リベンジ可能な背景 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">40代転職リベンジが可能な背景</h2>
+      <p class="section-lede">40代で転職に失敗した経験があっても、以下の市場背景からリベンジ転職は不可能ではないとされています。</p>
 
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p>40代で転職に失敗した経験は、多くの方が抱える悩みとされています。しかし、リベンジ転職は決して不可能ではないと公開情報で説明されています。</p>
-      <p class="mt-2">本記事では、リベンジ転職の市場動向・5 ステップ・成功事例・注意点を整理します。個別案件の最終判断は各エージェントへご相談ください。</p>
-    </section>
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">背景 1</span>
+          <h4>少子高齢化による人手不足</h4>
+          <p>40代の経験豊富な人材へのニーズが高まっているとされています。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">背景 2</span>
+          <h4>多様化する働き方</h4>
+          <p>副業・リモートワーク・フリーランスなど選択肢が増加。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">背景 3</span>
+          <h4>業界横断の専門性需要</h4>
+          <p>マネジメント経験・特定スキルが活かせる転職機会。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">背景 4</span>
+          <h4>40代特化エージェント増加</h4>
+          <p>ミドル層特化のサービスが充実してきている。</p>
+        </article>
+      </div>
 
-    <BannerAB pageSlug="40dai-revenge" position="hero" />
+      <p class="compare-note">※ 本記事は厚生労働省「労働経済分析レポート」(40代転職市場動向) + 各転職エージェント公式サイトの公開情報を整理した一般論であり、断定的事実ではありません。個別状況により大きく異なります。</p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 40代転職リベンジが可能な背景</h2>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>市場背景を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>少子高齢化による人手不足</strong>: 40代の経験豊富な人材へのニーズが高まっているとされています</li>
-      <li><strong>多様化する働き方</strong>: 副業・リモートワーク・フリーランスなど選択肢が増加</li>
-      <li><strong>業界横断の専門性需要</strong>: マネジメント経験・特定スキルが活かせる転職機会</li>
-      <li><strong>40代特化エージェント増加</strong>: ミドル層特化のサービスが充実してきている</li>
-    </ul>
+  <!-- ============ SECTION 02 成功 5 ステップ ============ -->
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">リベンジ転職を成功させる5ステップ</h2>
+      <p class="section-lede">失敗からの復活には、以下 5 ステップが推奨されています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Step 1-2: 失敗原因の徹底分析 / 市場価値の再評価</h3>
+          <p>前職での失敗・退職理由を振り返り、業界選定ミスか・スキル不足か・人間関係かを客観的に整理。40代の市場価値は「経験」「マネジメント」「専門性」の 3 軸で評価される傾向。エージェントの無料相談で客観評価を得ることが推奨されます。</p>
+        </div>
+        <div class="card">
+          <h3>Step 3-4: スキルアップ / 40代特化エージェント活用</h3>
+          <p>不足スキルは資格取得・オンライン講座・社内副業等で補強。厚生労働省の <a href="https://www.kyufu.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">教育訓練給付金</a> も活用検討推奨。ミドル層特化エージェント (MyVision・TwinPro・Unizon IT 等) で 40代向け非公開求人や経験を活かせるポジション紹介が期待できるとされています。</p>
+        </div>
+        <div class="card">
+          <h3>Step 5: 面接対策と長期戦略</h3>
+          <p>失敗経験を「学び」として語る準備、5-10年後のキャリアビジョンを示すことが面接で重要視される傾向があるとされています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">2. リベンジ転職を成功させる5ステップ</h2>
+  <!-- ============ SECTION 03 活用できるエージェント ============ -->
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">40代リベンジ転職に活用できるエージェント</h2>
+      <p class="section-lede">本サイトでは以下のエージェントを公開情報で整理しています。各エージェントの専門領域と 40代リベンジ転職への適合性を確認してください。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>MyVision / TechGo</h3>
+          <p>MyVision はコンサル業界専門 (ハイクラス志向)。TechGo は IT・エンジニア特化。<a href="/myvision/">MyVision 詳細</a> / <a href="/techgo/">TechGo 詳細</a></p>
+        </div>
+        <div class="card">
+          <h3>TwinPro / Unizon IT</h3>
+          <p>TwinPro はミドル層特化 (40代得意)。Unizon IT は IT 業界特化。<a href="/twin-pro/">TwinPro 詳細</a> / <a href="/unizon-it/">Unizon IT 詳細</a></p>
+        </div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
+          <span>エージェント整理を踏まえ TechGo 公式サイトを確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 1: 失敗原因の徹底分析</h3>
-    <p class="mb-3 text-sm">
-      前職での失敗・退職理由を振り返り、業界選定ミスか・スキル不足か・人間関係かを客観的に整理することが推奨されています。
-    </p>
+  <!-- ============ SECTION 04 注意点 + まとめ ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">リベンジ転職で「後悔しない」3つの注意点</h2>
+      <div class="counter-box">
+        <h3>📌 後悔しない要点 (公開情報整理)</h3>
+        <div class="row"><b>焦らない</b><span>短期決戦よりも 6-12 ヶ月の長期戦略が推奨</span></div>
+        <div class="row"><b>条件妥協と本質追求のバランス</b><span>年収だけでなく成長環境・働き方を重視</span></div>
+        <div class="row"><b>業界・職種の極端な変更は慎重に</b><span>経験を活かせる隣接業界が成功率高い傾向</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">※ まとめ: 40代リベンジ転職は ①失敗分析 ②市場価値再評価 ③スキル補強 ④特化エージェント活用 ⑤長期戦略 の 5 ステップで実現可能性が高まると公開情報で説明されています。各エージェントの無料相談から始めることが推奨されます。<br /><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職保証・効果保証ではなく、特定サービスを推奨するものでもありません。</p>
+      </div>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 2: 自己分析と市場価値の再評価</h3>
-    <p class="mb-3 text-sm">
-      40代の市場価値は「経験」「マネジメント」「専門性」の3軸で評価される傾向があるとされています。エージェントの無料相談で客観評価を得ることが推奨されます。
-    </p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は 2026 年 5 月時点の情報をもとに作成。最新の市場動向・サービス内容は各公式サイトでご確認ください。最終確認日: 2026-05-02。</p>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 3: スキルアップ・リスキリング</h3>
-    <p class="mb-3 text-sm">
-      不足スキルがある場合、資格取得・オンライン講座・社内副業等で補強する期間を設けることが推奨されています。厚生労働省の <a href="https://www.kyufu.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">教育訓練給付金</a> も活用検討推奨です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 4: 40代特化エージェント活用</h3>
-    <p class="mb-3 text-sm">
-      ミドル層特化エージェント (MyVision・TwinPro・Unizon IT等) では、40代向け非公開求人や経験を活かせるポジション紹介が期待できるとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Step 5: 面接対策と長期戦略</h3>
-    <p class="mb-3 text-sm">
-      失敗経験を「学び」として語る準備、5-10年後のキャリアビジョンを示すことが面接で重要視される傾向があるとされています。
-    </p>
-
-    <BannerAB pageSlug="40dai-revenge" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. リベンジ転職で「後悔しない」3つの注意点</h2>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>焦らない</strong>: 短期決戦よりも 6-12 ヶ月の長期戦略が推奨</li>
-      <li><strong>条件妥協と本質追求のバランス</strong>: 年収だけでなく成長環境・働き方を重視</li>
-      <li><strong>業界・職種の極端な変更は慎重に</strong>: 経験を活かせる隣接業界が成功率高い傾向</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. 40代リベンジ転職に活用できるエージェント</h2>
-
-    <p class="mb-3 text-sm">
-      本サイトでは以下のエージェントを公開情報で整理しています。各エージェントの専門領域と 40代リベンジ転職への適合性を確認してください。
-    </p>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="/myvision/" class="underline">MyVision</a> — コンサル業界専門 (ハイクラス志向)</li>
-      <li><a href="/techgo/" class="underline">TechGo</a> — IT・エンジニア特化</li>
-      <li><a href="/twin-pro/" class="underline">TwinPro</a> — ミドル層特化 (40代得意)</li>
-      <li><a href="/unizon-it/" class="underline">Unizon IT</a> — IT 業界特化</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">5. よくある質問（FAQ）</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 40代でも本当に転職できますか？</h3>
-    <p class="mb-3 text-sm">
-      公開情報では、40代の転職は経験・専門性を評価する求人が増加傾向にあるとされています。失敗経験を活かしたリベンジ転職も実現事例が公開されています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q2. リベンジ転職の準備期間はどのくらい？</h3>
-    <p class="mb-3 text-sm">
-      公開情報の一般論では、6-12 ヶ月の準備期間を推奨する声が多いとされています。短期決戦よりも市場分析・スキル補強を重視する戦略が有効と説明されています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q3. 40代転職で失敗しないために最も重要なことは？</h3>
-    <p class="mb-3 text-sm">
-      失敗原因の客観的分析と、エージェントによる市場価値の再評価が重要視される傾向があるとされています。
-    </p>
-
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p>40代リベンジ転職は、①失敗分析 ②市場価値再評価 ③スキル補強 ④特化エージェント活用 ⑤長期戦略 の5ステップで実現可能性が高まると公開情報で説明されています。各エージェントの無料相談から始めることが推奨されます。</p>
-    </section>
-
-    <BannerAB pageSlug="40dai-revenge" position="footer" />
-
-
-    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li><a href="https://www.kyufu.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省 教育訓練給付制度</a></li>
-      <li>各転職エージェント公式サイト (MyVision / TechGo / TwinPro / Unizon IT)</li>
-      <li>厚生労働省「労働経済分析レポート」(40代転職市場動向)</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">
-      ※本記事は2026年5月時点の情報をもとに作成しています。最新の市場動向・サービス内容は各公式サイトでご確認ください。
-    </p>
-  </main>
-</Layout>
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事</h2>
+      <div class="faq">
+        <details>
+          <summary>Q1. 40代でも本当に転職できますか？</summary>
+          <div>公開情報では、40代の転職は経験・専門性を評価する求人が増加傾向にあるとされています。失敗経験を活かしたリベンジ転職も実現事例が公開されています。</div>
+        </details>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Q2. リベンジ転職の準備期間はどのくらい？</summary>
+          <div>公開情報の一般論では、6-12 ヶ月の準備期間を推奨する声が多いとされています。短期決戦よりも市場分析・スキル補強を重視する戦略が有効と説明されています。</div>
+        </details>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Q3. 40代転職で失敗しないために最も重要なことは？</summary>
+          <div>失敗原因の客観的分析と、エージェントによる市場価値の再評価が重要視される傾向があるとされています。</div>
+        </details>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>関連 Spoke LP</h3>
+          <p>
+            <a href="/40dai-koukai/">40代後悔回避ガイド</a> /
+            <a href="/myvision/">MyVision</a> /
+            <a href="/techgo/">TechGo</a> /
+            <a href="/twin-pro/">TwinPro</a> /
+            <a href="/unizon-it/">Unizon IT</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>公的相談窓口・支援機関</h3>
+          <p>
+            <a href="https://www.kyufu.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 教育訓練給付制度</a> /
+            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>
+          </p>
+        </div>
+      </div>
+      <p class="compare-note">※ 出典: 厚生労働省 教育訓練給付制度・各転職エージェント公式サイト (MyVision / TechGo / TwinPro / Unizon IT)・厚生労働省「労働経済分析レポート」(40代転職市場動向)。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。</p>
+    </div>
+  </section>
+</RichLayout>

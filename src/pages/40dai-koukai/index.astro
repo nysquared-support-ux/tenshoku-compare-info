@@ -1,98 +1,220 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+/**
+ * 40代転職で後悔しないために LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-40dai-koukai-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = '40代転職で死ぬほど後悔しないために｜失敗パターンと回避策（PR）';
 const description = '40代転職で「死ぬほど後悔」する典型 5 パターンと、後悔を回避するための準備・業者選び・面接対策を整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '40代転職で後悔しない' },
+];
 ---
 
-<Layout title={title} description={description}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="40dai-koukai" />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 40代転職で後悔しない
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      40代転職で死ぬほど後悔しないために｜失敗 5 パターンと回避策
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。情報提供を目的とし、特定サービスの推奨ではありません。個別判断は各エージェントへご相談ください。
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">40 代 転職 / 後悔回避ガイド</span>
+      <h1 id="fv-h1">
+        40代転職で<span class="accent">死ぬほど後悔しない</span>ために<br />
+        失敗 5 パターンと回避策
+      </h1>
+      <p class="lede">
+        40代転職での「死ぬほど後悔」は、典型的な 5 パターンに分類されるとされています。事前回避策を知ることで後悔リスクを大幅に下げられます。情報提供を目的とし、特定サービスの推奨ではありません。個別判断は各エージェントへご相談ください。
+      </p>
+      <ul class="fv-bullets">
+        <li>後悔する 5 パターンを類型化</li>
+        <li>後悔回避の 5 つの準備を整理</li>
+        <li>後悔回避に役立つエージェントを公開情報で整理</li>
+        <li>厚生労働省「労働経済分析レポート」出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-02</span>
+        <span><b>最終更新</b> 2026-05-02</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 4 分</span>
+      </div>
     </div>
+  </section>
 
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-02 / 運営者: <a href="/operator-info/" class="underline">NY-squared</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
+  <!-- ============ SECTION 01 後悔 5 パターン ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">40代転職で「死ぬほど後悔」する5パターン</h2>
+      <p class="section-lede">40代転職での後悔は、以下の典型 5 パターンに分類されるとされています。</p>
 
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p>40代転職での「死ぬほど後悔」は、典型的な5パターンに分類されるとされています。事前回避策を知ることで後悔リスクを大幅に下げられます。</p>
-    </section>
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">パターン 1</span>
+          <h4>年収ダウン</h4>
+          <p>焦って決めた結果、前職より年収減で家計圧迫。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">パターン 2</span>
+          <h4>カルチャーミスマッチ</h4>
+          <p>社風が合わず短期離職 → 履歴書傷。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">パターン 3</span>
+          <h4>業界変更失敗</h4>
+          <p>経験を活かせない異業界で評価されない。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">パターン 4</span>
+          <h4>マネジメント期待値ズレ</h4>
+          <p>プレイヤー希望でも管理職任され消耗。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">パターン 5</span>
+          <h4>身体的・精神的負荷</h4>
+          <p>通勤・残業・人間関係で健康悪化。</p>
+        </article>
+      </div>
 
-    <BannerAB pageSlug="40dai-koukai" position="hero" />
+      <p class="compare-note">※ 本記事は厚生労働省「労働経済分析レポート」(40代転職市場) + 各転職エージェント公式サイトの公開情報を整理した一般論であり、断定的事実ではありません。個別状況により大きく異なります。</p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 40代転職で「死ぬほど後悔」する5パターン</h2>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>後悔パターンを踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>年収ダウン</strong>: 焦って決めた結果、前職より年収減で家計圧迫</li>
-      <li><strong>カルチャーミスマッチ</strong>: 社風が合わず短期離職 → 履歴書傷</li>
-      <li><strong>業界変更失敗</strong>: 経験を活かせない異業界で評価されない</li>
-      <li><strong>マネジメント期待値ズレ</strong>: プレイヤー希望でも管理職任され消耗</li>
-      <li><strong>身体的・精神的負荷</strong>: 通勤・残業・人間関係で健康悪化</li>
-    </ol>
+  <!-- ============ SECTION 02 後悔回避の 5 つの準備 ============ -->
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">後悔回避の5つの準備</h2>
+      <p class="section-lede">後悔リスクを下げるための準備は、以下 5 点が推奨されています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>自己分析の徹底 / 市場価値の客観評価</h3>
+          <p>前職の不満要因と「本当に求めるもの」を明確化することが推奨されています。複数のエージェントで無料相談を受け、客観的市場価値を確認することが推奨されています。</p>
+        </div>
+        <div class="card">
+          <h3>業界・職種の慎重な選定 / 条件の優先順位整理</h3>
+          <p>経験を活かせる隣接業界が成功率高い傾向とされています。年収・働き方・成長環境・通勤の 4 軸で優先順位を明確化することが推奨されています。</p>
+        </div>
+        <div class="card">
+          <h3>内定後の最終確認</h3>
+          <p>内定後も入社前に追加質問・現場社員との面談を依頼することが推奨されています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 後悔回避の5つの準備</h2>
+  <!-- ============ SECTION 03 後悔回避に役立つエージェント ============ -->
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">後悔回避に役立つエージェント</h2>
+      <p class="section-lede">本サイトでは公開情報をもとに以下のエージェントを整理しています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>MyVision</h3>
+          <p>コンサル業界専門。<a href="/myvision/">詳細</a></p>
+        </div>
+        <div class="card">
+          <h3>TwinPro</h3>
+          <p>ミドル層特化 (40代)。<a href="/twin-pro/">詳細</a></p>
+        </div>
+        <div class="card">
+          <h3>40代リベンジ転職ガイド</h3>
+          <p>失敗からの復活。<a href="/40dai-revenge/">詳細</a></p>
+        </div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
+          <span>エージェント整理を踏まえ TechGo 公式サイトを確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">2-1. 自己分析の徹底</h3>
-    <p class="mb-3 text-sm">前職の不満要因と「本当に求めるもの」を明確化することが推奨されています。</p>
+  <!-- ============ SECTION 04 注意点 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">後悔を避けるための注意点</h2>
+      <div class="counter-box">
+        <h3>📌 後悔回避の要点 (公開情報整理)</h3>
+        <div class="row"><b>焦らない</b><span>40代転職は準備期間 6-12 ヶ月 + 適切なエージェント活用で成功率が高まる傾向</span></div>
+        <div class="row"><b>早期離職リスク</b><span>後悔した場合も早期離職は履歴書に影響・入社後 6 ヶ月は粘り強く働きながら次の準備</span></div>
+        <div class="row"><b>年収ダウン回避</b><span>複数のエージェントで市場価値を確認 + 候補を絞らずに条件交渉</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職保証・効果保証ではなく、特定サービスを推奨するものでもありません。個別案件の判断は必ず各エージェントへご相談ください。</p>
+      </div>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">2-2. 市場価値の客観評価</h3>
-    <p class="mb-3 text-sm">複数のエージェントで無料相談を受け、客観的市場価値を確認することが推奨されています。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。最終確認日: 2026-05-02。</p>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">2-3. 業界・職種の慎重な選定</h3>
-    <p class="mb-3 text-sm">経験を活かせる隣接業界が成功率高い傾向とされています。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-4. 条件の優先順位整理</h3>
-    <p class="mb-3 text-sm">年収・働き方・成長環境・通勤の4軸で優先順位を明確化することが推奨されています。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">2-5. 内定後の最終確認</h3>
-    <p class="mb-3 text-sm">内定後も入社前に追加質問・現場社員との面談を依頼することが推奨されています。</p>
-
-    <BannerAB pageSlug="40dai-koukai" position="middle" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 後悔回避に役立つエージェント</h2>
-
-    <p class="mb-3 text-sm">本サイトでは公開情報をもとに以下のエージェントを整理しています:</p>
-
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="/myvision/" class="underline">MyVision</a> — コンサル業界専門</li>
-      <li><a href="/twin-pro/" class="underline">TwinPro</a> — ミドル層特化 (40代)</li>
-      <li><a href="/40dai-revenge/" class="underline">40代リベンジ転職ガイド</a> — 失敗からの復活</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. よくある質問（FAQ）</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q1. 40代転職の成功率は？</h3>
-    <p class="mb-3 text-sm">
-      公開情報では「準備期間 6-12 ヶ月 + 適切なエージェント活用」で成功率が高まる傾向とされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q2. 後悔した場合のリカバリーは？</h3>
-    <p class="mb-3 text-sm">
-      早期離職は履歴書に影響するため、入社後 6 ヶ月は粘り強く働きながら次の準備を進める方法が一般的とされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">Q3. 年収ダウンを避けるには？</h3>
-    <p class="mb-3 text-sm">
-      複数のエージェントで市場価値を確認 + 候補を絞らずに条件交渉することが推奨されています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">出典・参考情報</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-1">
-      <li>各転職エージェント公式サイト</li>
-      <li>厚生労働省「労働経済分析レポート」(40代転職市場)</li>
-    </ul>
-  </main>
-</Layout>
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事</h2>
+      <div class="faq">
+        <details>
+          <summary>Q1. 40代転職の成功率は？</summary>
+          <div>公開情報では「準備期間 6-12 ヶ月 + 適切なエージェント活用」で成功率が高まる傾向とされています。</div>
+        </details>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Q2. 後悔した場合のリカバリーは？</summary>
+          <div>早期離職は履歴書に影響するため、入社後 6 ヶ月は粘り強く働きながら次の準備を進める方法が一般的とされています。</div>
+        </details>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Q3. 年収ダウンを避けるには？</summary>
+          <div>複数のエージェントで市場価値を確認 + 候補を絞らずに条件交渉することが推奨されています。</div>
+        </details>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>関連 Spoke LP</h3>
+          <p>
+            <a href="/40dai-revenge/">40代リベンジ転職ガイド</a> /
+            <a href="/myvision/">MyVision</a> /
+            <a href="/twin-pro/">TwinPro</a> /
+            <a href="/30dai/">30 代向け転職エージェント</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>公的相談窓口・支援機関</h3>
+          <p>
+            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> /
+            <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a>
+          </p>
+        </div>
+      </div>
+      <p class="compare-note">※ 出典: 各転職エージェント公式サイト・厚生労働省「労働経済分析レポート」(40代転職市場)。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。本記事は転職保証・効果保証ではなく、特定サービスを推奨するものでもありません。</p>
+    </div>
+  </section>
+</RichLayout>
