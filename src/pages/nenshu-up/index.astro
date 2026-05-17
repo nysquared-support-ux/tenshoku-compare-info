@@ -1,14 +1,21 @@
 ---
 /**
- * 転職 年収アップ LP (★326 DRY + Write 本格書換)
- * NEW-24 [x0b5HWxE2f] 2026-05-11
+ * 転職 年収アップ LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 4種 (Article/Breadcrumb/FAQPage/ItemList) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-nenshu-up-before-rich/
  */
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
-import BannerAB from '../../components/BannerAB.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
 const title = '転職 年収アップ｜業界別の上昇率・転職エージェント活用 5 ステップ・年収交渉のコツ (2026年版・PR)';
 const description = '転職で年収アップを目指す方へ。業界別の年収アップ率・転職エージェント活用 5 ステップ・年収交渉 4 段階・職種別の上昇相場・転職タイミングを公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '転職 年収アップ' },
+];
 
 const articleSchema = { '@context': 'https://schema.org', '@type': 'Article', headline: title, description, datePublished: '2026-05-11', dateModified: '2026-05-11', author: { '@type': 'Organization', name: 'NY-squared', url: 'https://nysquared.com/' }, publisher: { '@type': 'Organization', name: 'NY-squared' }, articleSection: '転職年収アップ', about: '転職活動における年収アップ戦略と業界別相場' };
 
@@ -25,7 +32,7 @@ const faq = [
   { q: '年収アップに効果的な資格は?', a: '一般的に ① 業界標準資格 (MBA/CFP/PMP/中小企業診断士) ② 専門スキル (DX/AI/データ分析/英語 TOEIC 850+) ③ マネジメント経験 (10 名以上のチームリード) の 3 要素が年収アップに効果的とされています。' },
 ];
 
-const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') } })) };
+const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
 
 const industries = [
   { name: 'IT/Web 業界', range: '+15-25%', feature: 'DX 需要拡大・エンジニア人材不足で高待遇案件多い' },
@@ -35,142 +42,206 @@ const industries = [
   { name: 'サービス業', range: '+0-10%', feature: '横ばい傾向・マネジメント職以外の年収アップ難しい' },
 ];
 
-// ★441-EXT 強化: 業界別 ItemList 構造化 (A3 改善期待)
 const itemListSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
+  '@context': 'https://schema.org', '@type': 'ItemList',
   'name': '転職年収アップ率 業界別比較 (5 業界)',
   'description': '業界別の転職時年収アップ率 (各エージェント公開統計の整理・参考値)',
   'itemListOrder': 'https://schema.org/ItemListOrderDescending',
   'itemListElement': industries.map((ind, i) => ({
-    '@type': 'ListItem',
-    'position': i + 1,
-    'item': {
-      '@type': 'Thing',
-      'name': ind.name,
-      'description': `アップ率 ${ind.range}・${ind.feature}`,
-      'additionalProperty': {
-        '@type': 'PropertyValue',
-        'name': '転職時年収アップ率',
-        'value': ind.range,
-      },
-    },
+    '@type': 'ListItem', 'position': i + 1,
+    'item': { '@type': 'Thing', 'name': ind.name, 'description': `アップ率 ${ind.range}・${ind.feature}`, 'additionalProperty': { '@type': 'PropertyValue', 'name': '転職時年収アップ率', 'value': ind.range } },
   })),
 };
 ---
 
-<Layout title={title} description={description}>
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="nenshu-up" />
-    <nav class="text-sm text-gray-500 mb-4"><a href="/" class="underline">トップ</a> &gt; 転職 年収アップ</nav>
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">転職 年収アップ｜業界別の上昇率・転職エージェント活用 5 ステップ・年収交渉のコツ</h1>
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm"><strong>📢 PR表示</strong>: 本ページはアフィリエイト広告 (PR) を含みます。情報提供を目的とし、特定エージェントの推奨ではありません。本記事は年収アップ保証ではなく、個別案件は各エージェントへご相談ください。</div>
-    <p class="text-sm text-gray-600 mb-6">最終確認日: 2026-05-11 / 運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a></p>
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+  </Fragment>
 
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論</strong>: 転職で年収アップを実現する人の割合は約 40-50% (各エージェント公開統計)。年収アップの目安は現年収 + 10-20% で、業界別では IT/Web +15-25%・コンサル +20-30% が高い傾向、製造/サービス業は横ばい傾向とされています。</p>
-      <p class="mt-2">本記事では業界別アップ率・転職エージェント活用 5 ステップ・年収交渉 4 段階・年収アップに効果的な資格を整理します。</p>
-    </section>
-
-    <BannerAB pageSlug="nenshu-up" position="hero" />
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">1. 転職で年収アップする現実 (一般統計の整理)</h2>
-    <p class="mb-3 text-sm">一般的に転職経験者の約 <strong>40-50% が転職時に年収アップ</strong>を実現しているとされています。残りは横ばい (30-40%)・年収ダウン (10-20%) の内訳が一般的とされています。年収アップ率は業界・職種・タイミング・市場価値で大きく変動します。</p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. 年収アップの目安 (年代別)</h3>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>25-29 歳</strong>: +15-25% (若手の市場価値拡大期)</li>
-      <li><strong>30-34 歳</strong>: +10-20% (専門性確立期)</li>
-      <li><strong>35-39 歳</strong>: +5-15% (専門職継続 or マネジメント転向)</li>
-      <li><strong>40-49 歳</strong>: +0-10% (マネジメント職以外は横ばい)</li>
-      <li><strong>50 歳以降</strong>: -10〜+10% (専門性 + 業界人脈で個別差大)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">2. 業界別の年収アップ率 (5 業界比較)</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-sm">
-        <thead><tr class="bg-gray-100"><th class="border px-3 py-2 text-left">業界</th><th class="border px-3 py-2 text-left">アップ率</th><th class="border px-3 py-2 text-left">特徴 (公開情報)</th></tr></thead>
-        <tbody>{industries.map((i) => (<tr><td class="border px-3 py-2 font-semibold whitespace-nowrap">{i.name}</td><td class="border px-3 py-2 font-bold text-blue-700">{i.range}</td><td class="border px-3 py-2">{i.feature}</td></tr>))}</tbody>
-      </table>
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">転職 年収アップ / 業界別上昇率 + 年収交渉</span>
+      <h1 id="fv-h1">
+        転職 <span class="accent">年収アップ</span><br />
+        業界別の上昇率・活用 5 ステップ・交渉のコツ
+      </h1>
+      <p class="lede">
+        転職で年収アップを実現する人の割合は約 40-50% (各エージェント公開統計)。年収アップの目安は現年収 + 10-20% で、業界別では IT/Web +15-25%・コンサル +20-30% が高い傾向、製造/サービス業は横ばい傾向とされています。本記事では業界別アップ率・転職エージェント活用 5 ステップ・年収交渉 4 段階・年収アップに効果的な資格を整理します。
+      </p>
+      <ul class="fv-bullets">
+        <li>転職で年収アップする現実 (一般統計の整理)</li>
+        <li>業界別の年収アップ率 (5 業界比較)</li>
+        <li>転職エージェント活用 5 ステップ + 年収交渉 4 段階</li>
+        <li>厚労省・JILPT・総務省統計局・国民生活センター 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-11</span>
+        <span><b>最終更新</b> 2026-05-11</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
     </div>
-    <p class="text-xs text-gray-600 mb-6">※業界別アップ率は各エージェント公開統計の整理 (参考値)。</p>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">3. 転職エージェント活用 5 ステップ (年収アップ最大化)</h2>
-    <ol class="list-decimal pl-5 mb-4 text-sm space-y-2">
-      <li><strong>STEP 1: 市場価値診断</strong> (1 週間)・ミイダス等で現在の市場価値把握 + 業界相場調査</li>
-      <li><strong>STEP 2: 転職エージェント 2-3 社並行登録</strong> (1 日)・<a href="/osusume/" class="underline">転職エージェント比較</a> 参照</li>
-      <li><strong>STEP 3: キャリア面談 + 求人マッチング</strong> (1-2 ヶ月)</li>
-      <li><strong>STEP 4: 3-5 社面接 + 内定獲得</strong> (2-3 ヶ月)・複数内定で交渉力強化</li>
-      <li><strong>STEP 5: 年収交渉 + 入社決定</strong> (1 ヶ月)・エージェント経由の最終交渉</li>
-    </ol>
+  <!-- ============ SECTION 01 年収アップの現実 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職で年収アップする現実 (一般統計の整理)</h2>
+      <p class="section-lede">転職経験者の約 40-50% が転職時に年収アップを実現しているとされています。残りは横ばい (30-40%)・年収ダウン (10-20%) の内訳が一般的とされています。</p>
 
-    <BannerAB pageSlug="nenshu-up" position="middle" />
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">25-29 歳</span>
+          <h4>+15-25%</h4>
+          <p>若手の市場価値拡大期。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">30-34 歳</span>
+          <h4>+10-20%</h4>
+          <p>専門性確立期。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">35-39 歳</span>
+          <h4>+5-15%</h4>
+          <p>専門職継続 or マネジメント転向。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">40 歳以降</span>
+          <h4>+0-10% / -10〜+10%</h4>
+          <p>40-49 歳はマネジメント職以外横ばい。50 歳以降は専門性 + 業界人脈で個別差大。</p>
+        </article>
+      </div>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">4. 年収交渉 4 段階のコツ</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>段階 1: 事前準備</strong>: 業界相場 + 現年収 + 希望年収の根拠を整理</li>
-      <li><strong>段階 2: 求人選定時</strong>: 求人票の年収範囲を確認・希望と乖離大きい場合は応募見送り</li>
-      <li><strong>段階 3: 面接段階</strong>: 金額提示は最終面接まで控える・能力/実績アピールに集中</li>
-      <li><strong>段階 4: 内定後の最終交渉</strong>: エージェント経由で希望年収提示・年収以外の条件 (賞与/SO/リモート) も含める</li>
-    </ul>
+      <p class="compare-note">※ 本記事は <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> 賃金構造基本統計調査 + <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.stat.go.jp/" target="_blank" rel="noopener">総務省統計局</a> 労働力調査 + <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> + 各転職エージェント公開統計を整理した一般論であり、断定的事実ではありません。個別状況により大きく異なります。</p>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">5. 年収アップに効果的な 3 要素</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>① 業界標準資格</strong>: MBA・CFP・PMP・中小企業診断士・税理士・公認会計士・社労士</li>
-      <li><strong>② 専門スキル</strong>: DX・AI・データ分析・英語 (TOEIC 850+)・プログラミング</li>
-      <li><strong>③ マネジメント経験</strong>: 10 名以上のチームリード・予算管理・組織変革実績</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">6. やりがちな NG パターン (5 例)</h2>
-    <div class="overflow-x-auto mb-4">
-      <table class="border-collapse w-full text-xs sm:text-sm">
-        <thead><tr class="bg-gray-100"><th class="border px-2 py-2 text-left">#</th><th class="border px-2 py-2 text-left">NG</th><th class="border px-2 py-2 text-left">改善策</th></tr></thead>
-        <tbody>
-          <tr><td class="border px-2 py-2 font-semibold">1</td><td class="border px-2 py-2">面接段階で年収交渉</td><td class="border px-2 py-2">内定後の最終交渉でエージェント経由</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">2</td><td class="border px-2 py-2">業界相場を調べずに交渉</td><td class="border px-2 py-2">事前に業界相場 + 現年収を整理</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">3</td><td class="border px-2 py-2">1 社のみで判断</td><td class="border px-2 py-2">3-5 社並行で複数内定獲得</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">4</td><td class="border px-2 py-2">直接交渉で心象悪化</td><td class="border px-2 py-2">エージェント経由で交渉依頼</td></tr>
-          <tr><td class="border px-2 py-2 font-semibold">5</td><td class="border px-2 py-2">年収のみ重視で他条件無視</td><td class="border px-2 py-2">賞与/SO/リモート/勤務地も総合判断</td></tr>
-        </tbody>
-      </table>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>年収アップ統計を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">7. よくある質問 (FAQ)</h2>
-    {faq.map((item) => (<><h3 class="text-lg font-bold mt-4 mb-2">Q. {item.q}</h3><p class="mb-3 text-sm" set:html={item.a} /></>))}
+  <!-- ============ SECTION 02 活用 5 ステップ + 交渉 4 段階 ============ -->
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">転職エージェント活用 5 ステップと年収交渉 4 段階</h2>
+      <p class="section-lede">年収アップを最大化する活用フロー + 交渉のコツを整理します。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>転職エージェント活用 5 ステップ</h3>
+          <p>STEP 1 市場価値診断 (1 週間・ミイダス等で現市場価値 + 業界相場調査) / STEP 2 転職エージェント 2-3 社並行登録 (1 日・<a href="/osusume/">転職エージェント比較</a> 参照) / STEP 3 キャリア面談 + 求人マッチング (1-2 ヶ月) / STEP 4 3-5 社面接 + 内定獲得 (2-3 ヶ月・複数内定で交渉力強化) / STEP 5 年収交渉 + 入社決定 (1 ヶ月・エージェント経由の最終交渉)</p>
+        </div>
+        <div class="card">
+          <h3>年収交渉 4 段階のコツ</h3>
+          <p>段階 1 事前準備 (業界相場 + 現年収 + 希望年収の根拠を整理) / 段階 2 求人選定時 (求人票の年収範囲を確認・乖離大きい場合は応募見送り) / 段階 3 面接段階 (金額提示は最終面接まで控える・能力/実績アピールに集中) / 段階 4 内定後の最終交渉 (エージェント経由で希望年収提示・賞与/SO/リモート等も含める)</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-gray-50 border border-gray-200 rounded p-4 text-sm">
-      <h2 class="text-lg font-bold mb-2">まとめ</h2>
-      <p class="mb-3">転職で年収アップを実現する人は約 40-50%・目安は現年収 + 10-20%。業界別では IT/Web (+15-25%) や コンサル (+20-30%) が高い傾向、製造/サービス業は横ばい傾向。年収アップを最大化するには、転職エージェント 2-3 社並行登録 + 業界標準資格 + 専門スキル + マネジメント経験の 3 要素強化 + 内定後の最終交渉が推奨されます。</p>
-      <p class="mb-3"><strong>年収アップ行動 3 ステップ</strong>: <strong>STEP 1</strong> 市場価値診断 + 業界相場調査 → <strong>STEP 2</strong> <a href="/osusume/" class="underline">転職エージェント</a> 2-3 社並行登録 + キャリア面談 → <strong>STEP 3</strong> 3-5 社面接で複数内定獲得 + 内定後の最終交渉。</p>
-      <p class="text-xs text-gray-600">※自己分析は <a href="/jiko-bunseki/" class="underline">転職 自己分析</a> ・面接対策は <a href="/mensetsu/" class="underline">転職面接</a> ・ハイクラス転職は <a href="/high-class/" class="underline">ハイクラス転職</a> もご参照ください。本記事は年収アップ保証ではありません。</p>
-    </section>
+  <!-- ============ SECTION 03 業界別年収アップ率 ============ -->
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">業界別の年収アップ率 (5 業界比較)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="業界別年収アップ率比較">
+          <thead><tr><th>業界</th><th>アップ率</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            {industries.map((i) => (
+              <tr><td>{i.name}</td><td>{i.range}</td><td>{i.feature}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 業界別アップ率は各エージェント公開統計の整理 (参考値)。対象母集団・スキル・地域・職種により大きく異なります。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
+          <span>業界別アップ率を踏まえ TechGo 公式サイトを確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <BannerAB pageSlug="nenshu-up" position="footer" />
+  <!-- ============ SECTION 04 効果的な 3 要素 + NG ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">年収アップに効果的な 3 要素とやりがちな NG パターン</h2>
+      <p class="section-lede">年収アップに効果的な 3 要素 (業界標準資格 / 専門スキル / マネジメント経験) を押さえつつ、NG パターンを回避することが推奨されます。</p>
+      <div class="counter-box">
+        <h3>📌 やりがちな NG パターン (5 例・公開情報整理)</h3>
+        <div class="row"><b>面接段階で年収交渉</b><span>内定後の最終交渉でエージェント経由</span></div>
+        <div class="row"><b>業界相場を調べずに交渉</b><span>事前に業界相場 + 現年収を整理</span></div>
+        <div class="row"><b>1 社のみで判断</b><span>3-5 社並行で複数内定獲得</span></div>
+        <div class="row"><b>直接交渉で心象悪化</b><span>エージェント経由で交渉依頼</span></div>
+        <div class="row"><b>年収のみ重視で他条件無視</b><span>賞与/SO/リモート/勤務地も総合判断</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">※ 年収アップに効果的な 3 要素: ① 業界標準資格 (MBA/CFP/PMP/中小企業診断士/税理士/公認会計士/社労士) ② 専門スキル (DX/AI/データ分析/英語 TOEIC 850+/プログラミング) ③ マネジメント経験 (10 名以上のチームリード/予算管理/組織変革実績)。<br /><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は年収アップ保証ではなく、特定エージェントを推奨するものでもありません。</p>
+      </div>
 
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の年収相場は各エージェント公式サイトでご確認ください。本記事は年収アップ保証ではありません。最終確認日: 2026-05-11。</p>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">編集ポリシー (情報源・更新日・E-E-A-T)</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><strong>情報源</strong>: 厚生労働省「賃金構造基本統計調査」・JILPT・国民生活センター・総務省統計局「労働力調査」・各転職エージェント公開統計</li>
-      <li><strong>編集方針</strong>: 一次情報優先・断定表現を避け推定値・公開情報の整理として記述</li>
-      <li><strong>更新頻度</strong>: 月次レビュー</li>
-      <li><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報</a></li>
-      <li><strong>E-E-A-T 4 原則</strong>: Experience (公開情報整理) ・Expertise (業界統計 + 公的機関) ・Authoritativeness (公的機関一次情報) ・Trustworthiness (PR 表記 + アップ保証ではない注記)</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3" style="color: #1E3A8A;">出典・参考情報</h2>
-    <ul class="list-disc pl-5 mb-4 text-sm space-y-2">
-      <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省</a> — 賃金構造基本統計調査</li>
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT</a> — 賃金動向研究・転職統計</li>
-      <li><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査</li>
-      <li><a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener" class="underline">国民生活センター</a> — 転職関連の消費者相談情報 (★435)</li>
-      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク</a> — 公共職業紹介</li>
-      <li>各転職エージェント公式サイト — 年収アップ率の公開統計値</li>
-    </ul>
-
-    <p class="text-xs text-gray-600 mt-6">※本記事は 2026 年 5 月時点の公開情報をもとに作成。最新の年収相場は各エージェント公式サイトでご確認ください。本記事は年収アップ保証ではなく、特定エージェントを推奨するものでもありません。</p>
-  </main>
-</Layout>
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事</h2>
+      {faq.map((item) => (
+        <div class="faq">
+          <details>
+            <summary>{item.q}</summary>
+            <div>{item.a}</div>
+          </details>
+        </div>
+      ))}
+      <div class="card-grid">
+        <div class="card">
+          <h3>関連 Spoke LP</h3>
+          <p>
+            <a href="/osusume/">転職エージェント おすすめ Hub</a> /
+            <a href="/jiko-bunseki/">転職 自己分析</a> /
+            <a href="/mensetsu/">転職面接</a> /
+            <a href="/high-class/">ハイクラス転職</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>公的相談窓口・支援機関</h3>
+          <p>
+            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> — 賃金構造基本統計調査 /
+            <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> — 賃金動向研究・転職統計 /
+            <a href="https://www.stat.go.jp/" target="_blank" rel="noopener">総務省統計局</a> — 労働力調査 /
+            <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> — 転職関連の消費者相談情報 /
+            <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> — 公共職業紹介
+          </p>
+        </div>
+      </div>
+      <p class="compare-note">※ まとめ: 転職で年収アップする人は約 40-50%・目安は現年収 + 10-20%。IT/Web (+15-25%)・コンサル (+20-30%) が高い傾向。エージェント 2-3 社並行登録 + 業界標準資格 + 専門スキル + マネジメント経験 + 内定後の最終交渉が推奨。本記事は 2026 年 5 月時点の公開情報をもとに作成。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。本記事は年収アップ保証ではなく、特定エージェントを推奨するものでもありません。</p>
+    </div>
+  </section>
+</RichLayout>
