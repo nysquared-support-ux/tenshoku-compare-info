@@ -1,34 +1,29 @@
 ---
 /**
- * 公認会計士 転職 タイミング 完全ガイド LP
- * (★326 DRY jiko-bunseki + nenshu-up 流用 + ★441-EXT 10 必須要素保持)
- *
- * sv 推定 880 / 検索意図: 検討段階 (転職時期判断)
- * ★365 ★281 SSOT 104 LP 重複 verify 済 (新規確証)
- * 6 段階フロー: KW検討✅→骨格→本文→Claude review→Codex review→Claude 修正
+ * kaikeishi-tenshoku-timing LP (ツインプロ・Claude Design 完全 class 構造準拠・★503 案2 bespoke)
+ * 非標準 (転職タイミングガイド・4社比較ではない) のため converter 非適用・手動 RichLayout 化
+ * ★326 DRY rich-techgo.css 汎用流用・★480 ツインプロ a8mat verbatim 保持 (BWVTE/BXB8X/BXYE9)
+ * ★327 backup: backups/2026-05-17-kaikeishi-tenshoku-timing-before-rich/
  */
-import Layout from '../../layouts/Layout.astro';
-import PRBadge from '../../components/PRBadge.astro';
+import RichLayout from '../../layouts/RichLayout.astro';
 
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
 const title = '公認会計士 転職タイミング 完全ガイド｜監査法人 in/out + 業務サイクル + 年代別判断（2026年版・PR）';
 const description = '公認会計士の転職に最適なタイミング (監査法人 M 昇格前・業務閑散期・年代別) を 5 つの判断軸で整理した情報提供記事です。繁忙期回避・引き継ぎ十分・キャリア最適化の観点で解説（PR・アフィリエイト広告を含みます）。';
-
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '士業 転職ガイド', url: '/' },
+  { name: '公認会計士 転職タイミング' },
+];
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   'headline': title,
   'description': description,
   'datePublished': '2026-05-15',
-  'dateModified': '2026-05-15',
+  'dateModified': '2026-05-17',
   'author': { '@type': 'Organization', 'name': 'NY-squared' },
 };
-
-const breadcrumb = [
-  { name: 'ホーム', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: '士業 転職ガイド', url: 'https://tenshoku-compare-info.pages.dev/' },
-  { name: '公認会計士 転職タイミング', url: 'https://tenshoku-compare-info.pages.dev/kaikeishi-tenshoku-timing/' },
-];
-
 const faq = [
   { q: '公認会計士の転職に最適なタイミングはいつですか?', a: '一般的には監査法人マネージャー昇格前 (3-5 年目) + 業務閑散期 (8-10 月) + 30 代前半が最適タイミングとされています。但し個別キャリア状況により異なるため、エージェント相談が推奨されます。' },
   { q: '監査法人を辞めるベストタイミングは?', a: '3 年目 (シニア昇格後) / 5 年目 (M 昇格前) / 8 年目 (パートナー手前) の 3 つの分岐点が一般的判断ポイントとされています。スキル成熟度 + キャリアパスとのマッチングで判断されることが多いです。' },
@@ -37,226 +32,185 @@ const faq = [
   { q: '転職活動はいつから始めるべきですか?', a: '退職予定日の 3-6 ヶ月前から開始するのが一般的目安とされています。引き継ぎ期間 + 内定後の入社時期調整を考慮した結果です。' },
   { q: 'ボーナス支給後の退職はタイミングとして良いですか?', a: 'ボーナス支給後 (6 月末・12 月末) の退職は経済合理性が高いとされていますが、就業規則・ボーナス算定期間を確認することが推奨されます。詳細は<a href="/taishokuriyu/" class="underline">退職理由ガイド</a>参照。' },
 ];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
 ---
 
-<Layout title={title} description={description} publishedDate="2026-05-15" modifiedDate="2026-05-15" breadcrumb={breadcrumb} faq={faq}>
-  <main class="max-w-3xl mx-auto px-4 py-8">
-    <PRBadge pageSlug="kaikeishi-tenshoku-timing" href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE&sitemicros=prbadge_kaikeishi-tenshoku-timing" />
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
 
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
-
-    <nav class="text-sm text-gray-500 mb-4">
-      <a href="/" class="underline">トップ</a> &gt; 公認会計士 転職タイミング 完全ガイド
-    </nav>
-
-    <h1 class="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-      公認会計士 転職タイミング 完全ガイド｜監査法人 in/out + 業務サイクル + 年代別判断
-    </h1>
-
-    <div class="bg-yellow-50 border-2 border-yellow-300 rounded p-3 mb-4 text-sm">
-      <strong>📢 PR表示</strong>: 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は<strong>必ずエージェント・キャリアコンサルタントにご相談ください</strong>。
-    </div>
-
-    <p class="text-sm text-gray-600 mb-6">
-      最終確認日: 2026-05-15 / 公開情報の整理であり、特定エージェントを推奨するものではありません。<br />
-      運営者: <a href="/operator-info/" class="underline">NY-squared (個人事業)</a> /
-      <a href="/editorial-policy/" class="underline">編集ポリシー</a> /
-      <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>
-    </p>
-
-    <section class="mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <p><strong>結論 (一般的傾向)</strong>: 公認会計士の転職タイミングとして<strong>一つの傾向</strong>として、<strong>監査法人マネージャー昇格前 (3-5 年目) + 業務閑散期 (8-10 月) + 30 代前半</strong>が挙げられるとされています。但し個別キャリア状況により判断は大きく異なるため、エージェント相談が推奨されます。</p>
-      <p class="mt-2">本記事では 5 つの判断軸 (スキル成熟度 / 監査法人キャリア / 業務サイクル / 年齢 / ライフイベント) を整理します。<strong>※ 以下の記述はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</strong></p>
-      <p class="mt-2 text-xs text-gray-600">本記事の主張根拠 (出典): <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener" class="underline">日本公認会計士協会</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">JILPT 労働政策研究・研修機構</a> / 監査法人公式キャリアパス情報 / 各エージェント公開求人情報。<a href="/editorial-policy/" class="underline">編集ポリシー</a> (広告掲載ルール・選定基準・報酬有無の明示) も参照。</p>
-    </section>
-
-    <div class="my-6 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_hero"
-         target="_blank" rel="noopener nofollow sponsored">
-        <img border="0" width="300" height="250"
-             src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
-             alt="士業特化転職エージェント ツインプロ（PR）" loading="lazy" />
-      </a>
-      <img border="0" width="1" height="1"
-           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
-           alt="" loading="lazy" style="position:absolute;left:-9999px" />
-      <p class="text-xs text-gray-500 mt-2">PR・アフィリエイト広告（ツインプロ／MyVision 株式会社）</p>
-      <p class="text-sm mt-2">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_hero_text"
-           target="_blank" rel="noopener nofollow sponsored" class="underline">
-          無料カウンセリングで自分の市場価値を確認する（PR）
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">士業転職 / 公認会計士 転職タイミング</span>
+      <h1 id="fv-h1">公認会計士 <span class="accent">転職タイミング</span> 完全ガイド<br />監査法人 in/out + 業務サイクル + 年代別判断</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 公認会計士の転職タイミングとして<strong>一つの傾向</strong>として、<strong>監査法人マネージャー昇格前 (3-5 年目) + 業務閑散期 (8-10 月) + 30 代前半</strong>が挙げられるとされています。但し個別キャリア状況により判断は大きく異なるため、エージェント相談が推奨されます。本記事では 5 つの判断軸 (スキル成熟度 / 監査法人キャリア / 業務サイクル / 年齢 / ライフイベント) を整理します。※ 以下の記述はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>転職タイミング 5 つの判断軸</li>
+        <li>監査法人 in/out のタイミング詳細 (市場価値・転職先傾向)</li>
+        <li>業務サイクル別 推奨タイミング + 失敗例</li>
+        <li>公認会計士協会・JILPT 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=prbadge_kaikeishi-tenshoku-timing`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>無料カウンセリングで自分の市場価値を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
         </a>
-      </p>
+        <p class="btn-cta-sub">&#8251; 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-17</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">1. 転職タイミング 5 つの判断軸</h2>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-1. スキル成熟度</h3>
-    <p class="mb-3 text-sm">
-      監査法人のキャリアラダー (アソシエイト → シニア → マネージャー → SM → パートナー) の各段階で、転職市場価値が変動するとされています。一般的にシニア後期 (3-5 年目) は基礎スキルが固まり、マネージャー手前で市場価値がピークに達するとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-2. 監査法人キャリアの分岐点</h3>
-    <p class="mb-3 text-sm">
-      3 年目 (シニア昇格直後)・5 年目 (M 昇格前)・8 年目 (SM 昇格前) が、転職判断の 3 つの主要分岐点とされています。M 以降は監査法人内キャリア継続 or 事業会社・税理士法人・コンサルへの転身を選ぶケースが多いとされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-3. 業務サイクル (繁忙期回避)</h3>
-    <p class="mb-3 text-sm">
-      監査法人の年間業務サイクル: 1-3 月 (期末監査ピーク)・5-6 月 (株主総会対応)・10-11 月 (中間監査) が繁忙期。<strong>8-10 月 (閑散期) + 7 月前半が転職活動・退職の一般的推奨時期</strong>とされています。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-4. 年齢別タイミング</h3>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>20 代後半</strong>: 第二新卒扱い + ポテンシャル採用・選択肢最大</li>
-      <li><strong>30 代前半</strong>: スキル成熟 + 市場価値ピーク (一般的見解)</li>
-      <li><strong>30 代後半-40 代前半</strong>: 専門特化型 (税務・国際・M&A) で市場価値維持</li>
-      <li><strong>40 代後半+</strong>: ハイクラス・パートナー候補・経営層転身が主流</li>
-    </ul>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">1-5. ライフイベント連動</h3>
-    <p class="mb-3 text-sm">
-      結婚・家族計画・住宅購入・育児等のライフイベントは、転職タイミングと相互作用します。年収変動・勤務地・労働時間の安定性を考慮した判断が一般的とされています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">2. 監査法人 in/out のタイミング詳細</h2>
-
-    <div class="overflow-x-auto mb-3">
-      <table class="border-collapse border border-gray-300 text-sm w-full">
-        <thead class="bg-gray-100">
-          <tr><th class="border border-gray-300 p-2">タイミング</th><th class="border border-gray-300 p-2">市場価値</th><th class="border border-gray-300 p-2">転職先傾向</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="border border-gray-300 p-2">3 年目 (シニア昇格直後)</td><td class="border border-gray-300 p-2">中 (基礎固め完了)</td><td class="border border-gray-300 p-2">事業会社経理・税理士法人</td></tr>
-          <tr><td class="border border-gray-300 p-2">5 年目 (M 昇格前)</td><td class="border border-gray-300 p-2">⭐ 高 (実務力ピーク)</td><td class="border border-gray-300 p-2">FAS・コンサル・大手事業会社・ベンチャー CFO 候補</td></tr>
-          <tr><td class="border border-gray-300 p-2">M 昇格後 (5-7 年目)</td><td class="border border-gray-300 p-2">高 (マネジメント力)</td><td class="border border-gray-300 p-2">FAS マネジメント・事業会社管理職</td></tr>
-          <tr><td class="border border-gray-300 p-2">SM-パートナー (10 年+)</td><td class="border border-gray-300 p-2">専門特化型</td><td class="border border-gray-300 p-2">CFO・パートナー候補・独立</td></tr>
-        </tbody>
-      </table>
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職タイミング 5 つの判断軸</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 監査法人公式キャリアパス情報 / 各エージェント公開求人情報。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">軸1</span><h4>スキル成熟度</h4><p>監査法人のキャリアラダー (アソシエイト → シニア → マネージャー → SM → パートナー) の各段階で、転職市場価値が変動するとされています。一般的にシニア後期 (3-5 年目) は基礎スキルが固まり、マネージャー手前で市場価値がピークに達するとされています。</p></article>
+        <article class="branch"><span class="tag">軸2</span><h4>監査法人キャリアの分岐点</h4><p>3 年目 (シニア昇格直後)・5 年目 (M 昇格前)・8 年目 (SM 昇格前) が、転職判断の 3 つの主要分岐点とされています。M 以降は監査法人内キャリア継続 or 事業会社・税理士法人・コンサルへの転身を選ぶケースが多いとされています。</p></article>
+        <article class="branch"><span class="tag">軸3</span><h4>業務サイクル (繁忙期回避)</h4><p>監査法人の年間業務サイクル: 1-3 月 (期末監査ピーク)・5-6 月 (株主総会対応)・10-11 月 (中間監査) が繁忙期。8-10 月 (閑散期) + 7 月前半が転職活動・退職の一般的推奨時期とされています。</p></article>
+        <article class="branch"><span class="tag">軸4</span><h4>年齢別タイミング</h4><p>20 代後半: 第二新卒扱い + ポテンシャル採用・選択肢最大 / 30 代前半: スキル成熟 + 市場価値ピーク (一般的見解) / 30 代後半-40 代前半: 専門特化型 (税務・国際・M&A) で市場価値維持 / 40 代後半+: ハイクラス・パートナー候補・経営層転身が主流。</p></article>
+        <article class="branch"><span class="tag">軸5</span><h4>ライフイベント連動</h4><p>結婚・家族計画・住宅購入・育児等のライフイベントは、転職タイミングと相互作用します。年収変動・勤務地・労働時間の安定性を考慮した判断が一般的とされています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>自分の市場価値を ツインプロ公式の無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="my-6 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kaikeishi-tenshoku-timing_middle"
-         target="_blank" rel="noopener nofollow sponsored">
-        <img border="0" width="300" height="250"
-             src="https://www21.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002006000&mc=1"
-             alt="経理特化転職 ツインプロ（PR）" loading="lazy" />
-      </a>
-      <img border="0" width="1" height="1"
-           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXYE9"
-           alt="" loading="lazy" style="position:absolute;left:-9999px" />
-      <p class="text-xs text-gray-500 mt-2">PR・アフィリエイト広告（ツインプロ／MyVision 株式会社）</p>
-      <p class="text-sm mt-2">
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">監査法人 in/out のタイミング詳細</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="監査法人 in/out タイミング詳細">
+          <thead><tr><th>タイミング</th><th>市場価値</th><th>転職先傾向</th></tr></thead>
+          <tbody>
+            <tr><td>3 年目 (シニア昇格直後)</td><td>中 (基礎固め完了)</td><td>事業会社経理・税理士法人</td></tr>
+            <tr><td>5 年目 (M 昇格前)</td><td>&#11088; 高 (実務力ピーク)</td><td>FAS・コンサル・大手事業会社・ベンチャー CFO 候補</td></tr>
+            <tr><td>M 昇格後 (5-7 年目)</td><td>高 (マネジメント力)</td><td>FAS マネジメント・事業会社管理職</td></tr>
+            <tr><td>SM-パートナー (10 年+)</td><td>専門特化型</td><td>CFO・パートナー候補・独立</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kaikeishi-tenshoku-timing_middle"
+           target="_blank" rel="noopener nofollow sponsored">
+          <img border="0" width="300" height="250"
+               src="https://www21.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002006000&mc=1"
+               alt="経理特化転職 ツインプロ（PR）" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1"
+             src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXYE9"
+             alt="" loading="lazy" style="position:absolute;left:-9999px" />
         <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kaikeishi-tenshoku-timing_middle_text"
-           target="_blank" rel="noopener nofollow sponsored" class="underline">
+           target="_blank" rel="noopener nofollow sponsored"
+           style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
           会計士・経理職のキャリア相談を予約する（PR）
         </a>
-      </p>
+        <p style="font-size:12px;color:var(--c-text-sub,#6b7280);margin-top:8px;">PR・アフィリエイト広告（ツインプロ／MyVision 株式会社）</p>
+      </div>
     </div>
+  </section>
 
-    <h2 class="text-xl font-bold mt-8 mb-3">3. 業務サイクル別 推奨タイミング</h2>
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">業務サイクル別 推奨タイミングと失敗例</h2>
+      <div class="card-grid">
+        <div class="card"><h3>業務サイクル別 推奨タイミング</h3><p><strong>繁忙期 (1-3 月)</strong>: 期末監査ピーク。転職活動の時間確保が困難・引き継ぎ負荷大・同僚への影響大のため、退職タイミングとしては最不適。<br /><strong>中繁忙期 (5-6 月・10-11 月)</strong>: 株主総会対応・中間監査。業務多忙のため転職活動には不向き。<br /><strong>閑散期 (8-10 月) &#11088; 推奨</strong>: 夏期休暇後 + 中間監査前のスポット時期。転職活動・面接・退職通告に最適で引き継ぎ時間も確保しやすい。<br /><strong>中間期 (7 月前半・12 月後半)</strong>: ボーナス支給後の退職タイミングとしても活用されることが多い。</p></div>
+        <div class="card"><h3>タイミング 失敗例 (回避すべきパターン)</h3><p><strong>繁忙期直前退職</strong>: 同僚負荷大・関係悪化リスク・引き継ぎ不十分<br /><strong>引き継ぎ不足での退職</strong>: 監査法人パートナーとの関係悪化・推薦状取得困難<br /><strong>転職活動 1 ヶ月前準備</strong>: エージェント選定 + 求人マッチング不足・選択肢狭まる<br /><strong>準備なし退職 (退職先未確定)</strong>: 経済的不安・空白期間・市場価値低下リスク<br /><strong>30 代後半での未経験職種</strong>: ポテンシャル採用枠の縮小・市場価値判断困難</p></div>
+      </div>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">3-1. 繁忙期 (1-3 月)</h3>
-    <p class="mb-3 text-sm">
-      期末監査ピーク。転職活動の時間確保が困難・引き継ぎ負荷大・同僚への影響大のため、<strong>退職タイミングとしては最不適</strong>とされています。
-    </p>
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_hero"
+           target="_blank" rel="noopener nofollow sponsored">
+          <img border="0" width="300" height="250"
+               src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
+               alt="士業特化転職エージェント ツインプロ（PR）" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1"
+             src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
+             alt="" loading="lazy" style="position:absolute;left:-9999px" />
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_hero_text"
+           target="_blank" rel="noopener nofollow sponsored"
+           style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
+          無料カウンセリングで自分の市場価値を確認する（PR）
+        </a>
+        <p style="font-size:12px;color:var(--c-text-sub,#6b7280);margin-top:8px;">PR・アフィリエイト広告（ツインプロ／MyVision 株式会社）</p>
+      </div>
+    </div>
+  </section>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">3-2. 中繁忙期 (5-6 月・10-11 月)</h3>
-    <p class="mb-3 text-sm">
-      株主総会対応・中間監査。繁忙期ほどではないものの業務多忙のため、転職活動には不向きとされています。
-    </p>
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">転職活動 始める時期とまとめ</h2>
+      <div class="counter-box">
+        <h3>&#128204; 転職活動 始める時期 (一般的目安)</h3>
+        <div class="row"><b>3 ヶ月前</b><span>エージェント登録・自己分析・職務経歴書作成</span></div>
+        <div class="row"><b>2 ヶ月前</b><span>応募・カジュアル面談・本面接</span></div>
+        <div class="row"><b>1 ヶ月前</b><span>内定・条件交渉・退職通告</span></div>
+        <div class="row"><b>退職日</b><span>引き継ぎ完了・離職票・源泉徴収票受領</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>まとめ</strong>: 監査法人 M 昇格前 (3-5 年目) + 業務閑散期 (8-10 月) + 30 代前半が一般的最適 / 5 つの判断軸で総合判断 / 転職活動は退職予定日の 3-6 ヶ月前から開始 / 繁忙期 (1-3 月) 退職は避ける・引き継ぎ十分の余裕確保 / 個別判断はエージェント相談 + 各キャリアパス確認推奨。</p>
+      </div>
 
-    <h3 class="text-lg font-bold mt-4 mb-2">3-3. 閑散期 (8-10 月) ⭐ 推奨</h3>
-    <p class="mb-3 text-sm">
-      夏期休暇後 + 中間監査前のスポット時期。<strong>転職活動・面接・退職通告に最適</strong>とされており、引き継ぎ時間も確保しやすい時期です。
-    </p>
-
-    <h3 class="text-lg font-bold mt-4 mb-2">3-4. 中間期 (7 月前半・12 月後半)</h3>
-    <p class="mb-3 text-sm">
-      ボーナス支給後の退職タイミングとしても活用されることが多いとされています。
-    </p>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">4. タイミング 失敗例 (回避すべきパターン)</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>繁忙期直前退職</strong>: 同僚負荷大・関係悪化リスク・引き継ぎ不十分</li>
-      <li><strong>引き継ぎ不足での退職</strong>: 監査法人パートナーとの関係悪化・推薦状取得困難</li>
-      <li><strong>転職活動 1 ヶ月前準備</strong>: エージェント選定 + 求人マッチング不足・選択肢狭まる</li>
-      <li><strong>準備なし退職 (退職先未確定)</strong>: 経済的不安・空白期間・市場価値低下リスク</li>
-      <li><strong>30 代後半での未経験職種</strong>: ポテンシャル採用枠の縮小・市場価値判断困難</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">5. 転職活動 始める時期 (一般的目安)</h2>
-    <p class="mb-3 text-sm">
-      退職予定日の <strong>3-6 ヶ月前</strong>から転職活動開始が一般的目安とされています。
-    </p>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><strong>3 ヶ月前</strong>: エージェント登録・自己分析・職務経歴書作成</li>
-      <li><strong>2 ヶ月前</strong>: 応募・カジュアル面談・本面接</li>
-      <li><strong>1 ヶ月前</strong>: 内定・条件交渉・退職通告</li>
-      <li><strong>退職日</strong>: 引き継ぎ完了・離職票・源泉徴収票受領</li>
-    </ul>
-
-    <div class="my-6 text-center">
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_footer"
-         target="_blank" rel="noopener nofollow sponsored">
-        <img border="0" width="300" height="250"
-             src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
-             alt="士業特化転職エージェント ツインプロ（PR）" loading="lazy" />
-      </a>
-      <img border="0" width="1" height="1"
-           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
-           alt="" loading="lazy" style="position:absolute;left:-9999px" />
-      <p class="text-xs text-gray-500 mt-2">PR・アフィリエイト広告（ツインプロ／MyVision 株式会社）</p>
-      <p class="text-sm mt-2">
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_footer"
+           target="_blank" rel="noopener nofollow sponsored">
+          <img border="0" width="300" height="250"
+               src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
+               alt="士業特化転職エージェント ツインプロ（PR）" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1"
+             src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
+             alt="" loading="lazy" style="position:absolute;left:-9999px" />
         <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-tenshoku-timing_footer_text"
-           target="_blank" rel="noopener nofollow sponsored" class="underline">
+           target="_blank" rel="noopener nofollow sponsored"
+           style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
           後悔しない選択のために、まずプロに相談する（PR）
         </a>
-      </p>
+        <p style="font-size:12px;color:var(--c-text-sub,#6b7280);margin-top:8px;">PR・アフィリエイト広告（ツインプロ／MyVision 株式会社）</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>後悔しない選択のために ツインプロ公式でプロに相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </div>
+  </section>
 
-    <section class="mt-8 mb-6 bg-blue-50 border-l-4 border-blue-400 p-4 text-sm">
-      <h3 class="font-bold mb-2">まとめ</h3>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>監査法人 M 昇格前 (3-5 年目) + 業務閑散期 (8-10 月) + 30 代前半が一般的最適</li>
-        <li>5 つの判断軸 (スキル成熟度 / キャリア分岐点 / 業務サイクル / 年齢 / ライフイベント) で総合判断</li>
-        <li>転職活動は退職予定日の 3-6 ヶ月前から開始</li>
-        <li>繁忙期 (1-3 月) 退職は避ける・引き継ぎ十分の余裕確保</li>
-        <li>個別判断はエージェント相談 + 各キャリアパス確認推奨</li>
-      </ul>
-    </section>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">関連記事・参考リンク</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="/kaikeishi-tenshoku/" class="underline">公認会計士 転職 完全ガイド</a></li>
-      <li><a href="/kaikeishi-nenshu/" class="underline">公認会計士 年収アップ転職</a></li>
-      <li><a href="/kaikeishi-tenshoku-shippai/" class="underline">公認会計士 転職 失敗例と対策</a></li>
-      <li><a href="/big4-tenshoku/" class="underline">BIG4 監査法人 転職ガイド</a></li>
-      <li><a href="/kansa-houjin-taishoku/" class="underline">監査法人 退職ガイド</a></li>
-      <li><a href="/jiko-bunseki/" class="underline">転職 自己分析 やり方</a></li>
-      <li><a href="/nenshu-up/" class="underline">転職 年収アップ完全ガイド</a></li>
-      <li><a href="/taishokuriyu/" class="underline">転職時 退職理由の伝え方</a></li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">公的相談窓口・支援機関</h2>
-    <ul class="list-disc pl-6 mb-3 text-sm space-y-1">
-      <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">ハローワーク (厚生労働省)</a> — 公的職業紹介・失業給付相談</li>
-      <li><a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener" class="underline">日本公認会計士協会</a> — 公認会計士のキャリア支援情報</li>
-      <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudouseisaku/sougoutekina_taisaku/index.html" target="_blank" rel="noopener" class="underline">厚生労働省 労働相談窓口</a> — 労働条件・退職トラブル相談</li>
-      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener" class="underline">法テラス</a> — 退職時の法的トラブル相談</li>
-      <li><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 労働市場統計・転職トレンド</li>
-    </ul>
-
-    <h2 class="text-xl font-bold mt-8 mb-3">よくある質問（FAQ）</h2>
-    {faq.map((item) => (
-      <details class="mb-3 border border-gray-200 rounded p-3">
-        <summary class="font-bold cursor-pointer text-sm" set:html={item.q} />
-        <p class="mt-2 text-sm" set:html={item.a} />
-      </details>
-    ))}
-
-    <p class="text-xs text-gray-500 mt-8">
-      ※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職タイミングは個別状況により大きく異なります。転職効果・年収アップ・成功は保証されません。具体的判断はエージェント・キャリアコンサルタントにご相談ください。
-    </p>
-  </main>
-</Layout>
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事・公的相談窓口</h2>
+      <div class="faq">
+        {faq.map((item) => (
+          <details><summary set:html={item.q} /><div set:html={item.a} /></details>
+        ))}
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>関連記事・参考リンク</h3><p><a href="/kaikeishi-tenshoku/">公認会計士 転職 完全ガイド</a> / <a href="/kaikeishi-nenshu/">公認会計士 年収アップ転職</a> / <a href="/kaikeishi-tenshoku-shippai/">公認会計士 転職 失敗例と対策</a> / <a href="/big4-tenshoku/">BIG4 監査法人 転職ガイド</a> / <a href="/kansa-houjin-taishoku/">監査法人 退職ガイド</a> / <a href="/jiko-bunseki/">転職 自己分析 やり方</a> / <a href="/nenshu-up/">転職 年収アップ完全ガイド</a> / <a href="/taishokuriyu/">転職時 退職理由の伝え方</a></p></div>
+        <div class="card"><h3>公的相談窓口・支援機関</h3><p><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク (厚生労働省)</a> — 公的職業紹介・失業給付相談<br /><a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a> — 公認会計士のキャリア支援情報<br /><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudouseisaku/sougoutekina_taisaku/index.html" target="_blank" rel="noopener">厚生労働省 労働相談窓口</a> — 労働条件・退職トラブル相談<br /><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス</a> — 退職時の法的トラブル相談<br /><a href="https://www.jil.go.jp/" target="_blank" rel="noopener">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 労働市場統計・転職トレンド</p></div>
+      </div>
+      <p class="compare-note">&#8251; 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職タイミングは個別状況により大きく異なります。転職効果・年収アップ・成功は保証されません。具体的判断はエージェント・キャリアコンサルタントにご相談ください。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+    </div>
+  </section>
+</RichLayout>
