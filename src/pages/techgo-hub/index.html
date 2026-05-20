@@ -713,37 +713,80 @@
 </footer>
 
 <!-- Cookie banner (★277 / ★323) -->
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie 利用について">
-  <div>
-    本サイトでは、利用状況の分析・広告計測のため Cookie を使用する場合があります。詳細は <a href="/privacy/">プライバシーポリシー</a> をご確認ください。
-  </div>
-  <div class="cookie-actions">
-    <button type="button" class="secondary" id="cookieReject">必須のみ</button>
-    <button type="button" id="cookieAccept">同意する</button>
+<!-- ============================================================
+     ★323 Cookie 同意バナー (CMP) — 個別同意・撤回可能
+     ★326 DRY: lp-implementation/src/components/CookieBanner.astro を
+              Astro layout 非経由 Hub LP 向けに HTML+CSS+JS 純粋版に変換
+     使用 LP: abc-hub / twin-pro-hub / techgo-hub
+     差替時は本 partial を更新して 3 Hub に同一 block を再挿入
+     ============================================================ -->
+<div id="cookie-banner" class="cookie-banner cookie-banner--hidden" role="dialog" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc">
+  <div class="cookie-banner__inner">
+    <p id="cookie-banner-title" class="cookie-banner__title">🍪 Cookieの利用について</p>
+    <p id="cookie-banner-desc" class="cookie-banner__desc">
+      本サイトは解析・広告計測のため Cookie を使用します。<a href="/privacy/" class="cookie-banner__link">プライバシーポリシー</a>をご確認の上、選択してください。
+    </p>
+    <div class="cookie-banner__options">
+      <label class="cookie-banner__opt"><input type="checkbox" id="cb-analytics" /> 解析 Cookie (GA4)</label>
+      <label class="cookie-banner__opt"><input type="checkbox" id="cb-advertising" /> 広告 Cookie (A8.net)</label>
+    </div>
+    <div class="cookie-banner__actions">
+      <button type="button" id="cb-accept-all" class="cookie-banner__btn cookie-banner__btn--accept">すべて同意</button>
+      <button type="button" id="cb-save" class="cookie-banner__btn cookie-banner__btn--save">選択を保存</button>
+      <button type="button" id="cb-reject" class="cookie-banner__btn cookie-banner__btn--reject">すべて拒否</button>
+    </div>
   </div>
 </div>
-
+<style>
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#1a202c;color:#fff;padding:1rem;box-shadow:0 -4px 12px rgba(0,0,0,.15);z-index:9999;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.5}
+.cookie-banner--hidden{display:none}
+.cookie-banner__inner{max-width:960px;margin:0 auto}
+.cookie-banner__title{font-weight:600;margin:0 0 .5rem}
+.cookie-banner__desc{margin:0 0 .75rem;font-size:13px}
+.cookie-banner__link{color:#7dd3fc;text-decoration:underline}
+.cookie-banner__options{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:.75rem}
+.cookie-banner__opt{display:inline-flex;align-items:center;gap:.4rem;cursor:pointer}
+.cookie-banner__actions{display:flex;flex-wrap:wrap;gap:.5rem}
+.cookie-banner__btn{padding:.5rem 1rem;border:none;border-radius:4px;cursor:pointer;font-size:13px;font-weight:500}
+.cookie-banner__btn--accept{background:#16a34a;color:#fff}
+.cookie-banner__btn--save{background:#2563eb;color:#fff}
+.cookie-banner__btn--reject{background:#6b7280;color:#fff}
+.cookie-banner__btn:hover{opacity:.9}
+@media(max-width:640px){.cookie-banner__title{font-size:13px}.cookie-banner__desc{font-size:12px}}
+</style>
 <script>
-  // Cookie banner: minimal stub. 本番は CMP に置換 ([TBD])
-  (function () {
-    var key = 'ny2_cookie_consent_v1';
-    var banner = document.getElementById('cookieBanner');
-    if (!banner) return;
-    try { if (localStorage.getItem(key)) banner.classList.add('hidden'); } catch (e) {}
-    function dismiss(value) {
-      try { localStorage.setItem(key, value); } catch (e) {}
-      banner.classList.add('hidden');
-    }
-    document.getElementById('cookieAccept').addEventListener('click', function () { dismiss('accepted'); });
-    document.getElementById('cookieReject').addEventListener('click', function () { dismiss('rejected'); });
-  })();
-
-  // A8 CTA click telemetry hook (本番では analytics に差し替え)
-  document.querySelectorAll('[data-cta]').forEach(function (el) {
-    el.addEventListener('click', function () {
-      try { console.info('[A8 CTA]', el.dataset.cta); } catch (e) {}
+(function(){
+  var STORAGE_KEY='cookie_consent_v1';
+  var LOG_KEY='cookie_consent_log';
+  function getConsent(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}catch(e){return{}}}
+  function setConsent(c){
+    var data={analytics:!!c.analytics,advertising:!!c.advertising,timestamp:new Date().toISOString(),version:'v1'};
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(data));
+    var log=[];try{log=JSON.parse(localStorage.getItem(LOG_KEY)||'[]')}catch(e){}
+    log.push(data);if(log.length>10)log.shift();
+    localStorage.setItem(LOG_KEY,JSON.stringify(log));
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated',{detail:data}));
+    hide();
+  }
+  function hide(){var b=document.getElementById('cookie-banner');if(b)b.classList.add('cookie-banner--hidden')}
+  function show(){var b=document.getElementById('cookie-banner');if(b)b.classList.remove('cookie-banner--hidden')}
+  document.addEventListener('DOMContentLoaded',function(){
+    var c=getConsent();
+    if(!c.timestamp){show()}else{window.dispatchEvent(new CustomEvent('cookie-consent-updated',{detail:c}))}
+    var ea=document.getElementById('cb-accept-all');if(ea)ea.addEventListener('click',function(){setConsent({analytics:true,advertising:true})});
+    var es=document.getElementById('cb-save');if(es)es.addEventListener('click',function(){
+      var a=document.getElementById('cb-analytics');var ad=document.getElementById('cb-advertising');
+      setConsent({analytics:a&&a.checked,advertising:ad&&ad.checked})
     });
+    var er=document.getElementById('cb-reject');if(er)er.addEventListener('click',function(){setConsent({analytics:false,advertising:false})});
   });
+  window.showCookieSettings=function(){
+    var c=getConsent();
+    var a=document.getElementById('cb-analytics');var ad=document.getElementById('cb-advertising');
+    if(a)a.checked=c.analytics===true;if(ad)ad.checked=c.advertising===true;
+    show();
+  };
+})();
 </script>
 
 </body>
