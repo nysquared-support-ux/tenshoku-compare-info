@@ -33,12 +33,20 @@ const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
   mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
 ---
 
 <RichLayout title={title} description={description} breadcrumb={breadcrumb}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
 
   <section class="fv" aria-labelledby="fv-h1">
@@ -73,7 +81,7 @@ const faqSchema = {
     <div class="container">
       <p class="section-num">SECTION / 01</p>
       <h2 id="h2-1">IT エンジニアがコンサル転職する 3 つの理由</h2>
-      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。</p>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
       <div class="branch-grid">
         <article class="branch"><span class="tag">理由1</span><h4>年収アップ (SIer/SE 比で 20-40%)</h4><p>一般公開情報によれば、SIer/SE → IT コンサル転職時の年収アップは20-40%程度とされる事例が報告されています。30代前半 SIer 平均 500-650万円 → IT コンサル 700-900万円帯への移行が一般的な傾向の一つとされています。</p></article>
         <article class="branch"><span class="tag">理由2</span><h4>キャリア拡張 (上流工程へ)</h4><p>下流工程 (実装・運用) から上流工程 (戦略・要件定義・PMO) へのキャリア拡張が可能とされています。プロジェクトの主導権 + 経営層とのインターフェイス + 業界知見が拡がる傾向にあるとされています。</p></article>

@@ -33,12 +33,20 @@ const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
   mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
 ---
 
 <RichLayout title={title} description={description} breadcrumb={breadcrumb}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
 
   <section class="fv" aria-labelledby="fv-h1">
@@ -73,7 +81,7 @@ const faqSchema = {
     <div class="container">
       <p class="section-num">SECTION / 01</p>
       <h2 id="h2-1">ケース面接とは — コンサル選考の核心</h2>
-      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 大手ファーム公式キャリアサイト。</p>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
       <p>ケース面接は、コンサル選考の中核となる面接形式です。<strong>制限時間 30-60 分</strong>で経営課題・市場規模算出等の問題を解き、論理的思考力・問題解決能力・コミュニケーション能力を総合評価される形式とされています。コンサル特化エージェントの公開情報によれば、ケース面接の通過率は一般的に20-40%程度とされており、選考全体の最大の関門となっています。</p>
       <div class="branch-grid">
         <article class="branch"><span class="tag">特徴1</span><h4>制限時間内の構造化</h4><p>30-60分の制限時間内に、問題の構造化 → 解法の論理的展開 → 結論の提示までを完遂する必要があります。MECE + イシューツリーで論点分解する能力が前提とされています。</p></article>
