@@ -1,0 +1,204 @@
+---
+/**
+ * consul-zangyou-jikan LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 残業時間 (sv 推定 400-700・不安解消・★354 honest)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 残業時間 完全ガイド｜ファーム別の実態 + 働き方改革 + ワークライフバランス｜MyVision (PR)';
+const description = 'コンサル業界の残業時間について、ファーム別 (戦略系 / 総合系 / FAS / IT 系) の実態 + 働き方改革の進捗 + ワークライフバランスの実情を公開情報ベースで整理。元コンサルからの実態ヒアリングサポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 残業時間' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサルの残業時間はどのくらいですか?', a: '一般公開情報によれば、案件期 + ファーム + ポジションにより大きく変動するとされ、月 40-80 時間程度の事例が一般的とされる傾向です。但し納期前・繁忙期は月 100 時間超のケースも報告されており、ファーム別 + 案件別に実態が大きく異なるとされています。詳細はファーム面談で確認することが推奨されます。' },
+  { q: 'コンサル業界の働き方改革は進んでいますか?', a: '一般公開情報によれば、2019年の働き方改革関連法施行以降、大手コンサルファームでも長時間労働の是正 + 36協定遵守 + リモートワーク導入が進む傾向とされています。但しファーム別 + 案件別の差は依然大きいとされる傾向です。' },
+  { q: '戦略系と総合系で残業時間は違いますか?', a: '一般公開情報によれば、戦略系 (BCG / McK / Bain) は短期高負荷 + 案件サイクルが速い傾向、総合系 (アクセンチュア / BIG4) は案件単位での負荷変動が中心とされる傾向です。本記事内で詳細比較しています。' },
+  { q: 'リモートワークは可能ですか?', a: '一般公開情報によれば、大手コンサルファームでは2020年以降ハイブリッドワーク (出社 + リモート) が主流となっているとされています。但しクライアント先常駐案件 + パートナー面接等は対面が必要とされる傾向です。' },
+  { q: '休日出勤はありますか?', a: '一般公開情報によれば、納期前 + 繁忙期 + 海外案件等で休日出勤が発生するケースがあるとされています。但し月平均では限定的とされる傾向で、ファーム別 + 案件別の実態確認が推奨されます。' },
+  { q: 'ワークライフバランスを優先したいなら?', a: '一般的にワークライフバランスを優先する場合、ファーム選び (働き方改革進捗 + 案件特性) + 案件選び + キャリア相談が重要とされています。元コンサルからの実態ヒアリング + ファーム別比較が一般的に推奨されます。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル 残業時間 / 働き方完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">残業時間</span> 完全ガイド<br />ファーム別の実態 + 働き方改革 + ワークライフバランス</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル業界の残業時間は<strong>ファーム別 + 案件別に大きく変動</strong>する傾向とされ、月 40-80 時間程度が一般的水準とされています。2019年の働き方改革関連法施行以降、大手ファームでは長時間労働是正 + リモートワーク導入が進んでいるとされる傾向です。本記事ではファーム別の実態 + 働き方改革進捗 + ワークライフバランスの実情を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ファーム別 (戦略 / 総合 / FAS / IT) の残業実態</li>
+        <li>働き方改革 (働き方改革関連法 / 36協定) の進捗</li>
+        <li>ワークライフバランス改善 5 ポイント</li>
+        <li>元コンサル実態ヒアリングサポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_zangyou">
+          <span>ファーム別の働き方を元コンサル無料相談で確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は労働環境の絶対的判断ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ファーム別 残業時間の実態</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener">厚生労働省 労働基準ガイドライン</a> / コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ファーム別残業時間目安">
+          <thead><tr><th>ファーム種別</th><th>月残業目安</th><th>繁忙期</th><th>働き方の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (BCG / McK / Bain)</td><td>60-100 時間</td><td>100 時間超のケース</td><td>短期高負荷 + 案件サイクル速い</td></tr>
+            <tr><td>総合系 (アクセンチュア / PwC / ベイカレント)</td><td>40-80 時間</td><td>80-100 時間</td><td>案件単位で変動</td></tr>
+            <tr><td>FAS 系 (Deloitte FAS / PwC AS)</td><td>50-90 時間</td><td>90-110 時間</td><td>M&A 案件期は高負荷</td></tr>
+            <tr><td>IT 系 (アクセンチュア Tech / IBM)</td><td>40-70 時間</td><td>80-90 時間</td><td>実装フェーズで変動</td></tr>
+            <tr><td>公共系 (野村総研 / 三菱総研)</td><td>30-60 時間</td><td>70-80 時間</td><td>比較的安定傾向</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。実際の労働時間は案件 + ポジション + 個人の働き方により大きく変動します。詳細はファーム面談 + 元コンサル実態ヒアリングで確認することが推奨されます。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_zangyou">
+          <span>ファーム別の実態を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">働き方改革の進捗 — 4 つの変化</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">変化1</span><h4>働き方改革関連法 (2019年〜)</h4><p>2019年4月施行の働き方改革関連法以降、大手コンサルファームでも 36協定遵守 + 月60時間超残業の割増賃金率引上げ等への対応が進んでいるとされる傾向です。長時間労働の是正に向けた取り組みが業界で標準化されつつあります。</p></article>
+        <article class="branch"><span class="tag">変化2</span><h4>ハイブリッドワーク導入 (2020年〜)</h4><p>COVID-19 以降、大手コンサルファームではハイブリッドワーク (出社 + リモート) が主流化したとされる傾向です。週 2-3 日のリモート勤務が一般的水準とされる傾向にあります。</p></article>
+        <article class="branch"><span class="tag">変化3</span><h4>有給休暇取得率向上</h4><p>働き方改革により有給休暇の年5日取得義務化が施行され、コンサルファームでも取得促進が進む傾向とされています。但し案件期 + 納期前は取得が難しいケースもあるとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">変化4</span><h4>女性活躍 + ダイバーシティ推進</h4><p>女性活躍推進法 + ダイバーシティ経営の流れで、コンサルファームでも女性管理職比率向上 + 育休復帰サポート + 時短勤務制度の整備が進んでいるとされる傾向です。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_zangyou_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">ワークライフバランス改善 5 ポイント</h2>
+      <div class="counter-box">
+        <h4>ポイント1: ファーム選び (働き方改革進捗で選定)</h4>
+        <p>働き方改革 + ハイブリッドワーク + 育休復帰サポート等が整備されているファームを選ぶことが推奨されます。公共系 / 一部総合系は比較的安定傾向とされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント2: 案件選び (案件サイクル + 業界特性)</h4>
+        <p>戦略系 + FAS の M&A 案件は短期高負荷、Tech / 公共系は比較的安定傾向とされる傾向です。案件選定時に元コンサル相談が推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント3: ポジション選び (アナリスト → マネージャー)</h4>
+        <p>一般的に若手 (アナリスト〜シニアコンサルタント) は実務量が多く長時間労働になりやすい傾向、マネージャー以降はマネジメント業務中心で時間配分が柔軟になる傾向とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント4: クライアント先選び</h4>
+        <p>常駐型クライアント / 出社頻度高クライアント / 海外プロジェクトでは労働時間が長くなる傾向。リモート可案件 + 国内中堅企業案件等が比較的バランス良いとされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント5: 個人の時間管理 + 優先順位</h4>
+        <p>コンサル業務でも自己管理能力 + 優先順位設定 + デリゲーション能力で時間配分は変えられるとされる傾向です。長く活躍する人ほど時間管理が上手いと一般的に言われます。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>ワークライフバランスを優先したい場合、元コンサルの実態ヒアリング + ファーム別比較が最効率。MyVisionの無料カウンセリングで、自分の優先度 + 適合ファーム + 案件特性を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_zangyou">
+          <span>元コンサル実態ヒアリングを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>5 大失敗パターン × 回避法</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-tekisei/"><h4>コンサル 適性</h4><p>10 項目セルフチェック</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代別レンジ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">コンサルの働き方を、元コンサルから honest に聞く</h2>
+      <p>ファーム別の残業実態 + 働き方改革進捗 + ワークライフバランスの実情を、元コンサルから直接ヒアリング。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_zangyou">
+          <span>元コンサル無料ヒアリングを始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

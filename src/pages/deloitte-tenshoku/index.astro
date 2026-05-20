@@ -1,0 +1,198 @@
+---
+/**
+ * deloitte-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: デロイト 転職 (sv 推定 600-1,000・BIG4 最大規模)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'デロイト 転職 完全ガイド｜デロイト トーマツ グループ BIG4 最大規模の特性・年収・選考対策｜MyVision (PR)';
+const description = 'デロイト トーマツ グループ (Deloitte Tohmatsu Consulting / Deloitte FAS / Tohmatsu 監査法人) への転職について、BIG4 最大規模ファームの部門別特性・年収レンジ・採用人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'デロイト 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'デロイトとはどんなファームですか?', a: 'Deloitte (デロイト) は世界 4 大会計事務所 BIG4 の最大規模のグループとされ、日本では Deloitte Tohmatsu Consulting (DTC) + Deloitte Tohmatsu FAS + 有限責任監査法人トーマツ + デロイト トーマツ税理士法人 等の複数法人で展開しているとされています。' },
+  { q: 'デロイトの年収レンジはどのくらいですか?', a: '一般公開情報によれば、シニアコンサルタント 700-1,100万円、マネージャー 1,100-1,500万円、シニアマネージャー 1,500-2,000万円、ディレクター 1,900-2,400万円、パートナー 2,500万円超の事例が報告されています。BIG4 内では PwC・EY と並ぶ水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'デロイトの強み・特徴は?', a: 'BIG4 の中で最大規模 + 全領域カバーが特徴とされています。Tech + Strategy + Risk + FAS + Tax 等の総合展開で、コンサルティング採用枠が幅広い傾向です。グローバルネットワーク + 業界カバー範囲も広いとされる傾向です。' },
+  { q: 'デロイトで採用される人材像は?', a: '一般公開情報によれば、Tech 部門 = SIer / SE / クラウド / データ系、Consulting = 大手事業会社 (経営企画 / 業務改革)、FAS = 銀行 / 証券 / 会計士 / 財務、Risk = 金融 / 法務 / セキュリティ等の出身者がメインターゲットとされています。詳細は <a href="/big4-consul-tenshoku/" class="underline">BIG4 転職</a> 参照。' },
+  { q: 'デロイトの選考対策は?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 (ビジネスケース) → 役員面接の流れで、論理思考 + 業界知見 + 実務経験の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'デロイト と PwC どちらを選ぶべきですか?', a: 'デロイト = 規模最大 + 全領域 + 採用枠広い / PwC = 戦略 + 業界変革 + Strategy& 連携 という特性の違いがあるとされています。前職経験 + 志向で適合性が変わるため、両ファーム比較が推奨されます。詳細は <a href="/pwc-tenshoku/" class="underline">PwC 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">デロイト / BIG4 最大規模ガイド</span>
+      <h1 id="fv-h1"><span class="accent">デロイト</span> 転職 完全ガイド<br />デロイト トーマツ グループ BIG4 最大規模の特性・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: デロイトは<strong>BIG4 で最大規模 + 全領域カバー</strong>のファームとされ、Deloitte Tohmatsu Consulting + Deloitte FAS + 有限責任監査法人トーマツ + 税理士法人 等の複数法人で展開しているとされています。本記事ではデロイト各部門の特性 + 年収レンジ + 採用人材像 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>デロイト トーマツ グループ の構成 + 強み</li>
+        <li>部門別 (Consulting / FAS / Risk / Tech) 特性</li>
+        <li>年収レンジ (700-2,500万円帯) + 採用人材像</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_deloitte`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_deloitte">
+          <span>デロイト 挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはデロイト公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">デロイト トーマツ グループの構成 + 強み</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): デロイト トーマツ グループ公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">強み1</span><h4>BIG4 最大規模</h4><p>世界・日本両軸で BIG4 最大規模のファーム。コンサルティング採用枠が幅広く、Tech / Consulting / FAS / Risk / Tax の全領域カバーで、多様な専門性を活かせる組織構造とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み2</span><h4>業界カバー範囲の広さ</h4><p>金融 / 製造 / 流通 / 通信 / 公共 / ヘルスケア等の主要業界に深く入り込んだ案件構成。業界別の専門組織 (インダストリー部門) が確立しており、業界知見を深耕しやすい環境とされています。</p></article>
+        <article class="branch"><span class="tag">強み3</span><h4>グローバルネットワーク</h4><p>世界 150 以上の国・地域で展開する Deloitte Global と連携。クロスボーダー案件 + 海外オフィス研修等で国際経験を積める環境とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み4</span><h4>Tech 採用枠の規模</h4><p>Deloitte Digital + Technology Consulting の規模が大きく、IT・SIer・SE・クラウド・データ系出身者のメインターゲット部門。DX 推進案件 + クラウド移行案件が継続的に発生する傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_deloitte`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_deloitte">
+          <span>デロイト の最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">デロイト 部門別 年収レンジ + 採用人材像</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="デロイト 部門別 年収・採用層">
+          <thead><tr><th>部門</th><th>主な案件</th><th>年収レンジ目安</th><th>主な採用層</th></tr></thead>
+          <tbody>
+            <tr><td>Monitor Deloitte (戦略)</td><td>経営戦略 / M&A 戦略 / 新規事業</td><td>900-2,500万円</td><td>戦略系経験者 / MBA / 高度専門</td></tr>
+            <tr><td>Consulting (業務 + 業界変革)</td><td>業務変革 / 業界特化 / 組織変革</td><td>700-1,800万円</td><td>事業会社 (経営企画 / 業務) 出身</td></tr>
+            <tr><td>Deloitte Digital / Technology</td><td>DX / クラウド / データ / AI</td><td>650-1,800万円</td><td>SIer / SE / PM / クラウド系</td></tr>
+            <tr><td>Risk Advisory (リスク)</td><td>リスク管理 / 内部統制 / セキュリティ</td><td>700-1,800万円</td><td>金融 / 法務 / IT セキュリティ</td></tr>
+            <tr><td>Deloitte FAS (M&A)</td><td>M&A / 財務 DD / 事業再生</td><td>800-2,300万円</td><td>銀行 / 証券 / 会計士 / 財務</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_deloitte_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">デロイト 選考対策 — 4 つのポイント</h2>
+      <div class="counter-box">
+        <h4>対策1: 部門別の傾向把握 + 業界研究</h4>
+        <p>Consulting / FAS / Risk / Tech / Strategy 部門ごとに採用人材像 + 案件特性 + 評価軸が異なります。特にデロイトはインダストリー部門 (金融 / 製造 / 流通等) も確立しているため、業界研究も並行が必要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: ケース面接 (ビジネスケース寄り)</h4>
+        <p>デロイトのケース面接は実務寄り (業界戦略 / 業務変革 / DX 推進等) + ビジネスケースの傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 業界知見 + 実務経験の言語化</h4>
+        <p>前職業界の専門知見 + コンサル評価軸への翻訳が、デロイト採用の核心評価ポイントとされています。元コンサルの添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 志望動機 (なぜデロイト + なぜこの部門)</h4>
+        <p>「BIG4 最大規模 + 業界カバー範囲 + Tech 採用枠」等のデロイト特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>デロイト採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合部門 + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_deloitte`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_deloitte">
+          <span>デロイト特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>Deloitte / PwC / EY / KPMG 4 ファーム</p></a>
+        <a class="card-link" href="/pwc-tenshoku/"><h4>PwC 転職</h4><p>戦略 + 業界変革</p></a>
+        <a class="card-link" href="/ma-consul-tenshoku/"><h4>M&A コンサル転職</h4><p>FAS 高単価キャリア</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">BIG4 最大規模のデロイトで、全領域のキャリアを描く</h2>
+      <p>デロイト トーマツ グループ + 部門別の特性把握で、最適な挑戦先を見極める。MyVisionの無料カウンセリングで、適合部門 + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_deloitte`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_deloitte">
+          <span>デロイト 挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
