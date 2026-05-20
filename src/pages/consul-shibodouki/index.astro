@@ -1,0 +1,226 @@
+---
+/**
+ * consul-shibodouki LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル 志望動機 (sv 推定 800-1,200・即実行型・添削サポート完全合致)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 志望動機 完全ガイド｜落ちる 7 パターン × 通る論理構造 × 業界別翻訳例｜MyVision (PR)';
+const description = 'コンサル選考の核心となる志望動機について、落ちる7つの共通パターン + 通る論理構造 (なぜコンサル × なぜこのファーム × なぜ今) + 業界別翻訳例 + ファーム別カスタマイズ方法を整理。元コンサルの無料添削サポート活用法も解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 志望動機' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサル志望動機で評価される 3 つの軸は何ですか?', a: '一般公開情報によれば、(1) なぜコンサル業界か (2) なぜこのファームか (3) なぜ今このタイミングか の3軸が選考で評価される論理構造とされています。前職実績 → コンサルで活かすスキル → 中長期キャリアの順で論理を構築するのが一般的とされています。' },
+  { q: '志望動機で落ちる人の共通パターンは何ですか?', a: '一般的に「成長したいから」「年収を上げたいから」等の<strong>個人都合中心の理由</strong>・「ファーム名を入れ替えても通用する汎用的理由」・「ロジック飛躍 + 数値根拠なし」等が落ちるパターンとされています。本記事ではこの 7 パターンを詳細解説しています。' },
+  { q: '前職経験はどう志望動機に組み込むべきですか?', a: '前職実績 → そこで認識した課題 → コンサルで解決したい問題 の順で構造化するのが、一般的に推奨される論理構造とされています。具体的なエピソード + 数値根拠が説得力の源泉とされています。' },
+  { q: 'ファーム別の志望動機はどうカスタマイズすべきですか?', a: '戦略系 (BCG/McK/Bain)・総合系 (アクセンチュア/PwC)・FAS系・IT系で求める人材像が異なるため、各ファームの強み + 案件特性 + カルチャーに合わせた表現が必要とされています。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a>・<a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
+  { q: '志望動機の添削はどこで受けられますか?', a: 'コンサル特化エージェントの公開情報によれば、元コンサルによる無料の志望動機添削 + 壁打ちサポートが提供されているとされています。複数回の添削で品質が大きく変わるとされています。' },
+  { q: 'ケース面接と志望動機はどちらが重要ですか?', a: 'どちらも選考の核心とされています。ケース面接は論理思考力の評価、志望動機は中長期キャリア整合性の評価と役割が異なります。両方の対策が必要です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 / 志望動機完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">志望動機</span> 完全ガイド<br />落ちる 7 パターン × 通る論理構造 × 業界別翻訳例</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル志望動機は<strong>選考の核心</strong>で、(1) なぜコンサル業界か (2) なぜこのファームか (3) なぜ今このタイミングか の3軸で論理を構築する必要があるとされています。本記事では落ちる人の7つの共通パターン + 通る論理構造 + 業界別翻訳例 + ファーム別カスタマイズを整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>落ちる人の 7 つの共通パターン (NG 例)</li>
+        <li>通る志望動機の論理構造 (前職実績 → 課題 → コンサルで解決)</li>
+        <li>業界別翻訳例 (IT・金融・事業会社・官公庁)</li>
+        <li>ファーム別カスタマイズ + 元コンサル添削の活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_shibo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_shibo">
+          <span>志望動機添削を無料で受ける (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">落ちる志望動機 — 7 つの共通パターン</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報・元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>NG1: 個人都合中心の理由</h4>
+        <p>「成長したいから」「年収を上げたいから」「スキルアップしたいから」等の自己利益中心の動機は、コンサル選考では評価が下がる傾向にあるとされています。クライアント貢献の視点が必須です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>NG2: ファーム名を入れ替えても通用する汎用的理由</h4>
+        <p>「日本最大級だから」「グローバル企業だから」等の他社にも当てはまる理由は、「なぜこのファームか」への答えになりません。各ファーム固有の強み + カルチャーに踏み込む必要があるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>NG3: ロジック飛躍 + 数値根拠なし</h4>
+        <p>「DX が重要だから」→「コンサルになりたい」のような大きすぎる飛躍 + 具体的根拠なしの志望動機は、論理性評価で落とされるとされています。前職実績 + 数値根拠で接続することが必要です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>NG4: 前職への愚痴 + ネガティブ転職理由</h4>
+        <p>「前職がブラックだったから」「上司との関係が悪かったから」等のネガティブ動機は、コンサル選考で減点要素とされています。前職経験を肯定的に語り、その上でのキャリア発展を語る必要があります。</p>
+      </div>
+      <div class="counter-box">
+        <h4>NG5: コンサル業務理解の不足</h4>
+        <p>「コンサル = カッコいい」「テレビで見て憧れた」等のミスマッチ動機は、業務理解不足を示してしまうとされています。実際の案件構造・働き方・キャリアパスを理解した上での志望動機が必要です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>NG6: 中長期キャリア構想の欠如</h4>
+        <p>「とりあえずコンサルで経験を積みたい」等の中長期構想なしの動機は、ファーム側のミスマッチ懸念を生むとされています。コンサル経験後のキャリア構想まで語れる必要があります。</p>
+      </div>
+      <div class="counter-box">
+        <h4>NG7: テンプレート臭強い + 個性なし</h4>
+        <p>「論理的思考力を活かしたい」「多様な業界に触れたい」等のテンプレート的表現は、面接官の印象に残りません。自分の前職実績 + 個人体験に根ざした具体的表現が必要とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_shibo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_shibo">
+          <span>自分の志望動機を元コンサルが無料で添削する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">通る志望動機の論理構造</h2>
+      <p class="section-lede">通る志望動機の標準的論理構造を、3軸 × 4ステップで整理します。各ステップで前職実績 + 数値根拠 + ファーム特性との接続が必要とされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">軸1</span><h4>なぜコンサル業界か</h4><p>前職での実務経験 → 認識した課題 → コンサルで解決したい問題 の順で構造化します。「個別企業の壁を超えて、業界横断で課題解決に貢献したい」等の論理が一般的とされています。</p></article>
+        <article class="branch"><span class="tag">軸2</span><h4>なぜこのファームか</h4><p>戦略系 (案件規模・難度)・総合系 (実装力・業界カバー)・FAS系 (M&A・財務)・IT系 (技術深度) 等の各ファーム固有の強みに踏み込みます。自分のキャリア構想との整合性を語る必要があるとされています。</p></article>
+        <article class="branch"><span class="tag">軸3</span><h4>なぜ今このタイミングか</h4><p>年齢 + 前職での経験蓄積 + ライフイベント + 市場機会の4要素から、「今」決断する論理を構築します。20代後半-30代前半が市場価値ピーク前の決断タイミングとされる構造を踏まえます。</p></article>
+        <article class="branch"><span class="tag">補</span><h4>中長期キャリア構想</h4><p>3軸に加え、コンサル経験後のキャリア (CXO・PE/VC・専門領域特化・起業等) を語ることで、ファーム側のミスマッチ懸念を払拭できるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_shibo_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">業界別 志望動機の翻訳例</h2>
+      <p class="section-lede">前職業界別に、志望動機の標準的翻訳パターンを整理します。各例はあくまで一般論であり、個別状況に応じた個別カスタマイズが必要です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="業界別 志望動機翻訳例">
+          <thead><tr><th>前職業界</th><th>前職実績 (例)</th><th>認識した課題</th><th>コンサルで貢献したい価値</th></tr></thead>
+          <tbody>
+            <tr><td>IT・SIer</td><td>クラウド移行案件 + データ基盤構築</td><td>事業側の戦略接続不足</td><td>IT × ビジネスの橋渡し + 業界横断 DX 支援</td></tr>
+            <tr><td>大手事業会社 (経営企画)</td><td>新規事業立ち上げ + KPI 設計</td><td>個別企業の壁による展開限界</td><td>業界横断の知見集約 + 課題解決パターン構築</td></tr>
+            <tr><td>銀行・証券・会計</td><td>融資審査 + 財務分析 + M&A 支援</td><td>個別案件の戦略視点不足</td><td>FAS / 戦略系で財務 + 戦略の統合価値提供</td></tr>
+            <tr><td>官公庁・公共機関</td><td>政策立案 + 制度設計 + 公共調達</td><td>民間との連携不足 + 実装力不足</td><td>公共系コンサルで政策 → 実装の架け橋</td></tr>
+            <tr><td>製造業 (技術・生産管理)</td><td>生産ライン改善 + 業務改革</td><td>業界全体の構造変革遅延</td><td>製造業 DX + サプライチェーン変革</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">ファーム別 志望動機カスタマイズ</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">戦略系</span><h4>BCG / McK / Bain</h4><p>大規模案件 + 経営層インパクト + 高度抽象思考 + ケース面接の論理性。「経営層に直接価値提供したい」+ 「業界変革の構造的アプローチに参画したい」等の論理が一般的とされています。</p></article>
+        <article class="branch"><span class="tag">総合系</span><h4>アクセンチュア / PwC / ベイカレント</h4><p>戦略 + 業務 + 実装の一気通貫 + 業界カバー + DX 推進。「戦略立案だけでなく実装まで責任を持ちたい」+ 「業界横断 DX 推進への参画」等が一般的論理とされています。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">FAS系</span><h4>Deloitte FAS / PwC AS / KPMG FAS</h4><p>M&A + 財務戦略 + 事業再生 + ファイナンス特化。「財務知見 × 戦略視点で M&A 案件に深く関与したい」+ 「事業再生で経営価値創造」等が一般的論理とされています。</p></article>
+        <article class="branch"><span class="tag">IT系</span><h4>アクセンチュア Tech / IBM / アビーム</h4><p>テクノロジー深度 + 業界実装 + DX 推進。「クラウド・データ・生成AI 等の最新技術で業界変革に貢献」等が一般的論理とされています。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>ファーム別の志望動機カスタマイズは、元コンサルの伴走で品質が大きく変わるとされています。MyVisionの無料カウンセリングで、添削サポートの利用方法を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_shibo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_shibo">
+          <span>ファーム別の添削サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>頻出 5 タイプ + 解法フレームワーク</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考対策</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">志望動機の質で、コンサル選考の通過率が変わる</h2>
+      <p>7 つの NG パターンを回避し、3 軸 × 業界別 × ファーム別の論理構造を構築する。MyVisionの無料カウンセリングで、元コンサル添削サポートを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_shibo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_shibo">
+          <span>志望動機添削を無料で受ける</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

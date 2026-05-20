@@ -1,0 +1,219 @@
+---
+/**
+ * accenture-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: アクセンチュア 転職 (sv 推定 1,500+・最大採用ファーム特定・社名 NG リスティングのみ・SEO OK)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)';
+const description = 'アクセンチュアの中途採用について、主要4部門 (Strategy / Consulting / Technology / Operations) の特性・採用される人材像・年収レンジ・選考プロセスを公開情報ベースで整理。元コンサル無料カウンセリング + ケース対策の活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'アクセンチュア 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'アクセンチュアの中途採用は積極的ですか?', a: '一般公開情報によれば、アクセンチュアは中途採用を積極的に行っている総合系コンサルファームの一つとされています。特にTechnology部門での採用枠が広く、IT・SIer 出身者の主要転職先の一つとされています。' },
+  { q: 'アクセンチュアの4部門の違いは何ですか?', a: '一般公開情報によれば、Strategy (戦略立案)・Consulting (業務変革)・Technology (システム実装)・Operations (運用) の4部門で構成されているとされています。Strategy が最も少人数・選考難度高、Technology は採用枠最大・IT 出身者の主戦場とされています。' },
+  { q: 'アクセンチュアの年収レンジはどのくらいですか?', a: '一般公開情報によれば、アナリスト (新卒〜2-3年目) 500-750万円、コンサルタント 700-1,000万円、シニアコンサルタント 900-1,300万円、マネージャー 1,200-1,700万円、シニアマネージャー 1,500-2,000万円帯が中心とされています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'アクセンチュアの選考プロセスはどのような流れですか?', a: '一般公開情報によれば、書類選考 → 適性検査 (WEB) → ケース面接 → 役員面接の流れが多いとされています。ケース面接対策が選考突破の鍵となるため、元コンサルとの模擬面接が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">コンサル ケース面接対策</a> 参照。' },
+  { q: 'IT エンジニアからアクセンチュアに転職できますか?', a: 'IT・SIer 出身者はアクセンチュアのTechnology部門でメインターゲットとされており、採用枠が広いとされています。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職ガイド</a> 参照。' },
+  { q: '20代後半・30代でも応募できますか?', a: '一般公開情報によれば、20代後半-30代前半は中途採用の主要層とされています。詳細は <a href="/consul-tenshoku-20daikouhan/" class="underline">20代後半 コンサル</a>・<a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / アクセンチュア完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">アクセンチュア</span> 転職 完全ガイド<br />中途採用 4 部門 × 年収レンジ × 選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: アクセンチュアは<strong>総合系コンサルファームの中で最大規模の中途採用</strong>を行っている企業の一つとされ、特に Technology 部門での採用枠が広いとされています。本記事では公開情報ベースで4部門の特性 + 採用される人材像 + 年収レンジ + 選考プロセスを整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。アクセンチュア公式キャリアサイトの最新情報を必ずご確認ください。</p>
+      <ul class="fv-bullets">
+        <li>4 主要部門 (Strategy / Consulting / Technology / Operations) の特性</li>
+        <li>採用される人材像 (IT・SIer・大手出身が主流)</li>
+        <li>部門別年収レンジ (500-2,000万円帯)</li>
+        <li>選考プロセス (書類 → 適性 → ケース → 役員) + 対策</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_accenture`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_accenture">
+          <span>アクセンチュア対策を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはアクセンチュア公式サイトではなく、公開情報を整理した第三者の情報提供サイトです。本記事は転職効果・年収アップ・選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">アクセンチュア — 4 主要部門の特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): アクセンチュア公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">部門1</span><h4>Strategy (戦略部門)</h4><p>経営戦略立案・全社変革を中心とした上流案件を担当。少人数 + 選考難度高 (ケース面接厳格) とされています。マネジメント候補 + 戦略系経験者がメインターゲットとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">部門2</span><h4>Consulting (業務変革)</h4><p>業務プロセス改革 + 組織変革 + 業界特化案件を担当。アクセンチュアの中核で採用枠が大きいとされています。事業会社の経営企画 + 業務改革経験者が主流とされています。</p></article>
+        <article class="branch"><span class="tag">部門3</span><h4>Technology (システム実装)</h4><p>DX 推進 + クラウド + データ + 生成AI + システム実装の案件を担当。<strong>最大規模の採用枠</strong>とされ、IT・SIer 出身者のメインターゲット部門です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">部門4</span><h4>Operations (運用)</h4><p>BPO + アウトソーシング + AI/RPA 活用の運用案件を担当。比較的安定した運用業務 + ハイブリッド (新規開発 + 運用) のキャリアが特徴とされています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_accenture`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_accenture">
+          <span>適合部門を MyVision 公式の無料相談で診断する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">部門別 年収レンジ + 採用人材像</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="アクセンチュア部門別 年収・採用層">
+          <thead><tr><th>部門</th><th>年収レンジ目安</th><th>採用枠</th><th>主な採用人材像</th></tr></thead>
+          <tbody>
+            <tr><td>Strategy</td><td>800-2,000万円</td><td>少 (狭き門)</td><td>戦略系経験者・MBA・高度専門</td></tr>
+            <tr><td>Consulting</td><td>600-1,700万円</td><td>大</td><td>事業会社 (経営企画・業務改革) 出身</td></tr>
+            <tr><td>Technology</td><td>500-1,500万円</td><td>&#11088; 最大</td><td>IT・SIer・SE・PM 出身</td></tr>
+            <tr><td>Operations</td><td>500-1,300万円</td><td>中</td><td>業務系・BPO 経験者・運用エンジニア</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_accenture_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">選考プロセス + 通過 4 ステップ</h2>
+      <p class="section-lede">一般公開情報によれば、アクセンチュアの中途選考は以下の4ステップで進むことが多いとされています。各ステップでの対策ポイントを整理します。</p>
+      <div class="counter-box">
+        <h4>ステップ1: 書類選考 (職務経歴書 + レジュメ)</h4>
+        <p>前職実績のコンサル評価軸への翻訳が必須とされています。「実装した・運用した」ではなく「経営課題に対してどう貢献したか・成果インパクトはどの規模か」の視点で再構成する作業が、選考通過に直結するとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ2: 適性検査 (WEB)</h4>
+        <p>論理・計数・言語の3軸を中心とした適性検査が一般的とされています。SPI / 玉手箱形式が想定されるとされ、市販対策本での事前準備が推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ3: ケース面接 (選考の核心)</h4>
+        <p>フェルミ推定 + 経営課題 (収益改善・市場参入等) を、制限時間内に論理的に解く形式とされています。独学では限界があり、元コンサルの模擬面接 + 添削が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">コンサル ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ4: 役員面接 (志望動機 + キャリア構想)</h4>
+        <p>「なぜアクセンチュア」 + 「なぜこの部門」 + 「中長期キャリア構想」を論理的に語る面接とされています。志望動機の質が内定可否を分けるとされています。詳細は <a href="/consul-shibodouki/" class="underline">コンサル 志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_accenture`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_accenture">
+          <span>選考対策を元コンサルの無料サポートで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">アクセンチュア特化の無料サポート活用法</h2>
+      <p>コンサル特化エージェントの公開情報によれば、アクセンチュア出身者 + 内部知見を持つ元コンサルが、以下の無料サポートを提供しているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>部門別の傾向対策</h4><p>Strategy / Consulting / Technology / Operations 別の選考傾向 + 求める人材像 + 過去の出題ケースを、元コンサルが個別カスタマイズするとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>過去のケース問題レクチャー</h4><p>アクセンチュアの選考で過去出題された (とされる) ケース問題タイプ + 解法アプローチ + 評価ポイントを、模擬面接形式で実践練習するとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>志望動機の壁打ち</h4><p>「なぜアクセンチュア」「なぜこの部門」「中長期キャリア」の3軸を、元コンサルが複数回壁打ちで論理性を磨くとされています。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より好条件のアクセンチュア非公開求人 + ポジション交渉サポートが提供されるとされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>MyVisionの無料カウンセリングで、アクセンチュア部門別の選考傾向 + 自分の市場価値 + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_accenture`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_accenture">
+          <span>アクセンチュア特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験</h4><p>未経験者の9割が辿る選考突破</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>Technology 部門メインターゲット</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を突破する 4 週間プラン</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別レンジ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">アクセンチュア中途採用へ、最短ルートで挑戦する</h2>
+      <p>4部門の選考傾向 + 元コンサル添削 + ケース対策。MyVisionの無料カウンセリングで、自分に最適な部門 + 想定年収 + 選考対策ロードマップを会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_accenture`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_accenture">
+          <span>アクセンチュア対策を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
