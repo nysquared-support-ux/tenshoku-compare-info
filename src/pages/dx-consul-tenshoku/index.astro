@@ -1,0 +1,215 @@
+---
+/**
+ * dx-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: DX コンサル 転職 (sv 推定 500-900・採用爆増領域)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'DX コンサル 転職 完全ガイド｜採用爆増領域の年収・狙えるファーム・選考対策｜MyVision (PR)';
+const description = 'DX (デジタルトランスフォーメーション) コンサル転職について、採用爆増領域の年収レンジ・狙えるファーム (アクセンチュア / ベイカレント / アビーム / IBM 等)・評価される 5 スキル・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'DX コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'DX コンサルとは何ですか?', a: '一般的に企業のデジタルトランスフォーメーション (デジタル技術を活用した経営変革) を、戦略立案 → 要件定義 → システム実装 → 組織変革まで一気通貫で支援するコンサルティング領域とされています。2020年以降、コンサル業界で最も採用が活発な領域の一つとされています。' },
+  { q: 'DX コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、コンサルタント階層で600-1,100万円、シニアコンサルタント階層で900-1,400万円、マネージャー階層で1,300-1,800万円帯の事例が報告されています。IT 系コンサル全般と同水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'DX コンサルに評価されるスキルは何ですか?', a: '一般的にクラウド (AWS/GCP/Azure)・データ基盤・生成 AI / LLM・PMO / アジャイル・業界知見の5領域が評価される傾向とされています。本記事内で詳細を整理しています。' },
+  { q: 'SIer / SE 出身者は DX コンサルに向いていますか?', a: 'SIer / SE 出身者は DX コンサルのメインターゲット層の一つとされ、特に大規模 SI 経験 + クラウド経験 + PM 経験者の需要が高いとされています。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
+  { q: 'DX コンサルで狙える主なファームは?', a: '一般公開情報によれば、アクセンチュア (Technology)・ベイカレント・アビーム・IBM コンサルティング・BIG4 Tech 部門等が DX 案件の主要プレイヤーとされています。' },
+  { q: '未経験 (DX 経験浅め) でも DX コンサルに転職できますか?', a: 'コンサル業界未経験 + DX 案件経験浅めでも、IT 基礎 + 業界知見 + 学習意欲があれば挑戦可能とされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">DX コンサル / 採用爆増領域ガイド</span>
+      <h1 id="fv-h1"><span class="accent">DX コンサル</span> 転職 完全ガイド<br />採用爆増領域の年収・狙えるファーム・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: DX (デジタルトランスフォーメーション) コンサル領域は<strong>2020年以降コンサル業界で最も採用が活発</strong>とされ、SIer / SE / IT 出身者の主要転職先となっています。本記事ではDX コンサルの年収レンジ・狙えるファーム・評価される 5 スキル・選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>DX コンサルが採用爆増している 3 背景</li>
+        <li>評価される 5 スキル (クラウド / データ / AI / PMO / 業界知見)</li>
+        <li>狙える主要ファーム (アクセンチュア / ベイカレント / アビーム / IBM)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_dx`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_dx">
+          <span>DX コンサル挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはコンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">DX コンサルが採用爆増している 3 背景</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.meti.go.jp/policy/it_policy/dx/dx.html" target="_blank" rel="noopener">経済産業省 DX 推進ガイドライン</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">背景1</span><h4>経済産業省「DX レポート」+ 2025 年の崖</h4><p>経済産業省「DX レポート」(2018年)・「2025 年の崖」で日系企業のレガシー IT 刷新の必要性が指摘されて以降、DX 推進案件が業界横断で急増しているとされています。コンサル業界は需要 > 供給の構造的人材不足が継続しています。</p></article>
+        <article class="branch"><span class="tag">背景2</span><h4>生成 AI / LLM の業務活用</h4><p>2023年以降、ChatGPT / Claude / Gemini 等の生成 AI を業務活用する案件が爆増しているとされています。AI 戦略立案 + 業務プロセス再設計 + ガバナンス整備の領域でコンサル需要が急増。</p></article>
+        <article class="branch"><span class="tag">背景3</span><h4>クラウド + データ基盤の主流化</h4><p>クラウド (AWS/GCP/Azure) + データ基盤 (Snowflake/BigQuery/Databricks) の主流化により、移行案件 + 活用案件が継続的に発生しているとされています。インフラ刷新 + データドリブン経営の両軸で需要が高い領域です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_dx`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_dx">
+          <span>DX 案件動向を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">DX コンサルで評価される 5 スキル</h2>
+      <div class="counter-box">
+        <h4>スキル1: クラウド (AWS / GCP / Azure)</h4>
+        <p>クラウド移行案件 + クラウドネイティブ設計の実務経験が中核評価軸とされています。AWS Solutions Architect / GCP Professional / Azure Solutions Architect 等の認定資格 + 設計実績が評価される傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル2: データ基盤 / DWH / BI</h4>
+        <p>Snowflake・BigQuery・Databricks 等の DWH 構築 + Tableau / Looker / Power BI 等の BI ツール活用経験が高評価とされています。データドリブン経営案件の需要急増中です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル3: 生成 AI / LLM / 機械学習</h4>
+        <p>生成 AI (ChatGPT / Claude / Gemini) の業務活用 + 機械学習 (推薦 / 予測 / 異常検知) の実務経験が、2024年以降コンサル業界で最も需要が高いスキルの一つとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル4: PMO / アジャイル</h4>
+        <p>大規模 DX プロジェクトの PMO + アジャイル開発リード経験が中核評価軸とされています。PMP / スクラムマスター等の資格 + 予算 XX 億規模の案件経験が高評価とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル5: 業界知見 + 業務理解</h4>
+        <p>金融 / 製造 / 流通 / 通信 / 公共等の業界別 DX 課題理解 + 業務プロセス再設計能力が、DX コンサルとして長期で活躍するための基盤とされています。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_dx_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">DX コンサル 狙える主要ファーム</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="DX コンサル主要ファーム比較">
+          <thead><tr><th>ファーム</th><th>DX 採用規模</th><th>強み領域</th><th>年収レンジ</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (Technology)</td><td>&#11088; 最大</td><td>クラウド / データ / AI / Tech 実装</td><td>600-1,800万円</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>大</td><td>DX 経営改革 / 業界深耕</td><td>700-2,200万円</td></tr>
+            <tr><td>アビームコンサルティング</td><td>大</td><td>SAP DX / 基幹業務刷新</td><td>650-1,700万円</td></tr>
+            <tr><td>IBM コンサルティング</td><td>大</td><td>クラウド / AI / ハイブリッド IT</td><td>650-1,900万円</td></tr>
+            <tr><td>BIG4 Tech 部門</td><td>大</td><td>クラウド / リスク / コンプライアンス</td><td>700-2,000万円</td></tr>
+            <tr><td>NTT データ・コンサルティング</td><td>中</td><td>公共 / 金融 / データ基盤</td><td>650-1,500万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">DX コンサル 選考対策 — 4 ポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">対策1</span><h4>クラウド / データ / AI 実務経験の言語化</h4><p>「AWS 移行」「Snowflake 構築」「LLM 業務活用」等の具体経験を、規模感 + 成果 + 役割で言語化することが必須とされています。元コンサルの添削で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">対策2</span><h4>業界 DX 課題の体系的理解</h4><p>担当業界 (金融 / 製造 / 流通 / 通信等) の DX 課題 + 主要プレイヤー + 最新動向を体系的に整理する必要があります。面接で業界の議論ができるレベルが評価軸とされています。</p></article>
+        <article class="branch"><span class="tag">対策3</span><h4>ケース面接 (DX 推進シナリオ)</h4><p>DX コンサルのケース面接は「業界 X の DX 戦略」「データ活用による収益改善」等の DX 推進シナリオが頻出とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜ DX コンサル)</h4><p>「経営層への DX 提案」「業界横断 DX 経験」「最新技術活用」等の DX コンサル特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>DX コンサル挑戦は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分のDX スキル + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_dx`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_dx">
+          <span>DX コンサル特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>SIer/SE/PM 出身者向け</p></a>
+        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>Technology 部門最大採用</p></a>
+        <a class="card-link" href="/baycurrent-tenshoku/"><h4>ベイカレント転職</h4><p>DX 経営改革 + 業界深耕</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">DX コンサルの採用爆増領域で、最新技術スキルを武器に挑戦する</h2>
+      <p>クラウド + データ + AI 経験を武器に、DX コンサルの主要ファームへ挑戦できます。MyVisionの無料カウンセリングで、DX スキル + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_dx`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_dx">
+          <span>DX コンサル挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

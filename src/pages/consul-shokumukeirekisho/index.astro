@@ -1,0 +1,224 @@
+---
+/**
+ * consul-shokumukeirekisho LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 職務経歴書 (sv 推定 600-1,000・即実行型・添削サポート CV キー)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 職務経歴書 完全ガイド｜書類選考通過率を高める 5 翻訳ポイント + 無料添削活用｜MyVision (PR)';
+const description = 'コンサル転職で書類選考通過率を高める職務経歴書の書き方を、5 つの翻訳ポイント (実績数値化・マネジメント翻訳・案件規模・成果インパクト・ファーム別カスタマイズ) で整理。元コンサルによる無料添削サポートの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 職務経歴書' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサル転職の職務経歴書は普通の転職と何が違いますか?', a: 'コンサル業界では「経営課題に対する貢献 + 成果インパクト + 関係者規模」のコンサル評価軸への翻訳が必須とされています。前職実績を「実装した・運用した」ではなく「経営課題にどう貢献したか」の視点で再構成する作業が、一般的な転職と大きく異なる点です。' },
+  { q: '職務経歴書は何枚で書くのが標準ですか?', a: '一般的に2-4枚 (A4) が標準的とされています。冒頭サマリー (1-2 段落) + 職務要約 + 主要案件 3-5 件 + スキル + 自己PR の構成が一般的とされています。情報量より「コンサル評価軸との接続度」が重要視されます。' },
+  { q: '実績を数値化できない場合はどうすればよいですか?', a: '完全な数値が出せなくても「予算 XX 億 / 関係者 XX 名 / 業界 / 期間 XX 月」等の関連数値で規模感を示すことが推奨されます。元コンサルの添削で「数値化の落とし所」を一緒に作る方法が一般的とされています。' },
+  { q: 'マネジメント経験はどう書けばよいですか?', a: '「チームリード XX 名 / 予算 XX 億 / 期間 XX 月 / 達成成果 XX」のフォーマットで、リーダーシップ + 結果責任 + 影響範囲の3軸で書くのが標準的とされています。30代以上の転職では特に重視される評価軸です。詳細は <a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル転職</a> 参照。' },
+  { q: '元コンサルによる無料添削は本当に効果がありますか?', a: '一般公開情報によれば、元コンサルの添削で書類選考通過率が大きく変わるとされています。コンサル評価軸への翻訳 + ファーム別カスタマイズ + 表現の精緻化を伴走形式で受けられるため、独学では到達しにくい品質に短期で引き上がる効果があるとされています。' },
+  { q: 'ファーム別に職務経歴書をカスタマイズすべきですか?', a: '一般的にファーム別 (戦略 / 総合 / FAS / IT / 公共) で評価軸が異なるため、応募ファームに応じたカスタマイズが推奨されます。基本テンプレートを作った上で、ファーム別に強調ポイントを調整する方法が一般的とされています。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 / 職務経歴書完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">職務経歴書</span> 完全ガイド<br />書類選考通過率を高める 5 翻訳ポイント + 無料添削</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル転職の職務経歴書は、前職実績を<strong>コンサル評価軸 (経営インパクト + 関係者数 + 予算規模 + 成果) に翻訳する作業</strong>が選考通過の鍵とされています。本記事では5つの翻訳ポイントと、元コンサルによる無料添削サポートの活用法を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>コンサル評価軸への翻訳 5 ポイント</li>
+        <li>実績数値化 + マネジメント経験の書き方</li>
+        <li>ファーム別カスタマイズの考え方</li>
+        <li>元コンサル無料添削サポートの活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_shokumu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_shokumu">
+          <span>元コンサルの無料添削サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は書類選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">コンサル評価軸への翻訳 5 ポイント</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>ポイント1: 実績の数値化 (規模感の提示)</h4>
+        <p>「予算 XX 億・関係者 XX 名・期間 XX 月・改善率 XX%・売上 XX 億創出」のように、具体数値で実績を表現することが必須とされています。完全な数値がなくても関連数値で規模感を示す工夫が推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント2: 役割の格上げ表現 (責任範囲の明示)</h4>
+        <p>「実装担当」 → 「要件定義リード + 主要モジュール設計責任者」のように、責任範囲 + リーダーシップ要素を強調する翻訳が一般的とされています。元コンサルの添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント3: 成果インパクトの提示 (ビジネス価値)</h4>
+        <p>「業務効率 XX% 改善 / 売上 XX 億創出 / コスト XX% 削減 / リードタイム XX 日短縮」のように、ビジネスインパクトの数値化が必須とされています。技術面だけでなく経営面の成果を提示する視点が重要です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント4: 業界知見の体系化</h4>
+        <p>担当業界 (金融 / 製造 / 流通 / IT / 公共等) の構造 + 課題 + 主要プレイヤー + 最新トレンドを体系的に整理し、コンサル目線で語れる準備が必要とされています。職務経歴書 + 面接の両軸で活きる準備です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ポイント5: ファーム別カスタマイズ</h4>
+        <p>戦略系 / 総合系 / FAS / IT 系 / 公共系 でそれぞれ評価軸が異なります。応募ファームに応じて強調する経験 + 表現を調整するカスタマイズが、選考通過率に直結するとされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_shokumu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_shokumu">
+          <span>5 翻訳ポイントを元コンサルの無料添削で実践する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">職務経歴書 標準構成 (2-4 枚)</h2>
+      <p class="section-lede">コンサル転職向けの職務経歴書は2-4 枚 (A4) が標準的とされています。下表の構成が一般的です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="コンサル職務経歴書 標準構成">
+          <thead><tr><th>セクション</th><th>分量目安</th><th>記載内容</th><th>翻訳のコツ</th></tr></thead>
+          <tbody>
+            <tr><td>冒頭サマリー</td><td>1-2 段落</td><td>キャリア要約 + 強み + 志向</td><td>コンサル評価軸の言葉で書く</td></tr>
+            <tr><td>職務要約</td><td>1/4-1/2 ページ</td><td>経歴 + 主要実績概観</td><td>規模感の数値を冒頭に提示</td></tr>
+            <tr><td>主要案件 3-5 件</td><td>1-2 ページ</td><td>各案件の課題 / 役割 / 成果</td><td>5 ポイント翻訳を全件適用</td></tr>
+            <tr><td>スキル</td><td>1/4 ページ</td><td>技術 + マネジメント + 言語</td><td>具体レベルを明記</td></tr>
+            <tr><td>自己 PR</td><td>1/4-1/2 ページ</td><td>志向 + 中長期キャリア</td><td>志望動機との接続</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_shokumu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">前職別 翻訳例 (4 タイプ)</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">SIer / SE 出身</span><h4>翻訳例</h4><p>「システム実装 5 人月」 → 「予算 8 億の基幹系刷新案件で要件定義リード + アーキテクチャ設計担当として、業務効率 35% 改善・運用コスト 28% 削減に貢献」。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">大手事業会社 経営企画</span><h4>翻訳例</h4><p>「予算管理担当」 → 「年間 30 億の事業予算編成 + KPI 設計 + 月次経営会議報告を主導し、3 年連続予算精度 95% 以上を達成」。経営層インターフェイスを明示。</p></article>
+        <article class="branch"><span class="tag">金融 (銀行・証券) 出身</span><h4>翻訳例</h4><p>「融資審査担当」 → 「中堅企業向け融資審査 (年間 80 件・累計 200 億) を担当し、不良債権率を業界平均比 40% 抑制」。リスク管理 + 数値成果。</p></article>
+        <article class="branch"><span class="tag">会計士 / 監査法人出身</span><h4>翻訳例</h4><p>「監査担当」 → 「東証一部上場企業 (時価総額 1,000 億) の財務監査主査として、財務 DD + リスク評価を担当」。詳細は <a href="/kaikeishi-tenshoku-timing/" class="underline">会計士 転職タイミング</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_shokumu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_shokumu">
+          <span>自分の前職を元コンサル添削で翻訳する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">元コンサル無料添削サポートで品質が変わる 3 ポイント</h2>
+      <p>コンサル特化エージェントの公開情報によれば、元コンサルの無料添削サポートで<strong>書類選考通過率が大きく変わる 3 ポイント</strong>があるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">変化1</span><h4>表現の精緻化</h4><p>「実装」「運用」等の汎用語を、コンサル評価軸の言葉 (経営課題 / 戦略立案 / 業務変革 / リーダーシップ) に翻訳する作業を、元コンサルが個別カスタマイズで添削するとされています。</p></article>
+        <article class="branch"><span class="tag">変化2</span><h4>ファーム別カスタマイズ</h4><p>応募ファーム (戦略 / 総合 / FAS / IT / 公共) ごとに強調すべきポイントを、元コンサルが個別カスタマイズで提案するとされています。1 つの基本テンプレートを応募ファーム別に展開する効率的方法です。</p></article>
+        <article class="branch"><span class="tag">変化3</span><h4>志望動機との接続</h4><p>職務経歴書 + 志望動機の論理的接続を、元コンサルが壁打ち形式で磨きます。「なぜこの経験 → なぜコンサル → なぜこのファーム」の3軸を一貫性ある論理で構築する伴走サポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>職務経歴書は元コンサル添削で書類選考通過率が大きく変わるとされています。MyVisionの無料カウンセリングから添削サポートを会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_shokumu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_shokumu">
+          <span>元コンサルの無料添削を予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
+        <a class="card-link" href="/consul-shibodouki/"><h4>志望動機ガイド</h4><p>落ちる 7 パターン × 通る論理</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>5 大失敗パターン × 回避法</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">職務経歴書を、コンサル評価軸の言葉で書き直す</h2>
+      <p>5 翻訳ポイント + 元コンサル添削で、書類選考通過率を大きく高める。MyVisionの無料カウンセリングから添削サポートを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_shokumu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_shokumu">
+          <span>元コンサルの無料添削を始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
