@@ -1,0 +1,235 @@
+---
+/**
+ * consul-case-mensetsu LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル ケース面接対策 (sv 推定 800-1,500・即実行型・MyVision無料サポート完全合致)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル ケース面接対策 完全ガイド｜頻出5タイプ + 解法フレームワーク + 4週間ロードマップ｜MyVision (PR)';
+const description = 'コンサル選考の最大の関門であるケース面接対策を、頻出問題5タイプ (フェルミ推定・市場規模・収益改善・市場参入・新規事業) + 解法フレームワーク (MECE/イシューツリー/仮説思考) + 4週間トレーニングロードマップで整理。元コンサルとの模擬面接 + 添削が無料で受けられるMyVisionの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル ケース面接対策' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'ケース面接とは何ですか?', a: 'コンサル選考の中核となる面接形式で、フェルミ推定 (市場規模等の概算) や経営課題 (収益改善・市場参入・新規事業) を制限時間内に論理的に解く形式です。コンサル特化エージェントの公開情報によれば、選考通過の最大の関門とされており、独学では到達しにくい水準の対策が必要とされています。' },
+  { q: '独学でケース面接対策はできますか?', a: '参考書 + ケース問題集での独学は可能ですが、フィードバックなしでは合格水準到達が難しいケースが多いとされています。一般的には元コンサルの模擬面接 + 添削の伴走が推奨されています。コンサル特化エージェントでは無料で模擬面接を提供しているケースが一般的です。' },
+  { q: '頻出のケース問題はどんなタイプですか?', a: '一般的に以下5タイプが頻出とされています: フェルミ推定 (市場規模・人口算出)・収益改善 (売上向上・コスト削減)・市場参入 (新市場進出判断)・新規事業 (アイディア創出・事業性評価)・定性問題 (経営判断・戦略立案)。各タイプで解法フレームワークが異なるとされています。' },
+  { q: '解法フレームワークはどう使い分けますか?', a: 'MECE (もれなく重複なく)・イシューツリー (論点分解)・仮説思考 (仮説 → 検証) の3つが基本フレームとされています。問題タイプに応じて使い分けますが、模擬面接で実践練習しないと身につかない要素とされています。' },
+  { q: 'ケース面接対策にどれくらい時間が必要ですか?', a: '一般的には4-8週間 (模擬面接5-10回 + 振り返り) が標準的トレーニング期間とされています。但し前職経験 + 論理的思考力により個人差が大きく、個別カスタマイズが必要とされています。' },
+  { q: '未経験者でもケース面接は突破できますか?', a: 'コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で選考突破に成功しているとされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル転職 未経験ガイド</a> をご参照ください。元コンサル伴走の模擬面接が一般的な突破方法とされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 / ケース面接対策完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">ケース面接対策</span> 完全ガイド<br />頻出 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル特化エージェントの公開情報によれば、ケース面接はコンサル選考の<strong>最大の関門</strong>とされており、独学では到達しにくい水準の対策が必要とされています。本記事では頻出問題5タイプ・解法フレームワーク3種・4週間トレーニングロードマップを整理し、元コンサルとの<strong>無料模擬面接</strong>を活用した突破方法を解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>頻出ケース問題 5 タイプの解法アプローチ</li>
+        <li>解法フレームワーク 3 種 (MECE・イシューツリー・仮説思考)</li>
+        <li>4 週間トレーニングロードマップ (独学 + 模擬面接)</li>
+        <li>元コンサルの無料模擬面接 + 添削の活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_case">
+          <span>元コンサルとの無料模擬面接を受ける (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事はケース面接通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ケース面接とは — コンサル選考の核心</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 大手ファーム公式キャリアサイト。</p>
+      <p>ケース面接は、コンサル選考の中核となる面接形式です。<strong>制限時間 30-60 分</strong>で経営課題・市場規模算出等の問題を解き、論理的思考力・問題解決能力・コミュニケーション能力を総合評価される形式とされています。コンサル特化エージェントの公開情報によれば、ケース面接の通過率は一般的に20-40%程度とされており、選考全体の最大の関門となっています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特徴1</span><h4>制限時間内の構造化</h4><p>30-60分の制限時間内に、問題の構造化 → 解法の論理的展開 → 結論の提示までを完遂する必要があります。MECE + イシューツリーで論点分解する能力が前提とされています。</p></article>
+        <article class="branch"><span class="tag">特徴2</span><h4>対話型の進行</h4><p>面接官との対話を通じて仮説検証 → 仮説修正を繰り返す進行スタイルです。「正解」より「思考プロセス」が評価されるとされています。コミュニケーション能力 + 柔軟性が重要視されます。</p></article>
+        <article class="branch"><span class="tag">特徴3</span><h4>定量・定性の両軸</h4><p>フェルミ推定 (定量) + 経営判断 (定性) の両軸で問題が出題されるとされています。数値計算能力 + 戦略思考の両方が評価対象となります。</p></article>
+        <article class="branch"><span class="tag">特徴4</span><h4>ファーム別の特性</h4><p>戦略系 (BCG/McK/Bain) は難易度高 + 抽象度高・総合系 (アクセンチュア/BIG4) は実務寄り + 業界特化・ベイカレント等は業界知見重視と、ファーム別に特性が異なるとされています。</p></article>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_case">
+          <span>ファーム別のケース面接特性を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">頻出ケース問題 5 タイプ</h2>
+      <p class="section-lede">コンサル特化エージェントの公開情報・元コンサルの公開ブログによれば、以下5タイプがケース面接で頻出とされています。各タイプで解法アプローチが異なります。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="頻出ケース問題 5 タイプ">
+          <thead><tr><th>問題タイプ</th><th>頻度</th><th>難易度</th><th>解法アプローチ</th></tr></thead>
+          <tbody>
+            <tr><td>1. フェルミ推定 (市場規模算出)</td><td>&#11088; 最頻出</td><td>中</td><td>需要分解 (人口 × 利用率 × 単価) + ボトムアップ計算</td></tr>
+            <tr><td>2. 収益改善 (売上 / コスト)</td><td>&#11088; 頻出</td><td>中-高</td><td>売上分解 (客数 × 客単価) + コスト分解 (固定 / 変動) + 改善打ち手</td></tr>
+            <tr><td>3. 市場参入 (新市場進出)</td><td>頻出</td><td>高</td><td>市場魅力度 (規模 / 成長率 / 競合) + 自社適合性 (強み / リソース) + 参入戦略</td></tr>
+            <tr><td>4. 新規事業 (アイディア → 評価)</td><td>頻出</td><td>高</td><td>市場ニーズ + 自社強み + 収益性 + 実現可能性の4軸評価</td></tr>
+            <tr><td>5. 定性問題 (経営判断・戦略)</td><td>中</td><td>中-高</td><td>論点整理 + 仮説提示 + 検証ロジック + 結論導出</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_case_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">解法フレームワーク 3 種</h2>
+      <p class="section-lede">ケース面接で活用される基本フレームワーク3種を解説します。問題タイプに応じて使い分け + 組み合わせるのが基本とされています。</p>
+      <div class="counter-box">
+        <h4>フレームワーク1: MECE (もれなく重複なく)</h4>
+        <p>問題を要素分解する際に、もれなく + 重複なく分解する考え方です。例: 売上 = 客数 × 客単価 / 客数 = 新規客 + リピーター 等。全フレームワークの土台となる思考法とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>フレームワーク2: イシューツリー (論点分解)</h4>
+        <p>大きな問い (例: 売上を上げるには) を中位の論点 (客数増・客単価増) に分解 → 下位の論点 (新規獲得・リピート促進等) に階層化する思考法です。論点の網羅性 + 優先順位付けに必須とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>フレームワーク3: 仮説思考 (仮説 → 検証)</h4>
+        <p>網羅的に調査するのではなく、最初に仮説を立てて → データで検証する思考法です。制限時間内に結論に到達するために必須とされており、コンサルの中核スキルとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>補助フレームワーク: 3C / 4P / PEST</h4>
+        <p>市場分析 (3C: Customer/Competitor/Company)・マーケティング (4P: Product/Price/Place/Promotion)・マクロ環境 (PEST: Political/Economic/Social/Technological) 等の補助フレームを問題に応じて使い分けます。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_case">
+          <span>フレームワークを元コンサルの無料模擬面接で実践練習する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">4 週間トレーニングロードマップ</h2>
+      <p class="section-lede">ケース面接対策の標準的ロードマップを4週間で整理します。独学 + 模擬面接の組み合わせが一般的とされています。個別状況により大きく変動するため、参考目安としてご活用ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ケース面接 4 週間ロードマップ">
+          <thead><tr><th>週</th><th>独学パート</th><th>模擬面接パート</th><th>達成目標</th></tr></thead>
+          <tbody>
+            <tr><td>Week 1: 基礎</td><td>参考書 + フレームワーク学習</td><td>準備 (まだ模擬面接なし)</td><td>MECE/イシューツリー/仮説思考の理解</td></tr>
+            <tr><td>Week 2: 問題演習</td><td>ケース問題集 (フェルミ推定中心)</td><td>1-2 回目の模擬面接</td><td>フェルミ推定の解法習得</td></tr>
+            <tr><td>Week 3: 応用</td><td>ケース問題集 (収益改善・市場参入)</td><td>3-5 回目の模擬面接</td><td>5タイプの解法アプローチ習得</td></tr>
+            <tr><td>Week 4: 仕上げ</td><td>ファーム別過去問 + 振り返り</td><td>6-10 回目の模擬面接</td><td>本番想定の通過水準到達</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>4週間は標準ペースですが、フルタイム勤務 + 独学のみだと到達困難なケースが一般的とされています。元コンサルの伴走 (模擬面接 + 添削) があると効率が大きく変わるとされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">元コンサル無料模擬面接の活用法</h2>
+      <p>コンサル特化エージェントの公開情報によれば、<strong>元コンサルとの模擬面接 + 添削が無料で提供されている</strong>とされています。これは独学では到達しにくいケース面接突破のために、業界で一般的に推奨される方法です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>本番想定の模擬面接</h4><p>元コンサルが面接官役を担当し、実際のケース問題 + 質疑応答 + 振る舞いまで本番想定で実施します。フィードバックを受けながら改善するスタイルが一般的とされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>個別レベルに応じた問題提供</h4><p>初心者向けのフェルミ推定基礎 → 中級者向けの収益改善 → 上級者向けの戦略立案まで、個別レベルに応じた問題が提供されるとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>ファーム別の傾向対策</h4><p>狙うファーム (戦略系/総合系/IT系/FAS系) ごとの傾向と対策が個別カスタマイズされるとされています。元コンサルの実体験 + 業界知見が活きる部分です。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>履歴書・職務経歴書の添削同時</h4><p>ケース面接対策と並行して、履歴書 + 職務経歴書 + 志望動機の添削も無料で受けられるとされています。本番対策の一括サポートとして利用できます。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>ケース面接は独学では到達しにくい関門です。MyVisionの無料カウンセリングから模擬面接の利用方法 + 自分のレベル + 狙えるファームを30秒の会員登録で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_case">
+          <span>元コンサルとの無料模擬面接を予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム + 5つのカギ</p></a>
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の市場価値 + 4 つのキャリアパス + 年収レンジ</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職ガイド</h4><p>IT エンジニアからコンサル + 狙えるファーム + 評価される 5 領域</p></a>
+        <a class="card-link" href="/kaikeishi-tenshoku-timing/"><h4>公認会計士 転職タイミング</h4><p>監査法人 in/out + 業務サイクル + 年代別判断</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">独学では超えにくいケース面接の壁を、元コンサルの伴走で突破する</h2>
+      <p>ケース面接はコンサル選考の最大の関門。MyVisionの無料カウンセリングで、模擬面接 + 添削 + ファーム別対策を会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_case">
+          <span>元コンサルの無料模擬面接を試す</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

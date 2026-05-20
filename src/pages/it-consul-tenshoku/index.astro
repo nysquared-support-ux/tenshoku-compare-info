@@ -1,0 +1,238 @@
+---
+/**
+ * it-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: IT コンサル 転職 (sv 推定 700-1,300・IT/SIerエンジニア出身者ターゲット)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'IT コンサル 転職 完全ガイド｜エンジニア/SIer/SE出身者が狙える年収アップとキャリア拡張｜MyVision (PR)';
+const description = 'IT エンジニア・SIer・SE 出身者がコンサル業界へ転職するための完全ガイド。狙える主要ファーム (アクセンチュア・アビーム・BIG4・IBM)・IT スキルが評価される5領域・SE/PM経験の翻訳ポイント・年収アップ事例を整理。元コンサルの無料サポート活用法も解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'IT コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'IT エンジニアからコンサルタントへの転職は可能ですか?', a: 'コンサル特化エージェントの公開情報によれば、IT・SIer 出身者はコンサル業界でメインターゲットの一つとされており、特にアクセンチュア・アビーム・BIG4・IBM 等の総合系/IT 系コンサルで需要が高いとされています。' },
+  { q: 'IT コンサルと SIer の違いは何ですか?', a: '一般的に SIer は「システム開発・運用」が主、IT コンサルは「経営課題 → IT 戦略立案・要件定義」が主とされています。プロジェクトの上流工程 (戦略・要件定義) を担当するため、年収レンジ + キャリア拡張性が高いとされています。' },
+  { q: 'SE/PM 経験はどう評価されますか?', a: 'プロジェクトマネジメント経験 (予算・人員・期間管理) + 技術理解 + 業界知見の3軸で評価される傾向にあるとされています。コンサル評価軸への翻訳が必要で、元コンサルの添削が一般的に推奨されます。' },
+  { q: 'IT コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、IT コンサル入社時の年収は600-1,200万円帯が中心とされています。前職年収 + 経験年数 + ポジション (アナリスト〜マネージャー) により変動し、SIer/SE 比で 20-40% 程度の年収アップ事例も報告されています。' },
+  { q: 'プログラミングスキルは必要ですか?', a: '直接コーディングする頻度は低いとされていますが、技術理解 (アーキテクチャ / クラウド / データ基盤等) は必須評価軸とされています。クラウド (AWS/GCP/Azure)・データ基盤・セキュリティ・生成 AI 領域は特に需要が高いとされています。' },
+  { q: '未経験 (コンサル業界が初) でも IT コンサル転職できますか?', a: 'IT・SIer 出身者は「コンサル業界未経験」でも IT 知見が評価されるため、転職可能性が高いとされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル転職 未経験ガイド</a> + <a href="/consul-case-mensetsu/" class="underline">コンサル ケース面接対策</a> をご参照ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / IT エンジニア向け完全ガイド</span>
+      <h1 id="fv-h1">IT <span class="accent">コンサル 転職</span> 完全ガイド<br />エンジニア/SIer/SE 出身者が狙える年収アップとキャリア拡張</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: IT・SIer・SE 出身者はコンサル業界の<strong>主要ターゲット層の一つ</strong>とされ、アクセンチュア・アビーム・BIG4・IBM 等の総合系/IT 系コンサルで需要が高いとされています。本記事ではIT スキルが評価される5領域・SE/PM 経験の翻訳ポイント・狙えるファーム別の年収レンジを整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>IT エンジニアがコンサル転職する 3 つの理由 (年収・キャリア・成長)</li>
+        <li>狙える主要ファーム (アクセンチュア・アビーム・BIG4・IBM)</li>
+        <li>IT スキルがコンサルで評価される 5 領域 (クラウド・データ・セキュリティ等)</li>
+        <li>SE/PM 経験の翻訳ポイント (志望動機 + 職務経歴書)</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_itconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_itconsul">
+          <span>IT 出身者向け無料カウンセリングを予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">IT エンジニアがコンサル転職する 3 つの理由</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>年収アップ (SIer/SE 比で 20-40%)</h4><p>一般公開情報によれば、SIer/SE → IT コンサル転職時の年収アップは20-40%程度とされる事例が報告されています。30代前半 SIer 平均 500-650万円 → IT コンサル 700-900万円帯への移行が一般的な傾向の一つとされています。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>キャリア拡張 (上流工程へ)</h4><p>下流工程 (実装・運用) から上流工程 (戦略・要件定義・PMO) へのキャリア拡張が可能とされています。プロジェクトの主導権 + 経営層とのインターフェイス + 業界知見が拡がる傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>スキル成長加速 (DX・生成AI・クラウド)</h4><p>DX・生成 AI・クラウド (AWS/GCP/Azure)・データ基盤・セキュリティ等の最新技術領域に体系的に触れられる環境とされています。SIer の特定領域より幅広い技術理解が身につく傾向にあるとされています。</p></article>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_itconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_itconsul">
+          <span>IT 出身者の年収アップ事例を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">IT コンサルとは — SIer / SES との違い</h2>
+      <p class="section-lede">IT コンサル・SIer・SES の3者の違いを、業務範囲・年収レンジ・キャリア拡張性で整理します。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="IT コンサル / SIer / SES 比較">
+          <thead><tr><th>項目</th><th>IT コンサル</th><th>SIer</th><th>SES</th></tr></thead>
+          <tbody>
+            <tr><td>業務範囲</td><td>戦略 + 要件定義 + PMO</td><td>要件定義 + 開発 + 運用</td><td>常駐エンジニア (実装中心)</td></tr>
+            <tr><td>年収レンジ (30代)</td><td>700-1,200万円</td><td>500-800万円</td><td>400-600万円</td></tr>
+            <tr><td>キャリア拡張性</td><td>高 (経営層へ)</td><td>中 (PM/技術 specialist)</td><td>低 (常駐継続が多い)</td></tr>
+            <tr><td>業界知見</td><td>多業界横断</td><td>特定業界中心</td><td>案件依存</td></tr>
+            <tr><td>主要ファーム/企業</td><td>アクセンチュア・アビーム・BIG4・IBM</td><td>NTT データ・富士通・NEC・日立等</td><td>中小SIer・SES専門会社</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_itconsul_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">IT スキルがコンサルで評価される 5 領域</h2>
+      <p class="section-lede">IT 出身者がコンサル業界で特に評価される技術領域を5つに整理します。これらの実務経験は、コンサル転職時のアピール材料になるとされています。</p>
+      <div class="counter-box">
+        <h4>領域1: クラウド (AWS / GCP / Azure)</h4>
+        <p>クラウド移行案件はコンサル業界の主力テーマの一つとされています。AWS/GCP/Azure いずれかの実務経験 + 認定資格 (AWS Solutions Architect 等) は強力なアピール材料となるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域2: データ基盤 / DWH / BI</h4>
+        <p>データ活用案件 (Snowflake・BigQuery・Databricks 等の DWH 構築 + Tableau/Looker 等の BI ツール) は需要が急増しているとされています。データエンジニアリング経験は高評価とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域3: 生成 AI / LLM / 機械学習</h4>
+        <p>生成 AI (ChatGPT / Claude / Gemini) 業務活用 + 機械学習 (推薦・予測・異常検知等) の実務経験は、2024年以降コンサル業界で最も需要が高い領域の一つとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域4: セキュリティ (ゼロトラスト / SOC)</h4>
+        <p>サイバーセキュリティ案件 (ゼロトラスト構築・SOC 運用・インシデント対応・コンプライアンス) は需要が高水準とされています。CISSP・情報処理安全確保支援士等の資格 + 実務経験が評価されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域5: プロジェクトマネジメント (PMO / アジャイル)</h4>
+        <p>大規模 SI プロジェクトの PM / PMO 経験は、コンサルプロジェクトの中核スキルとされています。PMP / スクラムマスター等の資格 + 予算 XX 億規模の案件経験が高評価とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_itconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_itconsul">
+          <span>自分の IT スキルの市場価値を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">IT 出身者向けファーム別の特徴</h2>
+      <p class="section-lede">IT 出身者の主な転職先となるコンサルファームを、特徴・年収レンジ・採用傾向で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的傾向です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="IT 出身者向けコンサルファーム比較">
+          <thead><tr><th>ファーム</th><th>IT 採用傾向</th><th>年収レンジ目安</th><th>主な案件領域</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (Technology)</td><td>&#11088; 最大規模採用</td><td>700-1,300万円</td><td>DX・クラウド・データ・生成AI</td></tr>
+            <tr><td>アビームコンサルティング</td><td>&#11088; 積極採用</td><td>650-1,200万円</td><td>SAP・基幹業務・DX</td></tr>
+            <tr><td>BIG4 (Deloitte / PwC / EY / KPMG)</td><td>積極採用</td><td>750-1,400万円</td><td>セキュリティ・データ・リスク管理</td></tr>
+            <tr><td>IBM コンサルティング</td><td>積極採用</td><td>700-1,300万円</td><td>クラウド・データ・AI・ハイブリッドIT</td></tr>
+            <tr><td>NTT データ・コンサルティング</td><td>積極採用</td><td>650-1,150万円</td><td>金融SI・公共・データ基盤</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>&#11088; 積極採用</td><td>800-1,400万円</td><td>業界知見 + DX + テクノロジー</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">SE/PM 経験の翻訳ポイント</h2>
+      <p>IT 出身者の選考対策の中核は、<strong>SE/PM 経験のコンサル評価軸への翻訳</strong>とされています。「実装した・運用した」ではなく「経営課題に対してどう貢献したか・成果インパクトはどの規模か」の視点で再構成する作業が必要とされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">翻訳1</span><h4>案件規模の数値化</h4><p>予算 (XX 億円) + 関係者 (XX 名) + 期間 (XX 月) + 業界 + システム規模を具体数値で表現します。コンサル評価軸に直結する基本翻訳とされています。</p></article>
+        <article class="branch"><span class="tag">翻訳2</span><h4>役割の格上げ表現</h4><p>「SE として実装」 → 「要件定義リード + 主要モジュール設計責任者」のように、責任範囲 + リードシップ要素を強調する翻訳が一般的とされています。元コンサルの添削で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">翻訳3</span><h4>成果インパクトの提示</h4><p>「業務効率 XX% 改善 / 売上 XX 億円創出 / コスト XX% 削減」のように、ビジネスインパクトの数値化が必須とされています。技術面だけでなく経営面の成果を提示する視点です。</p></article>
+        <article class="branch"><span class="tag">翻訳4</span><h4>業界知見の体系化</h4><p>担当した業界 (金融・製造・流通・通信・公共等) の構造・課題・主要プレイヤーを体系的に整理し、コンサル目線で語れる準備が必要とされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>SE/PM 経験の翻訳は、元コンサルの添削で品質が大きく変わるとされています。MyVisionの無料カウンセリングから添削サポートの利用方法 + 狙えるファームを30秒の会員登録で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_itconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_itconsul">
+          <span>元コンサルの無料添削サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム + 5つのカギ</p></a>
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の市場価値 + 4 つのキャリアパス + 年収レンジ</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</p></a>
+        <a class="card-link" href="/engineer-1000man/"><h4>エンジニア年収1000万</h4><p>年収1000万到達のキャリアパス + 業界別年収帯</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">IT エンジニアから、コンサルタントへ — 年収アップとキャリア拡張を同時に</h2>
+      <p>IT・SIer 出身者はコンサル業界の主要ターゲット層。MyVisionの無料カウンセリングで、IT スキルの市場価値 + 狙えるファーム + 年収レンジを会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_itconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_itconsul">
+          <span>IT 出身者向け無料カウンセリングを予約する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
