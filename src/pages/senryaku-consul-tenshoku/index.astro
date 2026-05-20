@@ -1,0 +1,214 @@
+---
+/**
+ * senryaku-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 戦略コンサル 転職 (sv 推定 1,000+・高単価戦略系・BCG/McK/Bain)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '戦略コンサル 転職 完全ガイド｜BCG / McKinsey / Bain への挑戦と現実｜MyVision (PR)';
+const description = '戦略コンサルティングファーム (BCG / McKinsey / Bain) への転職について、3 大ファームの特性比較・選考難度・年収レンジ・ケース面接対策の現実を公開情報ベースで整理。元コンサルの無料模擬面接 + 添削サポートの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '戦略コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '戦略コンサルとは何ですか?', a: '一般的に経営戦略・全社変革・新規事業立案等の上流案件を中心に、経営層に直接価値提供するファームを指すとされています。代表的には BCG (ボストン コンサルティング グループ)・McKinsey & Company・Bain & Company の3社が「3 大戦略ファーム (MBB)」と呼ばれることが一般的です。' },
+  { q: '戦略コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、新卒〜2-3年目で700-1,000万円、コンサルタント階層で1,200-1,800万円、マネージャー階層で1,800-2,500万円、パートナーで3,000万円超の事例が報告されています。総合系より20-40%程度高い水準とされています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '戦略コンサルの選考難度はどのくらいですか?', a: '一般的に「狭き門」とされ、ケース面接の論理思考難度が他ファームより高い傾向とされています。独学では到達しにくく、元コンサルとの集中的な模擬面接 + 添削が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: '未経験から戦略コンサルに転職できますか?', a: '一般的にポテンシャル採用 + 高学歴 + 論理思考素養 + ケース面接突破力があれば挑戦可能とされていますが、総合系より採用枠が狭く、難度が高いとされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル転職</a> 参照。' },
+  { q: '20代後半・30代前半でも応募できますか?', a: '一般公開情報によれば、20代後半-30代前半が戦略系の主要採用層とされています。30代後半は専門領域 (テクノロジー / 金融 / ヘルスケア等) があれば対象とされる傾向です。詳細は <a href="/consul-tenshoku-20daikouhan/" class="underline">20代後半 コンサル</a>・<a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル</a> 参照。' },
+  { q: '戦略系と総合系どちらを選ぶべきですか?', a: '案件規模 + 抽象度の高さ + 高単価を求めるなら戦略系、戦略 + 実装の一気通貫 + 業界カバーを求めるなら総合系が一般的とされています。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">戦略コンサル / 3 大ファーム完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">戦略コンサル</span> 転職 完全ガイド<br />BCG / McKinsey / Bain への挑戦と現実</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 戦略コンサル (BCG / McKinsey / Bain = 通称 MBB) は<strong>業界最高峰の年収 + 最難度の選考</strong>を特徴とし、20代後半-30代前半が主要採用層とされています。本記事では3大戦略ファームの特性比較・選考難度・年収レンジ・突破に必要な準備を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>3 大戦略ファーム (BCG / McK / Bain) の特性比較</li>
+        <li>選考難度 (最難度ケース面接) + 突破に必要な準備期間</li>
+        <li>年収レンジ (700-3,000万円帯) + キャリアパス</li>
+        <li>元コンサル無料模擬面接サポートの活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_senryaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_senryaku">
+          <span>戦略系挑戦の準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは戦略コンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">3 大戦略ファーム (MBB) の特性比較</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各戦略ファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">BCG</span><h4>ボストン コンサルティング グループ</h4><p>創業 1963 年・グローバル展開。データドリブン分析 + 業界深耕 + コラボレーティブな組織文化が特徴とされています。テクノロジー・サステナビリティ・組織変革領域の案件が多い傾向にあります。年収レンジ 700-3,000万円帯。</p></article>
+        <article class="branch"><span class="tag">McK</span><h4>McKinsey & Company</h4><p>創業 1926 年・業界最古参。経営層への直接アプローチ + グローバルネットワーク + 卒業生 (アルムナイ) ネットワークが強みとされています。経営戦略・全社変革・M&A 等の最上流案件が多い傾向。年収レンジ 800-3,500万円帯。</p></article>
+        <article class="branch"><span class="tag">Bain</span><h4>Bain & Company</h4><p>創業 1973 年・「One Bain」のチーム文化。PE/VC との連携 + 結果コミット型 + コラボ重視が特徴とされています。デューデリジェンス・PE 支援案件が多い傾向。年収レンジ 700-3,000万円帯。</p></article>
+        <article class="branch"><span class="tag">比較</span><h4>3 ファーム共通の特性</h4><p>選考最難度・ポテンシャル極大層採用・少数精鋭・グローバル機会あり・高単価。コンサル業界の最高峰として一般的に位置づけられています。総合系より20-40%程度高い年収水準とされる傾向にあります。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_senryaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_senryaku">
+          <span>戦略系 3 ファームの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">戦略系の選考難度 — ケース面接の壁</h2>
+      <p class="section-lede">戦略系の選考難度は<strong>業界最高難度</strong>とされています。特にケース面接の論理思考難度が他ファームより高く、独学では到達しにくいレベルとされています。</p>
+      <div class="counter-box">
+        <h4>難度1: ケース面接の論理思考</h4>
+        <p>フェルミ推定 + 経営課題 + 抽象的問いに対し、30-60 分の制限時間で構造化・解法展開・結論提示まで完遂する必要があります。問題の抽象度が総合系より高い傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>難度2: 複数面接官との議論</h4>
+        <p>一般的に 3-5 次面接が標準で、各次で複数面接官との議論型対話形式とされています。仮説 → 検証 → 仮説修正のサイクルを面接官とリアルタイムで回せるかが評価軸とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>難度3: 志望動機の深度</h4>
+        <p>「なぜ戦略系」「なぜこのファーム」「なぜ今」の3軸を、前職実績 + 中長期キャリア構想と完全接続する必要があります。表面的な志望動機では通らないとされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>難度4: 英語力 (一部ファーム)</h4>
+        <p>McKinsey 等の一部ファームでは、グローバル案件 + 英語面接 + 海外オフィス研修等で英語力が問われる傾向とされています。TOEIC 800+ 程度 + ビジネスコミュニケーションが推奨水準とされています。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_senryaku_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">戦略系の年収レンジ + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="戦略系コンサル年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>アソシエイト/アナリスト</td><td>1-3 年</td><td>700-1,000万円</td><td>データ分析 / 仮説検証</td></tr>
+            <tr><td>コンサルタント/アソシエイト</td><td>2-4 年</td><td>1,000-1,500万円</td><td>サブ案件リード / クライアント窓口</td></tr>
+            <tr><td>マネージャー/Engagement Manager</td><td>2-4 年</td><td>1,500-2,200万円</td><td>案件統括 / 提案リード</td></tr>
+            <tr><td>シニアマネージャー/プリンシパル</td><td>3-5 年</td><td>2,000-2,800万円</td><td>領域責任 / 大型案件責任</td></tr>
+            <tr><td>パートナー</td><td>無期限</td><td>3,000万円+</td><td>経営 / クライアント / 戦略立案</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額は各ファーム公式キャリアサイト・エージェント面談でご確認ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">戦略系挑戦の準備期間 + 突破方法</h2>
+      <p>戦略系の選考突破には、<strong>標準 3-6 ヶ月の集中的準備</strong>が一般的に必要とされています。独学では限界があり、元コンサルとの集中模擬面接 + 添削が業界で一般的に推奨される方法です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">準備1</span><h4>ケース面接の集中トレーニング</h4><p>標準 8-15 回の模擬面接 + フィードバック反復が必要とされています。フェルミ推定基礎 → 収益改善 → 市場参入 → 抽象問題の順で段階的に難度を上げる訓練が一般的とされています。</p></article>
+        <article class="branch"><span class="tag">準備2</span><h4>業界知見の体系化</h4><p>狙うインダストリー (Tech / Financial Services / Healthcare / Consumer 等) の構造・主要プレイヤー・最新トレンドを体系的に整理する必要があります。面接での議論で深く語れる準備です。</p></article>
+        <article class="branch"><span class="tag">準備3</span><h4>志望動機の論理構築</h4><p>3軸 (なぜ戦略・なぜこのファーム・なぜ今) + 中長期キャリアの 4 要素を、複数回の壁打ちで磨きます。元コンサルの伴走で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">準備4</span><h4>職務経歴書のコンサル翻訳</h4><p>前職実績を戦略系評価軸 (経営インパクト・抽象度・主体性・リーダーシップ) に翻訳する作業です。元コンサルの添削が必須水準とされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>戦略系挑戦は集中的準備が必須。MyVisionの無料カウンセリングで、自分の市場価値 + 必要準備期間 + 模擬面接サポートを会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_senryaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_senryaku">
+          <span>戦略系挑戦の無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略 vs 総合 vs FAS vs IT vs 公共の決定版</p></a>
+        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>アクセンチュア / PwC / ベイカレント等</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>戦略系最難度突破の集中プログラム</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別レンジ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">戦略コンサルの最高峰へ — 集中準備で挑戦する</h2>
+      <p>3 大戦略ファーム (MBB) は選考最難度。MyVisionの無料カウンセリングで、戦略系特化の準備プログラム + 自分の市場価値 + 想定年収を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_senryaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_senryaku">
+          <span>戦略系挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
