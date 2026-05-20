@@ -1,0 +1,218 @@
+---
+/**
+ * consul-tenshoku-daini-shinsotsu LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 第二新卒 (sv 推定 400-700・24-26歳特化)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 第二新卒 完全ガイド｜24-26歳 ポテンシャル採用枠の狙い方と選考対策｜MyVision (PR)';
+const description = 'コンサル業界の第二新卒 (24-26歳) 採用について、ポテンシャル採用の現実 + 狙えるファーム + 年収レンジ (450-700万円帯) + 選考対策を公開情報ベースで整理。利用者の9割が未経験のコンサル特化エージェントの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 第二新卒' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '第二新卒でもコンサル転職は可能ですか?', a: '一般公開情報によれば、24-26歳の第二新卒層はコンサル業界のポテンシャル採用枠として一定数の採用が行われているとされています。コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で、その中に第二新卒も含まれるとされる傾向です。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル転職</a> 参照。' },
+  { q: '第二新卒のコンサル年収はどのくらいですか?', a: '一般公開情報によれば、第二新卒入社時の年収はアナリスト階層で450-700万円帯が中心とされています。前職年収 + ファーム + 評価により変動し、20-50%程度の年収アップ事例も報告されています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '第二新卒で狙える主なファームは?', a: '一般公開情報によれば、アクセンチュア (Technology / Consulting)・BIG4 コンサル部門・ベイカレント・アビーム等の総合系・IT 系ファームが採用枠を比較的広く設定する傾向とされています。戦略系 (BCG/McK/Bain) は狭き門ですが挑戦可能とされています。' },
+  { q: '前職経験 1-3 年でも採用されますか?', a: 'ポテンシャル採用枠は前職経験 1-3 年の第二新卒を主要対象としている傾向とされています。「経験の浅さ」を「学習意欲 + 論理思考力 + 適応性」で補える志望動機 + 職務経歴書の整理が選考突破の鍵とされています。' },
+  { q: 'ケース面接対策は第二新卒でも必須ですか?', a: 'はい、年齢 + 経験年数に関わらず、コンサル選考ではケース面接が大きな関門とされています。第二新卒の場合は「ポテンシャル」が見られるため、完璧な解答よりも論理思考プロセスの示し方が評価軸とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: '20代後半と第二新卒の違いは?', a: '第二新卒は新卒後 1-3 年 (24-26歳前後)・20代後半は 26-29歳が一般的区分とされています。第二新卒はポテンシャル重視、20代後半は実務経験 + ポテンシャルの両軸評価という違いがあるとされる傾向です。詳細は <a href="/consul-tenshoku-20daikouhan/" class="underline">20代後半 コンサル</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 第二新卒完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">第二新卒</span> 完全ガイド<br />24-26歳 ポテンシャル採用枠の狙い方と選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 第二新卒 (24-26歳・新卒後 1-3 年) は<strong>コンサル業界のポテンシャル採用枠</strong>として一定数の採用が行われているとされ、コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で、その中に第二新卒も多く含まれるとされる傾向です。本記事では第二新卒のコンサル転職を成功させる狙い方 + 選考対策を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>第二新卒のコンサル転職が可能な 3 つの理由</li>
+        <li>狙えるファーム別の特性 + 年収レンジ (450-700万円帯)</li>
+        <li>第二新卒特有の選考対策 4 つのカギ</li>
+        <li>元コンサル無料サポート活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_daini`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_daini">
+          <span>第二新卒のコンサル転職を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">第二新卒のコンサル転職が可能な 3 つの理由</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / コンサル特化エージェント公開情報 / 大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>ポテンシャル採用枠の存在</h4><p>一般公開情報によれば、コンサル業界の中途採用には「ポテンシャル採用枠」が存在し、24-26歳の第二新卒層が一定数採用されているとされています。実務経験より学習意欲 + 論理思考力 + 適応性が評価軸とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>業界の急成長 + 構造的人材不足</h4><p>DX・経営改革・生成AI 等の経営課題増加により、コンサル業界は2020年以降も年率10-20%規模で拡大しているとされています。需要 > 供給の構造的人材不足が継続中で、第二新卒層への採用枠拡大が見られる傾向とされています。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>未経験者9割という採用構造</h4><p>コンサル特化エージェントの公開情報によれば、利用者の<strong>約9割が業界未経験</strong>で転職に成功しているとされ、その中に第二新卒も含まれるとされる傾向です。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル転職</a> 参照。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_daini`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_daini">
+          <span>第二新卒のポテンシャル採用枠を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">第二新卒で狙えるファーム別の特性</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="第二新卒で狙えるコンサルファーム比較">
+          <thead><tr><th>ファーム種別</th><th>第二新卒採用</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (Technology)</td><td>&#11088; 積極採用</td><td>500-700万円</td><td>IT・SIer・大手出身</td></tr>
+            <tr><td>BIG4 コンサル部門</td><td>積極採用</td><td>500-700万円</td><td>会計・財務・大手出身</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>積極採用</td><td>550-750万円</td><td>業界経験あり・実務派</td></tr>
+            <tr><td>アビームコンサルティング</td><td>積極採用</td><td>500-700万円</td><td>SAP・SIer・業務系</td></tr>
+            <tr><td>戦略系 (BCG/McK/Bain)</td><td>狭き門 (ポテンシャル)</td><td>700-900万円</td><td>高学歴 + ケース面接強者</td></tr>
+            <tr><td>IBM コンサルティング</td><td>積極採用</td><td>500-700万円</td><td>クラウド・データ・AI</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_daini_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">第二新卒特有の選考対策 4 つのカギ</h2>
+      <div class="counter-box">
+        <h4>カギ1: 論理思考力のアピール (経験浅めをカバー)</h4>
+        <p>実務経験が浅い分、論理思考力 + 構造化能力 + 仮説思考の素養を学業 + アルバイト + サークル等の経験から具体的に示すことが鍵とされています。MECE / イシューツリーの基礎理解 + ケース問題への馴染みが評価軸とされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>カギ2: 学習意欲 + 適応性の証明</h4>
+        <p>第二新卒は「ポテンシャル」を見られるため、学習意欲 + 新環境への適応性 + 困難克服経験の3軸で実績を整理することが重要とされています。元コンサル添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>カギ3: 前職退職理由の整理</h4>
+        <p>第二新卒特有の課題として「短期離職 = 忍耐力なし」の懸念がある傾向とされています。前職退職理由を「キャリアアップ志向」「学習機会の追求」等のポジティブな文脈で整理する作業が必要です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>カギ4: ケース面接対策 (ポテンシャル評価)</h4>
+        <p>第二新卒のケース面接は「完璧な解答」より「思考プロセス + 学習意欲 + 適応性」が評価される傾向とされています。元コンサル伴走の模擬面接で対策することが推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_daini`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_daini">
+          <span>第二新卒特有の選考対策を元コンサルの無料サポートで磨く</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">第二新卒向け無料サポート活用法</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>市場価値診断 (年齢別)</h4><p>第二新卒の市場価値を、前職業界 + 年収 + 学歴 + ポテンシャルの4軸で診断するサポート。狙えるファーム + 年収レンジの当たりが付くとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>キャリアパス相談</h4><p>第二新卒の中長期キャリアプラン (20代後半-30代以降を見据えた) を、元コンサルが伴走形式で整理。コンサルタイプ (戦略 / 総合 / IT) との適合性検討も含むとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>選考対策パッケージ</h4><p>ケース面接 + 志望動機 + 職務経歴書 + 退職理由整理を、元コンサルが個別カスタマイズで添削 + 模擬面接トレーニング。第二新卒特有の課題に対応するとされています。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>第二新卒向けの非公開求人 (ポテンシャル採用枠) を紹介してもらえるサポート。公開求人より好条件のケースが多いとされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>第二新卒のコンサル転職は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 狙えるファーム + 選考対策を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_daini`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_daini">
+          <span>第二新卒特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル</h4><p>26-29歳の市場価値</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">24-26歳の今、コンサル業界へ挑戦するという選択肢</h2>
+      <p>第二新卒のポテンシャル採用枠 + 元コンサル伴走で、選考突破率が大きく変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 狙えるファーム + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_daini`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_daini">
+          <span>第二新卒のコンサル転職を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

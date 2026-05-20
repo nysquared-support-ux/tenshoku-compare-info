@@ -1,0 +1,218 @@
+---
+/**
+ * finance-kara-consul LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 金融からコンサル (sv 推定 400-700・銀行/証券出身者ターゲット)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '金融からコンサル 完全ガイド｜銀行/証券/投資銀行出身者が狙うキャリアパス｜MyVision (PR)';
+const description = '銀行・証券・投資銀行・損保・生保等の金融機関出身者がコンサル業界へ転職するための完全ガイド。狙える主要ファーム (FAS / BIG4 / 戦略系)・年収レンジ・評価される 5 スキル・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '金融からコンサル' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '金融機関出身者はコンサルに転職しやすいですか?', a: '一般公開情報によれば、銀行・証券・投資銀行・損保・生保等の金融機関出身者は、特に FAS (Financial Advisory Services) 系・BIG4 コンサル・戦略系コンサルのメインターゲット層の一つとされています。財務知見 + 案件理解力 + リスク管理経験が評価される傾向です。' },
+  { q: '銀行出身者と証券出身者でコンサル転職の難易度は違いますか?', a: '一般公開情報によれば、銀行 (法人営業 / 融資審査 / 投資銀行部) は FAS / BIG4 / 戦略系の幅広いファームで評価され、証券 (投資銀行部門) は特に FAS / 戦略系で評価される傾向とされています。経験領域 + 案件規模により適合ファームが変わるとされています。' },
+  { q: '金融からコンサルへの年収アップはどのくらいですか?', a: '一般公開情報によれば、銀行/証券 → コンサル転職時の年収変動は様々で、20代-30代前半は20-50%のアップ事例も報告されていますが、投資銀行部門 (M&A) → FAS では年収横ばい or 微減 + ワークライフバランス改善が魅力とされる事例もあるとされています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '会計士資格は必要ですか?', a: '一般的に USCPA / 公認会計士資格は必須ではないとされていますが、保有者は FAS 系で財務 DD やバリュエーション案件で評価されやすい傾向とされています。詳細は <a href="/kaikeishi-tenshoku-timing/" class="underline">会計士 転職タイミング</a> 参照。' },
+  { q: '金融からコンサル M&A 領域への転職は可能ですか?', a: '一般公開情報によれば、銀行 (M&A 部) ・証券 (投資銀行部門) ・経営企画 (M&A 担当) 出身者は、FAS や M&A コンサル領域への転職で高評価される傾向とされています。詳細は <a href="/ma-consul-tenshoku/" class="underline">M&A コンサル 転職</a> 参照。' },
+  { q: '金融からコンサルへの選考対策は?', a: '一般公開情報によれば、書類選考 → ケース面接 (財務分析 / 経営課題) → 役員面接の流れで、財務知見 + ロジカルシンキング + 業界知見の3軸が評価軸とされています。元コンサル添削が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">金融 → コンサル / 業界転身完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">金融からコンサル</span> 完全ガイド<br />銀行/証券/投資銀行出身者が狙うキャリアパス</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 銀行・証券・投資銀行・損保・生保等の金融機関出身者は<strong>FAS / BIG4 / 戦略系コンサルのメインターゲット層の一つ</strong>とされ、財務知見 + 案件理解力 + リスク管理経験が評価される傾向です。本記事では金融出身者がコンサルへ転身する道筋を、ファーム比較 + 年収レンジ + 評価される 5 スキル + 選考対策で公開情報ベースに整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>金融出身者が評価される 5 スキル + 適合ファーム</li>
+        <li>業界別 (銀行 / 証券 / 投資銀行 / 損保生保) の転身パス</li>
+        <li>年収レンジ + キャリア比較 (前職 vs コンサル)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_finance`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_finance">
+          <span>金融出身者向け無料カウンセリングを予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">金融出身者が評価される 5 スキル</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / <a href="https://www.fsa.go.jp/" target="_blank" rel="noopener">金融庁 公開資料</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>スキル1: 財務分析力</h4>
+        <p>融資審査 / 投資判断 / 与信管理経験で培った財務 3 表分析 + キャッシュフロー予測 + 信用リスク評価の能力。FAS / BIG4 / 戦略系の財務 DD 案件で中核評価軸とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル2: バリュエーション + M&A 知見</h4>
+        <p>DCF / マルチプル / NAV 等のバリュエーション手法 + M&A 案件経験 (投資銀行 / 法人 M&A 部) は FAS 系で即戦力とされる傾向です。詳細は <a href="/ma-consul-tenshoku/" class="underline">M&A コンサル 転職</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル3: 業界知見 (金融機関 + 顧客業界)</h4>
+        <p>担当した金融機関 + 顧客業界 (製造 / 流通 / IT / 不動産等) の構造理解 + 主要プレイヤー知見。コンサルの業界横断案件で活きる基盤スキルとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル4: リスク管理 + コンプライアンス</h4>
+        <p>金融機関で培った与信リスク / マーケットリスク / オペレーショナルリスク / 規制対応の知見。BIG4 のリスクアドバイザリー部門で高評価とされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル5: クライアントリレーション</h4>
+        <p>法人営業 / 投資銀行業務で培った経営層へのアプローチ力 + 提案力 + 関係構築力。総合系 / 戦略系コンサルでクライアントリードとして活かせる中核スキルとされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_finance`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_finance">
+          <span>自分の金融スキルの市場価値を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">業界別の転身パス (4 タイプ)</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>銀行 (法人融資 / M&A 部) → FAS / BIG4</h4><p>融資審査 / 投資判断 / 中堅企業向け M&A 経験を活かし、Deloitte FAS / PwC AS / KPMG FAS / EY 等の FAS 系へ転身するパス。年収アップ + ワークライフバランス改善の両軸が魅力とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>証券 (投資銀行部門) → FAS / 戦略系</h4><p>大型 M&A ディール経験 + バリュエーション経験を活かし、FAS マネージャー候補 or 戦略系 (BCG / McK / Bain) へ転身するパス。年収横ばい or 微減 + ワークライフバランス改善が魅力とされる事例も。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>投資銀行 (M&A 部) → BIG4 FAS / M&A コンサル</h4><p>クロスボーダー M&A 経験 + 大型案件主導経験を活かし、BIG4 FAS マネージャー候補や戦略系 M&A 領域へ転身するパス。即戦力として年収維持 + キャリア拡張が期待される傾向です。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>損保 / 生保 → BIG4 リスクアドバイザリー</h4><p>保険数理 / リスク評価 / 規制対応経験を活かし、BIG4 リスクアドバイザリー部門 (Deloitte / PwC / EY / KPMG) へ転身するパス。専門性 + 安定性が魅力とされる傾向です。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_finance_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">年収比較 (前職 vs コンサル)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="金融 vs コンサル年収比較">
+          <thead><tr><th>前職業界</th><th>前職年収目安</th><th>コンサル入社時</th><th>変動率</th></tr></thead>
+          <tbody>
+            <tr><td>都市銀行 (法人融資)</td><td>700-900万円</td><td>800-1,200万円</td><td>+15-35%</td></tr>
+            <tr><td>都市銀行 (M&A 部)</td><td>800-1,200万円</td><td>1,000-1,500万円</td><td>+15-25%</td></tr>
+            <tr><td>大手証券 (法人営業)</td><td>700-900万円</td><td>800-1,200万円</td><td>+15-35%</td></tr>
+            <tr><td>大手証券 (投資銀行)</td><td>1,200-1,800万円</td><td>1,200-1,800万円</td><td>横ばい〜+10%</td></tr>
+            <tr><td>大手損保 (法人営業)</td><td>700-900万円</td><td>700-1,100万円</td><td>横ばい〜+25%</td></tr>
+            <tr><td>大手生保 (法人 / 数理)</td><td>700-900万円</td><td>700-1,100万円</td><td>横ばい〜+25%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。実際の年収は前職実績 + ファーム + ポジションにより大きく変動します。エージェント面談でご確認ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">金融出身者向け選考対策 4 ポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">対策1</span><h4>財務知見のコンサル翻訳</h4><p>「融資審査」「投資判断」「M&A 支援」等の前職実績を、コンサル評価軸 (経営インパクト / 関係者数 / 案件規模) に翻訳することが必須とされています。元コンサル添削で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">対策2</span><h4>ケース面接 (財務分析寄り)</h4><p>金融出身者向けのケース面接は「企業 X の財務分析」「業界 Y の M&A 戦略」等の財務寄りシナリオが頻出とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策3</span><h4>業界知見 + 顧客理解の言語化</h4><p>担当した金融機関 + 顧客業界の構造 + 課題 + 主要プレイヤーを体系的に整理し、面接で議論できる準備が必要とされています。金融機関の特殊性を理解した上でコンサル目線で語れる準備です。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜコンサル / なぜこのファーム)</h4><p>「金融機関での経験を活かしたい」「コンサルでの幅広い業界経験を求める」「ファーム別の強みとの適合性」を論理的に語る志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>金融出身者のコンサル転職は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の金融スキル + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_finance`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_finance">
+          <span>金融出身者特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/ma-consul-tenshoku/"><h4>M&A コンサル転職</h4><p>FAS 高単価 + 投資銀行系</p></a>
+        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>Deloitte / PwC / EY / KPMG</p></a>
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">金融機関での経験を武器に、コンサル業界へキャリア拡張する</h2>
+      <p>銀行 / 証券 / 投資銀行 / 損保生保のスキルを、FAS / BIG4 / 戦略系コンサルで活かす。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_finance`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_finance">
+          <span>金融からコンサルの転身を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
