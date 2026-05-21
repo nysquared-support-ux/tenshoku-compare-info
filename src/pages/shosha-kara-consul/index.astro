@@ -1,0 +1,201 @@
+---
+/**
+ * shosha-kara-consul LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 商社からコンサル (sv 推定 200-400・商社出身者業界転身)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '商社からコンサル 完全ガイド｜総合商社出身者が狙うキャリアパス・年収・選考対策｜MyVision (PR)';
+const description = '総合商社・専門商社の出身者がコンサル業界へ転職するための完全ガイド。商社経験が評価される5領域・狙えるファーム・年収レンジ・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '商社からコンサル' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '商社からコンサルに転職できますか?', a: 'コンサル特化エージェントの公開情報によれば、総合商社・専門商社の出身者はコンサル業界の主要採用層の一つとされています。事業投資 + 事業開発 + 海外駐在 + 多様な業界経験が評価される傾向です。' },
+  { q: '商社からコンサルへの年収はどう変わりますか?', a: '一般公開情報によれば、総合商社 (30代) は年収水準が高いため、コンサル転職時は横ばい〜微増のケースが多いとされています。但しコンサルでの経験を経て事業会社 CXO 等へのキャリア拡張時に年収が大きく伸びるケースも報告されています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '商社出身者が狙えるファームは?', a: '一般公開情報によれば、戦略系 (BCG/McK/Bain)・総合系 (アクセンチュア/ベイカレント)・FAS 系 (事業投資経験者) が商社出身者の主要転職先とされています。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+  { q: '商社経験はコンサルでどう評価されますか?', a: '一般的に事業投資判断 + 事業開発 + 海外駐在経験 + 多業界知見 + 交渉力が、コンサル案件で高く評価される傾向とされています。特に新規事業 + M&A + 海外案件で商社経験が活きるとされる傾向です。' },
+  { q: 'ケース面接対策は商社出身者でも必要ですか?', a: 'はい、年齢 + 経歴に関わらず、コンサル選考ではケース面接が大きな関門とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: '商社からコンサルへの転職で注意点は?', a: '一般的に「事業会社の当事者 → アドバイザー」への立場の変化、「ゼネラリスト → 専門特化」への適応が課題とされる傾向です。商社のゼネラリスト経験をコンサルの論理思考フレームに翻訳する準備が推奨されます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">商社 → コンサル / 業界転身完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">商社からコンサル</span> 完全ガイド<br />総合商社出身者が狙うキャリアパス・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 総合商社・専門商社の出身者は<strong>コンサル業界の主要採用層の一つ</strong>とされ、事業投資 + 事業開発 + 海外駐在 + 多業界知見が評価される傾向です。本記事では商社からコンサルへの転身を、評価される 5 領域 + 狙えるファーム + 年収レンジ + 選考対策で公開情報ベースに整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>商社経験が評価される 5 領域</li>
+        <li>狙えるファーム + 年収レンジ</li>
+        <li>ゼネラリスト → 専門特化への適応ポイント</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_shosha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_shosha">
+          <span>商社出身者向け無料カウンセリングを予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">商社経験が評価される 5 領域</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>領域1: 事業投資 + 事業開発</h4>
+        <p>商社での事業投資判断 + 新規事業開発 + 出資先管理経験。コンサルの新規事業立案 + 投資判断支援案件で高く評価される傾向とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域2: 海外駐在 + グローバル経験</h4>
+        <p>海外駐在 + クロスボーダー取引 + 異文化マネジメント経験。グローバル案件 + 海外進出支援案件で活きる実務知見とされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域3: 多業界知見</h4>
+        <p>商社は多様な業界 (エネルギー / 食料 / 金属 / 機械 / 化学等) を扱うため、横断的な業界知見が蓄積されます。コンサルの業界横断案件で強みとされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域4: 交渉力 + 関係構築力</h4>
+        <p>商社での取引交渉 + パートナー関係構築 + ステークホルダー調整経験。コンサルのクライアントリレーション + プロジェクト推進で活きる能力とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>領域5: 財務 + 投資分析</h4>
+        <p>事業投資に伴う財務分析 + 投資採算評価 + リスク管理経験。FAS 系 + 戦略系の財務関連案件で評価される傾向とされる傾向です。</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_shosha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_shosha">
+          <span>自分の商社経験の市場価値を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">商社出身者が狙えるファーム比較</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="商社出身者向けコンサルファーム比較">
+          <thead><tr><th>ファーム種別</th><th>評価される経験</th><th>年収レンジ目安</th><th>適合度</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (BCG / McK / Bain)</td><td>事業戦略 / 新規事業 / 経営視点</td><td>800-3,500万円</td><td>&#11088; 高 (経営視点)</td></tr>
+            <tr><td>総合系 (アクセンチュア / ベイカレント)</td><td>多業界知見 / プロジェクト推進</td><td>700-2,200万円</td><td>高</td></tr>
+            <tr><td>FAS 系 (Deloitte FAS / PwC AS)</td><td>事業投資 / 財務分析 / M&A</td><td>800-2,300万円</td><td>&#11088; 高 (投資経験)</td></tr>
+            <tr><td>事業再生・ハンズオン系</td><td>事業運営 / グローバル経験</td><td>700-2,500万円</td><td>高 (実行経験)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_shosha_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">ゼネラリスト → 専門特化への適応 4 ポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">適応1</span><h4>当事者 → アドバイザーへの転換</h4><p>商社の「事業の当事者」から、コンサルの「クライアントを支援するアドバイザー」への立場の変化。一歩引いた客観的視点が必要とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">適応2</span><h4>論理思考フレームの習得</h4><p>商社のゼネラリスト経験を、MECE + イシューツリー + 仮説思考のコンサルフレームに翻訳する準備が必要とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">適応3</span><h4>専門領域の選定</h4><p>商社の幅広い経験から、コンサルで強みを発揮できる専門領域 (事業戦略 / M&A / 海外進出等) を選定し、それを軸にキャリアを構築することが推奨されます。</p></article>
+        <article class="branch"><span class="tag">適応4</span><h4>資料作成 + プレゼンスキル</h4><p>コンサルの論理構造化された資料作成 + プレゼンスキルへの適応。商社の実務経験を構造的に言語化する訓練が推奨されます。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>商社からコンサルへの転身は元コンサル伴走で適応がスムーズに。MyVisionの無料カウンセリングで、自分の商社経験 + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_shosha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_shosha">
+          <span>商社出身者特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/igyoushu-kara-consul/"><h4>異業種からコンサル</h4><p>業界転身の全方位ガイド</p></a>
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者</p></a>
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル 転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">商社の事業経験を武器に、コンサルへキャリア拡張する</h2>
+      <p>事業投資 + 海外経験 + 多業界知見を、戦略系 / FAS 系コンサルで活かす。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_shosha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_shosha">
+          <span>商社からコンサルの転身を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
