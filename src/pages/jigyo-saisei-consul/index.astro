@@ -1,0 +1,192 @@
+---
+/**
+ * jigyo-saisei-consul LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 事業再生コンサル 転職 (sv 推定 250-450・ターンアラウンド特化)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '事業再生コンサル 転職 完全ガイド｜ターンアラウンド特化ファームの特性・年収・選考対策｜MyVision (PR)';
+const description = '事業再生コンサル (ターンアラウンド) への転職について、企業再生・経営改善に特化したファーム (アリックスパートナーズ・フロンティア・マネジメント・経営共創基盤等) の特性・年収レンジ・採用人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '事業再生コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '事業再生コンサルとは何ですか?', a: '一般的に経営不振企業の再建・経営改善・ターンアラウンドを支援するコンサルティング領域とされています。アリックスパートナーズ・フロンティア・マネジメント・経営共創基盤 (IGPI) 等のファームが主要プレイヤーで、財務改善 + 事業構造改革 + ハンズオン経営支援を担うとされる傾向です。' },
+  { q: '事業再生コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、コンサルタント階層で700-1,100万円、マネージャー階層で1,300-2,000万円、シニアマネージャー以上で2,000-3,000万円帯の事例が報告されています。専門性が高く高単価とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '事業再生コンサルで採用される人材像は?', a: '一般公開情報によれば、銀行 (融資・事業再生部)・会計士・FAS 経験者・事業会社の経営企画 / 財務出身者がメインターゲットとされています。財務知見 + 事業理解 + 実行力が評価される傾向です。' },
+  { q: 'ハンズオン型とアドバイザリー型の違いは?', a: '一般的にハンズオン型 (経営共創基盤等) = 経営の現場に入り込み実行まで担う、アドバイザリー型 (FAS 系等) = 助言・支援が中心、という違いがあるとされています。事業再生コンサルはハンズオン型の比重が高い傾向とされる傾向です。' },
+  { q: '事業再生コンサルと FAS の違いは?', a: '事業再生コンサル = 経営不振企業の再建 + ターンアラウンド + ハンズオン経営支援、FAS = M&A + 財務 DD + バリュエーション中心、という違いがあるとされています。詳細は <a href="/ma-consul-tenshoku/" class="underline">M&A コンサル 転職</a> 参照。' },
+  { q: '事業再生コンサルの選考対策は?', a: '一般公開情報によれば、書類選考 → ケース面接 (財務改善 / 事業再建シナリオ) → 役員面接の流れで、財務分析力 + 事業理解 + 実行力の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">事業再生コンサル / ターンアラウンド特化ガイド</span>
+      <h1 id="fv-h1"><span class="accent">事業再生コンサル</span> 転職 完全ガイド<br />ターンアラウンド特化ファームの特性・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 事業再生コンサルは<strong>経営不振企業の再建・経営改善・ターンアラウンド</strong>を支援する専門特化領域とされ、アリックスパートナーズ・フロンティア・マネジメント・経営共創基盤 (IGPI) 等のファームが主要プレイヤーとされる傾向です。本記事では事業再生コンサルの特性 + 年収レンジ + 採用人材像 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>事業再生コンサルの 4 つの特性</li>
+        <li>年収レンジ (700-3,000万円帯) + 高単価の背景</li>
+        <li>採用される 4 タイプの人材像</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_saisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_saisei">
+          <span>事業再生コンサル挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは各コンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">事業再生コンサルの 4 つの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各事業再生ファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特性1</span><h4>ターンアラウンド (経営再建)</h4><p>経営不振企業の財務改善 + 事業構造改革 + 組織再編を担う。短期的な財務改善から中長期の成長戦略まで一気通貫で支援するとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性2</span><h4>ハンズオン経営支援</h4><p>提言だけでなく、経営の現場に入り込んで実行まで担うハンズオン型が中心。常駐 + 経営陣派遣等で深く関与するとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性3</span><h4>財務改善 + 資本政策</h4><p>財務リストラクチャリング + 資金繰り改善 + 資本政策の専門性。金融機関 + スポンサーとの調整も担うとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性4</span><h4>高い専門性 + 高単価</h4><p>専門性が高く案件難度も高いため、年収水準は高単価とされる傾向です。財務知見 + 実行力の両方を持つ人材が活躍するとされています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_saisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_saisei">
+          <span>事業再生コンサルの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">事業再生コンサルに採用される 4 タイプ</h2>
+      <div class="counter-box">
+        <h4>タイプ1: 銀行 (融資・事業再生部) 出身</h4>
+        <p>融資審査 + 事業再生支援 + 債権管理経験。金融機関調整 + 財務改善の知見が事業再生コンサルで即戦力とされる傾向です。詳細は <a href="/finance-kara-consul/" class="underline">金融からコンサル</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>タイプ2: 会計士・FAS 経験者</h4>
+        <p>財務 DD + バリュエーション + 財務分析経験。事業再生の財務改善 + 資本政策案件で評価される傾向とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>タイプ3: 事業会社 経営企画 / 財務出身</h4>
+        <p>事業計画 + 予実管理 + 経営改善経験。事業構造改革の実務知見が評価される傾向とされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>タイプ4: コンサル経験者 (戦略 / 総合 / FAS)</h4>
+        <p>戦略立案 + プロジェクト推進経験。事業再生のハンズオン支援で即戦力として採用される傾向とされています。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_saisei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">事業再生コンサル 選考対策 — 4 つのポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">対策1</span><h4>財務分析力のアピール</h4><p>財務 3 表分析 + キャッシュフロー予測 + 財務改善の知見が必須とされています。前職の財務関連経験をコンサル評価軸に翻訳する添削が推奨されます。</p></article>
+        <article class="branch"><span class="tag">対策2</span><h4>ケース面接 (事業再建シナリオ)</h4><p>事業再生コンサルのケース面接は「赤字事業の再建」「財務改善」等の事業再建シナリオが頻出とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策3</span><h4>実行力 + 当事者意識のアピール</h4><p>ハンズオン型の事業再生では、提言だけでなく実行まで担う実行力 + 当事者意識が重視されるとされています。前職での実行経験を具体的に示すことが推奨されます。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜ事業再生)</h4><p>「経営の現場に深く入り込む」「企業再建を通じた価値創出」等の事業再生特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>事業再生コンサル挑戦は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の財務知見 + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_saisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_saisei">
+          <span>事業再生コンサル特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/ma-consul-tenshoku/"><h4>M&A コンサル 転職</h4><p>FAS 高単価キャリア</p></a>
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者</p></a>
+        <a class="card-link" href="/boutique-consul-tenshoku/"><h4>ブティック系コンサル</h4><p>専門特化ファーム</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">事業再生コンサルで、企業再建のプロフェッショナルへ</h2>
+      <p>ターンアラウンド + ハンズオン経営支援の専門領域。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_saisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_saisei">
+          <span>事業再生コンサル挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
