@@ -1,0 +1,198 @@
+---
+/**
+ * roland-berger-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: ローランドベルガー 転職 (sv 推定 300-500・欧州系戦略名門)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'ローランドベルガー 転職 完全ガイド｜欧州系戦略名門ファームの特性・年収・選考対策｜MyVision (PR)';
+const description = 'ローランドベルガー (Roland Berger) への転職について、欧州発祥の戦略コンサル名門ファームの特性・年収レンジ・選考プロセス・強み領域 (自動車 / 製造 / インダストリー) を公開情報ベースで整理。元コンサル無料模擬面接サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'ローランドベルガー 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'ローランドベルガーとはどんなファームですか?', a: 'ローランドベルガー (Roland Berger) は1967年にドイツで創業した、欧州発祥の戦略コンサルティングファームとされています。米国系の MBB (McKinsey/BCG/Bain) とは異なる欧州系の戦略名門として、自動車・製造・インダストリー領域に特に強みがあるとされる傾向です。' },
+  { q: 'ローランドベルガーの年収レンジはどのくらいですか?', a: '一般公開情報によれば、ジュニアコンサルタント 600-900万円、コンサルタント 1,000-1,500万円、プロジェクトマネージャー 1,500-2,200万円、プリンシパル 2,200-2,800万円、パートナー 3,000万円超の事例が報告されています。戦略系の中で高水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'ローランドベルガーの選考難度はどのくらいですか?', a: '一般的に戦略系ファームとして高難度とされ、ケース面接 + 役員面接の複数ラウンド構成と一般的に言われます。独学では到達しにくく、元コンサルとの集中的な模擬面接が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'ローランドベルガーの強み領域は?', a: '一般公開情報によれば、自動車・モビリティ・製造業・インダストリーグッズ・エネルギー領域に特に強みがあるとされています。欧州系ならではのインダストリー知見が特徴とされる傾向です。' },
+  { q: 'ローランドベルガーと MBB の違いは?', a: 'ローランドベルガー = 欧州発祥 + 自動車/製造/インダストリー強み + 実務寄り、MBB (米国系) = グローバルネットワーク + 抽象度高い戦略立案という特性の違いがあるとされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル 転職</a> 参照。' },
+  { q: '未経験からローランドベルガーに転職できますか?', a: '一般的にポテンシャル採用 + 論理思考力 + ケース面接突破力があれば挑戦可能とされていますが、戦略系のため採用枠は限られています。特に自動車・製造業の業界知見があれば評価されやすい傾向とされる傾向です。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">ローランドベルガー / 欧州系戦略名門ガイド</span>
+      <h1 id="fv-h1"><span class="accent">ローランドベルガー</span> 転職 完全ガイド<br />欧州系戦略名門ファームの特性・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: ローランドベルガー (Roland Berger) は<strong>1967年ドイツ創業の欧州発祥の戦略コンサル名門ファーム</strong>とされ、米国系 MBB とは異なる欧州系の戦略名門として、自動車・製造・インダストリー領域に強みがあるとされる傾向です。本記事ではローランドベルガーへの挑戦準備を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ローランドベルガーの 4 つの特性 (欧州系 + インダストリー強み)</li>
+        <li>年収レンジ (600-3,000万円帯) + キャリアラダー</li>
+        <li>戦略系ファームの選考準備</li>
+        <li>MBB との違い + 狙える人材像</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_rb`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_rb">
+          <span>ローランドベルガー挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはローランドベルガー公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ローランドベルガーの 4 つの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): ローランドベルガー公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特性1</span><h4>欧州発祥の戦略名門</h4><p>1967年ドイツ創業。米国系 MBB とは異なる欧州系の戦略コンサル名門として、独自のメソドロジー + 欧州的なアプローチを持つとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性2</span><h4>自動車・モビリティ領域の強み</h4><p>欧州自動車産業との深い関係から、自動車・モビリティ領域に世界的な強みを持つとされています。EV シフト + 次世代モビリティ案件で知見を発揮するとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性3</span><h4>製造業・インダストリー深耕</h4><p>製造業・インダストリーグッズ・エネルギー領域に深い知見。欧州系ならではのインダストリー戦略コンサルティングが特徴とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性4</span><h4>実務寄りの戦略コンサルティング</h4><p>抽象的な戦略立案だけでなく、実務に踏み込んだ実行支援型のコンサルティングが特徴とされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_rb`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_rb">
+          <span>ローランドベルガーの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ローランドベルガーの年収レンジ + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ローランドベルガー 年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>ジュニアコンサルタント</td><td>1-3 年</td><td>600-900万円</td><td>分析 / 仮説検証 / 資料作成</td></tr>
+            <tr><td>コンサルタント</td><td>2-4 年</td><td>1,000-1,500万円</td><td>サブ案件リード / クライアント窓口</td></tr>
+            <tr><td>プロジェクトマネージャー</td><td>2-4 年</td><td>1,500-2,200万円</td><td>案件統括 / 提案リード</td></tr>
+            <tr><td>プリンシパル</td><td>3-5 年</td><td>2,200-2,800万円</td><td>領域責任 / 大型案件責任</td></tr>
+            <tr><td>パートナー</td><td>無期限</td><td>3,000万円+</td><td>クライアント / 経営 / 戦略立案</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額はローランドベルガー公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_rb_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">ローランドベルガー 選考準備 — 4 ステップ</h2>
+      <div class="counter-box">
+        <h4>ステップ1: 書類選考 + 適性検査</h4>
+        <p>履歴書 + 職務経歴書 + 適性検査。ロジカルシンキング + 数値分析力 + 業界への関心が問われる傾向とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ2: ケース面接 (インダストリー系も頻出)</h4>
+        <p>経営課題ケース + 自動車 / 製造業 / インダストリー系ケースが頻出とされる傾向です。実務視点 + 構造化能力が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ3: 役員面接</h4>
+        <p>パートナー職との議論型面接。クライアント主導力 + 戦略思考 + インダストリー知見が総合評価されるとされています。最終突破の鍵とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ4: 志望動機 (なぜローランドベルガー)</h4>
+        <p>「欧州系戦略名門への共感」「自動車 / 製造業領域への興味」等のローランドベルガー特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_rb`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_rb">
+          <span>ローランドベルガー突破準備を元コンサルの無料模擬面接で始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル 転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/atkearney-tenshoku/"><h4>A.T.カーニー 転職</h4><p>戦略系名門・実行重視</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を突破</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">ローランドベルガー 欧州系戦略名門へ挑戦する</h2>
+      <p>欧州発祥 + 自動車 / 製造業の強みを持つ戦略名門ファーム。MyVisionの無料カウンセリングで、戦略系挑戦準備 + 自分の市場価値 + 想定年収を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_rb`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_rb">
+          <span>ローランドベルガー挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
