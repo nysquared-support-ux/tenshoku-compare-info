@@ -1,0 +1,200 @@
+---
+/**
+ * boutique-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: ブティック系コンサル 転職 (sv 推定 250-450・専門特化ブティック包括)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)';
+const description = 'ブティック系コンサル (ローランドベルガー・A.D.リトル・ドリームインキュベータ・経営共創基盤等) への転職について、専門特化ファームの特性・年収レンジ・大手ファームとの違い・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'ブティック系コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'ブティック系コンサルとは何ですか?', a: '一般的に特定領域・業界に専門特化した中小規模のコンサルファームを指すとされています。戦略系ブティック (ローランドベルガー・A.D.リトル等)・事業創造系 (ドリームインキュベータ等)・ハンズオン経営支援系 (経営共創基盤等) 等の多様なタイプが存在するとされる傾向です。' },
+  { q: 'ブティック系コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、ファーム + 専門領域により幅広く、コンサルタント階層で600-1,200万円、マネージャー階層で1,200-2,000万円、パートナークラスで2,500万円超の事例が報告されています。戦略系ブティックは大手戦略系に近い水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'ブティック系と大手ファームの違いは?', a: '一般的にブティック系 = 専門特化 + 少数精鋭 + 裁量大 + 専門性深耕、大手ファーム = 幅広い案件 + 組織的研修 + ブランド力という特性の違いがあるとされています。本記事内で詳細比較しています。' },
+  { q: 'ブティック系コンサルで採用される人材像は?', a: '一般公開情報によれば、専門領域 (戦略 / 事業創造 / 事業再生 / 特定業界等) への深い関心 + 専門性 + 自律性を持つ人材が評価される傾向とされています。少数精鋭のため即戦力性も重視されるとされる傾向です。' },
+  { q: 'ブティック系の選考対策は?', a: '一般的に書類選考 → ケース面接 (専門領域寄り) → パートナー面接の流れで、専門性 + 論理思考 + ファームの専門領域への共感が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: '未経験からブティック系コンサルに転職できますか?', a: '一般的に専門領域への関心 + 論理思考力 + ケース面接突破力があれば挑戦可能とされていますが、少数精鋭のため大手より採用枠は限られる傾向とされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">ブティック系コンサル / 専門特化ファームガイド</span>
+      <h1 id="fv-h1"><span class="accent">ブティック系コンサル</span> 転職 完全ガイド<br />専門特化ファームの特性・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: ブティック系コンサルは<strong>特定領域・業界に専門特化した中小規模ファーム</strong>を指し、少数精鋭 + 裁量大 + 専門性深耕が特徴とされています。戦略系ブティック・事業創造系・ハンズオン経営支援系等の多様なタイプが存在する傾向です。本記事ではブティック系コンサルの特性 + 年収レンジ + 大手との違い + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ブティック系コンサル 4 タイプの特性</li>
+        <li>主要ブティックファームの領域比較</li>
+        <li>大手ファームとの違い (専門特化 vs 幅広さ)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_boutique">
+          <span>ブティック系挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは各コンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ブティック系コンサル 4 タイプの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各コンサルファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">タイプ1</span><h4>戦略系ブティック</h4><p>経営戦略立案に特化した中小規模ファーム (ローランドベルガー・A.D.リトル等)。MBB に近い戦略案件 + 少数精鋭 + 専門性深耕が特徴とされる傾向です。年収水準も大手戦略系に近いとされています。</p></article>
+        <article class="branch"><span class="tag">タイプ2</span><h4>事業創造・新規事業系</h4><p>新規事業創造 + ベンチャー支援 + イノベーションに特化 (ドリームインキュベータ等)。自ら事業を生み出す志向の人材に適しているとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">タイプ3</span><h4>ハンズオン経営支援系</h4><p>事業再生 + ハンズオン経営支援に特化 (経営共創基盤等)。提言だけでなく経営の現場に入り込んで実行支援する特徴とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">タイプ4</span><h4>業界・機能特化系</h4><p>特定業界 (医療 / 金融 / IT 等) や特定機能 (人事 / マーケティング / SCM 等) に特化したブティック。専門領域を深く極めたい人材に適しているとされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_boutique">
+          <span>適合するブティックタイプを MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ブティック系 vs 大手ファームの違い</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ブティック系 vs 大手ファーム比較">
+          <thead><tr><th>項目</th><th>ブティック系</th><th>大手ファーム</th></tr></thead>
+          <tbody>
+            <tr><td>規模</td><td>少数精鋭 (数十〜数百名)</td><td>大規模 (数千名以上)</td></tr>
+            <tr><td>案件</td><td>専門領域に特化</td><td>幅広い領域をカバー</td></tr>
+            <tr><td>裁量</td><td>若手にも大きい裁量</td><td>階層的・段階的に拡大</td></tr>
+            <tr><td>研修</td><td>OJT 中心・実践型</td><td>体系的な研修制度</td></tr>
+            <tr><td>専門性</td><td>特定領域を深く極める</td><td>多様な経験を積める</td></tr>
+            <tr><td>年収レンジ</td><td>600-2,500万円 (ファーム差大)</td><td>500-3,500万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的傾向の整理です。ファームにより実態は大きく異なります。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_boutique_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">ブティック系が向いている人 — 4 タイプ</h2>
+      <div class="counter-box">
+        <h4>タイプ1: 専門領域を深く極めたい人</h4>
+        <p>特定の業界・機能を深く専門特化したい志向の人。ブティック系は幅広い案件より専門性深耕に適しているとされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>タイプ2: 若手から大きな裁量がほしい人</h4>
+        <p>少数精鋭のブティック系は若手にも大きな裁量 + クライアント主導機会が与えられる傾向。早期に成長したい人に適しているとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>タイプ3: 経営の現場に入り込みたい人</h4>
+        <p>ハンズオン経営支援系のブティックは、提言だけでなく経営の実行現場に入り込む働き方。事業を動かす実感を求める人に適しているとされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>タイプ4: 事業創造に関わりたい人</h4>
+        <p>事業創造・新規事業系のブティックは、自ら事業を生み出す志向の人に適しているとされる傾向です。将来の起業 + 事業家志向の人にも選択肢とされています。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>ブティック系コンサルは専門特化のため、適合性の見極めが重要。MyVisionの無料カウンセリングで、自分の志向 + 適合ブティック + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_boutique">
+          <span>ブティック系特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル 転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/keiei-consul-tenshoku/"><h4>経営コンサル 転職</h4><p>経営系全方位</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-tekisei/"><h4>コンサル 適性</h4><p>10 項目セルフチェック</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">専門特化のブティック系コンサルで、深い専門性を極める</h2>
+      <p>少数精鋭 + 裁量大 + 専門性深耕のブティック系。MyVisionの無料カウンセリングで、自分の志向 + 適合ブティック + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_boutique">
+          <span>ブティック系挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
