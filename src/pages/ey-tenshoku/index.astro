@@ -1,0 +1,198 @@
+---
+/**
+ * ey-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: EY 転職 (sv 推定 400-700・BIG4 個別)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'EY 転職 完全ガイド｜EY Japan の特性・年収・選考対策 (Ernst & Young)｜MyVision (PR)';
+const description = 'EY Japan (EY ストラテジー・アンド・コンサルティング / EY 新日本監査法人) への転職について、パーパス + サステナビリティを軸にした BIG4 ファームの特性・年収レンジ・採用人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'EY 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'EY とはどんなファームですか?', a: 'EY (Ernst & Young) は世界 4 大会計事務所 BIG4 の一角で、日本では EY ストラテジー・アンド・コンサルティング + EY 新日本監査法人 + EY 税理士法人 等の複数法人で展開しているとされています。パーパス「Building a better working world」+ サステナビリティ + 人材変革に注力するファームとされる傾向です。' },
+  { q: 'EY の年収レンジはどのくらいですか?', a: '一般公開情報によれば、シニアコンサルタント 700-1,100万円、マネージャー 1,100-1,500万円、シニアマネージャー 1,500-2,000万円、ディレクター 1,900-2,400万円、パートナー 2,500万円超の事例が報告されています。BIG4 内では Deloitte・PwC と並ぶ水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'EY の強み・特徴は?', a: 'パーパス + サステナビリティ + 人材変革 (People Advisory Services) が中核領域とされています。組織人事 + ESG + 持続可能経営の案件に強みがあり、中堅企業向け案件も比較的多い傾向とされています。' },
+  { q: 'EY で採用される人材像は?', a: '一般公開情報によれば、Strategy & Consulting = 大手事業会社 + 戦略経験者、Tax = 会計士 + 税理士、People Advisory = 人事 + 組織開発、Risk = 金融 + 法務出身者がメインターゲットとされています。詳細は <a href="/big4-consul-tenshoku/" class="underline">BIG4 転職</a> 参照。' },
+  { q: 'EY の選考対策は?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 + パーパス質問 → 役員面接の流れで、論理思考 + パーパス整合性 + 業界知見の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'EY と他の BIG4 の違いは?', a: 'EY = パーパス + サステナビリティ + 人材変革 / Deloitte = 規模最大 + 全領域 / PwC = 戦略 + 業界変革 / KPMG = リスク + 金融 という特性の違いがあるとされています。詳細は <a href="/deloitte-tenshoku/" class="underline">デロイト 転職</a>・<a href="/pwc-tenshoku/" class="underline">PwC 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">EY / BIG4 個別ガイド</span>
+      <h1 id="fv-h1"><span class="accent">EY</span> 転職 完全ガイド<br />EY Japan の特性・年収・選考対策 (Ernst & Young)</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: EY (Ernst & Young) は<strong>パーパス + サステナビリティ + 人材変革</strong>を軸にした BIG4 ファームとされ、EY ストラテジー・アンド・コンサルティング + EY 新日本監査法人 + EY 税理士法人 等で展開しているとされています。本記事では EY 各部門の特性 + 年収レンジ + 採用人材像 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>EY Japan の構成 + 強み (パーパス + サステナビリティ)</li>
+        <li>部門別 (Strategy / Consulting / Tax / People Advisory) 特性</li>
+        <li>年収レンジ (700-2,500万円帯) + 採用人材像</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_ey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_ey">
+          <span>EY 挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは EY 公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">EY Japan の構成 + 4 つの強み</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): EY Japan 公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">強み1</span><h4>パーパス経営</h4><p>"Building a better working world" のパーパスを軸とした経営。クライアントへの価値提供だけでなく、社会課題解決 + 人材育成への投資が特徴とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み2</span><h4>サステナビリティ + ESG 案件</h4><p>2020年代以降の ESG / サステナビリティ経営の流れで、関連案件が急増。EY は BIG4 の中でもサステナビリティ領域に注力するファームとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み3</span><h4>People Advisory Services (人材変革)</h4><p>組織人事 + HR 変革 + 人材戦略 + ダイバーシティ等の領域に強い専門部門。日系企業の人材変革ニーズに対応する案件が多い傾向とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み4</span><h4>中堅企業案件比率</h4><p>BIG4 の中で中堅企業 + 成長企業向け案件の比率が比較的高い傾向。ハンズオン支援 + 個別密着型の案件構成が特徴とされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_ey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_ey">
+          <span>EY の最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">EY 部門別 年収レンジ + 採用人材像</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="EY 部門別 年収・採用層">
+          <thead><tr><th>部門</th><th>主な案件</th><th>年収レンジ目安</th><th>主な採用層</th></tr></thead>
+          <tbody>
+            <tr><td>Strategy & Transactions</td><td>戦略 / M&A / 事業再生</td><td>800-2,200万円</td><td>戦略系 + 銀行 + 証券出身</td></tr>
+            <tr><td>Consulting</td><td>業務変革 / DX / リスク</td><td>700-1,800万円</td><td>事業会社 + IT + 業務系</td></tr>
+            <tr><td>People Advisory Services</td><td>組織人事 / 人材戦略 / DEI</td><td>650-1,800万円</td><td>人事 + 組織開発経験者</td></tr>
+            <tr><td>Tax (税務)</td><td>国際税務 / 移転価格 / M&A 税務</td><td>700-2,000万円</td><td>税理士 + USCPA</td></tr>
+            <tr><td>EY 新日本監査法人</td><td>大手企業監査 / IT 監査</td><td>500-1,500万円</td><td>公認会計士</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_ey_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">EY 選考対策 — 4 つのポイント</h2>
+      <div class="counter-box">
+        <h4>対策1: パーパス整合性の言語化</h4>
+        <p>EY 独自の「Building a better working world」パーパスへの共感 + 自分の志向との整合性を語れる準備が必要とされています。他 BIG4 と差別化される評価軸です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: ケース面接 (実務寄り + サステナビリティ視点)</h4>
+        <p>EY のケース面接は実務寄り (業務変革 / 組織人事 / サステナビリティ等) + 中長期視点が問われる傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 業界専門性 + 人材視点</h4>
+        <p>業界知見 + コンサル評価軸への翻訳 + 人材/組織への視点が EY の核心評価ポイントとされています。元コンサルの添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 志望動機 (なぜ EY + パーパス共感)</h4>
+        <p>「EY のパーパスへの共感」「サステナビリティ + 人材変革領域への志向」等の EY 特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>EY 採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合部門 + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_ey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_ey">
+          <span>EY 特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>4 ファーム比較</p></a>
+        <a class="card-link" href="/deloitte-tenshoku/"><h4>デロイト 転職</h4><p>BIG4 最大規模</p></a>
+        <a class="card-link" href="/pwc-tenshoku/"><h4>PwC 転職</h4><p>戦略 + 業界変革</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">EY パーパス経営 + サステナビリティのキャリアへ挑戦する</h2>
+      <p>EY Japan + 部門別の特性把握で、最適な挑戦先を見極める。MyVisionの無料カウンセリングで、適合部門 + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_ey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_ey">
+          <span>EY 挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

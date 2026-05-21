@@ -1,0 +1,198 @@
+---
+/**
+ * abeam-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: アビーム 転職 (sv 推定 400-700・SAP/IT特化総合)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)';
+const description = 'アビームコンサルティング (ABeam Consulting) への転職について、SAP / 基幹業務 / DX 案件に強い日系総合ファームの特性・年収レンジ・採用人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'アビーム 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'アビームコンサルティングとはどんなファームですか?', a: 'アビームコンサルティングは1981年創業 (旧デロイト トーマツ コンサルティングから2003年独立) の日系総合コンサルファームで、特に SAP 導入 + 基幹業務刷新 + DX 推進案件に強みがあるとされています。日系企業との親和性が高く、業界特化型の組織構造が特徴とされる傾向です。' },
+  { q: 'アビームの年収レンジはどのくらいですか?', a: '一般公開情報によれば、コンサルタント 550-900万円、シニアコンサルタント 800-1,200万円、マネージャー 1,100-1,600万円、シニアマネージャー 1,500-2,000万円、ディレクター 1,900-2,400万円帯の事例が報告されています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'アビームの強み・特徴は?', a: 'SAP 導入 (国内シェア最大級) + 基幹業務刷新 + 日系企業特化 + DX 案件が中核とされています。SIer / SE / IT 出身者の主要転職先の一つとされる傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル 転職</a> 参照。' },
+  { q: 'アビームで採用される人材像は?', a: '一般公開情報によれば、SIer + SE + PM 出身者 (特に SAP 経験者) + 事業会社業務改革経験者がメインターゲットとされています。日系企業文化への適応性 + 業界知見 + 実務経験が評価軸とされる傾向です。' },
+  { q: 'アビームの選考対策は?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 + 業界質問 → 役員面接の流れで、業界知見 + 論理思考 + 実務経験の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'アビームとアクセンチュアの違いは?', a: 'アビーム = 日系流 + SAP 特化 + 業界深耕 / アクセンチュア = 外資系 + 大規模 + DX + クラウド という特性の違いがあるとされています。日系企業文化を好むかどうかで適合性が変わる傾向です。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">アビーム / 日系総合 SAP 特化ガイド</span>
+      <h1 id="fv-h1"><span class="accent">アビーム</span> 転職 完全ガイド<br />アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: アビームコンサルティングは<strong>日系総合コンサルファーム + SAP / 基幹業務特化</strong>として知られ、SIer / SE / IT 出身者の主要転職先の一つとされる傾向です。日系企業との親和性が高く、業界深耕型の案件構成が特徴。本記事ではアビーム各部門の特性 + 年収レンジ + 採用人材像 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>アビームの 4 つの強み (SAP + 基幹業務 + 日系 + 業界深耕)</li>
+        <li>年収レンジ (550-2,400万円帯) + キャリアラダー</li>
+        <li>SIer / SE / SAP 出身者向け選考対策</li>
+        <li>外資系総合 (アクセンチュア) との比較</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_abeam`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_abeam">
+          <span>アビーム挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはアビーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">アビームの 4 つの強み</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): アビームコンサルティング公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">強み1</span><h4>SAP 導入 (国内シェア最大級)</h4><p>SAP S/4HANA + ERP 導入案件で国内シェア最大級とされる。SAP 認定資格保有者 + SAP 経験者の主要転職先となっており、SAP 案件の継続的な発生が特徴とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み2</span><h4>基幹業務刷新</h4><p>会計 / 人事 / SCM / CRM 等の基幹業務システム刷新案件が中核。日系大手企業のレガシー刷新 + DX 推進案件で深く入り込む傾向とされています。</p></article>
+        <article class="branch"><span class="tag">強み3</span><h4>日系企業文化への親和性</h4><p>日系企業との長期パートナーシップ + 日本流のコンサル文化が特徴。外資系コンサルとは異なる日系企業文化への適応性 + 顧客密着型のサポートが評価される傾向とされています。</p></article>
+        <article class="branch"><span class="tag">強み4</span><h4>業界深耕 (インダストリー部門)</h4><p>金融 / 製造 / 流通 / 通信 / 公共等の業界別組織が確立しており、業界知見を深耕しやすい環境とされる傾向です。業界特化案件 + 業務改革案件の比率が高いとされています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_abeam`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_abeam">
+          <span>アビームの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">アビーム vs アクセンチュア vs ベイカレント 比較</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="日系 vs 外資系総合コンサル比較">
+          <thead><tr><th>項目</th><th>アビーム</th><th>アクセンチュア</th><th>ベイカレント</th></tr></thead>
+          <tbody>
+            <tr><td>企業文化</td><td>日系流 + 顧客密着</td><td>外資系 + 大規模</td><td>日系流 + 業界深耕</td></tr>
+            <tr><td>強み領域</td><td>SAP + 基幹業務</td><td>クラウド + データ + AI</td><td>経営改革 + DX</td></tr>
+            <tr><td>年収レンジ</td><td>550-2,400万円</td><td>500-2,000万円</td><td>700-2,500万円</td></tr>
+            <tr><td>採用層</td><td>SIer / SAP / 業務系</td><td>IT / SIer / 大手</td><td>業界経験豊富派</td></tr>
+            <tr><td>働き方</td><td>比較的安定</td><td>案件単位で変動</td><td>案件単位で変動</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_abeam_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">アビーム 選考対策 — 4 つのポイント</h2>
+      <div class="counter-box">
+        <h4>対策1: SAP / 基幹業務経験の言語化</h4>
+        <p>SAP 認定資格 + SAP 導入プロジェクト経験 + 基幹業務刷新案件経験を具体数値で言語化することが必須とされています。アビームの中核評価ポイントです。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: ケース面接 (実務寄り + 業界特化)</h4>
+        <p>アビームのケース面接は実務寄り (業務改革 / DX 推進 / SAP 戦略等) + 業界知見深掘りの傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 日系企業文化への適応性</h4>
+        <p>日系企業のクライアント文化 + 長期パートナーシップ志向 + チームワーク重視への適応性が評価軸とされています。外資系志向の場合はミスマッチ可能性も。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 志望動機 (なぜアビーム + 外資系との違い)</h4>
+        <p>「日系流 + SAP / 基幹業務特化 + 業界深耕」等のアビーム特性に踏み込む志望動機が必要とされています。外資系総合系との差別化を語れる準備が重要です。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>アビーム採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の SAP/IT 経験 + 適合部門 + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_abeam`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_abeam">
+          <span>アビーム特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア 転職</h4><p>外資系総合最大採用</p></a>
+        <a class="card-link" href="/baycurrent-tenshoku/"><h4>ベイカレント 転職</h4><p>日系総合最高単価</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル 転職</h4><p>SIer/SE/PM 出身者向け</p></a>
+        <a class="card-link" href="/dx-consul-tenshoku/"><h4>DX コンサル 転職</h4><p>採用爆増領域</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">SAP / 基幹業務経験を、日系総合コンサルで活かす</h2>
+      <p>アビーム日系流 + SAP / 基幹業務特化で、SIer / SE 経験を最大化。MyVisionの無料カウンセリングで、適合部門 + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_abeam`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_abeam">
+          <span>アビーム挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
