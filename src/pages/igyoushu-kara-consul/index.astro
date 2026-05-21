@@ -1,0 +1,202 @@
+---
+/**
+ * igyoushu-kara-consul LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 異業種からコンサル (sv 推定 300-500・業界転身全方位 Hub 的)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '異業種からコンサル 完全ガイド｜前職別の転身パス + 評価ポイント + 選考対策 全方位整理｜MyVision (PR)';
+const description = '異業種からコンサル業界へ転職するための完全ガイド。前職業界別 (IT・金融・製造・商社・公務員・営業等) の転身パス・評価される共通スキル・選考対策を公開情報ベースで全方位整理。利用者の9割が業界未経験のMyVision活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '異業種からコンサル' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '異業種からコンサルに転職できますか?', a: 'コンサル特化エージェントの公開情報によれば、利用者の約9割が業界未経験で、IT・金融・製造・商社・官公庁・営業等の多様な異業種からの転職に成功しているとされています。前職経験をコンサル評価軸に翻訳できれば、業界を問わず挑戦可能とされる傾向です。' },
+  { q: '異業種からの転職で評価される共通スキルは?', a: '一般的に論理的思考力・課題解決志向・成果インパクト・コミュニケーション能力・学習意欲の5軸が、業界を問わず評価される共通スキルとされています。詳細は <a href="/consul-jiko-pr/" class="underline">コンサル 自己PR ガイド</a> 参照。' },
+  { q: 'どの業界からの転職が多いですか?', a: '一般公開情報によれば、IT・SIer / 金融 (銀行・証券) / 大手事業会社 (経営企画) / 商社 / 官公庁 / メーカー等が主要な前職業界とされています。本記事で業界別の転身パスを整理しています。' },
+  { q: '異業種からの転職で年収はどう変わりますか?', a: '一般公開情報によれば、前職業界 + 年収水準により様々で、20-50%のアップ事例も報告される一方、もともと高年収の業界 (商社 / 投資銀行) からは横ばいのケースもあるとされています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '異業種出身者の選考対策は?', a: '一般的に前職経験のコンサル評価軸への翻訳 + ケース面接対策 + 志望動機の整理が必須とされています。元コンサルの添削 + 模擬面接が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: '未経験 + 異業種でも本当に大丈夫ですか?', a: 'コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で選考突破に成功しているとされる傾向です。「異業種だから不利」というより「前職経験をどう翻訳するか」が鍵とされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">異業種 → コンサル / 全方位転身ガイド</span>
+      <h1 id="fv-h1"><span class="accent">異業種からコンサル</span> 完全ガイド<br />前職別の転身パス + 評価ポイント + 選考対策 全方位整理</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル特化エージェントの公開情報によれば、<strong>利用者の約9割が業界未経験</strong>で、IT・金融・製造・商社・官公庁・営業等の多様な異業種からの転職に成功しているとされています。「異業種だから不利」というより「前職経験をどう翻訳するか」が鍵とされる傾向です。本記事では業界別の転身パス + 評価ポイント + 選考対策を全方位整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>業界を問わず評価される 5 つの共通スキル</li>
+        <li>前職業界別の転身パス (6 タイプ)</li>
+        <li>異業種出身者の選考対策 4 ステップ</li>
+        <li>利用者9割が未経験の MyVision 活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_igyoushu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_igyoushu">
+          <span>異業種からの転職を無料カウンセリングで相談する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">業界を問わず評価される 5 つの共通スキル</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">スキル1</span><h4>論理的思考力</h4><p>複雑な課題を構造化し論理的に整理する力。どの業界出身でも、前職での問題解決経験から論理思考力を示せるとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">スキル2</span><h4>課題解決志向</h4><p>現状の問題を発見し改善する姿勢。業界を問わず「課題を見つけて自ら動いた」経験がアピール材料になるとされています。</p></article>
+        <article class="branch"><span class="tag">スキル3</span><h4>成果インパクト</h4><p>前職での成果を数値化して示す力。業界が違っても「業務効率改善 / 売上貢献 / コスト削減」等の成果は共通評価軸とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">スキル4</span><h4>コミュニケーション能力</h4><p>関係者調整 + 巻き込み力 + プレゼン力。どの業界の実務経験でも培われる能力で、コンサルのクライアントワークで活きるとされています。</p></article>
+        <article class="branch"><span class="tag">スキル5</span><h4>学習意欲 + 適応性</h4><p>新しい業界 + 業務を学ぶ意欲。異業種出身者は「未知の領域に飛び込む適応力」をむしろ強みとしてアピールできるとされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_igyoushu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_igyoushu">
+          <span>自分の前職スキルの市場価値を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">前職業界別の転身パス (6 タイプ)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="前職業界別 転身パス">
+          <thead><tr><th>前職業界</th><th>狙えるファーム</th><th>評価される経験</th><th>詳細ガイド</th></tr></thead>
+          <tbody>
+            <tr><td>IT / SIer</td><td>総合系 / IT 系 (アクセンチュア等)</td><td>クラウド / DX / PM 経験</td><td><a href="/it-consul-tenshoku/" class="underline">IT コンサル</a></td></tr>
+            <tr><td>金融 (銀行 / 証券)</td><td>FAS / BIG4 / 戦略系</td><td>財務分析 / M&A / リスク管理</td><td><a href="/finance-kara-consul/" class="underline">金融からコンサル</a></td></tr>
+            <tr><td>製造業 (メーカー)</td><td>総合系 / オペレーション戦略系</td><td>SCM / 生産管理 / 業務改革</td><td><a href="/maker-kara-consul/" class="underline">メーカーからコンサル</a></td></tr>
+            <tr><td>商社</td><td>戦略系 / FAS / 総合系</td><td>事業投資 / 海外 / 多業界知見</td><td><a href="/shosha-kara-consul/" class="underline">商社からコンサル</a></td></tr>
+            <tr><td>官公庁 / 公務員</td><td>公共系 (野村総研等) / BIG4 公共</td><td>政策立案 / 公共調達 / 行政知見</td><td><a href="/koumuin-kara-consul/" class="underline">公務員からコンサル</a></td></tr>
+            <tr><td>大手事業会社 (経営企画)</td><td>戦略系 / 総合系</td><td>事業戦略 / 経営企画 / KPI 設計</td><td><a href="/consul-tenshoku-mikeiken/" class="underline">未経験コンサル</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_igyoushu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">異業種出身者の選考対策 — 4 ステップ</h2>
+      <div class="counter-box">
+        <h4>ステップ1: 前職経験の棚卸し + 翻訳</h4>
+        <p>前職実績を 5 共通スキルの軸で棚卸しし、コンサル評価軸に翻訳する作業。元コンサルの添削で「異業種経験のアピール材料」を一緒に発掘するとされる傾向です。詳細は <a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ2: ケース面接対策</h4>
+        <p>異業種出身者にとってケース面接は最大の関門。フェルミ推定 + 経営課題の解法を、元コンサルの模擬面接で訓練することが推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ3: 志望動機の論理構築</h4>
+        <p>「なぜ異業種からコンサルか」「前職経験をどう活かすか」「なぜこのファームか」の3軸を論理的に接続。異業種だからこそ説得力ある志望動機が重要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ4: 適合ファームの選定</h4>
+        <p>前職業界 + 志向に合うファームを選定 (上表参照)。異業種出身者は「前職経験が活きるファーム」を選ぶことで選考通過率が高まるとされる傾向です。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>異業種からのコンサル転職は元コンサル伴走で成功率が変わる。MyVisionの無料カウンセリングで、自分の前職経験 + 適合ファーム + 選考対策を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_igyoushu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_igyoushu">
+          <span>異業種出身者特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事 (業界別転身ガイド)</p>
+      <h2 id="h2-related">業界別 転身ガイド</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル 転職</h4><p>SIer/SE 出身者向け</p></a>
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者</p></a>
+        <a class="card-link" href="/shosha-kara-consul/"><h4>商社からコンサル</h4><p>総合商社出身者</p></a>
+        <a class="card-link" href="/maker-kara-consul/"><h4>メーカーからコンサル</h4><p>製造業出身者</p></a>
+        <a class="card-link" href="/koumuin-kara-consul/"><h4>公務員からコンサル</h4><p>官公庁出身者</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">異業種の経験を武器に、コンサルへキャリアチェンジする</h2>
+      <p>利用者の9割が業界未経験。前職経験をコンサル評価軸に翻訳すれば、業界を問わず挑戦できる。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_igyoushu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_igyoushu">
+          <span>異業種からの転職を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
