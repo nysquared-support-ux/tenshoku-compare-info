@@ -1,0 +1,219 @@
+---
+/**
+ * bain-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: ベイン 転職 (sv 推定 500-800・MBB 戦略最高峰)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)';
+const description = 'ベイン・アンド・カンパニー (Bain & Company) への転職について、3 大戦略ファーム (MBB) の一角の特性・年収レンジ・選考プロセス・PE/VC 連携・結果コミット文化を公開情報ベースで整理。元コンサル無料模擬面接サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'ベイン 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'ベイン・アンド・カンパニーとはどんなファームですか?', a: 'Bain & Company は1973年創業の戦略コンサルティングファームで、McKinsey・BCG と並ぶ「3 大戦略ファーム (MBB)」の一角とされています。PE/VC との連携 + 結果コミット型 + 「One Bain」のチーム文化が特徴とされる傾向です。' },
+  { q: 'ベインの年収レンジはどのくらいですか?', a: '一般公開情報によれば、アソシエイトコンサルタント 700-1,000万円、コンサルタント 1,200-1,800万円、マネージャー 1,800-2,500万円、プリンシパル 2,500-3,000万円、パートナー 3,000万円超の事例が報告されています。McKinsey・BCG と並ぶ業界最高水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'ベインの選考難度はどのくらいですか?', a: '一般的に「業界最難度クラス」とされ、ケース面接 + 構造化問題 + パートナー面接の複数ラウンド構成と一般的に言われます。独学では到達しにくく、元コンサルとの集中的な模擬面接 + 添削が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'ベインの特徴的な強み領域は?', a: '一般公開情報によれば、PE (プライベートエクイティ) 支援 + デューデリジェンス + 企業変革 + 結果コミット型コンサルティングに強みがあるとされています。PE ファンドとの長期連携が特徴とされる傾向です。' },
+  { q: 'ベイン卒業後のキャリアパスは?', a: '一般公開情報によれば、ベイン卒業生は PE/VC パートナー・事業会社 CEO/CXO・起業家・グローバル企業役員等の幅広いキャリアを歩む傾向とされています。特に PE 業界への転身が多い傾向とされる傾向です。' },
+  { q: 'ベインと McKinsey/BCG どちらを選ぶべきですか?', a: 'ベイン = PE 連携 + 結果コミット + One Bain チーム文化、McKinsey = 経営層直結 + グローバルネットワーク、BCG = データドリブン + テクノロジー強化という特性の違いがあるとされています。詳細は <a href="/mckinsey-tenshoku/" class="underline">マッキンゼー 転職</a>・<a href="/bcg-tenshoku/" class="underline">BCG 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">ベイン / 3 大戦略ファーム個別ガイド</span>
+      <h1 id="fv-h1"><span class="accent">ベイン</span> 転職 完全ガイド<br />Bain & Company の特性・年収・選考対策・PE 連携</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: ベイン・アンド・カンパニー (Bain & Company) は<strong>1973年創業の戦略コンサルファーム</strong>で、McKinsey・BCG と並ぶ「3 大戦略ファーム (MBB)」の一角とされています。PE/VC 連携 + 結果コミット型 + 「One Bain」のチーム文化が特徴。本記事ではベインへの挑戦準備を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ベインの 4 つの特性 (PE連携 + 結果コミット + One Bain + DD)</li>
+        <li>年収レンジ (700-3,000万円帯) + キャリアラダー</li>
+        <li>業界最難度クラスの選考準備</li>
+        <li>PE 業界への卒業後キャリアパス</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_bain`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_bain">
+          <span>ベイン挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはベイン公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ベインの 4 つの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): Bain & Company 公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特性1</span><h4>PE/VC 連携</h4><p>プライベートエクイティ・ベンチャーキャピタル業界との長期連携が特徴。投資前デューデリジェンス + 投資後の企業価値向上支援案件が多い傾向とされています。PE 業界への転身も視野に入るキャリアとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性2</span><h4>結果コミット型</h4><p>「クライアントの成果にコミットする」文化が特徴。提言だけでなく実行 + 結果まで責任を持つスタイルとされており、成果志向のコンサルティングが評価軸とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性3</span><h4>One Bain のチーム文化</h4><p>世界中のオフィスが一つのチームとして連携する「One Bain」文化。協働 + 知見共有 + サポート体制が強く、コラボレーティブな組織とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">特性4</span><h4>デューデリジェンス (DD) の専門性</h4><p>M&A 案件における事業 DD + 商業 DD の専門性が高い傾向。PE ファンドの投資判断を支援する案件で深い知見を蓄積しているとされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_bain`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_bain">
+          <span>ベインの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ベインの年収レンジ + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ベイン 年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>アソシエイトコンサルタント</td><td>1-3 年</td><td>700-1,000万円</td><td>分析 / 仮説検証 / 資料作成</td></tr>
+            <tr><td>コンサルタント</td><td>2-4 年</td><td>1,200-1,800万円</td><td>サブ案件リード / クライアント窓口</td></tr>
+            <tr><td>マネージャー</td><td>2-4 年</td><td>1,800-2,500万円</td><td>案件統括 / 提案リード</td></tr>
+            <tr><td>プリンシパル</td><td>3-5 年</td><td>2,300-2,900万円</td><td>領域責任 / 大型案件責任</td></tr>
+            <tr><td>パートナー</td><td>無期限</td><td>3,000万円+</td><td>クライアント / 経営 / 戦略立案</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額はベイン公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_bain_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">業界最難度クラスの選考準備</h2>
+      <div class="counter-box">
+        <h4>ステップ1: 書類選考 + 適性検査</h4>
+        <p>履歴書 + 職務経歴書 + 適性検査。ロジカルシンキング + 数値分析力 + 結果志向の素養が問われる傾向とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ2: ケース面接 (複数ラウンド)</h4>
+        <p>抽象度の高い経営課題ケース + PE 投資判断系ケースを 30-45 分で構造化 + 解法展開 + 結論提示。結果コミット型の思考 + コラボ姿勢が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ3: パートナー面接</h4>
+        <p>パートナー職との議論型面接。クライアント主導力 + 戦略思考 + One Bain チーム適合性が総合評価されるとされています。最終突破の鍵とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ4: Why Bain + 経験面接</h4>
+        <p>過去経験 (リーダーシップ / 困難克服 / 影響力行使) + 「なぜベイン」を構造的に語る面接。結果コミット型 + One Bain 文化への共感が評価される傾向です。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_bain`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_bain">
+          <span>ベイン最難度突破準備を元コンサルの無料模擬面接で始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">ベイン卒業後のキャリアパス</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>PE/VC パートナー / 投資家</h4><p>ベインは PE 連携が強いため、卒業生の PE/VC 業界への転身が特に多い傾向とされています。投資判断 + バリュエーション + ポートフォリオ企業支援に活かせるスキルセットです。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>事業会社 CEO / CXO</h4><p>ベイン卒業生は事業会社の CEO / CSO / COO として登用されるケースが多い傾向とされています。結果コミット型の経験が経営層ポジションで活きるとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>起業 (連続起業家)</h4><p>ベイン卒業後の起業事例も多い傾向。結果志向 + 実行力 + 業界知見を活かした起業家としての活躍が見られるとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>PE ポートフォリオ企業の経営陣</h4><p>PE ファンドが投資した企業の経営陣 (CEO/COO/CSO) として送り込まれるパス。ベイン特有の PE 連携を活かしたキャリアとされる傾向です。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>ベイン卒業後のキャリア価値は圧倒的。MyVisionの無料カウンセリングで、自分の市場価値 + 戦略系挑戦の道筋 + PE 業界視点のキャリア設計を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_bain`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_bain">
+          <span>ベイン特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/mckinsey-tenshoku/"><h4>マッキンゼー 転職</h4><p>戦略最高峰 + アルムナイ</p></a>
+        <a class="card-link" href="/bcg-tenshoku/"><h4>BCG 転職</h4><p>データドリブン + テクノロジー</p></a>
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル 転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/ma-consul-tenshoku/"><h4>M&A コンサル 転職</h4><p>FAS 高単価キャリア</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">ベイン戦略最高峰へ、集中準備で挑戦する</h2>
+      <p>業界最難度クラス + PE 連携 + 結果コミット文化。MyVisionの無料カウンセリングで、戦略系挑戦準備プログラム + 自分の市場価値 + PE 業界視点キャリア設計を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_bain`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_bain">
+          <span>ベイン挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
