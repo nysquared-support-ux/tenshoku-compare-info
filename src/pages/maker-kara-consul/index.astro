@@ -1,0 +1,206 @@
+---
+/**
+ * maker-kara-consul LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: メーカーからコンサル (sv 推定 300-500・業界転身)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'メーカーからコンサル 完全ガイド｜製造業出身者が狙えるキャリアパス・年収・選考対策｜MyVision (PR)';
+const description = '製造業 (メーカー) 出身者がコンサル業界へ転職するための完全ガイド。評価される 5 スキル (生産管理 / SCM / 技術知見 / 業界知見 / プロジェクト経験)・狙えるファーム・年収レンジ・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'メーカーからコンサル' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'メーカー出身者はコンサルに転職できますか?', a: 'コンサル特化エージェントの公開情報によれば、製造業 (メーカー) 出身者はコンサル業界の主要採用層の一つとされ、特に生産管理 / SCM / 技術企画 / 事業企画経験者の需要が高いとされる傾向です。利用者の9割が業界未経験とされ、メーカー出身者も多く含まれるとされる傾向です。' },
+  { q: 'メーカーからコンサルへの年収アップは?', a: '一般公開情報によれば、メーカー → コンサル転職時の年収変動は様々で、30代前半メーカー 600-800万円 → コンサル 700-1,100万円帯への移行事例が報告されています。前職年収 + ファーム + ポジションにより変動します。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'メーカー出身者が評価されるスキルは?', a: '一般的に生産管理 / SCM (サプライチェーン) / 技術知見 / 製造業界知見 / 大規模プロジェクト経験の5領域が評価される傾向とされています。本記事内で詳細を整理しています。' },
+  { q: 'メーカーからコンサルで狙えるファームは?', a: '一般公開情報によれば、総合系 (アクセンチュア / アビーム / ベイカレント) ・BIG4・戦略系 (製造業インダストリー部門) が製造業出身者の主要転職先とされています。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+  { q: '技術職 (研究開発・設計) でもコンサル転職できますか?', a: '一般的に技術職出身者は、技術理解 + 製品知見 + R&D 経験を活かせる技術コンサル / DX 案件で評価される傾向とされています。文系職種より転身パスが限定的なケースもありますが、専門性が強みになるとされています。' },
+  { q: 'メーカーからコンサルの選考対策は?', a: '一般的に書類選考 → ケース面接 (製造業課題) → 役員面接の流れで、実務経験のコンサル評価軸への翻訳が重要とされています。元コンサル添削が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">メーカー → コンサル / 業界転身完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">メーカーからコンサル</span> 完全ガイド<br />製造業出身者が狙えるキャリアパス・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 製造業 (メーカー) 出身者は<strong>コンサル業界の主要採用層の一つ</strong>とされ、特に生産管理 / SCM / 技術企画 / 事業企画経験者の需要が高いとされる傾向です。本記事ではメーカー出身者が評価される 5 スキル + 狙えるファーム + 年収レンジ + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>メーカー出身者が評価される 5 スキル</li>
+        <li>職種別 (生産管理 / 技術 / 企画) の転身パス</li>
+        <li>狙えるファーム + 年収レンジ</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_maker`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_maker">
+          <span>メーカー出身者向け無料カウンセリングを予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">メーカー出身者が評価される 5 スキル</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>スキル1: 生産管理 + オペレーション改善</h4>
+        <p>工場の生産計画 / 在庫管理 / 品質管理 / 工程改善経験。製造業向けのオペレーション改革コンサル案件で中核評価軸とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル2: SCM (サプライチェーンマネジメント)</h4>
+        <p>調達 / 物流 / 需給計画 / 在庫最適化の経験。SCM 改革 + サプライチェーン強靭化案件が増加しており、需要が高い領域とされる傾向です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル3: 技術知見 + 製品理解</h4>
+        <p>研究開発 / 設計 / 技術企画の経験。技術コンサル / DX 推進 / 製造業 IoT 案件で技術理解が強みとなる傾向とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル4: 製造業界知見</h4>
+        <p>自動車 / 電機 / 化学 / 素材 / 機械等の業界構造 + 主要プレイヤー + 競争環境の理解。製造業インダストリー部門で活きる基盤スキルとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>スキル5: 大規模プロジェクト経験</h4>
+        <p>新製品開発 / 工場立ち上げ / システム導入等の大規模プロジェクトマネジメント経験。コンサルのプロジェクト推進力に直結する評価軸とされています。</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_maker`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_maker">
+          <span>自分のメーカースキルの市場価値を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">職種別の転身パス (4 タイプ)</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>生産管理 → オペレーション系コンサル</h4><p>生産計画 / 工程改善経験を活かし、総合系コンサルのオペレーション改革部門 + 製造業インダストリー部門へ転身するパス。実務知見が即戦力評価される傾向です。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>事業企画 → 戦略系 / 総合系コンサル</h4><p>事業戦略 / 新製品企画 / 経営企画経験を活かし、戦略系 + 総合系コンサルへ転身するパス。経営視点 + 製造業知見が評価される傾向です。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>技術職 (R&D・設計) → IT/DX 系コンサル</h4><p>研究開発 / 設計 / 技術企画経験を活かし、製造業 DX / IoT / スマートファクトリー案件のコンサルへ転身するパス。詳細は <a href="/dx-consul-tenshoku/" class="underline">DX コンサル 転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>SCM / 調達 → SCM 改革系コンサル</h4><p>調達 / 物流 / 需給計画経験を活かし、SCM 改革 + サプライチェーン強靭化案件のコンサルへ転身するパス。近年需要が高い領域とされる傾向です。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_maker_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">メーカー出身者向け選考対策 4 ポイント</h2>
+      <div class="counter-box">
+        <h4>対策1: 実務経験のコンサル翻訳</h4>
+        <p>「工程改善」「生産計画」等の実務を、コンサル評価軸 (経営インパクト / コスト削減 / リードタイム短縮等の数値成果) に翻訳することが必須とされています。元コンサル添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: ケース面接 (製造業課題)</h4>
+        <p>メーカー出身者向けのケース面接は「製造業 X のコスト削減」「SCM 最適化」等の製造業課題が頻出とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 製造業界知見の体系化</h4>
+        <p>担当業界 (自動車 / 電機 / 化学等) の構造 + 課題 + 主要プレイヤー + 最新トレンド (EV シフト / 脱炭素等) を体系的に整理する必要があります。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 志望動機 (なぜコンサル + 製造業知見の活かし方)</h4>
+        <p>「製造業知見をコンサルで活かしたい」「業界横断の経験を積みたい」等を論理的に語る志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>メーカー出身者のコンサル転職は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_maker`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_maker">
+          <span>メーカー出身者特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル 転職</h4><p>SIer/SE 出身者向け</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">製造業の実務経験を、コンサル業界で活かす</h2>
+      <p>生産管理 / SCM / 技術知見を、製造業インダストリー部門で最大化。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_maker`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_maker">
+          <span>メーカーからコンサルの転身を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
