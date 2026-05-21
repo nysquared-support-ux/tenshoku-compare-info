@@ -1,0 +1,199 @@
+---
+/**
+ * keiei-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 経営コンサル 転職 (sv 推定 600-900・経営系全方位)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '経営コンサル 転職 完全ガイド｜経営コンサルタントの仕事・年収・狙えるファーム・選考対策｜MyVision (PR)';
+const description = '経営コンサルタントへの転職について、経営コンサルの仕事内容・案件タイプ・年収レンジ・狙えるファーム (戦略系 / 総合系 / 独立系)・選考対策を公開情報ベースで全方位整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '経営コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '経営コンサルタントとはどんな仕事ですか?', a: '一般的に企業の経営課題 (戦略 / 組織 / 業務 / 財務等) を分析し、解決策を立案・実行支援する仕事とされています。経営層へのアドバイザリー + プロジェクト推進 + 成果創出が中核業務とされる傾向です。' },
+  { q: '経営コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、アナリスト 500-800万円、コンサルタント 700-1,200万円、マネージャー 1,200-1,800万円、シニアマネージャー以上 1,800-3,000万円帯が中心とされる傾向です。ファーム + ポジションにより変動します。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '経営コンサルと戦略コンサルの違いは?', a: '一般的に「経営コンサル」は経営全般 (戦略 + 組織 + 業務 + 財務) を幅広くカバーする総称、「戦略コンサル」は経営戦略立案に特化したカテゴリとされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル 転職</a> 参照。' },
+  { q: '経営コンサルで狙えるファームは?', a: '一般公開情報によれば、戦略系 (BCG/McK/Bain)・総合系 (アクセンチュア/PwC/ベイカレント)・独立系 (経営共創基盤等) が経営コンサル領域の主要プレイヤーとされています。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+  { q: '未経験から経営コンサルに転職できますか?', a: 'コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で選考突破に成功しているとされる傾向です。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル 転職</a> 参照。' },
+  { q: '経営コンサルの選考対策は?', a: '一般的に書類選考 → 適性検査 → ケース面接 (経営課題) → 役員面接の流れで、論理思考 + 経営視点 + 業界知見の3軸が評価軸とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">経営コンサル / 全方位完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">経営コンサル</span> 転職 完全ガイド<br />経営コンサルタントの仕事・年収・狙えるファーム・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 経営コンサルタントは<strong>企業の経営課題 (戦略 / 組織 / 業務 / 財務) を分析し解決策を立案・実行支援する仕事</strong>とされ、戦略系 / 総合系 / 独立系のファームが主要プレイヤーとされる傾向です。本記事では経営コンサルの仕事内容 + 案件タイプ + 年収レンジ + 狙えるファーム + 選考対策を公開情報ベースで全方位整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>経営コンサルタントの 5 つの案件タイプ</li>
+        <li>年収レンジ (500-3,000万円帯) + キャリアパス</li>
+        <li>狙えるファーム (戦略 / 総合 / 独立系)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_keiei">
+          <span>経営コンサル挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">経営コンサルタントの 5 つの案件タイプ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">タイプ1</span><h4>経営戦略立案</h4><p>全社戦略 / 事業戦略 / 成長戦略 / M&A 戦略等の上流案件。経営層への直接アプローチが中心で、戦略系ファームが得意とする領域とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">タイプ2</span><h4>業務変革 (BPR / DX)</h4><p>業務プロセス改革 + DX 推進 + コスト削減案件。総合系ファームが得意とする領域で、実装まで一気通貫で支援する案件構成とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">タイプ3</span><h4>組織・人事変革</h4><p>組織設計 + 人材戦略 + HR 変革 + 企業文化変革案件。People Advisory 系の専門部門が担当する領域とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">タイプ4</span><h4>財務・M&A 支援</h4><p>M&A 戦略 + 財務 DD + 事業再生 + バリュエーション案件。FAS 系ファームが得意とする領域とされる傾向です。詳細は <a href="/ma-consul-tenshoku/" class="underline">M&A コンサル 転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">タイプ5</span><h4>新規事業・イノベーション</h4><p>新規事業立ち上げ + 事業開発 + イノベーション創出案件。デジタル組織 (BCG X 等) が担当する領域とされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_keiei">
+          <span>適合する案件タイプを MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">経営コンサルで狙えるファーム比較</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="経営コンサル ファーム比較">
+          <thead><tr><th>ファーム種別</th><th>得意領域</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (BCG / McK / Bain)</td><td>経営戦略 / 全社変革</td><td>800-3,500万円</td><td>高学歴 + ケース強者</td></tr>
+            <tr><td>総合系 (アクセンチュア / PwC / ベイカレント)</td><td>業務変革 / DX / 一気通貫</td><td>500-2,500万円</td><td>IT / 業務系 / 大手出身</td></tr>
+            <tr><td>BIG4 系 (Deloitte / EY / KPMG)</td><td>戦略 + 監査連携 + リスク</td><td>700-2,500万円</td><td>会計 / 金融 / 大手出身</td></tr>
+            <tr><td>独立系 (経営共創基盤等)</td><td>ハンズオン経営支援 / 事業再生</td><td>700-2,500万円</td><td>経営経験者 / 専門特化型</td></tr>
+            <tr><td>シンクタンク系 (野村総研 / 三菱総研)</td><td>政策 / 公共 / 調査研究</td><td>500-2,000万円</td><td>官公庁 / 公共出身</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_keiei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">経営コンサル 選考対策 — 4 つのポイント</h2>
+      <div class="counter-box">
+        <h4>対策1: 経営視点の言語化</h4>
+        <p>前職実績を「経営課題への貢献」「経営インパクト」の視点で再構成することが必須とされています。実務担当者視点ではなく経営層視点での翻訳が核心とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: ケース面接 (経営課題)</h4>
+        <p>経営コンサルのケース面接は経営課題 (収益改善 / 事業戦略 / 市場参入等) が中心とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 業界知見 + 課題発見力</h4>
+        <p>前職業界の構造 + 経営課題 + 主要プレイヤーを体系的に整理し、経営者目線で語れる準備が必要とされています。元コンサルの添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 志望動機 (なぜ経営コンサル)</h4>
+        <p>「経営課題解決への興味」「経営層への価値提供志向」「ファーム別の強みとの適合性」を論理的に語る志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>経営コンサル挑戦は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_keiei">
+          <span>経営コンサル特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル 転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル 転職</h4><p>主戦場 5 ファーム</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">経営課題解決のプロフェッショナルへ挑戦する</h2>
+      <p>経営コンサルの 5 案件タイプ + 狙えるファーム理解で、最適な挑戦先を見極める。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_keiei">
+          <span>経営コンサル挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
