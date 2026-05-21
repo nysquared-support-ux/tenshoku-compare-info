@@ -1,0 +1,198 @@
+---
+/**
+ * kpmg-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: KPMG 転職 (sv 推定 400-700・BIG4 個別・リスク+金融特化)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'KPMG 転職 完全ガイド｜KPMG Japan のリスク + 金融特化 + 年収・選考対策｜MyVision (PR)';
+const description = 'KPMG Japan (KPMG コンサルティング / KPMG FAS / あずさ監査法人) への転職について、リスク + 金融サービス + コンプライアンスに強い BIG4 ファームの特性・年収レンジ・採用人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'KPMG 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'KPMG とはどんなファームですか?', a: 'KPMG は世界 4 大会計事務所 BIG4 の一角で、日本では KPMG コンサルティング + KPMG FAS + 有限責任あずさ監査法人 + KPMG 税理士法人 等の複数法人で展開しているとされています。リスク管理 + 金融サービス + コンプライアンスに強みがあるファームとされる傾向です。' },
+  { q: 'KPMG の年収レンジはどのくらいですか?', a: '一般公開情報によれば、シニアコンサルタント 700-1,100万円、マネージャー 1,100-1,500万円、シニアマネージャー 1,500-2,000万円、ディレクター 1,900-2,400万円、パートナー 2,500万円超の事例が報告されています。BIG4 内では Deloitte・PwC・EY と並ぶ水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'KPMG の強み・特徴は?', a: 'リスク管理 + 金融サービス + コンプライアンス + 規制対応に強みがあるとされています。金融機関 (銀行 / 証券 / 保険) 向け案件 + 内部統制 + リスクアドバイザリーが中核領域とされる傾向です。' },
+  { q: 'KPMG で採用される人材像は?', a: '一般公開情報によれば、Consulting = 大手事業会社 + IT 出身、FAS = 銀行 / 証券 / 会計士、Risk Consulting = 金融 / 法務 / リスク管理経験者、Tax = 税理士 + USCPA がメインターゲットとされています。詳細は <a href="/big4-consul-tenshoku/" class="underline">BIG4 転職</a> 参照。' },
+  { q: 'KPMG の選考対策は?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 + リスク視点質問 → 役員面接の流れで、論理思考 + リスク感覚 + 業界知見の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'KPMG と他の BIG4 の違いは?', a: 'KPMG = リスク + 金融 + コンプライアンス / Deloitte = 規模最大 + 全領域 / PwC = 戦略 + 業界変革 / EY = パーパス + サステナビリティ という特性の違いがあるとされています。詳細は <a href="/deloitte-tenshoku/" class="underline">デロイト 転職</a>・<a href="/pwc-tenshoku/" class="underline">PwC 転職</a>・<a href="/ey-tenshoku/" class="underline">EY 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">KPMG / BIG4 個別ガイド</span>
+      <h1 id="fv-h1"><span class="accent">KPMG</span> 転職 完全ガイド<br />KPMG Japan のリスク + 金融特化 + 年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: KPMG は<strong>リスク管理 + 金融サービス + コンプライアンス</strong>に強みを持つ BIG4 ファームとされ、KPMG コンサルティング + KPMG FAS + あずさ監査法人 等で展開しているとされています。本記事では KPMG 各部門の特性 + 年収レンジ + 採用人材像 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>KPMG Japan の構成 + 強み (リスク + 金融)</li>
+        <li>部門別 (Consulting / FAS / Risk / Tax) 特性</li>
+        <li>年収レンジ (700-2,500万円帯) + 採用人材像</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_kpmg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_kpmg">
+          <span>KPMG 挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは KPMG 公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">KPMG Japan の構成 + 4 つの強み</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): KPMG Japan 公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a> / <a href="https://www.fsa.go.jp/" target="_blank" rel="noopener">金融庁 公開資料</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">強み1</span><h4>リスク管理 + リスクアドバイザリー</h4><p>企業のリスク管理 + 内部統制 + ガバナンス強化案件に強みを持つ。Risk Consulting 部門が確立しており、リスク感覚を持つ人材が活躍する環境とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み2</span><h4>金融サービス特化</h4><p>銀行 / 証券 / 保険等の金融機関向け案件に強み。規制対応 + 金融 DX + リスク管理の領域で深い知見を蓄積しているとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み3</span><h4>コンプライアンス + 規制対応</h4><p>金融規制 + 業法対応 + コンプライアンス強化案件が中核。規制環境の変化に対応するアドバイザリーサービスを展開しているとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み4</span><h4>Audit + Tax + Advisory の3軸</h4><p>監査 (あずさ監査法人) + 税務 (KPMG 税理士法人) + アドバイザリー (コンサル + FAS) の3軸で総合展開。会計士 + 税理士のキャリアパスが豊富とされる傾向です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_kpmg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_kpmg">
+          <span>KPMG の最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">KPMG 部門別 年収レンジ + 採用人材像</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="KPMG 部門別 年収・採用層">
+          <thead><tr><th>部門</th><th>主な案件</th><th>年収レンジ目安</th><th>主な採用層</th></tr></thead>
+          <tbody>
+            <tr><td>KPMG コンサルティング</td><td>経営戦略 / 業務変革 / DX</td><td>700-1,800万円</td><td>事業会社 + IT 出身</td></tr>
+            <tr><td>Risk Consulting</td><td>リスク管理 / 内部統制 / ガバナンス</td><td>700-1,900万円</td><td>金融 / 法務 / リスク管理経験者</td></tr>
+            <tr><td>KPMG FAS</td><td>M&A / 財務 DD / 事業再生</td><td>800-2,300万円</td><td>銀行 / 証券 / 会計士 / 財務</td></tr>
+            <tr><td>金融サービス部門</td><td>金融 DX / 規制対応 / 金融機関変革</td><td>700-2,000万円</td><td>銀行 / 証券 / 保険出身</td></tr>
+            <tr><td>あずさ監査法人</td><td>大手企業監査 / IT 監査</td><td>500-1,500万円</td><td>公認会計士</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_kpmg_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">KPMG 選考対策 — 4 つのポイント</h2>
+      <div class="counter-box">
+        <h4>対策1: リスク感覚 + 金融知見の言語化</h4>
+        <p>KPMG はリスク + 金融特化のため、前職でのリスク管理経験 + 金融知見をコンサル評価軸に翻訳することが核心とされています。元コンサル添削で品質が大きく変わるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: ケース面接 (リスク視点 + 実務寄り)</h4>
+        <p>KPMG のケース面接はリスク管理 + 規制対応 + 金融機関変革等のシナリオが頻出とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 業界専門性 (特に金融)</h4>
+        <p>金融機関 (銀行 / 証券 / 保険) の専門知見 + 規制環境の理解が KPMG の核心評価ポイントとされています。詳細は <a href="/finance-kara-consul/" class="underline">金融からコンサル</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 志望動機 (なぜ KPMG + リスク領域)</h4>
+        <p>「リスク管理 + 金融サービス + コンプライアンス」等の KPMG 特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>KPMG 採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合部門 + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_kpmg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_kpmg">
+          <span>KPMG 特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>4 ファーム比較</p></a>
+        <a class="card-link" href="/deloitte-tenshoku/"><h4>デロイト 転職</h4><p>BIG4 最大規模</p></a>
+        <a class="card-link" href="/ey-tenshoku/"><h4>EY 転職</h4><p>パーパス + サステナビリティ</p></a>
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">KPMG リスク + 金融特化のキャリアへ挑戦する</h2>
+      <p>KPMG Japan + 部門別の特性把握で、最適な挑戦先を見極める。MyVisionの無料カウンセリングで、適合部門 + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_kpmg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_kpmg">
+          <span>KPMG 挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
