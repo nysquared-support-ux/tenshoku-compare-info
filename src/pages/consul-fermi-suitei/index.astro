@@ -1,0 +1,198 @@
+---
+/**
+ * consul-fermi-suitei LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル フェルミ推定 (sv 推定 300-500・選考対策即実行型)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル フェルミ推定 完全ガイド｜解法 4 ステップ + 頻出問題 + 練習法｜MyVision (PR)';
+const description = 'コンサル選考のケース面接で最頻出のフェルミ推定について、解法 4 ステップ (前提確認・要素分解・数値設定・検算) + 頻出問題タイプ + 効率的な練習法を公開情報ベースで整理。元コンサルとの無料模擬面接サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル フェルミ推定' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'フェルミ推定とは何ですか?', a: '実際に調査することが難しい数量 (例: 日本のラーメン店の数、ある市場の規模) を、論理的な推論と概算で短時間に見積もる手法とされています。コンサル選考のケース面接で最頻出の問題タイプの一つとされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'フェルミ推定はなぜコンサル選考で出題されるのですか?', a: '一般的に、限られた情報から論理的に構造化し、仮説を立てて概算する能力が、コンサルタントの実務 (市場規模算出・需要予測等) に直結するためとされています。「正解」より「思考プロセス」が評価される傾向です。' },
+  { q: 'フェルミ推定の解法ステップは?', a: '一般的に (1) 前提確認 (2) 要素分解 (MECE) (3) 数値設定 (4) 検算・現実性チェック の4ステップで解くとされています。本記事内で詳細を整理しています。' },
+  { q: 'フェルミ推定の練習はどうすればよいですか?', a: '参考書 + 問題集での独学 + 元コンサルとの模擬面接の組み合わせが一般的に推奨されます。独学だけでは「面接官との対話」「仮説修正」の練習ができないため、模擬面接が効果的とされる傾向です。' },
+  { q: '計算が苦手でもフェルミ推定は突破できますか?', a: '一般的に、フェルミ推定で重視されるのは複雑な計算ではなく「論理的な構造化」と「概算のセンス」とされています。四則演算 + 概数処理ができれば、論理思考の訓練で突破可能とされる傾向です。' },
+  { q: '未経験でもフェルミ推定対策はできますか?', a: 'コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で選考突破に成功しているとされ、フェルミ推定も元コンサル伴走の訓練で習得可能とされる傾向です。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル 転職</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 / フェルミ推定完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">フェルミ推定</span> 完全ガイド<br />解法 4 ステップ + 頻出問題 + 練習法</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: フェルミ推定は<strong>コンサル選考のケース面接で最頻出の問題タイプ</strong>とされ、論理的な構造化 + 仮説 + 概算のセンスが評価されます。本記事では解法 4 ステップ + 頻出問題タイプ + 効率的な練習法を公開情報ベースで整理し、元コンサルとの無料模擬面接を活用した習得法を解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>フェルミ推定の解法 4 ステップ</li>
+        <li>頻出問題タイプ (市場規模 / 個数 / 売上等)</li>
+        <li>独学 + 模擬面接の効率的練習法</li>
+        <li>元コンサル無料模擬面接の活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_fermi">
+          <span>フェルミ推定対策を元コンサルの無料模擬面接で始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">フェルミ推定の解法 4 ステップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>ステップ1: 前提確認</h4>
+        <p>「何を求めるのか」を明確化し、対象範囲 + 定義 + 時間軸を面接官と確認します。例:「日本のカフェの市場規模」なら、カフェの定義 (チェーン店のみか個人店含むか)・地域 (全国か)・時間軸 (年間売上か) を確認します。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ2: 要素分解 (MECE)</h4>
+        <p>求める数量を、もれなく重複なく (MECE) 要素分解します。例: 市場規模 = 店舗数 × 1 店舗あたり客数 × 客単価 × 営業日数。分解の論理性が評価軸の核心とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ3: 数値設定</h4>
+        <p>各要素に妥当な数値を、根拠を示しながら設定します。「日本の人口 1.2 億人」「カフェ利用率 X%」等、自分の知識 + 常識的推論で数値を置きます。根拠の説明が重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ4: 検算・現実性チェック</h4>
+        <p>算出した数値を、別の角度から検証し現実性を確認します。「この市場規模は GDP 比でどのくらいか」等のサニティチェックで、桁違いのミスを防ぎます。最後の振り返りが評価につながる傾向です。</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_fermi">
+          <span>4 ステップを元コンサルの無料模擬面接で実践練習する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">フェルミ推定の頻出問題タイプ</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="フェルミ推定 頻出問題タイプ">
+          <thead><tr><th>タイプ</th><th>問題例</th><th>分解アプローチ</th></tr></thead>
+          <tbody>
+            <tr><td>市場規模算出</td><td>「日本のカフェ市場の規模は?」</td><td>店舗数 × 客数 × 客単価 × 営業日数</td></tr>
+            <tr><td>個数推定</td><td>「日本にある電柱の数は?」</td><td>国土面積 × 設置密度 (地域別)</td></tr>
+            <tr><td>需要推定</td><td>「ある駅の1日の乗降客数は?」</td><td>沿線人口 × 利用率 × 時間帯分布</td></tr>
+            <tr><td>売上推定</td><td>「あるコンビニ1店舗の日商は?」</td><td>来店客数 × 客単価 × 時間帯係数</td></tr>
+            <tr><td>保有数推定</td><td>「日本のピアノの台数は?」</td><td>世帯数 × 保有率 + 施設保有数</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_fermi_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">効率的なフェルミ推定の練習法</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">練習1</span><h4>参考書 + 問題集での独学</h4><p>市販のフェルミ推定・ケース面接対策本で、解法パターン + 基礎数値 (人口 / 世帯数 / GDP 等) を学習します。独学で一定レベルまで到達可能とされています。</p></article>
+        <article class="branch"><span class="tag">練習2</span><h4>基礎数値の暗記</h4><p>日本の人口 (約1.2億)・世帯数 (約5,400万)・GDP・労働人口等の基礎数値を暗記しておくと、本番でスムーズに数値設定できるとされる傾向です。</p></article>
+        <article class="branch"><span class="tag">練習3</span><h4>声に出して解く</h4><p>フェルミ推定は「思考プロセスを面接官に説明する」形式のため、独学でも声に出して解く練習が効果的とされています。論理の言語化能力が向上します。</p></article>
+        <article class="branch"><span class="tag">練習4</span><h4>元コンサルとの模擬面接</h4><p>独学では「面接官との対話」「仮説修正」「ツッコミ対応」の練習ができないため、元コンサルとの模擬面接が一般的に推奨されます。本番想定の訓練です。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>フェルミ推定は独学 + 元コンサル模擬面接の組み合わせが最効率。MyVisionの無料カウンセリングから模擬面接サポートを会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_fermi">
+          <span>元コンサル無料模擬面接を予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>頻出 5 タイプ + 4 週間プラン</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+        <a class="card-link" href="/consul-shibodouki/"><h4>志望動機ガイド</h4><p>落ちる 7 パターン × 通る論理</p></a>
+        <a class="card-link" href="/consul-shokumukeirekisho/"><h4>職務経歴書ガイド</h4><p>5 翻訳ポイント + 無料添削</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">フェルミ推定を、元コンサルの伴走で確実に習得する</h2>
+      <p>解法 4 ステップ + 独学 + 元コンサル模擬面接で、ケース面接最頻出問題を突破。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_fermi">
+          <span>元コンサル無料模擬面接を始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
