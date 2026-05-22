@@ -1,0 +1,246 @@
+---
+/**
+ * se-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: SE コンサル転職 (sv 推定 700-1,300・行動層)
+ * 検証②: 旧手法 (手動6ステップ) / ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'SEからコンサル転職ガイド｜システムエンジニアの強みとIT/DXコンサルへの道｜MyVision (PR)';
+const description = 'SE (システムエンジニア) からコンサル転職を目指す人向けに、SEの強み (技術理解・プロジェクト経験・要件定義力) の活かし方、SEが狙いやすいIT/DXコンサル、選考対策・年収傾向を整理。SE経験をコンサル評価軸に翻訳する方法と無料カウンセリング活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'SEからコンサル転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'SEからコンサル転職は可能ですか?', a: 'SE (システムエンジニア) からコンサル、特にIT/DX系コンサルへの転職は一般的なキャリアパスの一つとされています。技術理解・プロジェクト経験・要件定義力といったSEの強みが、IT/DXコンサルの評価軸と親和性が高いとされています。' },
+  { q: 'SEの強みはコンサルでどう評価されますか?', a: '技術への深い理解、システム開発プロジェクトの経験、要件定義・上流工程の経験、顧客折衝の経験などが、IT/DXコンサルで評価されるSEの強みとされています。これらをコンサル評価軸に翻訳して示すことが選考の鍵とされています。' },
+  { q: 'SEはどのコンサルファームを狙いやすいですか?', a: '一般的にアクセンチュア・IBM・アビーム等のIT/DX系コンサル、外資系総合系のテクノロジー部門が、SE出身者が活躍しやすいとされる領域です。技術理解が直接活きる傾向にあるとされています。詳細は <a href="/it-consul-tenshoku/" class="underline">ITコンサル転職ガイド</a> 参照。' },
+  { q: 'SEからコンサルに転職すると年収は上がりますか?', a: '一般公開情報によれば、IT/DXコンサルの年収はSEの一般的な水準より高めの傾向にあるとされ、入社時で600-1,100万円帯が一つの目安とされています。前職年収・年齢・ポジションにより変動します。正式金額は各ファーム公式情報・面談でご確認ください。' },
+  { q: 'SEがコンサル転職で苦労しやすい点は何ですか?', a: '技術視点からビジネス視点への切り替え、ケース面接での論理的思考、技術知識を非技術者に説明する力などが、SE出身者が意識して対策すべき点とされています。ケース面接対策は技術職でも必須とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。' },
+  { q: 'SEからコンサル転職に向けて何を準備すべきですか?', a: 'SEの強み (技術理解・プロジェクト経験) の言語化、実績の数値化、技術視点からビジネス視点への意識転換、ケース面接対策が主な準備とされています。コンサル特化エージェントの無料サポートで、SE経験をコンサル評価軸に翻訳する作業が有効とされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / SE出身者向けガイド</span>
+      <h1 id="fv-h1">SEからの<span class="accent">コンサル転職</span>ガイド<br />システムエンジニアの強みとIT/DXコンサルへの道</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: SEからコンサル、特に<strong>IT/DX系コンサルへの転職は一般的なキャリアパスの一つ</strong>とされ、技術理解・プロジェクト経験・要件定義力といったSEの強みはIT/DXコンサルの評価軸と親和性が高いとされています。本記事ではSEの強みの活かし方・狙えるファーム・選考対策を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>SEの強みがIT/DXコンサルでどう評価されるか</li>
+        <li>SE出身者が狙いやすいファームの傾向</li>
+        <li>SE特有の選考対策 (ビジネス視点への転換・ケース面接)</li>
+        <li>無料カウンセリングでSEの市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_seconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_seconsul">
+          <span>SEの市場価値を無料カウンセリングで確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">SEの強みがIT/DXコンサルで評価される理由</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>DX需要の拡大により、技術とビジネスの両方を理解できる人材の価値が高まっているとされています。下表はSEの強みとIT/DXコンサル評価軸の対応の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="SEの強みとコンサル評価軸">
+          <thead><tr><th>SEの強み</th><th>コンサル評価軸への翻訳</th><th>活きる場面</th></tr></thead>
+          <tbody>
+            <tr><td>技術への深い理解</td><td>技術的実現性の判断力</td><td>DX構想・システム企画</td></tr>
+            <tr><td>システム開発プロジェクト経験</td><td>プロジェクトマネジメント力</td><td>大規模IT案件</td></tr>
+            <tr><td>要件定義・上流工程の経験</td><td>課題定義・要求整理力</td><td>業務改革・要件定義案件</td></tr>
+            <tr><td>顧客折衝の経験</td><td>クライアントコミュニケーション</td><td>提案・合意形成</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_seconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_seconsul">
+          <span>SEの強みの活かし方を MyVision 公式の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">SE出身者が狙いやすいファームの傾向</h2>
+      <p class="section-lede">SE出身者のコンサル転職では、技術理解が活きるファーム種別を理解することが有効とされています。下表は公開情報に基づく一般的傾向です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">傾向1</span><h4>IT/DX系コンサル</h4><p>アクセンチュア・IBM・アビーム等。SEの技術理解とプロジェクト経験が最も直接的に活きるとされる代表的な領域です。DX需要拡大で採用も活発とされています。</p></article>
+        <article class="branch"><span class="tag">傾向2</span><h4>外資系総合系のテクノロジー部門</h4><p>外資系総合系コンサルのIT・テクノロジー部門も、SE出身者が活躍しやすいとされる領域です。グローバル案件に関わる機会もあるとされています。</p></article>
+        <article class="branch"><span class="tag">傾向3</span><h4>業務改革・BPR系</h4><p>業務プロセス改革を扱う領域では、システムと業務の両方を理解できるSE出身者の視点が活きるとされています。</p></article>
+        <article class="branch"><span class="tag">傾向4</span><h4>総合系コンサル</h4><p>総合系コンサルでも、IT/デジタル案件の比重が高まっており、SE出身者の活躍機会があるとされています。詳細は <a href="/consul-firm-hikaku/" class="underline">ファーム比較ガイド</a> 参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_seconsul_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">SE出身者の選考対策5ステップ</h2>
+      <p class="section-lede">SE出身者の選考対策の中核は、<strong>技術視点からビジネス視点への切り替えとSEの強みの翻訳</strong>とされています。主な対策を整理します。</p>
+      <div class="counter-box">
+        <h4>対策1: 技術視点からビジネス視点への転換</h4>
+        <p>「どう作るか」だけでなく「なぜ作るか・どんなビジネス価値があるか」を語れるよう、視点を切り替える準備が重要とされています。SE出身者が最も意識すべき点とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: プロジェクト実績の数値化</h4>
+        <p>「予算 XX 億・関係者 XX 名・改善率 XX%」のように、システム開発プロジェクトの実績をビジネス成果の視点で数値化することが有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: ケース面接対策</h4>
+        <p>技術職でもケース面接対策は必須とされています。論理的思考・構造化の力が問われるため、十分な準備が突破の鍵とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 技術を非技術者に説明する力</h4>
+        <p>技術的な内容を、経営層やビジネス側の関係者にわかりやすく説明する力が、コンサルで重視されるとされています。この力を示せる準備が有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 志望動機の整理</h4>
+        <p>「なぜSEからコンサルか」「技術力をどう活かすか」を、過去の実績 + 将来構想で論理的に接続する作業が、選考突破の重要要素とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_seconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_seconsul">
+          <span>SEの選考対策を元コンサルの無料サポートで磨く</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">SE出身者向けファームの年収・採用傾向</h2>
+      <p class="section-lede">SE出身者の主な転職先ファームを、年収レンジ・採用傾向・特徴で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的傾向です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="SE出身者向けコンサルファーム比較">
+          <thead><tr><th>ファーム種別</th><th>SE採用傾向</th><th>年収レンジ目安</th><th>主な案件</th></tr></thead>
+          <tbody>
+            <tr><td>IT/DX系 (アクセンチュア・IBM・アビーム)</td><td>&#11088; 積極採用</td><td>650-1,200万円</td><td>DX構想・システム企画・大規模IT</td></tr>
+            <tr><td>外資系総合系テクノロジー部門</td><td>積極採用</td><td>700-1,300万円</td><td>グローバルIT案件</td></tr>
+            <tr><td>総合系コンサル (デジタル案件)</td><td>採用増傾向</td><td>650-1,200万円</td><td>業務改革・デジタル変革</td></tr>
+            <tr><td>業務改革・BPR系</td><td>採用あり</td><td>650-1,150万円</td><td>業務プロセス改革</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">SE出身者向けの無料サポート活用法</h2>
+      <p>SE出身者のコンサル転職は、技術力の翻訳とビジネス視点への転換がポイントとされています。コンサル特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>SEの強み診断</h4><p>技術理解・プロジェクト経験・要件定義力など、SEの強みをコンサル評価軸でどう活かせるか診断するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>職務経歴書のビジネス翻訳</h4><p>システム開発の実績を、ビジネス成果の視点で職務経歴書に落とし込むサポートです。元コンサルの添削で品質が変わるとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>ケース面接対策</h4><p>技術職が苦手意識を持ちやすいケース面接を、元コンサルが模擬面接形式で対策するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>IT/DXファーム選びの相談</h4><p>SEの強みが活きやすいIT/DX系ファームを、一緒に選定するサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>SEのコンサル転職は技術力の翻訳が要。MyVisionの無料カウンセリングで、SEの強み診断 + 狙えるIT/DXファーム + 選考対策の整理を会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_seconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_seconsul">
+          <span>SE向けの無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>ITコンサル転職ガイド</h4><p>ITエンジニアからコンサル + 評価される5領域</p></a>
+        <a class="card-link" href="/dx-consul-tenshoku/"><h4>DXコンサル転職ガイド</h4><p>DX案件の特徴と求められるスキル</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験からコンサルへ・選考突破の5つのカギ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">SEの技術力を武器に、IT/DXコンサルという選択肢を検討する</h2>
+      <p>SEの技術理解とプロジェクト経験はIT/DXコンサルで強みになります。MyVisionの無料カウンセリングで、SEの強み診断 + 狙えるファーム + 選考対策を30秒の会員登録で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_seconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_seconsul">
+          <span>SEの市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

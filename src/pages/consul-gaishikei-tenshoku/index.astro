@@ -1,0 +1,246 @@
+---
+/**
+ * consul-gaishikei-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 外資系コンサル 転職 (sv 推定 1,000-1,800・比較検討層)
+ * 検証①: /lp-factory 改善手法 / ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)';
+const description = '外資系コンサルへの転職を目指す人向けに、戦略系 (MBB)・外資系総合 (BIG4等)・外資系IT系の特徴と違い、選考プロセス・年収レンジ・英語要件を整理。外資系コンサル特有の選考対策と無料カウンセリング活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '外資系コンサル転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '外資系コンサルとは具体的にどのファームですか?', a: '一般的に外資系コンサルは、戦略系 (McKinsey・BCG・Bain など)、外資系総合・会計系 (Deloitte・PwC・EY・KPMG・アクセンチュアなど)、外資系IT/DX系 (IBM など) に大別されるとされています。本記事はこれらの外資系ファームへの転職を中心に整理します。' },
+  { q: '外資系コンサルの転職は日系より難しいですか?', a: '外資系コンサル、特に戦略系は選考難易度が高いとされていますが、外資系総合系は門戸が比較的広いとされています。難易度はファーム種別により幅があり、一律ではないとされています。詳細は <a href="/consul-tenshoku-nandido/" class="underline">コンサル転職 難易度ガイド</a> をご参照ください。' },
+  { q: '外資系コンサルの年収はどのくらいですか?', a: '一般公開情報によれば、外資系コンサルの年収はファーム・役職により幅広く、入社時で600-1,500万円帯、戦略系やマネージャー以上ではさらに高い水準とされる例もあります。成果主義の傾向が強いとされています。正式金額は各ファーム公式情報・面談でご確認ください。' },
+  { q: '外資系コンサル転職に英語力は必須ですか?', a: '外資系コンサルでも日本国内案件中心のポジションでは英語の必須度が下がるケースがある一方、グローバル案件・海外オフィス連携のあるポジションでは英語力が重視される傾向にあるとされています。志望ファーム・ポジションにより要件が異なるため、面談での確認が推奨されます。詳細は <a href="/consul-eigo/" class="underline">コンサル英語ガイド</a> 参照。' },
+  { q: '外資系コンサルの選考で重視されるものは何ですか?', a: 'ケース面接での論理的思考・構造化能力、英語面接 (グローバル案件の場合)、これまでの実績の数値化、カルチャーフィットなどが重視される傾向にあるとされています。外資系特有の選考対策が有効とされています。' },
+  { q: '日系コンサルから外資系コンサルへの転職は可能ですか?', a: '日系コンサルでの経験は外資系コンサルへの転職で評価される傾向にあるとされています。コンサル経験者の転職は未経験者より選考がスムーズになりやすいとされ、ファーム間の文化の違いの理解が転職成功のポイントとされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 外資系コンサル向けガイド</span>
+      <h1 id="fv-h1"><span class="accent">外資系コンサル</span>転職ガイド<br />主要ファームの特徴・選考・年収・英語要件</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 外資系コンサルは<strong>戦略系 (MBB)・外資系総合系・外資系IT系で選考難易度・年収・英語要件が大きく異なる</strong>とされ、自分に合うファーム種別の見極めが転職成功の鍵とされています。本記事では外資系コンサルの全体像と選考対策を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>外資系コンサル 3 種別の特徴と違い</li>
+        <li>ファーム別の選考難易度・年収レンジの傾向</li>
+        <li>英語要件の実態とポジションによる差</li>
+        <li>無料カウンセリングで外資系の市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_gaishikei">
+          <span>外資系コンサルの市場価値を無料カウンセリングで確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">外資系コンサル 3 種別の特徴マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・各ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>外資系コンサルは大きく3種別に分かれ、それぞれ選考難易度・案件特性・英語要件が異なるとされています。下表は一般的な傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="外資系コンサル3種別の特徴">
+          <thead><tr><th>種別</th><th>主なファーム</th><th>選考難易度傾向</th><th>英語要件傾向</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (MBB)</td><td>McKinsey・BCG・Bain</td><td>&#11088; 最難関</td><td>高 (グローバル案件多)</td></tr>
+            <tr><td>外資系総合・会計系</td><td>Deloitte・PwC・EY・KPMG・アクセンチュア</td><td>中-高 (門戸広め)</td><td>中 (案件次第)</td></tr>
+            <tr><td>外資系IT/DX系</td><td>IBM ほか</td><td>中-高</td><td>中 (案件次第)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_gaishikei">
+          <span>自分に合う外資系ファームを MyVision 公式の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">外資系コンサルへの 4 つの転職パターン</h2>
+      <p class="section-lede">外資系コンサルへの主な転職パターンを4タイプで整理します。前職経験 + 志向で適合する種別が変わるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パターン1</span><h4>事業会社 → 外資系総合系</h4><p>事業会社の経営企画・IT・専門部門出身者が、外資系総合系コンサルへ転身するパターン。プロジェクト経験 + 専門性が評価される傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">パターン2</span><h4>日系コンサル → 外資系コンサル</h4><p>日系ファームでコンサル経験を積んだ人が、外資系へ転身するパターン。コンサル経験が評価されやすく、文化の違いの理解が成功の鍵とされています。</p></article>
+        <article class="branch"><span class="tag">パターン3</span><h4>金融・専門職 → 外資系戦略/FAS系</h4><p>投資銀行・会計士・金融専門職が、外資系戦略系・FAS系へ転身するパターン。財務・分析の専門性が活きる傾向にあるとされています。詳細は <a href="/finance-kara-consul/" class="underline">金融×コンサル</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パターン4</span><h4>IT専門人材 → 外資系IT/DX系</h4><p>SIer・IT専門職が外資系IT/DX系コンサルへ転身するパターン。技術理解 + プロジェクト経験が強みとなる傾向にあるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_gaishikei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">外資系コンサルの選考対策5ステップ</h2>
+      <p class="section-lede">外資系コンサルの選考対策の中核は、<strong>ケース面接と (案件によっては) 英語面接への備え</strong>とされています。主な対策を整理します。</p>
+      <div class="counter-box">
+        <h4>対策1: ケース面接の徹底対策</h4>
+        <p>外資系コンサル、特に戦略系はケース面接の要求水準が高いとされています。頻出パターンの理解と反復練習が突破の鍵とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 英語要件の事前確認と備え</h4>
+        <p>志望ファーム・ポジションの英語要件を事前に確認し、英語面接が想定される場合は準備を進めることが重要とされています。要件はポジションにより差があるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 実績の数値化と論理的提示</h4>
+        <p>これまでの実績を「規模・成果・改善率」で数値化し、論理的に提示することが、外資系の評価軸とのマッチングに有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: カルチャーフィットの理解</h4>
+        <p>外資系コンサルは成果主義・自律性を重視する文化が強いとされています。志望ファームの文化を理解し、自分との適合性を語れる準備が有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 志望動機とファーム選定の論理</h4>
+        <p>「なぜ外資系コンサルか」「なぜこのファームか」を、過去の実績 + ファーム特性で論理的に接続する作業が、選考突破の重要要素とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_gaishikei">
+          <span>外資系コンサルの選考対策を元コンサルの無料サポートで磨く</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">外資系コンサルの年収・特徴傾向</h2>
+      <p class="section-lede">外資系コンサルの主なファーム種別を、年収レンジ・特徴で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的傾向です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="外資系コンサル種別別の傾向">
+          <thead><tr><th>種別</th><th>年収レンジ目安</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (MBB)</td><td>1,000-2,000万円超</td><td>最難関・成果主義・グローバル案件</td></tr>
+            <tr><td>外資系総合系 (アクセンチュア等)</td><td>700-1,500万円</td><td>幅広い案件・門戸が比較的広い</td></tr>
+            <tr><td>外資系会計系 (BIG4)</td><td>750-1,500万円</td><td>会計・財務・専門領域に強み</td></tr>
+            <tr><td>外資系IT/DX系</td><td>700-1,400万円</td><td>IT・DX案件・技術理解を重視</td></tr>
+            <tr><td>外資系FAS系</td><td>800-1,600万円</td><td>M&A・財務アドバイザリー</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">外資系コンサル転職向けの無料サポート活用法</h2>
+      <p>外資系コンサルへの転職は、ファーム種別の見極めと外資系特有の選考対策がポイントとされています。コンサル特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>ファーム種別の適合診断</h4><p>戦略系・総合系・IT系のどの外資系ファームが自分に合うか、経験・志向・英語力の3軸で診断するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>ケース面接・英語面接対策</h4><p>外資系特有のケース面接、案件によっては英語面接の対策を、元コンサルが伴走形式で行うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>カルチャーフィットの整理</h4><p>志望する外資系ファームの文化を理解し、自分との適合性を整理するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>外資系コンサルの非公開求人を紹介してもらえるサポートです。公開求人より好条件のケースもあるとされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>外資系コンサル転職はファーム種別の見極めが要。MyVisionの無料カウンセリングで、外資系ファームの適合診断 + 選考対策 + 英語要件の整理を会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_gaishikei">
+          <span>外資系コンサル向けの無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職ガイド</h4><p>戦略系ファームの特徴と選考対策</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略系・総合系・IT系・FAS系・公共系の特徴</p></a>
+        <a class="card-link" href="/consul-eigo/"><h4>コンサル英語ガイド</h4><p>コンサル転職の英語要件と備え</p></a>
+        <a class="card-link" href="/consul-tenshoku-nandido/"><h4>コンサル転職 難易度ガイド</h4><p>「難しい」とされる理由と現実的な突破法</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">外資系コンサルという選択肢を、ファーム種別から現実的に検討する</h2>
+      <p>外資系コンサルは種別で選考も年収も大きく異なります。MyVisionの無料カウンセリングで、外資系ファームの適合診断 + 選考対策 + 英語要件を30秒の会員登録で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_gaishikei">
+          <span>外資系コンサルの市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

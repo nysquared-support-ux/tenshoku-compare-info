@@ -1,0 +1,246 @@
+---
+/**
+ * consul-tenshoku-bunkei LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル転職 未経験 文系 (sv 推定 600-1,100・情報収集層)
+ * 検証①: /lp-factory 改善手法 / ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '文系未経験からのコンサル転職ガイド｜文系の強みと狙えるファーム・選考対策｜MyVision (PR)';
+const description = '文系出身・未経験からコンサル転職を目指す人向けに、文系の強み (構造化・コミュニケーション・文章力) の活かし方、文系が狙いやすいファーム、選考対策を整理。「理系でないと難しい」という不安への現実的な視点と無料カウンセリング活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '文系未経験からのコンサル転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '文系出身でもコンサル転職は可能ですか?', a: 'コンサル特化エージェントの公開情報によれば、文系出身のコンサル転職者は多数存在するとされています。戦略系・総合系・人事/組織系コンサルなど、文系出身者が活躍しやすいとされる領域もあり、「文系だから不可能」という前提は一般的ではないとされています。詳細は無料カウンセリングでの確認が推奨されます。' },
+  { q: '文系の強みはコンサル転職でどう評価されますか?', a: '論理的な文章構成力・コミュニケーション力・前職業界の知見・定性的な課題整理力などが、コンサルの評価軸に翻訳できる文系の強みとされています。これらを職務経歴書とケース面接でどう示すかが選考の鍵とされています。' },
+  { q: '文系未経験だとどのファームが狙いやすいですか?', a: '一般的に総合系・人事/組織系・公共系コンサルは文系出身者が比較的活躍しやすいとされ、戦略系も文系出身者の採用例があるとされています。IT/DX系は技術理解が問われる傾向にありますが、ビジネス側の役割もあるとされています。詳細は <a href="/consul-firm-hikaku/" class="underline">ファーム比較ガイド</a> 参照。' },
+  { q: '文系はケース面接で不利ですか?', a: 'ケース面接は理系・文系を問わず論理的思考と構造化が問われるため、文系が一律に不利とは限らないとされています。十分な対策と反復練習が、出身学部に関わらず突破の鍵とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。' },
+  { q: '文系未経験のコンサル転職で年収はどうなりますか?', a: '一般公開情報によれば、未経験入社時の年収は前職年収・年齢・ファームにより変動し、600-1,000万円帯が一つの目安とされています。出身学部による差というより、経験・実績・ポジションで決まる傾向にあるとされています。正式金額は各ファーム公式情報・面談でご確認ください。' },
+  { q: '文系未経験からのコンサル転職に向けて何を準備すべきですか?', a: '文系の強み (文章力・コミュニケーション・業界知見) の言語化、実績の数値化、ケース面接対策、志望動機の整理が主な準備とされています。コンサル特化エージェントの無料サポートで、文系の強みをコンサル評価軸に翻訳する作業が有効とされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 文系未経験向けガイド</span>
+      <h1 id="fv-h1">文系未経験からの<span class="accent">コンサル転職</span><br />文系の強みと狙えるファーム・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 「コンサルは理系でないと難しい」という前提は一般的ではなく、<strong>文系出身のコンサル転職者は多数存在し、文系の強み (論理的文章力・コミュニケーション・業界知見) はコンサル評価軸に翻訳できる</strong>とされています。本記事では文系未経験者の強みの活かし方・狙えるファーム・選考対策を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>文系の強みがコンサルでどう評価されるか</li>
+        <li>文系出身者が狙いやすいファームの傾向</li>
+        <li>文系未経験者の選考対策 (強みの翻訳・ケース面接)</li>
+        <li>無料カウンセリングで文系の市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_bunkei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_bunkei">
+          <span>文系の市場価値を無料カウンセリングで確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">文系の強みがコンサルで評価される理由</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサルティングの仕事は、課題の構造化・仮説立案・関係者への説明など、文系的なスキルが活きる場面が多いとされています。下表は文系の強みとコンサル評価軸の対応の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="文系の強みとコンサル評価軸">
+          <thead><tr><th>文系の強み</th><th>コンサル評価軸への翻訳</th><th>活きる場面</th></tr></thead>
+          <tbody>
+            <tr><td>論理的な文章構成力</td><td>資料作成・構造化能力</td><td>提案資料・報告書</td></tr>
+            <tr><td>コミュニケーション力</td><td>クライアント折衝・ファシリテーション</td><td>面談・ワークショップ</td></tr>
+            <tr><td>前職業界の知見</td><td>業界理解・課題発見力</td><td>業界特化案件</td></tr>
+            <tr><td>定性的な課題整理力</td><td>仮説立案・問題定義</td><td>戦略・組織案件</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_bunkei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_bunkei">
+          <span>文系の強みの活かし方を MyVision 公式の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">文系出身者が狙いやすいファームの傾向</h2>
+      <p class="section-lede">文系出身者のコンサル転職では、文系の強みが活きやすいファーム種別を理解することが有効とされています。下表は公開情報に基づく一般的傾向です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">傾向1</span><h4>総合系コンサル</h4><p>幅広い案件を扱い、文系出身者が活躍しやすいとされる代表的な領域。ビジネス課題の構造化・プロジェクト推進で文系の強みが活きるとされています。</p></article>
+        <article class="branch"><span class="tag">傾向2</span><h4>人事・組織系コンサル</h4><p>組織・人材の課題を扱うため、コミュニケーション力・定性的な課題整理力が活きやすいとされる領域です。文系出身者が比較的多いとされています。</p></article>
+        <article class="branch"><span class="tag">傾向3</span><h4>公共系コンサル</h4><p>官公庁・自治体向けの政策・制度案件を扱い、文章力・調査力・業界知見が活きやすいとされる領域です。</p></article>
+        <article class="branch"><span class="tag">傾向4</span><h4>戦略系コンサル</h4><p>論理的思考が最も問われる領域ですが、文系出身者の採用例もあり、ケース面接対策次第で対象となるとされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル転職ガイド</a> 参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_bunkei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">文系未経験者の選考対策5ステップ</h2>
+      <p class="section-lede">文系未経験者の選考対策の中核は、<strong>文系の強みをコンサル評価軸に翻訳して示すこと</strong>とされています。主な対策を整理します。</p>
+      <div class="counter-box">
+        <h4>対策1: 文系の強みの言語化</h4>
+        <p>文章力・コミュニケーション・業界知見といった文系の強みを、コンサル評価軸 (構造化・問題解決・折衝力) に翻訳して具体的に語れるよう準備することが重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 実績の数値化</h4>
+        <p>前職での成果を「規模・成果・改善率」など具体的数値で表現することが、出身学部に関わらずコンサル評価軸とのマッチングに有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: ケース面接対策</h4>
+        <p>ケース面接は文系・理系を問わず論理的思考と構造化が問われます。十分な準備と反復練習が突破の鍵とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 数的処理への基礎的な備え</h4>
+        <p>コンサルでは定量分析の場面もあるため、基本的な数値感覚・データの読み方への備えがあると安心とされています。専門的な理系知識が必須というわけではないとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 志望動機の整理</h4>
+        <p>「なぜ文系の自分がコンサルか」「文系の強みをどう活かすか」を、過去の実績 + 将来構想で論理的に接続する作業が、選考突破の重要要素とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_bunkei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_bunkei">
+          <span>文系の選考対策を元コンサルの無料サポートで磨く</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">文系出身者によくある不安と現実的な視点</h2>
+      <p class="section-lede">文系未経験者がコンサル転職で抱きやすい不安を、現実的な視点で整理します。下表は公開情報・業界一般論に基づく整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="文系出身者の不安と現実的な視点">
+          <thead><tr><th>よくある不安</th><th>現実的な視点</th></tr></thead>
+          <tbody>
+            <tr><td>理系でないと無理では?</td><td>文系出身のコンサル転職者は多数存在するとされ、出身学部より経験・思考力が問われるとされる</td></tr>
+            <tr><td>数学が苦手で不安</td><td>基本的な数値感覚への備えは有効だが、高度な理系知識が必須というわけではないとされる</td></tr>
+            <tr><td>ケース面接が解けるか不安</td><td>文系・理系を問わず対策が必要。対策の質で突破可能性が変わるとされる</td></tr>
+            <tr><td>専門性がなく不安</td><td>前職業界の知見・文章力・折衝力が文系の専門性として評価されうるとされる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">文系未経験者向けの無料サポート活用法</h2>
+      <p>文系未経験者のコンサル転職は、強みの翻訳と適切なファーム選びがポイントとされています。コンサル特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>文系の強み診断</h4><p>文章力・コミュニケーション・業界知見など、文系の強みをコンサル評価軸でどう活かせるか診断するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>職務経歴書の翻訳サポート</h4><p>文系的な実績を、コンサル評価軸に翻訳して職務経歴書に落とし込むサポートです。元コンサルの添削で品質が変わるとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>ケース面接対策</h4><p>文系出身者の不安が大きいケース面接を、元コンサルが模擬面接形式で対策するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>ファーム選びの相談</h4><p>文系の強みが活きやすいファームを、一緒に選定するサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>文系未経験のコンサル転職は強みの翻訳が要。MyVisionの無料カウンセリングで、文系の強み診断 + 狙えるファーム + 選考対策の整理を会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_bunkei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_bunkei">
+          <span>文系向けの無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略系・総合系・IT系・FAS系・公共系の特徴</p></a>
+        <a class="card-link" href="/consul-tenshoku-nandido/"><h4>コンサル転職 難易度ガイド</h4><p>「難しい」とされる理由と現実的な突破法</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">文系の強みを武器に、コンサル転職という選択肢を検討する</h2>
+      <p>文系出身は不利ではなく、強みの翻訳が鍵。MyVisionの無料カウンセリングで、文系の強み診断 + 狙えるファーム + 選考対策を30秒の会員登録で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_bunkei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_bunkei">
+          <span>文系の市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
