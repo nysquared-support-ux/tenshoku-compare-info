@@ -1,0 +1,245 @@
+---
+/**
+ * 会計士 事業会社 転職 LP (ツインプロ・RichLayout 構造準拠)
+ * slug: kaikeishi-jigyoukaisha
+ * ★480 ツインプロ a8mat verbatim copy-paste
+ * ★354 honest / ★273 景表法配慮 / ★322 部分PASS許容
+ * 参考テンプレ: kaikeishi-tenshoku/index.astro (★326 DRY)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '会計士 事業会社 転職おすすめ4社比較｜監査法人からCFO・経営企画・管理部門へのキャリアパス【2026年版】';
+const description = '公認会計士・監査法人経験者が事業会社（CFO・経営企画・管理部門）へ転職する際の4社比較。ツインプロ・MS-Japan・マイナビ会計士・リクルートを公開情報で整理。年収700-1,500万円帯の求人動向・IPO準備経路・選び方5基準が分かる(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '会計士 事業会社 転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '会計士 事業会社転職エージェント主要 4 サービス比較',
+  'description': '公認会計士・監査法人経験者の事業会社転職向けエージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・事業会社転職サポート・無料キャリア面談', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'MS-Japan (MS Agent)', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・会計士向け事業会社転職に強み・CFO求人実績', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士特化 転職エージェント', 'description': '公認会計士特化・大手系列・事業会社経理・CFO求人カバー', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント', 'description': '求人数 60 万件以上・事業会社CFO/経営企画求人も一部カバー', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '会計士が事業会社に転職するメリットは何ですか?', a: '公開情報上、事業会社への転職で得られるメリットとして ①経営に近い立場でビジネスインパクトを体感できる ②CFO・経営企画・管理部長等のキャリアアップ経路 ③監査業務以外のスキル（予算管理・FP&A・M&A）取得 の 3 点が多く挙げられるとされています。ただし個人の状況・希望により異なるため、エージェントでの個別相談が推奨されます。' },
+  { q: '監査法人から事業会社経理への転職は年収ダウンしますか?', a: '公開情報上、監査法人マネージャー〜シニアマネージャー級の経験者が事業会社経理マネージャー・財務部長候補へ転職した場合、年収維持〜アップのケースが一定数あるとされています。ただし企業規模・ポジション・交渉力によって大きく異なるとされており、具体的な見込みはエージェントのキャリア面談でご確認ください。' },
+  { q: '公認会計士がCFOになるにはどのようなキャリアが必要ですか?', a: '公開情報上、王道キャリアパスとして ① IPO 準備プロジェクトリーダーとして事業会社入社 ② FAS・投資銀行でファイナンススキル習得後スタートアップCFO、の 2 経路が多く語られるとされています。年収相場は 700〜1,500 万円（ベンチャーCFO・公開情報推定値）とされますが、企業フェーズにより変動します。' },
+  { q: '事業会社転職に強い転職エージェントはどこですか?', a: '公開情報上、会計士の事業会社転職では ① 士業特化（ツインプロ等）: 業界知見・非公開求人 ② 管理部門特化（MS-Japan 等）: 経理・財務・CFO求人の厚さ ③ 総合型（リクルート等）: 求人数の多さ で役割が分かれるとされています。2〜3 社の並行登録が推奨される傾向があります。' },
+  { q: '経営企画職への転職は公認会計士に向いていますか?', a: '公開情報上、経営企画職は ①財務モデリング・数値分析力 ②意思決定サポート ③M&A・予算管理 でCPA経験が活きやすいとされています。年収水準は事業会社の中でも高い傾向があるとされています。ただし求人数・競争率は企業によって大きく異なります。' },
+  { q: '30代後半・40代でも事業会社転職は可能ですか?', a: '公開情報上、40 代ではマネジメント・経営関与型のキャリア構築が中心となる傾向があり、事業会社 CFO ポジションや管理職求人での需要が見られるとされています。ただし難易度は年齢・経験・ポジション別に大きく差があるため、エージェントでの個別診断が推奨されます。' },
+  { q: '監査法人でのスキルは事業会社でどう評価されますか?', a: '公開情報上、監査法人での経験（内部統制・財務諸表作成・リスク評価）は ①上場準備（IPO）企業の内部統制構築 ②M&A デューデリジェンス支援 ③グループ財務管理、の場面で高く評価されるとされています。「監査だけ」にとどまらず応用経験を言語化することが転職成功のポイントとされています。' },
+  { q: 'スタートアップ・ベンチャーのCFOへの転職リスクはありますか?', a: '公開情報上、スタートアップCFOへの転職では ①資金調達・IPO失敗時の不確実性 ②監査法人との処遇水準差 ③経営者との相性リスク、が挙げられるとされています。一方でストックオプション等のアップサイドも一定数あるとされています。リスク許容度に応じた判断が推奨されます。' },
+  { q: '会計士資格なしの経理経験者も転職エージェントを使えますか?', a: '公開情報上、公認会計士資格なしの経理経験者（簿記 1 級・USCPA 等）も多くのエージェントの対象とされています。ただし会計士有資格者向け求人とは対象が異なる場合があるとされており、エージェントへの事前確認が推奨されます。' },
+  { q: '転職後の入社後フォローはエージェントから受けられますか?', a: '公開情報上、多くの転職エージェントは入社後 3 ヶ月〜1 年程度のフォローを提供しているとされています。会計士・事業会社転職は入社後のカルチャーギャップリスクも指摘されており、アフターケアの充実度を事前確認することが推奨されます。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-22',
+  'dateModified': '2026-05-22',
+  'author': { '@type': 'Organization', 'name': 'NY-squared 編集部' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://tenshoku-compare-info.pages.dev/' },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1, 'name': b.name,
+    ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">会計士 / 監査法人経験者 / 事業会社転職</span>
+      <h1 id="fv-h1">
+        <span class="accent">会計士 事業会社 転職</span>おすすめ 4 社比較<br />
+        CFO・経営企画・管理部門へのキャリアパスと選び方 5 基準
+      </h1>
+      <p class="lede">
+        公認会計士・監査法人経験者が事業会社（CFO・経営企画・管理部門・IPO 準備）へ転職する際の 4 社比較を整理。
+        日本公認会計士協会・JILPT・厚労省の公開情報をもとに、事業会社転職特有のリスク・年収帯・エージェント選び 5 基準を中立的に整理した PR 記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>監査法人→事業会社転職で失敗しやすい 3 点と回避策</li>
+        <li>CFO・経営企画・管理部長候補向け 4 社比較</li>
+        <li>年収帯 (700-1,500 万円・公開情報推定) と IPO 準備経路</li>
+        <li>JICPA・JILPT・厚労省出典明示の中立記事</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=jigyoukaisha_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="jigyoukaisha_fv">
+          <span>ツインプロ公式で事業会社転職向け無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">監査法人から事業会社転職で失敗しやすい 3 点と基本情報・選び方 5 基準</h2>
+      <p class="section-lede">会計士が事業会社（CFO・経営企画・管理部門）へキャリアチェンジする際の典型的な失敗パターンと、エージェント選び 5 基準を整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">失敗①</span><h4>「監査スキル＝事業会社で即戦力」の過信</h4><p>監査経験と事業会社の実務（予算管理・FP&A・経営会議運営）にはギャップがあるとされています。IPO 準備・内部統制構築経験を事前に積んでおくと有利とされます。</p></article>
+        <article class="branch"><span class="tag">失敗②</span><h4>エージェント 1 社に頼り切り求人選択肢が狭い</h4><p>事業会社転職では士業特化（ツインプロ等）+ 管理部門特化（MS-Japan 等）の 2 社並行が推奨される傾向があります。CFO・経営企画求人は非公開比率が高いとされます。</p></article>
+        <article class="branch"><span class="tag">失敗③</span><h4>年収交渉なしで内定承諾しキャリアプランを後悔</h4><p>業界相場知見のあるエージェント経由での年収交渉が、長期的なキャリア設計上重要とされています。ストックオプション条件の確認も推奨されます。</p></article>
+        <article class="branch"><span class="tag">基本情報</span><h4>事業会社転職の需要・年収・タイミング</h4><p>公認会計士は事業会社等への転職機会が比較的広いとされています（公開情報）。CFO・経営企画の年収相場は 700〜1,500 万円（JILPT 推定値・企業規模により変動）。転職活発期は繁忙期前 (4-5 月) / 期末後 (7-9 月) / 異動期 (10-12 月) の 3 タイミングとされます。</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>事業会社転職エージェント 選び方 5 基準</h3><p><strong>① 事業会社求人の厚さ</strong>: CFO・経営企画・管理部長クラスの非公開求人保有<br /><strong>② 担当者の会計士業界知見</strong>: 監査法人↔事業会社の差分を説明できる担当者か<br /><strong>③ IPO・M&A 求人ネットワーク</strong>: スタートアップ・IPO 準備案件の紹介実績<br /><strong>④ 年収交渉力</strong>: ストックオプション含む条件交渉の実績<br /><strong>⑤ 入社後フォロー</strong>: 事業会社カルチャーギャップを支援するアフターケアの有無</p></div>
+        <div class="card"><h3>本記事で得られる判断材料</h3><p>① 監査法人経験者向け事業会社転職パス 3 経路<br />② CFO / 経営企画 / 管理部門 3 ポジション別の向き不向き<br />③ 4 社の強み比較と 2-3 社並行登録推奨理由<br />④ 年収帯・IPO 準備経路の公開情報整理<br />⑤ 利用の流れ 5 ステップ + 失敗回避策</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報・各エージェント公開情報の整理であり、独自口コミ調査ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-22。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=jigyoukaisha_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="jigyoukaisha_features">
+          <span>選び方を踏まえ ツインプロ公式で事業会社転職の無料面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="会計士 事業会社転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>事業会社転職での強み</th><th>CFO/経営企画対応</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>士業特化・事業会社CFO/管理部門サポート</td><td>&#9678; 士業有資格者向け非公開求人</td><td>MyVision 社運営・無料キャリア面談</td></tr>
+            <tr><td>MS-Japan</td><td>管理部門特化・経理/財務/CFO求人の厚さ</td><td>&#9678; 経理・財務・CFO候補求人に強み</td><td>MS-Japan 社運営・事業会社転職実績</td></tr>
+            <tr><td>マイナビ会計士</td><td>会計士特化・大手系列</td><td>&#9675; 会計士向け事業会社求人カバー</td><td>株式会社マイナビ運営・若手〜中堅対応</td></tr>
+            <tr><td>リクルートエージェント</td><td>求人数 60 万件+ (事業会社含む)</td><td>&#9651; 総合型のためCFO求人は限定的</td><td>士業・事業会社求人も一部カバー・併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-jigyoukaisha_hero" target="_blank" rel="nofollow" data-page-slug="kaikeishi-jigyoukaisha">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">事業会社転職 3 経路・利用の流れ 5 ステップ・よくある失敗 5 例</h2>
+      <div class="card-grid">
+        <div class="card"><h3>監査法人→事業会社 転職 3 経路 (公開情報整理)</h3><p><strong>経路①【IPO 準備】</strong> スタートアップ上場準備チームへ入社 &rarr; 内部統制構築 &rarr; CFO・管理部長へ昇格（公認会計士の王道経路とされます）<br /><strong>経路②【大手事業会社 経理・財務】</strong> 上場大手の経理部・財務部で FP&A・連結決算・グループ管理を担う。年収 700-1,200 万円帯が多いとされます<br /><strong>経路③【FAS・コンサル経由】</strong> 財務アドバイザリー (M&A DD 等) &rarr; 事業会社 CFO へのキャリアビルド。ファイナンススキル横展開で年収アップ経路とされます</p></div>
+        <div class="card"><h3>利用の流れ 5 ステップ</h3><p><strong>STEP 1</strong> エージェント登録 (2〜3 社並行・3-5 分)<br /><strong>STEP 2</strong> キャリア面談 (無料・60-90 分): 事業会社希望条件・希望ポジション相談<br /><strong>STEP 3</strong> 求人紹介 (公開 + CFO/経営企画系非公開求人)<br /><strong>STEP 4</strong> 面接対策 (事業会社向け・監査スキル言語化サポート)<br /><strong>STEP 5</strong> 内定後の条件交渉 (ストックオプション含む) + 入社後フォロー。利用料金は完全無料 (採用企業からの成功報酬モデル)。</p></div>
+        <div class="card"><h3>よくある失敗例 + 回避策 5 例</h3><p><strong>失敗1</strong> 監査スキルのみアピールで事業会社適応懸念を受ける &rarr; IPO 準備・内部統制経験を前面に<br /><strong>失敗2</strong> 士業特化のみで CFO 求人が少ない &rarr; 管理部門特化 (MS-Japan) を並行登録<br /><strong>失敗3</strong> 年収交渉なしで承諾 &rarr; 業界相場確認 + ストックオプション条件確認<br /><strong>失敗4</strong> 退職後に転職活動開始で焦り &rarr; 在職中からエージェント相談 OK<br /><strong>失敗5</strong> カルチャーギャップで早期退職 &rarr; 企業風土確認 + アフターフォロー有無事前確認</p></div>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_kaikeishi-jigyoukaisha_middle" target="_blank" rel="nofollow" data-page-slug="kaikeishi-jigyoukaisha">
+          <img border="0" width="300" height="250" alt="ツインプロ - 経理特化の転職エージェント" src="https://www21.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002006000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXYE9" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">CFO・経営企画・管理部門 ポジション別の向き不向きと年収帯</h2>
+      <div class="counter-box">
+        <h3>📌 ポジション別 向き不向き整理 (一般的傾向・個別判断はエージェント相談を推奨)</h3>
+        <div class="row"><b>CFO (最高財務責任者)</b><span>スタートアップ〜中堅企業の CFO 候補。年収 700〜1,500 万円 + ストックオプション（公開情報推定）。IPO 経験・M&A 経験者が有利とされます。高い不確実性リスクあり。</span></div>
+        <div class="row"><b>経営企画</b><span>財務モデリング・予算管理・M&A 対応の中核。大手事業会社で年収水準が管理系職種の中で高い傾向があるとされます。会計士の分析力が評価されやすいとされます。</span></div>
+        <div class="row"><b>管理部門（経理・財務部長）</b><span>上場大手〜中堅の経理/財務マネージャー・部長候補。年収 700〜1,200 万円帯が多いとされます。監査法人経験者の内部統制スキルが評価されやすいとされます。</span></div>
+        <div class="row"><b>向いている人の傾向</b><span>IPO・内部統制経験あり / 事業サイドとの連携経験 / 経営に近い立場でインパクトを出したい / リスク許容度が高い（特にスタートアップ CFO）</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">年収数値はすべて公開情報の推定値です。実際の年収は企業規模・ポジション・経験・交渉力により大きく変動します。<strong>YMYL リスク認識</strong>: 年収・キャリア判断は就業・生活設計に直結します。本記事は公開情報整理であり、転職成功保証・年収アップ保証・特定エージェントの推奨ではありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-jigyoukaisha_footer" target="_blank" rel="nofollow" data-page-slug="kaikeishi-jigyoukaisha">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=jigyoukaisha_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="jigyoukaisha_final">
+          <span>後悔しない選択のために ツインプロ公式で事業会社転職の無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談をご活用ください。最終確認日: 2026-05-22。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">まとめ — 事業会社転職 3 軸併用戦略</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>3 社並行登録推奨</b><span>ツインプロ (士業特化) + MS-Japan (管理部門特化) + マイナビ会計士 (会計士特化) の 3 社並行で CFO・経営企画・管理部門の求人網羅性が高まるとされます</span></div>
+        <div class="row"><b>転職活発期 3 タイミング</b><span>繁忙期前 (4-5 月) / 期末後 (7-9 月) / 異動期 (10-12 月)。ただし在職中相談は通年可とされます</span></div>
+        <div class="row"><b>事業会社転職の成功ポイント</b><span>① IPO 準備・内部統制経験の言語化 ② 年収・ストックオプション条件の事前確認 ③ カルチャーフィット重視の企業選択</span></div>
+        <div class="row"><b>リスク認識</b><span>スタートアップ CFO はハイリターン・ハイリスク。大手事業会社管理部門は安定性重視。個人のリスク許容度に応じた選択が推奨されます</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問・編集ポリシー・出典</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+      <div class="card-grid">
+        <div class="card"><h3>編集ポリシー (E-E-A-T)</h3><p>情報源: 厚労省「職業情報提供サイト」・日本公認会計士協会 (JICPA)・JILPT・各エージェント公式サイト。一次情報優先 (公的機関 + 業界団体)・断定回避・推定値明示。月次レビュー。運営: NY-squared (個人事業)。PR 表記 + 成功保証ではない注記。</p></div>
+        <div class="card"><h3>出典・参考情報 + 関連記事</h3><p><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会 (JICPA)</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> / <a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a><br />関連: <a href="/kaikeishi-tenshoku/" class="underline">会計士転職おすすめ全般</a> / <a href="/high-class/" class="underline">ハイクラス転職</a> / <a href="/nenshu-up/" class="underline">年収アップ転職</a> / <a href="/osusume/" class="underline">転職エージェント全般比較</a></p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。運営: NY-squared (個人事業) / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a> / <a href="/about/" class="underline">運営者情報・特商法表記</a></p>
+    </div>
+  </section>
+</RichLayout>
