@@ -1,0 +1,247 @@
+---
+/**
+ * engineer-nenshu-up LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: エンジニア 年収アップ 転職 (動機直結・比較検討)
+ * ★326 DRY 流用元: engineer-tenshoku-shippai / 2026-05-22 [1h0VJx4Pud] TechGo Batch1
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニアが年収アップを目指す転職完全ガイド｜年収が決まる要因・進め方｜TechGo (PR)';
+const description = 'エンジニアが転職で年収アップを目指す際の、年収が決まる要因・現実的な考え方・進め方を整理。年収を左右する4要因、年収アップに近づく5つの対策、求人の見極め方、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'エンジニア 年収アップ 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '転職すればエンジニアの年収は必ず上がりますか?', a: 'いいえ。転職で年収が上がるか下がるかは経験・技術領域・転職先・タイミングにより異なり、必ず上がるという性質のものではありません。本記事は年収アップを保証するものではなく、年収が決まる要因を整理した情報提供記事です。' },
+  { q: 'エンジニアの年収は何で決まりますか?', a: '一般公開情報によれば、技術領域・スキルレベル・経験年数・担当範囲 (上流工程やマネジメント) ・企業の給与水準などが年収に影響する要因とされています。これらの組み合わせで市場価値が形成されるとされています。' },
+  { q: '年収アップを目指すなら何を準備すべきですか?', a: '一般に、自分の市場価値を事前に確認し、年収を左右する要因のうちどれを強化できるかを整理することが推奨されるとされています。複数社を比較して相場感をつかむことも有効とされています。' },
+  { q: '年収交渉はどう進めればいいですか?', a: '一般に、年収交渉は市場相場と自分の経験の裏付けをもとに行うことが基本とされています。希望と根拠を整理し、エージェントを介して交渉するケースも一般的とされています。交渉が必ず通るとは限りません。' },
+  { q: '年収だけで転職先を決めても大丈夫ですか?', a: '一般に、年収だけで判断すると業務内容・開発体制とのミスマッチが起きやすいとされています。年収以外の評価軸 (技術・働き方・成長環境) もあわせて検討することが推奨されるとされています。' },
+  { q: 'エージェントは年収アップに役立ちますか?', a: 'エージェントは市場相場の情報提供や年収交渉の支援を行うとされていますが、利用すれば必ず年収が上がるという性質のものではありません。最終的な意思決定はご自身で行う必要があります。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 年収アップガイド</span>
+      <h1 id="fv-h1">エンジニアが<span class="accent">年収アップ</span>を目指す転職完全ガイド<br />年収が決まる要因・現実的な進め方</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: エンジニアの年収は<strong>技術領域・スキル・経験・担当範囲・企業の給与水準の組み合わせで決まる</strong>とされ、転職すれば必ず上がるものではありません。本記事では年収が決まる要因と、年収アップに近づくための現実的な進め方を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、年収アップを保証するものではありません。</p>
+      <ul class="fv-bullets">
+        <li>エンジニアの年収を左右する4要因</li>
+        <li>年収アップに近づく5つの対策</li>
+        <li>年収だけで決めない求人の見極め方</li>
+        <li>無料サポートで市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_nenshu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_nenshu">
+          <span>TechGo の無料相談で市場価値・年収相場を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">エンジニアの年収を左右する4要因</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>エンジニアの年収は単一の要素ではなく、複数の要因の組み合わせで決まるとされています。下表は公開情報・業界一般論をもとにした要因の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="エンジニアの年収を左右する要因">
+          <thead><tr><th>要因</th><th>年収への影響の傾向</th><th>強化の方向性</th></tr></thead>
+          <tbody>
+            <tr><td>技術領域</td><td>需要の高い領域ほど高めの傾向</td><td>需要のある領域の経験を積む</td></tr>
+            <tr><td>スキルレベル・専門性</td><td>専門性が高いほど評価されやすい傾向</td><td>専門性の深化と言語化</td></tr>
+            <tr><td>担当範囲 (上流・マネジメント)</td><td>上流・マネジメント経験が評価されやすい傾向</td><td>担当範囲の拡大</td></tr>
+            <tr><td>企業の給与水準</td><td>企業・業界により水準が異なる</td><td>給与水準の高い企業も比較対象に</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_nenshu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_nenshu">
+          <span>自分の市場価値・年収相場を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年収アップに近づく4つのアプローチ</h2>
+      <p class="section-lede">年収アップを目指す際の主なアプローチを4タイプで整理します。どれが現実的かは経験と志向により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">アプローチ1</span><h4>専門性を高める</h4><p>需要の高い技術領域の専門性を深め、スペシャリストとしての市場価値を高めるアプローチ。技術志向の人に向くとされています。</p></article>
+        <article class="branch"><span class="tag">アプローチ2</span><h4>担当範囲を広げる</h4><p>上流工程・アーキテクチャ・マネジメントへ担当範囲を広げるアプローチ。評価される経験の幅を広げる方向とされています。</p></article>
+        <article class="branch"><span class="tag">アプローチ3</span><h4>給与水準の高い企業へ移る</h4><p>同じスキルでも企業・業界により給与水準は異なるとされ、水準の高い企業を比較対象に含めるアプローチです。</p></article>
+        <article class="branch"><span class="tag">アプローチ4</span><h4>需要の高い領域へシフト</h4><p>AI・クラウドなど需要の高い領域へ軸足を移すアプローチ。学び直しを伴うことが多いとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_nenshu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">年収アップに近づく5つの対策</h2>
+      <p class="section-lede">年収アップを目指す転職の中核は、<strong>市場価値を把握し、根拠をもって進めること</strong>とされています。以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 市場価値の事前確認</h4>
+        <p>自分の経験・技術が市場でどう評価されるかを事前に確認し、現実的な年収レンジの当たりを付けることが出発点とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 年収を左右する要因の整理</h4>
+        <p>技術領域・専門性・担当範囲・企業水準のうち、自分が強化できる要因を整理することで、年収アップの道筋が見えやすくなるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 経験・実績の言語化</h4>
+        <p>担当領域・成果を選考で伝わる形に言語化することが、年収交渉の根拠づくりにつながるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 複数社の比較検討</h4>
+        <p>1社で即決せず複数社を比較することで、年収の相場感が得られ、現実的な狙いどころを定めやすくなるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 根拠をもった年収交渉</h4>
+        <p>市場相場と自分の経験の裏付けをもとに、希望と根拠を整理して交渉に臨むことが基本とされています。交渉が必ず通るとは限りません。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_nenshu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_nenshu">
+          <span>年収アップの進め方を TechGo の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">年収だけで決めない求人の見極め</h2>
+      <p class="section-lede">年収は重要な軸ですが、年収だけで判断するとミスマッチが起きやすいとされています。下表は公開情報・業界一般論に基づく傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な傾向</th><th>納得度が高まりやすい傾向</th></tr></thead>
+          <tbody>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>評価制度・等級と紐づけて説明される</td></tr>
+            <tr><td>年収と業務のバランス</td><td>高年収だが業務内容が不明確</td><td>年収に見合う役割・期待が具体的</td></tr>
+            <tr><td>昇給の見通し</td><td>入社後の昇給制度が不透明</td><td>評価・昇給の仕組みが説明される</td></tr>
+            <tr><td>働き方とのバランス</td><td>年収以外の条件が見えにくい</td><td>働き方・開発環境も具体的</td></tr>
+            <tr><td>成長環境</td><td>スキルを高められるか不明</td><td>成長機会・技術環境が明記される</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで市場価値を確認する方法</h2>
+      <p>年収アップを目指す転職は市場価値の把握と根拠づくりが鍵とされており、第三者の視点で補うことが有効とされています。IT エンジニア特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>市場価値・年収相場の診断</h4><p>使用技術・経験年数・担当領域をもとに市場価値と年収相場の当たりを付けるサポートです。現実的な狙いどころが把握しやすくなるとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>経験・実績の言語化サポート</h4><p>担当領域や成果を、年収交渉の根拠になる形に言語化するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>年収交渉の支援</h4><p>市場相場をふまえた年収交渉を、エージェントを介して進める支援です。交渉が必ず通るとは限りません。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>給与水準・条件とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>年収アップを目指す転職は市場価値の把握が要とされています。TechGo の無料相談で、市場価値・年収相場の確認・経験の言語化を登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_nenshu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_nenshu">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-1000man/"><h4>エンジニア 年収1000万ガイド</h4><p>キャリアパス別の年収レンジと到達戦略</p></a>
+        <a class="card-link" href="/engineer-30dai-tenshoku/"><h4>30代エンジニア転職ガイド</h4><p>市場価値とキャリアパス</p></a>
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと技術スタックの伝え方</p></a>
+        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">市場価値を知り、納得のいく年収アップ転職に近づく</h2>
+      <p>年収アップを目指す転職は市場価値の把握と根拠づくりで現実的に進められるとされています。TechGo の無料相談で、市場価値・年収相場の確認を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_nenshu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_nenshu">
+          <span>TechGo の無料相談で市場価値・年収相場を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
