@@ -1,0 +1,248 @@
+---
+/**
+ * engineer-zangyou-sukunai LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: 残業の少ない エンジニア 求人 探し方 (情報・ライフスタイル軸)
+ * ★326 DRY 流用元: engineer-tenshoku-shippai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '残業の少ないエンジニア求人の探し方ガイド｜見極めの観点と確認方法・進め方｜TechGo (PR)';
+const description = '残業の少ないエンジニア求人を探す際の見極めの観点・確認方法を整理。求人票での見極めポイント、選考での確認方法、注意したい表現、無料サポートでの情報の補い方を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: '残業の少ないエンジニア求人の探し方' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '求人票のどこを見れば残業の少なさが分かりますか?', a: '一般的には、平均残業時間の記載・みなし残業 (固定残業) の時間数・有給取得率・勤務制度 (フレックス・リモート) などが参考になるとされています。ただし求人票の数値は平均値であり、部署や時期により実態が異なる場合があるとされています。' },
+  { q: 'みなし残業 (固定残業) があると残業は多いのですか?', a: 'みなし残業の有無だけで残業の多寡を断定することはできないとされています。固定残業時間数が大きい場合は、その時間を前提とした働き方になり得るため、時間数と実際の運用を確認することが推奨されるとされています。' },
+  { q: '面接で残業について質問しても良いですか?', a: '働き方に関する質問は一般的に行われているとされています。残業時間・繁忙期の状況・勤務制度などを、配属予定の部署について具体的に質問することが、実態の把握につながるとされています。' },
+  { q: '開発形態によって残業の傾向は変わりますか?', a: '一般論として、自社開発・受託・SES などの開発形態や、プロジェクトの性質により働き方の傾向が異なるとされています。ただし同じ形態でも企業差が大きいため、個別の確認が推奨されるとされています。' },
+  { q: 'リモートワークなら残業は少ないですか?', a: 'リモートワークと残業の少なさは必ずしも一致しないとされています。勤務場所と労働時間は別の要素であり、それぞれを分けて確認することが推奨されるとされています。詳細は <a href="/full-remote-engineer/" class="underline">フルリモートエンジニア求人ガイド</a> もご参照ください。' },
+  { q: '残業の少なさを重視すると年収は下がりますか?', a: '労働時間と年収の関係は企業・役割により異なり、一律ではないとされています。残業の少なさと年収のどちらを優先するかは、ゆずれない条件として事前に整理しておくことが推奨されるとされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 働き方の見極めガイド</span>
+      <h1 id="fv-h1"><span class="accent">残業の少ない</span>エンジニア求人の探し方<br />見極めの観点と確認方法を整理する</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 残業の少ないエンジニア求人を探すには、<strong>求人票の数値だけでなく、選考の場で配属部署の実態を確認すること</strong>が重要とされています。本記事では、見極めの観点・確認方法・注意したい表現を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>求人票で見るべき残業関連の項目</li>
+        <li>残業の少なさを見極める4つの観点</li>
+        <li>選考で実態を確認する5つの方法</li>
+        <li>無料サポートで情報を補う方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_zangyou">
+          <span>TechGo の無料相談で働き方の見極め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">求人票で見るべき残業関連の項目</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省「労働時間・働き方に関する公開情報」</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>残業の少なさを見極める第一歩は、求人票に記載される労働時間関連の項目を確認することとされています。下表は公開情報・業界一般論をもとにした確認項目の整理です。記載数値は平均値であり、部署・時期により実態が異なる場合があるとされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人票で見るべき残業関連の項目">
+          <thead><tr><th>確認項目</th><th>見るポイント</th><th>留意点</th></tr></thead>
+          <tbody>
+            <tr><td>平均残業時間</td><td>月あたりの記載時間</td><td>全社平均か部署別か・平均値である点</td></tr>
+            <tr><td>みなし残業 (固定残業)</td><td>固定残業の時間数</td><td>時間数が大きいとその前提の働き方になり得る</td></tr>
+            <tr><td>勤務制度</td><td>フレックス・裁量労働・リモートの有無</td><td>制度の有無と実際の運用は別</td></tr>
+            <tr><td>有給取得率</td><td>取得率の記載</td><td>休暇の取りやすさの参考</td></tr>
+            <tr><td>繁忙期の記載</td><td>繁忙期の時期・状況</td><td>記載がない場合は選考で確認</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_zangyou">
+          <span>求人の見極め方を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">残業の少なさを見極める4つの観点</h2>
+      <p class="section-lede">求人票の数値だけでは実態は分かりにくいとされています。以下の4観点を組み合わせて見極めることが推奨されるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">観点1</span><h4>全社平均か配属部署か</h4><p>求人票の残業時間は全社平均であることが多いとされています。実際に働くのは配属部署のため、部署単位の状況を確認することが重要とされています。</p></article>
+        <article class="branch"><span class="tag">観点2</span><h4>繁忙期と通常期の差</h4><p>年間を通じて一定とは限らず、繁忙期に残業が集中するケースがあるとされています。ピーク時の状況を確認することが推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">観点3</span><h4>みなし残業の運用実態</h4><p>固定残業時間が設定されている場合、その時間が「上限の目安」か「前提」かは企業により異なるとされています。運用の実態確認が推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">観点4</span><h4>開発形態・プロジェクト性質</h4><p>開発形態やプロジェクトの納期の厳しさにより働き方の傾向が異なるとされています。ただし企業差が大きいため個別確認が推奨されるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_zangyou_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">選考で実態を確認する5つの方法</h2>
+      <p class="section-lede">残業の実態は、選考の場で確認することで把握しやすくなるとされています。以下は公開情報・業界一般論をもとにした確認方法の整理です。</p>
+      <div class="counter-box">
+        <h4>方法1: 配属予定部署について具体的に質問する</h4>
+        <p>全社平均ではなく、配属が想定される部署・チームの残業時間や繁忙期の状況を具体的に質問することが、実態の把握につながるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>方法2: 繁忙期のピーク時の状況を聞く</h4>
+        <p>「最も忙しい時期はどのような働き方になるか」を聞くことで、平均値では見えないピークの実態が把握しやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>方法3: みなし残業の運用を確認する</h4>
+        <p>固定残業時間が「実際にどの程度使われているか」を確認することで、想定される労働時間が見えやすくなるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>方法4: 勤務制度の実際の利用状況を聞く</h4>
+        <p>フレックス・リモートなどの制度が「制度としてある」だけでなく「実際に使われているか」を確認することが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>方法5: 一次情報を複数の場面で確認する</h4>
+        <p>面接・カジュアル面談・エージェント経由など複数の場面・情報源で確認することで、情報の偏りを抑えやすいとされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_zangyou">
+          <span>働き方の確認方法を TechGo の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意したい表現 vs 参考になりやすい情報</h2>
+      <p class="section-lede">求人情報の表現には、実態が見えにくいものと参考になりやすいものがあるとされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人情報の表現の見極め">
+          <thead><tr><th>軸</th><th>注意したい表現の傾向</th><th>参考になりやすい情報の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>残業の記載</td><td>「残業ほぼなし」など根拠が曖昧</td><td>平均残業時間が数値で示される</td></tr>
+            <tr><td>対象範囲</td><td>全社か部署か不明</td><td>部署・職種別の情報が示される</td></tr>
+            <tr><td>繁忙期</td><td>繁忙期の記載がない</td><td>繁忙期の時期・状況が説明される</td></tr>
+            <tr><td>制度の運用</td><td>制度名のみで運用が不明</td><td>制度の利用状況まで説明される</td></tr>
+            <tr><td>選考での回答</td><td>働き方の質問をはぐらかす</td><td>働き方を率直に共有してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで働き方の情報を補う方法</h2>
+      <p>残業の実態は求人票だけでは分かりにくいとされており、第三者の視点で情報を補うことが有効とされています。IT エンジニア特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>求人の働き方情報の補足</h4><p>求人票だけでは分かりにくい部署単位の残業傾向・繁忙期の状況などを補足してもらえるサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>条件の優先順位の整理</h4><p>残業の少なさ・年収・技術など、ゆずれない条件の優先順位を一緒に整理するサポートです。求人の取捨選択の軸になるとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>逆質問の準備</h4><p>選考で働き方の実態を確認するための逆質問を準備するサポートです。実態把握の精度向上に役立つとされています。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>働き方の条件に合う求人が非公開求人として扱われるケースもあるとされ、紹介を受けられるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>残業の少ない求人選びは、求人票と実態の両方を確認することで精度が高まるとされています。TechGo の無料相談で、条件の整理・求人の見極め・逆質問の準備を登録30秒で始められます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_zangyou">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/full-remote-engineer/"><h4>フルリモートエンジニア求人ガイド</h4><p>リモート求人の探し方と見極め</p></a>
+        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
+        <a class="card-link" href="/ses-dasshutsu/"><h4>SES 脱出ガイド</h4><p>開発形態の違いと働き方</p></a>
+        <a class="card-link" href="/engineer-tenshoku-fuan/"><h4>エンジニア転職の不安を整理する</h4><p>よくある不安と和らげる準備</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">働き方を見極め、納得のいくエンジニア転職に近づく</h2>
+      <p>残業の少ない求人選びは、求人票の数値と配属部署の実態の両方を確認することで精度が高まるとされています。TechGo の無料相談で、条件の整理・求人の見極め・逆質問の準備を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_zangyou">
+          <span>TechGo の無料相談で働き方の見極め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

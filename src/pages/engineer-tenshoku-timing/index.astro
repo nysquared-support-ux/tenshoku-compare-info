@@ -1,0 +1,249 @@
+---
+/**
+ * engineer-tenshoku-timing LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: エンジニア 転職 タイミング (情報・タイミング検討ペルソナ)
+ * ★326 DRY 流用元: engineer-tenshoku-shippai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニア転職のタイミングガイド｜時期の考え方と判断材料・進め方｜TechGo (PR)';
+const description = 'エンジニア転職のタイミングを検討する方向けに、年間の時期・経験年数・キャリアの節目といった観点を整理。タイミングを左右する要素、判断材料のそろえ方、避けたい進め方、無料サポートの活用方法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'エンジニア 転職 タイミング' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'エンジニア転職に最適な時期はいつですか?', a: '一概に「この時期が最適」と断定できるものではないとされています。求人が増える傾向のある時期はあるとされますが、最適なタイミングは経験年数・キャリアの状況・個人の事情により異なるとされ、自分の状況に合わせた判断が推奨されるとされています。' },
+  { q: '求人が増えやすい時期はありますか?', a: '一般論として、年度の変わり目や下半期の始まりなど、企業の採用計画に応じて求人が動きやすい時期があるとされています。ただし IT エンジニアは通年採用の企業も多く、時期だけで判断するものではないとされています。' },
+  { q: '経験年数が浅いうちに転職しても良いですか?', a: '経験年数の浅い段階での転職の可否は、これまでに何を身につけたか・次に何を目指すかによるとされています。経験の棚卸しと転職の目的の明確化が判断の鍵とされています。' },
+  { q: 'ボーナス後に転職すべきですか?', a: '賞与の受け取りを考慮して時期を調整する方は一定数いるとされていますが、転職先の選考スケジュールとの兼ね合いもあるとされています。条件面だけでなく、選考のタイミングとあわせて検討することが推奨されるとされています。' },
+  { q: 'プロジェクトの区切りまで待つべきですか?', a: '担当プロジェクトの区切りを一つの目安にする考え方はあるとされています。一方で区切りを待ち続けると機会を逃すこともあるとされ、引き継ぎへの配慮と自分のキャリアのバランスで判断することが推奨されるとされています。' },
+  { q: 'タイミングを逃さないために何を準備すべきですか?', a: '一般的には、職務経歴書の更新・スキルの棚卸し・情報収集を平時から進めておくことで、機会が来たときに動きやすくなるとされています。準備があれば「タイミング待ち」が「機会への対応」に変わりやすいとされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / タイミングの考え方ガイド</span>
+      <h1 id="fv-h1">エンジニア転職の<span class="accent">タイミング</span>ガイド<br />時期の考え方と判断材料を整理する</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: エンジニア転職のタイミングは、<strong>年間の時期だけでなく、経験年数・キャリアの節目・準備の状態</strong>を組み合わせて判断するものとされています。本記事では、タイミングを左右する要素・判断材料のそろえ方を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>タイミングを左右する3つの観点</li>
+        <li>年間の時期に関する一般的な傾向</li>
+        <li>タイミングを判断するための5つの準備</li>
+        <li>無料サポートで判断材料を補う方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_timing`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_timing">
+          <span>TechGo の無料相談で転職の進め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">タイミングを左右する3つの観点</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>エンジニア転職のタイミングは、単一の要素ではなく複数の観点の組み合わせで考えるものとされています。下表は公開情報・業界一般論をもとにした観点の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="タイミングを左右する観点">
+          <thead><tr><th>観点</th><th>内容</th><th>考えておきたいこと</th></tr></thead>
+          <tbody>
+            <tr><td>市場の時期</td><td>求人が動きやすい年間の時期</td><td>通年採用も多く時期だけで決めない</td></tr>
+            <tr><td>自分の経験</td><td>経験年数・身につけたスキル</td><td>次に目指す役割との関係</td></tr>
+            <tr><td>キャリアの節目</td><td>プロジェクトの区切り・役割の変化</td><td>引き継ぎへの配慮との両立</td></tr>
+            <tr><td>準備の状態</td><td>職務経歴書・スキルの棚卸し</td><td>機会が来たときに動ける状態か</td></tr>
+            <tr><td>生活・条件面</td><td>賞与・家庭の事情など</td><td>選考スケジュールとの兼ね合い</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_timing`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_timing">
+          <span>自分のタイミングを TechGo の無料相談で整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年間の時期に関する一般的な傾向</h2>
+      <p class="section-lede">求人の動きには年間である程度の傾向があるとされますが、IT エンジニアは通年採用の企業も多く、時期は判断材料の一つにすぎないとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">傾向1</span><h4>年度の変わり目</h4><p>企業の採用計画が新しくなる時期は、求人が動きやすい傾向があるとされています。ただし応募が集まりやすい時期でもあるとされています。</p></article>
+        <article class="branch"><span class="tag">傾向2</span><h4>下半期の始まり</h4><p>下半期の体制づくりに合わせて求人が出る傾向があるとされています。企業の事業計画により時期は前後するとされています。</p></article>
+        <article class="branch"><span class="tag">傾向3</span><h4>通年採用の存在</h4><p>IT エンジニアは欠員補充・事業拡大に応じた通年採用の企業も多いとされ、特定の時期に限定されないとされています。</p></article>
+        <article class="branch"><span class="tag">傾向4</span><h4>時期より準備の状態</h4><p>どの時期でも、準備が整っているかどうかが動きやすさを左右するとされています。時期を待つより準備を進める考え方が紹介されることがあります。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_timing_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">タイミングを判断するための5つの準備</h2>
+      <p class="section-lede">タイミングの判断の中核は、<strong>機会が来たときに動ける準備を平時から進めておくこと</strong>とされています。以下は公開情報・業界一般論をもとにした準備の整理です。</p>
+      <div class="counter-box">
+        <h4>準備1: 転職の目的とゴールの明確化</h4>
+        <p>「何のための転職か」「いつまでに何を実現したいか」を言語化することで、時期を判断する基準ができるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備2: 職務経歴書の定期的な更新</h4>
+        <p>担当業務や成果を平時から職務経歴書に反映しておくことで、機会が来たときにすぐ動けるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備3: スキルの棚卸しと市場価値の確認</h4>
+        <p>使用技術・担当領域を棚卸しし、自分の市場価値の当たりを付けておくことで、動くべき時期の判断がしやすくなるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備4: 引き継ぎ・プロジェクトの状況の整理</h4>
+        <p>担当プロジェクトの区切りや引き継ぎの見通しを整理しておくことで、キャリアの都合と業務への配慮のバランスが取りやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備5: 情報収集の継続</h4>
+        <p>求人動向や市場の状況を平時から把握しておくことで、「タイミング待ち」が「機会への対応」に変わりやすいとされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_timing`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_timing">
+          <span>転職の準備を TechGo の無料サポートで進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">動きやすいタイミング vs 慎重に検討したいタイミング</h2>
+      <p class="section-lede">同じ時期でも、状態によって動きやすさは異なるとされています。下表は公開情報・業界一般論に基づく傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="タイミングの状態比較">
+          <thead><tr><th>軸</th><th>動きやすい傾向</th><th>慎重に検討したい傾向</th></tr></thead>
+          <tbody>
+            <tr><td>準備の状態</td><td>職務経歴書・棚卸しが済んでいる</td><td>準備が手つかずのまま</td></tr>
+            <tr><td>転職の目的</td><td>目的とゴールが明確</td><td>現職への不満だけが動機</td></tr>
+            <tr><td>プロジェクト</td><td>区切り・引き継ぎの見通しがある</td><td>重要局面の真っ只中</td></tr>
+            <tr><td>判断材料</td><td>市場価値・求人動向を把握</td><td>情報収集ができていない</td></tr>
+            <tr><td>意思決定</td><td>焦らず比較できる状態</td><td>急かされて即決を迫られている</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 焦った意思決定は後悔につながりやすいとされています。詳細は <a href="/engineer-tenshoku-shippai/" class="underline">エンジニア転職の失敗パターン</a> もご参照ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで判断材料を補う方法</h2>
+      <p>転職のタイミングの判断には、求人動向・市場価値など、個人では把握しにくい情報が必要とされており、第三者の視点で補うことが有効とされています。IT エンジニア特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>市場価値診断</h4><p>使用技術・経験年数をもとに市場価値の当たりを付けるサポートです。動くべき時期の判断材料になるとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>求人動向の情報提供</h4><p>求人の動きやすい時期や、自分の希望に合う求人の出やすさについて情報を補ってもらえるサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>職務経歴書の更新サポート</h4><p>機会が来たときにすぐ動けるよう、職務経歴書を選考で伝わる形に整えるサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>活動の段取りの相談</h4><p>在職中でも無理なく進められるよう、活動のペース・段取りを相談できるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>転職のタイミングは、準備と情報収集を平時から進めておくことで判断しやすくなるとされています。TechGo の無料相談で、市場価値の確認・職務経歴書の整理・求人動向の把握を登録30秒で始められます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_timing`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_timing">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
+        <a class="card-link" href="/engineer-tenshoku-fuan/"><h4>エンジニア転職の不安を整理する</h4><p>よくある不安と和らげる準備</p></a>
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと経験の伝え方</p></a>
+        <a class="card-link" href="/engineer-nenshu-up/"><h4>エンジニア 年収アップ転職</h4><p>現実的な昇給につながる進め方</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">タイミングを整理し、納得のいくエンジニア転職に近づく</h2>
+      <p>転職のタイミングは、時期だけでなく準備の状態を含めて判断するものとされています。TechGo の無料相談で、市場価値の確認・職務経歴書の整理・求人動向の把握を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_timing`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_timing">
+          <span>TechGo の無料相談で転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

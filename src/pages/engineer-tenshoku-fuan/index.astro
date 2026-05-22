@@ -1,0 +1,248 @@
+---
+/**
+ * engineer-tenshoku-fuan LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: エンジニア 転職 不安 (情報・不安解消型)
+ * ★326 DRY 流用元: engineer-tenshoku-shippai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニア転職の不安を整理するガイド｜よくある不安と和らげる準備・進め方｜TechGo (PR)';
+const description = 'エンジニア転職で感じやすい不安 (スキル不足・年齢・失敗・環境変化) を、原因・背景・和らげる方向性別に整理。不安を生みやすい状況、和らげるための5つの準備、不安が大きいとき/解消しやすいときの違い、無料サポートの活用方法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'エンジニア 転職 不安' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'スキルに自信がなくてもエンジニア転職はできますか?', a: 'スキルへの不安は多くの方が感じるとされていますが、求められる水準は求人により異なるとされています。現状のスキルの棚卸しと、応募先の要件の確認をすり合わせることで、不安が現実的な判断材料に変わりやすいとされています。' },
+  { q: '年齢が上がると転職は不安になりますが大丈夫ですか?', a: '年齢による選考傾向の変化はあるとされていますが、求められる役割 (実装中心・設計・マネジメント等) が年代により変わる傾向もあるとされています。年代に応じた強みの整理が不安の軽減につながるとされています。詳細は <a href="/engineer-35sai-genkai/" class="underline">エンジニア35歳の壁ガイド</a> もご参照ください。' },
+  { q: '転職して後悔しないか不安です', a: '後悔への不安は、判断材料が不足している状態で生じやすいとされています。業務内容・開発体制・働き方を事前に確認し、複数社を比較することで、納得感のある意思決定に近づきやすいとされています。' },
+  { q: '在職中に転職活動を進めるのが不安です', a: '在職中の活動は時間の制約がありますが、多くのエージェントはオンライン相談・在職中の相談に対応しているとされています。無理のないペースで進められるよう、活動の段取りを相談することが推奨されるとされています。' },
+  { q: '転職活動が初めてで何から始めるか分かりません', a: '一般的には、転職の目的の言語化・スキルの棚卸し・情報収集から始めるとよいとされています。何から手を付けるか自体が不安な場合は、第三者に進め方を相談することが選択肢の一つとされています。' },
+  { q: 'エージェントに相談すると転職を迫られそうで不安です', a: '一般公開情報によれば、多くのエージェントは相談のみの利用も受け付けているとされ、転職するかどうかは最終的に本人が決めるものとされています。相談=転職決定ではない点を理解しておくと不安が和らぎやすいとされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 不安の整理ガイド</span>
+      <h1 id="fv-h1">エンジニア転職の<span class="accent">不安</span>を整理する<br />よくある不安を知り、和らげる準備につなげる</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: エンジニア転職の不安の多くは、<strong>判断材料が不足している状態</strong>から生じるとされています。本記事では、よくある不安・それを生みやすい状況・和らげるための準備を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>エンジニア転職でよくある不安のパターン</li>
+        <li>不安を生みやすい4つの状況</li>
+        <li>不安を和らげるための5つの準備</li>
+        <li>無料サポートで判断材料を補う方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_fuan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_fuan">
+          <span>TechGo の無料相談で転職の進め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">エンジニア転職でよくある不安のパターン</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>エンジニア転職の不安は、いくつかの典型的なテーマに分かれる傾向があるとされています。下表は公開情報・業界一般論をもとにした不安パターンの整理です。いずれも事前準備で和らげやすくなるとされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="エンジニア転職のよくある不安パターン">
+          <thead><tr><th>不安のテーマ</th><th>主な背景</th><th>感じやすい状態</th><th>和らげる方向性</th></tr></thead>
+          <tbody>
+            <tr><td>スキルが足りないのでは</td><td>自分の市場価値が分からない</td><td>応募前に立ち止まってしまう</td><td>スキルの棚卸しと要件の確認</td></tr>
+            <tr><td>年齢的に遅いのでは</td><td>年代別の選考傾向が見えない</td><td>応募をためらう</td><td>年代に応じた強みの整理</td></tr>
+            <tr><td>転職して後悔しないか</td><td>業務内容・開発体制の情報不足</td><td>意思決定を先延ばしにする</td><td>判断材料をそろえ複数社比較</td></tr>
+            <tr><td>在職中に進められるか</td><td>時間の制約が読めない</td><td>活動自体を始められない</td><td>無理のない段取りの相談</td></tr>
+            <tr><td>何から始めればよいか</td><td>転職活動の経験が少ない</td><td>最初の一歩が踏み出せない</td><td>進め方を第三者に相談</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_fuan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_fuan">
+          <span>自分の不安の整理を TechGo の無料相談で進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">不安を生みやすい4つの状況</h2>
+      <p class="section-lede">不安が大きくなりやすい状況を4タイプで整理します。いずれも「情報が不足したまま考え続ける」点が共通とされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">状況1</span><h4>一人で抱え込んで考え続ける</h4><p>誰にも相談せず一人で考え続けると、不安が具体的な判断材料に変わりにくく、堂々めぐりになりやすいとされています。</p></article>
+        <article class="branch"><span class="tag">状況2</span><h4>口コミ・SNS の不安情報に触れすぎる</h4><p>断片的な失敗談やネガティブな口コミに偏って触れると、不安が増幅しやすいとされています。一次情報・複数の情報源での裏付けが推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">状況3</span><h4>自分の市場価値が分からない</h4><p>自分のスキルがどの程度評価されるか分からないと、漠然とした不安が続きやすいとされています。市場価値の当たりを付けることが軽減につながるとされています。</p></article>
+        <article class="branch"><span class="tag">状況4</span><h4>転職の目的が曖昧なまま</h4><p>「何のための転職か」が定まらないと、判断の基準がなく不安が続きやすいとされています。目的の言語化が判断の軸になるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_fuan_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">不安を和らげる5つの準備</h2>
+      <p class="section-lede">不安を和らげる中核は、<strong>漠然とした不安を具体的な判断材料に変えること</strong>とされています。以下は公開情報・業界一般論をもとにした準備の整理です。</p>
+      <div class="counter-box">
+        <h4>準備1: 転職の目的とゆずれない条件の言語化</h4>
+        <p>「何を解決したい転職か」「年収・技術・働き方のうち何が最優先か」を先に言語化することで、判断の軸ができ、不安が選択の基準に変わりやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備2: 技術スキルの棚卸し</h4>
+        <p>使用技術・担当領域・成果を書き出すことで、自分の強みが可視化され、「スキルが足りないのでは」という漠然とした不安が現実的な判断材料に変わりやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備3: 市場価値の当たりを付ける</h4>
+        <p>自分のスキルがどの程度評価されるかの当たりを付けることで、応募先選定の不安が軽減されやすいとされています。第三者の視点を借りる方法もあるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備4: 情報源を一次情報に寄せる</h4>
+        <p>口コミや SNS の体験談に偏らず、求人票・公式情報・複数の情報源で裏付けることで、不安の増幅を抑えやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備5: 進め方を相談できる相手をつくる</h4>
+        <p>一人で抱え込まず、進め方を相談できる相手 (エージェント等) がいることで、不安が段取りに変わりやすいとされています。相談=転職決定ではない点も理解しておくと安心とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_fuan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_fuan">
+          <span>不安を判断材料に変える準備を TechGo の無料サポートで進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">不安が大きくなりやすいとき vs 和らぎやすいとき</h2>
+      <p class="section-lede">同じ転職活動でも、状態によって不安の感じ方は変わるとされています。下表は公開情報・業界一般論に基づく傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="不安の状態比較">
+          <thead><tr><th>軸</th><th>不安が大きくなりやすいとき</th><th>不安が和らぎやすいとき</th></tr></thead>
+          <tbody>
+            <tr><td>情報の量</td><td>判断材料が不足している</td><td>業務内容・体制を確認できている</td></tr>
+            <tr><td>転職の目的</td><td>目的が曖昧なまま</td><td>目的とゆずれない条件が明確</td></tr>
+            <tr><td>相談相手</td><td>一人で抱え込んでいる</td><td>進め方を相談できる相手がいる</td></tr>
+            <tr><td>比較の有無</td><td>1社だけで考えている</td><td>複数社を比較できている</td></tr>
+            <tr><td>情報源</td><td>口コミ・SNS に偏っている</td><td>一次情報で裏付けている</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで判断材料を補う方法</h2>
+      <p>エンジニア転職の不安の多くは情報不足に起因するとされており、第三者の視点で判断材料を補うことが有効とされています。IT エンジニア特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>市場価値診断</h4><p>使用技術・経験年数・担当領域をもとに市場価値の当たりを付けるサポートです。「スキルが足りないのでは」という不安の整理に役立つとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>キャリア相談</h4><p>転職の目的・年代に応じた強みを一緒に整理するサポートです。漠然とした不安を判断の軸に変えやすくなるとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>求人の見極めサポート</h4><p>求人票だけでは分かりにくい開発体制・カルチャー・配属先などの情報を補い、「後悔しないか」という不安の軽減を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>活動の段取りの相談</h4><p>在職中でも無理なく進められるよう、活動のペース・段取りを相談できるサポートです。「在職中に進められるか」という不安に対応するとされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>エンジニア転職の不安は事前準備と相談で和らげられるとされています。TechGo の無料相談で、市場価値の確認・キャリアの整理・求人の見極めを登録30秒で始められます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_fuan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_fuan">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
+        <a class="card-link" href="/engineer-35sai-genkai/"><h4>エンジニア35歳の壁ガイド</h4><p>年代別の選考傾向と強みの整理</p></a>
+        <a class="card-link" href="/it-mikeiken-tenshoku/"><h4>IT 未経験転職ガイド</h4><p>未経験からのエンジニア転職の進め方</p></a>
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと技術スタックの伝え方</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">不安を整理し、納得のいくエンジニア転職に近づく</h2>
+      <p>エンジニア転職の不安の多くは、判断材料をそろえることで和らげられるとされています。TechGo の無料相談で、市場価値の確認・キャリアの整理・転職の進め方の相談を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_fuan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_fuan">
+          <span>TechGo の無料相談で転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
