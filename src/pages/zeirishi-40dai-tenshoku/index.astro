@@ -1,0 +1,320 @@
+---
+/**
+ * 税理士 40代 転職 LP (ツインプロ・A8.net)
+ * KW: 税理士 40代 転職 / slug: zeirishi-40dai-tenshoku
+ * ★326 DRY: kaikeishi-tenshoku 構造を 40代税理士特化に差替
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE テキスト CTA / BXB8X バナー)
+ * ★354 honest: 40代転職の難易度・スキル要件を率直に記述
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '税理士40代転職は可能?即戦力評価と年収維持の現実｜エージェント4社比較【2026年版】';
+const description = '40代税理士の転職可否・年収相場・求められるスキルを公開情報で整理。ツインプロ・MS-Japan・マイナビ税理士・リクルートを比較。難易度を率直に解説し、40代ならではの戦略を提示します(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '税理士 40代 転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '40代税理士向け転職エージェント主要 4 サービス比較',
+  'description': '40代税理士・会計士・簿記資格者向け転職エージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・年収アップ事例あり', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・税理士向け・40代事業会社経理転職に対応', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'マイナビ税理士', 'serviceType': '税理士特化 転職エージェント', 'description': '税理士・科目合格者対応・マイナビ系列・求人数重視', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・税理士・財務求人もカバー・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '40代の税理士は転職できますか?', a: '公開情報上、税理士資格保持者は40代でも転職可能とされています。所長税理士のリタイアや事業承継に伴う求人増加が続いており、実務経験豊富な40代が即戦力として評価されるケースがあるとされています。ただし「どこへでも転職できる」わけではなく、スキルセットと希望条件により難易度は異なります。詳細は士業特化エージェントへご相談ください。' },
+  { q: '40代税理士の転職で年収は維持できますか?', a: '公開情報上、年収維持・向上の事例はあるとされていますが、転職先タイプ・現職年収・経験スキルにより大きく異なります。大手税理士法人・グローバル企業の税務ポジションでは現年収を上回る提示例もあるとされています。一方、中小事務所転職では年収変動リスクも示されています。具体的な見込みは各エージェントのキャリア面談でご確認ください。' },
+  { q: '40代で税理士から事業会社経理へ転職は可能ですか?', a: '公開情報上、税理士資格 + 事業会社経理経験がある場合は選択肢が広がるとされています。一方、税務申告のみ経験で事業会社経理未経験の場合は難易度が高まる傾向があるとされています。CFO候補・税務マネージャーポジションでは40代の専門性が評価される事例があるとされています。' },
+  { q: '40代税理士に求められるスキルは何ですか?', a: '公開情報上、①税務専門性 (申告書作成・税務調査対応・国際税務等) ②マネジメント・プレイングマネージャー経験 ③経営層目線の課題解決力 の3軸が評価されるとされています。国際税務・M&A税務・組織再編対応スキルを持つ方は需要が高いとされています。詳細は各エージェントへご相談ください。' },
+  { q: '40代税理士の転職タイミングはいつが最適ですか?', a: '公開情報上、税理士業界は ①繁忙期前 (4-5月) ②期末後 (7-9月) ③異動シーズン (10-12月) が転職活発期とされています。40代の場合は計画的な転職活動 (3-6ヶ月想定) が推奨されるとされています。引継ぎ・確定申告対応を考慮したスケジュール設計をエージェントと相談することが推奨されます。' },
+  { q: 'ツインプロは40代税理士の転職に対応していますか?', a: '公開情報上、ツインプロは会計士・税理士など士業有資格者特化の転職エージェントとされ、40代の有資格者も対象とされています。無料キャリア面談でキャリアプランを整理することが推奨されています。詳細は公式サイトでご確認ください。' },
+  { q: '税理士から独立vs転職、どちらが有利ですか?', a: '公開情報上、どちらが有利かは個人の経験・顧客基盤・リスク許容度により大きく異なるとされています。本記事は転職情報の整理であり、独立 vs 転職の個別判断は各エージェントや税理士会のキャリア相談サービスのご活用を推奨します。' },
+  { q: 'エージェントは何社登録すべきですか?', a: '公開情報上、士業特化 (ツインプロ等) + 管理部門特化 (MS-Japan等) + 総合型 (リクルート等) の 2-3 社並行登録が推奨されるとされています。各社で取り扱う求人・非公開求人が異なるため、選択肢を広げる観点から複数社登録が一般的とされています。' },
+  { q: '在職中の相談・転職活動は可能ですか?', a: '公開情報上、多くの転職エージェントは在職中の相談・転職活動に対応しているとされています。ツインプロ等も無料キャリア面談を在職中に利用可能とされています。退会自由が一般的な利用規約とされています。' },
+  { q: '40代税理士が転職で失敗しやすいパターンは?', a: '公開情報上、①1社のみ登録で選択肢不足 ②年収交渉なしで承諾 ③担当者との相性不一致を放置 ④転職先の企業文化確認不足 ⑤引継ぎ・在職期間の配慮不足 の5点が失敗例として挙げられるとされています。複数社登録・業界相場確認・担当者変更依頼が対策として推奨されます。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name, ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-22',
+  'dateModified': '2026-05-22',
+  'author': { '@type': 'Organization', 'name': 'NY-squared 編集部' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">税理士 40代 / 転職・キャリア情報</span>
+      <h1 id="fv-h1">
+        <span class="accent">税理士 40代</span>の転職は可能?<br />
+        即戦力評価と年収維持の現実を率直に解説
+      </h1>
+      <p class="lede">
+        40代税理士の転職は「難しい」と言われることもありますが、公開情報上は税理士資格と実務経験を持つ方が即戦力として評価される事例も報告されています。
+        本記事は厚生労働省・日本税理士会連合会・JILPT 等の公的出典をもとに、転職の現実・求められるスキル・エージェント選び方を中立な立場で整理します (PR)。
+      </p>
+      <ul class="fv-bullets">
+        <li>40代税理士の転職可否・難易度を率直に整理</li>
+        <li>求められるスキル 3 軸と年収維持の現実</li>
+        <li>転職エージェント 4 社比較 + 40代向け選び方基準</li>
+        <li>失敗しやすい 5 パターンと回避策</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_main`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_main">
+          <span>ツインプロ公式で40代税理士向け無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。転職成功・年収アップを保証するものではありません。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 9 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">40代税理士の転職可否・難易度を率直に整理</h2>
+      <p class="section-lede">「40代では遅い」という声がある一方、即戦力需要から採用される事例も報告されています。難易度を左右する要因を整理します。</p>
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">転職可能なケース</span>
+          <h4>即戦力スキルが評価される場合</h4>
+          <p>税理士資格 + 申告書作成・税務調査対応・国際税務・M&A 税務等の専門スキルがある場合、40代でも需要があるとされています。所長ポジション候補・税務マネージャー等で採用される事例があるとされています。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">難易度が上がるケース</span>
+          <h4>未経験分野へのジャンプは難しい</h4>
+          <p>40代で税務申告のみ経験、かつ事業会社経理や法人管理部門が完全未経験の場合は、ハードルが高まる傾向があるとされています。スキルの棚卸しが重要です。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">需要が高い専門分野</span>
+          <h4>国際税務・M&A・組織再編対応</h4>
+          <p>公開情報上、国際税務・M&A 税務・組織再編対応スキルを持つ40代税理士は需要が高いとされています。グローバル企業・大手税理士法人では40代の専門性が歓迎されるケースがあるとされています。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場背景</span>
+          <h4>所長リタイア・事業承継需要</h4>
+          <p>日本税理士会連合会の登録データによると、高齢所長が多く後継者不足が続いているとされています。地方中心に40代税理士を即戦力として求める事務所があるとされています。</p>
+        </article>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>40代転職を左右する 3 要因</h3>
+          <p>
+            <strong>① 税務スキルの深さと幅</strong>: 申告書作成のみ vs 国際税務・M&A・税務調査対応まで幅広いかで評価が変わるとされています。<br />
+            <strong>② マネジメント経験</strong>: プレイングマネージャー・スタッフ指導経験があると評価が上がるとされています。<br />
+            <strong>③ 転職先タイプの選択</strong>: 大手税理士法人・事業会社・中堅事務所で求められるプロフィールが異なります。目標を絞ることが重要とされています。
+          </p>
+        </div>
+        <div class="card">
+          <h3>40代税理士の年収相場 (参考)</h3>
+          <p>
+            公開情報上、税理士全般の年収は 400 万円〜800 万円以上と幅広いとされています。大手税理士法人・グローバル企業の税務マネージャーポジションでは現年収を上回る提示例もあるとされています。<br />
+            ただし年収は個人のスキル・転職先・規模・地域により大きく異なります。具体的な見込みは各エージェントのキャリア面談でご確認ください。<br />
+            <small>出典参考: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚労省</a>・<a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a></small>
+          </p>
+        </div>
+      </div>
+      <p class="compare-note">※ 本セクションは公開情報・業界団体公開データの整理です。転職成功保証ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-22。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_cta`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_cta">
+          <span>40代税理士のキャリアをツインプロ公式で無料相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">転職エージェント 4 社比較 (40代税理士向け観点)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="40代税理士向け転職エージェント 4 社比較">
+          <thead>
+            <tr><th>エージェント</th><th>対象</th><th>40代向け強み</th><th>特徴 (公開情報)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>会計士・税理士・簿記資格者</td><td>士業特化・ハイクラス非公開求人・業界相場交渉</td><td>MyVision 社運営・士業有資格者向け専門エージェント・無料キャリア面談</td></tr>
+            <tr><td>MS-Japan</td><td>経理・財務・税理士・会計士</td><td>管理部門特化・40代事業会社経理転職実績</td><td>株式会社 MS-Japan 運営・CFO候補・税務マネージャー対応</td></tr>
+            <tr><td>マイナビ税理士</td><td>税理士・科目合格者</td><td>大手系列・求人数・中堅〜大手税理士法人</td><td>株式会社マイナビ運営・税理士特化・40代中堅ポジション対応</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (士業含む)</td><td>求人数 60 万件以上・他業界比較可</td><td>士業求人も一部カバー・選択肢拡大目的で併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。40代への対応状況・求人数・年収交渉力は時期・個人条件により変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi40dai_sec2" target="_blank" rel="nofollow" data-page-slug="zeirishi-40dai-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">40代税理士に求められるスキル 3 軸と転職先タイプ別特徴</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>求められるスキル 3 軸 (公開情報整理)</h3>
+          <p>
+            <strong>① 税務専門性の深さ</strong>: 申告書作成・税務調査対応を超えた国際税務・M&A 税務・組織再編対応が40代では特に評価されるとされています。<br />
+            <strong>② マネジメント・プレイングマネージャー</strong>: スタッフ指導・クライアントマネジメント・部門運営経験が40代の差別化要素とされています。<br />
+            <strong>③ 経営層視点の課題解決力</strong>: 企業の業容拡大・新規事業・組織再編局面で経営層と同視点で動けるプレイングマネージャー像が期待されるとされています。
+          </p>
+        </div>
+        <div class="card">
+          <h3>転職先タイプ別 特徴と向き不向き</h3>
+          <p>
+            <strong>大手・中堅税理士法人</strong>: マネージャー候補・専門分野特化 (国際/M&A) で需要あり。競争は高い。<br />
+            <strong>事業会社経理・税務部</strong>: CFO 候補・税務マネージャーで採用例あり。経理実務経験があると有利とされています。<br />
+            <strong>中小会計事務所 (所長候補)</strong>: 後継者不足から40代を積極採用するケースがあるとされています。地方では選択肢が広い傾向。<br />
+            <strong>FAS・コンサルファーム</strong>: M&A・デューデリジェンス経験者は需要があるとされています。ただし実績重視のため、詳細はエージェント相談を推奨します。
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_zeirishi40dai_sec3" target="_blank" rel="nofollow" data-page-slug="zeirishi-40dai-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 経理・会計特化の転職エージェント" src="https://www21.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002006000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXYE9" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">利用の流れ 5 ステップと失敗しやすい 5 パターン</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>利用の流れ 5 ステップ</h3>
+          <p>
+            <strong>STEP 1</strong> エージェント登録 + キャリア面談予約 (3-5 分)<br />
+            <strong>STEP 2</strong> 無料キャリア面談 (60-90 分): 経験・スキル・希望条件・転職タイミングを相談<br />
+            <strong>STEP 3</strong> 求人紹介 + 書類添削 (公開 + 非公開求人含む)<br />
+            <strong>STEP 4</strong> 面接対策 + 企業面接 (40代向け強みの伝え方など)<br />
+            <strong>STEP 5</strong> 内定後の年収交渉 + 入社後フォロー。利用料金は完全無料 (採用企業からの成功報酬モデル・各社公開情報)。
+          </p>
+        </div>
+        <div class="card">
+          <h3>40代税理士が失敗しやすい 5 パターン + 回避策</h3>
+          <p>
+            <strong>失敗1</strong> 1 社のみ登録で選択肢不足 &rarr; 2-3 社並行登録を推奨<br />
+            <strong>失敗2</strong> 年収交渉なしで内定承諾 &rarr; 業界相場確認 + 交渉依頼<br />
+            <strong>失敗3</strong> 担当者との相性不一致を放置 &rarr; 担当者変更依頼可<br />
+            <strong>失敗4</strong> スキルの棚卸し不十分 &rarr; 面談前にキャリア棚卸し実施<br />
+            <strong>失敗5</strong> 転職先の企業文化確認不足 &rarr; 面接で組織文化・残業実態を確認
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">まとめ — 40代税理士の転職戦略 3 軸</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>転職戦略 軸1</b><span>専門スキルの明確化: 国際税務・M&A・組織再編等の強み分野を整理し、需要の高いポジションを狙う</span></div>
+        <div class="row"><b>転職戦略 軸2</b><span>複数社並行登録: ツインプロ (士業特化) + MS-Japan (管理部門特化) + リクルート (求人数) の 2-3 社で選択肢を広げる</span></div>
+        <div class="row"><b>転職戦略 軸3</b><span>タイミング設計: 計画的な 3-6 ヶ月の転職活動。繁忙期前 (4-5月) または期末後 (7-9月) が転職活発期とされています</span></div>
+        <div class="row"><b>40代の強み</b><span>実務経験の蓄積・マネジメント経験・専門領域の深さが 20-30 代との差別化要素。即戦力としての評価につながる可能性があるとされています</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">
+          <strong>YMYL リスク認識</strong>: 転職・年収はキャリア・生活に直結する重要判断です。本記事は公開情報の整理であり、転職成功・年収アップを保証するものではなく、特定エージェントを推奨するものでもありません。個別判断は無料キャリア面談でのご相談を推奨します。
+        </p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi40dai_summary" target="_blank" rel="nofollow" data-page-slug="zeirishi-40dai-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_cta`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_cta">
+          <span>後悔しない選択のために ツインプロ公式で40代税理士の無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談をご活用ください。最終確認日: 2026-05-22。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問・編集ポリシー・出典</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+      <div class="card-grid">
+        <div class="card">
+          <h3>編集ポリシー (E-E-A-T)</h3>
+          <p>情報源: 厚労省「職業情報提供サイト」・日本税理士会連合会・日本公認会計士協会・JILPT・各エージェント公式サイト。一次情報優先 (公的機関 + 業界団体)・断定回避・推定値明示。月次レビュー。運営: NY-squared (個人事業)。PR 表記 + 成功保証ではない注記。</p>
+        </div>
+        <div class="card">
+          <h3>出典・参考情報 + 関連記事</h3>
+          <p>
+            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> /
+            <a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a> /
+            <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a> /
+            <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a><br />
+            関連: <a href="/kaikeishi-tenshoku/" class="underline">会計士転職おすすめ</a> / <a href="/zeirishi-tenshoku/" class="underline">税理士転職</a> / <a href="/nenshu-up/" class="underline">年収アップ</a> / <a href="/osusume/" class="underline">転職エージェント全般比較</a>
+          </p>
+        </div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。運営: NY-squared (個人事業) / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a> / <a href="/about/" class="underline">運営者情報・特商法表記</a></p>
+    </div>
+  </section>
+</RichLayout>
