@@ -1,0 +1,248 @@
+---
+/**
+ * consul-tenshoku-40dai LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 40代 コンサル 転職 (sv 推定 800-1,400・専門特化×マネジメント実績層)
+ * ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '40代 コンサル 転職 完全ガイド｜専門特化×マネジメント実績で狙えるファームと現実的戦略｜MyVision (PR)';
+const description = '40代でコンサル転職を狙う人の現実的な市場価値と戦略を、専門領域・マネジメント実績の有無別に整理。40代前半・後半で狙えるファーム・年収レンジ・選考対策 (専門性の言語化・案件実績の数値化) と、無料カウンセリングでの市場価値確認法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '40代 コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '40代でもコンサル転職は可能ですか?', a: '一般的に40代のコンサル転職は20代・30代より難易度が上がるとされていますが、専門領域 (IT・DX・会計・財務・官公庁・特定業界) とマネジメント実績があれば対象となるケースがあるとされています。ポテンシャル採用ではなく即戦力・専門人材としての採用が中心とされ、ファーム選びと専門性の言語化がより重要になるとされています。' },
+  { q: '40代のコンサル転職で年収はどのくらいですか?', a: '一般公開情報によれば、40代の大手ファーム入社時の年収はマネージャー〜シニアマネージャー候補で900-1,800万円帯が中心とされています。専門性 + マネジメント実績 + ファームにより変動します。正式金額は各ファームの公式情報・エージェント面談でご確認ください。' },
+  { q: '40代未経験でもコンサル転職できますか?', a: '40代の業界完全未経験からの転職は30代より難易度が高いとされています。ただし前職での専門領域・マネジメント実績がコンサル評価軸に翻訳できる場合は対象となるケースがあるとされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル転職 未経験ガイド</a> をご参照ください。' },
+  { q: '40代前半と40代後半で転職市場価値は変わりますか?', a: '40代前半 (40-44歳) は専門性 + マネジメント実績の両軸で評価され、シニア〜マネージャー候補の対象とされています。40代後半 (45-49歳) はより高度な専門性・経営に近い実績が中心の評価軸となり、ファームと役割の見極めが一層重要とされています。' },
+  { q: '40代でケース面接対策は必要ですか?', a: '年齢に関わらず、コンサル選考ではケース面接が大きな関門とされており、40代でも対策は必須とされています。40代では「経験を踏まえた実務的な仮説思考」が評価される傾向にあるとされています。詳細は <a href="/consul-case-mensetsu/" class="underline">コンサル ケース面接対策ガイド</a> をご参照ください。' },
+  { q: '40代のコンサル転職で重視されるものは何ですか?', a: '40代では専門領域の深さ・マネジメント実績 (チーム規模・予算規模・成果)・業界知見が重視される傾向にあるとされています。職務経歴書での実績の数値化と、その専門性をコンサル評価軸に翻訳する作業が選考の鍵とされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 40代向け完全ガイド</span>
+      <h1 id="fv-h1">40代 <span class="accent">コンサル 転職</span> 完全ガイド<br />専門特化×マネジメント実績で狙うファームと現実的戦略</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 40代のコンサル転職は20代・30代より難易度が上がるとされる一方、<strong>専門領域とマネジメント実績があれば即戦力・専門人材として対象となるケースがある</strong>とされています。本記事では40代特有の市場価値・狙えるファーム・年収レンジ・選考対策を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>40代前半・後半別の市場価値と採用傾向</li>
+        <li>40代で狙えるファーム別の年収レンジ (900-1,800万円帯)</li>
+        <li>専門性 + マネジメント実績の翻訳ポイント</li>
+        <li>無料カウンセリングで40代の市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_40dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_40dai">
+          <span>40代の市場価値を無料カウンセリングで確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">40代前半・後半別の市場価値マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>40代のコンサル転職市場価値は、年齢区分と<strong>専門領域・マネジメント実績の有無</strong>の組み合わせで大きく変動するとされています。40代はポテンシャル評価ではなく即戦力・専門人材としての評価が中心とされ、下表は一般的な傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="40代の市場価値マップ">
+          <thead><tr><th>年齢区分</th><th>市場価値</th><th>評価軸</th><th>狙えるポジション</th></tr></thead>
+          <tbody>
+            <tr><td>40代前半 (40-42歳)・専門領域あり</td><td>&#11088; 高 (専門特化型)</td><td>専門性 + マネジメント実績</td><td>シニア〜マネージャー候補</td></tr>
+            <tr><td>40代前半 (43-44歳)・専門領域あり</td><td>中-高 (即戦力型)</td><td>専門性 + チーム統括実績</td><td>マネージャー候補</td></tr>
+            <tr><td>40代後半 (45-47歳)・専門領域あり</td><td>中 (高度専門型)</td><td>高度専門性 + 経営に近い実績</td><td>マネージャー〜シニアマネージャー候補</td></tr>
+            <tr><td>40代・専門領域が曖昧</td><td>限定的</td><td>ファーム・役割の見極めが必須</td><td>専門性の言語化が前提条件</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_40dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_40dai">
+          <span>自分の市場価値を MyVision 公式の無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">40代コンサル転職 4 つのキャリアパス</h2>
+      <p class="section-lede">40代でコンサル転職する人の主なキャリアパスを4タイプで整理します。40代は専門性とマネジメント実績の掛け算でファーム適合性が決まるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>事業会社の管理職 → 総合系 / IT 系コンサル</h4><p>経営企画・事業部長・IT 部門長クラスが、アクセンチュア・アビーム・ベイカレント等の総合系/IT系へ転身するパス。組織マネジメント実績 + 経営視点が評価される傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>IT/DX 領域の専門人材 → IT/DX 系コンサル</h4><p>SIer・PM・IT アーキテクト出身者が、アクセンチュア・IBM・アビーム等の DX 案件で価値発揮するパス。技術理解 + 大規模プロジェクト統括実績が強みとなる傾向にあるとされています。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>金融・会計の専門家 → BIG4 / FAS 系</h4><p>銀行・証券・会計士・CFO クラスが、BIG4 (Deloitte/PwC/EY/KPMG)・FAS 系へ転身するパス。財務・会計の高度専門性 + 案件統括実績が評価される傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>官公庁・特定業界の知見保有者 → 公共系 / 業界特化コンサル</h4><p>官公庁・規制業界・特定産業の専門家が、公共系コンサル (野村総研・三菱総研等) や業界特化部門へ転身するパス。深い業界知見 + 政策・規制理解が強みとなる傾向にあるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_40dai_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">40代の選考対策 — 専門性とマネジメント実績の言語化が鍵</h2>
+      <p class="section-lede">40代の選考対策の中核は、<strong>専門領域の深さとマネジメント実績のコンサル評価軸への翻訳</strong>とされています。40代は「何ができるか」が即戦力レベルで具体的に語れるかが重視される傾向にあります。</p>
+      <div class="counter-box">
+        <h4>対策1: 専門領域の明確化と深さの証明</h4>
+        <p>「自分は何の専門家か」を一言で語れる状態にし、その専門性を案件・成果・知見で裏付けることが40代の選考では不可欠とされています。専門性が曖昧なまま選考に臨むのは避けるべきとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: マネジメント実績の数値化</h4>
+        <p>「チーム XX 名・予算 XX 億・統括期間 XX 年・成果 XX%」のように、組織マネジメント実績を具体的数値で表現することが、コンサルのマネージャー候補評価とのマッチングに不可欠とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: ファーム・役割の現実的な見極め</h4>
+        <p>40代は狙えるファームと役割を現実的に絞ることが重要とされています。戦略系の新卒型キャリアは狭き門のため、専門性が活きる総合系・IT系・FAS系・公共系・業界特化部門への適合性を見極める作業が鍵とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: ケース面接 (年齢関係なく必須)</h4>
+        <p>40代でもケース面接対策は必須とされています。40代では「経験を踏まえた実務的な仮説思考」と「構造化能力」の両立が評価ポイントとされています。詳細は <a href="/consul-case-mensetsu/" class="underline">コンサル ケース面接対策ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 志望動機とキャリア整合性</h4>
+        <p>「なぜ40代の今コンサルか」「自分の専門性をどう活かすか」「ファームで何を実現したいか」を、過去の専門実績 + ファーム特性で論理的に接続する作業です。40代特有の重要評価軸とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_40dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_40dai">
+          <span>40代の選考対策を元コンサルの無料サポートで磨く</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">40代向けファームの年収・採用傾向</h2>
+      <p class="section-lede">40代の主な転職先ファームを、年収レンジ・採用傾向・特徴で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的傾向です。40代は専門性とマネジメント実績の有無で適合ファームが変わるとされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="40代向けコンサルファーム比較">
+          <thead><tr><th>ファーム種別</th><th>40代採用傾向</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (総合系・IT)</td><td>&#11088; 専門人材を採用</td><td>900-1,600万円</td><td>大手管理職・IT/DX 専門</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>&#11088; 即戦力を採用</td><td>1,000-1,800万円</td><td>業界経験豊富な実務派</td></tr>
+            <tr><td>BIG4 (Deloitte・PwC・EY・KPMG)</td><td>専門領域で採用</td><td>950-1,700万円</td><td>金融・会計・財務の専門家</td></tr>
+            <tr><td>FAS 系 (M&A・財務)</td><td>専門人材を採用</td><td>1,000-1,800万円</td><td>金融・会計・FAS の高度専門</td></tr>
+            <tr><td>公共系 (野村総研・三菱総研)</td><td>業界知見で採用</td><td>900-1,500万円</td><td>官公庁・規制業界出身</td></tr>
+            <tr><td>戦略系 (BCG・McK・Bain)</td><td>狭き門 (高度専門のみ)</td><td>1,300-2,200万円</td><td>特定領域の第一人者クラス</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">40代特有の無料サポート活用法</h2>
+      <p>40代のコンサル転職は、20代・30代と比べて<strong>より高い戦略性と現実的な見極め</strong>が要求されるとされています。コンサル特化エージェントの公開情報によれば、以下の40代向け無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>市場価値診断 (専門性軸)</h4><p>40代の市場価値を、専門領域・マネジメント実績・業界知見の3軸で診断するサポートです。狙えるファーム + 役割 + 年収レンジの当たりが付くとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>専門性の言語化サポート</h4><p>「自分は何の専門家か」を一言で語れる状態に整理し、それを裏付ける案件・成果を体系化するサポートです。40代選考の前提条件の整備に直結するとされています。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>マネジメント実績の棚卸</h4><p>40代の強みとなる組織マネジメント実績を、チーム規模・予算・期間・成果の4軸で棚卸し、コンサルのマネージャー候補評価軸に翻訳するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>40代向けの非公開求人 (マネージャー候補・専門人材ポジション) を紹介してもらえるサポートです。公開求人より専門性とのマッチ度が高いケースが多いとされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>40代のコンサル転職は専門性の言語化と現実的な見極めが要。MyVisionの無料カウンセリングで、専門性を軸とした市場価値 + 狙えるファーム + キャリアパス整理を会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_40dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_40dai">
+          <span>40代特有の無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職ガイド</h4><p>30代前半・後半別の市場価値と狙えるファーム</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム + 5つのカギ</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職ガイド</h4><p>IT エンジニアからコンサル + 狙えるファーム + 評価される 5 領域</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">40代の今、専門性を武器にコンサル転職を現実的に検討する</h2>
+      <p>40代のコンサル転職は専門性とマネジメント実績が武器。MyVisionの無料カウンセリングで、専門性を軸とした市場価値 + 狙えるファーム + 年収レンジを30秒の会員登録で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_40dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_40dai">
+          <span>40代の市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
