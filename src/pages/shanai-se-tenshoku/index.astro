@@ -1,0 +1,248 @@
+---
+/**
+ * shanai-se-tenshoku LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: 社内SE 転職 (比較検討・客先常駐から自社勤務を目指す層)
+ * ★326 DRY 流用元: consul-tenshoku-40dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '社内SE転職完全ガイド｜仕事内容・年収・SIerやSESとの違いと現実的な目指し方｜TechGo (PR)';
+const description = '社内SE (社内システムエンジニア) への転職を、仕事内容・SIer/SESとの違い・年収帯・向いている人別に整理。社内SEを目指す動機、成功に近づく5つの対策、メリットと留意点、無料サポートの活用法を公開情報ベースで解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: '社内SE 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '社内SEは未経験から目指せますか?', a: '一般的に、何らかの IT 実務経験 (開発・インフラ・運用・ヘルプデスク等) があると目指しやすいとされています。完全未経験からの直接転職は難易度が上がるとされ、まず IT 経験を積むルートが現実的とされる場合があります。詳細は <a href="/it-mikeiken-tenshoku/" class="underline">IT 未経験転職ガイド</a> をご参照ください。' },
+  { q: '社内SEは「楽」と聞きますが本当ですか?', a: '社内SEの業務量や負荷は企業や体制によって大きく異なるとされています。一人で情報システムを担当する「一人情シス」体制では負荷が高くなるケースもあるとされ、「楽かどうか」は一概には言えないとされています。' },
+  { q: 'SES から社内SEへの転職は可能ですか?', a: '一般的に可能とされています。SES で培った幅広い現場経験や適応力は社内SEでも活きるとされており、その経験を社内SEの評価軸 (業務理解・調整力) に翻訳して伝えることが鍵とされています。詳細は <a href="/ses-dasshutsu/" class="underline">SES 脱出ガイド</a> もご参照ください。' },
+  { q: '社内SEの年収はどのくらいですか?', a: '一般公開情報によれば、社内SEの年収は企業規模・役割・経験により幅があり、おおむね400-700万円帯を中心に、マネジメント層ではさらに上の帯もあるとされています。正式な金額は各企業の公式情報・エージェント面談でご確認ください。' },
+  { q: '社内SEになるとスキルが落ちると言われますが本当ですか?', a: '社内SEは企画から運用まで幅広く関わる一方、業務によっては最新の開発技術から距離ができる傾向があるとされています。スキル維持には個人での学習継続が前提になるとされています。' },
+  { q: '社内SE求人は競争率が高いですか?', a: '社内SEは働き方の安定性などから人気が高く、競争率が高くなる傾向があるとされています。求人の見極めと、自分の経験を社内SE評価軸へ翻訳する準備が重要とされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 社内SE 完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">社内SE</span>への転職完全ガイド<br />仕事内容・年収・SIerやSESとの違いと現実的な目指し方</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 社内SEは<strong>自社のIT企画・運用・社内システムを担う職種</strong>で、SIer・SESとは関わる相手や業務範囲が異なるとされています。本記事では社内SEの仕事内容・年収帯・目指し方を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>社内SEの仕事内容と SIer・SES との違い</li>
+        <li>社内SE転職を目指す人の主な動機</li>
+        <li>社内SE転職を成功に近づける5つの対策</li>
+        <li>無料サポートで転職の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_shanaise`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_shanaise">
+          <span>TechGo の無料相談で社内SE転職の進め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">社内SEとは — SIer・SES との違い</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>社内SEは、自社のIT企画・社内システムの導入や運用を担う職種とされています。SIer・SESとは関わる相手や業務範囲が異なるとされており、下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="社内SEとSIer・SESの違い">
+          <thead><tr><th>比較軸</th><th>社内SE</th><th>SIer</th><th>SES</th></tr></thead>
+          <tbody>
+            <tr><td>主な業務</td><td>自社のIT企画・運用・社内システム</td><td>顧客向けシステムの受託開発</td><td>客先常駐での開発・運用支援</td></tr>
+            <tr><td>関わる相手</td><td>自社の各部門</td><td>受託先の顧客</td><td>常駐先の現場</td></tr>
+            <tr><td>業務の幅</td><td>企画〜運用まで広い傾向</td><td>案件次第・特定工程が中心の傾向</td><td>案件・常駐先により変動</td></tr>
+            <tr><td>評価される強み</td><td>業務理解 + 調整力 + IT知識</td><td>専門技術 + プロジェクト遂行</td><td>適応力 + 技術</td></tr>
+            <tr><td>働き方の傾向</td><td>勤務地が安定しやすい傾向</td><td>案件により変動</td><td>常駐先により変動</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_shanaise`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_shanaise">
+          <span>社内SEに合うか TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">社内SE転職を目指す人の主な動機</h2>
+      <p class="section-lede">社内SEを目指す動機を4タイプで整理します。動機を明確にしておくことで求人の見極めがしやすくなるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">動機1</span><h4>客先常駐から自社勤務へ</h4><p>SES での客先常駐から、勤務地が安定しやすい自社勤務へ移りたいという動機。生活リズムの安定を重視する人に多いとされています。</p></article>
+        <article class="branch"><span class="tag">動機2</span><h4>上流〜運用まで幅広く関わりたい</h4><p>特定工程だけでなく、IT企画・導入・運用まで一貫して関わりたいという動機。幅広い経験を求める人に多いとされています。</p></article>
+        <article class="branch"><span class="tag">動機3</span><h4>事業会社で腰を据えて働きたい</h4><p>受託・常駐ではなく、事業会社の一員として中長期で働きたいという動機。事業への当事者意識を重視する人に多いとされています。</p></article>
+        <article class="branch"><span class="tag">動機4</span><h4>自社サービス・業務を深く理解したい</h4><p>自社の業務やサービスを深く理解しながら IT で貢献したいという動機。業務知識と IT のハイブリッド人材を志向する人に多いとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_shanaise_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">社内SE転職を成功に近づける5つの対策</h2>
+      <p class="section-lede">社内SE転職の中核は、<strong>「社内SE」の実態が企業ごとに異なる点を理解し、自分の経験を翻訳すること</strong>とされています。以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 「社内SE」の業務範囲が企業ごとに違う点の理解</h4>
+        <p>同じ「社内SE」でも、IT企画中心の企業もあれば運用・ヘルプデスク中心の企業もあるとされています。求人ごとに実際の業務範囲を確認することが重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 技術力だけでなく調整力・業務理解の言語化</h4>
+        <p>社内SEは社内各部門との調整や業務理解が評価される傾向にあるとされています。技術スキルに加え、調整・折衝の経験を言語化することが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 募集背景と体制の確認 (一人情シスかチームか)</h4>
+        <p>一人で情報システムを担う体制か、チーム体制かで業務負荷や働き方が大きく変わるとされています。応募前に体制を確認することが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 求人倍率の高さを踏まえた準備</h4>
+        <p>社内SEは人気が高く競争率が高い傾向にあるとされています。複数求人への応募と、選考対策の準備を早めに進めることが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: SES・SIer経験のポジティブな翻訳</h4>
+        <p>SES・SIerで培った現場経験・専門技術・プロジェクト遂行力を、社内SEの評価軸 (業務理解・調整・運用) に翻訳して伝えることが鍵とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_shanaise`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_shanaise">
+          <span>経験の翻訳を TechGo の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">社内SEのメリットと留意点</h2>
+      <p class="section-lede">社内SEには働き方の安定などの利点がある一方、留意点もあるとされています。下表は公開情報・業界一般論に基づく傾向の整理であり、企業ごとに実態は異なります。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="社内SEのメリットと留意点">
+          <thead><tr><th>観点</th><th>メリットとされる傾向</th><th>留意点とされる傾向</th></tr></thead>
+          <tbody>
+            <tr><td>働き方</td><td>勤務地・生活リズムが安定しやすい</td><td>企業文化・体制により差がある</td></tr>
+            <tr><td>業務範囲</td><td>企画〜運用まで幅広く経験できる</td><td>特定技術の深掘りはしにくい場合がある</td></tr>
+            <tr><td>キャリア</td><td>業務知識 + IT のハイブリッド人材になりやすい</td><td>最新の開発技術から距離ができる懸念</td></tr>
+            <tr><td>求人</td><td>人気が高く安定志向に合う</td><td>競争率が高い傾向</td></tr>
+            <tr><td>伸びるスキル</td><td>調整・マネジメント力が伸びやすい</td><td>純技術志向には物足りなさを感じる場合</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで社内SE転職の精度を高める</h2>
+      <p>社内SE求人は実態が企業ごとに異なり、求人票だけでは判断しにくいとされています。第三者の視点で情報を補うことが有効とされ、IT エンジニア特化エージェントの公開情報によれば以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>社内SE求人の見極めサポート</h4><p>業務範囲・体制・募集背景など、求人票だけでは分かりにくい情報を補い、ミスマッチ回避を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>SES/SIer経験の翻訳サポート</h4><p>これまでの現場経験を社内SEの評価軸に翻訳し、職務経歴書や面接で伝わる形に整理するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>体制・働き方の情報補完</h4><p>一人情シスかチーム体制かなど、入社後の働き方に直結する情報を確認できるよう補完するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開の社内SE求人紹介</h4><p>公開求人より条件や体制とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>社内SE転職は求人の見極めと経験の翻訳が要とされています。TechGo の無料相談で、求人の見極め・経験の言語化・体制の確認を登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_shanaise`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_shanaise">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/ses-dasshutsu/"><h4>SES 脱出ガイド</h4><p>客先常駐から自社勤務への転職の進め方</p></a>
+        <a class="card-link" href="/infra-engineer-tenshoku/"><h4>インフラエンジニア転職</h4><p>SRE/DevOps のキャリアパスと年収帯</p></a>
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>経験を評価軸に翻訳して伝える方法</p></a>
+        <a class="card-link" href="/it-mikeiken-tenshoku/"><h4>IT 未経験転職ガイド</h4><p>未経験からのエンジニア転職の進め方</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">社内SEの実態を理解し、納得のいく転職に近づく</h2>
+      <p>社内SE転職は求人ごとの実態の見極めと経験の翻訳が鍵とされています。TechGo の無料相談で、求人の見極め・経験の言語化を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_shanaise`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_shanaise">
+          <span>TechGo の無料相談で社内SE転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

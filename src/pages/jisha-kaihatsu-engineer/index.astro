@@ -1,0 +1,248 @@
+---
+/**
+ * jisha-kaihatsu-engineer LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: 自社開発 エンジニア 転職 (比較検討・SES/受託からの転身層)
+ * ★326 DRY 流用元: consul-tenshoku-40dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '自社開発企業へのエンジニア転職完全ガイド｜受託・SESとの違いと現実的な進め方｜TechGo (PR)';
+const description = '自社開発企業へのエンジニア転職を、受託開発・SESとの違い・目指す動機・見極めポイント別に整理。自社開発転職を成功に近づける5つの対策、自社開発企業の見極め方、無料サポートの活用法を公開情報ベースで解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: '自社開発 エンジニア 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '自社開発企業は受託開発より良いのですか?', a: 'どちらが良いかは一概には言えず、重視する価値観によって異なるとされています。自社開発はプロダクトへの継続的な関与がしやすい一方、受託開発は多様な案件・技術に触れやすいとされています。自分が何を重視するかの整理が先とされています。' },
+  { q: 'SESや受託開発から自社開発への転職は可能ですか?', a: '一般的に可能とされています。SES・受託で培った技術力や開発経験は自社開発でも活きるとされており、開発実績やポートフォリオで「何を作れるか」を示すことが鍵とされています。詳細は <a href="/ses-dasshutsu/" class="underline">SES 脱出ガイド</a> もご参照ください。' },
+  { q: '自社開発企業は競争率が高いですか?', a: '自社開発企業はプロダクトへの関与のしやすさなどから人気が高く、競争率が高くなる傾向があるとされています。複数応募と選考準備を早めに進めることが推奨されるとされています。' },
+  { q: '求人に「自社開発」とあれば本当に自社開発ですか?', a: '「自社開発」と記載があっても、実際は受託開発を兼ねている企業もあるとされています。自社プロダクトの売上比率や開発体制を選考過程で確認することが推奨されるとされています。' },
+  { q: '自社開発企業に転職するとモダンな技術が使えますか?', a: '使用技術は企業やプロダクトによって異なり、自社開発であれば必ずモダンな技術というわけではないとされています。技術スタックや技術選定の裁量は選考過程で確認することが推奨されます。' },
+  { q: 'ポートフォリオは自社開発転職に必須ですか?', a: '必須とは限らないとされていますが、開発実績やポートフォリオがあると「何を作れるか」が伝わりやすく評価されやすい傾向があるとされています。詳細は <a href="/engineer-portfolio/" class="underline">エンジニアポートフォリオガイド</a> をご参照ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 自社開発 完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">自社開発</span>企業へのエンジニア転職完全ガイド<br />受託・SESとの違いと、現実的な目指し方</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 自社開発企業への転職は<strong>プロダクトへの継続的な関与を求める人に向く一方、競争率が高く企業の実態確認が重要</strong>とされています。本記事では自社開発・受託・SESの違いと、現実的な進め方を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>自社開発・受託開発・SES の違い</li>
+        <li>自社開発を目指す人の主な動機</li>
+        <li>自社開発転職を成功に近づける5つの対策</li>
+        <li>自社開発企業の見極めポイントと無料サポート</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_jisha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_jisha">
+          <span>TechGo の無料相談で自社開発転職の進め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">自社開発・受託開発・SES の違い</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>開発形態は大きく自社開発・受託開発・SESに分かれるとされ、働き方やキャリアの伸び方が異なるとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="自社開発・受託開発・SESの違い">
+          <thead><tr><th>比較軸</th><th>自社開発</th><th>受託開発</th><th>SES</th></tr></thead>
+          <tbody>
+            <tr><td>開発対象</td><td>自社サービス・プロダクト</td><td>顧客が発注したシステム</td><td>常駐先の案件</td></tr>
+            <tr><td>技術選定</td><td>自社で選定しやすい傾向</td><td>顧客要件に依存する傾向</td><td>常駐先に依存する傾向</td></tr>
+            <tr><td>プロダクトへの関与</td><td>企画〜改善まで継続的</td><td>納品で区切られる傾向</td><td>案件単位で区切られる傾向</td></tr>
+            <tr><td>求められる姿勢</td><td>事業視点・改善志向</td><td>要件遂行・品質担保</td><td>現場への適応力</td></tr>
+            <tr><td>競争率</td><td>人気が高く競争率が高い傾向</td><td>案件・企業により様々</td><td>比較的入りやすいとされる</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_jisha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_jisha">
+          <span>自社開発に合うか TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">自社開発を目指す人の主な動機</h2>
+      <p class="section-lede">自社開発企業を目指す動機を4タイプで整理します。動機が明確なほど企業選びの軸が定まりやすいとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">動機1</span><h4>自分の作るものに長く関わりたい</h4><p>納品で区切られる受託ではなく、プロダクトを継続的に育てたいという動機。長期的な当事者意識を求める人に多いとされています。</p></article>
+        <article class="branch"><span class="tag">動機2</span><h4>モダンな技術・開発文化に触れたい</h4><p>技術選定の裁量がある環境で、レビューやCI/CDなどの開発文化に触れたいという動機。ただし企業ごとに差があるとされています。</p></article>
+        <article class="branch"><span class="tag">動機3</span><h4>事業の成長を実感したい</h4><p>自分の開発が事業の数字に直結する実感を求める動機。プロダクト志向・事業視点を重視する人に多いとされています。</p></article>
+        <article class="branch"><span class="tag">動機4</span><h4>客先常駐・受託の区切りから離れたい</h4><p>常駐や案件単位の働き方から、腰を据えた開発環境へ移りたいという動機。働き方の変化を求める人に多いとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_jisha_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">自社開発転職を成功に近づける5つの対策</h2>
+      <p class="section-lede">自社開発転職の中核は、<strong>企業の実態を見極め、開発実績で「何を作れるか」を示すこと</strong>とされています。以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 「自社開発」を名乗る企業の実態確認</h4>
+        <p>求人に「自社開発」とあっても受託開発を兼ねる企業もあるとされています。自社プロダクトの売上比率・開発体制を選考過程で確認することが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: モダン技術 = 好条件ではない点の理解</h4>
+        <p>モダンな技術スタックと年収・働き方の良さは必ずしも一致しないとされています。技術・条件・カルチャーを分けて確認することが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 開発実績・ポートフォリオの整備</h4>
+        <p>自社開発の選考では「何を作れるか」が重視される傾向にあるとされています。業務での開発実績や個人開発のポートフォリオの整理が推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 事業視点・プロダクト志向の言語化</h4>
+        <p>自社開発企業では、技術力に加えて事業やプロダクトへの関心が評価される傾向にあるとされています。「なぜそのプロダクトか」を語れる準備が推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 競争率を踏まえた複数応募と準備</h4>
+        <p>自社開発企業は競争率が高い傾向にあるとされています。1社に絞らず複数応募し、選考対策を早めに進めることが推奨されます。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_jisha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_jisha">
+          <span>開発実績の整理を TechGo の無料サポートで進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">自社開発企業の見極めポイント</h2>
+      <p class="section-lede">「自社開発」という言葉だけで判断せず、企業ごとの実態を見極めることが重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="自社開発企業の見極めポイント">
+          <thead><tr><th>見極めの軸</th><th>注意したい傾向</th><th>確認したい良い兆候</th></tr></thead>
+          <tbody>
+            <tr><td>「自社開発」の実態</td><td>実際は受託開発が中心</td><td>自社プロダクトの売上比率が明確</td></tr>
+            <tr><td>技術選定の裁量</td><td>顧客都合・上層部都合で固定</td><td>チームで技術を選べる余地がある</td></tr>
+            <tr><td>プロダクトの段階</td><td>立ち上げ直後で不安定</td><td>事業として継続している</td></tr>
+            <tr><td>開発文化</td><td>レビュー・テスト文化が不明確</td><td>CI/CD・レビュー文化が根付いている</td></tr>
+            <tr><td>採用の理由</td><td>離職の補充が中心</td><td>事業拡大に伴う増員</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで自社開発転職の精度を高める</h2>
+      <p>自社開発企業は実態が企業ごとに異なり、求人票だけでは見極めにくいとされています。第三者の視点で情報を補うことが有効とされ、IT エンジニア特化エージェントの公開情報によれば以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>自社開発求人の実態見極め</h4><p>「自社開発」の実態・自社プロダクト比率・開発体制など、求人票だけでは分かりにくい情報を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>SES/受託経験の翻訳</h4><p>これまでの開発経験を、自社開発企業が評価する「何を作れるか」の形に翻訳して伝えるサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>ポートフォリオ・開発実績の整理支援</h4><p>業務実績や個人開発を、選考で伝わる形に整理するサポートです。詳細は <a href="/engineer-portfolio/" class="underline">エンジニアポートフォリオガイド</a> もご参照ください。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開の自社開発求人紹介</h4><p>公開求人より条件や開発環境とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>自社開発転職は企業の見極めと開発実績の整理が要とされています。TechGo の無料相談で、求人の実態確認・経験の翻訳・実績の整理を登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_jisha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_jisha">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/ses-dasshutsu/"><h4>SES 脱出ガイド</h4><p>客先常駐から自社開発・受託への転職</p></a>
+        <a class="card-link" href="/engineer-portfolio/"><h4>エンジニアポートフォリオガイド</h4><p>採用担当者視点のポートフォリオの作り方</p></a>
+        <a class="card-link" href="/backend-engineer-tenshoku/"><h4>バックエンドエンジニア転職</h4><p>言語別の年収帯とキャリアパス</p></a>
+        <a class="card-link" href="/full-remote-engineer/"><h4>フルリモートエンジニア転職</h4><p>リモート企業の見極め方と求人の探し方</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">自社開発企業を見極め、納得のいく転職に近づく</h2>
+      <p>自社開発転職は企業の実態の見極めと開発実績の整理が鍵とされています。TechGo の無料相談で、求人の実態確認・実績の整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_jisha`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_jisha">
+          <span>TechGo の無料相談で自社開発転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
