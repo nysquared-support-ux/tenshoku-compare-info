@@ -1,0 +1,249 @@
+---
+/**
+ * consul-agent-osusume LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル転職 エージェント おすすめ (sv 推定 1,500-2,500・比較検討層)
+ * ★326 DRY 流用元: consul-tenshoku-30dai / ★322 No.1表現 不使用 (景表法)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル転職エージェントの選び方｜特化型と総合型の違い・比較軸・失敗しない基準｜MyVision (PR)';
+const description = 'コンサル転職でエージェントを選ぶ際の比較軸と失敗しない基準を整理。コンサル特化型エージェントと総合型エージェントの違い、エージェント活用で得られるサポート、選定チェックリストを解説。コンサル特化エージェント MyVision の無料カウンセリングも紹介（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル転職エージェントの選び方' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサル転職にエージェントは必要ですか?', a: 'コンサル転職ではケース面接対策・職務経歴書の作成・非公開求人へのアクセス等、専門的なサポートが選考突破に有効とされています。エージェントの利用は必須ではありませんが、特にコンサル特化型エージェントの活用は選考対策の質を高める手段の一つとされています。' },
+  { q: 'コンサル特化型と総合型のエージェントはどちらが良いですか?', a: 'コンサル特化型はケース面接対策・コンサル評価軸の理解・コンサル業界の非公開求人に強みがあるとされ、総合型は求人数の幅広さに強みがあるとされています。コンサル転職を本命とする場合は特化型、選択肢を広く見たい場合は併用が一般的な考え方とされています。両者の優劣は一概に断定できません。' },
+  { q: 'エージェントは複数登録しても良いですか?', a: '複数のエージェントに登録することは一般的とされ、特化型と総合型を組み合わせる利用者も多いとされています。ただし担当者とのコミュニケーション負荷が増えるため、本命の領域に強いエージェントを軸にするのが現実的とされています。' },
+  { q: 'コンサル特化エージェントの利用は無料ですか?', a: 'コンサル転職エージェントの多くは求職者の利用は無料とされています。MyVision を含むコンサル特化エージェントの公開情報によれば、登録・カウンセリング・選考対策サポートは無料で提供されているとされています。正式な条件は各社公式サイトでご確認ください。' },
+  { q: 'エージェント選びで失敗しないコツはありますか?', a: 'コンサル業界・志望ファームへの理解度、ケース面接対策の有無、担当者との相性、非公開求人の保有状況が、エージェント選びの主な比較軸とされています。複数のエージェントと面談し比較することが、ミスマッチを避ける現実的な方法とされています。' },
+  { q: 'MyVision はどんなエージェントですか?', a: 'MyVision はコンサル業界に特化した転職エージェントとされ、公開情報によれば利用者の約9割が業界未経験で、元コンサルタントによる選考対策サポートを提供しているとされています。コンサル転職を本命とする場合の選択肢の一つとして、無料カウンセリングで相性を確認することが推奨されます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / エージェントの選び方ガイド</span>
+      <h1 id="fv-h1">コンサル転職<span class="accent">エージェントの選び方</span><br />特化型と総合型の違い・比較軸・失敗しない基準</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル転職では<strong>ケース面接対策・コンサル評価軸の理解・非公開求人へのアクセスが選考突破に有効</strong>とされ、エージェント選びはこれらのサポート力で比較するのが現実的とされています。本記事では特化型と総合型の違い・比較軸・選定基準を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、特定エージェントの優劣を断定するものではありません。</p>
+      <ul class="fv-bullets">
+        <li>エージェント選びで失敗しないための比較軸</li>
+        <li>コンサル特化型と総合型エージェントの違い</li>
+        <li>エージェント活用で得られる5つのサポート</li>
+        <li>無料カウンセリングでエージェントとの相性を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_agent">
+          <span>コンサル特化エージェントの無料カウンセリングを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">エージェント選びで失敗しないための比較軸</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・各社公式サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル転職エージェントは数多く存在し、それぞれ強みが異なるとされています。下表はエージェントを比較する際の主な軸の整理です。特定エージェントの優劣ではなく、自分の状況に合う軸で選ぶのが現実的とされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="エージェント選びの比較軸">
+          <thead><tr><th>比較軸</th><th>確認ポイント</th><th>重要度 (コンサル本命の場合)</th></tr></thead>
+          <tbody>
+            <tr><td>コンサル業界の理解度</td><td>担当者がコンサル評価軸を理解しているか</td><td>&#11088; 高</td></tr>
+            <tr><td>ケース面接対策の有無</td><td>模擬面接・対策サポートを提供しているか</td><td>&#11088; 高</td></tr>
+            <tr><td>非公開求人の保有</td><td>志望ファームの求人にアクセスできるか</td><td>高</td></tr>
+            <tr><td>担当者との相性</td><td>面談で対応の質・提案力を確認できるか</td><td>高</td></tr>
+            <tr><td>求人数の幅広さ</td><td>選択肢を広く見たい場合に有効</td><td>中</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_agent">
+          <span>コンサル特化エージェントの対応を MyVision 公式の無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">コンサル特化型と総合型エージェントの違い</h2>
+      <p class="section-lede">転職エージェントは大きく「コンサル特化型」と「総合型」に分かれるとされています。それぞれの強みと向いている人を整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特化型</span><h4>コンサル特化型エージェントの強み</h4><p>ケース面接対策・コンサル評価軸の理解・コンサル業界の非公開求人に強みがあるとされています。コンサル転職を本命とする人に向いているとされています。MyVision はこの特化型に分類されるとされています。</p></article>
+        <article class="branch"><span class="tag">総合型</span><h4>総合型エージェントの強み</h4><p>業界横断で求人数が多く、コンサル以外の選択肢も含めて広く比較したい人に向いているとされています。コンサル特化の選考対策は特化型に比べ手薄なケースがあるとされています。</p></article>
+        <article class="branch"><span class="tag">使い分け</span><h4>本命度による使い分け</h4><p>コンサルが第一志望なら特化型を軸に、他業界も視野に入れるなら総合型と併用するのが一般的な考え方とされています。</p></article>
+        <article class="branch"><span class="tag">複数登録</span><h4>複数登録の考え方</h4><p>複数エージェントへの登録は一般的とされますが、コミュニケーション負荷を考え本命領域に強いエージェントを軸にするのが現実的とされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_agent_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">エージェント活用で得られる5つのサポート</h2>
+      <p class="section-lede">コンサル特化エージェントの公開情報によれば、活用で得られる主なサポートは以下とされています。これらの質がエージェント選びの判断材料になるとされています。</p>
+      <div class="counter-box">
+        <h4>サポート1: ケース面接対策</h4>
+        <p>コンサル選考の最大の関門とされるケース面接を、元コンサルが模擬面接形式で対策するサポートです。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>サポート2: 職務経歴書の添削</h4>
+        <p>実績の数値化・専門性の翻訳を、コンサル評価軸を理解した視点で添削するサポートです。書類選考の通過に影響するとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>サポート3: 非公開求人の紹介</h4>
+        <p>公開されていないコンサルファームの求人を紹介してもらえるサポートです。公開求人より好条件のケースもあるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>サポート4: 市場価値・キャリア相談</h4>
+        <p>年齢・経験・専門性を踏まえた市場価値診断とキャリアパス相談です。狙えるファームの当たりを付けられるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>サポート5: 選考スケジュール調整</h4>
+        <p>複数ファームの選考スケジュールの調整・条件交渉の代行を行うサポートです。在職中の転職活動の負荷を下げるとされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_agent">
+          <span>元コンサルの無料サポートを試してみる</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">エージェント選定チェックリスト</h2>
+      <p class="section-lede">エージェントとの面談前後に確認したいチェックリストを整理します。複数のエージェントと面談し、下記の軸で比較するのがミスマッチを避ける現実的な方法とされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="エージェント選定チェックリスト">
+          <thead><tr><th>チェック項目</th><th>確認する理由</th><th>確認タイミング</th></tr></thead>
+          <tbody>
+            <tr><td>コンサル業界に精通しているか</td><td>志望ファームの評価軸を理解しているか</td><td>初回面談</td></tr>
+            <tr><td>ケース面接の対策があるか</td><td>選考最大の関門への備え</td><td>初回面談</td></tr>
+            <tr><td>志望ファームの求人を保有するか</td><td>選択肢の有無を確認</td><td>初回面談</td></tr>
+            <tr><td>担当者の提案が具体的か</td><td>キャリア相談の質を判断</td><td>初回面談</td></tr>
+            <tr><td>連絡頻度・対応速度が適切か</td><td>転職活動の進めやすさ</td><td>面談後</td></tr>
+            <tr><td>複数の選択肢を提示するか</td><td>押し付けでなく比較を支援するか</td><td>面談後</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">コンサル特化エージェント MyVision の無料サポート</h2>
+      <p>MyVision はコンサル業界に特化した転職エージェントとされています。コンサル転職を本命とする場合の選択肢の一つとして、公開情報による主なサポートを整理します。最終的な相性は無料カウンセリングで確認することが推奨されます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特徴1</span><h4>コンサル特化</h4><p>コンサル業界に特化し、元コンサルタントによる選考対策サポートを提供しているとされています。</p></article>
+        <article class="branch"><span class="tag">特徴2</span><h4>未経験者の支援実績</h4><p>公開情報によれば利用者の約9割が業界未経験とされ、未経験を前提とした選考対策が用意されているとされています。</p></article>
+        <article class="branch"><span class="tag">特徴3</span><h4>無料カウンセリング</h4><p>登録・カウンセリング・選考対策サポートは求職者は無料で利用できるとされています。会員登録は30秒程度とされています。</p></article>
+        <article class="branch"><span class="tag">特徴4</span><h4>ファーム別の対策</h4><p>志望ファームの特性に応じた選考対策・志望動機の整理を支援しているとされています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>エージェント選びは複数を比較するのが基本。コンサル転職が本命なら、コンサル特化エージェント MyVision の無料カウンセリングを比較対象の一つに加え、会員登録30秒で相性を確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_agent">
+          <span>MyVision の無料カウンセリングを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略系・総合系・IT系・FAS系・公共系の特徴と違い</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク</p></a>
+        <a class="card-link" href="/consul-tenshoku-nandido/"><h4>コンサル転職 難易度ガイド</h4><p>「難しい」とされる理由と現実的な突破法</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">比較軸を持ってエージェントを選び、コンサル転職を有利に進める</h2>
+      <p>エージェント選びは比較軸を持って複数を見比べるのが基本。コンサル転職が本命なら、コンサル特化エージェント MyVision の無料カウンセリングを比較対象に加え、30秒の会員登録で相性を確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_agent">
+          <span>コンサル特化エージェントの無料カウンセリングを試す</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

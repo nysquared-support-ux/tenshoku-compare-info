@@ -1,0 +1,247 @@
+---
+/**
+ * postconsul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: ポストコンサル 転職 (sv 推定 700-1,200・比較検討層)
+ * ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'ポストコンサル転職ガイド｜コンサル経験を活かす出口キャリアと転職先・年収｜MyVision (PR)';
+const description = 'ポストコンサル (コンサル出身者の次のキャリア) の主な転職先を、事業会社経営企画・管理職・PE/VC・起業の観点で整理。ポストコンサル転職のタイミング・準備・転職先別の年収傾向と、コンサル業界に精通したエージェントへのキャリア相談法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'ポストコンサル転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'ポストコンサルとは何ですか?', a: 'ポストコンサルとは、コンサルティングファームでの経験を経て次のキャリアに移ること、またはその転職層を指す一般的な呼称とされています。主な転職先は事業会社の経営企画・管理職、PE/VC、起業・スタートアップ等とされています。' },
+  { q: 'ポストコンサルの転職市場価値は高いですか?', a: 'コンサル経験で培われる論理的思考・プロジェクトマネジメント・構造化能力は、事業会社をはじめ多くの場で評価される傾向にあるとされています。ただし転職先の業界・ポジションにより評価軸が変わるため、出口の見極めが重要とされています。' },
+  { q: 'ポストコンサル転職のベストなタイミングはいつですか?', a: '一般的にはコンサルでの一定の経験 (案件複数経験・役割の習熟) を積んだ段階が一つの目安とされていますが、最適なタイミングは目指すキャリアと個人の状況により異なるとされています。早めのキャリア相談で出口を逆算する考え方が有効とされています。' },
+  { q: 'ポストコンサルの主な転職先はどこですか?', a: '事業会社の経営企画・事業企画、事業会社の管理職、PE ファンド・VC、起業・スタートアップ幹部が主な転職先とされています。コンサルで関わった業界・テーマに近い領域への転身も多いとされています。' },
+  { q: 'ポストコンサル転職でエージェントは使うべきですか?', a: 'コンサル業界とポストコンサルの出口に精通したエージェントへの相談は、出口の選択肢の整理やキャリアの逆算に有効とされています。コンサル業界に詳しいエージェントは、コンサルへの転職だけでなくコンサル経験者のキャリア相談にも対応するケースがあるとされています。' },
+  { q: 'コンサル未経験ですがポストコンサルのキャリアを目指せますか?', a: 'ポストコンサルはコンサル経験を前提とするキャリアのため、まずコンサルへの転職が起点となります。コンサル未経験からのキャリアは <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル転職 未経験ガイド</a> をご参照ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / ポストコンサル出口ガイド</span>
+      <h1 id="fv-h1"><span class="accent">ポストコンサル</span>転職ガイド<br />コンサル経験を活かす出口キャリアと転職先・年収</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: ポストコンサル (コンサル出身者の次のキャリア) の主な出口は<strong>事業会社の経営企画・管理職、PE/VC、起業・スタートアップ</strong>とされ、コンサルで培う論理的思考・プロジェクト推進力が幅広く評価される傾向にあるとされています。本記事では出口の選択肢・タイミング・年収傾向を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ポストコンサルの主な転職先マップ</li>
+        <li>ポストコンサル 4 つのキャリアパス</li>
+        <li>転職先別の年収・特徴とタイミングの考え方</li>
+        <li>コンサル業界に精通したエージェントへの相談法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_postconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_postconsul">
+          <span>コンサル業界に詳しいエージェントに無料でキャリア相談する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ポストコンサルの主な転職先マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・各社公式サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>ポストコンサルの転職先は多岐にわたり、コンサルで培った能力をどう活かすかで選択肢が変わるとされています。下表は主な出口の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ポストコンサルの転職先マップ">
+          <thead><tr><th>転職先</th><th>活かせるコンサル経験</th><th>主な志向性</th></tr></thead>
+          <tbody>
+            <tr><td>事業会社 経営企画・事業企画</td><td>戦略立案・構造化・プロジェクト推進</td><td>事業の当事者になりたい</td></tr>
+            <tr><td>事業会社 管理職・部門責任者</td><td>マネジメント・課題解決</td><td>組織を動かしたい</td></tr>
+            <tr><td>PE ファンド・VC</td><td>財務分析・事業評価・投資判断</td><td>投資側で価値を生みたい</td></tr>
+            <tr><td>起業・スタートアップ幹部</td><td>0→1 推進・全体設計</td><td>自ら事業を作りたい</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_postconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_postconsul">
+          <span>自分に合う出口を MyVision 公式の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ポストコンサル 4 つのキャリアパス</h2>
+      <p class="section-lede">ポストコンサルの主なキャリアパスを4タイプで整理します。コンサルで関わったテーマ + 志向性で適合性が変わるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>事業会社の経営企画・事業企画</h4><p>コンサルの戦略立案・構造化スキルを、事業会社の中で当事者として実行するパス。コンサルで関わった業界の事業会社への転身が多いとされています。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>事業会社の管理職・部門責任者</h4><p>コンサルのマネジメント・課題解決経験を、事業会社の組織運営に活かすパス。一定の役職経験を積んだ後の転身が多いとされています。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>PE ファンド・VC</h4><p>財務分析・事業評価の力を投資サイドで活かすパス。FAS 系・戦略系出身者に多い傾向にあるとされています。詳細は <a href="/finance-kara-consul/" class="underline">金融×コンサルのキャリア</a> も参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>起業・スタートアップ幹部</h4><p>0→1 の事業立ち上げや、成長スタートアップの幹部 (COO・事業責任者) として全体設計を担うパス。自ら事業を作りたい志向の人に多いとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_postconsul_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">ポストコンサル転職のタイミングと準備</h2>
+      <p class="section-lede">ポストコンサルの転職は、出口を逆算した準備が重要とされています。タイミングと準備の主なポイントを整理します。</p>
+      <div class="counter-box">
+        <h4>準備1: 出口の方向性を早めに描く</h4>
+        <p>「コンサルの先に何をしたいか」を早めに描くことで、在籍中に積むべき経験・案件を選びやすくなるとされています。出口の逆算がポストコンサル準備の起点とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備2: 専門テーマ・業界知見の蓄積</h4>
+        <p>事業会社や投資先で評価されやすいよう、特定の業界・テーマでの専門性を意識的に蓄積することが有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備3: 実績の「事業貢献」言語化</h4>
+        <p>コンサルの成果を「クライアントの事業にどう貢献したか」の視点で言語化することが、事業会社・投資サイドへの転職で評価につながるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備4: タイミングの見極め</h4>
+        <p>一定の案件経験・役割の習熟を積んだ段階が一つの目安とされますが、最適なタイミングは目指す出口により異なるとされています。早めのキャリア相談が有効とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>準備5: ネットワークと情報収集</h4>
+        <p>出口先の業界動向・求人情報を継続的に収集し、コンサル業界に詳しいエージェント等から非公開情報を得ることが有効とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_postconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_postconsul">
+          <span>ポストコンサルの出口を元コンサルの無料サポートで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">転職先別の年収・特徴傾向</h2>
+      <p class="section-lede">ポストコンサルの主な転職先を、年収レンジ・特徴で整理します。下表は公開情報に基づく一般的傾向であり、個人の経験・ポジションにより変動します。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ポストコンサル転職先別の傾向">
+          <thead><tr><th>転職先</th><th>年収レンジ目安</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr><td>事業会社 経営企画・事業企画</td><td>700-1,300万円</td><td>事業の当事者として戦略を実行</td></tr>
+            <tr><td>事業会社 管理職・部門責任者</td><td>800-1,500万円</td><td>組織マネジメントと成果責任</td></tr>
+            <tr><td>PE ファンド</td><td>1,000-2,500万円</td><td>高待遇だが選考は狭き門とされる</td></tr>
+            <tr><td>VC</td><td>800-1,800万円</td><td>投資判断と起業家支援</td></tr>
+            <tr><td>スタートアップ幹部</td><td>600-1,500万円 + SO</td><td>年収は幅広・ストックオプション付与例も</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">ポストコンサルのキャリア相談に活かす無料サポート</h2>
+      <p>ポストコンサルの出口選びは、コンサル業界とその先のキャリアに精通したエージェントへの相談が有効とされています。コンサル特化エージェントの公開情報によれば、以下のサポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>出口キャリアの整理</h4><p>事業会社・PE/VC・起業など、自分の志向と経験に合う出口を一緒に整理するキャリア相談です。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>市場価値の確認</h4><p>コンサル経験を踏まえた市場価値を、出口先の評価軸で確認するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>実績の言語化サポート</h4><p>コンサルの成果を「事業貢献」の視点で言語化し、出口先に響く形に整理するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の情報</h4><p>事業会社の経営幹部候補など、非公開の求人情報にアクセスできるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>ポストコンサルの出口選びは早めの相談が要。コンサル業界に精通した MyVision の無料カウンセリングで、出口キャリアの整理 + 市場価値の確認を会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_postconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_postconsul">
+          <span>ポストコンサルのキャリア相談を試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略系・総合系・IT系・FAS系・公共系の特徴と違い</p></a>
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>金融出身者のコンサル転職とキャリアパス</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収ガイド</h4><p>ファーム・役職別の年収レンジの整理</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験からコンサルへ・選考突破の5つのカギ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">ポストコンサルの出口を早めに描き、次のキャリアを有利に進める</h2>
+      <p>ポストコンサルの出口選びは早めの逆算が要。コンサル業界に精通した MyVision の無料カウンセリングで、出口キャリアの整理 + 市場価値の確認を30秒の会員登録で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_postconsul`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_postconsul">
+          <span>コンサル業界に詳しいエージェントに無料でキャリア相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
