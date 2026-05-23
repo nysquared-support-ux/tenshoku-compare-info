@@ -1,0 +1,239 @@
+---
+/**
+ * pmo-tenshoku LP (MyVision コンサル特化・★326 DRY consul-chuto-saiyo)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: PMO 転職 (sv 300-500・コンサル隣接・高CV)
+ * 収益最大化: 高 intent KW・転職意向強い検索層を捕捉
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'PMO 転職 完全ガイド｜求められる経験・年収レンジ・狙えるファームと選考対策｜MyVision (PR)';
+const description = 'PMO (プロジェクトマネジメント・オフィス) 転職について、求められる経験・年代別の市場価値・年収レンジ・狙えるファーム (大手 SIer / コンサル / 事業会社) を公開情報ベースで整理。元コンサルが在籍する MyVision の無料キャリア面談で市場価値を把握する流れも解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'PMO 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'PMO とは何ですか?', a: '一般にプロジェクトマネジメント・オフィスの略で、プロジェクトの計画策定支援・進捗管理・課題管理・品質管理を担う組織または役割とされています。コンサル/SIer/事業会社など複数領域に存在し、業界・企業により役割範囲は異なります。' },
+  { q: 'PMO の年収レンジは?', a: '一般公開情報によれば、未経験寄りの PMO アシスタント職で 400-600万円、PMO スペシャリストで 600-1,000万円、PMO マネージャー以上で 1,000-1,500万円帯が中心とされる傾向です。経験・業界・ファーム規模により幅があります。具体的な見込みは <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> も参照ください。' },
+  { q: '未経験から PMO は目指せますか?', a: '一般的に、PM・PMO 支援経験 / SIer の上流工程経験 / 事業会社の事業推進経験などが評価される傾向とされ、関連経験があれば未経験から目指す道もあるとされます。具体的な可否は経験の整理を踏まえ、コンサル特化エージェントに相談することが推奨されます。' },
+  { q: 'PMO と PM の違いは?', a: 'PM (プロジェクトマネージャー) はプロジェクト全体の意思決定・予算・スケジュール責任を持つ役割で、PMO は PM の意思決定を支援し進捗・課題・品質を可視化する役割が一般的とされます。境界はプロジェクトにより異なります。' },
+  { q: 'PMO 転職に強いエージェントは?', a: 'コンサル業界知見のあるエージェント (元コンサル在籍など) が、PMO 求人の役割範囲・年収相場・選考対策の精度で強みがあるとされます。MyVision など、コンサル特化エージェントへの相談が選択肢の一つです。' },
+  { q: 'PMO 転職の選考はどんな内容ですか?', a: '一般的に書類選考 → ケース面接または実務想定面接 → 役員面接の流れが多く、論理思考 + プロジェクト推進経験 + ステークホルダー調整経験が評価軸とされます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / PMO 転職ガイド</span>
+      <h1 id="fv-h1">PMO <span class="accent">転職</span> 完全ガイド<br />求められる経験・年収レンジ・狙えるファームと選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: PMO は <strong>大手 SIer・コンサルファーム・事業会社それぞれに需要がある</strong>とされ、関連プロジェクト推進経験があれば年代を問わず転職検討余地があるとされる傾向です。本記事では役割範囲・年収レンジ・狙えるファーム別の採用傾向・選考プロセスを公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>PMO の役割範囲とプロジェクトタイプ別の違い</li>
+        <li>年代別 (20代後半 / 30代 / 40代) の市場価値</li>
+        <li>年収レンジ (アシスタント / スペシャリスト / マネージャー)</li>
+        <li>狙えるファーム / 事業会社の採用傾向</li>
+        <li>選考プロセス 5 ステップ + 評価される経験の整理法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_pmo">
+          <span>PMO 転職の市場価値を MyVision の無料カウンセリングで確認 (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ コンサル特化エージェント MyVision の公開情報: 利用者の9割が業界未経験で選考突破 / 元コンサル在籍コンサルタントが面談を担当 / 完全無料・在職中相談可・オンライン完結 / 内定後の年収交渉支援。本ページはアフィリエイト広告（PR）を含み、本サイトは転職エージェント公式ではなく公開情報整理サイトです。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">PMO の役割範囲 と プロジェクトタイプ別の違い</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / コンサル業界 / SIer 公開採用情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>PMO の役割は <strong>プロジェクトタイプ・所属組織により幅がある</strong>とされ、求人の中身を見極めることが重要とされます。下表は公開情報・業界一般論をもとにした整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="PMO の役割タイプ比較">
+          <thead><tr><th>タイプ</th><th>主な業務</th><th>所属の代表例</th><th>求められる経験</th></tr></thead>
+          <tbody>
+            <tr><td>戦略 PMO</td><td>経営アジェンダの推進管理・課題抽出</td><td>戦略コンサル / 経営企画</td><td>論理思考・経営層との折衝</td></tr>
+            <tr><td>IT/DX 系 PMO</td><td>大型システム導入・DX 推進の進捗管理</td><td>IT コンサル / SIer</td><td>システム理解・上流工程経験</td></tr>
+            <tr><td>業務改革 PMO</td><td>業務プロセス再設計・変革推進</td><td>総合コンサル / 事業会社</td><td>業務理解・変革推進経験</td></tr>
+            <tr><td>新規事業 PMO</td><td>新規事業立ち上げの推進・チーム支援</td><td>事業会社 / ベンチャー</td><td>事業推進・複数部署調整</td></tr>
+            <tr><td>大型プログラム PMO</td><td>複数プロジェクトの統合管理</td><td>大手コンサル / 大型 SIer</td><td>マネジメント経験・予算管理</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 求人の役割範囲は企業により異なります。応募前に「具体的にどのフェーズ・どの規模・どの裁量範囲か」を確認することが推奨されます。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_pmo">
+          <span>自分に合う PMO タイプを MyVision の無料カウンセリングで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年代別の市場価値 + 年収レンジの目安</h2>
+      <p class="section-lede">PMO 転職は <strong>年代に応じて求められる経験が異なる</strong>とされます。下表は公開情報・業界一般論に基づく傾向の整理で、年収は経験・業界・ファーム規模により幅があります。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">20代後半</span><h4>PMO アシスタント / ジュニア</h4><p>PM 補佐・進捗管理・資料作成が中心とされ、論理思考と素直さが評価される傾向。年収レンジ 400-650万円帯が中心の例とされます。</p></article>
+        <article class="branch"><span class="tag">30代前半</span><h4>PMO スペシャリスト</h4><p>個別領域 (進捗管理・課題管理・品質管理など) の専門性 + ステークホルダー調整経験が評価されるとされ、年収 600-1,000万円帯の例が公開情報で見られます。</p></article>
+        <article class="branch"><span class="tag">30代後半-40代</span><h4>PMO マネージャー / シニア</h4><p>大型プログラムの統合管理 + 予算管理 + 後進育成が求められるとされ、年収 1,000-1,500万円帯が中心の例とされます。専門特化 + マネジメント経験が鍵。</p></article>
+        <article class="branch"><span class="tag">40代以降</span><h4>シニアアドバイザー型</h4><p>業界・領域に深い知見を活かしたアドバイザリー型の関わり方が増えるとされ、年収レンジは個別案件 + 契約形態により幅があります。</p></article>
+      </div>
+      <p class="compare-note">※ 年収レンジは公開情報・業界一般論をもとにした目安であり、特定企業・特定役職での金額を保証するものではありません。具体的な見込みは <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> も参照ください。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec2_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec2_pmo">
+          <span>自分の年代の市場価値を MyVision の無料カウンセリングで確認</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">狙えるファーム / 事業会社 と 選考対策</h2>
+      <p class="section-lede">PMO 求人は <strong>戦略 / 総合 / IT / 公共 / 事業会社</strong> と幅広い領域に存在するとされ、自分の経験との相性 + キャリアの方向性で選び方が変わるとされます。</p>
+      <div class="card-grid">
+        <div class="card"><h3>選考プロセス 5 ステップ</h3><p><strong>① 書類選考</strong> (職務経歴書 - プロジェクト推進実績の棚卸し重要)<br /><strong>② 適性検査</strong> (論理思考)<br /><strong>③ ケース面接 / 実務想定面接</strong> (複数回)<br /><strong>④ 役員 / パートナー面接</strong> (志望動機 + キャリアビジョン)<br /><strong>⑤ オファー面談</strong> (年収交渉)<br />詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a>・<a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a> 参照。</p></div>
+        <div class="card"><h3>評価される経験の整理法</h3><p><strong>① プロジェクト規模</strong> (人数・期間・予算)<br /><strong>② 担当領域</strong> (進捗管理・課題管理・品質管理など)<br /><strong>③ ステークホルダー数 / 階層</strong> (調整経験の幅)<br /><strong>④ 業界・業務知見</strong><br /><strong>⑤ 困難な状況での推進実績</strong> (STAR フレームワーク)<br />これらを言語化することで、書類選考突破率と面接での説得力が変わるとされます。</p></div>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_pmo_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415262687&wid=001&eno=01&mid=s00000024757001003000&mc=1" alt="MyVision コンサル特化転職エージェント (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_pmo">
+          <span>PMO 求人の見極めを MyVision の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">MyVision を活用する 4 つの理由 (公開情報ベース)</h2>
+      <p class="section-lede">PMO 転職で <strong>コンサル特化エージェント</strong> を活用するメリットを、MyVision の公開情報をもとに整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>元コンサル在籍コンサルタント</h4><p>コンサル業界の選考プロセス・ケース面接・職務経歴書要件を深く理解した元コンサル出身者が、面談・選考支援を担当するとされる公開情報。役割範囲のミスマッチ回避につながりやすいとされます。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>未経験 9 割の支援実績</h4><p>利用者の9割が業界未経験での選考突破実績があるとされる公開情報。PMO は隣接領域からの転身も多い領域のため、未経験者向けノウハウが活用しやすいとされます。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>非公開求人の紹介</h4><p>PMO 求人は非公開求人として扱われるケースもあるとされ、登録エージェント経由でしかアクセスできない求人もあるとされる公開情報。複数選択肢の比較に有用とされます。</p></article>
+        <article class="branch"><span class="tag">理由4</span><h4>内定後の年収交渉支援</h4><p>業界相場・役職別年収帯を踏まえた交渉知見があるエージェントがいることで、適正な条件提示につながりやすいとされる公開情報 (但し交渉結果を保証するものではありません)。</p></article>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_pmo">
+          <span>MyVision の無料カウンセリングを試す (登録30秒・在職中相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ MyVision 公開情報: 完全無料 / オンライン完結 / 在職中相談可 / 退会自由 / 元コンサル在籍コンサルタント担当。利用者の負担はありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">向いている人 / 慎重に検討したい人</h2>
+      <p class="section-lede">PMO 転職は誰にとっても最適とは限らないとされます。下表は公開情報・業界一般論に基づく傾向の整理であり、適否を断定するものではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="PMO 転職の向き不向き">
+          <thead><tr><th>軸</th><th>向きやすい傾向</th><th>慎重に検討したい傾向</th></tr></thead>
+          <tbody>
+            <tr><td>やりがいの源泉</td><td>プロジェクトを動かす全体感に価値</td><td>個別領域の深い専門性追求</td></tr>
+            <tr><td>コミュニケーション</td><td>多階層・多部署の調整を苦にしない</td><td>個人作業中心を好む</td></tr>
+            <tr><td>関心の対象</td><td>進捗・課題・品質の可視化と推進</td><td>特定技術の深堀り</td></tr>
+            <tr><td>キャリア方向</td><td>マネジメント領域へ広げたい</td><td>専門職 (スペシャリスト) を志向</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 専門特化型を志向する場合は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a>・<a href="/dx-consul-tenshoku/" class="underline">DX コンサル転職</a> も参照ください。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-chuto-saiyo/"><h4>コンサル 中途採用 完全ガイド</h4><p>未経験〜経験者・全方位整理</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル 転職ガイド</h4><p>SIer から IT コンサルへの道</p></a>
+        <a class="card-link" href="/dx-consul-tenshoku/"><h4>DX コンサル 転職ガイド</h4><p>DX 推進ロードマップと求人</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>頻出パターン + 模範解答の組み立て</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">PMO 転職の市場価値を MyVision の無料カウンセリングで確認</h2>
+      <p>PMO 転職は役割範囲が幅広く、自分の経験との相性を見極めることが大切とされます。MyVision の無料相談で、市場価値の把握・職務経歴書の整理・求人の見極めを登録 30 秒で始められます (完全無料・在職中相談可・オンライン完結)。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_pmo">
+          <span>MyVision の無料カウンセリングを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

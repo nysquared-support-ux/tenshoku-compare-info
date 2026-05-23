@@ -1,0 +1,234 @@
+---
+/**
+ * eigyou-kara-consul LP (MyVision コンサル特化・★326 DRY consul-chuto-saiyo)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 営業からコンサル (sv 200-400・業界転身・高CV)
+ * 収益最大化: 転身志向強い検索層
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '営業からコンサル転職 完全ガイド｜評価される営業経験・狙えるファーム・選考対策｜MyVision (PR)';
+const description = '営業職からコンサルへの転職について、評価される営業経験 (法人営業 / SaaS / コンサルティング営業)・年代別の市場価値・狙えるファーム・選考プロセスを公開情報ベースで整理。元コンサル在籍の MyVision 無料キャリア面談活用法も解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '営業からコンサル' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '営業からコンサルへの転職は実現可能ですか?', a: '一般公開情報によれば、コンサル業界の中途採用では業界未経験者の比率が高く、営業職からの転身も一般的なパスの一つとされる傾向です。特に法人営業・コンサルティング営業・SaaS 営業など、ソリューション提案型の経験がある場合は評価されやすいとされます。' },
+  { q: '何歳まで営業からコンサル転職できますか?', a: '一般的には 20代後半〜30代前半が中心とされ、30代後半 (-39歳) も専門領域 + マネジメント経験があれば対象とされる傾向です。40代以降は専門特化型 + 高度なコンサルティング経験が求められる傾向とされます。詳細は <a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル 転職</a>・<a href="/consul-tenshoku-20daikouhan/" class="underline">20代後半 コンサル 転職</a> 参照。' },
+  { q: '営業経験のうち何が評価されますか?', a: '一般的に ① 顧客の課題発見 → 解決策提案の経験 ② 大型案件の進行管理経験 ③ 多階層 (部長 / 役員) との折衝経験 ④ 数値目標達成への意識と実績 などが評価される傾向とされます。経験の STAR フレームでの言語化が重要とされます。' },
+  { q: '営業からコンサルで年収は上がりますか?', a: '一般公開情報によれば、未経験中途で 500-800万円、経験者中途で 700-1,500万円帯が中心とされる傾向です。前職年収・経験 + 入社ファームにより幅があり、必ずしも上がるとは限らない点も含めて事前確認が推奨されます。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: '営業からコンサル転職の選考はどう変わりますか?', a: '一般的にケース面接 (論理思考) + 志望動機 (なぜコンサルか) が重視され、営業実績だけでは突破が難しいとされる傾向です。論理的問題解決の準備と、コンサル特化エージェントでの選考対策が推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: '営業からコンサルに強いエージェントは?', a: 'コンサル業界知見が深いエージェント (元コンサル在籍など) が、業界未経験者向けの選考対策・志望動機設計で強みがあるとされる傾向。MyVision など、コンサル特化エージェントへの相談が選択肢の一つです。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 業界転身ガイド</span>
+      <h1 id="fv-h1"><span class="accent">営業からコンサル</span> 転職 完全ガイド<br />評価される営業経験・狙えるファーム・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 営業からコンサル転職は <strong>業界未経験者の比率が高いコンサル中途市場で、一般的なパスの一つ</strong>とされる傾向。特に法人営業・ソリューション提案型営業の経験は評価されやすいとされます。本記事では評価される営業経験 + 年代別の市場価値 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>営業経験のうち評価される 4 ポイント</li>
+        <li>年代別 (20代後半 / 30代前半・後半) の市場価値</li>
+        <li>狙えるファーム別 (戦略 / 総合 / IT / 公共) の採用傾向</li>
+        <li>営業からコンサル転職の選考プロセスと突破ポイント</li>
+        <li>志望動機の設計法 (なぜ営業を辞めてコンサルか)</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_eigyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_eigyou">
+          <span>営業経験の市場価値を MyVision の無料カウンセリングで確認 (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ コンサル特化エージェント MyVision 公開情報: 利用者の9割が業界未経験で選考突破 / 元コンサル在籍コンサルタント担当 / 完全無料・在職中相談可・オンライン完結 / 内定後の年収交渉支援。本ページはアフィリエイト広告（PR）を含み、本サイトは転職エージェント公式ではなく公開情報整理サイトです。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">営業経験のうち評価される 4 ポイント</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / コンサル業界 公開採用情報 / コンサル特化エージェント 公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>営業経験のすべてがコンサル選考で評価される訳ではないとされ、<strong>「コンサル業務に転用できる経験」を切り出して言語化することが重要</strong>とされます。下表は公開情報・業界一般論をもとにした整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="営業経験で評価されるポイント">
+          <thead><tr><th>評価ポイント</th><th>営業での該当経験例</th><th>コンサルでの活用シーン</th></tr></thead>
+          <tbody>
+            <tr><td>① 課題発見 → 解決策提案</td><td>顧客ヒアリング → ソリューション設計</td><td>クライアントの真の課題を構造化</td></tr>
+            <tr><td>② 大型案件の推進管理</td><td>複数部署巻き込み・長期商談の推進</td><td>プロジェクトの進捗・課題管理</td></tr>
+            <tr><td>③ 多階層ステークホルダー折衝</td><td>担当者〜役員までの提案・交渉</td><td>クライアントの経営層との対話</td></tr>
+            <tr><td>④ 数値目標達成への意識と実績</td><td>予算達成・新規開拓・大型受注</td><td>プロジェクト目標達成への責任感</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ STAR フレーム (Situation / Task / Action / Result) で具体エピソード化することで、面接での説得力が変わるとされます。詳細は <a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a> 参照。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_eigyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_eigyou">
+          <span>自分の営業経験の整理を MyVision の無料カウンセリングで進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年代別の市場価値 + 狙えるファーム傾向</h2>
+      <p class="section-lede">年代と前職での営業タイプにより、狙えるファーム・年収レンジが変わるとされる傾向です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">20代後半</span><h4>戦略 / 総合 / IT 系の中途未経験枠</h4><p>論理思考 + ポテンシャル評価が中心とされ、戦略系・総合系・IT 系を含めて選択肢が広い傾向。年収 500-800万円帯が中心の例とされます。</p></article>
+        <article class="branch"><span class="tag">30代前半</span><h4>業界知見 + 提案力 がある中堅</h4><p>営業で培った業界知見 + 提案力が評価され、総合系・IT 系・業界特化系で活躍余地があるとされる傾向。年収 700-1,200万円帯の例が公開情報で見られます。</p></article>
+        <article class="branch"><span class="tag">30代後半</span><h4>マネジメント経験 + 専門性</h4><p>営業マネジメント経験 + 特定業界の深い知見があると、業界特化型コンサル + 事業会社の経営企画 + マネジメント枠が候補とされます。年収 1,000-1,500万円帯。</p></article>
+        <article class="branch"><span class="tag">SaaS / 法人営業出身</span><h4>IT / DX / SaaS 系コンサル</h4><p>SaaS 営業・法人営業からは IT コンサル / DX コンサル / SaaS 系コンサルが相性が良い傾向とされ、業界知見が活かしやすいパスとされます。詳細 <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a>・<a href="/dx-consul-tenshoku/" class="underline">DX コンサル転職</a>。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec2_eigyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec2_eigyou">
+          <span>自分の年代 × 営業タイプの市場価値を MyVision で確認</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">選考プロセス + 志望動機の設計法</h2>
+      <p class="section-lede">営業からコンサルの選考は <strong>「論理思考」と「なぜコンサルか」の説得力</strong>が鍵とされる傾向です。</p>
+      <div class="card-grid">
+        <div class="card"><h3>選考プロセス 5 ステップ</h3><p><strong>① 書類選考</strong> (営業実績 + コンサル転用ポイントの整理)<br /><strong>② 適性検査</strong> (論理思考・数値処理)<br /><strong>③ ケース面接</strong> (複数回・業界別)<br /><strong>④ 役員 / パートナー面接</strong> (志望動機 + キャリアビジョン)<br /><strong>⑤ オファー面談</strong> (年収交渉)<br />詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></div>
+        <div class="card"><h3>志望動機の設計 (なぜ営業を辞めてコンサルか)</h3><p><strong>① 営業で得たもの</strong>を肯定的に整理 (Why now)<br /><strong>② 営業では実現困難なこと</strong>を構造的に説明 (限界の言語化)<br /><strong>③ コンサルで実現したいこと</strong>を具体的に (キャリアビジョン)<br /><strong>④ 入社後3-5年の構想</strong> (短期 × 中長期)<br />詳細 <a href="/consul-shibodouki/" class="underline">志望動機設計ガイド</a>。</p></div>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_eigyou_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415262687&wid=001&eno=01&mid=s00000024757001003000&mc=1" alt="MyVision コンサル特化転職エージェント (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_eigyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_eigyou">
+          <span>選考対策を MyVision の無料カウンセリングで進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">MyVision を活用する 4 つの理由 (公開情報ベース)</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>元コンサル在籍コンサルタント</h4><p>コンサル業界の選考プロセス・ケース面接・職務経歴書要件を深く理解した元コンサル出身者が担当するとされる公開情報。営業出身者向けの志望動機設計サポートも具体的とされます。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>未経験 9 割の支援実績</h4><p>利用者の9割が業界未経験で選考突破の実績があるとされる公開情報。営業からの転身ノウハウも蓄積されているとされます。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>非公開求人 / 業界特化求人</h4><p>営業出身者向けの業界特化 (SaaS / 製薬 / 金融など) コンサル求人を含む非公開求人が紹介可能とされる公開情報。</p></article>
+        <article class="branch"><span class="tag">理由4</span><h4>内定後の年収交渉支援</h4><p>業界相場・役職別年収帯を踏まえた交渉知見があり、適正な条件提示につながりやすいとされる公開情報 (交渉結果保証ではありません)。</p></article>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_eigyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_eigyou">
+          <span>MyVision の無料カウンセリングを試す (登録30秒・在職中相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ MyVision 公開情報: 完全無料 / オンライン完結 / 在職中相談可 / 退会自由。利用者の負担はありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">向いている人 / 慎重に検討したい人</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="営業からコンサル転職の向き不向き">
+          <thead><tr><th>軸</th><th>向きやすい傾向</th><th>慎重に検討したい傾向</th></tr></thead>
+          <tbody>
+            <tr><td>志向</td><td>クライアントの課題解決に深く関わりたい</td><td>営業の自由度を重視</td></tr>
+            <tr><td>働き方</td><td>知的負荷の高い業務を厭わない</td><td>顧客接点中心の働き方を継続したい</td></tr>
+            <tr><td>キャリア</td><td>論理思考力 + 業界横断知見を獲得</td><td>特定業界・特定商材の専門性深化</td></tr>
+            <tr><td>年収</td><td>役職に応じた年収レンジ拡大を狙う</td><td>歩合給型・成果直結報酬を重視</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル 転職</h4><p>業界未経験者の選考突破ガイド</p></a>
+        <a class="card-link" href="/consul-shibodouki/"><h4>志望動機設計ガイド</h4><p>なぜコンサルか の説得力ある言語化</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル 転職</h4><p>営業 SaaS 出身者と相性</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>ファーム 5 区分比較</h4><p>戦略/総合/FAS/IT/公共 特性整理</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">営業経験の市場価値を MyVision の無料カウンセリングで確認</h2>
+      <p>営業からコンサル転職は、自分の営業経験のうちコンサル業務に転用できる部分を構造的に言語化することが鍵とされます。MyVision の無料相談で、市場価値の把握・志望動機の設計・職務経歴書整理を登録 30 秒で始められます (完全無料・在職中相談可・オンライン完結)。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_eigyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_eigyou">
+          <span>MyVision の無料カウンセリングを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

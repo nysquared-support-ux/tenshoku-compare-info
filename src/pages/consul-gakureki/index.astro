@@ -1,0 +1,217 @@
+---
+/**
+ * consul-gakureki LP (MyVision コンサル特化・★326 DRY consul-chuto-saiyo)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 学歴 (sv 300-500・不安解消型・高検索量)
+ * 収益最大化: 学歴に不安を持つ層を「学歴だけが全てではない」と honest に整理→相談動機を喚起
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)';
+const description = 'コンサル転職における学歴の影響について、学歴フィルターの実態 (公開情報ベース)・選考での学歴以外の評価軸・学歴に不安がある場合の対策を整理。元コンサルが在籍する MyVision の無料キャリア面談で、自分の市場価値を把握する流れも解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 学歴' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサル業界に学歴フィルターはありますか?', a: '一般的に戦略系最大手 (MBB 等) は応募段階で学歴を一定考慮する傾向があるとされる公開情報がありますが、ファームによって差が大きく、すべてのコンサルで一律ではないとされます。総合系・IT 系・公共系などは学歴以外の要素 (実務経験・専門性) を重視するケースも多いとされます。' },
+  { q: '高卒・専門卒からコンサル転職はできますか?', a: '一般公開情報によれば、最終学歴より実務経験 + 専門性 + 論理思考が評価軸となるファーム (総合系・IT 系・業界特化系) も存在するとされます。応募可能な求人の絞り込みはコンサル特化エージェントに相談することが推奨されます。' },
+  { q: '私大文系出身でもコンサル転職できますか?', a: '一般公開情報によれば、私大文系出身のコンサル転職者は多く存在するとされ、特に総合系・IT 系では学歴フィルターは比較的緩いとされる傾向。応募ファームの選び方と志望動機 + ケース面接対策が鍵とされます。' },
+  { q: '学歴以外で評価される 3 軸は?', a: '一般的に ① 論理思考力 (ケース面接で測定) ② 実務経験 + 業界知見 ③ 志望動機 + キャリアビジョンの 3 軸が評価軸とされる傾向。学歴は応募段階のスクリーニング要素であり、選考突破は学歴以外の評価軸が主軸とされます。' },
+  { q: '中途採用も学歴を見られますか?', a: '中途採用では新卒採用ほど学歴の影響は大きくないとされる傾向で、実務経験 + 専門性 + 直近のキャリア進路が重視されるとされる公開情報があります。但しファーム・職種により差があるため事前確認推奨。' },
+  { q: '学歴に不安がある場合の対策は?', a: '一般的に ① 応募ファームの選定 (学歴フィルター緩めのファーム) ② 実務経験の徹底的な棚卸し ③ ケース面接の準備で論理思考力を可視化 が対策とされる傾向。コンサル特化エージェントによる応募戦略の支援が有効とされます。詳細は <a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a>・<a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 学歴と選考評価ガイド</span>
+      <h1 id="fv-h1">コンサル転職 <span class="accent">学歴フィルター</span> 完全ガイド<br />学歴の影響範囲・選考での評価軸・対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル業界の学歴フィルターは <strong>ファームによって差が大きく、すべてに一律で適用されるものではない</strong>とされる傾向。中途採用では実務経験 + 専門性 + 論理思考が主軸の評価軸とされ、学歴に不安がある場合も対策可能とされます。本記事では学歴の影響範囲 + 選考での評価軸 + 対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>学歴フィルターのファーム別の傾向 (戦略 / 総合 / IT / 公共)</li>
+        <li>新卒採用と中途採用での学歴影響の違い</li>
+        <li>学歴以外で評価される 3 軸</li>
+        <li>学歴に不安がある場合の応募戦略</li>
+        <li>具体的な対策とコンサル特化エージェント活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_gakureki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_gakureki">
+          <span>自分の市場価値を MyVision の無料カウンセリングで確認 (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ コンサル特化エージェント MyVision 公開情報: 利用者の9割が業界未経験で選考突破 / 元コンサル在籍コンサルタント担当 / 完全無料・在職中相談可・オンライン完結 / 内定後の年収交渉支援。本ページはアフィリエイト広告（PR）を含み、本サイトは転職エージェント公式ではなく公開情報整理サイトです。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">学歴フィルターのファーム別傾向</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル業界 公開採用情報 / コンサル特化エージェント 公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル業界の学歴フィルターは <strong>ファーム区分により傾向が異なる</strong>とされます。下表は公開情報・業界一般論をもとにした整理で、特定ファームの採用基準を断定するものではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="学歴フィルターの一般的傾向 (公開情報ベース)">
+          <thead><tr><th>区分</th><th>学歴フィルターの一般的傾向</th><th>重視される他の評価軸</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系最大手 (MBB等)</td><td>応募段階で一定考慮される傾向</td><td>論理思考 + ケース面接突破力</td></tr>
+            <tr><td>BIG4 / 総合系</td><td>戦略系よりも幅広く受け入れる傾向</td><td>実務経験 + 業界知見 + 専門性</td></tr>
+            <tr><td>IT 系コンサル</td><td>学歴より IT 実務経験を重視する傾向</td><td>システム知見・開発・PJ経験</td></tr>
+            <tr><td>業界特化型</td><td>業界経験を最優先する傾向</td><td>業界実務 + 専門知識</td></tr>
+            <tr><td>公共系</td><td>幅広い学歴層を受け入れる傾向</td><td>公共領域知見・調整力</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 上記は一般論で、特定ファームの採用基準を断定するものではありません。応募前に最新の採用方針を確認することが推奨されます。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_gakureki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_gakureki">
+          <span>自分の学歴で狙えるファームを MyVision の無料カウンセリングで確認</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">中途採用での学歴影響 + 学歴以外で評価される 3 軸</h2>
+      <p class="section-lede">中途採用では <strong>新卒採用ほど学歴の影響が大きくない</strong>とされる傾向で、実務経験 + 直近のキャリアが重視されるとされます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">評価軸1</span><h4>論理思考力</h4><p>ケース面接で測定されるとされ、フェルミ推定・市場規模推定・問題解決の構造化が中心とされる傾向。準備でカバー可能な領域とされます。詳細 <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a>・<a href="/consul-fermi-suitei/" class="underline">フェルミ推定ガイド</a>。</p></article>
+        <article class="branch"><span class="tag">評価軸2</span><h4>実務経験 + 業界知見</h4><p>前職での具体的なプロジェクト経験・業界知見の深さが評価されるとされ、STAR フレームで言語化することで説得力が変わるとされます。詳細 <a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a>。</p></article>
+        <article class="branch"><span class="tag">評価軸3</span><h4>志望動機 + キャリアビジョン</h4><p>なぜコンサルか・入社後 3-5 年でどう成長したいかの説得力が問われるとされる傾向。詳細 <a href="/consul-shibodouki/" class="underline">志望動機設計ガイド</a>。</p></article>
+        <article class="branch"><span class="tag">補強</span><h4>学歴に不安があるケース</h4><p>① 応募ファームを学歴フィルター緩めの領域に絞る ② 実務経験の徹底的棚卸し ③ ケース面接の準備で論理思考力を可視化 - この 3 つで補強可能とされる傾向。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec2_gakureki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec2_gakureki">
+          <span>自分に合う応募戦略を MyVision の無料カウンセリングで設計</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">学歴に不安がある場合の応募戦略</h2>
+      <p class="section-lede">学歴に不安があっても <strong>応募戦略 + 選考対策の質で結果は変わりうる</strong>とされる傾向です。以下は公開情報・業界一般論をもとにした対策です。</p>
+      <div class="card-grid">
+        <div class="card"><h3>応募戦略 5 ステップ</h3><p><strong>① 学歴フィルター緩めのファーム特定</strong> (総合系・IT 系・業界特化系)<br /><strong>② 自分の実務経験との相性確認</strong> (業界知見の活かし方)<br /><strong>③ 職務経歴書の徹底ブラッシュアップ</strong> (STAR + 数値)<br /><strong>④ ケース面接対策の徹底</strong> (論理思考力の可視化)<br /><strong>⑤ 志望動機の磨き込み</strong> (なぜコンサルか の説得力)<br />これら一つひとつをコンサル特化エージェントと進めることで成功確率が変わるとされます。</p></div>
+        <div class="card"><h3>避けたい行動パターン</h3><p><strong>NG1</strong> 学歴フィルター厳しめのファームだけ応募 (機会損失)<br /><strong>NG2</strong> 単独で応募戦略を組まない (情報不足)<br /><strong>NG3</strong> ケース面接準備を後回しに (突破できない)<br /><strong>NG4</strong> 志望動機が曖昧なまま面接 (説得力不足)<br /><strong>NG5</strong> エージェントを使わない (求人選択肢が限定的)</p></div>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_gakureki_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415262687&wid=001&eno=01&mid=s00000024757001003000&mc=1" alt="MyVision コンサル特化転職エージェント (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_gakureki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_gakureki">
+          <span>応募戦略の設計を MyVision の無料カウンセリングで進める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">MyVision を活用する 4 つの理由 (公開情報ベース)</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>元コンサル在籍コンサルタント</h4><p>コンサル業界の選考プロセスを深く理解した元コンサル出身者が担当するとされる公開情報。学歴に不安があるケースの応募戦略相談も具体的とされます。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>未経験 9 割の支援実績</h4><p>利用者の9割が業界未経験で選考突破の実績があるとされる公開情報。学歴以外の評価軸での選考突破ノウハウが蓄積されているとされます。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>ファーム別の応募戦略支援</h4><p>5 区分 (戦略 / 総合 / IT / 業界特化 / 公共) のファーム特性を踏まえ、学歴フィルター緩めのファームを含めた応募戦略を提案できるとされる公開情報。</p></article>
+        <article class="branch"><span class="tag">理由4</span><h4>ケース面接対策の徹底</h4><p>ケース面接 (論理思考力の可視化) は学歴を補強する評価軸とされ、MyVision の対策ノウハウが活用できるとされる公開情報。</p></article>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_gakureki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_gakureki">
+          <span>MyVision の無料カウンセリングを試す (登録30秒・在職中相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ MyVision 公開情報: 完全無料 / オンライン完結 / 在職中相談可 / 退会自由。利用者の負担はありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル 転職</h4><p>業界未経験者向けの選考突破ガイド</p></a>
+        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル転職 失敗パターン</h4><p>避けたい行動と回避戦略</p></a>
+        <a class="card-link" href="/consul-shibodouki/"><h4>志望動機設計ガイド</h4><p>説得力ある志望動機の組み立て</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>ファーム 5 区分比較</h4><p>戦略/総合/FAS/IT/公共 特性整理</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">自分の市場価値を MyVision の無料カウンセリングで確認</h2>
+      <p>学歴に不安があっても応募戦略 + 選考対策の質で結果は変わりうるとされます。MyVision の無料相談で、応募戦略の設計・職務経歴書の整理・ケース面接対策を登録 30 秒で始められます (完全無料・在職中相談可・オンライン完結)。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_gakureki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_gakureki">
+          <span>MyVision の無料カウンセリングを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
