@@ -1,0 +1,244 @@
+/**
+ * consul-tenshoku-kaisuu LP (MyVision 転職・★326 DRY engineer-30dai pattern)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29 / banner 4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル 転職 回数 多い
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル転職回数が多い人の転職完全ガイド｜評価のされ方と伝え方｜MyVision (PR)';
+const description = 'コンサル転職回数が多い人の転職を、評価のされ方・伝え方・選び方で整理。転職回数別の傾向、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル転職回数が多い場合' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサル転職回数が多いと不利になりますか?', a: '一般に、回数自体よりも各転職の理由・キャリアの一貫性が評価軸とされる傾向にあるとされていますが、回数が多くなるほど説明の重要性が増すとされています。' },
+  { q: '何回から「多い」と評価されますか?', a: '一般公開情報によれば、3 回以上は説明を求められるケースが増え、5 回以上は回数自体が論点になる傾向があるとされていますが、企業・職種により異なるとされています。' },
+  { q: '理由をどう説明すれば良いですか?', a: '一般に、各転職の理由を時系列で整理し、一貫したキャリアテーマ (例: M&A 専門化、特定業界深化) に紐づける説明が推奨されるとされています。詳細は <a href="/consul-shibodouki/" class="underline">コンサル志望動機</a> もご参照ください。' },
+  { q: '転職回数が多くても採用される業界はありますか?', a: '一般公開情報によれば、コンサル業界自体が転職前提のキャリアパスが多いとされており、業界全体としては大きな障壁になりにくいとされています。' },
+  { q: 'コンサルから事業会社への転職で回数は影響しますか?', a: '一般に、事業会社では転職回数の少なさを重視する企業もあるとされており、業界・企業文化により評価軸が異なるとされています。' },
+  { q: 'エージェントを使うメリットは何ですか?', a: 'コンサル特化エージェントの利用は、転職回数の説明方法のアドバイス、複数ファームの比較を支援する効果があるとされていますが、必ず有利になる性質のものではありません。最終的な意思決定はご自身で行う必要があります。' }
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>コンサル転職回数が多い人の転職完全ガイド｜評価のされ方と伝え方 (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">コンサル転職回数が多い (3回以上) 場合の転職について、評価のされ方・伝え方・選び方を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>転職回数別の評価傾向マップ</li>
+        <li>回数が多い人の主な4つのアピール軸</li>
+        <li>回数が多い人の転職を進める5つの対策</li>
+        <li>無料サポートで進路の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_consul-tenshoku-kaisuu">
+          <span>MyVision の無料相談でコンサル 転職回数が多い場合の市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職回数別の評価傾向マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル 転職回数が多い場合の市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="転職回数別の評価傾向マップ">
+          <thead><tr><th>転職回数</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>1-2 回</td><td>一般的な範囲・特に説明不要なケースが多い</td><td>ほぼ全ての求人で問題視されにくい</td></tr>
+            <tr><td>3-4 回</td><td>理由次第・キャリアの一貫性が評価軸</td><td>理由整理が重要・選択肢は一定ある</td></tr>
+            <tr><td>5 回以上</td><td>回数自体が論点になる傾向</td><td>強みと一貫性の説明が特に重要</td></tr>
+            <tr><td>業界横断 (コンサル + 事業会社 + ベンチャー等)</td><td>幅広い経験軸 + 一貫性</td><td>ユニークなキャリア軸として評価される可能性</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_consul-tenshoku-kaisuu">
+          <span>自分の市場価値を MyVision の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">回数が多い人の4つのアピール軸</h2>
+      <p class="section-lede">コンサル 転職回数が多い場合の主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>キャリアの一貫性軸</h4><p>各転職の理由が一貫したテーマ (例: M&A 専門化、特定業界深化) に紐づくと整理するパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>実績累積軸</h4><p>各社で達成した成果を具体的に整理し、回数の多さを補うパス。詳細は <a href="/consul-shokumukeirekisho/" class="underline">コンサル職務経歴書</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>業界・領域シフト軸</h4><p>業界・領域の意図的なシフトとして説明するパス。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル未経験</a> も参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>ユニークキャリア軸</h4><p>コンサル + 事業会社 + ベンチャー等の横断経験をユニークな強みとして打ち出すパス。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_consul_tenshoku_kaisuu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">回数が多い人の転職を進める5つの対策</h2>
+      <p class="section-lede">回数が多い場合の転職の中核は、<strong>各転職理由の一貫性と実績の具体性</strong>とされています。 以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 各転職の理由整理</h4>
+        <p>各転職の理由 (キャリアの方向性、スキル獲得、組織体制等) を時系列で整理し、一貫性を示せる構造を作ることが重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 実績の棚卸し</h4>
+        <p>各社での成果 (担当案件規模・成果指標・役割) を具体的に整理することが、回数の多さを補う材料になるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: NG パターンの回避</h4>
+        <p>「人間関係が合わなかった」「上司が嫌だった」等の理由のみで終わらず、ポジティブな転換 (「より◯◯な環境を求めて」) で表現することが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 複数ファームの比較検討</h4>
+        <p>1社で即決せず複数ファームを比較することで、自分の経験軸が活きるファームの相場感が得られやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 第三者の視点での進路相談</h4>
+        <p>コンサル特化エージェントに進路の壁打ちを行い、客観的な情報補完を得ることが有効とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_consul-tenshoku-kaisuu">
+          <span>コンサル 転職回数が多い場合の進め方を MyVision の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">コンサル 転職回数が多い場合の転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>理由の整理度</td><td>各転職理由が断片的</td><td>時系列でキャリアテーマが一貫</td></tr>
+            <tr><td>実績の具体性</td><td>成果が抽象的・数値なし</td><td>案件規模・役割・成果が具体的</td></tr>
+            <tr><td>ネガティブ要素</td><td>前職批判中心の説明</td><td>ポジティブな転換で表現</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>等級・パフォーマンスベースの説明</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
+      <p>コンサル 転職回数が多い場合の転職は判断材料の確保が鍵とされており、第三者の視点で補うことが有効とされています。MyVision (コンサル特化転職エージェント)の公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>各転職理由の整理支援</h4><p>時系列での理由整理を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>実績の棚卸し支援</h4><p>各社の成果を具体的に整理する支援です。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>企業情報の補完</h4><p>求人票だけでは分かりにくい組織体制・カルチャー等の情報を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より条件や配属とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>コンサル 転職回数が多い場合の転職は方向性の整理が要とされています。MyVision の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_consul-tenshoku-kaisuu">
+          <span>MyVision の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル志望動機</h4><p>伝わる動機の整理</p></a>
+        <a class="card-link" href="/consul-shokumukeirekisho/"><h4>コンサル職務経歴書</h4><p>実績の棚卸し方</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル未経験転職</h4><p>未経験からのコンサル転職</p></a>
+        <a class="card-link" href="/postconsul-tenshoku/"><h4>ポストコンサル転職</h4><p>コンサル後のキャリア</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">転職回数の説明を整え、納得のいく転職に近づく</h2>
+      <p>コンサル 転職回数が多い場合の転職は方向性の整理と判断材料の確保で精度が高まるとされています。MyVision の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_consul-tenshoku-kaisuu">
+          <span>MyVision の無料相談でコンサル 転職回数が多い場合の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

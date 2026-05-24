@@ -1,0 +1,244 @@
+/**
+ * consul-up-or-out LP (MyVision 転職・★326 DRY engineer-30dai pattern)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29 / banner 4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル up or out 転職
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル Up or Out 文化と転職の完全ガイド｜昇進プレッシャーとキャリア選択｜MyVision (PR)';
+const description = 'コンサル Up or Out 文化と転職を、ファーム別実態・昇進プレッシャー対応・キャリア選択で整理。Up or Out 下での選択肢、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'Up or Out と転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'Up or Out とは何ですか?', a: '一般に、Up or Out とは「一定期間内に昇進できなければ退職する」という、戦略コンサルファーム中心に存在するとされる雇用慣行・文化を指すとされています。' },
+  { q: '全てのコンサルファームに Up or Out はありますか?', a: '一般公開情報によれば、Up or Out の厳しさはファームによって大きく異なり、戦略系は強く、総合系・BIG4 系は比較的緩いとされる傾向があるとされています。' },
+  { q: 'Up or Out 下でも長く働けるファームはありますか?', a: '一般に、近年は Up or Out を緩和し、専門職トラック等を設けるファームも増えているとされていますが、ファームによって取り組み度が異なるとされています。' },
+  { q: 'ポストコンサル転職先はどこが多いですか?', a: '一般公開情報によれば、事業会社 (経営企画・新規事業)、PE / VC、スタートアップ、業界系コンサル等が選択肢として挙げられるとされています。詳細は <a href="/postconsul-tenshoku/" class="underline">ポストコンサル転職</a> もご参照ください。' },
+  { q: 'Up or Out が嫌なら別ファームへ移れますか?', a: '一般に、ファーム間移籍は実例があるとされていますが、移籍先での評価リセットや等級判定がある場合もあるとされており、事前確認が推奨されるとされています。' },
+  { q: 'エージェントを使うメリットは何ですか?', a: 'コンサル特化エージェントの利用は、ファーム別カルチャーの情報補完、ポストコンサル選択肢の比較を支援する効果があるとされていますが、必ず有利になる性質のものではありません。最終的な意思決定はご自身で行う必要があります。' }
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>コンサル Up or Out 文化と転職の完全ガイド｜昇進プレッシャーとキャリア選択 (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">コンサル業界の Up or Out 文化について、各ファームでの実態・昇進プレッシャーを踏まえたキャリア選択を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>ファーム類型別の Up or Out 実態マップ</li>
+        <li>Up or Out 下の主な4つのキャリア選択</li>
+        <li>Up or Out 下の転職を進める5つの対策</li>
+        <li>無料サポートで進路の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_consul_up_or_out`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_consul-up-or-out">
+          <span>MyVision の無料相談でコンサル Up or Out と転職の市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ファーム類型別の Up or Out 実態マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル Up or Out と転職の市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ファーム類型別の Up or Out 実態マップ">
+          <thead><tr><th>ファーム類型</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 Big4 (MBB 含む)</td><td>強い Up or Out 文化・パートナー昇格率が低い傾向</td><td>若手のうちに経験を積みポストコンサル前提</td></tr>
+            <tr><td>総合系コンサル (アクセンチュア等)</td><td>比較的緩い Up or Out・継続雇用率が高い傾向</td><td>中長期的なファーム内キャリアも選択肢</td></tr>
+            <tr><td>BIG4 系コンサル (デロイト等)</td><td>ファームによって差・近年は緩和傾向の指摘あり</td><td>ファーム個別の文化を事前確認</td></tr>
+            <tr><td>ブティック系</td><td>ファームによって差が大きい</td><td>個別ファームのカルチャー確認が重要</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_consul_up_or_out`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_consul-up-or-out">
+          <span>自分の市場価値を MyVision の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">Up or Out 下の4つのキャリア選択</h2>
+      <p class="section-lede">コンサル Up or Out と転職の主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>ファーム内昇進パス</h4><p>Up or Out をクリアし、パートナーまで上り詰めるパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>ポストコンサル前提パス</h4><p>若手のうちに経験を積み、事業会社・PE 等へ移るパス。詳細は <a href="/postconsul-tenshoku/" class="underline">ポストコンサル転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>ファーム間移籍パス</h4><p>Up or Out 圧力を機に別ファームへ移るパス。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサルファーム比較</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>業界・領域シフトパス</h4><p>コンサル経験を活かし、業界系・専門領域系コンサルへ移るパス。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_consul_up_or_out_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">Up or Out 下の転職を進める5つの対策</h2>
+      <p class="section-lede">Up or Out 下の転職の中核は、<strong>ファーム文化の理解と複数選択肢の事前準備</strong>とされています。 以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: ファーム別の Up or Out 実態の把握</h4>
+        <p>ファームによって Up or Out の厳しさは大きく異なり、公開情報・現職者の声で実態を把握しておくことが重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 昇進プレッシャー時の選択肢整理</h4>
+        <p>Up or Out 下で何を選ぶか (継続挑戦 / ファーム間移籍 / ポストコンサル) を事前に整理しておくことが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: ポストコンサル選択肢の事前リサーチ</h4>
+        <p>コンサル経験を活かせる事業会社・PE・スタートアップ・他コンサル等を事前にリサーチしておくことが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 複数ファーム・複数選択肢の比較検討</h4>
+        <p>1つの選択肢で即決せず複数を比較することで、年収・働き方・カルチャーの相場感が得られやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 第三者の視点での進路相談</h4>
+        <p>コンサル特化エージェントに進路の壁打ちを行い、客観的な情報補完を得ることが有効とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_consul_up_or_out`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_consul-up-or-out">
+          <span>コンサル Up or Out と転職の進め方を MyVision の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">コンサル Up or Out と転職の転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>Up or Out 情報の具体性</td><td>Up or Out の説明がない・曖昧</td><td>ファーム文化・パートナー昇格率を説明</td></tr>
+            <tr><td>昇進制度の透明性</td><td>昇進基準が不明確</td><td>等級・評価軸が具体的</td></tr>
+            <tr><td>ポストコンサル支援</td><td>退職後のサポートがない</td><td>アルムナイ制度・転職支援あり</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>等級・パフォーマンスベースの説明</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
+      <p>コンサル Up or Out と転職の転職は判断材料の確保が鍵とされており、第三者の視点で補うことが有効とされています。MyVision (コンサル特化転職エージェント)の公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>ファーム別 Up or Out 実態の情報補完</h4><p>求人票だけでは分かりにくいファーム別文化を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>キャリア選択肢の整理支援</h4><p>ファーム内昇進 / 移籍 / ポストコンサル等の比較を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>ポストコンサル先の情報補完</h4><p>事業会社 / PE / スタートアップ等の選択肢を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より条件や配属とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>コンサル Up or Out と転職の転職は方向性の整理が要とされています。MyVision の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_consul_up_or_out`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_consul-up-or-out">
+          <span>MyVision の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/postconsul-tenshoku/"><h4>ポストコンサル転職</h4><p>コンサル後のキャリア選択肢</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサルファーム比較</h4><p>ファーム別の特徴</p></a>
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代コンサル転職</h4><p>30代のコンサル転職戦略</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム別・等級別年収</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">Up or Out の選択肢を整え、納得のいくキャリア選択に近づく</h2>
+      <p>コンサル Up or Out と転職の転職は方向性の整理と判断材料の確保で精度が高まるとされています。MyVision の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_consul_up_or_out`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_consul-up-or-out">
+          <span>MyVision の無料相談でコンサル Up or Out と転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

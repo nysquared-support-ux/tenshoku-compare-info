@@ -1,0 +1,244 @@
+/**
+ * mobile-engineer-tenshoku LP (TechGo IT エンジニア転職・★326 DRY engineer-30dai)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner HVNAP)
+ * メイン KW: モバイルアプリエンジニア 転職 (iOS / Android / Flutter / React Native)
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承]
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'モバイルアプリエンジニアの転職完全ガイド｜iOS/Android/クロスプラットフォーム別の市場価値とキャリアパス｜TechGo (PR)';
+const description = 'モバイルアプリエンジニア (iOS / Android / Flutter / React Native) の転職を、技術領域別の市場価値・キャリアパス・求人の見極め方で整理。スマホアプリ開発の特性、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'モバイルエンジニア 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'モバイルアプリエンジニアの転職は難しいですか?', a: '一般に、モバイルアプリの需要は B2C・B2B 双方で一定あるとされる一方、ネイティブ (Swift/Kotlin) とクロスプラットフォーム (Flutter/React Native) で募集職種の傾向が異なるとされています。難易度は技術スタック・経験年数・希望条件により異なり、一概には言えません。市場価値の事前確認が判断の助けになるとされています。' },
+  { q: 'iOS と Android のどちらが転職に有利ですか?', a: '一般公開情報によれば、どちらも需要は一定あり、企業によって優先する OS が異なるとされています。両 OS の開発経験 (バイリンガル) は希少性が高い傾向にあるとされていますが、専門特化も評価される傾向があり、企業・案件次第とされています。' },
+  { q: 'Flutter / React Native の経験は評価されますか?', a: '一般に、クロスプラットフォーム経験はスタートアップ・新規プロダクト開発で評価される傾向にあるとされていますが、大規模アプリではネイティブ開発スキルが重視されることもあるとされています。応募先の技術方針を事前確認することが推奨されるとされています。' },
+  { q: 'モバイルエンジニア未経験から転職できますか?', a: '未経験からの転職は経験者より難易度が上がるとされていますが、ポートフォリオアプリ (App Store/Google Play 公開) や学習実績の整理で結果が変わるとされています。詳細は <a href="/it-mikeiken-tenshoku/" class="underline">IT 未経験転職ガイド</a> をご参照ください。' },
+  { q: 'モバイルアプリエンジニアの年収はどのくらいですか?', a: '一般公開情報によれば、年収は経験・技術領域・企業により幅が大きく、断定はできません。詳細は <a href="/engineer-1000man/" class="underline">エンジニア年収1000万ガイド</a> もご参照ください。正確な目安は市場価値診断での確認が推奨されます。' },
+  { q: 'モバイル特化のエージェントを使うと有利になりますか?', a: 'IT エンジニア特化エージェントの利用は、モバイル領域の求人情報の非対称性を補い、技術スタック別の市場価値や求人の見極めを支援する効果があるとされていますが、必ず有利になる性質のものではありません。最終的な意思決定はご自身で行う必要があります。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>モバイルアプリエンジニアの転職完全ガイド｜iOS/Android/クロスプラットフォーム別の市場価値とキャリアパス (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">モバイルアプリエンジニア (iOS / Android / Flutter / React Native) の転職を進めるうえで重要な、<strong>技術領域別の市場価値・キャリアパスの主要パターン・求人の見極め方</strong>を、公開情報・業界一般論をもとに整理しました。スマホアプリ開発の特性を踏まえた進め方を解説します。</p>
+      <ul class="fv-bullets">
+        <li>iOS / Android / クロスプラットフォーム別の市場価値マップ</li>
+        <li>モバイルエンジニアの主な4つのキャリアパス</li>
+        <li>モバイル転職を進める5つの対策</li>
+        <li>無料サポートで転職の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_mobile`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_mobile">
+          <span>TechGo の無料相談でモバイル特化の市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">iOS / Android / クロスプラットフォーム別の市場価値マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>モバイルアプリエンジニアの市場価値は、対応 OS・技術スタックの組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="モバイルエンジニアの市場価値マップ">
+          <thead><tr><th>技術領域</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>iOS ネイティブ (Swift / SwiftUI)</td><td>大規模アプリ開発・パフォーマンス最適化経験</td><td>大手 B2C / フィンテック / メディア系</td></tr>
+            <tr><td>Android ネイティブ (Kotlin / Jetpack)</td><td>マルチ端末対応・OS バージョン互換性</td><td>大手 B2C / IoT 連携系</td></tr>
+            <tr><td>クロスプラットフォーム (Flutter / React Native)</td><td>1 コードでの両 OS 対応・開発スピード</td><td>スタートアップ / 新規プロダクト</td></tr>
+            <tr><td>両 OS バイリンガル</td><td>iOS/Android 両方の知見と判断力</td><td>テックリード / アーキテクト方向</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_mobile`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_mobile">
+          <span>自分の市場価値を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">モバイルエンジニアの4つのキャリアパス</h2>
+      <p class="section-lede">モバイルアプリエンジニアの主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>スペシャリスト（OS 深化）</h4><p>iOS または Android のネイティブを深く極め、新機能の早期キャッチアップ・パフォーマンス最適化を強みにするパス。技術志向の強い人に向くとされています。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>クロスプラットフォーム軸</h4><p>Flutter / React Native を軸に、1 つのコードベースで両 OS をカバーするパス。スタートアップ・新規プロダクトでの選択肢に入りやすいとされています。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>モバイルアーキテクト・テックリード</h4><p>iOS/Android 両 OS の知見をもとに、設計・技術選定・チームリードを担うパス。詳細は <a href="/full-remote-engineer/" class="underline">フルリモートエンジニアガイド</a> も参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>領域シフト（バックエンド・SDK 開発等）</h4><p>BFF・SDK・組込領域へ軸足を移すパス。詳細は <a href="/backend-engineer-tenshoku/" class="underline">バックエンドエンジニア転職</a> もご参照ください。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_mobile_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">モバイル転職を進める5つの対策</h2>
+      <p class="section-lede">モバイル転職の中核は、<strong>担当プロダクトと技術スタックの棚卸し、進む方向の整理</strong>とされています。以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 担当プロダクトとリリース実績の棚卸し</h4>
+        <p>App Store / Google Play での公開アプリ、DAU/MAU 規模、担当機能・パフォーマンス改善の成果を棚卸ししておくことが、応募先選定と条件交渉の両方で重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 技術スタックの整理 (Swift/Kotlin/Flutter/RN)</h4>
+        <p>使用言語・フレームワーク・依存ライブラリ・状態管理アーキテクチャ (MVVM/Redux 等) を整理し、応募先の技術スタックとマッチするか確認することが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: ポートフォリオアプリの整備</h4>
+        <p>個人開発アプリ・OSS コントリビュート・テックブログ等で技術アウトプットを示すことが、特に未経験・第二新卒層では評価されやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 複数社の比較検討</h4>
+        <p>1社で即決せず複数社を比較することで、年収・働き方・開発環境・iOS/Android の優先度の相場感が得られやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 選考での逆質問の準備</h4>
+        <p>CI/CD 環境・テスト戦略・チーム構成・iOS/Android の役割分担などを面接で確認するための逆質問を準備しておくことで、入社後のギャップを減らせるとされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_mobile`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_mobile">
+          <span>モバイル転職の進め方を TechGo の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">モバイル転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>求人情報の具体性</td><td>対応 OS・技術スタックが曖昧</td><td>iOS/Android の役割と技術が明記されている</td></tr>
+            <tr><td>開発体制</td><td>1 人運用・属人化が示唆される</td><td>チーム構成・コードレビュー体制が具体的</td></tr>
+            <tr><td>入社後のイメージ</td><td>担当アプリ・初期業務が不明確</td><td>担当アプリ規模・初期業務が具体的</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>評価制度・等級と紐づけて説明される</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
+      <p>モバイル転職は技術スタック別の市場感と求人見極めが鍵とされており、第三者の視点で補うことが有効とされています。IT エンジニア特化エージェントの公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>技術スタック別の市場価値診断</h4><p>iOS/Android/Flutter/RN それぞれの市場感、年収レンジの当たりを付けるサポートです。狙える求人レンジの目安が把握しやすくなるとされています。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>キャリアパスの相談</h4><p>スペシャリスト方向・アーキテクト方向・領域シフトなど、モバイルの方向性整理を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>求人の見極めサポート</h4><p>求人票だけでは分かりにくい開発体制・iOS/Android の役割分担・CI/CD 環境などの情報を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より条件や開発環境とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>モバイルエンジニアの転職は技術スタック軸の整理が要とされています。TechGo の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_mobile`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_mobile">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-30dai-tenshoku/"><h4>30代エンジニア転職完全ガイド</h4><p>年代別市場価値とキャリアパス</p></a>
+        <a class="card-link" href="/engineer-1000man/"><h4>エンジニア 年収1000万ガイド</h4><p>キャリアパス別の年収レンジ</p></a>
+        <a class="card-link" href="/full-remote-engineer/"><h4>フルリモートエンジニア転職</h4><p>働き方軸でのエンジニア転職</p></a>
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと技術スタック</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">モバイルエンジニアの市場価値を知り、納得のいく転職に近づく</h2>
+      <p>モバイル転職は技術スタック軸の整理と判断材料の確保で精度が高まるとされています。TechGo の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_mobile`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_mobile">
+          <span>TechGo の無料相談でモバイル転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

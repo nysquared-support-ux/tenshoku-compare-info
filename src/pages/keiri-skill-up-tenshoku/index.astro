@@ -1,0 +1,244 @@
+/**
+ * keiri-skill-up-tenshoku LP (ツインプロ 転職・★326 DRY engineer-30dai pattern)
+ * ★480 ツインプロ a8mat verbatim (4B1THX+40OCS2+5B0Y+BWVTE / banner 4B1THX+40OCS2+5B0Y+BXB8X)
+ * メイン KW: 経理 スキルアップ 転職
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '経理スキルアップ転職の完全ガイド｜連結・IFRS・IPO 経験の積み方とキャリアパス｜ツインプロ (PR)';
+const description = '経理スキルアップ転職を、連結 / IFRS / IPO 経験・企業フェーズ別キャリアパス・選び方で整理。経理からのキャリアアップ、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '会計士・税理士・経理転職ガイド', url: '/' },
+  { name: '経理スキルアップ転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '経理スキルアップに最適な企業はどんな企業ですか?', a: '一般に、上場準備中の企業は IPO 経験、上場企業は連結・IFRS 経験、外資系企業は IFRS・グローバル経験が積みやすい傾向があるとされていますが、自分の目指す方向によって最適な選択が異なるとされています。' },
+  { q: '連結決算と IFRS のどちらを先に経験すべきですか?', a: '一般公開情報によれば、両者は補完関係にあり、企業フェーズに応じて優先度が変わる傾向があるとされています。連結は上場企業全般、IFRS は外資・グローバル企業で重要とされています。' },
+  { q: '経理マネージャーへの昇格基準は何ですか?', a: '一般に、業務範囲の幅 (連結 / 税務 / 予算管理等)、組織マネジメント経験、コミュニケーション力等が評価軸とされていますが、企業により異なるとされています。' },
+  { q: 'CFO になるには何が必要ですか?', a: '一般公開情報によれば、経理・財務・経営企画の幅広い経験、IPO 経験、ファイナンス全般の知見が一般的に求められるとされていますが、企業により求める要件が異なるとされています。詳細は <a href="/cfo-tenshoku/" class="underline">CFO 転職ガイド</a> もご参照ください。' },
+  { q: '経理から税理士・会計士を目指せますか?', a: '一般に、経理経験は税理士・会計士試験勉強と相性が良い傾向にあるとされていますが、試験勉強時間との両立が課題とされています。' },
+  { q: 'エージェントを使うメリットは何ですか?', a: '経理特化エージェントの利用は、スキル別の求人情報の非対称性を補い、複数選択肢の比較を支援する効果があるとされていますが、必ず有利になる性質のものではありません。最終的な意思決定はご自身で行う必要があります。' }
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>経理スキルアップ転職の完全ガイド｜連結・IFRS・IPO 経験の積み方とキャリアパス (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">経理のスキルアップ転職について、連結決算 / IFRS / IPO 経験の積み方、企業フェーズ別のキャリアパス・選び方を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>連結 / IFRS / IPO / 幅広い経験別のスキル軸マップ</li>
+        <li>経理スキルアップの主な4つのキャリアパス</li>
+        <li>経理スキルアップ転職を進める5つの対策</li>
+        <li>無料サポートで進路の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_keiri_skill_up_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_keiri-skill-up-tenshoku">
+          <span>ツインプロ の無料相談で経理 スキルアップの市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">連結 / IFRS / IPO / 幅広い経験別のスキル軸マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>経理 スキルアップの市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="連結 / IFRS / IPO / 幅広い経験別のスキル軸マップ">
+          <thead><tr><th>スキル軸</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>連結決算経験</td><td>親子会社の連結プロセス・連結 PKG 経験</td><td>上場準備〜上場企業の経理</td></tr>
+            <tr><td>IFRS 経験</td><td>IFRS 適用企業での実務 (収益認識・リース等)</td><td>外資系 / グローバル企業</td></tr>
+            <tr><td>IPO 経験</td><td>上場準備プロセス全般の経験</td><td>IPO 準備中のスタートアップ</td></tr>
+            <tr><td>税務・連結・予算管理の幅広い経験</td><td>幅広い経理業務の経験</td><td>経理マネージャー / CFO 候補</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_keiri_skill_up_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_keiri-skill-up-tenshoku">
+          <span>自分の市場価値を ツインプロ の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">経理スキルアップの4つのキャリアパス</h2>
+      <p class="section-lede">経理 スキルアップの主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>連結・IFRS 専門化パス</h4><p>連結決算・IFRS 適用企業の経験を深め、専門性を高めるパス。詳細は <a href="/keiri-renketsu/" class="underline">経理連結転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>IPO 経験パス</h4><p>上場準備中のスタートアップで IPO プロセスを経験するパス。詳細は <a href="/ipo-keiri/" class="underline">IPO 経理転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>経理マネージャー方向</h4><p>業務範囲を広げてマネジメントを目指すパス。詳細は <a href="/keiri-manager-tenshoku/" class="underline">経理マネージャー転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>CFO 候補パス</h4><p>経理・財務・経営企画の幅広い経験を積み、CFO を目指すパス。詳細は <a href="/cfo-tenshoku/" class="underline">CFO 転職ガイド</a> 参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_keiri_skill_up_tenshoku_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" alt="会計士・税理士・経理特化転職 ツインプロ (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">経理スキルアップ転職を進める5つの対策</h2>
+      <p class="section-lede">経理スキルアップ転職の中核は、<strong>現在の経験の棚卸しと次に積みたいスキルの明確化</strong>とされています。 以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 現職での経験の棚卸し</h4>
+        <p>担当範囲 (単体決算 / 連結 / IFRS / 税務等)、扱った会計システム、繁忙期業務を棚卸ししておくことが、応募先選定で重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 不足スキルの可視化</h4>
+        <p>自分が次に積みたいスキル (連結 / IFRS / IPO / マネジメント等) を明確化することが、応募先選定の精度を高めるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 企業フェーズの理解</h4>
+        <p>上場準備中 / 上場直後 / 安定期等、企業フェーズによって経理に求められる役割が異なることを理解することが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 複数社の比較検討</h4>
+        <p>1社で即決せず複数社を比較することで、年収・働き方・経験できる業務範囲の相場感が得られやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 第三者の視点での進路相談</h4>
+        <p>経理特化エージェントに進路の壁打ちを行い、客観的な情報補完を得ることが有効とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_keiri_skill_up_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_keiri-skill-up-tenshoku">
+          <span>経理 スキルアップの進め方を ツインプロ の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">経理 スキルアップの転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>求人情報の具体性</td><td>担当範囲・扱う会計システムが曖昧</td><td>担当範囲・システム・規模が明記</td></tr>
+            <tr><td>経験できる業務範囲</td><td>単体決算のみ・限定的</td><td>連結 / IFRS / 税務含む幅広い経験</td></tr>
+            <tr><td>入社後のイメージ</td><td>研修・OJT が不明確</td><td>研修内容・OJT 体制が具体的</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>等級・残業代の説明あり</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
+      <p>経理 スキルアップの転職は判断材料の確保が鍵とされており、第三者の視点で補うことが有効とされています。ツインプロ (会計士・税理士・経理特化転職エージェント)の公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>スキル軸別の市場価値診断</h4><p>連結 / IFRS / IPO それぞれの市場感、年収レンジの当たりを付けるサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>キャリアパスの相談</h4><p>経理マネージャー / CFO 候補等、進む方向の整理を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>企業情報の補完</h4><p>求人票だけでは分かりにくい経理組織体制・業務範囲・繁忙期等の情報を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より条件や配属とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>経理 スキルアップの転職は方向性の整理が要とされています。ツインプロ の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_keiri_skill_up_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_keiri-skill-up-tenshoku">
+          <span>ツインプロ の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/keiri-renketsu/"><h4>経理連結転職</h4><p>連結決算経験を活かす</p></a>
+        <a class="card-link" href="/ipo-keiri/"><h4>IPO 経理転職</h4><p>IPO 経験のキャリアパス</p></a>
+        <a class="card-link" href="/keiri-manager-tenshoku/"><h4>経理マネージャー転職</h4><p>マネジメント方向のキャリア</p></a>
+        <a class="card-link" href="/cfo-tenshoku/"><h4>CFO 転職ガイド</h4><p>経理から CFO への道</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">経理スキルアップの進路を整え、納得のいく転職に近づく</h2>
+      <p>経理 スキルアップの転職は方向性の整理と判断材料の確保で精度が高まるとされています。ツインプロ の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_keiri_skill_up_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_keiri-skill-up-tenshoku">
+          <span>ツインプロ の無料相談で経理 スキルアップの進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

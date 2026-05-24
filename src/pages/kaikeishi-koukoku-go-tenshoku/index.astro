@@ -1,0 +1,244 @@
+/**
+ * kaikeishi-koukoku-go-tenshoku LP (ツインプロ 転職・★326 DRY engineer-30dai pattern)
+ * ★480 ツインプロ a8mat verbatim (4B1THX+40OCS2+5B0Y+BWVTE / banner 4B1THX+40OCS2+5B0Y+BXB8X)
+ * メイン KW: 会計士 試験合格後 転職
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '公認会計士試験合格後の転職完全ガイド｜監査法人 / 一般事業会社 / コンサル別のキャリア選択｜ツインプロ (PR)';
+const description = '公認会計士試験合格後の転職を、監査法人 / 一般事業会社 / コンサル別のキャリアパス・市場価値・選び方で整理。合格直後の進路選定、5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '会計士・税理士・経理転職ガイド', url: '/' },
+  { name: '会計士 合格後の転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '会計士試験合格後はまず監査法人に入るべきですか?', a: '一般に、公認会計士登録には監査法人等での実務経験 2 年が必要とされていますが、登録を急がない場合は一般事業会社・コンサルからスタートする選択肢もあるとされています。詳細は <a href="https://jicpa.or.jp/" target="_blank" rel="noopener">JICPA 日本公認会計士協会</a> を参照ください。' },
+  { q: 'Big4 と中堅監査法人どちらが良いですか?', a: '一般公開情報によれば、Big4 は規模・案件多様性、中堅は早期からの幅広い経験という傾向があるとされていますが、最終的な良し悪しは個人の志向によるとされています。' },
+  { q: '合格後すぐ事業会社への転職は可能ですか?', a: '一般に、合格後すぐ事業会社への転職は実例はあるとされていますが、公認会計士登録のための実務経験要件と両立する設計が必要とされています。' },
+  { q: '給与は監査法人と事業会社でどう違いますか?', a: '一般公開情報によれば、初期年収は監査法人の方が高い傾向にあるとされていますが、企業・等級・残業代により幅が大きく、断定はできません。' },
+  { q: 'コンサル (FAS) は合格直後でも入れますか?', a: '一般に、FAS は監査経験を求める求人と、未経験可の求人があるとされており、応募先により異なるとされています。' },
+  { q: 'エージェントを使うメリットは何ですか?', a: '会計士特化エージェントの利用は、合格後の進路情報の非対称性を補い、複数選択肢の比較を支援する効果があるとされていますが、必ず有利になる性質のものではありません。最終的な意思決定はご自身で行う必要があります。' }
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>公認会計士試験合格後の転職完全ガイド｜監査法人 / 一般事業会社 / コンサル別のキャリア選択 (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">公認会計士試験合格後の進路選択 (監査法人 / 一般事業会社 / コンサル) を、それぞれのキャリアパス・市場価値・選び方の観点で整理しました。</p>
+      <ul class="fv-bullets">
+        <li>監査法人 / 事業会社 / コンサル別の進路マップ</li>
+        <li>合格後の主な4つのキャリアパス</li>
+        <li>進路選択を進める5つの対策</li>
+        <li>無料サポートで進路の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_kaikeishi_koukoku_go_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_kaikeishi-koukoku-go-tenshoku">
+          <span>ツインプロ の無料相談で会計士 試験合格後の転職の市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">監査法人 / 事業会社 / コンサル別の進路マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>会計士 試験合格後の転職の市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="監査法人 / 事業会社 / コンサル別の進路マップ">
+          <thead><tr><th>進路選択</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>Big4 監査法人</td><td>監査経験 + 公認会計士登録の実務経験要件</td><td>ジュニアスタッフから始めるパス</td></tr>
+            <tr><td>中堅監査法人</td><td>監査経験 + より幅広い業務経験</td><td>監査経験を積みつつ早期に視野を広げるパス</td></tr>
+            <tr><td>一般事業会社 (経理)</td><td>実務 + IPO/M&A 等の事業会社経験</td><td>IPO・経営管理志向のパス</td></tr>
+            <tr><td>コンサル (FAS等)</td><td>M&A・財務 DD 等の専門コンサル経験</td><td>コンサル志向・案件多様性重視</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_kaikeishi_koukoku_go_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_kaikeishi-koukoku-go-tenshoku">
+          <span>自分の市場価値を ツインプロ の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">合格後の4つのキャリアパス</h2>
+      <p class="section-lede">会計士 試験合格後の転職の主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>監査法人スタンダードキャリア</h4><p>Big4 / 中堅監査法人で監査経験を積み、シニア・マネージャーへ進むパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>早期事業会社シフト</h4><p>監査経験 1-3 年後に一般事業会社へ移り、経営管理・IPO 等を担うパス。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>コンサル (FAS等) 早期参入</h4><p>FAS・M&A アドバイザリーで案件多様性を重視するパス。詳細は <a href="/fas-tenshoku/" class="underline">FAS 転職ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>独立・開業準備キャリア</h4><p>監査法人で経験を積み、独立・税理士登録を目指すパス。詳細は <a href="/kaikeishi-freelance/" class="underline">会計士フリーランス</a> も参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi_koukoku_go_tenshoku_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" alt="会計士・税理士・経理特化転職 ツインプロ (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">進路選択を進める5つの対策</h2>
+      <p class="section-lede">合格後の進路選択の中核は、<strong>公認会計士登録要件と志向の整合性を見極めること</strong>とされています。 以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 公認会計士登録要件の把握</h4>
+        <p>監査法人での実務経験要件 (2 年) を踏まえて、合格直後のキャリア選択を行うことが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: 監査法人と事業会社の特性整理</h4>
+        <p>監査法人は監査・各種アドバイザリー、事業会社は IPO・経営管理・連結等と特性が異なるため、志向の整理が重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 給与・労働時間相場の確認</h4>
+        <p>Big4 / 中堅 / 事業会社で給与・労働時間相場が異なるため、公開情報での確認が推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: 複数法人・複数社の比較検討</h4>
+        <p>1社で即決せず複数の選択肢を比較することで、配属チーム・業務範囲の相場感が得られやすいとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 第三者の視点での進路相談</h4>
+        <p>会計士特化エージェントに進路の壁打ちを行い、客観的な情報補完を得ることが有効とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_kaikeishi_koukoku_go_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_kaikeishi-koukoku-go-tenshoku">
+          <span>会計士 試験合格後の転職の進め方を ツインプロ の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">会計士 試験合格後の転職の転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>求人情報の具体性</td><td>監査チーム・担当業種が曖昧</td><td>配属チーム・担当業種が明記</td></tr>
+            <tr><td>経験できる業務範囲</td><td>監査のみに限定</td><td>監査 + アドバイザリー・IFRS 等</td></tr>
+            <tr><td>入社後のイメージ</td><td>研修内容・初期 OJT が不明確</td><td>研修制度・OJT 体制が具体的</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>等級・残業代の説明あり</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
+      <p>会計士 試験合格後の転職の転職は判断材料の確保が鍵とされており、第三者の視点で補うことが有効とされています。ツインプロ (会計士・税理士・経理特化転職エージェント)の公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>進路選択の壁打ち</h4><p>監査法人 / 事業会社 / FAS のメリット・デメリットを比較する支援です。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>公認会計士登録要件の整理</h4><p>実務経験要件を踏まえた進路選定の支援です (登録手続きは JICPA 公式参照)。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>給与・労働時間相場の情報補完</h4><p>求人票だけでは分かりにくい相場の情報を補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より条件や配属チームとのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>会計士 試験合格後の転職の転職は方向性の整理が要とされています。ツインプロ の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_kaikeishi_koukoku_go_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_kaikeishi-koukoku-go-tenshoku">
+          <span>ツインプロ の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/big4-tenshoku/"><h4>Big4 監査法人転職</h4><p>Big4 各社の特徴と選び方</p></a>
+        <a class="card-link" href="/fas-tenshoku/"><h4>FAS 転職ガイド</h4><p>M&A・財務 DD のキャリアパス</p></a>
+        <a class="card-link" href="/kaikeishi-tenshoku-timing/"><h4>会計士転職タイミング</h4><p>ベストな転職時期の判断軸</p></a>
+        <a class="card-link" href="/kaikeishi-30dai/"><h4>30代会計士の転職</h4><p>年代別市場価値</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">合格後の進路を整理し、納得のいくキャリア選択に近づく</h2>
+      <p>会計士 試験合格後の転職の転職は方向性の整理と判断材料の確保で精度が高まるとされています。ツインプロ の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_kaikeishi_koukoku_go_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_kaikeishi-koukoku-go-tenshoku">
+          <span>ツインプロ の無料相談で会計士 試験合格後の転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>

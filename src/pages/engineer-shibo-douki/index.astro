@@ -1,0 +1,244 @@
+/**
+ * engineer-shibo-douki LP (TechGo 転職・★326 DRY engineer-30dai pattern)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 4B1LPN+E39C6Q+5B0Y+HVNAP)
+ * メイン KW: エンジニア 転職 志望動機
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニアの転職志望動機 完全ガイド｜書類・面接で伝わる動機の整理とフレームワーク｜TechGo (PR)';
+const description = 'エンジニア転職の志望動機 (書類・面接) を、伝わる動機の整理方法・避けたい NG パターン・フレームワーク・無料サポート活用法で整理（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'エンジニア 志望動機' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'エンジニアの志望動機は何文字くらいが良いですか?', a: '一般に、書類では 200-400 字程度、面接では 1-2 分程度で簡潔に伝えることが推奨されるとされていますが、企業・応募職種により異なるとされています。' },
+  { q: '「成長したい」と書くのは NG ですか?', a: '「成長したい」自体が NG ではなく、抽象表現で終わらず具体的根拠 (どんな技術を、どんな環境で、なぜ成長したいか) を添えることが推奨されるとされています。' },
+  { q: '前職への不満を書いても良いですか?', a: '一般に、前職批判は印象を悪化させる傾向にあるとされており、課題感をポジティブな転換 (「より◯◯な環境を求めて」) で表現することが推奨されるとされています。' },
+  { q: '複数社に同じ志望動機を使い回しても良いですか?', a: '一般に、企業固有のポイントを盛り込まない使い回しは熱意が伝わりにくいとされており、最低限の企業固有要素 (事業・技術・カルチャー) は調整することが推奨されるとされています。' },
+  { q: '志望動機と自己 PR は何が違いますか?', a: '志望動機は「なぜこの会社か」、自己 PR は「自分が貢献できる強み」を伝えるとされています。両者を切り分けて整理することが推奨されるとされています。' },
+  { q: 'エージェントは志望動機を一緒に考えてくれますか?', a: '一般に、IT エンジニア特化エージェントの公開情報によれば、志望動機の壁打ち・添削サポートが提供されているとされていますが、最終的な内容判断はご自身で行う必要があります。' }
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>エンジニアの転職志望動機 完全ガイド｜書類・面接で伝わる動機の整理とフレームワーク (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">エンジニアの転職志望動機 (書類・面接) について、伝わる動機の整理方法・避けたい NG パターン・フレームワーク・公開情報をもとに解説します。</p>
+      <ul class="fv-bullets">
+        <li>志望動機の4つの軸 (技術・プロダクト・働き方・マネジメント)</li>
+        <li>伝わる志望動機の4つの組み立て方</li>
+        <li>志望動機を整える5つの対策</li>
+        <li>無料サポートで志望動機の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_engineer_shibo_douki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_engineer-shibo-douki">
+          <span>TechGo の無料相談でエンジニア 志望動機の市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">志望動機の4つの軸マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>エンジニア 志望動機の市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="志望動機の4つの軸マップ">
+          <thead><tr><th>動機の軸</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>技術的成長軸</td><td>扱う技術スタック・チームレベルでの成長機会</td><td>技術志向 (スペシャリスト) を目指す人</td></tr>
+            <tr><td>プロダクト軸</td><td>扱うプロダクトの社会的意義・ユーザー価値</td><td>B2C / 社会課題系プロダクトに惹かれる人</td></tr>
+            <tr><td>働き方軸</td><td>リモート・フレックス・残業時間等の働き方改善</td><td>ワークライフバランス重視の人</td></tr>
+            <tr><td>マネジメント軸</td><td>技術リード・マネジメント機会への興味</td><td>30代以降のキャリアアップ志向の人</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_engineer_shibo_douki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_engineer-shibo-douki">
+          <span>自分の市場価値を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">伝わる志望動機の4つの組み立て方</h2>
+      <p class="section-lede">エンジニア 志望動機の主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>STAR フレームワーク</h4><p>Situation/Task/Action/Result で過去の経験を整理し、転職で何を活かせるかを示すパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>Why-Now-Why-Here の構造</h4><p>「なぜ転職するのか」「なぜ今なのか」「なぜこの会社なのか」を構造化するパス。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>自分の課題と会社の解決策のマッチ</h4><p>自分の課題 (例: 技術成長/マネジメント機会) と会社が提供できる環境を結ぶパス。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>複数社の比較を踏まえた選定理由</h4><p>比較検討プロセスを示すことで、検討の真剣さを伝えるパス。詳細は <a href="/engineer-agent-osusume/" class="underline">エンジニア転職エージェント選び方</a> も参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_engineer_shibo_douki_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">志望動機を整える5つの対策</h2>
+      <p class="section-lede">志望動機の中核は、<strong>過去経験と応募先の魅力を構造的に結ぶこと</strong>とされています。 以下は公開情報・業界一般論をもとにした対策の整理です。</p>
+      <div class="counter-box">
+        <h4>対策1: 過去の経験の棚卸し (STAR)</h4>
+        <p>プロジェクト単位で Situation/Task/Action/Result を整理しておくことが、書類・面接の両方で重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策2: Why-Now-Why-Here の整理</h4>
+        <p>「なぜ転職するのか」「なぜ今なのか」「なぜこの会社なのか」を3つの問いに分けて言語化することが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策3: 応募先企業の事前リサーチ</h4>
+        <p>公式採用サイト・技術ブログ・公開資料を読み込み、企業固有の魅力を志望動機に組み込むことが評価されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策4: NG パターンの回避</h4>
+        <p>「成長したい」「貴社のビジョンに共感」等の抽象表現だけで終わらず、具体的根拠を添えることが推奨されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>対策5: 第三者の視点での検証</h4>
+        <p>エージェント・キャリアコンサルタントに志望動機を読んでもらい、客観的な改善点を得ることが有効とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec3_engineer_shibo_douki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_engineer-shibo-douki">
+          <span>エンジニア 志望動機の進め方を TechGo の無料サポートで整理する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">エンジニア 志望動機の転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>具体性</td><td>「成長したい」のみの抽象表現</td><td>具体的経験と希望を結びつけた言葉</td></tr>
+            <tr><td>企業固有性</td><td>他社にもそのまま使える内容</td><td>応募先の事業・技術固有の言及</td></tr>
+            <tr><td>動機の構造</td><td>理由が1つだけ・浅い</td><td>Why-Now-Why-Here で多角的</td></tr>
+            <tr><td>自分の貢献</td><td>「学びたい」だけで終わる</td><td>自分が貢献できる内容も併記</td></tr>
+            <tr><td>長さ・読みやすさ</td><td>冗長・要点不明</td><td>200-400 字程度で要点明示</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
+      <p>エンジニア 志望動機の転職は判断材料の確保が鍵とされており、第三者の視点で補うことが有効とされています。TechGo (IT エンジニア特化転職エージェント)の公開情報によれば、以下の無料サポートが提供されているとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">活用1</span><h4>志望動機の壁打ち</h4><p>エージェントが企業固有のポイントを踏まえて、志望動機の構造化を支援するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用2</span><h4>過去経験の棚卸し支援</h4><p>STAR フレームワークで過去経験を整理するサポートです。</p></article>
+        <article class="branch"><span class="tag">活用3</span><h4>応募先企業の情報補完</h4><p>求人票では分かりにくい組織文化・技術スタックの実態などを補うサポートです。</p></article>
+        <article class="branch"><span class="tag">活用4</span><h4>面接対策の支援</h4><p>面接で想定される志望動機関連の質問への準備支援です。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>エンジニア 志望動機の転職は方向性の整理が要とされています。TechGo の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec5_engineer_shibo_douki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_engineer-shibo-douki">
+          <span>TechGo の無料サポートを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-agent-osusume/"><h4>エンジニア転職エージェント選び方</h4><p>エージェント選定の5軸</p></a>
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと技術スタック</p></a>
+        <a class="card-link" href="/engineer-mensetsu-taisaku/"><h4>エンジニア転職 面接対策</h4><p>技術面接と動機面接の準備</p></a>
+        <a class="card-link" href="/engineer-30dai-tenshoku/"><h4>30代エンジニア転職完全ガイド</h4><p>年代別市場価値</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">伝わる志望動機を整え、納得のいく転職に近づく</h2>
+      <p>エンジニア 志望動機の転職は方向性の整理と判断材料の確保で精度が高まるとされています。TechGo の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_engineer_shibo_douki`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_engineer-shibo-douki">
+          <span>TechGo の無料相談でエンジニア 志望動機の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</RichLayout>
