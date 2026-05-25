@@ -2,7 +2,7 @@
 /**
  * sogo-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
  * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
- * メイン KW: 総合コンサル 転職 (sv 推定 800・主戦場・採用枠最大・IT/業務系メイン)
+ * メイン KW: 総合コンサル 転職 (sv 推定 800・主戦場・採用枠が大規模・IT/業務系メイン)
  */
 import RichLayout from '../../layouts/RichLayout.astro';
 
@@ -22,11 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: '総合コンサルとは何ですか?', a: '戦略立案 → 業務改革 → システム実装 → 運用 の一気通貫を提供するコンサルファームを指すとされています。代表的にはアクセンチュア・PwC・ベイカレント・アビーム・IBM 等が含まれ、コンサル業界で最大の採用枠を持つカテゴリとされています。' },
+  { q: '総合コンサルとは何ですか?', a: '戦略立案 → 業務改革 → システム実装 → 運用 の一気通貫を提供するコンサルファームを指すとされています。代表的にはアクセンチュア・PwC・ベイカレント・アビーム・IBM 等が含まれ、コンサル業界で大規模な採用枠を持つカテゴリとされています。' },
   { q: '総合コンサルの年収レンジはどのくらいですか?', a: '一般公開情報によれば、新卒〜2-3年目で500-800万円、コンサルタント階層で700-1,200万円、マネージャー階層で1,200-1,700万円、パートナーで2,000-3,000万円帯の事例が報告されています。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
   { q: '戦略系より総合系を選ぶメリットは何ですか?', a: '採用枠の広さ + 業界カバー範囲 + 実装まで担当する一気通貫 + キャリア拡張性が一般的なメリットとされています。戦略立案だけでなく実装まで責任を持つ働き方を志向する層に適しているとされています。' },
   { q: 'IT エンジニアから総合コンサルに転職できますか?', a: 'IT・SIer 出身者は総合系の Technology / Consulting 部門でメインターゲットとされています。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
-  { q: 'アクセンチュアと他総合系ファームの違いは何ですか?', a: 'アクセンチュアは Technology 部門が業界最大規模、PwC は監査法人系のクロスファンクション、ベイカレントは業界知見深化、アビームは SAP・基幹業務深耕、IBM はクラウド + AI 特化 等の特性があるとされています。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a> 参照。' },
+  { q: 'アクセンチュアと他総合系ファームの違いは何ですか?', a: 'アクセンチュアは Technology 部門が業界有数の規模、PwC は監査法人系のクロスファンクション、ベイカレントは業界知見深化、アビームは SAP・基幹業務深耕、IBM はクラウド + AI 特化 等の特性があるとされています。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a> 参照。' },
   { q: '20代後半・30代でも応募できますか?', a: '20代後半-30代前半が中途採用の主要層とされています。30代後半も専門領域があれば対象とされています。詳細は <a href="/consul-tenshoku-20daikouhan/" class="underline">20代後半 コンサル</a>・<a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル</a> 参照。' },
 ];
 const faqSchema = {
@@ -108,7 +108,7 @@ const breadcrumbSchema = {
       <p class="section-num">SECTION / 02</p>
       <h2 id="h2-2">総合系を選ぶ 4 つのメリット</h2>
       <div class="branch-grid">
-        <article class="branch"><span class="tag">メリット1</span><h4>採用枠の広さ</h4><p>戦略系より採用枠が大幅に広く、中途採用機会が多いとされています。20代後半-30代前半の主戦場として、IT・SIer・大手事業会社出身者が主要採用層です。</p></article>
+        <article class="branch"><span class="tag">メリット1</span><h4>採用枠の広さ</h4><p>戦略系より採用枠が広く広く、中途採用機会が多いとされています。20代後半-30代前半の主戦場として、IT・SIer・大手事業会社出身者が主要採用層です。</p></article>
         <article class="branch"><span class="tag">メリット2</span><h4>戦略 + 実装の一気通貫</h4><p>戦略立案だけでなく、システム実装 + 業務運用までを担当する案件構造のため、「戦略 → 実装 → 結果検証」の全工程に責任を持つ働き方ができるとされています。</p></article>
         <article class="branch"><span class="tag">メリット3</span><h4>業界カバー範囲の広さ</h4><p>金融・製造・流通・通信・公共・ヘルスケア等の多業界をカバーし、複数業界経験を積めるとされています。専門性 + 横展開知見が育つ環境です。</p></article>
         <article class="branch"><span class="tag">メリット4</span><h4>キャリア拡張性</h4><p>マネージャー昇格後は事業会社 CXO・PE/VC・専門領域特化への転身も選択肢として広く、キャリアパスが多様とされています。</p></article>
@@ -179,7 +179,7 @@ const breadcrumbSchema = {
       <div class="card-grid">
         <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略 vs 総合 vs FAS vs IT vs 公共</p></a>
         <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
-        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>総合系最大採用ファーム</p></a>
+        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>総合系大規模採用ファーム</p></a>
         <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>Technology メインターゲット</p></a>
       </div>
     </div>
