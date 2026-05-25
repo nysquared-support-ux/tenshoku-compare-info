@@ -2,13 +2,13 @@
 /**
  * baycurrent-tenshoku LP (MyVision コンサル特化・★326 DRY)
  * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
- * メイン KW: ベイカレント 転職 (sv 推定 800-1,200・日系総合最高単価)
+ * メイン KW: ベイカレント 転職 (sv 推定 800-1,200・日系総合高単価)
  */
 import RichLayout from '../../layouts/RichLayout.astro';
 
 const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
-const title = 'ベイカレント 転職 完全ガイド｜日系総合最高単価ファームの特性・年収・選考対策｜MyVision (PR)';
-const description = 'ベイカレント・コンサルティングへの転職について、日系総合最高単価ファームの特性・年収レンジ・案件構成・採用される人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング + 添削サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const title = 'ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)';
+const description = 'ベイカレント・コンサルティングへの転職について、日系総合高単価ファームの特性・年収レンジ・案件構成・採用される人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング + 添削サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
 const breadcrumb = [
   { name: 'ホーム', url: '/' },
   { name: 'コンサル転職ガイド', url: '/' },
@@ -22,8 +22,8 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'ベイカレント・コンサルティングはどんなファームですか?', a: 'ベイカレント・コンサルティングは日系総合コンサルティングファームの一つで、業界知見 + 経営改革 + DX 推進案件を中心に、日系企業の中では最高単価帯のファームとして一般的に位置づけられています。30代の業界経験豊富な実務派の中途採用が活発な傾向とされています。' },
-  { q: 'ベイカレントの年収レンジはどのくらいですか?', a: '一般公開情報によれば、コンサルタント階層で700-1,100万円、シニアコンサルタント階層で900-1,400万円、マネージャー階層で1,400-1,900万円、シニアマネージャー階層で1,800-2,500万円帯の事例が報告されています。日系総合系の中で最高水準の年収レンジとされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
+  { q: 'ベイカレント・コンサルティングはどんなファームですか?', a: 'ベイカレント・コンサルティングは日系総合コンサルティングファームの一つで、業界知見 + 経営改革 + DX 推進案件を中心に、日系企業の中では高単価帯のファームとして一般的に位置づけられています。30代の業界経験豊富な実務派の中途採用が活発な傾向とされています。' },
+  { q: 'ベイカレントの年収レンジはどのくらいですか?', a: '一般公開情報によれば、コンサルタント階層で700-1,100万円、シニアコンサルタント階層で900-1,400万円、マネージャー階層で1,400-1,900万円、シニアマネージャー階層で1,800-2,500万円帯の事例が報告されています。日系総合系の中で高水準の年収レンジとされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
   { q: 'ベイカレントの選考対策はどうすればよいですか?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 → 役員面接の流れが標準的で、業界知見 + 実務経験の言語化が評価軸とされています。元コンサルの添削 + 模擬面接が一般的に推奨されます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
   { q: '業界経験が浅くてもベイカレントに転職できますか?', a: '一般公開情報によれば、ベイカレントは「業界知見豊富な実務派」を主要採用層としており、業界経験 5 年以上 + 大手事業会社 / SIer / IT 出身者が中心とされています。20代後半 + 業界経験浅め層も採用枠はあるとされますが、競争は厳しい傾向とされています。' },
   { q: 'アクセンチュアとベイカレントどちらを選ぶべきですか?', a: 'アクセンチュアは規模 + Tech 採用枠最大 + グローバル展開、ベイカレントは高単価 + 業界知見深耕 + 日系流の特性とされています。志向性 + 前職経験 + キャリア構想で適合性が変わります。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a> 参照。' },
@@ -51,11 +51,11 @@ const breadcrumbSchema = {
 
   <section class="fv" aria-labelledby="fv-h1">
     <div class="container">
-      <span class="fv-pill">ベイカレント / 日系総合最高単価ガイド</span>
-      <h1 id="fv-h1"><span class="accent">ベイカレント</span> 転職 完全ガイド<br />日系総合最高単価ファームの特性・年収・選考対策</h1>
-      <p class="lede"><strong>結論 (一般的傾向)</strong>: ベイカレント・コンサルティングは<strong>日系総合コンサルファームの中で最高単価帯</strong>とされ、30代の業界知見豊富な実務派をメインターゲットに中途採用を活発化させているとされています。本記事ではファームの特性・年収レンジ・案件構成・選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <span class="fv-pill">ベイカレント / 日系総合高単価ガイド</span>
+      <h1 id="fv-h1"><span class="accent">ベイカレント</span> 転職 完全ガイド<br />日系総合高単価ファームの特性・年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: ベイカレント・コンサルティングは<strong>日系総合コンサルファームの中で高単価帯</strong>とされ、30代の業界知見豊富な実務派をメインターゲットに中途採用を活発化させているとされています。本記事ではファームの特性・年収レンジ・案件構成・選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
       <ul class="fv-bullets">
-        <li>ベイカレントの特性 (日系総合最高単価)</li>
+        <li>ベイカレントの特性 (日系総合高単価)</li>
         <li>年収レンジ (700-2,500万円帯)</li>
         <li>採用される人材像 (業界経験豊富な実務派)</li>
         <li>選考対策 + 元コンサル無料サポート活用</li>
@@ -83,7 +83,7 @@ const breadcrumbSchema = {
       <h2 id="h2-1">ベイカレントの特性 — 4 つの強み</h2>
       <p class="section-lede">本記事の主張根拠 (出典): ベイカレント・コンサルティング公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
       <div class="branch-grid">
-        <article class="branch"><span class="tag">強み1</span><h4>日系総合最高単価</h4><p>日系コンサルファームの中で年収レンジが最高水準とされています。マネージャー昇格後は1,400-1,900万円、シニアマネージャーで1,800-2,500万円帯の事例が報告されており、外資系総合と並ぶ水準とされる傾向です。</p></article>
+        <article class="branch"><span class="tag">強み1</span><h4>日系総合高単価</h4><p>日系コンサルファームの中で年収レンジが高水準とされています。マネージャー昇格後は1,400-1,900万円、シニアマネージャーで1,800-2,500万円帯の事例が報告されており、外資系総合と並ぶ水準とされる傾向です。</p></article>
         <article class="branch"><span class="tag">強み2</span><h4>業界知見深耕</h4><p>金融・製造・通信・流通等の主要業界に深く入り込んだ案件構成が特徴とされています。業界実務経験豊富な人材を活かせるカルチャーとされています。</p></article>
         <article class="branch"><span class="tag">強み3</span><h4>ワンプール制 (案件横断)</h4><p>業界・領域別に固定の部門配属ではなく、ワンプール制で多様な案件にアサインされる組織構造が特徴とされています。多領域の経験を積みやすい環境とされています。</p></article>
         <article class="branch"><span class="tag">強み4</span><h4>DX・経営改革の主戦場</h4><p>DX 推進 + 経営改革 + 業務変革を中核案件とし、日系大手企業の経営層への直接アプローチが多い傾向とされています。戦略 + 実装の一気通貫案件構成が特徴です。</p></article>
@@ -165,7 +165,7 @@ const breadcrumbSchema = {
         <article class="branch"><span class="tag">対策1</span><h4>業界知見の言語化</h4><p>前職業界 (金融 / 製造 / 通信 / 流通等) の構造 + 課題 + 主要プレイヤー + 最新トレンドを体系的に整理し、面接で議論できる準備が必須とされています。ベイカレントの中核評価軸です。</p></article>
         <article class="branch"><span class="tag">対策2</span><h4>実務経験のコンサル翻訳</h4><p>業界実務経験を経営課題 → コンサル評価軸 (経営インパクト・関係者数・予算規模) に翻訳する作業が選考突破の鍵とされています。元コンサルの添削で品質が大きく変わります。</p></article>
         <article class="branch"><span class="tag">対策3</span><h4>ケース面接 (実務寄り + 業界深掘り)</h4><p>ベイカレントのケース面接は実務寄り (収益改善 / DX 推進 / 業務変革) + 業界知見深掘りの傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
-        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜベイカレント)</h4><p>「日系総合最高単価」「業界知見深耕」「ワンプール制で多領域経験」等のベイカレント特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜベイカレント)</h4><p>「日系総合高単価」「業界知見深耕」「ワンプール制で多領域経験」等のベイカレント特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
       </div>
 
       <div class="cta-block">
@@ -208,7 +208,7 @@ const breadcrumbSchema = {
 
   <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">
-      <h2 id="h2-final">日系総合最高単価のベイカレントへ、業界知見を武器に挑戦する</h2>
+      <h2 id="h2-final">日系総合高単価のベイカレントへ、業界知見を武器に挑戦する</h2>
       <p>ベイカレントは業界経験豊富な実務派の主戦場。MyVisionの無料カウンセリングで、業界経験 + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
       <div class="cta-block">
         <a class="btn-cta" href={`${A8}&sitemicros=final_baycurrent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_baycurrent">
