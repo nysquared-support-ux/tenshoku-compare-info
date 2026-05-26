@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'コンサルファームの 5 区分とは何ですか?', a: '一般的に (1) 戦略系 (BCG/McK/Bain) (2) 総合系 (アクセンチュア/PwC/ベイカレント等) (3) FAS系 (Deloitte FAS/PwC AS等) (4) IT系 (アクセンチュア Tech/IBM/アビーム等) (5) 公共系 (野村総研/三菱総研等) の5区分で整理されることが多いとされています。' },
-  { q: '戦略系と総合系の違いは何ですか?', a: '戦略系は経営戦略立案中心の上流案件 + 高単価 + 選考最難度、総合系は戦略 + 実装 + 運用の一気通貫 + 採用枠最大 + 業界カバー範囲の広さが特徴とされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル</a>・<a href="/sogo-consul-tenshoku/" class="underline">総合コンサル</a> 参照。' },
-  { q: 'FAS 系とは何ですか?', a: 'Financial Advisory Services の略で、M&A・財務アドバイザリー・事業再生・バリュエーション等の財務戦略案件特化のファーム区分とされています。会計士・銀行・証券出身者の主要転職先の一つです。' },
-  { q: 'IT 系コンサルと SIer の違いは何ですか?', a: 'IT 系コンサルは経営課題 → IT 戦略立案 → 要件定義の上流工程中心、SIer は要件定義 → 開発 → 運用中心の構造とされています。年収レンジ + キャリア拡張性で IT 系コンサルが高水準とされる傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
-  { q: '自分に合うファームをどう選べばよいですか?', a: '(1) 前職業界・経験 (2) キャリア志向 (3) ライフスタイル要望 (4) 中長期キャリア構想 の4軸でマッチングするのが一般的とされています。複数エージェントの無料カウンセリングで適合診断を受けることが推奨されます。' },
-  { q: '5 区分すべて応募してもよいですか?', a: '一般的には 2-3 区分に絞り、各区分内で 1-2 ファーム選定 = 計 3-6 社並行応募が標準的とされています。区分が広すぎると志望動機の論理性が薄れる傾向にあります。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。' },
+  { q: 'コンサル未経験者向けの研修は、どのような法的枠組みの中で提供されることが多いですか？', a: '多くのファームでは、労働契約法に基づき、業務に必要な知識やスキルを習得させる目的で研修を実施します。これらは業務命令として扱われ、労働時間と見なされることが一般的とされます。詳細は各社の就業規則や労働契約をご確認ください。' },
+  { q: '未経験からコンサルタントになる場合、入社前の研修で具体的にどのくらいの学習時間が推奨されますか？', a: '一概には言えませんが、一般的に主要なフレームワークの理解やExcelスキルの習熟に50〜100時間程度を費やすことが推奨されるケースが多いようです。これはあくまで目安であり、個人の素養やファームの要求水準によって変動します。' },
+  { q: '研修内容が自分に合わないと感じた場合、キャリアパスの変更は可能ですか？', a: 'ファームによっては、研修後の面談を通じて専門領域の変更や部署異動を相談できる場合があります。まずは社内のメンターや人事担当者に相談することが第一歩です。当サイトの「ファーム別キャリアパス比較」のセクションもご参照ください。' },
+  { q: '入社前研修で提供される情報について、注意すべき点はありますか？', a: '入社前研修で知り得た情報、特にクライアント情報や社外秘のノウハウには守秘義務が課せられる場合があります。不正競争防止法などにも関連するため、SNS等での情報発信には細心の注意が必要です。安易な共有は法的な問題に発展するリスクがあるとされます。' },
+  { q: 'コンサル未経験者向け研修を成功させる最も重要な心構えは何ですか？', a: '指示された内容をこなすだけでなく、常に「なぜこのスキルが必要なのか」を自問し、能動的に学習する姿勢が重要とされます。研修はゴールではなく、コンサルタントとしてのキャリアのスタートラインであり、主体的な学びが長期的な成長に繋がります。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,39 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">タイプ別おすすめファーム</h2>
-      <div class="counter-box">
-        <h4>タイプA: 高年収最優先 + ポテンシャル大きい</h4>
-        <p>戦略系 (BCG / McK / Bain) が第一候補。20代後半-30代前半 + 高学歴 + ケース面接突破力があれば挑戦可能。選考難度高いが年収レンジが高水準。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプB: 採用枠最大 + IT 出身</h4>
-        <p>アクセンチュア Technology が第一候補。IT・SIer・SE・PM 出身者が主戦場で、クラウド・データ・AI 領域の採用が活発。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a>・<a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプC: 業界経験豊富 + マネジメント素養</h4>
-        <p>ベイカレント・コンサルティング または PwC コンサルティングが候補。30代前半-後半の業界知見豊富な実務派が活躍する傾向。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプD: 会計・財務専門 + M&A 志向</h4>
-        <p>FAS 系 (Deloitte FAS / PwC AS / KPMG FAS) が候補。会計士・銀行・証券・経理財務出身者の主要転職先。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプE: 業界横断 + 戦略 + 実装の一気通貫</h4>
-        <p>総合系 (アクセンチュア / PwC / ベイカレント) が幅広く候補。20代後半-30代前半の主戦場で、採用枠の広さ + キャリア拡張性が魅力。詳細は <a href="/sogo-consul-tenshoku/" class="underline">総合コンサル転職</a> 参照。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_firmhikaku">
-          <span>自分のタイプを MyVison 公式の無料診断で確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>コンサル未経験者向け研修の基本構造と目的</h2><p>コンサルティングファームが未経験者向けに提供する研修は、入社後の業務遂行能力を底上げするために設計されています。一般的に、ロジカルシンキング、リサーチ手法、資料作成スキル（PowerPoint, Excel）、業界知識といった基礎的なビジネススキルが中心となります。これらの研修は、職業能力開発促進法が示す「職業能力の開発及び向上の促進」という考え方にも沿うもので、労働者のキャリア形成を支援する目的も含まれるとされます。多くの場合、座学とケーススタディを組み合わせ、実践的な思考力を養う構成が取られています。公開情報をもとに整理すると、研修期間は数週間から数ヶ月とファームによって様々ですが、早期にプロフェッショナルとしての土台を築くという共通の目的を持っています。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -172,25 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事 (Hub LP)</p>
-      <h2 id="h2-related">関連記事 — MyVision コンサル特化 全 LP</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
-        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>アクセンチュア / PwC 等 5 ファーム</p></a>
-        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考</p></a>
-        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>SIer/SE/PM 出身者向け</p></a>
-        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
-        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の戦略</p></a>
-        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル</h4><p>26-29歳の市場価値ピーク前</p></a>
-        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
-        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
-        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル 志望動機</h4><p>落ちる 7 パターン × 通る構造</p></a>
-        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>失敗事例 5 タイプ × 回避法</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>研修効果を最大化する入社前後の具体的アクション</h2><p>コンサル未経験者向け研修の効果を最大限に引き出すには、入社前後の主体的な学習が鍵となります。入社前には、指定された課題図書を読むだけでなく、関連する業界ニュースを追い、自分なりの仮説を立てる練習をすると良いでしょう。入社後は、研修で学んだフレームワークを実際の業務で意識的に使用し、先輩コンサルタントの思考プロセスを観察・模倣することが成長への近道とされます。厚生労働省が推進する「キャリアコンサルティング」の考え方のように、自身のキャリアプランを定期的に見直し、研修で得たスキルをどう活かすかを考えることも重要です。このような能動的な姿勢は、単なる知識のインプットに留まらず、実践で活きる「コンサルタントとしての思考体力」を養う上で非常に有益です。受け身の姿勢では得られない、深い学びと早期の戦力化という大きなベネフィットに繋がります。</p><ul><li>入社前：指定課題に加え、関連書籍やニュース記事を読み込み、思考の訓練を行う。</li><li>研修中：不明点を放置せず、同期や講師に積極的に質問し、議論を通じて理解を深める。</li><li>配属後：研修で学んだスキルセットを実務で意識的に活用し、フィードバックを素直に受け入れる。</li></ul></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">

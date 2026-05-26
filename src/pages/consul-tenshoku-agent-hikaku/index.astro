@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'コンサルファームの 5 区分とは何ですか?', a: '一般的に (1) 戦略系 (BCG/McK/Bain) (2) 総合系 (アクセンチュア/PwC/ベイカレント等) (3) FAS系 (Deloitte FAS/PwC AS等) (4) IT系 (アクセンチュア Tech/IBM/アビーム等) (5) 公共系 (野村総研/三菱総研等) の5区分で整理されることが多いとされています。' },
-  { q: '戦略系と総合系の違いは何ですか?', a: '戦略系は経営戦略立案中心の上流案件 + 高単価 + 選考最難度、総合系は戦略 + 実装 + 運用の一気通貫 + 採用枠最大 + 業界カバー範囲の広さが特徴とされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル</a>・<a href="/sogo-consul-tenshoku/" class="underline">総合コンサル</a> 参照。' },
-  { q: 'FAS 系とは何ですか?', a: 'Financial Advisory Services の略で、M&A・財務アドバイザリー・事業再生・バリュエーション等の財務戦略案件特化のファーム区分とされています。会計士・銀行・証券出身者の主要転職先の一つです。' },
-  { q: 'IT 系コンサルと SIer の違いは何ですか?', a: 'IT 系コンサルは経営課題 → IT 戦略立案 → 要件定義の上流工程中心、SIer は要件定義 → 開発 → 運用中心の構造とされています。年収レンジ + キャリア拡張性で IT 系コンサルが高水準とされる傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
-  { q: '自分に合うファームをどう選べばよいですか?', a: '(1) 前職業界・経験 (2) キャリア志向 (3) ライフスタイル要望 (4) 中長期キャリア構想 の4軸でマッチングするのが一般的とされています。複数エージェントの無料カウンセリングで適合診断を受けることが推奨されます。' },
-  { q: '5 区分すべて応募してもよいですか?', a: '一般的には 2-3 区分に絞り、各区分内で 1-2 ファーム選定 = 計 3-6 社並行応募が標準的とされています。区分が広すぎると志望動機の論理性が薄れる傾向にあります。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。' },
+  { q: 'コンサル転職エージェントは複数登録しても問題ないのでしょうか？', a: '複数登録は一般的に問題ないとされます。各社の非公開求人を比較検討できるメリットがあります。ただし、同じ求人に複数のエージェントから応募すると企業側に混乱を招く可能性があるため注意が必要です。職業安定法では、求職者への適切な情報提供が求められており、複数の選択肢を持つこと自体は推奨される傾向にあります。' },
+  { q: '未経験からコンサルを目指す場合、エージェント選びで重視すべき点は何ですか？', a: '未経験者向けの求人保有数と、サポート体制の手厚さを重視すると良いでしょう。特に、職務経歴書の添削や面接対策など、未経験からの転職に特化したノウハウを持つエージェントが推奨されます。具体的なサポート内容は、各社の利用規約やサービス概要で確認することが重要とされます。' },
+  { q: '大手と特化型、どちらのコンサル転職エージェントを選ぶべきですか？', a: '大手は求人数が多く多様な選択肢から探せ、特化型は特定のファームとの繋がりが強く専門的な助言が期待できます。ご自身のキャリアプランに合わせて、両方のタイプを検討することをおすすめします。詳細は当ページの「自分に合うエージェントの比較・選定方法」のセクションもご参照ください。' },
+  { q: 'エージェント比較サイトの情報だけで選んでも大丈夫ですか？', a: '比較サイトはあくまで参考情報と捉えるのが賢明です。最終的には複数のエージェントと実際に面談し、担当者との相性や提案の質をご自身で確かめることが重要です。国民生活センターも、サービス契約前の十分な情報収集と確認を呼びかけています。安易に一つの情報源に頼らないようにしましょう。' },
+  { q: '良いコンサル転職エージェントを見分けるポイントは何ですか？', a: '業界知識の深さ、客観的な情報提供、そして求職者のキャリアプランを尊重する姿勢が重要です。強引に特定の求人を勧めるのではなく、中長期的な視点で助言をくれる担当者がいるエージェントは信頼できるとされます。厚生労働省の「職業紹介事業の業務運営要領」でも、求職者の希望や能力に応じた紹介が求められています。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,39 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">タイプ別おすすめファーム</h2>
-      <div class="counter-box">
-        <h4>タイプA: 高年収最優先 + ポテンシャル大きい</h4>
-        <p>戦略系 (BCG / McK / Bain) が第一候補。20代後半-30代前半 + 高学歴 + ケース面接突破力があれば挑戦可能。選考難度高いが年収レンジが高水準。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプB: 採用枠最大 + IT 出身</h4>
-        <p>アクセンチュア Technology が第一候補。IT・SIer・SE・PM 出身者が主戦場で、クラウド・データ・AI 領域の採用が活発。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a>・<a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプC: 業界経験豊富 + マネジメント素養</h4>
-        <p>ベイカレント・コンサルティング または PwC コンサルティングが候補。30代前半-後半の業界知見豊富な実務派が活躍する傾向。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプD: 会計・財務専門 + M&A 志向</h4>
-        <p>FAS 系 (Deloitte FAS / PwC AS / KPMG FAS) が候補。会計士・銀行・証券・経理財務出身者の主要転職先。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプE: 業界横断 + 戦略 + 実装の一気通貫</h4>
-        <p>総合系 (アクセンチュア / PwC / ベイカレント) が幅広く候補。20代後半-30代前半の主戦場で、採用枠の広さ + キャリア拡張性が魅力。詳細は <a href="/sogo-consul-tenshoku/" class="underline">総合コンサル転職</a> 参照。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_firmhikaku">
-          <span>自分のタイプを MyVison 公式の無料診断で確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>コンサル転職エージェント比較の基礎知識</h2><p>コンサルティング業界への転職を成功させる上で、転職エージェントの選定は重要な要素の一つとされます。各エージェントはそれぞれ異なる強みや特徴、非公開求人を持っているため、複数のサービスを比較検討することが、より良い選択肢を見つけるための第一歩となります。比較の基本的な観点としては、「求人の量と質」「コンサル業界への専門性」「担当アドバイザーのサポート体制」の3つが挙げられます。例えば、大手総合型エージェントは幅広い求人を保有している一方、コンサル特化型エージェントは特定のファームとの強固なパイプを持つ傾向があります。厚生労働省の職業紹介事業に関する指針でも、求職者の能力や希望に応じた適切な職業紹介が求められており、自分に合ったサービスを見極めることが不可欠です。まずは各社の公開情報をもとに、これらの観点からサービス内容を整理し、自身のキャリアプランに合致するエージェントの候補を絞り込むことから始めましょう。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -172,25 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事 (Hub LP)</p>
-      <h2 id="h2-related">関連記事 — MyVision コンサル特化 全 LP</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
-        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>アクセンチュア / PwC 等 5 ファーム</p></a>
-        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考</p></a>
-        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>SIer/SE/PM 出身者向け</p></a>
-        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
-        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の戦略</p></a>
-        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル</h4><p>26-29歳の市場価値ピーク前</p></a>
-        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
-        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
-        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル 志望動機</h4><p>落ちる 7 パターン × 通る構造</p></a>
-        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>失敗事例 5 タイプ × 回避法</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>自分に合うコンサル転職エージェントの具体的な比較・選定手順</h2><p>最適なコンサル転職エージェントを見つけることは、転職活動の成功確率を大きく左右します。ここでは、公開情報をもとに整理した、具体的な比較・選定手順を解説します。この手順を踏むことで、自身のキャリアプランに合致した、信頼できるパートナーを見つけることができるでしょう。まず、2〜3社のエージェントに登録し、それぞれと初回面談を行います。この面談は、エージェントを「評価」する場と捉え、受け身にならず積極的に質問することが重要です。職業安定法第5条の4では、求人者は求職者に対して業務内容や労働条件を明示する義務があると定められており、エージェントにも同様に誠実な情報提供が求められます。面談を通じて、以下の点を比較・評価しましょう。</p><ul><li><strong>提案される求人の質と納得感:</strong> あなたの経歴や希望を深く理解した上で、具体的な求人を提案してくれるか。なぜその求人があなたに適しているのか、論理的な説明があるかを確認します。</li><li><strong>担当者の専門性と相性:</strong> コンサル業界の動向や各ファームの文化に精通しているか。また、コミュニケーションが円滑で、信頼関係を築けそうかを見極めます。長期的なキャリアについて、親身に相談に乗ってくれる姿勢も重要です。</li><li><strong>サポート体制の具体性:</strong> 職務経歴書の添削やケース面接対策など、選考プロセスにおける具体的なサポート内容を確認します。過去の支援実績や成功事例などを尋ねるのも有効な手段とされます。</li></ul><p>これらの要素を総合的に比較し、最も信頼できると感じたエージェントをメインの相談相手として活動を進めるのが効率的です。一つのサービスに依存するのではなく、客観的な視点で比較検討することが、後悔のない選択に繋がります。</p></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">

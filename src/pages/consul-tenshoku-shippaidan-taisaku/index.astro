@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'コンサルファームの 5 区分とは何ですか?', a: '一般的に (1) 戦略系 (BCG/McK/Bain) (2) 総合系 (アクセンチュア/PwC/ベイカレント等) (3) FAS系 (Deloitte FAS/PwC AS等) (4) IT系 (アクセンチュア Tech/IBM/アビーム等) (5) 公共系 (野村総研/三菱総研等) の5区分で整理されることが多いとされています。' },
-  { q: '戦略系と総合系の違いは何ですか?', a: '戦略系は経営戦略立案中心の上流案件 + 高単価 + 選考最難度、総合系は戦略 + 実装 + 運用の一気通貫 + 採用枠最大 + 業界カバー範囲の広さが特徴とされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル</a>・<a href="/sogo-consul-tenshoku/" class="underline">総合コンサル</a> 参照。' },
-  { q: 'FAS 系とは何ですか?', a: 'Financial Advisory Services の略で、M&A・財務アドバイザリー・事業再生・バリュエーション等の財務戦略案件特化のファーム区分とされています。会計士・銀行・証券出身者の主要転職先の一つです。' },
-  { q: 'IT 系コンサルと SIer の違いは何ですか?', a: 'IT 系コンサルは経営課題 → IT 戦略立案 → 要件定義の上流工程中心、SIer は要件定義 → 開発 → 運用中心の構造とされています。年収レンジ + キャリア拡張性で IT 系コンサルが高水準とされる傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
-  { q: '自分に合うファームをどう選べばよいですか?', a: '(1) 前職業界・経験 (2) キャリア志向 (3) ライフスタイル要望 (4) 中長期キャリア構想 の4軸でマッチングするのが一般的とされています。複数エージェントの無料カウンセリングで適合診断を受けることが推奨されます。' },
-  { q: '5 区分すべて応募してもよいですか?', a: '一般的には 2-3 区分に絞り、各区分内で 1-2 ファーム選定 = 計 3-6 社並行応募が標準的とされています。区分が広すぎると志望動機の論理性が薄れる傾向にあります。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。' },
+  { q: 'コンサル転職で「失敗した」と感じる主な理由は何ですか？', a: '主な理由として、入社前の期待と実際の業務内容や労働環境とのギャップが挙げられます。特に業務の厳しさや求められるスキルの高さが想定以上だったケースが多いとされます。厚生労働省の資料でも、労働条件の明確化が円滑な就職活動の鍵とされています。' },
+  { q: 'スキル面のミスマッチで失敗する具体例を教えてください。', a: '例えば、前職での専門知識はあっても、コンサル特有の論理的思考力や仮説検証能力が不足し、パフォーマンスを発揮できないケースです。対策として、事前にケース面接のトレーニングを最低でも20-30時間程度行い、適性を客観的に判断することが推奨されます。' },
+  { q: '企業のカルチャーが合わないという失敗を防ぐにはどうすれば良いですか？', a: '公式サイトの情報だけでなく、社員の口コミサイトやOB/OG訪問、信頼できる転職エージェントからの情報を多角的に収集することが重要です。特に「Up or Out」の文化の強さなど、リアルな情報を得ることで、入社後のミスマッチを減らせると考えられます。' },
+  { q: '求人情報と実際の労働条件が異なっていた場合、何か法的な相談窓口はありますか？', a: '求人情報と実際の労働条件が著しく異なる場合、職業安定法に抵触する可能性があります。まずは社内の相談窓口に、解決が難しい場合は全国の労働局やハローワークの専門窓口に相談することが可能です。契約前に労働条件通知書をよく確認することが重要です。' },
+  { q: 'コンサル転職の失敗を避けるために、最も重要な心構えは何ですか？', a: '「なぜコンサルタントになりたいのか」という目的意識を明確に持つことです。厳しい環境でも目的がはっきりしていれば乗り越えやすいとされます。憧れだけでなく、自身のキャリアプランと照らし合わせ、客観的な自己分析を行うことが成功への第一歩と言えるでしょう。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,39 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">タイプ別おすすめファーム</h2>
-      <div class="counter-box">
-        <h4>タイプA: 高年収最優先 + ポテンシャル大きい</h4>
-        <p>戦略系 (BCG / McK / Bain) が第一候補。20代後半-30代前半 + 高学歴 + ケース面接突破力があれば挑戦可能。選考難度高いが年収レンジが高水準。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプB: 採用枠最大 + IT 出身</h4>
-        <p>アクセンチュア Technology が第一候補。IT・SIer・SE・PM 出身者が主戦場で、クラウド・データ・AI 領域の採用が活発。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a>・<a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプC: 業界経験豊富 + マネジメント素養</h4>
-        <p>ベイカレント・コンサルティング または PwC コンサルティングが候補。30代前半-後半の業界知見豊富な実務派が活躍する傾向。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプD: 会計・財務専門 + M&A 志向</h4>
-        <p>FAS 系 (Deloitte FAS / PwC AS / KPMG FAS) が候補。会計士・銀行・証券・経理財務出身者の主要転職先。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプE: 業界横断 + 戦略 + 実装の一気通貫</h4>
-        <p>総合系 (アクセンチュア / PwC / ベイカレント) が幅広く候補。20代後半-30代前半の主戦場で、採用枠の広さ + キャリア拡張性が魅力。詳細は <a href="/sogo-consul-tenshoku/" class="underline">総合コンサル転職</a> 参照。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_firmhikaku">
-          <span>自分のタイプを MyVison 公式の無料診断で確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>コンサル転職における「失敗」の構造的要因</h2><p>コンサル転職における「失敗」とは、単に内定が出ないことだけを指すのではありません。多くの場合、入社後の短期離職や、期待したキャリアを築けない状況を指します。その構造的要因は、主に「期待値のミスマッチ」「スキルセットの不一致」「キャリアゴールの不明確さ」の3つに分類されると一般にされます。特に、華やかなイメージと、実際の地道で過酷な業務実態とのギャップは、失敗談として頻繁に語られる点です。厚生労働省が推進する「確かめよう労働条件」キャンペーンでも示されている通り、入社前に雇用契約書や労働条件通知書を通じて、残業時間や業務範囲を正確に把握することは、こうしたミスマッチを防ぐための基本的な自己防衛策と言えます。公開情報をもとに整理すると、これらの要因を事前に理解し、対策を講じることが、持続可能なキャリアを築く上で不可欠です。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -172,25 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事 (Hub LP)</p>
-      <h2 id="h2-related">関連記事 — MyVision コンサル特化 全 LP</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
-        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>アクセンチュア / PwC 等 5 ファーム</p></a>
-        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考</p></a>
-        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>SIer/SE/PM 出身者向け</p></a>
-        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
-        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の戦略</p></a>
-        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル</h4><p>26-29歳の市場価値ピーク前</p></a>
-        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
-        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
-        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル 志望動機</h4><p>落ちる 7 パターン × 通る構造</p></a>
-        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>失敗事例 5 タイプ × 回避法</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>事例から学ぶ、転職失敗を回避する具体的な対策ステップ</h2><p>コンサル転職の失敗を回避するためには、体系的な準備と客観的な自己評価が求められます。過去の失敗事例を分析すると、成功のためには以下のステップを踏むことが有効であると整理できます。まず、徹底した自己分析を行い、自身の強み・弱み、価値観、そして「なぜコンサルなのか」を言語化します。厚生労働省がキャリアコンサルティングで活用を推奨する「ジョブ・カード」などを参考に、自身のキャリアの棚卸しを行うことも一つの方法です。次に、企業の公式サイトだけでなく、口コミサイトや現役・元社員からの情報を活用し、企業文化や働き方の実態を多角的にリサーチします。このプロセスを経ることで、入社後の「こんなはずではなかった」というギャップを最小限に抑え、自身の能力を最大限に発揮できるファームを選択できる可能性が高まります。</p><ul><li><strong>徹底した自己分析:</strong> 自身のスキル、経験、キャリアビジョンを客観的に評価し、コンサルタントという職業との適合性を深く考察する。</li><li><strong>多角的な情報収集:</strong> 転職エージェントやOB/OG訪問を通じて、Webサイトだけでは分からない社風やプロジェクトの実態に関する一次情報を得る。</li><li><strong>現実的な期待値設定:</strong> コンサルティング業務の厳しさや求められるコミットメントを正確に理解し、理想と現実のギャップを埋める。</li></ul></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">

@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'コンサルファームの 5 区分とは何ですか?', a: '一般的に (1) 戦略系 (BCG/McK/Bain) (2) 総合系 (アクセンチュア/PwC/ベイカレント等) (3) FAS系 (Deloitte FAS/PwC AS等) (4) IT系 (アクセンチュア Tech/IBM/アビーム等) (5) 公共系 (野村総研/三菱総研等) の5区分で整理されることが多いとされています。' },
-  { q: '戦略系と総合系の違いは何ですか?', a: '戦略系は経営戦略立案中心の上流案件 + 高単価 + 選考最難度、総合系は戦略 + 実装 + 運用の一気通貫 + 採用枠最大 + 業界カバー範囲の広さが特徴とされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル</a>・<a href="/sogo-consul-tenshoku/" class="underline">総合コンサル</a> 参照。' },
-  { q: 'FAS 系とは何ですか?', a: 'Financial Advisory Services の略で、M&A・財務アドバイザリー・事業再生・バリュエーション等の財務戦略案件特化のファーム区分とされています。会計士・銀行・証券出身者の主要転職先の一つです。' },
-  { q: 'IT 系コンサルと SIer の違いは何ですか?', a: 'IT 系コンサルは経営課題 → IT 戦略立案 → 要件定義の上流工程中心、SIer は要件定義 → 開発 → 運用中心の構造とされています。年収レンジ + キャリア拡張性で IT 系コンサルが高水準とされる傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
-  { q: '自分に合うファームをどう選べばよいですか?', a: '(1) 前職業界・経験 (2) キャリア志向 (3) ライフスタイル要望 (4) 中長期キャリア構想 の4軸でマッチングするのが一般的とされています。複数エージェントの無料カウンセリングで適合診断を受けることが推奨されます。' },
-  { q: '5 区分すべて応募してもよいですか?', a: '一般的には 2-3 区分に絞り、各区分内で 1-2 ファーム選定 = 計 3-6 社並行応募が標準的とされています。区分が広すぎると志望動機の論理性が薄れる傾向にあります。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。' },
+  { q: 'ワークライフバランスを重視する場合、どのタイプのコンサルファームが比較的働きやすい傾向にありますか？', a: '一般に、IT系や公共系のコンサルティングファームは、戦略系やFAS系と比較して働き方が安定している傾向にあるとされます。ただし、これはプロジェクトやチームによります。厚生労働省が推進する「働き方改革」の影響で、業界全体で労働時間是正の動きは見られますが、応募前に個別の企業文化を確認することが重要です。' },
+  { q: '求人票の「残業少なめ」という記載はどの程度信頼できますか？', a: '求人票の情報は参考の一つとし、多角的な確認が推奨されます。面接時に「労働基準法第36条に基づく協定（36協定）の遵守状況」や「月平均の残業時間」を具体的に質問するとよいでしょう。また、転職エージェントから企業の内部情報を得たり、社員の口コミサイトを確認したりすることも有効な手段とされます。' },
+  { q: 'コンサル未経験でも、ワークライフバランスの取れるファームへの転職は可能ですか？', a: '可能です。特に特定の専門性（IT、会計、語学など）を持つ人材は、未経験でも比較的働きやすいとされるファームから評価されることがあります。ポテンシャル採用枠を設けている企業も存在します。詳細は「未経験からのコンサル転職」のセクションもご参照ください。まずは情報収集から始めることが推奨されます。' },
+  { q: 'ワークライフバランスを重視して転職する際の注意点はありますか？', a: '面接で働きやすさに関する希望を伝える際は、単に「楽をしたい」という印象を与えないよう注意が必要です。「長期的に貴社で貢献するため、持続可能な働き方を希望します」といった前向きな表現が望ましいとされます。また、入社後のミスマッチを防ぐため、オファー面談などで労働条件を詳細に確認することが重要です。' },
+  { q: '自分に合ったワークライフバランスを実現できるコンサルファームを見つける最善の方法は何ですか？', a: 'まず自身のキャリアプランと許容できる労働時間を明確にすることが第一歩です。その上で、公開情報だけでなく、業界に特化した転職エージェントを活用し、非公開求人や企業の内部情報を得るのが効果的とされます。公的な就労支援機関であるハローワークの求人情報と併用し、広い視野で選択肢を検討しましょう。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,39 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">タイプ別おすすめファーム</h2>
-      <div class="counter-box">
-        <h4>タイプA: 高年収最優先 + ポテンシャル大きい</h4>
-        <p>戦略系 (BCG / McK / Bain) が第一候補。20代後半-30代前半 + 高学歴 + ケース面接突破力があれば挑戦可能。選考難度高いが年収レンジが高水準。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプB: 採用枠最大 + IT 出身</h4>
-        <p>アクセンチュア Technology が第一候補。IT・SIer・SE・PM 出身者が主戦場で、クラウド・データ・AI 領域の採用が活発。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a>・<a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプC: 業界経験豊富 + マネジメント素養</h4>
-        <p>ベイカレント・コンサルティング または PwC コンサルティングが候補。30代前半-後半の業界知見豊富な実務派が活躍する傾向。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプD: 会計・財務専門 + M&A 志向</h4>
-        <p>FAS 系 (Deloitte FAS / PwC AS / KPMG FAS) が候補。会計士・銀行・証券・経理財務出身者の主要転職先。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプE: 業界横断 + 戦略 + 実装の一気通貫</h4>
-        <p>総合系 (アクセンチュア / PwC / ベイカレント) が幅広く候補。20代後半-30代前半の主戦場で、採用枠の広さ + キャリア拡張性が魅力。詳細は <a href="/sogo-consul-tenshoku/" class="underline">総合コンサル転職</a> 参照。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_firmhikaku">
-          <span>自分のタイプを MyVison 公式の無料診断で確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>コンサル業界におけるワークライフバランスの基礎知識</h2><p>コンサルティング業界は、クライアントの高度な要求に応えるため、伝統的に労働時間が長くなる傾向にあるとされてきました。しかし、近年では社会全体の働き方への意識が変化しています。特に、厚生労働省が主導する「働き方改革」により、時間外労働の上限規制（原則として月45時間・年360時間）が多くの企業で意識されるようになりました。コンサル業界も例外ではなく、労働時間管理の厳格化やITツール導入による業務効率化を進めるファームが増えているとされます。ただし、ワークライフバランスの実態は、ファームの種別（戦略系、総合系、IT系など）や、担当するプロジェクトのフェーズ、個人の裁量によって大きく異なるのが現状です。転職を検討する際は、こうした業界全体の動向と、個別の企業の文化や制度の両面から情報を収集することが不可欠と言えるでしょう。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -172,25 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事 (Hub LP)</p>
-      <h2 id="h2-related">関連記事 — MyVision コンサル特化 全 LP</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
-        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>アクセンチュア / PwC 等 5 ファーム</p></a>
-        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考</p></a>
-        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>SIer/SE/PM 出身者向け</p></a>
-        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
-        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の戦略</p></a>
-        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル</h4><p>26-29歳の市場価値ピーク前</p></a>
-        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
-        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
-        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル 志望動機</h4><p>落ちる 7 パターン × 通る構造</p></a>
-        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>失敗事例 5 タイプ × 回避法</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>ワークライフバランスを重視したコンサル転職の具体的戦略</h2><p>ワークライフバランスを確保しながらコンサルタントとしてのキャリアを築くためには、戦略的な転職活動が求められます。理想の働き方を実現することで、長期的かつ安定的に高いパフォーマンスを発揮し、専門性を高めていくことが可能になります。以下に、そのための具体的な手順と注意点を整理します。これらのステップを踏むことで、入社後のミスマッチを防ぎ、納得のいくキャリア選択に繋がると考えられます。独立行政法人労働政策研究・研修機構（JILPT）の調査でも、転職理由として労働時間や休日・休暇を挙げる声は多く、事前の情報収集の重要性が示唆されています。</p><ul><li><strong>自己分析と優先順位の明確化:</strong> まず、自身が許容できる労働時間、求める年収、キャリアパス、重視する価値観（例：在宅勤務の可否、福利厚生）を具体的に言語化します。この軸が、企業選定の際の重要な判断基準となります。</li><li><strong>多角的な企業研究:</strong> 求人票の情報だけでなく、企業の公式ウェブサイトで公開されているサステナビリティレポートや、社員の働き方に関する取り組み（例：くるみん認定の有無など）を確認します。また、現役社員や元社員の口コミも重要な情報源とされます。</li><li><strong>専門エージェントの活用:</strong> コンサル業界に特化した転職エージェントは、一般に公開されていない内部情報（平均残業時間、有給休暇の取得率、部署ごとのカルチャーなど）を保有している場合があります。客観的な視点から、自身の希望に合うファームを提案してもらうことが期待できます。</li></ul></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">
