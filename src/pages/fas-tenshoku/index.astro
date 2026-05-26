@@ -29,11 +29,11 @@ const itemListSchema = {
 };
 
 const faq = [
-  { q: 'FAS業界への転職を検討する際、どのような情報源を参考にすべきですか？', a: 'FAS業界への転職では、M&Aや財務アドバイザリーの専門性が求められます。業界動向やキャリアパスの理解には、経済産業省の「M&Aに関するガイドライン」や、日本公認会計士協会の公開資料などが参考になります。これらの公的機関が示す指針は、業界の健全な発展や専門職としての倫理観を理解する上で重要とされます。特に、M&Aのプロセスや関連法規に関する情報は、転職後の業務にも直結するため、事前に確認することが推奨されます。' },
-  { q: 'Big4 FASと独立系FASでは、転職活動のアプローチにどのような違いがありますか？', a: 'Big4 FASは大規模な組織体制で、特定の専門分野に特化したチームが多い傾向にあります。一方、独立系FASは少数精鋭で幅広い業務を経験できる機会が多いとされます。転職活動では、Big4はエージェント経由での紹介が一般的ですが、独立系は直接応募やリファラル採用も活用されることがあります。自身のキャリアプランや希望する業務内容に応じて、適切なアプローチを選択することが重要です。' },
-  { q: 'コンサルティングファーム出身者がFASへ転職する際の強みと注意点は何ですか？', a: 'コンサル経験者は、論理的思考力や課題解決能力、プロジェクトマネジメントスキルがFAS業務で高く評価されます。特に、PMI（Post Merger Integration）案件ではその強みが活かされるとされます。注意点としては、FASは財務・会計の専門知識がより深く求められるため、不足している場合は学習が必要です。M&Aや財務DDに関する専門知識を補強することで、よりスムーズな移行が可能となるでしょう。' },
-  { q: 'FAS転職で失敗しないために、エージェント選びで特に注意すべき点は何ですか？', a: 'FAS転職におけるエージェント選びでは、単に求人数が多いだけでなく、FAS業界に特化した専門知識とネットワークを持つエージェントを選ぶことが重要です。担当コンサルタントがBig4や独立系FASの文化、各社の強み、具体的な案件内容を深く理解しているかを確認しましょう。また、自身のキャリアプランを具体的にヒアリングし、適切なアドバイスを提供してくれるかどうかも見極めるべき注意点とされます。' },
-  { q: 'FAS転職後のキャリアパスとして、どのような選択肢が考えられますか？', a: 'FASでの経験は、M&Aアドバイザリー、財務DD、PMIといった専門スキルを深めることで、多様なキャリアパスを開きます。事業会社の経営企画やCFO候補、プライベートエクイティファンドへの転身、または独立系コンサルタントとしての活動も選択肢として考えられます。自身の専門性を高めつつ、長期的なキャリアビジョンに合致する道を選ぶことが、FAS転職の成功に繋がると一般にされます。' },
+  { q: 'FASへの転職で求められる主なスキルは何ですか？', a: 'M&Aにおける財務デューデリジェンス（財務DD）、企業価値評価、PMI（Post Merger Integration）に関する専門知識が重視されます。また、コンサルティング経験者は論理的思考力やプロジェクトマネジメント能力も評価されるとされます。厚生労働省の「職業情報提供サイトjobtag」でも、M&Aコンサルタントの仕事内容として関連スキルが示されています。' },
+  { q: 'Big4 FASと独立系FASでは、キャリアパスにどのような違いがありますか？', a: 'Big4 FASは大規模案件や国際案件が多く、組織的なキャリアパスが整備されている傾向にあります。一方、独立系FASは専門特化型が多く、特定の分野での深い専門性を追求しやすいとされます。自身のキャリア志向に合わせて選択することが重要です。' },
+  { q: 'FAS転職を成功させるためのエージェント選びのポイントは何ですか？', a: 'FAS業界に特化した非公開求人を多く持ち、M&Aや財務DDに関する深い知見を持つコンサルタントが在籍しているエージェントを選ぶことが重要です。複数のエージェントを比較検討し、自身の希望に合ったサポートを受けられるかを確認すると良いでしょう。' },
+  { q: 'FAS転職における年収レンジはどの程度が一般的ですか？', a: 'FASの年収は経験や役職、所属するファームによって大きく異なりますが、一般的にコンサルティングファームの中でも高水準とされます。例えば、アソシエイトクラスで800万円～1,200万円、マネージャークラスで1,200万円～1,800万円程度が目安とされることが多いです。' },
+  { q: '未経験からFASへの転職は可能ですか？', a: '会計士や金融機関でのM&A関連業務経験があれば、未経験でもポテンシャル採用の可能性があります。ただし、一般的には即戦力が求められる傾向が強く、関連する資格取得や実務経験を積むことが推奨されます。' },
 ];
 const faqExtra = [
   { q: '士業特化と総合型エージェントの違いは?', a: '公開情報上、士業特化エージェントは ①担当者の士業知見が深い ②監査法人・税理士法人ハイクラス非公開求人へのアクセス ③年収交渉時の業界相場知見、の 3 点が強みとされています。一方、総合型は求人数の多さ・他業界比較が強みとされています。両者併用が推奨されるケースが多いとされています。' },
@@ -129,33 +129,7 @@ const faqSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">利用の流れ 5 ステップとよくある失敗例 5 例</h2>
-      <div class="card-grid">
-        <div class="card"><h3>利用の流れ 5 ステップ</h3><p><strong>STEP 1: エージェント登録 + キャリア面談予約</strong> (公式サイトから 3-5 分で登録可)<br /><strong>STEP 2: キャリア面談 (無料・60-90 分)</strong> 経験・希望条件・タイミング相談<br /><strong>STEP 3: 求人紹介 + 書類添削</strong> 公開 + 非公開求人から選定・職務経歴書添削<br /><strong>STEP 4: 面接対策 + 企業面接</strong> 業界別対策・模擬面接 + 実面接<br /><strong>STEP 5: 内定後の条件交渉 + 入社後フォロー</strong> 年収交渉 + 引継ぎサポート</p></div>
-        <div class="card"><h3>よくある失敗例 + 回避策 5 例</h3><p><strong>失敗 1: 1 社のみ登録で求人数不足</strong> → 2-3 社並行登録 (士業特化 + 総合型) で求人カバレッジ最大化<br /><strong>失敗 2: 担当者と相性が合わず情報不足</strong> → 公式に担当者変更依頼可能 (我慢せず相談)<br /><strong>失敗 3: 年収交渉なしで内定承諾</strong> → 業界相場を事前確認 + エージェントに交渉依頼<br /><strong>失敗 4: 退職前にエージェント未活用</strong> → 在職中相談 OK・並行で情報収集が一般的<br /><strong>失敗 5: アフターケアなしのエージェントで入社後ミスマッチ</strong> → 入社後 3 ヶ月-1 年フォロー有無を事前確認</p></div>
-      </div>
-      <div style="text-align:center;margin:2rem 0;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_fas-tenshoku_middle"
-         target="_blank" rel="nofollow"
-         data-cta="ツインプロ公式" data-material="banner_006_300x250" data-page-slug="shigyo-tenshoku">
-        <img border="0" width="300" height="250" alt="ツインプロ - 経理特化の転職エージェント"
-             src="https://www21.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002006000&mc=1"
-             loading="lazy" style="max-width:100%;height:auto;" />
-      </a>
-      <img border="0" width="1" height="1"
-           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXYE9"
-           alt="" loading="lazy" style="position:absolute;left:-9999px" />
-      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_fas-tenshoku_middle_text"
-         target="_blank" rel="nofollow"
-         style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
-        会計事務所への転職はツインプロ・無料キャリア面談（PR）
-      </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>FAS転職の基礎知識と求められる人材像</h2><p>FAS（Financial Advisory Services）とは、M&Aや事業再生、企業価値評価など、企業の財務戦略に関する専門的なアドバイスを提供するサービスを指します。Big4と呼ばれるKPMG FAS、EY TAS、PwC Advisory、Deloitte FAといった大手監査法人系FASと、特定の分野に特化した独立系FASが存在し、それぞれ異なる特性を持つとされます。FASの主な役割は、M&Aにおける財務デューデリジェンス（財務DD）を通じて企業の財務状況を詳細に分析し、リスク評価や企業価値評価を行うことです。また、M&A後の統合プロセスであるPMI（Post Merger Integration）支援も重要な業務の一つとされます。近年、企業の成長戦略としてのM&Aが活発化しており、FASへの需要は高まっている状況です。経済産業省が公表する「M&Aガイドライン」においても、M&Aにおける専門家活用の重要性が示されており、FASの役割はますます拡大していると一般にされます。FASへの転職を検討する際には、M&Aや会計、財務に関する深い専門知識に加え、論理的思考力やコミュニケーション能力、そして高い倫理観が求められるとされます。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -192,25 +166,7 @@ const faqSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問・編集ポリシー・出典</h2>
-      <div class="faq">
-        {faq.map((item) => (
-          <details><summary>{item.q}</summary><div set:html={item.a} /></details>
-        ))}
-        {faqExtra.map((item) => (
-          <details><summary>{item.q}</summary><div set:html={item.a} /></details>
-        ))}
-      </div>
-      <div class="card-grid">
-        <div class="card"><h3>編集ポリシー (E-E-A-T)</h3><p><strong>情報源</strong>: 厚生労働省「職業情報提供サイト」・日本公認会計士協会 (公開情報)・日本税理士会連合会 (公開情報)・JILPT (労働政策研究・研修機構)・各転職エージェント公式サイト<br /><strong>編集方針</strong>: 一次情報優先 (公的機関 + 業界団体) ・断定表現を避け推定値・公開情報の整理として記述<br /><strong>更新頻度</strong>: 月次レビュー (士業転職市場動向変化時は随時更新)<br /><strong>運営者</strong>: NY-squared (個人事業) <a href="/operator-info/" class="underline">運営情報ページ</a> 参照<br /><strong>E-E-A-T 4 原則</strong>: Experience (士業転職関連の公開情報整理) ・Expertise (業界統計 + 公的機関 + 業界団体データ) ・Authoritativeness (公認会計士協会・税理士会連合会・厚労省の一次情報のみ) ・Trustworthiness (PR 表記 + 推定値明示 + 成功保証ではない注記)</p></div>
-        <div class="card"><h3>出典・参考情報 + 関連</h3><p><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" class="underline">厚生労働省公式サイト</a> — 労働市場分析・職業情報提供サイト<br /><a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener" class="underline">日本公認会計士協会</a> — 公認会計士登録・業務動向統計 (★435 体現)<br /><a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener" class="underline">日本税理士会連合会</a> — 税理士登録・業界統計<br /><a href="https://www.jil.go.jp/" target="_blank" rel="noopener" class="underline">独立行政法人 労働政策研究・研修機構 (JILPT)</a> — 転職動向分析・士業転職統計<br /><a href="https://www.stat.go.jp/" target="_blank" rel="noopener" class="underline">総務省統計局</a> — 労働力調査・年収/役職別データ<br />各転職エージェント公式サイト — 求人数・対応範囲・特徴の一次情報 (公開情報)<br />関連: <a href="/recruit-hyouban/">リクルート評判</a> / <a href="/high-class/">ハイクラス転職</a> / <a href="/nenshu-up/">年収アップ</a> / <a href="/osusume/">転職エージェント全般比較</a></p></div>
-      </div>
-      <p class="compare-note">&#8251; 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>FAS転職を成功させるための具体的な戦略と注意点</h2><p>FASへの転職を成功させるためには、戦略的な準備が不可欠です。まず、自身のM&A・財務DD・PMIに関する経験やスキルを具体的に棚卸し、どの分野で貢献したいかを明確にすることが重要とされます。次に、FAS業界に特化した転職エージェントの活用が有効です。彼らは非公開求人情報や業界の最新動向に精通しており、個別のキャリア相談を通じて最適なファームを紹介してくれる可能性が高いです。複数のエージェントに登録し、比較検討することで、より多くの選択肢を得られるでしょう。職務経歴書では、過去のプロジェクト経験を具体的に記述し、自身の貢献度や成果を数値で示すことが評価されやすいとされます。面接では、専門知識はもちろんのこと、論理的思考力や問題解決能力、そしてFAS業務への強い意欲をアピールすることが求められます。特にBig4 FASでは、チームでの協業が多いため、コミュニケーション能力も重視される傾向にあります。また、FASのキャリアパスは多岐にわたり、M&AアドバイザリーからPEファンド、事業会社の経営企画などへの転身も考えられます。自身の長期的なキャリアビジョンを見据え、それに合致するファームやポジションを選ぶことが、転職後の満足度を高める鍵となるでしょう。厚生労働省が定める「職業安定法」においても、求職者への適切な情報提供と支援の重要性が謳われており、信頼できるエージェントの選定は転職活動において非常に重要です。</p><ul><li>自身の専門スキルとキャリアビジョンを明確にする</li><li>FAS特化型転職エージェントを複数活用し情報収集する</li><li>職務経歴書と面接で具体的な実績と意欲をアピールする</li></ul></section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">
