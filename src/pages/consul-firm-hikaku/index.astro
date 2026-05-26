@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'コンサルファームの 5 区分とは何ですか?', a: '一般的に (1) 戦略系 (BCG/McK/Bain) (2) 総合系 (アクセンチュア/PwC/ベイカレント等) (3) FAS系 (Deloitte FAS/PwC AS等) (4) IT系 (アクセンチュア Tech/IBM/アビーム等) (5) 公共系 (野村総研/三菱総研等) の5区分で整理されることが多いとされています。' },
-  { q: '戦略系と総合系の違いは何ですか?', a: '戦略系は経営戦略立案中心の上流案件 + 高単価 + 選考最難度、総合系は戦略 + 実装 + 運用の一気通貫 + 採用枠最大 + 業界カバー範囲の広さが特徴とされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル</a>・<a href="/sogo-consul-tenshoku/" class="underline">総合コンサル</a> 参照。' },
-  { q: 'FAS 系とは何ですか?', a: 'Financial Advisory Services の略で、M&A・財務アドバイザリー・事業再生・バリュエーション等の財務戦略案件特化のファーム区分とされています。会計士・銀行・証券出身者の主要転職先の一つです。' },
-  { q: 'IT 系コンサルと SIer の違いは何ですか?', a: 'IT 系コンサルは経営課題 → IT 戦略立案 → 要件定義の上流工程中心、SIer は要件定義 → 開発 → 運用中心の構造とされています。年収レンジ + キャリア拡張性で IT 系コンサルが高水準とされる傾向です。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。' },
-  { q: '自分に合うファームをどう選べばよいですか?', a: '(1) 前職業界・経験 (2) キャリア志向 (3) ライフスタイル要望 (4) 中長期キャリア構想 の4軸でマッチングするのが一般的とされています。複数エージェントの無料カウンセリングで適合診断を受けることが推奨されます。' },
-  { q: '5 区分すべて応募してもよいですか?', a: '一般的には 2-3 区分に絞り、各区分内で 1-2 ファーム選定 = 計 3-6 社並行応募が標準的とされています。区分が広すぎると志望動機の論理性が薄れる傾向にあります。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。' },
+  { q: 'コンサルティングファームの区分によって、労働条件に法的な違いはありますか？', a: 'ファームの区分自体で労働条件が法的に変わることはありません。ただし、プロジェクトの性質により労働時間は変動する傾向が見られます。いずれの場合も労働基準法が適用され、時間外労働の上限規制などが遵守されます。具体的な労働条件は、各社の求人情報や雇用契約書で確認することが重要とされます。' },
+  { q: '戦略系と総合系ファームでは、プロジェクト期間やチーム人数にどの程度の違いがありますか？', a: '公開情報によれば、戦略系は2〜5名程度の少数精鋭チームで数週間〜3ヶ月の短期プロジェクトが多いとされます。一方、総合系は数十人規模のチームで半年〜数年にわたる大規模な実行支援プロジェクトが中心となる傾向があります。ただし、これらはあくまで一般的な傾向であり、案件により異なります。' },
+  { q: 'FAS系やIT系コンサルタントに求められる専門資格にはどのようなものがありますか？', a: 'FAS系では公認会計士や税理士、IT系ではPMPや情報処理安全確保支援士などが評価される傾向にあります。資格は必須でない場合も多いですが、専門性の証明として有利に働くことがあります。各ファームの募集要項や、当サイトの「タイプ別おすすめファーム」のセクションもご参照ください。' },
+  { q: '未経験からコンサル業界を目指す場合、ファーム選びで特に注意すべき点は何ですか？', a: '未経験者採用では、研修制度の充実度が重要な判断基準となります。特に、第二新卒やポテンシャル採用を積極的に行っているファームは、育成体制が整っている可能性が高いとされます。自身の経歴と親和性の高い専門領域を持つファームを選ぶことで、入社後のミスマッチを防ぎやすくなります。' },
+  { q: '自分に最適なコンサルティングファームの区分を見つけるための最初のステップは何ですか？', a: 'まずは自身のキャリアの棚卸しを行い、どのような課題解決に貢献したいか、どんなスキルを伸ばしたいかを明確にすることが第一歩です。その上で各区分の特性を比較し、自身の志向性と合致する領域を探します。厚生労働省の職業情報提供サイト（job tag）なども参考に自己分析を深めることが推奨されます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,39 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">タイプ別おすすめファーム</h2>
-      <div class="counter-box">
-        <h4>タイプA: 高年収最優先 + ポテンシャル大きい</h4>
-        <p>戦略系 (BCG / McK / Bain) が第一候補。20代後半-30代前半 + 高学歴 + ケース面接突破力があれば挑戦可能。選考難度高いが年収レンジが高水準。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプB: 採用枠最大 + IT 出身</h4>
-        <p>アクセンチュア Technology が第一候補。IT・SIer・SE・PM 出身者が主戦場で、クラウド・データ・AI 領域の採用が活発。詳細は <a href="/accenture-tenshoku/" class="underline">アクセンチュア転職</a>・<a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプC: 業界経験豊富 + マネジメント素養</h4>
-        <p>ベイカレント・コンサルティング または PwC コンサルティングが候補。30代前半-後半の業界知見豊富な実務派が活躍する傾向。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプD: 会計・財務専門 + M&A 志向</h4>
-        <p>FAS 系 (Deloitte FAS / PwC AS / KPMG FAS) が候補。会計士・銀行・証券・経理財務出身者の主要転職先。</p>
-      </div>
-      <div class="counter-box">
-        <h4>タイプE: 業界横断 + 戦略 + 実装の一気通貫</h4>
-        <p>総合系 (アクセンチュア / PwC / ベイカレント) が幅広く候補。20代後半-30代前半の主戦場で、採用枠の広さ + キャリア拡張性が魅力。詳細は <a href="/sogo-consul-tenshoku/" class="underline">総合コンサル転職</a> 参照。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_firmhikaku">
-          <span>自分のタイプを MyVison 公式の無料診断で確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>コンサルティングファーム5区分の基礎知識と役割の違い</h2><p>コンサルティングファームは、クライアントが抱える経営課題の性質に応じて、主に「戦略系」「総合系」「FAS系」「IT系」「公共系」の5つに専門分化しているとされます。この区分は法的に定められたものではなく、業界内での慣習的な分類です。例えば、戦略系は企業のCEOや役員層が直面する全社的な重要課題（M&A、新規事業戦略など）の策定を支援します。一方で総合系は、戦略立案から業務プロセスの改善、システムの導入・定着といった実行支援までを幅広く手掛けるのが特徴です。厚生労働省の職業情報提供サイト（job tag）における「経営コンサルタント」の定義を見ても、その業務が多岐にわたることが示唆されており、こうした業務内容の広がりが専門分化の背景にあると考えられます。各区分の役割を理解することは、自身のキャリアパスに合ったファームを見つけるための基礎となります。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -172,25 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事 (Hub LP)</p>
-      <h2 id="h2-related">関連記事 — MyVision コンサル特化 全 LP</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
-        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>アクセンチュア / PwC 等 5 ファーム</p></a>
-        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考</p></a>
-        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職</h4><p>SIer/SE/PM 出身者向け</p></a>
-        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
-        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の戦略</p></a>
-        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル</h4><p>26-29歳の市場価値ピーク前</p></a>
-        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
-        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
-        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル 志望動機</h4><p>落ちる 7 パターン × 通る構造</p></a>
-        <a class="card-link" href="/consul-tenshoku-shippai/"><h4>コンサル 転職 失敗</h4><p>失敗事例 5 タイプ × 回避法</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>自分に合うファームを見極めるための具体的な比較検討ステップ</h2><p>多種多様なコンサルティングファームの中から、自身のキャリアにとって最適な一社を見つけるためには、体系的な比較検討が不可欠です。適切なステップを踏むことで、入社後のミスマッチを防ぎ、納得感のある転職を実現しやすくなります。具体的には、以下の3つのステップで進めることが一般に推奨されます。このプロセスを通じて、漠然とした憧れではなく、自身の強みと志向に基づいたファーム選びが可能になります。</p><ul><li><strong>ステップ1：自己分析とキャリアの方向性の明確化</strong><br>これまでの職務経歴や実績を棚卸しし、自身の強みや専門性を客観的に把握します。その上で、将来どのような専門性を身につけたいか、どのような働き方をしたいか（例：特定業界の専門家、グローバル案件への挑戦）を具体化します。</li><li><strong>ステップ2：5区分の情報収集と仮説構築</strong><br>自己分析の結果を基に、5つのファーム区分のうち、どの領域が自身の志向性と合致するか仮説を立てます。各区分の代表的なファームの公式サイトやニュースリリース、プロジェクト事例などを調査し、事業内容や企業文化に関する情報を収集します。</li><li><strong>ステップ3：専門エージェントへの相談と情報検証</strong><br>仮説を検証し、より解像度の高い情報を得るために、コンサル業界に特化した転職エージェントに相談します。職業安定法に基づき厚生労働大臣の許可を受けた民間の職業紹介事業者は、非公開求人や各ファームの内部情報に精通している場合があります。客観的な視点から、自身の市場価値や最適なファーム選びに関する助言を得ることが期待できます。</li></ul></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">
