@@ -1,0 +1,188 @@
+---
+/**
+ * AI エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 1,900 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-ai-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '20代エンジニア転職の進め方ガイド｜キャリア初期の選択肢整理（2026年版・PR）';
+const description = 'AI / 機械学習エンジニアの転職を検討中の方向け。LLM 時代の必須スキル + 業界別年収帯 + キャリアパス + 求人傾向を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'AI エンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / AI エンジニア</span>
+      <h1 id="fv-h1">
+        <span class="accent">AI エンジニア</span>転職完全ガイド<br />
+        LLM 時代の市場価値と年収帯
+      </h1>
+      <p class="lede">
+        2026 年現在、AI エンジニア市場は LLM (生成 AI) 急成長で需要急増中とされ、年収 700-2,000 万円帯の求人が活発な傾向です。
+        ML 基礎 + Deep Learning + LLM 活用の 3 段階スキルが転職成否を決める一般的傾向です。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>AI エンジニア 4 種類 + 必須スキル整理</li>
+        <li>LLM 時代の技術/数学スキル体系化</li>
+        <li>経験年数別 年収帯 + 業界別求人傾向</li>
+        <li>JILPT・IPA・経産省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と AI エンジニアの 4 種類</h2>
+      <p class="section-lede">2026 年現在、AI エンジニア市場は LLM 急成長で需要急増中。役割により 4 種類に分かれ、ML 基礎 + Deep Learning + LLM 活用の 3 段階スキルが転職成否を決めます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">ML エンジニア</span><h4>モデル設計・学習・チューニング</h4><p>機械学習モデルの設計・学習・ハイパーパラメータチューニングが中心。数学・統計基礎が前提。</p></article>
+        <article class="branch"><span class="tag">MLOps エンジニア</span><h4>機械学習基盤・継続学習</h4><p>機械学習基盤・継続学習パイプライン構築。クラウド ML サービス + DevOps スキルが評価される。</p></article>
+        <article class="branch"><span class="tag">LLM アプリエンジニア</span><h4>GPT/Claude API + RAG + Agent</h4><p>LLM API 活用・RAG・Agent 実装。2026 年最も需要が伸びている領域とされる。</p></article>
+        <article class="branch"><span class="tag">データサイエンティスト</span><h4>統計分析 + ビジネス課題解決</h4><p>統計分析 + ビジネス課題解決。技術深度とビジネス貢献の両立が問われる。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的傾向です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>4 種類を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">必須スキル (LLM 時代)</h2>
+      <p class="section-lede">年収高単価帯では技術スキルに加えて数学・統計基礎の両立が評価される傾向です。</p>
+      <div class="card-grid">
+        <div class="card"><h3>技術スキル</h3><p>Python + ML フレームワーク (PyTorch / TensorFlow / scikit-learn) / LLM API (OpenAI / Anthropic / Google) / RAG + ベクトル DB (Pinecone / Weaviate) / プロンプトエンジニアリング + Few-shot / Chain-of-Thought / MLOps (MLflow / Vertex AI / SageMaker) / クラウド (AWS/GCP) ML サービス</p></div>
+        <div class="card"><h3>数学・統計基礎</h3><p>線形代数 / 確率統計 / 微分積分 / 機械学習アルゴリズム理解 (教師あり/教師なし/強化学習)。文系出身でも数学基礎 + Python + ML フレームワーク習得で転身事例があるとされていますが、キャリア初期は厳しい傾向もあります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">年収帯と業界別 求人傾向 (一般的目安・2026 年)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="経験年数別 AI エンジニア年収帯">
+          <thead><tr><th>経験年数</th><th>年収帯</th><th>主要転職先</th></tr></thead>
+          <tbody>
+            <tr><td>1-2 年</td><td>500-800 万</td><td>SaaS / Web 自社開発</td></tr>
+            <tr><td>3-5 年</td><td>700-1,200 万</td><td>SaaS Senior / 大手 IT / AI スタートアップ</td></tr>
+            <tr><td>5-10 年</td><td>1,000-2,000 万</td><td>外資 IT / 研究機関 / リサーチエンジニア</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 出典: 各転職エージェント公開求人情報サンプル (2026 年 5 月時点・首都圏中心) + JILPT + IPA IT 人材白書。年収帯は対象母集団・スキル・地域・職位・企業規模により大きく異なります。個別保証ではなく一般的傾向です。</p>
+      <div class="counter-box">
+        <h3>📌 業界別 求人傾向 (2026 年・公開情報整理)</h3>
+        <div class="row"><b>AI スタートアップ</b><span>LLM アプリ・新規プロダクト開発</span></div>
+        <div class="row"><b>SaaS</b><span>既存プロダクトの AI 機能組込・コパイロット化</span></div>
+        <div class="row"><b>大手 IT / Web</b><span>社内 LLM 基盤・社内データ活用</span></div>
+        <div class="row"><b>金融 / 製造</b><span>業界 DX + AI 活用 PoC</span></div>
+        <div class="row"><b>外資 IT (OpenAI/Anthropic 等)</b><span>基盤モデル研究・大規模学習</span></div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
+          <span>年収レンジを踏まえ TechGo 公式サイトを確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">転職戦略 5 ステップ</h2>
+      <div class="card-grid">
+        <div class="card"><h3>転職戦略 5 ステップ</h3><p>① GitHub に ML プロジェクト + Kaggle / SIGNATE 実績公開<br />② LLM 活用個人開発 (RAG / Agent) でアウトプット<br />③ 論文輪読 + 技術ブログ / Zenn 投稿<br />④ AI 特化エージェント + スカウト型 (LinkedIn) 併用<br />⑤ 年収交渉では市場価値 + 実績 + 論文/OSS で示す</p></div>
+        <div class="card"><h3>YMYL リスク認識</h3><p>年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。AI 領域は技術変化が速く、継続学習が前提となるレンジです。具体的判断は AI 特化エージェントへの相談を推奨します。</p></div>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">よくある質問・関連記事・公的相談窓口</h2>
+      <div class="faq">
+        <details><summary>AI エンジニアの年収はどれくらいですか?</summary><div>一般的に AI エンジニアの年収は実務 3 年で 700-1,100 万円・5 年以上で 900-2,000 万円とされ、業界・スキルにより高単価帯が多いとされています。</div></details>
+        <details><summary>LLM (大規模言語モデル) 活用スキルは必須ですか?</summary><div>一般的に 2026 年現在、LLM (GPT/Claude/Gemini 等) の API 活用・プロンプト設計・RAG 実装スキルは AI エンジニア求人で頻繁に要求されているとされています。</div></details>
+        <details><summary>機械学習 vs LLM どちらを学ぶべきですか?</summary><div>一般的に基礎 ML (教師あり/教師なし) + Deep Learning + LLM 活用の 3 段階で習得が推奨されています。求人によりフォーカスが異なります。</div></details>
+        <details><summary>文系出身でも AI エンジニアになれますか?</summary><div>一般的に数学 (線形代数・確率統計) の基礎 + プログラミング (Python) + ML フレームワーク (PyTorch/TF) 習得で文系出身でも転身事例があるとされています。但しキャリア初期は厳しい傾向もあるとされています。</div></details>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>関連 Spoke LP</h3><p><a href="/cloud-engineer-tenshoku/">クラウドエンジニア 転職</a> / <a href="/engineer-1000man/">エンジニア 年収 1000 万円への道</a> / <a href="/engineer-portfolio/">エンジニア ポートフォリオ 作り方</a> / <a href="/full-remote-engineer/">フルリモート エンジニア 転職</a> / <a href="/high-class/">ハイクラス転職ガイド</a></p></div>
+        <div class="card"><h3>公的相談窓口・支援機関</h3><p><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA</a> (IT 人材白書・AI 人材動向) / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> (AI/IT 業界年収統計) / <a href="https://www.meti.go.jp/" target="_blank" rel="noopener">経済産業省</a> (AI 戦略・産業政策)</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a></p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+</RichLayout>

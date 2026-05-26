@@ -1,0 +1,296 @@
+---
+/**
+ * 会計士 BIG4 監査法人 転職 LP (ツインプロ・RichLayout 準拠)
+ * ★326 DRY kaikeishi-tenshoku テンプレ流用
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE 001 / BXB8X 003 / BXYE9 006)
+ * ★354 honest: 誇大表現・No.1・絶対保証 禁止 / ★273 景表法配慮
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '会計士 面接対策ガイド｜よくある質問と回答軸の整理（2026年版・PR）';
+const description = '公認会計士のBIG4監査法人転職を徹底整理。あずさ(KPMG)・トーマツ(Deloitte)・EY新日本・PwC Japanの特徴・年収目安・選考ポイントを公開情報で比較。士業特化エージェント(ツインプロ)活用で非公開求人へのアクセス方法も紹介(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '会計士BIG4監査法人転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': 'BIG4監査法人転職エージェント主要4サービス比較',
+  'description': '公認会計士・BIG4志望者向け転職エージェント4社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・BIG4関連非公開求人あり', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士特化 転職エージェント', 'description': '公認会計士特化・大手系列・若手〜中堅対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・会計士・税理士向け・事業会社経理転職に強み', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数60万件以上・BIG4関連求人もカバー・士業特化との併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: 'BIG4監査法人への転職に士業特化エージェントは必要ですか?', a: '公開情報上、BIG4監査法人のハイクラス・非公開求人は士業特化エージェント経由でアクセスしやすいとされています。ツインプロ・マイナビ会計士等は公認会計士向けの専門求人情報を保有しているとされており、総合型(リクルート等)との2社以上の並行登録が推奨されることが多いとされています。' },
+  { q: 'BIG4(あずさ・トーマツ・EY・PwC)の特徴・社風の違いは?', a: '公開情報上、①有限責任あずさ監査法人(KPMG)はグローバル対応・金融業界に強みとされ、②有限責任監査法人トーマツ(Deloitte)は国内最大規模・多様な業種対応、③EY新日本有限責任監査法人はワークライフバランス重視の評判があるとされ、④PwC Japan有限責任監査法人はアドバイザリー部門との連携が強みとされています。実際の社風・業務内容は時期・部門により異なりますため、各法人への直接確認が推奨されます。' },
+  { q: 'BIG4監査法人の年収目安はどれくらいですか?', a: '公開情報(令和5年賃金構造基本統計調査等)上、BIG4監査法人の年収目安はスタッフ級で約400〜600万円、マネージャー級で約800〜1,200万円、パートナー級で約1,000万円以上とされています。ただし役職・部門・個人評価により大きく異なるため、具体的な水準は各エージェントのキャリア面談でご確認ください。' },
+  { q: 'BIG4監査法人の選考フローはどのようなものですか?', a: '公開情報上、BIG4への転職選考は①書類選考→②面接(2〜3回)→③内定のフローが一般的とされています。公認会計士試験合格者向けには合格発表後11月前後に集中的に採用活動が行われるとされています。中途転職では業務経験・スキルセット・志望動機の具体性が重視されるとされています。' },
+  { q: 'BIG4監査法人からの転職先(キャリアパス)は?', a: '公開情報上、BIG4出身者は転職市場で高い評価を受けるとされており、①事業会社の経理・財務・CFO候補、②FAS(財務アドバイザリー)・M&Aアドバイザー、③コンサルティングファーム、④税理士法人・会計事務所独立等のキャリアパスが比較的選択されやすいとされています。詳細は士業特化エージェントへご相談ください。' },
+  { q: '公認会計士試験合格後すぐにBIG4に入れますか?', a: '公開情報上、公認会計士試験合格後(論文合格後)のBIG4就職は合格発表直後の11月前後が最も求人が集中するとされています。合格見込み段階からエージェント登録・情報収集を始めることが推奨されることが多いとされています。ただし採用状況は年度・各法人の状況により異なります。' },
+  { q: '監査法人以外の会計士向け転職先として何がありますか?', a: '公開情報上、公認会計士の就職先として①BIG4等監査法人、②中小監査法人、③税理士法人、④事業会社経理・財務部門、⑤コンサルティングファーム(FAS・戦略等)、⑥ベンチャー/スタートアップCFO・IPO準備担当等が挙げられるとされています。キャリア設計の詳細はエージェント面談が推奨されます。' },
+  { q: 'BIG4転職の志望動機はどう書けばよいですか?', a: '公開情報上、BIG4各法人の志望動機では①特定法人を選ぶ理由(グローバル・業種・部門の強み)、②実現したいキャリアパスとのリンク、③自身の経験・スキルをどう活かすかの3点を具体的に記載することが重要とされています。実務経験・実績の数値化も評価されるとされています。' },
+  { q: 'BIG4と中堅監査法人の違いは何ですか?', a: '公開情報上、BIG4は①グローバル案件対応力、②給与水準の高さ、③ブランド・転職市場での評価、④業務の専門分化(監査・アドバイザリー等)が特徴とされています。一方で中堅監査法人は①より多様な業務を早期に経験できる、②コンパクトな組織での働きやすさが強みとされています。' },
+  { q: '士業特化エージェントと総合型エージェントはどちらが良いですか?', a: '公開情報上、BIG4監査法人転職では①士業特化エージェント(ツインプロ等)の業界知見・非公開求人へのアクセス と ②総合型エージェント(リクルート等)の求人数を組み合わせた2〜3社並行登録が推奨されることが多いとされています。どちらか一方に絞るよりも、情報収集の幅を広げることが一般的なアドバイスとされています。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name, ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  'headline': title,
+  'description': description,
+  'datePublished': '2026-05-22',
+  'dateModified': '2026-05-22',
+  'author': { '@type': 'Organization', 'name': 'NY-squared 編集部' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://tenshoku-compare-info.pages.dev/' },
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">会計士転職 / BIG4監査法人志望・在籍・転職検討中</span>
+      <h1 id="fv-h1">
+        <span class="accent">会計士 BIG4 監査法人転職</span> 4 社比較<br />
+        あずさ・トーマツ・EY・PwC 選考対策と年収目安
+      </h1>
+      <p class="lede">
+        公認会計士・BIG4監査法人志望者向けに、有限責任あずさ監査法人(KPMG)・有限責任監査法人トーマツ(Deloitte)・EY新日本有限責任監査法人・PwC Japan有限責任監査法人の4法人の特徴・年収目安・選考ポイントを公開情報で整理しました。
+        日本公認会計士協会・厚労省・JILPT 等の公的出典をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>BIG4 4 法人の特徴・社風・年収目安を公開情報で比較</li>
+        <li>会計士転職で失敗しやすい 3 点と回避法</li>
+        <li>BIG4 選考フロー・志望動機の作り方</li>
+        <li>BIG4 後のキャリアパス (事業会社・FAS・コンサル) 整理</li>
+        <li>士業特化エージェント4社比較 + 選び方 5 基準</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=big4_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="big4_fv">
+          <span>ツインプロ公式で会計士・BIG4志望向け無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">BIG4 監査法人とは — 4 法人の概要・特徴・社風の違い</h2>
+      <p class="section-lede">世界4大会計事務所ネットワークに属する日本のBIG4監査法人の概要を、公開情報をもとに整理します。実際の社風・業務内容は時期・部門・個人評価により異なります。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">あずさ (KPMG)</span><h4>有限責任あずさ監査法人</h4><p>KPMGネットワーク加盟。金融・製造業のグローバル対応に強みがあるとされています。国際監査基準(ISA)準拠の業務経験を積みやすいとされています。</p></article>
+        <article class="branch"><span class="tag">トーマツ (Deloitte)</span><h4>有限責任監査法人トーマツ</h4><p>Deloitteネットワーク加盟・国内最大規模の監査法人とされています。多様な業種への対応力・FASとの連携が強みとされています。</p></article>
+        <article class="branch"><span class="tag">EY新日本</span><h4>EY新日本有限責任監査法人</h4><p>Ernst & Youngネットワーク加盟。ワークライフバランス重視の評判が一部にあるとされています。アドバイザリー部門との人事交流もあるとされています。</p></article>
+        <article class="branch"><span class="tag">PwC Japan</span><h4>PwC Japan有限責任監査法人</h4><p>PwCネットワーク加盟。アドバイザリー・コンサルティング部門との連携が強みとされています。外資系企業の監査に強みがあるとされています。</p></article>
+      </div>
+      <p class="compare-note">※ 各法人の特徴は公開情報・業界メディアの一般的評価をもとにした参考情報です。実際の業務内容・社風は時期・部門・チームにより大きく異なります。情報源: <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>・<a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・各法人公式サイト / 最終レビュー日: 2026-05-22。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=big4_sec1`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="big4_sec1">
+          <span>BIG4求人を含む会計士特化エージェント ツインプロで無料面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">BIG4 年収目安・役職別比較 (公開情報ベース)</h2>
+      <p class="section-lede">令和5年賃金構造基本統計調査・JILPT 等の公開情報をもとに整理した参考値です。実際の年収は法人・部門・評価・時期により異なります。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="BIG4監査法人 役職別年収目安">
+          <thead><tr><th>役職目安</th><th>年収目安 (参考値)</th><th>主な業務</th><th>備考</th></tr></thead>
+          <tbody>
+            <tr><td>スタッフ (入所〜3年)</td><td>約 400〜600 万円</td><td>監査手続・書類作成補助</td><td>公認会計士試験合格直後〜準会員期間含む</td></tr>
+            <tr><td>シニアスタッフ (3〜6年)</td><td>約 600〜800 万円</td><td>監査チームのリード補助</td><td>経験・評価により差あり</td></tr>
+            <tr><td>マネージャー (6〜10年)</td><td>約 800〜1,200 万円</td><td>監査チーム管理・クライアント対応</td><td>30代前半での達成事例あり</td></tr>
+            <tr><td>シニアマネージャー</td><td>約 1,000〜1,500 万円</td><td>複数チーム管理・業務開拓</td><td>法人・評価による</td></tr>
+            <tr><td>パートナー</td><td>約 1,000 万円〜</td><td>法人共同経営者・責任者</td><td>実績により高水準の事例あり</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 上記は令和5年賃金構造基本統計調査等の公開情報および業界メディア参考値です。個人の年収保証・最低年収保証ではありません。転職後の年収は経験・スキル・評価等により変動します。情報源: <a href="https://www.mhlw.go.jp/toukei/list/chinginkouzou.html" target="_blank" rel="noopener">厚労省 賃金構造基本統計調査</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a></p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-big4_hero" target="_blank" rel="nofollow" data-page-slug="kaikeishi-big4-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
+    <div class="container">
+      <p class="section-num">SECTION / 03</p>
+      <h2 id="h2-3">BIG4 選考フロー・志望動機の作り方と失敗しやすい 3 点</h2>
+      <div class="card-grid">
+        <div class="card"><h3>BIG4 選考フロー (公開情報目安)</h3><p><strong>STEP 1</strong> エントリー・書類選考: 職務経歴書・志望動機書<br /><strong>STEP 2</strong> 面接 1 次: 人事・現場担当者との面談 (経験・スキル確認)<br /><strong>STEP 3</strong> 面接 2〜3 次: パートナー級との面談 (志望動機・将来像)<br /><strong>STEP 4</strong> 内定・条件提示<br />※ 公認会計士試験合格者は論文合格発表後の11月前後に採用が集中するとされています。フローは法人・時期により異なります。</p></div>
+        <div class="card"><h3>失敗しやすい 3 点と回避策</h3><p><strong>失敗①</strong> 志望動機が「会計士なら当然BIG4」で差別化なし &rarr; 特定法人の強み(業種・部門・グローバル展開)と自分のキャリア設計をリンクさせる<br /><strong>失敗②</strong> 1 社のみ選考で機会損失 &rarr; 2〜3 法人並行エントリーが推奨されることが多い<br /><strong>失敗③</strong> 年収・条件を比較せず承諾 &rarr; エージェント経由で業界相場確認 + 条件交渉依頼</p></div>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>志望動機作成 3 ポイント (公開情報ベース)</h3><p>① <strong>特定法人を選ぶ理由を具体化</strong>: グローバル案件・特定業種(金融・製造等)・アドバイザリー連携等の法人別強みと自身の目標を接続<br />② <strong>キャリアパスとのリンク</strong>: BIG4での経験後の展望(パートナー / FAS / 事業会社経理等)を明示<br />③ <strong>経験・スキルの数値化</strong>: 担当クライアント規模・監査チーム人数・特定業種経験年数等を具体的に記載</p></div>
+        <div class="card"><h3>失敗しない選び方 5 基準</h3><p><strong>① 士業特化度</strong>: 担当者が業界経験者か<br /><strong>② 非公開求人比率</strong>: BIG4・ハイクラス非公開求人へのアクセス<br /><strong>③ 年収交渉力</strong>: 業界相場知見 + 成約実績<br /><strong>④ アフター対応</strong>: 入社後 3 ヶ月〜1 年フォロー有無<br /><strong>⑤ 求人数 vs 専門性バランス</strong>: 士業特化 + 総合型の組合せ推奨</p></div>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXYE9&sitemicros=banner_big4_middle" target="_blank" rel="nofollow" data-page-slug="kaikeishi-big4-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 経理・会計特化の転職エージェント" src="https://www21.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002006000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXYE9" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="会計士BIG4転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>会計士・税理士・簿記資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・BIG4関連求人含む非公開求人あり</td></tr>
+            <tr><td>マイナビ会計士</td><td>公認会計士・税理士</td><td>大手系列・若手中堅対応</td><td>株式会社マイナビ運営・会計士特化求人数多め</td></tr>
+            <tr><td>MS-Japan</td><td>経理・財務・会計士・税理士</td><td>管理部門特化</td><td>BIG4出身者の事業会社転職に強みあり</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (士業含む)</td><td>求人数 60 万件+</td><td>BIG4関連求人もカバー・士業特化との併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=big4_compare`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="big4_compare">
+          <span>比較を踏まえ ツインプロ公式で会計士・BIG4向け無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
+    <div class="container">
+      <p class="section-num">SECTION / 05</p>
+      <h2 id="h2-5">BIG4 後のキャリアパスと転職タイミング 3 パターン</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス①</span><h4>事業会社 経理・財務・CFO 候補</h4><p>BIG4マネージャー以上は事業会社の内部統制・IPO準備・経理マネージャーで需要が高いとされています。年収700〜1,200万円帯の求人が比較的多いとされています(JILPT推定)。</p></article>
+        <article class="branch"><span class="tag">パス②</span><h4>FAS・M&A アドバイザー</h4><p>BIG4内 FAS 部門または外資系 FAS への異動・転職。財務デューデリジェンス・バリュエーション経験を活かせるとされています。コンサル系の年収帯への移行事例あり。</p></article>
+        <article class="branch"><span class="tag">パス③</span><h4>コンサルティングファーム</h4><p>戦略コンサル・BIG4系コンサル(Deloitte・PwC等)への転籍。監査経験を経営・財務戦略に応用するキャリアとされています。</p></article>
+        <article class="branch"><span class="tag">タイミング</span><h4>転職活発期 3 パターン</h4><p>①繁忙期前(4〜5月): 監査繁忙期後の3Q以降に求人増の傾向 ②期末後(7〜9月): 上半期終了後に求人活発 ③異動シーズン(10〜12月): 論文合格発表後・採用集中。個別事情による変動あり。</p></article>
+      </div>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>BIG4 の強み</b><span>グローバル案件対応・ハイクラス年収水準・転職市場での高評価 (公開情報)</span></div>
+        <div class="row"><b>推奨戦略</b><span>ツインプロ (士業特化) + マイナビ会計士 / MS-Japan + リクルート の 2〜3 社並行登録</span></div>
+        <div class="row"><b>向いている人</b><span>公認会計士試験合格者・BIG4在籍中で次のステップを検討中・グローバル監査業務希望</span></div>
+        <div class="row"><b>向かない人</b><span>士業資格なし・監査業務未経験で異業種転職検討中の方は総合型エージェントを優先</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動 3 ステップ: STEP1 2〜3 社並行登録 &rarr; STEP2 各担当者と希望条件・BIG4志望理由を擦り合わせ &rarr; STEP3 3〜5 社面接で法人比較。<strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は公開情報整理であり、転職成功保証・年収アップ保証ではなく特定エージェントや法人を推奨するものでもありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_big4_footer" target="_blank" rel="nofollow" data-page-slug="kaikeishi-big4-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=big4_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="big4_final">
+          <span>後悔しない BIG4 転職のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・年収アップ保証ではなく、特定エージェントや特定法人を推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談を活用ください。最終確認日: 2026-05-22。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問・編集ポリシー・出典</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+      <div class="card-grid">
+        <div class="card"><h3>編集ポリシー (E-E-A-T)</h3><p>情報源: 厚労省「賃金構造基本統計調査」・日本公認会計士協会・JILPT・各エージェント公式サイト・BIG4各法人公式サイト。一次情報優先 (公的機関 + 業界団体)・断定回避・推定値明示。月次レビュー。運営: NY-squared (個人事業)。PR 表記 + 成功保証ではない注記。</p></div>
+        <div class="card"><h3>出典・参考情報 + 関連記事</h3><p><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a> / <a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a><br />関連: <a href="/kaikeishi-tenshoku/" class="underline">会計士転職おすすめ</a> / <a href="/high-class/" class="underline">ハイクラス転職</a> / <a href="/nenshu-up/" class="underline">年収アップ</a> / <a href="/osusume/" class="underline">転職エージェント全般比較</a></p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職成功保証・年収アップ保証ではなく、特定エージェントや特定法人を推奨するものでもありません。運営: NY-squared (個人事業) / <a href="/editorial-policy/" class="underline">編集ポリシー</a> / <a href="/privacy-policy/" class="underline">プライバシーポリシー</a> / <a href="/about/" class="underline">運営者情報・特商法表記</a></p>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとされる傾向です。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢とされる傾向です。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+</RichLayout>
