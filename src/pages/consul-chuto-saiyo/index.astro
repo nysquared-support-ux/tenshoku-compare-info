@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'コンサル中途採用は活発ですか?', a: '一般公開情報によれば、コンサル業界は2020年以降も年率10-20%規模で拡大しているとされ、需要 > 供給の構造的人材不足が継続中で中途採用が活発な状況とされる傾向です。' },
-  { q: '未経験でも中途採用されますか?', a: 'コンサル特化エージェントの公開情報によれば、利用者の9割が業界未経験で選考突破に成功しているとされる傾向です。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">未経験 コンサル 転職</a> 参照。' },
-  { q: '何歳まで中途採用の対象ですか?', a: '一般的に 20代後半-30代前半が主要採用層、30代後半 (-39歳) も専門領域があれば対象、40代以降は専門特化型 + マネジメント経験豊富な層が対象とされる傾向です。詳細は <a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル 転職</a> 参照。' },
-  { q: '中途採用の年収レンジは?', a: '一般公開情報によれば、未経験中途で 500-800万円、経験者中途で 700-1,500万円、マネージャー以上で 1,200-2,500万円帯が中心とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
-  { q: '中途採用の選考プロセスは?', a: '一般的に書類選考 → 適性検査 → ケース面接 (複数回) → 役員面接の流れで、論理思考 + 業界知見 + 実務経験の3軸が評価軸とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a>・<a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。' },
-  { q: 'コンサル中途採用におすすめのファームは?', a: 'ファーム選びは前職経験 + 志向 + 中長期キャリアで変わります。5 区分 (戦略 / 総合 / FAS / IT / 公共) の特性比較は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。' },
+  { q: '未経験からコンサルティング業界への中途採用は可能ですか？', a: 'はい、可能です。特に20代ではポテンシャルを重視した採用枠が存在します。ただし、論理的思考力や学習意欲が厳しく評価される傾向にあります。厚生労働省が推進する「若者雇用促進法」の趣旨も踏まえ、多くの企業が若年層のキャリア開発を支援している背景も、こうした採用の一因とされます。' },
+  { q: 'コンサル中途採用の選考で最も重要な「ケース面接」とは何ですか？', a: '与えられたビジネス上の課題に対し、制限時間内に解決策を論理的に導き出す面接形式です。例えば「特定の飲食店の売上を向上させるには？」といった問いが出されます。単なる知識ではなく、思考のプロセスや構造化能力が評価されるため、模擬面接などを通じた実践的な準備が不可欠とされます。' },
+  { q: '30代・40代でコンサルに転職する場合、どのようなスキルが求められますか？', a: '30代以降では、特定の業界や職種における深い専門性が求められます。例えば、金融業界の規制対応や、製造業のDX推進といった具体的な実績が評価対象となります。即戦力としてプロジェクトを牽引する能力が期待されるため、ポテンシャル採用が中心の20代とは異なる市場価値のアピールが必要です。' },
+  { q: '中途採用でコンサルに転職する際の注意点はありますか？', a: '労働環境の変化には注意が必要です。プロジェクトベースで業務内容や勤務地が変動することもあります。入社前には、労働契約法で定められた労働条件の明示義務に基づき、雇用契約書の内容を十分に確認し、自身のキャリアプランやライフスタイルと合致するかを慎重に判断することが推奨されます。' },
+  { q: '複数のコンサルファームに応募する際の戦略を教えてください。', a: '各ファームの特色（戦略系、総合系、IT系など）を深く理解し、自身の経験と強みがどの領域で最も活かせるかを分析することが重要です。その上で、職務経歴書や志望動機を各社に合わせて最適化する作業が求められます。客観的な視点を得るために、専門のエージェントに相談するのも有効な手段とされます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -122,39 +121,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">5 区分別 中途採用の傾向</h2>
-      <div class="counter-box">
-        <h4>区分1: 戦略系 (BCG / McKinsey / Bain)</h4>
-        <p>狭き門 + 業界最難度。20代後半-30代前半 + 高学歴 + ケース面接突破力がメイン。年収 800-3,500万円帯。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル 転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>区分2: 総合系 (アクセンチュア / PwC / ベイカレント / アビーム / IBM)</h4>
-        <p>&#11088; 大規模採用枠。IT / 業務系 / 大手出身者の主戦場。年収 500-2,500万円帯。詳細は <a href="/sogo-consul-tenshoku/" class="underline">総合コンサル 転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>区分3: FAS 系 (Deloitte FAS / PwC AS / KPMG FAS / EY)</h4>
-        <p>銀行 / 証券 / 会計士 / 財務出身者の主力。M&A + 財務 DD + バリュエーション案件。年収 700-3,000万円帯。詳細は <a href="/ma-consul-tenshoku/" class="underline">M&A コンサル 転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>区分4: IT 系 (アクセンチュア Tech / IBM / アビーム)</h4>
-        <p>SIer / SE / PM / クラウド / データ系出身者の主戦場。DX + 生成AI 案件爆増中。年収 500-2,200万円帯。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル 転職</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>区分5: 公共系 (野村総研 / 三菱総研 / NTT データ経営研)</h4>
-        <p>官公庁 / 公共機関 / シンクタンク経験者の主要転身先。政策 + 公共 + 行政案件。年収 500-2,000万円帯。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_chuto`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_chuto">
-          <span>5 区分のどれが自分に適合するか MyVision 公式の無料診断で確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>コンサル中途採用の基礎知識：採用枠と選考プロセス</h2><p>コンサルティング業界の中途採用は、企業のDX（デジタルトランスフォーメーション）推進や新規事業開発といった需要の高まりを背景に、活発な状態が続いているとされます。採用枠は主に、①未経験者向けのポテンシャル採用、②特定の専門スキル（IT、会計等）を持つ経験者採用、③同業のコンサルティングファームからの経験者採用、の3つに大別されます。選考プロセスは一般的に「書類選考 → Webテスト（能力・性格） → 複数回の面接（ケース面接を含む） → オファー」という流れで進みます。特に、論理的思考力や問題解決能力を測るケース面接が重視される点が特徴です。厚生労働省の職業安定業務統計を見ても、専門的・技術的職業の有効求人倍率は高い水準にあり、高度人材の需要が継続していることがうかがえます。自身の経歴がどの採用枠に合致するのかを理解し、適切な準備をすることが最初のステップとなります。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -178,20 +145,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問 (FAQ)</h2>
-      <dl class="faq-list">
-        {faq.map(f => (
-          <details class="faq-item">
-            <summary class="faq-q">{f.q}</summary>
-            <div class="faq-a" set:html={f.a}></div>
-          </details>
-        ))}
-      </dl>
-    </div>
-  </section>
+  <section class="lp-section"><h2>中途採用の成功確度を高める具体的な選考対策</h2><p>コンサルティング業界の中途採用を突破するには、戦略的な選考対策が不可欠です。特に「職務経歴書」と「ケース面接」の2点が合否を分ける重要なポイントとされます。職務経歴書では、過去の業務内容を羅列するのではなく、「どのような課題に対し、どう分析・行動し、どのような成果（定量的実績）を出したか」という問題解決のプロセスを明確に示すことが求められます。一方、ケース面接は付け焼き刃の知識では対応が困難です。対策としては、以下のステップが有効と一般に考えられています。</p><ul><li><strong>基礎固め：</strong>主要なフレームワーク（3C、4P、SWOT等）を学び、ビジネスの基礎体力をつけます。</li><li><strong>思考の言語化：</strong>様々なビジネス課題に対し、自分の頭の中で考えるだけでなく、思考プロセスを声に出して説明する練習を繰り返します。</li><li><strong>実践練習：</strong>転職エージェントや知人などを相手に模擬面接を重ね、客観的なフィードバックを得て改善サイクルを回します。</li></ul><p>なお、転職活動においては、信頼できる情報源を選ぶことが重要です。国民生活センターも、転職サービスに関する注意喚起を行っており、サポート内容を事前にしっかり確認することが賢明です。</p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>専門性の高い非公開求人へのアクセス機会が増え、キャリアの選択肢を効率的に広げられる可能性が期待できます。</li><li>元コンサルタント等の業界知見が豊富なアドバイザーから、職務経歴書の添削や模擬ケース面接といった具体的なサポートを受けられる場合があります。</li><li>客観的な市場価値の分析や、各ファームの文化・特徴に関する情報提供を通じ、入社後のミスマッチを防ぐ一助となることが考えられます。</li></ul></div></section>
 
   <section class="lp-section alt" id="related" aria-labelledby="h2-related">
     <div class="container">
