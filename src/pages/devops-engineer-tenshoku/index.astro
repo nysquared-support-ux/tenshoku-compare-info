@@ -23,12 +23,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'DevOps エンジニアの転職は難しいですか?', a: '一般に、CI/CD 自動化・クラウド運用の需要は B2C・B2B 双方で一定あるとされていますが、求人ごとに求める経験 (CI/CD/IaC/SRE) の優先度が異なるとされています。難易度は経験・希望条件により異なり、一概には言えません。' },
-  { q: 'DevOps と SRE のどちらが転職に有利ですか?', a: '一般公開情報によれば、両者の境界は企業によって異なり、SRE は信頼性指標の運用、DevOps は開発生産性向上に重点を置く傾向があるとされています。応募先の組織定義を事前確認することが推奨されるとされています。' },
-  { q: 'インフラエンジニアから DevOps への転身は可能ですか?', a: '一般に、インフラの基礎知識は DevOps 領域でも活かせる傾向にあるとされていますが、CI/CD・IaC・コード化の経験を補強することが推奨されるとされています。詳細は <a href="/infra-engineer-tenshoku/" class="underline">インフラエンジニア転職</a> もご参照ください。' },
-  { q: 'DevOps エンジニアの年収はどのくらいですか?', a: '一般公開情報によれば、年収は経験・対応領域・企業により幅が大きく、断定はできません。詳細は <a href="/engineer-1000man/" class="underline">エンジニア年収1000万ガイド</a> もご参照ください。正確な目安は市場価値診断での確認が推奨されます。' },
-  { q: 'DevOps 未経験から転職できますか?', a: '未経験からの転職は経験者より難易度が上がるとされていますが、個人 GitHub での IaC・CI/CD アウトプット、クラウド認定資格などの整理で結果が変わるとされています。詳細は <a href="/it-mikeiken-tenshoku/" class="underline">IT 未経験転職ガイド</a> をご参照ください。' },
-  { q: 'IT 特化エージェントを使うと有利ですか?', a: 'IT エンジニア特化エージェントの利用は、DevOps 領域の求人情報の非対称性を補い、技術スタック別の市場価値や求人の見極めを支援する効果があるとされていますが、必ず有利になる性質のものではありません。最終的な意思決定はご自身で行う必要があります。' }
+  { q: 'DevOpsやSREが未経験でも転職は可能ですか？', a: 'インフラ構築やアプリケーション開発の経験があれば、転職の可能性は十分にあります。特にクラウド（AWS, GCP等）やコンテナ技術（Docker, Kubernetes）の学習が重要とされます。厚生労働省が推進する「ジョブ・カード制度」などを活用し、自身のスキルを客観的に整理することも有効な手段の一つです。' },
+  { q: '転職で有利になるCI/CDツールの経験とは具体的に何ですか？', a: 'Jenkins, GitLab CI, CircleCI, GitHub Actionsなどが代表的です。特にクラウドネイティブな環境では、GitHub ActionsやGitLab CIの経験が評価される傾向にあるとされます。求人票の要件を確認し、最低でも1つ、可能であれば2つ以上のツール経験があると、応募できる企業の幅が広がることが期待されます。' },
+  { q: 'SREとDevOpsエンジニアの求人を見分けるポイントはありますか？', a: 'SREはサイト信頼性（Site Reliability）に重点を置き、SLI/SLO設計やエラーバジェット管理など、より指標に基づいた改善活動が求められる傾向があります。一方、DevOpsは開発と運用の連携によるデリバリー速度向上に主眼を置くことが多いとされます。詳細は当ページの「DevOps 転職を進める5つの対策」もご参照ください。' },
+  { q: 'クラウドの実務経験が浅い場合、どのようにアピールすれば良いですか？', a: '個人開発でのIaC（Terraform等）の利用実績や、AWS認定資格などの取得が有効です。実務経験がなくても、自主的な学習意欲と技術への探求心を示すことが重要になります。ただし、経歴を偽ることは職業安定法で禁止されているため、正直に現状のスキルレベルを伝えることが前提となります。' },
+  { q: 'DevOps/SREエンジニアの主なキャリアパスを教えてください。', a: '特定技術を極めるスペシャリスト、チームを率いるテックリードやマネージャー、あるいはクラウドアーキテクトやコンサルタントなど多様な道が考えられます。自身の志向性と、変化の速い市場の需要を照らし合わせ、長期的な視点でキャリアを計画することが、満足度の高い転職につながると一般にいわれます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -124,40 +123,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">DevOps 転職を進める5つの対策</h2>
-      <p class="section-lede">DevOps 転職の中核は、<strong>担当領域 (CI/CD/IaC/SRE) と運用規模の棚卸し、進む方向の整理</strong>とされています。 以下は公開情報・業界一般論をもとにした対策の整理です。</p>
-      <div class="counter-box">
-        <h4>対策1: 構築・運用実績の棚卸し</h4>
-        <p>扱った CI/CD ツール (GitHub Actions/CircleCI/Jenkins 等)・パイプライン本数・デプロイ頻度を棚卸ししておくことが、応募先選定で重要とされています。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策2: IaC・クラウド経験の整理</h4>
-        <p>使用 IaC ツール・対象クラウド・運用規模 (ノード数・サービス数等) を整理し、応募先のクラウド方針とマッチするか確認することが推奨されるとされています。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策3: 信頼性指標 (SLO/SLI) 経験のアピール</h4>
-        <p>SLO 設計・ポストモーテム・カオスエンジニアリング等の経験は SRE 系求人で高く評価される傾向にあるとされています。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策4: 複数社の比較検討</h4>
-        <p>1社で即決せず複数社を比較することで、年収・働き方・自動化文化の相場感が得られやすいとされています。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策5: 選考での逆質問の準備</h4>
-        <p>オンコール体制・SLO 文化・ツール選定の自由度などを面接で確認するための逆質問を準備しておくことで、入社後のギャップを減らせるとされています。</p>
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_devops_engineer_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_devops-engineer-tenshoku">
-          <span>DevOps エンジニア (SRE 含む)の進め方を TechGo の無料サポートで整理する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>DevOpsとSREの役割の違いと転職市場の基礎知識</h2><p>DevOpsは、開発（Development）と運用（Operations）が連携し、ビジネス価値を迅速かつ継続的に提供するための文化や考え方を指します。一方、SRE（Site Reliability Engineering）は、Googleによって提唱された、信頼性の高いシステムを構築・運用するための具体的なプラクティスです。両者は、開発速度とシステムの安定性を両立させるという共通の目的を持っていますが、DevOpsが文化的な側面を強調するのに対し、SREはSLI/SLOといった指標を用いて信頼性を工学的に管理するアプローチを取る点で異なるとされます。近年、企業のDX（デジタルトランスフォーメーション）推進やクラウドサービスの普及に伴い、これらのスキルを持つエンジニアの需要は高まっています。厚生労働省の「労働経済動向調査」でも、情報通信業における人手不足感は依然として高い水準にあり、専門性の高いIT人材の市場価値は上昇傾向にあると見られています。転職市場においては、両方の概念を理解し、実践できる人材が特に高く評価される傾向にあります。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -179,27 +145,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">無料サポートで転職の精度を高める方法</h2>
-      <p>DevOps エンジニア (SRE 含む)の転職は判断材料の確保が鍵とされており、第三者の視点で補うことが有効とされています。TechGo (IT エンジニア特化転職エージェント)の公開情報によれば、以下の無料サポートが提供されているとされています。</p>
-      <div class="branch-grid">
-        <article class="branch"><span class="tag">活用1</span><h4>経験領域別の市場価値診断</h4><p>CI/CD・IaC・SRE それぞれの市場感、年収レンジの当たりを付けるサポートです。</p></article>
-        <article class="branch"><span class="tag">活用2</span><h4>キャリアパスの相談</h4><p>DevOps スペシャリスト・SRE・プラットフォーム方向の整理を支援するサポートです。</p></article>
-        <article class="branch"><span class="tag">活用3</span><h4>求人の見極めサポート</h4><p>求人票だけでは分かりにくいオンコール体制・SLO 文化・ツール選定の自由度などを補うサポートです。</p></article>
-        <article class="branch"><span class="tag">活用4</span><h4>非公開求人の紹介</h4><p>公開求人より条件や運用環境とのマッチ度が高いケースがあるとされる非公開求人を紹介してもらえるサポートです。</p></article>
-      </div>
-
-      <div class="cta-block">
-        <p>DevOps エンジニア (SRE 含む)の転職は方向性の整理が要とされています。TechGo の無料相談で、市場価値の確認・キャリアパスの整理・求人の見極めを登録30秒で開始できます。</p>
-        <a class="btn-cta" href={`${A8}&sitemicros=sec5_devops_engineer_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec5_devops-engineer-tenshoku">
-          <span>TechGo の無料サポートを試す (登録30秒)</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>経験別に見るDevOps/SRE転職の具体的な戦略</h2><p>DevOps/SREエンジニアへの転職を成功させるためには、自身の経験に応じた戦略的なアプローチが重要です。現職の経験をどのように活かし、不足しているスキルをどう補うかを明確にすることが求められます。例えば、インフラエンジニアであれば、手動でのサーバー構築経験をIaC（Infrastructure as Code）ツール（Terraform, AWS CloudFormation等）で自動化した経験をアピールすることが有効です。アプリケーション開発者であれば、CI/CDパイプラインの設計・構築経験や、コンテナ技術（Docker, Kubernetes）の知識を強調すると良いでしょう。いずれの経験者も、システムの信頼性やパフォーマンスを監視・改善した実績を示すことが重要です。転職活動を進める上では、求人情報の内容を正確に理解することが不可欠であり、この点は「職業安定法」第5条の4でも、求人者は虚偽の表示をしてはならないと定められています。信頼できる情報源から、自身のスキルセットと合致する求人を見極めることが成功の鍵となります。</p><ul><li><strong>インフラエンジニア出身者の場合:</strong> サーバー構築・運用経験をベースに、TerraformやAnsible等を用いた構成管理・自動化の実績を職務経歴書で具体的に示す。</li><li><strong>アプリケーション開発者出身者の場合:</strong> 担当サービスのCI/CDパイプライン構築経験や、Docker/Kubernetesを利用した開発経験をアピールする。</li><li><strong>クラウド経験が浅い場合:</strong> AWS/GCP等の主要な認定資格を取得し、学習意欲と基礎知識を客観的に証明する。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門の転職サポートを活用するメリット (★544 ②):</strong><ul><li>専門のコンサルタントに相談することで、自身のスキルセットに合った非公開求人や、市場価値に関する客観的なアドバイスを得られる可能性が高まります。</li><li>職務経歴書の添削や模擬面接を通じて、自身の強みを効果的に伝える準備ができ、選考通過率の向上が期待できます。</li><li>給与や労働条件の交渉を代行してもらえるため、安心して転職活動に集中できる環境が整うことが期待されます。これは「職業安定法」で認可された事業者の提供する正規のサービスです。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
     <div class="container">
