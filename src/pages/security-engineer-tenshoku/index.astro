@@ -25,10 +25,11 @@ const breadcrumbSchema = {
   ],
 };
 const faq = [
-  { q: 'セキュリティエンジニアの年収はどれくらいですか?', a: '一般的に実務 3 年で 550-850 万円・5 年以上で 800-1,500 万円とされ、CISO/専門特化はさらに高単価傾向があるとされています。' },
-  { q: '必須資格はありますか?', a: '一般的に CISSP / CEH / 情報処理安全確保支援士 / OSCP 等が評価されているとされています。但し実務経験 + CTF 実績も同等以上に評価される傾向です。' },
-  { q: '未経験から転身できますか?', a: '一般的にネットワーク・サーバー実務 2-3 年 + セキュリティ学習 + 認定資格でセキュリティエンジニア転身事例があるとされています。' },
-  { q: 'ホワイトハッカーになるには?', a: '一般的にペネトレーションテスト + CTF + バグバウンティ実績が評価されているとされています。OSCP 取得が登竜門の一つとされています。' },
+  { q: '未経験からセキュリティエンジニアに転職することは可能ですか？', a: '未経験からの転職は挑戦的ですが、ITインフラやネットワークの基礎知識、関連資格の取得が有利に働くとされます。経済産業省が推進する「情報セキュリティマネジメント試験」などの合格は、知識レベルの客観的な証明となり、ポテンシャル採用の可能性を高める一助となることが期待されます。' },
+  { q: 'SOCアナリストとペネトレーションテスターの年収帯はどの程度異なりますか？', a: '公開情報や求人データを基にすると、SOCアナリストの年収目安は400万～800万円、より高度な専門性が求められるペネトレーションテスターは600万～1200万円以上が一般的とされます。経験年数や保有スキル、企業の規模により大きく変動するため、個別の求人内容の確認が重要です。' },
+  { q: 'CISO（最高情報セキュリティ責任者）を目指すためのキャリアパスを教えてください。', a: 'CISOへの道は、技術的専門性と経営的視点の両方が求められます。一般的には、SOC/CSIRTでの実務経験を積み、セキュリティコンサルタントやリスク管理部門を経てマネジメント経験を積むキャリアパスが考えられます。当記事の「セキュリティエンジニアの5領域」もご参照ください。' },
+  { q: '転職活動でセキュリティ関連スキルをアピールする際の注意点は何ですか？', a: '抽象的な表現を避け、具体的な実績を数値で示すことが重要です。例えば「脆弱性診断を実施」ではなく、「OWASP Top 10に基づきWebアプリの脆弱性診断を行い、SQLインジェクションなど5件の重大な脆弱性を発見・報告した」のように、用いた技術や成果を明確にすることが求められます。' },
+  { q: '今後、セキュリティエンジニアの需要はどのように変化すると予測されますか？', a: 'DX推進やサイバー攻撃の巧妙化に伴い、需要は引き続き高まると予測されます。特にクラウドやIoT領域のセキュリティ専門家の市場価値は高まる傾向にあります。総務省の「サイバーセキュリティ政策」でも人材育成の重要性が指摘されており、将来性の高い職種と一般に考えられています。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -137,29 +138,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 03 年収帯 ============ -->
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">年収帯 (一般的目安)</h2>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="セキュリティエンジニア年収帯目安">
-          <thead><tr><th>領域</th><th>3 年</th><th>5 年</th><th>10 年</th></tr></thead>
-          <tbody>
-            <tr><td>SOC / CSIRT</td><td>450-650 万</td><td>600-900 万</td><td>800-1,200 万</td></tr>
-            <tr><td>ペネトレ / 脆弱性診断</td><td>550-800 万</td><td>750-1,200 万</td><td>1,000-1,500 万+</td></tr>
-            <tr><td>セキュリティアーキテクト</td><td>700-1,000 万</td><td>900-1,400 万</td><td>1,200-2,000 万</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">※ 一般的目安であり個別保証ではありません。領域・スキル・業界により大きく異なります。</p>
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
-          <span>年収帯を踏まえ TechGo 公式サイトを確認する</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>セキュリティエンジニア転職の基礎知識</h2><p>セキュリティエンジニアは、サイバー攻撃の脅威から企業や組織の情報資産を保護する専門職です。近年、デジタルトランスフォーメーション（DX）の加速やランサムウェア攻撃の増加を背景に、その需要は急速に高まっているとされます。この職種に求められる基礎スキルは多岐にわたりますが、一般的にはネットワーク、サーバー、OSといったITインフラの知識に加え、プログラミングスキル、そしてセキュリティに関する基本的な理解が不可欠です。独立行政法人情報処理推進機構（IPA）が発行する「情報セキュリティ白書」などでは、最新の脅威動向や対策技術がまとめられており、転職活動においてもこうした公的情報を参考に知識をアップデートしておくことが推奨されます。未経験から目指す場合は、まずインフラエンジニアとして実務経験を積みながら、関連資格を取得してステップアップするキャリアパスが一般的と考えられています。</p></section>
 
   <!-- ============ SECTION 04 業界別求人 ============ -->
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
@@ -187,40 +166,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問・関連記事</h2>
-      {faq.map((item) => (
-        <div class="faq">
-          <details>
-            <summary>{item.q}</summary>
-            <div>{item.a}</div>
-          </details>
-        </div>
-      ))}
-      <div class="card-grid">
-        <div class="card">
-          <h3>関連 Spoke LP</h3>
-          <p>
-            <a href="/cloud-engineer-tenshoku/">クラウドエンジニア 転職</a> /
-            <a href="/infra-engineer-tenshoku/">インフラエンジニア 転職</a> /
-            <a href="/engineer-1000man/">エンジニア 年収 1000 万円への道</a> /
-            <a href="/engineer-portfolio/">エンジニア ポートフォリオ 作り方</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>公的相談窓口・支援機関</h3>
-          <p>
-            <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA</a> — 情報処理安全確保支援士 / セキュリティ動向 /
-            <a href="https://www.jpcert.or.jp/" target="_blank" rel="noopener">JPCERT/CC</a> — インシデント情報 /
-            <a href="https://www.nisc.go.jp/" target="_blank" rel="noopener">NISC</a> — サイバーセキュリティ戦略
-          </p>
-        </div>
-      </div>
-      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。</p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>主要領域別（SOC/ペネトレ/CISO）の役割とキャリアプラン</h2><p>セキュリティエンジニアのキャリアは専門領域によって大きく異なります。ここでは代表的な3つの領域について、その役割とキャリアプランを公開情報をもとに整理します。まず「SOC（Security Operation Center）」は、24時間体制でシステムを監視し、サイバー攻撃の兆候を検知・分析・報告する最前線です。インシデント発生時の初期対応を担う重要な役割であり、未経験者が最初に目指すキャリアとしても一般的です。次に「ペネトレーションテスター」は、システムに擬似的な攻撃を仕掛けて脆弱性を発見・評価する、通称「ホワイトハッカー」です。高度な技術力と倫理観が求められ、経験を積むことで高い専門性を確立できます。最後に「CISO（最高情報セキュリティ責任者）」は、経営層の一員として組織全体のセキュリティ戦略を策定・実行する役職です。技術的知見に加え、個人情報保護法などの関連法規やリスクマネジメントに関する深い理解が求められます。</p><ul><li><strong>SOCアナリスト:</strong> SIEM等の監視ツールの運用経験、インシデント対応手順の理解、基礎的なフォレンジック知識が求められる傾向にあります。</li><li><strong>ペネトレーションテスター:</strong> Webアプリケーションやネットワークの脆弱性診断スキル、スクリプト言語（Python等）の知識、詳細な報告書作成能力が重要視されます。</li><li><strong>CISO候補:</strong> ISMS等の国際規格に関する知識、リスクアセスメント経験、関連法規や経済産業省の「サイバーセキュリティ経営ガイドライン」への深い理解が期待されます。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>専門性の高い転職エージェントを利用することで、自身のスキルや経験に合致した非公開求人に出会える可能性が高まり、情報収集の時間を短縮できます。</li><li>業界の年収動向に精通したアドバイザーから、客観的なデータに基づいた年収交渉のアドバイスを得られることが期待され、より良い条件での転職を目指せます。</li><li>最新のサイバーセキュリティ動向や関連法令を踏まえたキャリア相談が可能で、安心して長期的なキャリアプランを設計できることが見込まれます。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">

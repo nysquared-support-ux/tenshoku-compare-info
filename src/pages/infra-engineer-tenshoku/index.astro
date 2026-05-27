@@ -25,10 +25,11 @@ const breadcrumbSchema = {
   ],
 };
 const faq = [
-  { q: 'インフラエンジニアの年収はどれくらいですか?', a: '一般的にインフラエンジニアの年収は実務 3 年で 500-800 万円・5 年以上で 700-1,500 万円とされ、SRE/DevOps 系はさらに高単価帯の傾向があるとされています。' },
-  { q: 'オンプレとクラウド どちらが将来性ありますか?', a: '一般的にクラウド (AWS/GCP/Azure) の需要が高い傾向ですが、オンプレ + クラウドのハイブリッド経験者も大企業・金融・製造業で重宝されているとされています。' },
-  { q: 'インフラから SRE / DevOps へキャリアアップする方法は?', a: '一般的にコード化 (IaC: Terraform 等) + CI/CD + 監視 (Datadog 等) + 自動化スキル習得で SRE / DevOps 転身が可能とされています。' },
-  { q: 'インフラエンジニアに資格は必要ですか?', a: '一般的に LPIC / CCNA / AWS SAA / Kubernetes CKA などが評価されているとされています。但し実務経験 + GitHub 公開 IaC のほうが優先される傾向です。' },
+  { q: 'SREやDevOpsエンジニアへのキャリアチェンジは未経験から可能ですか？', a: '情報技術分野での実務経験がない状態からの直接的なSRE/DevOpsへの転職は、一般的に挑戦的とされます。まずはクラウドインフラの基礎スキルを習得し、関連業務で経験を積むことが推奨されます。厚生労働省の職業情報提供サイト（jobtag）でも、関連職種にはシステム開発等の経験が求められる傾向が示されており、段階的なキャリア形成が現実的と考えられます。' },
+  { q: 'インフラエンジニアの年収を上げるには、具体的にどのようなスキルが必要ですか？', a: '年収向上には、AWSやGCP等の主要クラウドサービス、Terraform等のIaC（Infrastructure as Code）ツール、Kubernetes等のコンテナ技術の習得が重要とされます。特に、システムの信頼性やセキュリティ、大規模インフラの設計・構築経験は市場価値が高く評価される傾向にあります。これらのスキルを計画的に習得することが年収アップにつながる可能性があります。' },
+  { q: 'オンプレミス環境の経験しかないのですが、クラウドエンジニアに転職できますか？', a: 'オンプレミスで培ったサーバー、ネットワーク、ストレージに関する基礎知識は、クラウド環境を理解する上で強力な土台となります。AWS認定資格の取得などを通じてクラウド技術への学習意欲と知識を客観的に示すことで、転職の可能性は高まると考えられます。これまでの経験を強みとしてアピールすることが重要です。' },
+  { q: 'インフラエンジニア向けの転職エージェントを利用する際の注意点は何ですか？', a: '自身のキャリアプランと合致しない求人を強く勧められた場合でも、安易に妥協しない姿勢が大切です。IT・インフラ分野に精通した担当者が在籍しているかを確認し、複数のエージェントを比較検討することが推奨されます。ハローワークインターネットサービス等も参考にしつつ、多角的な情報収集を心がけることが、より良い選択につながるとされます。' },
+  { q: '将来性のあるインフラエンジニアのキャリアパスにはどのようなものがありますか？', a: 'クラウド技術を深化させ、SRE（Site Reliability Engineering）やDevOpsの専門家を目指す道が代表的です。また、サイバーセキュリティの専門家や、技術的知見を持つプロジェクトマネージャーへのキャリアパスも有望とされます。自身の興味や適性を見極め、専門性を高めていくことが、長期的な市場価値の維持・向上につながると考えられています。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -137,30 +138,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 03 年収帯 ============ -->
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">年収帯 (一般的目安)</h2>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="インフラエンジニア年収帯目安">
-          <thead><tr><th>職種</th><th>3 年</th><th>5 年</th><th>10 年</th></tr></thead>
-          <tbody>
-            <tr><td>オンプレ インフラ</td><td>400-550 万</td><td>500-700 万</td><td>650-900 万</td></tr>
-            <tr><td>クラウド インフラ</td><td>500-700 万</td><td>650-900 万</td><td>800-1,200 万</td></tr>
-            <tr><td>SRE</td><td>600-850 万</td><td>800-1,200 万</td><td>1,000-1,500 万+</td></tr>
-            <tr><td>DevOps</td><td>550-800 万</td><td>750-1,100 万</td><td>900-1,400 万</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">※ 一般的目安であり個別保証ではありません。スキル・業界・地域により大きく異なります。</p>
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
-          <span>年収帯を踏まえ TechGo 公式サイトを確認する</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>インフラエンジニアのキャリアパスと年収の基礎</h2><p>近年のIT業界では、クラウドコンピューティングの普及に伴い、インフラエンジニアに求められる役割が大きく変化しています。従来のオンプレミス環境（自社運用サーバー）の構築・運用に加え、AWS、GCP、Azureといったパブリッククラウドを扱うスキルが不可欠となりつつあります。この技術変化は、インフラエンジニアのキャリアパスを多様化させました。具体的には、システムの信頼性向上を専門とするSRE（Site Reliability Engineer）や、開発と運用の連携を密にするDevOpsエンジニアといった新しい職種への道が開かれています。年収帯は、保有スキルや経験年数によって大きく変動するのが実情です。厚生労働省の「賃金構造基本統計調査」によると、情報通信業は他業種と比較して給与水準が高い傾向にありますが、その中でもクラウドや自動化といった先端技術を持つ人材は、より高い報酬が期待されると一般にいわれます。</p></section>
 
   <!-- ============ SECTION 04 業界別求人 + 転職戦略 ============ -->
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
@@ -188,41 +166,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問・関連記事</h2>
-      {faq.map((item) => (
-        <div class="faq">
-          <details>
-            <summary>{item.q}</summary>
-            <div>{item.a}</div>
-          </details>
-        </div>
-      ))}
-      <div class="card-grid">
-        <div class="card">
-          <h3>関連 Spoke LP</h3>
-          <p>
-            <a href="/cloud-engineer-tenshoku/">クラウドエンジニア 転職ガイド</a> /
-            <a href="/ai-engineer-tenshoku/">AI エンジニア 転職ガイド</a> /
-            <a href="/engineer-1000man/">エンジニア 年収 1000 万円への道</a> /
-            <a href="/ses-dasshutsu/">SES 脱出 完全ガイド</a> /
-            <a href="/engineer-portfolio/">エンジニア ポートフォリオ 作り方</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>公的相談窓口・支援機関</h3>
-          <p>
-            <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA</a> — IT スキル標準・基本/応用情報 /
-            <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> — IT 業界年収統計 /
-            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> — 職業情報サイト
-          </p>
-        </div>
-      </div>
-      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。</p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>SRE/DevOpsへのキャリアアップ戦略と必須スキル</h2><p>インフラエンジニアからSREやDevOpsといった、より付加価値の高い職種へキャリアアップするためには、戦略的なスキル習得が求められます。従来のインフラ知識に加え、現代的な開発・運用手法への深い理解が不可欠です。具体的には、以下のスキルセットが重要視される傾向にあります。</p><ul><li><strong>クラウドプラットフォーム:</strong> AWS、GCP、Azureなど、少なくとも一つの主要クラウドサービスに関する深い知識と実践経験。</li><li><strong>IaC (Infrastructure as Code):</strong> TerraformやAnsibleといったツールを用い、インフラ構成をコードで管理・自動化するスキル。</li><li><strong>コンテナ技術:</strong> Dockerによるコンテナ化や、Kubernetesを用いたオーケストレーションに関する知識と運用経験。</li><li><strong>CI/CDと監視:</strong> JenkinsやGitLab CIを用いたパイプライン構築スキル、およびPrometheusやDatadog等による監視・分析能力。</li><li><strong>プログラミング:</strong> PythonやGoといった言語を用いた、運用自動化ツールの開発やスクリプティング能力。</li></ul><p>これらのスキルは、独立行政法人情報処理推進機構（IPA）が発行する「IT人材白書」などでも指摘されている、DX推進に不可欠な要素です。自身の経験を棚卸しし、計画的に学習を進めることがキャリアアップの鍵となると考えられます。</p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントの活用で期待できること (★544 ②):</strong><ul><li>自身のスキルセットやキャリアプランに合致した非公開求人を紹介してもらえる可能性があり、情報収集の時間を短縮できることが期待されます。</li><li>業界に精通したキャリアアドバイザーから、市場価値を高めるための具体的な学習計画や職務経歴書の添削といったサポートを受けられる場合があります。</li><li>公的データや業界動向に基づいた客観的な視点からアドバイスを得ることで、納得感を持って転職活動を進めやすくなる可能性があります。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">

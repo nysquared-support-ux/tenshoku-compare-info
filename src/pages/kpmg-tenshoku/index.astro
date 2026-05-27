@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'KPMG とはどんなファームですか?', a: 'KPMG は世界 4 大会計事務所 BIG4 の一角で、日本では KPMG コンサルティング + KPMG FAS + 有限責任あずさ監査法人 + KPMG 税理士法人 等の複数法人で展開しているとされています。リスク管理 + 金融サービス + コンプライアンスに強みがあるファームとされる傾向です。' },
-  { q: 'KPMG の年収レンジはどのくらいですか?', a: '一般公開情報によれば、シニアコンサルタント 700-1,100万円、マネージャー 1,100-1,500万円、シニアマネージャー 1,500-2,000万円、ディレクター 1,900-2,400万円、パートナー 2,500万円超の事例が報告されています。BIG4 内では Deloitte・PwC・EY と並ぶ水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
-  { q: 'KPMG の強み・特徴は?', a: 'リスク管理 + 金融サービス + コンプライアンス + 規制対応に強みがあるとされています。金融機関 (銀行 / 証券 / 保険) 向け案件 + 内部統制 + リスクアドバイザリーが中核領域とされる傾向です。' },
-  { q: 'KPMG で採用される人材像は?', a: '一般公開情報によれば、Consulting = 大手事業会社 + IT 出身、FAS = 銀行 / 証券 / 会計士、Risk Consulting = 金融 / 法務 / リスク管理経験者、Tax = 税理士 + USCPA がメインターゲットとされています。詳細は <a href="/big4-consul-tenshoku/" class="underline">BIG4 転職</a> 参照。' },
-  { q: 'KPMG の選考対策は?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 + リスク視点質問 → 役員面接の流れで、論理思考 + リスク感覚 + 業界知見の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
-  { q: 'KPMG と他の BIG4 の違いは?', a: 'KPMG = リスク + 金融 + コンプライアンス / Deloitte = 規模最大 + 全領域 / PwC = 戦略 + 業界変革 / EY = パーパス + サステナビリティ という特性の違いがあるとされています。詳細は <a href="/deloitte-tenshoku/" class="underline">デロイト 転職</a>・<a href="/pwc-tenshoku/" class="underline">PwC 転職</a>・<a href="/ey-tenshoku/" class="underline">EY 転職</a> 参照。' },
+  { q: 'KPMGのリスク・金融分野における強みは何ですか？', a: 'KPMGは、BIG4の中でも特に金融機関向けのリスク管理やコンプライアンス領域に強みを持つとされます。金融庁が公表する各種レポートで議論されるような複雑な金融規制への対応や、サイバーセキュリティ等の新たなリスク領域に関する深い知見が評価されていると一般に考えられています。専門性の高いサービス提供が特徴です。' },
+  { q: '金融業界未経験でもKPMGのリスクコンサルタントに転職できますか？', a: 'ポテンシャル採用の枠であれば可能性はあります。その場合、論理的思考力、問題解決能力、高い学習意欲が重視される傾向にあります。まずは自己分析で親和性の高いスキルを棚卸しし、ITやデータ分析等の専門性をアピールすることが有効な一手とされます。具体的なキャリアパスは、転職エージェント等に相談するのが一般的です。' },
+  { q: 'KPMGの選考におけるケース面接では、どのようなお題が出されますか？', a: 'リスク・金融部門では「国内大手銀行の海外進出におけるリスクを分析せよ」といった、実際の業務に近いテーマが出題される可能性があります。フェルミ推定やビジネスケースなど、汎用的な対策に加え、日頃から金融業界の動向やリスク関連のニュースに触れておくことが重要とされます。詳細は本ページの選考対策セクションもご参照ください。' },
+  { q: 'KPMGの年収レンジはどの程度でしょうか？', a: '公開情報や口コミを総合すると、コンサルタント職で600万円～、マネージャー以上では1,000万円を超える水準が一般的とされます。これは、厚生労働省の「賃金構造基本統計調査」における専門的・技術的職業従事者の平均給与と比較しても高い水準です。ただし、個人の経験や評価、部門によって大きく変動する点には注意が必要です。' },
+  { q: 'KPMGへの転職成功に向けて、転職エージェントはどのように活用すべきですか？', a: 'KPMGの非公開求人の紹介を受けられる可能性があるほか、リスク・金融分野に特化した職務経歴書の添削や面接対策など、専門的なサポートが期待できます。職業安定法で定められた有料職業紹介事業者の中から、自身のキャリアプランに合った信頼できるエージェントを選ぶことが、転職活動を効率的に進める上で重要とされます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,36 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">KPMG 選考対策 — 4 つのポイント</h2>
-      <div class="counter-box">
-        <h4>対策1: リスク感覚 + 金融知見の言語化</h4>
-        <p>KPMG はリスク + 金融特化のため、前職でのリスク管理経験 + 金融知見をコンサル評価軸に翻訳することが核心とされています。元コンサル添削で品質が大きく変わるとされています。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策2: ケース面接 (リスク視点 + 実務寄り)</h4>
-        <p>KPMG のケース面接はリスク管理 + 規制対応 + 金融機関変革等のシナリオが頻出とされる傾向です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策3: 業界専門性 (特に金融)</h4>
-        <p>金融機関 (銀行 / 証券 / 保険) の専門知見 + 規制環境の理解が KPMG の核心評価ポイントとされています。詳細は <a href="/finance-kara-consul/" class="underline">金融からコンサル</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策4: 志望動機 (なぜ KPMG + リスク領域)</h4>
-        <p>「リスク管理 + 金融サービス + コンプライアンス」等の KPMG 特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
-      </div>
-
-      <div class="cta-block">
-        <p>KPMG 採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合部門 + 想定年収を会員登録30秒で確認できます。</p>
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_kpmg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_kpmg">
-          <span>KPMG 特化サポートを試す (会員登録30秒)</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>KPMGのリスク・金融サービス部門への転職：基礎知識</h2><p>KPMG Japanは、監査、税務、アドバイザリーサービスを提供するプロフェッショナルファームであり、その中でも特に金融機関向けのサービスやリスクコンサルティングは中核的な領域と位置づけられています。世界的な金融規制の強化やデジタル化の進展を背景に、金融機関が直面するリスクは複雑化・多様化しており、専門的な知見を持つコンサルタントへの需要は高まっているとされます。経済産業省が推進する「コーポレート・ガバナンス・システムに関する実務指針」においても、企業経営におけるリスク管理の重要性が指摘されています。KPMGでは、信用リスク、市場リスクといった伝統的な金融リスクから、サイバーセキュリティ、コンプライアンス、サステナビリティ（ESG）関連リスクまで、幅広い領域をカバーしています。そのため、金融業界での実務経験者や、特定分野の高い専門性を持つ人材が求められる傾向にあると一般に考えられています。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -169,18 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事</p>
-      <h2 id="h2-related">関連記事</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>4 ファーム比較</p></a>
-        <a class="card-link" href="/deloitte-tenshoku/"><h4>デロイト 転職</h4><p>BIG4 最大規模</p></a>
-        <a class="card-link" href="/ey-tenshoku/"><h4>EY 転職</h4><p>パーパス + サステナビリティ</p></a>
-        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>KPMGの選考対策：リスク・金融分野に特化した攻略法</h2><p>KPMGのリスク・金融分野の選考は、一般的に書類選考、Webテスト、複数回の面接（ケース面接、専門性面接、人事面接など）で構成されます。このプロセスを通じて、論理的思考力、コミュニケーション能力、そして何よりも当該分野への深い知見とポテンシャルが評価されるとされます。特にケース面接では、金融機関が直面する経営課題やリスクシナリオを題材に、構造的に問題を分析し、現実的な解決策を提示する能力が問われます。また、専門性面接では、自身の職務経歴や保有スキルが、KPMGの提供するサービスにどう貢献できるかを具体的に説明する必要があります。厚生労働省が示す「公正な採用選考の基本」にもあるように、採用選考は応募者の職務遂行能力を客観的に評価する場です。そのため、自身の強みを的確にアピールするための準備が不可欠です。以下のポイントを意識して対策を進めることが推奨されます。</p><ul><li>自身の金融・リスク関連の職務経験を棚卸しし、具体的な実績や貢献を定量的に整理する。</li><li>金融業界の最新動向（FinTech、サステナブルファイナンス等）や主要な金融規制について情報収集を行う。</li><li>第三者（転職エージェント等）と模擬面接を行い、思考のプロセスや説明の分かりやすさについて客観的なフィードバックを得る。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントの活用で期待できること (★544 ②):</strong><ul><li>KPMGの非公開求人や部門ごとの採用ニーズに関する情報提供を受け、キャリアの選択肢を広げられる可能性が期待されます。</li><li>リスク・金融分野に特化した職務経歴書の添削やケース面接対策など、個人では難しい専門的なサポートを通じて、選考通過の確度を高めることが期待できます。</li><li>職業安定法に基づき認可された事業者から、自身の市場価値やキャリアパスについて客観的な助言を得ることで、安心して転職活動を進められる環境が整っているとされます。</li></ul></div></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">

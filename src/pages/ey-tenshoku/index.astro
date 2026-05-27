@@ -22,12 +22,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'EY とはどんなファームですか?', a: 'EY (Ernst & Young) は世界 4 大会計事務所 BIG4 の一角で、日本では EY ストラテジー・アンド・コンサルティング + EY 新日本監査法人 + EY 税理士法人 等の複数法人で展開しているとされています。パーパス「Building a better working world」+ サステナビリティ + 人材変革に注力するファームとされる傾向です。' },
-  { q: 'EY の年収レンジはどのくらいですか?', a: '一般公開情報によれば、シニアコンサルタント 700-1,100万円、マネージャー 1,100-1,500万円、シニアマネージャー 1,500-2,000万円、ディレクター 1,900-2,400万円、パートナー 2,500万円超の事例が報告されています。BIG4 内では Deloitte・PwC と並ぶ水準とされる傾向です。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
-  { q: 'EY の強み・特徴は?', a: 'パーパス + サステナビリティ + 人材変革 (People Advisory Services) が中核領域とされています。組織人事 + ESG + 持続可能経営の案件に強みがあり、中堅企業向け案件も比較的多い傾向とされています。' },
-  { q: 'EY で採用される人材像は?', a: '一般公開情報によれば、Strategy & Consulting = 大手事業会社 + 戦略経験者、Tax = 会計士 + 税理士、People Advisory = 人事 + 組織開発、Risk = 金融 + 法務出身者がメインターゲットとされています。詳細は <a href="/big4-consul-tenshoku/" class="underline">BIG4 転職</a> 参照。' },
-  { q: 'EY の選考対策は?', a: '一般公開情報によれば、書類選考 → 適性検査 → ケース面接 + パーパス質問 → 役員面接の流れで、論理思考 + パーパス整合性 + 業界知見の3軸が評価軸とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
-  { q: 'EY と他の BIG4 の違いは?', a: 'EY = パーパス + サステナビリティ + 人材変革 / Deloitte = 規模最大 + 全領域 / PwC = 戦略 + 業界変革 / KPMG = リスク + 金融 という特性の違いがあるとされています。詳細は <a href="/deloitte-tenshoku/" class="underline">デロイト 転職</a>・<a href="/pwc-tenshoku/" class="underline">PwC 転職</a> 参照。' },
+  { q: 'EY Japanへの転職で特に重視されるスキルや経験は何ですか？', a: '専門性に加え、EYが掲げる「Building a better working world」というパーパスへの共感が重視される傾向にあるとされます。特にサステナビリティやDX関連の経験は高く評価される可能性があります。厚生労働省が推進する「多様な働き方の実現」に貢献できるような、変化に対応できる人材像が求められると一般に考えられています。' },
+  { q: 'EYの選考プロセスはどのような流れで、何がポイントになりますか？', a: '一般に「書類選考→複数回の面接（ケース面接含む）→オファー」という流れで進むとされます。特にコンサルティング部門では、論理的思考力を試すケース面接が重要です。自身の経験をEYの求める人材像と結びつけ、具体的な貢献イメージを提示できるよう、事前のキャリアの棚卸しと企業研究がポイントになると言われています。' },
+  { q: 'EYの年収レンジは、他のBIG4ファームと比較してどうですか？', a: '役職や部門で異なりますが、公開情報によれば、コンサルタント職で600万～900万円、マネージャー以上では1,000万円を超える水準が期待されるとされます。この水準は他のBIG4ファームと比較しても遜色ないレベルと一般に考えられていますが、最終的なオファー金額は個人のスキルや経験によって大きく変動します。' },
+  { q: 'コンサルティング未経験からEYに転職することは可能ですか？', a: '第二新卒やポテンシャル採用枠では、未経験からの転職も可能とされます。ただし、その場合でも高い論理的思考力、学習意欲、特定業界への知見などが求められる点に注意が必要です。未経験の場合は、自身の強みがEYでどう活かせるかを客観的に分析し、説得力をもって伝える準備が不可欠とされます。' },
+  { q: 'EYの社風や働き方の特徴について教えてください。', a: 'EYは「DE&I (ダイバーシティ、エクイティ＆インクルーシブネス)」をグローバルで推進しており、多様な人材が活躍できる環境づくりに注力しているとされます。労働基準法を遵守しつつ、プロジェクトに応じた柔軟な働き方が推奨されますが、繁忙期には労働時間が増加する可能性も考慮しておくべき点と言えるでしょう。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -123,36 +122,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">EY 選考対策 — 4 つのポイント</h2>
-      <div class="counter-box">
-        <h4>対策1: パーパス整合性の言語化</h4>
-        <p>EY 独自の「Building a better working world」パーパスへの共感 + 自分の志向との整合性を語れる準備が必要とされています。他 BIG4 と差別化される評価軸です。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策2: ケース面接 (実務寄り + サステナビリティ視点)</h4>
-        <p>EY のケース面接は実務寄り (業務変革 / 組織人事 / サステナビリティ等) + 中長期視点が問われる傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策3: 業界専門性 + 人材視点</h4>
-        <p>業界知見 + コンサル評価軸への翻訳 + 人材/組織への視点が EY の核心評価ポイントとされています。元コンサルの添削で品質が大きく変わるとされています。</p>
-      </div>
-      <div class="counter-box">
-        <h4>対策4: 志望動機 (なぜ EY + パーパス共感)</h4>
-        <p>「EY のパーパスへの共感」「サステナビリティ + 人材変革領域への志向」等の EY 特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
-      </div>
-
-      <div class="cta-block">
-        <p>EY 採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合部門 + 想定年収を会員登録30秒で確認できます。</p>
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_ey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_ey">
-          <span>EY 特化サポートを試す (会員登録30秒)</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>EY Japanへの転職で知るべき基礎知識：パーパスと事業構成</h2><p>EY Japanは、世界的なプロフェッショナルファームであるErnst & Youngのメンバーファームであり、BIG4の一角を占めます。主に「EYストラテジー・アンド・コンサルティング」や「EY新日本有限責任監査法人」などの法人で構成され、監査、税務、コンサルティング、トランザクションの4つの主要サービスラインを提供しています。EYへの転職を考える上で最も重要な基礎知識は、そのパーパス（存在意義）である「Building a better working world（より良い社会の構築を目指して）」です。この理念は単なるスローガンではなく、採用基準や評価、プロジェクトの方向性にまで影響を与えるとされます。特にサステナビリティや長期的な価値（Long-term value）を重視する姿勢は、他のファームとの差別化要因ともなり得ます。近年、公正取引委員会が「グリーン社会の実現に向けた事業者等の活動に関する独占禁止法上の考え方」を示すなど、社会全体で持続可能性への関心が高まっており、EYの先進性が際立ちます。転職希望者は、自身のスキルや経験がこのパーパスにどう貢献できるかを明確に語れることが、選考における重要な鍵となると考えられます。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -169,18 +139,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事</p>
-      <h2 id="h2-related">関連記事</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>4 ファーム比較</p></a>
-        <a class="card-link" href="/deloitte-tenshoku/"><h4>デロイト 転職</h4><p>BIG4 最大規模</p></a>
-        <a class="card-link" href="/pwc-tenshoku/"><h4>PwC 転職</h4><p>戦略 + 業界変革</p></a>
-        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>EY Japanの選考を突破するための具体的な対策とポイント</h2><p>EY Japanの選考プロセスは、一般的に書類選考、Webテスト、複数回の面接を経て内定に至ります。各段階で求められる能力や視点が異なるため、計画的な対策が不可欠です。特に、論理的思考力とEYのパーパスへの共感度を重点的に評価される傾向にあるとされます。職業安定法では、求人者と求職者の間で適切な情報提供が求められており、候補者側も自身の能力を正確に伝える準備が必要です。</p><ul><li><strong>書類選考・Webテスト対策:</strong> 職務経歴書では、実績を定量的に示すと共に、EYのバリューに合致する経験を強調することが有効です。Webテストは一般的な形式（玉手箱など）が多いため、市販の対策本で十分な演習を積むことが推奨されます。</li><li><strong>ケース面接対策:</strong> コンサルティング部門で特に重要視されます。特定の課題に対して、構造的に分析し、論理的な解決策を導き出す能力が問われます。フレームワークの暗記だけでなく、思考プロセスを分かりやすく説明するコミュニケーション能力も評価の対象となります。</li><li><strong>行動特性・志望動機面接:</strong> 「なぜEYなのか」「EYで何を実現したいのか」を、自身の経験とEYのパーパス「Building a better working world」を結びつけて具体的に語ることが求められます。過去の行動から未来の活躍を予測するため、STARメソッド（Situation, Task, Action, Result）を意識してエピソードを整理しておくと良いでしょう。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>専門エージェントの知見を活用することで、EYの各部門が求める人材像に合わせた職務経歴書の作成や面接対策が可能となり、選考準備の時間を短縮できる可能性があります。</li><li>EYの企業文化やパーパスに特化した選考対策を受けることで、他の候補者との差別化を図り、内定獲得の確度を高めることが期待されます。</li><li>厚生労働省が公表する労働市場のデータなども踏まえ、客観的な視点からキャリアプランに関するアドバイスを受けられるため、安心して転職活動を進められます。</li></ul></div></section>
 
   <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
     <div class="container">

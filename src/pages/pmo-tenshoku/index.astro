@@ -23,12 +23,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: 'PMO とは何ですか?', a: '一般にプロジェクトマネジメント・オフィスの略で、プロジェクトの計画策定支援・進捗管理・課題管理・品質管理を担う組織または役割とされています。コンサル/SIer/事業会社など複数領域に存在し、業界・企業により役割範囲は異なります。' },
-  { q: 'PMO の年収レンジは?', a: '一般公開情報によれば、未経験寄りの PMO アシスタント職で 400-600万円、PMO スペシャリストで 600-1,000万円、PMO マネージャー以上で 1,000-1,500万円帯が中心とされる傾向です。経験・業界・ファーム規模により幅があります。具体的な見込みは <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> も参照ください。' },
-  { q: '未経験から PMO は目指せますか?', a: '一般的に、PM・PMO 支援経験 / SIer の上流工程経験 / 事業会社の事業推進経験などが評価される傾向とされ、関連経験があれば未経験から目指す道もあるとされます。具体的な可否は経験の整理を踏まえ、コンサル特化エージェントに相談することが推奨されます。' },
-  { q: 'PMO と PM の違いは?', a: 'PM (プロジェクトマネージャー) はプロジェクト全体の意思決定・予算・スケジュール責任を持つ役割で、PMO は PM の意思決定を支援し進捗・課題・品質を可視化する役割が一般的とされます。境界はプロジェクトにより異なります。' },
-  { q: 'PMO 転職に強いエージェントは?', a: 'コンサル業界知見のあるエージェント (元コンサル在籍など) が、PMO 求人の役割範囲・年収相場・選考対策の精度で強みがあるとされます。MyVision など、コンサル特化エージェントへの相談が選択肢の一つです。' },
-  { q: 'PMO 転職の選考はどんな内容ですか?', a: '一般的に書類選考 → ケース面接または実務想定面接 → 役員面接の流れが多く、論理思考 + プロジェクト推進経験 + ステークホルダー調整経験が評価軸とされます。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。' },
+  { q: 'PMO未経験でも転職は可能ですか？', a: 'ITコンサルタントやSEとしてプロジェクト管理支援の経験があれば、未経験からでもPMOへの転職は可能とされます。ただし、専門性が求められるため、自身のスキルセットを客観的に把握することが重要です。厚生労働省が推進する「ジョブ・カード制度」などを活用し、自身の職務経歴を整理することから始めるのが一般的です。' },
+  { q: 'PMOの具体的な年収レンジはどのくらいですか？', a: 'PMOの年収は経験や所属する企業（コンサル、SIer、事業会社）により大きく異なるとされます。一般的に、20代で500〜800万円、30代以上のシニア・マネージャークラスでは1,000万円を超えるケースも珍しくありません。大手コンサルティングファームではさらに高い水準が期待できるとされています。' },
+  { q: 'PMO転職で有利になる資格はありますか？', a: '必須ではありませんが、「PMP®（プロジェクトマネジメント・プロフェッショナル）」や「情報処理技術者試験（プロジェクトマネージャ試験）」などの資格は、専門知識を客観的に証明するため有利に働く可能性があります。詳しくは「PMOに求められるスキル」のセクションもご参照ください。資格取得は体系的な知識習得にも繋がります。' },
+  { q: 'コンサルファームのPMOと事業会社のPMOの違いは何ですか？', a: 'コンサルファームのPMOは、クライアント企業のプロジェクトを外部から支援する役割が中心です。一方、事業会社のPMOは、自社のプロジェクトを内部から推進・管理します。求められる視点や働き方が異なるため、転職活動ではどちらの環境が自身のキャリアプランに合致するか慎重な検討が求められます。' },
+  { q: 'PMOへの転職を成功させるためのポイントを教えてください。', a: '自身のプロジェクトマネジメント関連経験を具体的に言語化し、職務経歴書でアピールすることが重要です。また、PMOの求人は非公開も多いため、専門の転職エージェントを活用し、情報収集を行うことが成功の鍵とされます。キャリアの棚卸しから面接対策まで、専門家の支援を受けることが有効な手段と考えられます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -128,31 +127,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">狙えるファーム / 事業会社 と 選考対策</h2>
-      <p class="section-lede">PMO 求人は <strong>戦略 / 総合 / IT / 公共 / 事業会社</strong> と幅広い領域に存在するとされ、自分の経験との相性 + キャリアの方向性で選び方が変わるとされます。</p>
-      <div class="card-grid">
-        <div class="card"><h3>選考プロセス 5 ステップ</h3><p><strong>① 書類選考</strong> (職務経歴書 - プロジェクト推進実績の棚卸し重要)<br /><strong>② 適性検査</strong> (論理思考)<br /><strong>③ ケース面接 / 実務想定面接</strong> (複数回)<br /><strong>④ 役員 / パートナー面接</strong> (志望動機 + キャリアビジョン)<br /><strong>⑤ オファー面談</strong> (年収交渉)<br />詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a>・<a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a> 参照。</p></div>
-        <div class="card"><h3>評価される経験の整理法</h3><p><strong>① プロジェクト規模</strong> (人数・期間・予算)<br /><strong>② 担当領域</strong> (進捗管理・課題管理・品質管理など)<br /><strong>③ ステークホルダー数 / 階層</strong> (調整経験の幅)<br /><strong>④ 業界・業務知見</strong><br /><strong>⑤ 困難な状況での推進実績</strong> (STAR フレームワーク)<br />これらを言語化することで、書類選考突破率と面接での説得力が変わるとされます。</p></div>
-      </div>
-
-      <div style="text-align:center;margin:2rem 0;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_pmo_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
-        </a>
-        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_pmo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_pmo">
-          <span>PMO 求人の見極めを MyVision の無料カウンセリングで相談する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>PMO転職の基礎：求められる役割と市場価値</h2><p>PMO（プロジェクトマネジメント・オフィス）は、組織内の個別または複数のプロジェクトが円滑に目標を達成できるよう、横断的に支援・管理する部門または役割を指します。近年、企業のDX（デジタルトランスフォーメーション）推進が加速し、プロジェクトの複雑性・重要性が増していることから、PMOの需要は高まっていると一般にいわれます。PMOに求められる経験は、システム開発プロジェクトにおける進捗管理、課題管理、品質管理などの実務経験が中心となります。特に、ITコンサルタントや大手SIerでのプロジェクトリーダー・マネージャー経験は高く評価される傾向にあります。厚生労働省の職業情報提供サイト「job tag」においても、IT関連職種の需要は安定して高い水準にあることが示されており、PMOもその一つとして市場価値の高い職種と位置づけられています。転職を検討する際は、自身の経験がどの領域で活かせるかを明確にすることが第一歩となります。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -175,25 +150,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">向いている人 / 慎重に検討したい人</h2>
-      <p class="section-lede">PMO 転職は誰にとっても最適とは限らないとされます。下表は公開情報・業界一般論に基づく傾向の整理であり、適否を断定するものではありません。</p>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="PMO 転職の向き不向き">
-          <thead><tr><th>軸</th><th>向きやすい傾向</th><th>慎重に検討したい傾向</th></tr></thead>
-          <tbody>
-            <tr><td>やりがいの源泉</td><td>プロジェクトを動かす全体感に価値</td><td>個別領域の深い専門性追求</td></tr>
-            <tr><td>コミュニケーション</td><td>多階層・多部署の調整を苦にしない</td><td>個人作業中心を好む</td></tr>
-            <tr><td>関心の対象</td><td>進捗・課題・品質の可視化と推進</td><td>特定技術の深堀り</td></tr>
-            <tr><td>キャリア方向</td><td>マネジメント領域へ広げたい</td><td>専門職 (スペシャリスト) を志向</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">※ 専門特化型を志向する場合は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職</a>・<a href="/dx-consul-tenshoku/" class="underline">DX コンサル転職</a> も参照ください。</p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>PMO転職の具体的ステップとファーム別の選考対策</h2><p>PMOへの転職活動は、計画的に進めることが成功の鍵とされます。まず、自身の経験・スキルの棚卸しを行い、キャリアプランを明確化します。次に、志望する業界（コンサルティングファーム、大手SIer、事業会社）を定め、各々の特徴や求める人物像について情報収集を行います。特に職務経歴書では、担当したプロジェクトの規模（予算・期間・人数）、自身の役割、具体的な成果（コスト削減率、納期遵守率など）を定量的に示すことが重要です。選考過程では、論理的思考力や課題解決能力を問うケース面接が実施されることもあります。転職活動においては、提示される労働条件が「労働基準法」に準拠しているかを確認することも不可欠です。専門性の高い職種であるため、PMOの転職支援に強みを持つエージェントに相談し、客観的なアドバイスを得ながら進めるのが効率的な方法とされます。</p><ul><li><strong>大手SIer系PMO</strong>: 大規模なシステム開発案件が多く、技術的な知見と堅実な管理能力が求められる傾向にあります。</li><li><strong>コンサルティングファーム系PMO</strong>: 経営課題解決の視点が求められ、クライアントとの高度なコミュニケーション能力やドキュメンテーションスキルが重視されます。</li><li><strong>事業会社系PMO</strong>: 自社の事業戦略に基づいたプロジェクト推進がミッションとなり、関係部署との調整能力や当事者意識が重要視されます。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>専門エージェントの活用により、非公開求人を含む多数の選択肢から、自身の経歴に合った求人を効率的に探せる可能性が高まります。</li><li>PMOの選考に特化した面接対策や書類添削を受けることで、自身の強みを効果的にアピールでき、選考通過率の向上が期待されます。</li><li>業界動向や各ファームの内情に詳しいキャリアアドバイザーから客観的な情報を得られるため、入社後のミスマッチを減らす一助となるでしょう。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
     <div class="container">

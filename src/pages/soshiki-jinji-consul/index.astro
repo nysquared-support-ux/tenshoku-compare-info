@@ -23,12 +23,11 @@ const articleSchema = {
   publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
 };
 const faq = [
-  { q: '組織人事コンサルとはどんな仕事ですか?', a: '一般に、人事制度設計・組織開発・人材戦略・報酬制度設計・サクセッションプラン (後継者育成) などをクライアントに支援するコンサルティング領域とされます。経営戦略と人材戦略を結びつける役割も含まれるとされます。' },
-  { q: '組織人事コンサルの代表的なファームは?', a: '一般公開情報によれば、マーサー (Mercer) / コーン・フェリー (Korn Ferry) / タワーズワトソン (WTW) / リクルートマネジメントソリューションズ等が組織人事領域に強みを持つとされます。総合系の人事部門・国内独立系を含めると選択肢は幅広いとされます。' },
-  { q: '組織人事コンサルの年収レンジは?', a: '一般公開情報によれば、未経験中途で 500-800万円、経験者中途で 700-1,500万円、マネージャー以上で 1,000-2,000万円帯が中心とされる傾向。ファーム規模 + 経験により幅があります。詳細は <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a> 参照。' },
-  { q: '人事経験は必須ですか?', a: '一般的に人事領域の経験があると評価されやすいとされる一方、戦略コンサル経験 + 組織人事への関心、または事業会社の経営企画 + 組織開発関連経験などからの転身も可能とされる公開情報があります。' },
-  { q: '組織人事コンサルと総合系の人事部門の違いは?', a: '組織人事特化型は人事領域全般の専門性・深いノウハウが強みとされ、総合系の人事部門は人事領域 + 他領域 (戦略 / 業務 / IT) の連携が強みとされる傾向。志向で選び方が変わるとされます。' },
-  { q: '人事コンサル全般と組織人事ブティックの違いは?', a: '一般 HR コンサル ( <a href="/hr-consul-tenshoku/" class="underline">hr-consul-tenshoku</a> 参照) は給与計算アウトソース等の業務系も含み幅広いのに対し、組織人事ブティックは戦略 + 制度設計 + 組織開発に特化する傾向。自分の志向で使い分けが推奨されます。' },
+  { q: '一般的な戦略コンサルと組織人事コンサルの違いは何ですか？', a: '戦略コンサルが全社的な経営課題を扱うのに対し、組織人事コンサルは「人」と「組織」に特化します。具体的には、組織設計、人材育成、人事制度構築、M&Aに伴う組織統合などを扱います。厚生労働省の職業情報提供サイト（jobtag）でも、経営コンサルタントとは別に人事・労務の専門職として分類されており、専門性の違いが示されています。' },
+  { q: '組織人事コンサルへの転職に社会保険労務士などの資格は必須ですか？', a: '必須ではありませんが、保有していると有利に働く場合があります。特に人事制度や労務関連のプロジェクトでは、社会保険労務士法に定められた専門知識が役立つためです。しかし、資格よりも論理的思考力や課題解決能力、コミュニケーション能力といったコンサルタントとしての基礎能力が重視される傾向が強いとされます。' },
+  { q: '未経験から組織人事コンサルに転職する場合、年収はどの程度期待できますか？', a: '公開情報や転職エージェントの情報によると、未経験者の場合、アナリストやコンサルタントクラスで年収500万円～900万円程度が一般的なレンジとされます。前職の経験やスキル、年齢によって大きく変動します。入社後のパフォーマンス次第で、数年後には1,000万円を超えることも期待できるポジションです。' },
+  { q: '組織人事コンサルティングファームの選考におけるケース面接では、どのような点に注意すべきですか？', a: '一般的な戦略ファームのケース面接と異なり、財務的な視点だけでなく「人」や「組織」の観点を強く求められます。例えば、施策の実行可能性を考える際に、従業員のモチベーションや企業文化といった定性的な要素をどう構造的に捉え、解決策に落とし込むかが評価のポイントになると一般に言われています。' },
+  { q: '事業会社の人事経験しかありませんが、コンサルタントとして通用するでしょうか？', a: '事業会社での人事経験は大きな強みとなり得ます。現場で培った制度運用の知見や従業員との折衝経験は、クライアントへの提案に説得力を持たせるからです。コンサルタントに求められる構造的思考や仮説検証能力を面接で示すことができれば、ポテンシャルを評価され、採用に至る可能性は十分にあるとされます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -128,31 +127,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">選考プロセス + 志望動機の設計法</h2>
-      <p class="section-lede">組織人事コンサルの選考は <strong>ケース面接 (組織人事領域) + 専門性 + 志望動機</strong>が鍵とされる傾向です。</p>
-      <div class="card-grid">
-        <div class="card"><h3>選考プロセス 5 ステップ</h3><p><strong>① 書類選考</strong> (人事 / 戦略 / 組織開発の経験整理)<br /><strong>② 適性検査</strong> (論理思考)<br /><strong>③ ケース面接</strong> (組織人事領域の課題・複数回)<br /><strong>④ 役員 / パートナー面接</strong> (志望動機 + キャリアビジョン)<br /><strong>⑤ オファー面談</strong> (年収交渉)<br />詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></div>
-        <div class="card"><h3>志望動機の設計</h3><p><strong>① なぜ組織人事コンサルか</strong> (総合系人事部門・hr-consul との差別化説明)<br /><strong>② なぜそのファームか</strong> (ファーム特性との接点)<br /><strong>③ 入社後 3-5 年の構想</strong> (短期 + 中長期キャリア)<br /><strong>④ 自分が提供できる価値</strong> (人事 / 戦略 / 組織開発の経験)<br />詳細 <a href="/consul-shibodouki/" class="underline">志望動機設計ガイド</a>。</p></div>
-      </div>
-
-      <div style="text-align:center;margin:2rem 0;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_jinji_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
-        </a>
-        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
-      </div>
-
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec3_jinji`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec3_jinji">
-          <span>ファーム別の選考対策を MyVision の無料カウンセリングで相談</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>組織人事コンサルティングの基本と役割</h2><p>組織人事コンサルティングとは、企業の経営課題を「人」と「組織」の側面から解決に導く専門職です。企業の持続的成長には、優れた経営戦略だけでなく、それを実行するための組織構造や人材が不可欠とされます。具体的には、M&A後の組織統合支援、グローバルな人事制度の設計、次世代リーダーの育成計画策定、従業員エンゲージメントの向上施策など、多岐にわたるテーマを扱います。近年、厚生労働省が推進する「働き方改革」や人的資本経営への関心の高まりを背景に、その重要性は増しています。単に人事部門の業務を代行するのではなく、経営者の視点から組織全体のパフォーマンスを最大化するための変革を支援するのが、組織人事コンサルタントの基本的な役割であると整理できます。</p></section>
 
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
     <div class="container">
@@ -174,20 +149,7 @@ const breadcrumbSchema = {
     </div>
   </section>
 
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問 (FAQ)</h2>
-      <dl class="faq-list">
-        {faq.map(f => (
-          <details class="faq-item">
-            <summary class="faq-q">{f.q}</summary>
-            <div class="faq-a" set:html={f.a}></div>
-          </details>
-        ))}
-      </dl>
-    </div>
-  </section>
+  <section class="lp-section"><h2>組織人事コンサルへの転職を成功させる具体的ステップ</h2><p>組織人事コンサルへの転職は、専門性が高く、計画的な準備が求められます。成功の可能性を高めるための具体的なステップは以下の通りです。第一に、自身の経験の棚卸しです。事業会社での人事経験や関連プロジェクトの経験を、「どのような課題に対し、どう分析し、いかなる成果を出したか」というコンサルティング的な思考で整理することが重要です。第二に、ファームごとの特性理解です。マーサーは年金・福利厚生、コーン・フェリーは役員報酬やリーダーシップ開発など、各社に強みがあります。自身のキャリアプランと合致するファームを見極める必要があります。第三に、徹底した選考対策です。特にケース面接では、人事制度設計や組織改革といったテーマが頻出します。労働契約法などの関連法規の基礎知識も踏まえつつ、論理的かつ現実的な解決策を提示する訓練が不可欠です。これらのステップを独力で進めるのは困難な場合も多いため、専門のエージェントを活用することも有効な手段とされます。</p><ul><li><strong>Step 1: 経験の棚卸しとコンサル思考での言語化</strong>: 自身の実績を課題解決のフレームワークで再整理する。</li><li><strong>Step 2: ファーム研究と専門領域の特定</strong>: 各社の強みと自身のキャリア志向を照らし合わせる。</li><li><strong>Step 3: 専門領域に特化した選考対策</strong>: 人事領域のケース面接やビヘイビア面接の準備を重点的に行う。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 MyVisionのような専門サービスを検討するメリット (★544 ②):</strong><ul><li>専門エージェントの活用により、非公開求人へのアクセスやファーム毎の選考情報収集にかかる時間を短縮できる可能性があります。</li><li>組織人事コンサル領域に特化したキャリア相談を通じて、自身の市場価値を客観的に把握し、最適なファーム選定が期待できます。</li><li>厚生労働省の職業情報提供サイト（jobtag）等の公的データも参考に、客観的な情報に基づいたキャリアプランを安心して設計できます。</li></ul></div></section>
 
   <section class="lp-section alt" id="related" aria-labelledby="h2-related">
     <div class="container">
