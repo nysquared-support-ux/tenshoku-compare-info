@@ -25,10 +25,11 @@ const breadcrumbSchema = {
   ],
 };
 const faq = [
-  { q: 'エンジニアの職務経歴書は何枚が目安ですか?', a: '一般的に A4 サイズで 2-3 枚が目安とされています。実務 10 年以上のシニアでも 4 枚以内に収めることが推奨されます。' },
-  { q: '実績の書き方が分かりません', a: 'STAR フレームワーク (Situation/Task/Action/Result) で構造化することが一般的に推奨されています。数値 (パフォーマンス改善 X% / コスト削減 Y 円 / ユーザー数 Z) で具体性を担保します。' },
-  { q: '技術スタックはどう書けば良いですか?', a: '一般的にカテゴリ別 (言語 / フレームワーク / DB / インフラ / ツール) に整理 + 各項目の習熟度 (実務 N 年 / 業務利用 / 学習中) を明示することが推奨されています。' },
-  { q: '副業・個人開発の実績は書くべきですか?', a: '一般的にエンジニア採用では副業・個人開発・OSS コントリビュートの実績は積極的に書くことが推奨されているとされています。但し本業の業務情報との切り分けに注意が必要です。' },
+  { q: 'エンジニアの職務経歴書で、GitHubのURLは必須ですか？', a: '必須ではありませんが、スキルを証明する上で強力な補足資料となり得ます。特に実務経験が浅い場合や、ポートフォリオとして提示したい場合に有効とされます。ただし、公開リポジトリは整理し、個人情報保護法にも留意して見られて困る情報を含まないよう注意が必要です。' },
+  { q: '技術スタックはどの程度詳しく書けば良いですか？', a: '経験年数と習熟度を具体的に記載することが重要です。例えば「Java (5年, Spring BootでのAPI開発経験)」「AWS (3年, EC2, S3, Lambdaを利用したインフラ構築)」のように、具体的なフレームワーク名や利用シーンを併記すると、採用担当者がスキルレベルを正確に把握しやすくなります。' },
+  { q: 'STARフレームワークを使う具体的なメリットは何ですか？', a: 'Situation (状況), Task (課題), Action (行動), Result (結果) の4要素で実績を構造化することで、あなたの貢献度を論理的かつ具体的に伝えられる点です。これにより、採用担当者はあなたの問題解決能力や業務への取り組み方を深く理解しやすくなると期待されます。詳細は本記事の「職務経歴書の基本構成」もご参照ください。' },
+  { q: '職務経歴書に記載してはいけないNGな情報は何ですか？', a: '業務上の守秘義務に違反する情報（顧客名や非公開のプロジェクト詳細など）は記載してはいけません。また、厚生労働省が示す公正な採用選考の基本に基づき、本籍・出生地、家族構成、宗教など、職務能力と関係のない個人情報の記載は避けるべきとされています。' },
+  { q: '結局、採用担当者はエンジニアの職務経歴書のどこを一番見ていますか？', a: '多くの採用担当者は「どのような技術を使い、どのような課題を解決し、どう貢献したか」という具体的な実績を重視する傾向にあります。技術スタックの具体性と、STARフレームワークで示される問題解決プロセスが、あなたの市場価値を判断する上で重要な指標になると考えられます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -137,31 +138,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 03 技術スタックの書き方 ============ -->
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">技術スタックの書き方</h2>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="技術スタック記載例">
-          <thead><tr><th>カテゴリ</th><th>記載例</th></tr></thead>
-          <tbody>
-            <tr><td>言語</td><td>TypeScript (実務 5 年) / Python (実務 3 年) / Go (業務利用)</td></tr>
-            <tr><td>フレームワーク</td><td>Next.js / Django / React / Vue</td></tr>
-            <tr><td>DB</td><td>PostgreSQL / MySQL / Redis / Elasticsearch</td></tr>
-            <tr><td>インフラ</td><td>AWS (ECS/Lambda/RDS) / Docker / Kubernetes / Terraform</td></tr>
-            <tr><td>ツール</td><td>GitHub Actions / Datadog / Sentry / Linear</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">※ カテゴリ別整理 + 習熟度 (実務 N 年 / 業務利用 / 学習中) 明示が推奨されています。</p>
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
-          <span>技術スタック整理を踏まえ TechGo 公式サイトを確認する</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>エンジニア職務経歴書の基本と採用担当者の視点</h2><p>エンジニアの転職活動において、職務経歴書は自身の技術力と実績をアピールするための最重要書類とされます。履歴書が応募者のプロフィールを簡潔に示すのに対し、職務経歴書は具体的なプロジェクト経験や使用技術、問題解決能力などを詳細に伝える役割を担います。採用担当者は、応募者が自社の開発環境やプロジェクトにマッチするかを判断するため、特に「技術スタック」と「具体的な業務内容・実績」を注意深く確認する傾向にあります。厚生労働省が推進する「ジョブ・カード制度」においても、キャリアプランの作成にあたり職務経歴の棚卸しが重視されており、自身の経験を客観的かつ分かりやすく整理することの重要性が示唆されています。単に専門用語を羅列するのではなく、プロジェクトの背景や自身の役割、そして成果を明確に記述することが、効果的なアピールにつながると考えられます。</p></section>
 
   <!-- ============ SECTION 04 NG パターン ============ -->
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
@@ -189,41 +166,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問・関連記事</h2>
-      {faq.map((item) => (
-        <div class="faq">
-          <details>
-            <summary>{item.q}</summary>
-            <div>{item.a}</div>
-          </details>
-        </div>
-      ))}
-      <div class="card-grid">
-        <div class="card">
-          <h3>関連 Spoke LP</h3>
-          <p>
-            <a href="/ses-dasshutsu/">SES 脱出 完全ガイド</a> /
-            <a href="/engineer-1000man/">エンジニア 年収 1000 万円への道</a> /
-            <a href="/full-remote-engineer/">フルリモート エンジニア 転職</a> /
-            <a href="/jiko-bunseki/">転職 自己分析 やり方</a> /
-            <a href="/mensetsu/">面接対策ガイド</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>公的相談窓口・支援機関</h3>
-          <p>
-            <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> — 職務経歴書テンプレート提供 /
-            <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> — 労働市場情報 /
-            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> — 職業情報サイト
-          </p>
-        </div>
-      </div>
-      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。</p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>STARフレームワークと技術スタックの効果的なアピール方法</h2><p>エンジニアとしての実績を効果的に伝えるためには、具体的なフレームワークの活用が推奨されます。その代表例が「STARフレームワーク」です。これは、Situation (状況)、Task (課題)、Action (行動)、Result (結果) の頭文字を取ったもので、この構成に沿って業務経験を記述することで、論理的で説得力のあるアピールが可能になります。例えば、「大規模トラフィックによるレスポンス低下(S)」に対し「DBのインデックス最適化とキャッシュ機構の導入(A)」を行い「レスポンスタイムを平均30%改善(R)」といった形で具体的に記述します。また、技術スタックの記載においては、単に言語やツール名を並べるだけでなく、各技術の経験年数や習熟度、具体的な利用シーンを併記することが重要です。独立行政法人情報処理推進機構 (IPA) が公開する「デジタルスキル標準」などを参考に、自身のスキルレベルを客観的に表現することも一つの方法とされます。これにより、採用担当者はあなたのスキルセットを正確に評価しやすくなります。</p><ul><li><strong>Situation (状況):</strong> どのようなプロジェクト、チーム、ビジネス環境だったか。</li><li><strong>Task (課題):</strong> その状況で自身が担った役割や達成すべき目標は何か。</li><li><strong>Action (行動):</strong> 課題解決や目標達成のために、具体的にどのような技術や手法を用いて行動したか。</li><li><strong>Result (結果):</strong> 行動の結果、どのような成果（数値で示すと効果的）が得られたか。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>採用担当者にスキルや実績が伝わりやすい職務経歴書を作成でき、書類選考の通過率向上が期待できます。</li><li>自身のキャリアを客観的に整理することで、面接での受け答えにも一貫性が生まれ、自己PRの質が高まる可能性があります。</li><li>転職エージェント等の専門的な添削サービスを活用することで、自分では気づきにくい改善点を発見し、より完成度の高い書類を準備できる安心感が得られます。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">

@@ -25,10 +25,11 @@ const breadcrumbSchema = {
   ],
 };
 const faq = [
-  { q: 'ポートフォリオは必須ですか?', a: '一般的に Web エンジニア・モダン技術企業ではポートフォリオ提出が推奨されているとされています。但し SI / 大手では職務経歴書のみで通過するケースもあるとされています。' },
-  { q: 'GitHub の Star 数は重要ですか?', a: '一般的に Star 数自体より「自分のコード」「README の質」「コミット履歴の継続性」が重視されているとされています。100 Star 未満でも採用通過事例が多数あります。' },
-  { q: '個人開発の作品はどんなものを作るべきですか?', a: '一般的に「実際にユーザーが使える Web アプリ」「日常の課題を解決する CLI ツール」「学習過程を可視化する記事」等が推奨されているとされています。技術スタックは応募先企業と類似が望ましいです。' },
-  { q: '公開できないコード (業務) はどう示せば良いですか?', a: '一般的に業務コードは公開できないため、職務経歴書で「役割 + 技術 + 数値成果」を文章で示すことが推奨されています。守秘義務違反は重大な信用問題となります。' },
+  { q: 'GitHubをポートフォリオとして活用する際の具体的なポイントは何ですか？', a: 'Readmeの充実、コミット履歴の整理、コードの品質が重要です。特にプロジェクトの目的や使用技術を明記したReadmeは、採用担当者が最初に目にする部分とされます。経済産業省が推進する「ITスキル標準（ITSS）」では技術者の能力可視化が重視されており、GitHubでの活動履歴はその一助となると考えられます。' },
+  { q: '実務未経験ですが、どのような個人開発作品が評価されやすいですか？', a: '自身の課題解決や、身近な不便を解消するような独創性のあるアプリケーションが評価されやすい傾向にあります。例えば、学習記録ツールや家計簿アプリなどです。単なるチュートリアルの模倣ではなく、0から1を生み出す過程で得た設計思想や問題解決能力を示すことが、技術力のアピールに繋がると一般にいわれます。' },
+  { q: '採用担当者はポートフォリオのどこを一番見ていますか？', a: '技術選定の理由、コードの可読性、そして問題解決へのアプローチを重視する傾向があります。なぜその技術を使ったのか、チーム開発を想定したコーディングができているか、といった点が評価のポイントとされます。詳細は本記事の「採用担当者が見るポイント」のセクションもご参照ください。' },
+  { q: 'ポートフォリオに掲載してはいけないもの、注意点はありますか？', a: '業務で作成したソースコードや、第三者の著作物を無断で掲載することは避けるべきです。これらは著作権法に抵触する可能性があります。また、動作しないデモやエラーが頻発するアプリケーションは、かえってマイナスの印象を与える可能性があるため、公開前に入念なチェックが推奨されます。' },
+  { q: 'ポートフォリオ作成で最も重要な心構えは何ですか？', a: '「誰に、何を伝えたいか」を明確にすることが最も重要とされます。単に技術を羅列するのではなく、自身の強みや学習意欲、将来性を伝えるためのツールとしてポートフォリオを位置づけることが成功の鍵です。自身のスキルを客観的に棚卸しし、応募先企業が求める人物像と結びつける視点が求められます。' },
 ];
 const faqSchema = {
   '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -132,31 +133,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 03 採用担当者が見るポイント ============ -->
-  <section class="lp-section" id="sec-3" aria-labelledby="h2-3">
-    <div class="container">
-      <p class="section-num">SECTION / 03</p>
-      <h2 id="h2-3">採用担当者が見るポイント 5 つ</h2>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="採用担当者が見るポイント">
-          <thead><tr><th>ポイント</th><th>具体的な評価観点</th></tr></thead>
-          <tbody>
-            <tr><td>コードの質</td><td>命名規則 / 関数分割 / テスト</td></tr>
-            <tr><td>設計意図の説明</td><td>README + コミットメッセージで「なぜこの実装か」</td></tr>
-            <tr><td>継続性</td><td>1 回作って放置でなく、改善 + リファクタの継続</td></tr>
-            <tr><td>技術選定の理由</td><td>なぜこの言語/フレームワークを選んだか</td></tr>
-            <tr><td>運用力</td><td>デプロイ + 監視 + エラーハンドリング</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">※ 公開情報を整理した一般的傾向であり、企業・職種により評価軸は異なります。</p>
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=hub_salary`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_salary">
-          <span>採用視点を踏まえ TechGo 公式サイトを確認する</span>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <section class="lp-section"><h2>エンジニア転職におけるポートフォリオの基本</h2><p>近年のITエンジニア転職市場では、職務経歴書だけでは伝わらない技術力を証明する手段として、ポートフォリオの重要性が増しているとされます。ポートフォリオとは、自身のスキルや実績をまとめた作品集であり、主にGitHubアカウント、個人開発アプリケーション、技術ブログなどが含まれます。これらは、採用担当者が応募者の技術レベル、学習意欲、問題解決能力を客観的に評価するための重要な判断材料となります。独立行政法人情報処理推進機構（IPA）が発行する「IT人材白書」でも指摘されている通り、先端IT人材の需給ギャップは大きな課題です。質の高いポートフォリオは、自身のスキルを具体的に提示し、企業が求める人物像と合致することを示すための効果的なツールと言えるでしょう。公開情報をもとに整理すると、ポートフォリオは単なる作品集ではなく、自身の市場価値を高めるための戦略的なプレゼンテーション資料と位置づけられます。</p></section>
 
   <!-- ============ SECTION 04 NG パターン ============ -->
   <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
@@ -184,41 +161,7 @@ const faqSchema = {
   </section>
 
   <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
-  <section class="lp-section" id="sec-5" aria-labelledby="h2-5">
-    <div class="container">
-      <p class="section-num">SECTION / 05</p>
-      <h2 id="h2-5">よくある質問・関連記事</h2>
-      {faq.map((item) => (
-        <div class="faq">
-          <details>
-            <summary>{item.q}</summary>
-            <div>{item.a}</div>
-          </details>
-        </div>
-      ))}
-      <div class="card-grid">
-        <div class="card">
-          <h3>関連 Spoke LP</h3>
-          <p>
-            <a href="/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方</a> /
-            <a href="/jiko-bunseki/">転職 自己分析 やり方</a> /
-            <a href="/mensetsu/">面接対策ガイド</a> /
-            <a href="/cloud-engineer-tenshoku/">クラウドエンジニア 転職</a> /
-            <a href="/ai-engineer-tenshoku/">AI エンジニア 転職</a>
-          </p>
-        </div>
-        <div class="card">
-          <h3>公的相談窓口・支援機関</h3>
-          <p>
-            <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA</a> — IT スキル標準・人材育成 /
-            <a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> — 職業相談 /
-            <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> — 職業情報サイト
-          </p>
-        </div>
-      </div>
-      <p class="compare-note">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。運営: <a href="/operator-info/">NY-squared (個人事業)</a> / <a href="/editorial-policy/">編集ポリシー</a> / <a href="/privacy-policy/">プライバシーポリシー</a>。</p>
-    </div>
-  </section>
+  <section class="lp-section"><h2>採用担当者に響くポートフォリオの具体的な作り方</h2><p>採用担当者の評価を高めるポートフォリオを作成するには、戦略的なアプローチが求められます。単に作品を並べるだけでなく、自身の強みを効果的に見せることが重要です。まず、GitHubプロフィールの整備から始めましょう。最も自信のあるリポジトリをピン留めし、各リポジトリのREADME.mdにはプロジェクトの目的、使用技術、アーキテクチャ図、工夫した点などを分かりやすく記載します。これは、あなたのドキュメンテーション能力を示すことにも繋がります。次に個人開発ですが、厚生労働省が運営する「職業情報提供サイト（job tag）」などを参考に、市場で需要の高い技術を取り入れるのも一つの手です。例えば、クラウドサービスへのデプロイ経験や、API連携の実装は高く評価される傾向にあるとされます。重要なのは、これら一連の活動について「なぜそうしたのか」を自身の言葉で説明できることです。</p><ul><li><strong>GitHubの整備:</strong> プロジェクトの概要、使用技術、工夫した点を記載したREADME.mdを作成し、技術的な背景を明確に伝えます。</li><li><strong>個人開発のテーマ設定:</strong> 自身の興味や解決したい課題に基づき、オリジナリティのあるテーマを選び、主体性や問題解決能力をアピールします。</li><li><strong>技術選定の言語化:</strong> なぜそのフレームワークや言語を選んだのか、設計思想と共に説明できるように準備し、面接での質疑応答に備えます。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 このサービスを検討するメリット (★544 ②):</strong><ul><li>転職エージェントの専門的な視点から、自身の市場価値を高めるポートフォリオ作成のアドバイスが期待できます。</li><li>独学での情報収集にかかる時間を短縮し、効率的に転職活動を進められる可能性があります。</li><li>企業の採用ニーズに関する公開情報をもとに、より評価されやすい作品作りの方向性が見えてくることが期待されます。</li></ul></div></section>
 
   <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
     <div class="container">
