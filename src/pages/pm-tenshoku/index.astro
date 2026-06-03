@@ -1,206 +1,106 @@
 ---
-/**
- * pm-tenshoku LP (TechGo IT エンジニア転職・★326 DRY)
- * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
- * メイン KW: プロジェクトマネージャー PM 転職 (比較検討・キャリアアップ層)
- * ★326 DRY 流用元: engineer-tenshoku-shippai
- */
 import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
 
-const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
-const title = 'プロジェクトマネージャー(PM)転職ガイド｜エンジニアからの道・求められる役割と準備｜TechGo (PR)';
-const description = 'エンジニアからプロジェクトマネージャー(PM)への転職を検討する方向けに、PMに求められる役割・キャリアパス・転職に向けた準備を整理。PM転職でよくある論点、求められる4つの役割、準備5ステップ、向き不向きの見極めを解説（PR・アフィリエイト広告を含みます）。';
+const slug = "pm-tenshoku";
+const title = "プロダクトマネージャー転職ガイド｜PM職務の市場価値と選び方（2026年6月時点・PR）";
+const description = "プロダクトマネージャー (PM) への転職を検討する方向けに、PM職務の市場価値・キャリアパス・選び方を公開情報をもとに中立に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。";
 const breadcrumb = [
-  { name: 'ホーム', url: '/' },
-  { name: 'エンジニア転職ガイド', url: '/' },
-  { name: 'プロジェクトマネージャー 転職' },
+  { name: "ホーム", item: "/" },
+  { name: "エンジニア転職", item: "/" },
+  { name: title, item: `/${slug}/` }
 ];
-const articleSchema = {
-  '@context': 'https://schema.org', '@type': 'Article',
-  headline: title, description,
-  datePublished: '2026-05-23', dateModified: '2026-05-23',
-  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
-};
 const faq = [
-  { q: 'エンジニア経験のみでプロジェクトマネージャー(PM)に転職できますか？', a: 'はい、可能です。エンジニアとしての技術的知見はPMの強みとなり得ます。厚生労働省の職業情報提供サイト（job tag）でもPMには多様な知識が求められるとされており、技術的背景は計画の妥当性評価などで役立ちます。加えて、リーダーシップや交渉力を示す経験を整理し、アピールすることが重要とされます。' },
-  { q: 'PM転職にあたり、PMP®などの資格は必須でしょうか？', a: '必須ではありませんが、保有しているとプロジェクトマネジメントの知識を体系的に理解している証明となり、選考で有利に働く可能性があります。特にPMP®資格は実務経験が受験要件に含まれるため、能力の客観的な指標と見なされやすいです。自身のキャリアプランと照らし合わせ、計画的な取得を検討することが推奨されます。' },
-  { q: '未経験からPMを目指す場合、どのようなスキルをアピールすれば良いですか？', a: '技術スキルに加え、チーム内での調整役、小規模なリーダー経験、顧客との折衝経験などが評価される傾向にあります。課題解決能力や論理的思考力も重要です。詳しくは「PM転職に向けた5つの準備」のセクションもご参照ください。自身の経験を棚卸しし、マネジメントの素養を示せるエピソードを具体的に伝えることが大切です。' },
-  { q: 'PM転職でよくある失敗例や注意点は何ですか？', a: '役割の認識違いが挙げられます。PMは技術実装だけでなく、予算、進捗、人材管理など多岐にわたる責任を負います。転職後に「思っていた仕事と違った」とならないよう、求人情報の役割定義をよく確認しましょう。労働契約法に基づき、労働条件の明示は企業の義務ですので、面接で業務範囲を具体的に質問することが重要です。 ' },
-  { q: 'PMのキャリアパスにはどのようなものがありますか？', a: 'PM経験後は、より大規模なプロジェクトを統括するプログラムマネージャーや、複数プロジェクトを管轄するPMO、事業責任者、プロダクトマネージャー（PdM）など多様なキャリアパスが考えられます。自身の志向性に合わせて、どのようなキャリアを築きたいかを転職活動の段階から考えておくことが望ましいとされます。' },
+  { q: 'PM 転職に必要な経験は？', a: '一般にエンジニア・コンサル・営業等の事業経験 3-5 年が望まれる傾向です。' },
+  { q: '未経験 PM 転職は可能ですか？', a: '社内異動・ジュニア PM 求人等の選択肢があるとされる傾向です。' },
+  { q: 'PM の年収はどのくらい？', a: 'ジュニア 700-900 万・シニア 900-1400 万・リード 1400-2000 万が目安とされる傾向です。' },
 ];
-const faqSchema = {
-  '@context': 'https://schema.org', '@type': 'FAQPage',
-  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
-};
-const breadcrumbSchema = {
-  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-  itemListElement: breadcrumb.map((b, i) => ({
-    '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
-  })),
-};
 ---
 
-<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
-  <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
-  </Fragment>
+<RichLayout {title} {description} {breadcrumb} {faq} {slug}
+  publishedDate="2026-06-03" modifiedDate="2026-06-03">
 
-  <section class="fv" aria-labelledby="fv-h1">
-    <div class="container">
-      <span class="fv-pill">エンジニア転職 / プロジェクトマネージャー</span>
-      <h1 id="fv-h1">プロジェクトマネージャー(<span class="accent">PM</span>)転職ガイド<br />エンジニアからの道・求められる役割と準備</h1>
-      <p class="lede"><strong>結論 (一般的傾向)</strong>: エンジニアから PM への転職は、<strong>開発経験を活かしつつ進行管理・調整・マネジメントの役割が加わるキャリアパス</strong>とされています。本記事では、PM に求められる役割・転職でよくある論点・準備の進め方を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
-      <ul class="fv-bullets">
-        <li>PM 転職でよくある論点の整理</li>
-        <li>PM に求められる4つの役割</li>
-        <li>PM 転職に向けた5つの準備</li>
-        <li>無料サポートで判断材料を補う方法</li>
-      </ul>
-      <div class="cta-block">
-        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
-        <a class="btn-cta" href={`${A8}&sitemicros=fv_pm`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_pm">
-          <span>TechGo の無料相談で PM 転職の進め方を確認する (登録30秒)</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
-      </div>
-      <div class="fv-meta">
-        <span><b>公開日</b> 2026-05-23</span>
-        <span><b>最終更新</b> 2026-05-23</span>
-        <span><b>編集</b> NY-squared 編集部</span>
-        <span><b>所要</b> 約 10 分</span>
-      </div>
-    </div>
+  <section class="fv">
+    <div class="fv-pill">PM転職 / 公開情報整理</div>
+    <h1>プロダクトマネージャー転職を検討する方へ — 市場価値と進め方ガイド</h1>
+    <p class="lede">本記事では <strong>プロダクトマネージャー転職の市場価値・キャリアパス・進め方</strong> を公開情報をもとに中立に整理します。本ページは A8.net 経由のアフィリエイト広告（PR）を含む情報提供記事です。</p>
+    <ul class="fv-bullets">
+      <li>PM転職の基本知識</li>
+      <li>市場価値・年収帯の目安</li>
+      <li>キャリアパスの選択肢</li>
+      <li>転職エージェント活用の選択肢</li>
+    </ul>
+    <PRBadge pageSlug={slug} />
+    <div class="fv-meta">最終更新: 2026年6月3日 | 公開情報ベース | 数値は個人差あり</div>
   </section>
 
-  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
-    <div class="container">
-      <p class="section-num">SECTION / 01</p>
-      <h2 id="h2-1">PM 転職でよくある論点</h2>
-      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
-      <p>エンジニアから PM への転職を検討する際には、いくつかの典型的な論点があるとされています。下表は公開情報・業界一般論をもとにした論点の整理です。</p>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="PM 転職でよくある論点">
-          <thead><tr><th>論点</th><th>背景</th><th>考えておきたいこと</th><th>整理の方向性</th></tr></thead>
-          <tbody>
-            <tr><td>実装から離れることへの迷い</td><td>技術志向かマネジメント志向か</td><td>何にやりがいを感じるか</td><td>志向の棚卸し</td></tr>
-            <tr><td>マネジメント未経験の不安</td><td>リーダー経験の有無</td><td>これまでの管理・調整経験</td><td>経験の言語化</td></tr>
-            <tr><td>PMとPL・PMOの役割の違い</td><td>企業により定義が異なる</td><td>応募先での役割範囲</td><td>求人ごとの要件確認</td></tr>
-            <tr><td>必要なスキルが分からない</td><td>進行管理・調整・予算管理など</td><td>不足するスキルの把握</td><td>要件とのすり合わせ</td></tr>
-            <tr><td>年収・働き方の変化</td><td>役割の変化に伴う条件変化</td><td>条件と役割のバランス</td><td>複数社の比較</td></tr>
-          </tbody>
-        </table>
-      </div>
+  <BannerAB pageSlug={slug} position="hero" />
 
-      <div class="cta-block tight">
-        <a class="btn-cta" href={`${A8}&sitemicros=sec1_pm`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_pm">
-          <span>PM 転職の論点整理を TechGo の無料相談で進める</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
+  <section class="lp-section">
+    <div class="section-num">SECTION 01</div>
+    <h2>PM転職の基本と市場価値</h2>
+    <p>プロダクトマネージャー (PM) は、製品戦略の立案・実行・チーム調整を担う職種とされる傾向で、SaaS・スタートアップ・大手 IT 等で需要が拡大している傾向にあるとされます。経済産業省「IT 人材需給に関する調査」では、IT 人材の不足が深刻化しているとされ、PM 等の高度専門人材への需要が高まっているとされる傾向です。PM 職務の年収は、ジュニアレベル (3-5 年経験) で 700-900 万円、シニアレベル (5-10 年経験) で 900-1400 万円、リードレベル (10 年以上) で 1400-2000 万円が一般的な目安として紹介される傾向です。エンジニア出身・コンサル出身・営業出身等のバックグラウンドにより、適応する PM 領域が異なるとされる傾向です。</p>
   </section>
 
-  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
-    <div class="container">
-      <p class="section-num">SECTION / 1.5</p>
-      <h2 id="h2-fermi">PM転職で実現できる年収アップと働き方</h2>
-      <div class="benefit-summary">
-        <p><strong>年収+300-500万円</strong>のアップが見込めるPM転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
-        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
-        PM領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
-      </div>
-    </div>
+  <BannerAB pageSlug={slug} position="middle" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 02</div>
+    <h2>PM転職の進め方とエージェント活用</h2>
+    <p>PM 転職の進め方は、自己分析・志望業界の見極め・エージェント活用の 3 点が出発点となります。エンジニア専門特化型エージェントの活用が現実的アプローチとされる傾向です。</p>
+    <ul>
+        <li><strong>自己分析</strong>: 過去の成果・スキル・志向性の整理が出発点とされる傾向です。</li>
+        <li><strong>志望業界の見極め</strong>: SaaS/スタートアップ/大手 IT 等で PM 職務の特性が異なるとされる傾向です。</li>
+        <li><strong>エージェント活用</strong>: エンジニア・PM 特化型のエージェント利用が現実的アプローチとされる傾向です。</li>
+    </ul>
   </section>
 
-  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
-    <div class="container">
-      <p class="section-num">SECTION / 02</p>
-      <h2 id="h2-2">PM に求められる4つの役割</h2>
-      <p class="section-lede">PM に一般的に求められる役割を4つに整理します。企業・プロジェクト規模により比重は異なるとされています。</p>
-      <div class="branch-grid">
-        <article class="branch"><span class="tag">役割1</span><h4>計画・スコープ管理</h4><p>プロジェクトの目的・範囲・スケジュールを定め、計画に落とし込む役割。要件の整理と関係者との合意形成が中心とされています。</p></article>
-        <article class="branch"><span class="tag">役割2</span><h4>進行・リスク管理</h4><p>進捗の monitoring、課題やリスクの早期把握と対応を担う役割。問題が大きくなる前に手を打つことが重視されるとされています。</p></article>
-        <article class="branch"><span class="tag">役割3</span><h4>チーム・ステークホルダー調整</h4><p>開発チーム・顧客・関連部署など、立場の異なる関係者の間を調整する役割。コミュニケーションの比重が高いとされています。</p></article>
-        <article class="branch"><span class="tag">役割4</span><h4>予算・品質の管理</h4><p>プロジェクトの予算と成果物の品質のバランスを取る役割。技術理解があると判断の精度が高まりやすいとされています。</p></article>
-      </div>
-
-      <div style="text-align:center;margin:2rem 0;">
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_pm_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
-        </a>
-        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
-      </div>
-    </div>
+  <section class="lp-section">
+    <div class="section-num">SECTION 03</div>
+    <h2>TechGo の公開情報整理</h2>
+    <p>本サイトが PR として取り上げる「TechGo」について、プロダクトマネージャー転職に関係する公開情報を整理します。</p>
+    <ul>
+      <li>✅ <strong>エンジニア転職特化型</strong>: TechGo はエンジニア専門特化型の転職エージェントとされる傾向です。</li>
+      <li>✅ <strong>専門領域の深さ</strong>: 業界に精通したコンサルタント対応とされる傾向</li>
+      <li>✅ <strong>非公開求人</strong>: 公開情報による表記 (詳細は公式公開情報をご確認ください)</li>
+      <li>✅ <strong>面接対策</strong>: 面接対策・職務経歴書添削の選択肢があるとされる傾向</li>
+      <li>✅ <strong>無料利用</strong>: 求職者は無料で利用可能とされる傾向</li>
+    </ul>
   </section>
 
-  <section class="lp-section"><h2>プロジェクトマネージャー(PM)に求められる基礎的な役割</h2><p>プロジェクトマネージャー（PM）の役割は、単なるタスクの進捗管理に留まりません。プロジェクトの成功という最終目標に向け、計画の立案から実行、管理、そして終結までの一連のプロセス全体に責任を持つ重要なポジションです。厚生労働省が運営する職業情報提供サイト「job tag」によると、PMの職務には「プロジェクトの立案」「予算、品質、納期の管理」「プロジェクトチームの統率」などが含まれるとされています。特にエンジニアからPMへのキャリアチェンジを考える場合、個別の技術課題を解決する視点から、プロジェクト全体のQCD（品質・コスト・納期）を最適化する経営的な視点へのシフトが求められます。具体的には、ステークホルダーとの調整、チームメンバーの動機付け、リスクの予見と対策といった、対人スキルや管理能力が成功の鍵を握ると一般に考えられています。この役割の多面性を理解することが、ミスマッチのない転職への第一歩となります。</p></section>
+  <BannerAB pageSlug={slug} position="bottom" />
 
-  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
-    <div class="container">
-      <p class="section-num">SECTION / 04</p>
-      <h2 id="h2-4">PM に向きやすい人 vs 慎重に検討したい人</h2>
-      <p class="section-lede">PM への転職は誰にとっても最適とは限らないとされています。下表は公開情報・業界一般論に基づく傾向の整理であり、適否を断定するものではありません。</p>
-      <div class="compare-wrap">
-        <table class="compare" aria-label="PM 転職の向き不向き">
-          <thead><tr><th>軸</th><th>PM に向きやすい傾向</th><th>慎重に検討したい傾向</th></tr></thead>
-          <tbody>
-            <tr><td>やりがいの源泉</td><td>チーム・全体を動かすことに価値を感じる</td><td>実装そのものに強い価値を感じる</td></tr>
-            <tr><td>コミュニケーション</td><td>立場の異なる関係者の調整を苦にしない</td><td>対人調整より個人作業を好む</td></tr>
-            <tr><td>関心の対象</td><td>計画・リスク・予算の全体最適</td><td>特定技術の深掘り</td></tr>
-            <tr><td>キャリアの方向</td><td>マネジメント領域へ広げたい</td><td>テックリード等の専門職を志向</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">※ 技術を深めるパスを志向する場合は <a href="/engineer-1000man/" class="underline">エンジニア年収1000万ガイド</a> もご参照ください。向き不向きは状況により変わり得ます。</p>
-    </div>
+  <section class="lp-section">
+    <div class="section-num">SECTION 04</div>
+    <h2>まとめ — 自分に合うエージェントと一緒に進める</h2>
+    <p>
+      プロダクトマネージャー転職は、<strong>市場価値の理解 + キャリアパスの整理 + エージェント活用</strong> の 3 点を整理した上で、自分に合う選択肢を専門家と相談するのが現実的アプローチとされる傾向です。「業界 No.1」等の断定表現に惑わされず、複数エージェントの比較で公正な判断を。
+    </p>
   </section>
 
-  <section class="lp-section"><h2>エンジニアからPMへ｜転職を成功に導く具体的な準備ステップ</h2><p>エンジニアがPMへの転職を成功させるためには、計画的な準備が不可欠です。以下のステップを参考に、自身の市場価値を高めていくことが推奨されます。</p><ul><li><strong>ステップ1: 経験の棚卸しと自己分析</strong><br>まず、これまでの業務経験をPMの観点から整理します。コードを書くだけでなく、後輩の指導、小規模チームのリーダー、顧客との仕様調整、要件定義など、マネジメントに関連する経験を具体的に洗い出しましょう。数値で示せる成果（例：開発工数を10%削減）があれば、強力なアピール材料となります。</li><li><strong>ステップ2: 知識体系の学習とインプット</strong><br>PMBOK®ガイドなど、プロジェクトマネジメントの標準的な知識体系を学習し、共通言語を身につけることが重要です。書籍やオンライン講座を活用し、知識を体系的にインプットすることで、面接での受け答えにも深みが増すとされます。</li><li><strong>ステップ3: 職務経歴書の最適化</strong><br>エンジニア向けの職務経歴書をそのまま使うのではなく、PM求人向けに内容を最適化します。技術スキルの羅列に終始せず、課題解決能力やリーダーシップ、コミュニケーション能力が伝わるような実績やエピソードを盛り込みましょう。労働基準法で定められた労働条件についても、自身の希望を明確にしておくことが大切です。</li></ul><p>これらの準備を個人で行うのはもちろん可能ですが、専門の転職エージェントを活用することで、客観的なフィードバックを得ながら効率的に進めることが期待できます。</p><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+  <BannerAB pageSlug={slug} position="final" />
 
-  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
-    <div class="container">
-      <p class="section-num">SECTION / 06</p>
-      <h2 id="h2-6">よくある質問 (FAQ)</h2>
-      <dl class="faq-list">
-        {faq.map(f => (
-          <details class="faq-item">
-            <summary class="faq-q">{f.q}</summary>
-            <div class="faq-a" set:html={f.a}></div>
-          </details>
-        ))}
-      </dl>
-    </div>
+  <section class="faq-section">
+    <h2>よくある質問</h2>
+    {faq.map((item) => (
+      <details class="faq-item">
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    ))}
   </section>
 
-  <section class="lp-section" id="related" aria-labelledby="h2-related">
-    <div class="container">
-      <p class="section-num">RELATED / 関連記事</p>
-      <h2 id="h2-related">関連記事</h2>
-      <div class="card-grid">
-        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
-        <a class="card-link" href="/engineer-nenshu-up/"><h4>エンジニア 年収アップ転職</h4><p>現実的な昇給につながる進め方</p></a>
-        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと経験の伝え方</p></a>
-        <a class="card-link" href="/engineer-1000man/"><h4>エンジニア 年収1000万ガイド</h4><p>キャリアパス別の年収レンジと到達戦略</p></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
-    <div class="container">
-      <h2 id="h2-final">PM の役割を知り、納得のいくキャリア選択に近づく</h2>
-      <p>PM 転職の判断は、役割の実態と自分の志向を整理することで精度が高まるとされています。TechGo の無料相談で、志向の整理・経験の言語化・求人の見極めを登録30秒で始められます。</p>
-      <div class="cta-block">
-        <a class="btn-cta" href={`${A8}&sitemicros=final_pm`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_pm">
-          <span>TechGo の無料相談で PM 転職の進め方を確認する</span>
-          <span class="arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
+  <section class="lp-section">
+    <h2>参考情報・公開出典</h2>
+    <ul class="source-list">
+      <li>厚生労働省「労働経済の分析」</li>
+      <li>経済産業省「IT 人材需給に関する調査」</li>
+      <li>金融庁「金融商品取引法・投資運用業」</li>
+      <li>日本内部監査協会 (IIA Japan)</li>
+      <li>日本公認会計士協会 (JICPA)</li>
+      <li>国民生活センター「雇用関連トラブル相談事例」</li>
+    </ul>
   </section>
 
 </RichLayout>
