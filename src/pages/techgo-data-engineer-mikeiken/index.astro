@@ -1,0 +1,155 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const title = '未経験からデータエンジニアへの転職の整理｜学習と準備 (2026年版・PR)';
+const description = '未経験からデータエンジニア (Data Engineer) への転職の一般情報・学習ロードマップを、公開情報をもとに中立的に整理した情報提供記事です(PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '未経験' },
+];
+const faq = [
+  { q: '未経験でデータエンジニアになれますか？', a: 'データ分野の人材需要が継続的に整理されているとされ、未経験からの転職事例も公表されています。計画的な学習が推奨されます。' },
+  { q: '学習期間は？', a: '目指す職種により異なるとされていますが、一般に半年〜1年程度の計画的学習が選択肢として整理されているとされています。' },
+  { q: 'ポートフォリオは何を作るべき？', a: 'ETL パイプライン構築・データ可視化・データ基盤設計の個人プロジェクトが一般的に整理されているとされています。' },
+  { q: 'どのクラウドを学べばよいですか？', a: 'AWS が一般的なシェアとされていますが、GCP・Azure も選択肢として公表されているとされています。求人により希望クラウドが異なるケースが整理されています。' },
+  { q: 'エージェントはデータエンジニア求人を扱う？', a: 'IT エンジニア専門エージェントではデータエンジニア求人も公表されているとされています。事前の希望整理が推奨されます。' }
+];
+---
+
+<RichLayout title={title} description={description} publishedDate="2026-06-05" modifiedDate="2026-06-05" breadcrumb={breadcrumb} faq={faq}>
+  <div class="pr-strip">本ページはアフィリエイト広告 (A8.net 経由) を利用しています。IT エンジニア専門の転職エージェントの一般情報を中立的に整理します。<span class="pr-tag">PR</span></div>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">データエンジニア / 未経験</span>
+      <h1 id="fv-h1"><span class="accent">未経験からデータエンジニアへの転職</span><br />学習と準備の進め方</h1>
+      <p class="lede">未経験からデータエンジニアへの転職は、計画的な学習が選択肢として整理されています。本記事では公的情報をもとに中立的に整理します。</p>
+      <ul class="fv-bullets">
+        <li>データエンジニアの一般的な役割</li>
+        <li>学習ロードマップ</li>
+        <li>求人情報の整理</li>
+        <li>エージェント活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note">本ページはアフィリエイト広告を利用しています。<span class="pr-tag">PR</span></p>
+        <div class="a8-cta-banner"><a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" rel="nofollow"> <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"></a> <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" alt=""></div>
+      </div>
+      <p class="fv-meta"><span>更新日: 2026-06-05</span><span>編集: NY-squared 編集部</span></p>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 01</p>
+      <h2>データエンジニア転職の基本</h2>
+      <p>データエンジニアは、データ基盤・データパイプラインの設計・構築・運用を担う役割として一般的に整理されているとされています。<br>需要は経済産業省・厚生労働省の公開情報で継続的に整理されているとされています。<br>未経験者の場合は、SQL・Python・クラウド基盤等の学習が選択肢として公表されているとされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 02</p>
+      <h2>公的保護制度・関連情報</h2>
+      <div class="card-grid">
+        <div class="card"><h3>厚生労働省</h3><p>労働条件・雇用関係の公開情報が整理されているとされ、転職活動時の参考情報となる選択肢が公表されているとされています。</p></div>
+        <div class="card"><h3>経済産業省</h3><p>業界動向・人材需要の公開情報が整理されているとされ、転職活動時の参考情報となる選択肢が公表されているとされています。</p></div>
+        <div class="card"><h3>独立行政法人 情報処理推進機構 (IPA)</h3><p>IT 関連のスキル定義・公開情報が整理されているとされています。</p></div>
+        <div class="card"><h3>国民生活センター</h3><p>転職関連サービスの相談事例が公開されており、選択時の参考情報となるとされています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 03</p>
+      <h2>進め方の選択肢</h2>
+      <p>進め方は (1) 学習内容の整理 (SQL・Python・クラウド)、(2) 学習リソースの選定、(3) 個人プロジェクト・ポートフォリオ作成、(4) 求人情報の整理、(5) エージェント相談 が一般的に整理されています。<br>AWS・GCP・Azure などのクラウド基盤の理解は選考参考情報となる選択肢とされています。<br>個人での ETL パイプライン構築等のポートフォリオが選考時の参考情報となる選択肢が整理されているとされています。</p>
+      <div class="benefit-summary">
+        <h3>TechGo (IT エンジニア専門エージェント) の一般情報整理</h3>
+        <ul>
+          <li>IT エンジニア専門の転職支援サービスとして展開されているとされています</li>
+          <li>未経験から経験者まで幅広い相談に対応する選択肢が公表されているとされています</li>
+          <li>求人企業との直接的な接点を持つ選択肢が整理されているとされています</li>
+          <li>面接対策・職務経歴書添削の支援が公表されているとされています</li>
+          <li>オンライン面談対応で全国の利用者が相談可能とされています</li>
+        </ul>
+      </div>
+      <div class="cta-block">
+        <div class="a8-cta-banner"><a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" rel="nofollow"> <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"></a> <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" alt=""></div>
+        <p class="btn-cta-sub">公式情報で詳細を確認</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 04</p>
+      <h2>向いている方 / 慎重判断が望ましい方</h2>
+      <div class="branch-grid">
+        <article class="branch"><h4>計画的学習向き</h4><p>学習時間を確保できる方、長期的にデータ分野でキャリアを考える方</p></article>
+        <article class="branch"><h4>経験者ステップアップ</h4><p>既に他のエンジニア経験がある方、データ分野への移行を検討する方</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 05</p>
+      <h2>データエンジニア転職の確認事項</h2>
+      <div class="counter-box">
+        <h3>確認項目</h3>
+        <div class="row"><b>学習言語</b><span>SQL・Python が基本</span></div>
+        <div class="row"><b>クラウド</b><span>AWS/GCP/Azure 理解</span></div>
+        <div class="row"><b>ETL</b><span>データパイプライン構築</span></div>
+        <div class="row"><b>ポートフォリオ</b><span>個人プロジェクト整理</span></div>
+      </div>
+      <div class="cta-block">
+        <div class="a8-cta-banner"><a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" rel="nofollow"> <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"></a> <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 06</p>
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>未経験でデータエンジニアになれますか？</summary><div><p>データ分野の人材需要が継続的に整理されているとされ、未経験からの転職事例も公表されています。計画的な学習が推奨されます。</p></div></details>
+        <details class="faq-item"><summary>学習期間は？</summary><div><p>目指す職種により異なるとされていますが、一般に半年〜1年程度の計画的学習が選択肢として整理されているとされています。</p></div></details>
+        <details class="faq-item"><summary>ポートフォリオは何を作るべき？</summary><div><p>ETL パイプライン構築・データ可視化・データ基盤設計の個人プロジェクトが一般的に整理されているとされています。</p></div></details>
+        <details class="faq-item"><summary>どのクラウドを学べばよいですか？</summary><div><p>AWS が一般的なシェアとされていますが、GCP・Azure も選択肢として公表されているとされています。求人により希望クラウドが異なるケースが整理されています。</p></div></details>
+        <details class="faq-item"><summary>エージェントはデータエンジニア求人を扱う？</summary><div><p>IT エンジニア専門エージェントではデータエンジニア求人も公表されているとされています。事前の希望整理が推奨されます。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section">
+    <div class="container">
+      <p class="section-num">SECTION 07</p>
+      <h2>公的な相談窓口・参考情報</h2>
+      <div class="sources">
+        <ul>
+          <li>厚生労働省「労働条件・雇用関係」関連情報</li>
+          <li>経済産業省「業界動向・人材需要」関連情報</li>
+          <li>独立行政法人 情報処理推進機構 (IPA)</li>
+          <li>日本公認会計士協会・日本税理士会連合会</li>
+          <li>国民生活センター</li>
+          <li>各都道府県の労働相談窓口</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt">
+    <div class="container">
+      <p class="section-num">SECTION 08</p>
+      <h2>まとめ・公開情報の整理</h2>
+      <p>本記事では公開情報・公的機関のガイドラインをもとに中立的に整理しました。転職活動の進め方は、自身のキャリア整理と計画的な準備の上で行うことが推奨されます。エージェントを通じた相談も参考情報となる選択肢として整理されています。</p>
+      <div class="cta-block">
+        <div class="a8-cta-banner"><a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" rel="nofollow"> <img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1"></a> <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6" alt=""></div>
+      </div>
+      <div class="disclaimer">
+        <p>本ページはアフィリエイト広告を利用しています。本ページの内容は公開情報・公的機関のガイドラインをもとに中立的に整理した情報提供を目的としており、特定サービスの利用を保証するものではありません。転職の選択判断は読者ご自身で行ってください。</p>
+      </div>
+    </div>
+  </section>
+</RichLayout>
