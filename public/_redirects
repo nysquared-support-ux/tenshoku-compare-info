@@ -1,0 +1,4 @@
+# Cloudflare Pages 404 fallback (SPA fallback 解消・★365 真因対処)
+# 任意のマッチしないパスを 404.html で 404 ステータス返却
+# 既存 LP (file 存在) は影響なし・200 OK で返り続ける
+/*  /404.html  404
