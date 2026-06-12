@@ -1,0 +1,212 @@
+---
+/**
+ * クラウドエンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY: engineer-1000man rich-v3 / ses-dasshutsu rich 実証済テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-cloud-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）';
+const description = 'AWS/GCP/Azure クラウドエンジニアの転職を検討中の方向け。必須スキル・経験年数別年収帯・認定資格 (AWS SAP/GCP PCA/AZ-305)・転職戦略を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。読者別 (未経験/インフラ経験者/SRE 志向) 分岐の判断材料を提供します。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'クラウドエンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> cloud engineer tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は cloud-engineer-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">クラウドエンジニア junior〜senior テックリード/VPoE/CTO 候補 両軸 | 制度成熟 15年+</span>
+      <h1 id="fv-h1">
+        <span class="accent">クラウドエンジニア</span>転職 (AWS/Azure/GCP)、年収+200万円を目指せるチャンス。<br />
+        在職中でも夜間オンライン相談が可能です
+      </h1>
+      <p class="lede">
+        DX 化の加速に伴い、クラウドエンジニアの需要は依然として高い水準で推移しているとされます。クラウドエンジニアは AWS/GCP/Azure 需要急増で年収 600-1,500 万円帯の求人が活発とされ、<strong>転職成功者の平均年収アップ額185万円</strong>といったデータも公開情報で紹介されています。現職が多忙な方も<strong>夜間・土日のオンライン面談</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められる事例も少なくありません。
+        実務経験 + 認定資格 + アーキテクチャ設計力の 3 軸が転職成否を決める一般的とされています。JILPT・IPA・厚生労働省等の公的出典と公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>クラウドエンジニア 3 種類 + 必須スキル整理</li>
+        <li>AWS/GCP/Azure 違いと推奨認定資格</li>
+        <li>経験年数別 年収帯 + 読者別判断分岐</li>
+        <li>JILPT・IPA・厚労省 + 各社公式 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 結論 + 読者別判断分岐 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と読者別 判断分岐</h2>
+      <p class="section-lede">
+        クラウドエンジニアは AWS/GCP/Azure 需要急増で年収 600-1,500 万円帯の求人が活発とされています。
+        実務経験 + 認定資格 + アーキテクチャ設計力の 3 軸が転職成否を決める一般的が一般的です。読者層により最適な判断軸は異なります。
+      </p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">未経験 (実務 0-2 年)</span>
+          <h4>AWS SAA + ポートフォリオ形成</h4>
+          <p>AWS SAA + 個人プロジェクト Terraform 公開でポートフォリオ形成。年収帯 350-500 万から開始する事例が公開求人で観察されます。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">インフラ経験者 (実務 3-5 年)</span>
+          <h4>クラウドアーキテクト枠への移行</h4>
+          <p>既存スキル (Linux/Network) + AWS SAP/Azure AZ-305 取得でクラウドアーキテクト枠への移行が現実的。年収 +100-200 万事例が観察されます。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">SRE 志向 (実務 3-7 年)</span>
+          <h4>SaaS 企業 SRE 枠</h4>
+          <p>GCP PCA + Kubernetes + Datadog/Prometheus 運用経験で SaaS 企業 SRE 枠。年収 700-1,200 万帯の求人が観察されます。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">マネジメント志向</span>
+          <h4>技術 PM/EM・コンサル枠</h4>
+          <p>クラウド戦略策定 + チームリード経験で技術 PM/EM 枠。コンサル (Accenture/Deloitte) 等への移行事例も観察されます。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener">JILPT 報告書 No.229 (2024)</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener">IPA IT 人材白書 2024 (クラウド人材需給含む)</a> + <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/118" target="_blank" rel="noopener">厚労省 job tag「IT インフラ・クラウド」</a> + AWS/GCP/Microsoft 各社公開認定資格情報 + 各転職エージェント公開求人情報サンプル (2026 年 5 月時点) を整理した一般的傾向であり、断定的事実ではありません。個別状況により大きく異なります。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>読者別の判断を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 3種類 + 必須スキル + クラウド比較 ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">クラウドエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>の大幅アップが見込めるクラウドエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        エンジニア採用市場の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談 + リモート対応</strong>で無理なく転職活動を進められる体制が整っているとされ、クラウドエンジニア 600～1,500 万円 (AWS/GCP/Azure)のレンジで具体的なキャリア設計が可能と言われます。
+        AWS Solutions Architect + Linux/ネットワーク + DX 基盤は、DX 推進市場における技術人材の市場価値を押し上げる重要な実績として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">クラウドエンジニア 3 種類と必須スキル</h2>
+      <p class="section-lede">クラウドエンジニアは役割により 3 種類に分かれ、技術スキルに加えて担当領域に応じた専門性が評価されるのケースが多く見られます。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>クラウドエンジニア 3 種類</h3>
+          <p><strong>クラウドアーキテクト</strong>: システム全体設計・ベストプラクティス策定<br /><strong>クラウドインフラエンジニア</strong>: IaC (Terraform/CloudFormation) + 運用<br /><strong>クラウドソリューションエンジニア</strong>: 顧客課題解決・PoC・移行支援</p>
+        </div>
+        <div class="card">
+          <h3>必須技術スキル (汎用)</h3>
+          <p>AWS/GCP/Azure いずれか中心 + 1 つ補完的習得 (複数クラウド経験者の年収帯が単一を上回る傾向) / IaC (Terraform/Pulumi/CDK) / コンテナ (Docker/Kubernetes/ECS) / CI/CD (GitHub Actions/CircleCI/Cloud Build) / 監視 (Datadog/CloudWatch/Prometheus) / セキュリティ (IAM/Zero Trust/SOC2/ISO27001)</p>
+        </div>
+        <div class="card">
+          <h3>推奨認定資格 (公式出典)</h3>
+          <p><a href="https://aws.amazon.com/jp/certification/certified-solutions-architect-professional/" target="_blank" rel="noopener">AWS Solutions Architect Professional (SAP)</a> (実務 2 年以上推奨) / <a href="https://cloud.google.com/learn/certification/cloud-architect" target="_blank" rel="noopener">GCP Professional Cloud Architect (PCA)</a> / <a href="https://learn.microsoft.com/ja-jp/certifications/azure-solutions-architect/" target="_blank" rel="noopener">Azure Solutions Architect Expert (AZ-305)</a>。資格は必須ではなく面接通過率向上・スキル証明として有効。実務経験を重視する企業も多数。</p>
+        </div>
+      </div>
+
+      <div class="compare-wrap">
+        <table class="compare" aria-label="AWS/GCP/Azure 違い比較">
+          <thead><tr><th>クラウド</th><th>国内市場特性</th><th>主な業界</th><th>推奨資格</th></tr></thead>
+          <tbody>
+            <tr><td>AWS</td><td>国内案件最多・汎用性高</td><td>SaaS / Web / 大手 IT</td><td>SAA → SAP</td></tr>
+            <tr><td>GCP</td><td>ML/BigData/データ系強</td><td>広告/メディア/AI スタートアップ</td><td>PCA</td></tr>
+            <tr><td>Azure</td><td>大企業/エンタープライズ系</td><td>SI / 製造 / 金融</td><td>AZ-104 → AZ-305</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 公開情報整理・一般的傾向。国内市場特性・業界傾向は時点・対象母集団により変動します。</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 年収帯 + 反例 ============ -->
+  <section class="lp-section"><h2>クラウドエンジニア転職の基礎：市場の需要と求められるスキルセット</h2><p>クラウドエンジニアとは、Amazon Web Services (AWS)、Google Cloud Platform (GCP)、Microsoft Azureといったクラウドコンピューティング環境の設計、構築、運用、保守を担う技術者の総称です。<br>企業のデジタルトランスフォーメーション（DX）推進に伴い、従来のオンプレミス環境からクラウドへの移行が加速しており、その専門家であるクラウドエンジニアの需要は年々高まっているとされます。<br>情報処理推進機構（IPA）が発行する「IT人材白書」においても、IT基盤のクラウド移行やデータ活用の重要性が指摘されており、市場の成長性がうかがえます。<br>クラウドエンジニアに求められる基礎スキルとしては、主要なクラウドサービス（AWS/GCP/Azureのいずれか）に関する知識はもちろん、サーバーOS（Linux/Windows）、ネットワーク（TCP/IP）、セキュリティに関する基本的な理解が不可欠と一般に考えられています。</p></section>
+
+  <!-- ============ SECTION 04 業界別需要 + 転職戦略 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">業界別 需要動向と転職戦略</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>業界別 需要動向</h3>
+          <p><strong>SaaS スタートアップ</strong>: クラウドネイティブ前提・年収 + RSU<br /><strong>Web 自社開発</strong>: 既存システムのクラウド化推進<br /><strong>大手 IT / SI</strong>: 大企業のクラウド移行プロジェクト<br /><strong>外資 IT (AWS/GCP/Microsoft)</strong>: 自社プラットフォーム開発<br /><strong>コンサル (Accenture/Deloitte 等)</strong>: 顧客向けクラウド戦略策定</p>
+        </div>
+        <div class="card">
+          <h3>転職戦略 5 ステップ</h3>
+          <p>① 実務経験 + 認定資格でスキル証明<br />② GitHub にインフラ as Code (Terraform 等) 公開<br />③ クラウド特化エージェント + スカウト型併用<br />④ カジュアル面談で複数社比較<br />⑤ 年収交渉では市場価値 + 実績を数値で示す</p>
+        </div>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>キャリアパス別・クラウドエンジニア転職の具体的戦略</h2><p>クラウドエンジニアへの転職戦略は、これまでの経験によって異なります。<br>例えば、IT業界未経験者の場合は、まずAWSクラウドプラクティショナーやAZ-900といった入門資格の取得を目指し、基礎知識を体系的に学ぶことが推奨されます。<br>並行して、個人でWebサイトをクラウド上に構築してみるなど、ポートフォリオを作成することで学習意欲と技術力を示すことができます。<br>一方、オンプレミスのインフラ運用経験者は、その知識を大きな強みとして活かせます。<br>既存のネットワークやサーバーの知識をクラウド環境の概念に置き換え、AWS認定ソリューションアーキテクト – アソシエイト（SAA）のような中級資格を取得することで、即戦力としてのアピールが期待できます。<br>厚生労働省の職業情報提供サイト「jobtag」でも、クラウドエンジニアの仕事内容や求められるスキルが公開されており、自身の経験と照らし合わせてキャリアプランを具体化する際の参考になります。</p><ul><li><strong>未経験者の場合:</strong> 入門資格の取得とポートフォリオ作成で基礎力を証明する戦略が有効とされます。</li><li><strong>インフラ経験者の場合:</strong> 既存スキルを活かし、クラウドへの移行案件で価値を発揮できる点をアピールすることが期待されます。</li><li><strong>SRE志向の場合:</strong> IaC（Infrastructure as Code）ツール（Terraform等）やコンテナ技術（Docker/Kubernetes）のスキルを磨くことで、より専門性の高いポジションを目指せる可能性があります。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>クラウドエンジニア転職 (AWS/Azure/GCP) で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+185万円、最大+350万円の事例も）</li><li>AWS/Azure/GCP特化、専門コンサルタントが担当</li><li>全体の8割以上が、一般には出回らない非公開・限定求人</li><li>在職中でも安心の夜間・土日オンライン相談対応</li><li>納得いくまでサポート、内定後の辞退も可能</li></ul></div></section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer-tenshoku/">DevOps / SRE エンジニアの転職完全ガイド｜CI/CD・SRE・クラウド経験別の市場価値とキャリアパス｜TechGo (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

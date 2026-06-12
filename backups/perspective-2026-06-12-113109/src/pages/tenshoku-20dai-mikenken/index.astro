@@ -1,0 +1,229 @@
+---
+/**
+ * 転職 20代 未経験 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 8,100 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-tenshoku-20dai-mikenken-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '20代 未経験からの転職完全ガイド｜異業種・職種転換の判断軸と成功パターン（2026年5月時点・公開情報整理・PR）';
+const description = '20代未経験から異業種・職種転換を検討中の方向け。第二新卒・既卒・社会人経験者別の判断軸 + 成功パターン + 年収目安を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '20代 未経験 転職ガイド' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': '20代 未経験 転職ガイド', 'item': 'https://tenshoku-compare-info.pages.dev/tenshoku-20dai-mikenken/' },
+  ],
+};
+const faq = [
+  { q: '20代で全くの未経験ですが、本当に異業種・異職種へ転職できるのでしょうか？', a: 'はい、可能性は十分にあります。多くの企業が20代の若手人材に対しては、現時点でのスキルよりも将来性や学習意欲を重視する「ポテンシャル採用」を積極的に行っているとされます。厚生労働省の調査でも若年層の転職は活発であり、適切な準備をすれば未経験からのキャリアチェンジは現実的な選択肢と言えるでしょう。' },
+  { q: '未経験の職種に転職すると、年収は下がってしまうことが多いですか？', a: '一時的に年収が下がる可能性はありますが、必ずしもそうとは限りません。例えば、成長産業であるIT分野など、未経験者でも需要が高い職種では、入社後の活躍次第で早期の年収アップが期待できます。労働政策研究・研修機構(JILPT)の調査でも、転職後の賃金変動は多様であり、長期的なキャリアプランで判断することが重要とされます。' },
+  { q: '未経験から挑戦しやすい職種には、具体的にどのようなものがありますか？', a: '一般的に、営業職、販売・サービス職、事務職、ITエンジニアなどが挙げられます。特にIT分野は、情報処理推進機構(IPA)の報告にもある通り人材需要が高く、研修制度を充実させて未経験者を採用する企業が増加傾向にあるとされます。ご自身の興味や適性に合わせて、まずは情報収集から始めることをお勧めします。' },
+  { q: '未経験からの転職活動で、特に注意すべき点は何ですか？', a: '「なぜこの業界・職種なのか」という志望動機を明確にすることが重要です。未経験の場合、熱意や学習意欲が評価の大きなポイントとなります。また、職業安定法に基づき運営されるハローワークや民間の転職エージェントを活用し、客観的なアドバイスを得ることも有効です。独力で進めるだけでなく、専門家の視点を取り入れることが成功の鍵とされます。' },
+  { q: '第二新卒と20代後半の社会人経験者とでは、未経験転職の進め方に違いはありますか？', a: 'はい、アピールすべきポイントが異なります。第二新卒は柔軟性や吸収力といったポテンシャルが重視される一方、20代後半では前職で培った基本的なビジネススキルや課題解決能力といった「ポータブルスキル」をどう活かせるかを具体的に示すことが求められます。ご自身の状況に合わせた戦略を立てることが大切です。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">20 代 未経験 転職 / 異業種・職種転換ガイド</span>
+      <h1 id="fv-h1">
+        20 代 <span class="accent">未経験からの転職</span>完全ガイド<br />
+        異業種・職種転換の判断軸と成功パターン
+      </h1>
+      <p class="lede">
+        20 代未経験からの異業種・職種転換はポテンシャル採用枠が広い 20 代の強みを活かせる時期とされています。第二新卒 (新卒 3 年以内) は特に転職市場での需要が高い傾向。但し基礎学習 + 業界研究 + 適切なエージェント活用が成功率を左右するとされています。
+      </p>
+      <ul class="fv-bullets">
+        <li>読者属性別 (第二新卒 / 既卒 / 社会人経験者) の判断分岐</li>
+        <li>20 代未経験転職の判断軸 5 つを体系化</li>
+        <li>未経験歓迎枠が多い業界・職種 + 年収目安を提示</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 読者別 判断分岐 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">読者別 判断分岐 (公開情報整理)</h2>
+      <p class="section-lede">20 代未経験は読者属性により最適な判断軸が異なります。以下 4 区分で整理します。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">第二新卒 (22-25 歳)</span>
+          <h4>ポテンシャル採用枠が最も広い層</h4>
+          <p>年収 300-450 万円帯の求人が観察。マイナビジョブ 20's / リクルートエージェント等の第二新卒特化サービス推奨。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">既卒 (24-27 歳)</span>
+          <h4>第二新卒同等枠 + 既卒特化求人</h4>
+          <p>ハローワーク + ジェイック等の公的サービス併用が推奨される傾向。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">社会人経験者 (25-29 歳)</span>
+          <h4>前職経験 + ポータブルスキル活用</h4>
+          <p>年収維持 + 業界転換型 or 年収減 + キャリアチェンジ型の選択肢あり。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">独学完了者</span>
+          <h4>即戦力候補</h4>
+          <p>プログラミング学習 + ポートフォリオ作成済なら年収 350-500 万円帯の求人が観察される傾向。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値は 2026 年 5 月時点の一般論であり断定的事実ではありません。① <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener">JILPT 報告書 No.229 (2024・若年層分析)</a> ② <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener">IPA IT 人材白書 2024</a> ③ <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener">厚労省 job tag「未経験職種転換」</a> ④ 各転職エージェント公開求人サンプル (2026 年 5 月・首都圏中心) を整理。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>読者別分岐を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 判断軸 + 歓迎枠 ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">20 代未経験転職転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める20 代未経験転職転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        20 代未経験転職領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">判断軸 5 つと未経験歓迎枠が多い業界・職種</h2>
+      <p class="section-lede">20 代未経験転職の判断軸 + 未経験歓迎枠が多い業界・職種を整理します。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>20 代未経験転職の判断軸 5 つ</h3>
+          <p>① 動機の明確化 (なぜ転職・なぜこの業界を言語化) / ② 業界研究 (異業種転換時は業界構造・職種役割・年収帯の理解必須) / ③ スキル棚卸し (前職経験 + ポータブルスキルの整理) / ④ 基礎学習 (IT なら独学 + プログラミングスクール検討) / ⑤ ライフプラン (結婚・家族計画・住宅購入のタイミング考慮)</p>
+        </div>
+        <div class="card">
+          <h3>未経験歓迎枠が多い業界・職種 (公開求人サンプル整理)</h3>
+          <p>IT エンジニア (バックエンド/フロントエンド/インフラ・年収 300-500 万円) / Web マーケター (SNS/SEO/広告・年収 300-450 万円) / 営業 (法人/個人/IT セールス・年収 300-500 万円 + インセンティブ) / 事務職 (一般/経理/営業事務・年収 280-400 万円) / カスタマーサクセス・サポート (SaaS 中心・年収 300-450 万円)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 年収目安 ============ -->
+  <section class="lp-section"><h2>20代・未経験からの転職｜市場価値の基本</h2><p>20代、特に未経験からの転職活動において、自身の「市場価値」を正しく理解することは重要な第一歩です。<br>企業が20代の未経験者を採用する際、即戦力となる専門スキル以上に、将来性や学習意欲、人柄といった「ポテンシャル」を重視する傾向が強いと一般にされます。<br>これは、新しい環境への適応力や、企業の文化に染まりやすい柔軟性を高く評価しているためです。<br>厚生労働省が公表する「若年者雇用実態調査」などを見ても、企業が若年者の採用で重視する項目として「職業意識・勤労意欲・チャレンジ精神」が常に上位に挙げられています。<br>これまでの経験が応募する職種と直接関連しない場合でも、コミュニケーション能力や課題解決能力といった「ポータブルスキル」は評価の対象となり得ます。<br>自身の経験を棚卸しし、どのスキルが次の職場で活かせるかを言語化することが、市場価値を高める上で不可欠と言えるでしょう。</p></section>
+
+  <!-- ============ SECTION 04 進め方 + 反例 + まとめ ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">転職活動の進め方と転職しない選択肢</h2>
+      <p class="section-lede">転職活動の進め方 (準備期 → エージェント登録 → 応募・選考 → 内定交渉 → 退職引き継ぎ) を整理しつつ、転職しない選択肢も並行比較が推奨されます。</p>
+      <div class="counter-box">
+        <h3>📌 反例 (転職しない選択肢のメリット・公開情報整理)</h3>
+        <div class="row"><b>現職での昇進</b><span>同社内での社内異動・昇進ルートが明確な場合は転職リスクなしで年収アップ可能</span></div>
+        <div class="row"><b>副業・スキル獲得</b><span>現職継続 + 副業 (Web マーケ / プログラミング等) でスキル蓄積</span></div>
+        <div class="row"><b>大学院・専門学校進学</b><span>中長期的キャリアチェンジの基盤形成</span></div>
+        <div class="row"><b>フリーランス準備</b><span>現職で実績作り + 副業案件でフリーランス独立準備</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">※ 進め方: ① 準備期 (3-6 ヶ月前・自己分析 + 業界研究 + 基礎学習) ② エージェント登録 (第二新卒特化 + 大手総合並行) ③ 応募・選考期 (2-3 ヶ月) ④ 内定・条件交渉 (複数内定で比較) ⑤ 退職・引き継ぎ (1-2 ヶ月)。<br /><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。転職は手段の一つ・現職継続・副業・進学等と並行比較検討が推奨されます。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>異業種・職種転換を成功させる具体的ステップ</h2><p>20代未経験からの転職を成功に導くためには、計画的なステップを踏むことが推奨されます。<br>まず「自己分析」で自身の強み、興味、価値観を明確にし、どのような働き方をしたいのかを具体化します。<br>次に「業界・職種研究」を行い、成長性や将来性、求められるスキルセットを調査します。<br>この際、労働政策研究・研修機構(JILPT)の調査報告書なども参考に、客観的な情報を得ることが有効です。<br>情報収集の段階では、ハローワークのような公的機関と、専門性の高い民間転職エージェントを併用することで、多角的な視点から求人を探すことが可能になります。<br>応募書類の作成や面接対策では、未経験であることを前提に「なぜこの仕事に挑戦したいのか」という熱意と、入社後の成長意欲を具体的に伝えることが重要です。<br>前職での経験から得た学びを、新しい職場でどう活かせるかを論理的に説明することで、採用担当者に好印象を与えることが期待されます。</p><ul><li><strong>ステップ1：自己分析とキャリアプランの明確化</strong><br>過去の経験を振り返り、自身の強みや価値観を整理します。その上で、3年後、5年後のキャリアイメージを描き、転職の軸を定めます。</li><li><strong>ステップ2：多角的な情報収集</strong><br>公的機関（ハローワーク等）や民間サービス、企業のウェブサイトなど、複数の情報源を活用し、業界の動向や具体的な仕事内容への理解を深めます。</li><li><strong>ステップ3：ポテンシャルを伝える選考対策</strong><br>志望動機では、学習意欲と貢献意欲を具体的に示します。これまでの経験で培ったポータブルスキルが、未経験の職務でどう活かせるかをアピールします。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 転職エージェント等を検討するメリット (★544 ②):</strong><ul><li>専門のキャリアアドバイザーから、非公開求人の紹介や業界情報に関する客観的な助言を得られるため、情報収集の<strong>時間短縮</strong>が期待できます。</li><li>履歴書・職務経歴書の添削や面接対策など、選考通過率を高めるためのサポートを原則無料で受けられるため、<strong>コストを抑えて</strong>効率的に活動を進められる可能性があります。</li><li>職業安定法などの関連法令を遵守した事業者からサポートを受けることで、労働市場の動向に基づいた現実的なキャリアプランを相談でき、<strong>安心して</strong>転職活動に臨める可能性が高まります。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-tenshoku-20dai/">20代エンジニア転職の進め方ガイド｜キャリア初期の選択肢整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/techgo-it-mikenken-tenshoku/">IT 未経験からの転職の整理｜事前準備とロードマップ (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

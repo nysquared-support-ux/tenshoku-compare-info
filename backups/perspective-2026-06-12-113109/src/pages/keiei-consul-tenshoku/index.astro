@@ -1,0 +1,217 @@
+---
+/**
+ * keiei-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 経営コンサル 転職 (sv 推定 600-900・経営系全方位)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '経営コンサル 転職 完全ガイド｜経営コンサルタントの仕事・年収・狙えるファーム・選考対策｜MyVision (PR)';
+const description = '経営コンサルタントへの転職について、経営コンサルの仕事内容・案件タイプ・年収レンジ・狙えるファーム (戦略系 / 総合系 / 独立系)・選考対策を公開情報ベースで全方位整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '経営コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '未経験から経営コンサルタントへの転職は可能ですか？', a: 'はい、可能性はあります。ただし、論理的思考力や問題解決能力など、ポテンシャルが重視される傾向にあります。厚生労働省が推進する「ジョブ・カード制度」などを活用し、自身のキャリアを棚卸しして強みを明確にすることが、未経験からの転職成功に向けた第一歩とされます。' },
+  { q: '経営コンサルタントの平均年収はどのくらいですか？', a: '公開情報によれば、経営コンサルタントの年収は経験や役職、ファームの種類（戦略系、総合系など）により大きく異なりますが、一般的に高い水準にあるとされます。例えば、20代で600万～1,000万円、30代のマネージャークラスでは1,500万円以上になるケースも報告されています。詳しくは各社の募集要項をご確認ください。' },
+  { q: '戦略系と総合系コンサルティングファームの主な違いは何ですか？', a: '戦略系ファームは主に企業の経営層に対し、全社戦略や事業戦略といった上流工程の課題解決を支援します。一方、総合系ファームは戦略立案から実行支援、IT導入、業務改善まで幅広い領域をカバーするのが特徴です。ご自身のキャリアプランに合ったファーム選びが重要とされます。' },
+  { q: '経営コンサルタントへの転職活動で特に注意すべき点は何ですか？', a: '独自の選考プロセスである「ケース面接」への対策が不可欠です。これは与えられた課題に対し、制限時間内に解決策を論理的に導き出す能力を測るものです。また、労働基準法で定められた労働条件などを確認し、激務とされる業界の実態を理解した上で応募することが推奨されます。' },
+  { q: '専門の転職エージェントを活用するメリットは何ですか？', a: '経営コンサル業界に特化したエージェントは、非公開求人の紹介や、各ファームの特色に合わせた選考対策のサポートが期待できます。公共職業安定所（ハローワーク）のサービスと併用し、多角的な情報収集を行うことで、より納得のいく転職活動につながる可能性があります。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">経営コンサル / 全方位完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">経営コンサル</span> 転職 完全ガイド<br />経営コンサルタントの仕事・年収・狙えるファーム・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 経営コンサルタントは<strong>企業の経営課題 (戦略 / 組織 / 業務 / 財務) を分析し解決策を立案・実行支援する仕事</strong>とされ、戦略系 / 総合系 / 独立系のファームが主要プレイヤーとされています。本記事では経営コンサルの仕事内容 + 案件タイプ + 年収レンジ + 狙えるファーム + 選考対策を公開情報ベースで全方位整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>経営コンサルタントの 5 つの案件タイプ</li>
+        <li>年収レンジ (500-3,000万円帯) + キャリアパス</li>
+        <li>狙えるファーム (戦略 / 総合 / 独立系)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_keiei">
+          <span>経営コンサル挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">経営コンサルタントの 5 つの案件タイプ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">タイプ1</span><h4>経営戦略立案</h4><p>全社戦略 / 事業戦略 / 成長戦略 / M&A 戦略等の上流案件。経営層への直接アプローチが中心で、戦略系ファームが得意とする領域が一般的です。</p></article>
+        <article class="branch"><span class="tag">タイプ2</span><h4>業務変革 (BPR / DX)</h4><p>業務プロセス改革 + DX 推進 + コスト削減案件。総合系ファームが得意とする領域で、実装まで一気通貫で支援する案件構成のケースが多く見られます。</p></article>
+        <article class="branch"><span class="tag">タイプ3</span><h4>組織・人事変革</h4><p>組織設計 + 人材戦略 + HR 変革 + 企業文化変革案件。People Advisory 系の専門部門が担当する領域と公表されています。</p></article>
+        <article class="branch"><span class="tag">タイプ4</span><h4>財務・M&A 支援</h4><p>M&A 戦略 + 財務 DD + 事業再生 + バリュエーション案件。FAS 系ファームが得意とする領域と示されています。詳細は <a href="/ma-consul-tenshoku/" class="underline">M&A コンサル 転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">タイプ5</span><h4>新規事業・イノベーション</h4><p>新規事業立ち上げ + 事業開発 + イノベーション創出案件。デジタル組織 (BCG X 等) が担当する領域が知られています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_keiei">
+          <span>適合する案件タイプを MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">経営コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める経営コンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        経営コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">経営コンサルで狙えるファーム比較</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="経営コンサル ファーム比較">
+          <thead><tr><th>ファーム種別</th><th>得意領域</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (BCG / McK / Bain)</td><td>経営戦略 / 全社変革</td><td>800-3,500万円</td><td>高学歴 + ケース強者</td></tr>
+            <tr><td>総合系 (アクセンチュア / PwC / ベイカレント)</td><td>業務変革 / DX / 一気通貫</td><td>500-2,500万円</td><td>IT / 業務系 / 大手出身</td></tr>
+            <tr><td>BIG4 系 (Deloitte / EY / KPMG)</td><td>戦略 + 監査連携 + リスク</td><td>700-2,500万円</td><td>会計 / 金融 / 大手出身</td></tr>
+            <tr><td>独立系 (経営共創基盤等)</td><td>ハンズオン経営支援 / 事業再生</td><td>700-2,500万円</td><td>経営経験者 / 専門特化型</td></tr>
+            <tr><td>シンクタンク系 (野村総研 / 三菱総研)</td><td>政策 / 公共 / 調査研究</td><td>500-2,000万円</td><td>官公庁 / 公共出身</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_keiei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>経営コンサルタントへの転職：その基礎知識</h2><p>経営コンサルタントとは、企業の経営課題を明らかにし、その解決策を提案・実行支援する専門職です。<br>企業の成長戦略、新規事業立案、業務プロセス改善、M&Aなど、扱うテーマは多岐にわたります。<br>企業が外部のコンサルタントに依頼する背景には、社内にはない専門知識や客観的な視点を求める意図があるとされます。<br>転職市場において、この職種は高い専門性と論理的思考力が求められる一方で、多様な業界の課題に触れることで得られる成長機会も大きいと評価されています。<br>厚生労働省の職業情報提供サイト(日本版O-NET)でも、経営コンサルタントは専門的・技術的職業として分類されており、高度な分析力やコミュニケーション能力が必要とされる職務であることが示されています。<br>未経験からの挑戦も可能ですが、これまでの職務経験で培った課題解決能力やリーダーシップ経験を、いかに具体的にアピールできるかが重要になると一般に考えられています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>経営コンサル転職を成功に導く具体的ステップ</h2><p>経営コンサルタントへの転職を成功させるためには、計画的かつ戦略的な準備が求められます。<br>公開情報をもとに、一般的な選考プロセスと対策を整理します。<br>まず、自身のキャリアを振り返り、コンサルタントとして活かせる強みやスキルを洗い出す「自己分析」から始めます。<br>次に、戦略系・総合系・独立系といったファームの種類や各社の特徴を研究し、志望先を絞り込みます。<br>書類選考では、これまでの実績を具体的な数値で示し、課題解決能力をアピールすることが重要です。<br>そして、最大の関門とされるのが「ケース面接」です。<br>これは、特定の課題に対して論理的な解決策を提示する能力を測るもので、事前のトレーニングが不可欠とされます。<br>これらのステップを着実に進めることが、内定獲得の可能性を高めると考えられます。<br>なお、転職活動においては、労働契約法に定められた労働条件の明示義務など、自身の権利についても正しく理解しておくことが望ましいでしょう。</p><ul><li><strong>自己分析とスキルの棚卸し:</strong> これまでの経験からポータブルスキルを特定する。</li><li><strong>情報収集とファーム選定:</strong> 各ファームの強みやカルチャーを比較検討する。</li><li><strong>書類・面接対策:</strong> 職務経歴書を論理的に構成し、ケース面接の模擬演習を重ねる。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>コンサル業界の選考プロセスに特化した実践的対策</li><li>大手ファームから専門ブティックまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">経営課題解決のプロフェッショナルへ挑戦する</h2>
+      <p>経営コンサルの 5 案件タイプ + 狙えるファーム理解で、最適な挑戦先を見極める。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_keiei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_keiei">
+          <span>経営コンサル挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢とされています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングが一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

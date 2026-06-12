@@ -1,0 +1,234 @@
+---
+/**
+ * consul-gaishikei-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 外資系コンサル 転職 (sv 推定 1,000-1,800・比較検討層)
+ * 検証①: /lp-factory 改善手法 / ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)';
+const description = '外資系コンサルへの転職を目指す人向けに、戦略系 (MBB)・外資系総合 (BIG4等)・外資系IT系の特徴と違い、選考プロセス・年収レンジ・英語要件を整理。外資系コンサル特有の選考対策と無料カウンセリング活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '外資系コンサル転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '現職が忙しく、転職活動の時間が取れるか不安です。', a: 'ご安心ください。多くの方が在職中に活動されています。当サービスでは、平日夜間や土日のオンライン面談に対応しており、企業との面接日程も柔軟に調整します。応募書類の準備や情報収集も効率的に進められるようサポートしますので、ご自身のペースで無理なく活動いただけます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul gaishikei tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-gaishikei-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">外資系コンサル junior〜senior パートナー候補 両軸 | MBB/BIG4 brand 60-100年</span>
+      <h1 id="fv-h1"><span class="accent">外資系コンサル</span>転職ガイド<br />主要ファームの特徴・選考・年収・英語要件</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 外資系コンサルは<strong>戦略系 (MBB)・外資系総合系・外資系IT系で選考難易度・年収・英語要件が大きく異なる</strong>とされ、自分に合うファーム種別の見極めが転職成功の鍵とされています。本記事では外資系コンサルの全体像と選考対策を整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>外資系コンサル 3 種別の特徴と違い</li>
+        <li>ファーム別の選考難易度・年収レンジの傾向</li>
+        <li>英語要件の実態とポジションによる差</li>
+        <li>無料カウンセリングで外資系の市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_gaishikei">
+          <span>外資系コンサルの市場価値を無料カウンセリングで確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">外資系コンサル 3 種別の特徴マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・各ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>外資系コンサルは大きく3種別に分かれ、それぞれ選考難易度・案件特性・英語要件が異なるとされています。下表は一般的な傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="外資系コンサル3種別の特徴">
+          <thead><tr><th>種別</th><th>主なファーム</th><th>選考難易度傾向</th><th>英語要件傾向</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (MBB)</td><td>McKinsey・BCG・Bain</td><td>&#11088; 最難関</td><td>高 (グローバル案件多)</td></tr>
+            <tr><td>外資系総合・会計系</td><td>Deloitte・PwC・EY・KPMG・アクセンチュア</td><td>中-高 (門戸広め)</td><td>中 (案件次第)</td></tr>
+            <tr><td>外資系IT/DX系</td><td>IBM ほか</td><td>中-高</td><td>中 (案件次第)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_gaishikei">
+          <span>自分に合う外資系ファームを MyVision 公式の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">外資系コンサルで実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        外資系コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">外資系コンサルへの 4 つの転職パターン</h2>
+      <p class="section-lede">外資系コンサルへの主な転職パターンを4タイプで整理します。前職経験 + 志向で適合する種別が変わるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パターン1</span><h4>事業会社 → 外資系総合系</h4><p>事業会社の経営企画・IT・専門部門出身者が、外資系総合系コンサルへ転身するパターン。プロジェクト経験 + 専門性が評価される傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">パターン2</span><h4>日系コンサル → 外資系コンサル</h4><p>日系ファームでコンサル経験を積んだ人が、外資系へ転身するパターン。コンサル経験が評価されやすく、文化の違いの理解が成功の鍵とされています。</p></article>
+        <article class="branch"><span class="tag">パターン3</span><h4>金融・専門職 → 外資系戦略/FAS系</h4><p>投資銀行・会計士・金融専門職が、外資系戦略系・FAS系へ転身するパターン。財務・分析の専門性が活きる傾向にあるとされています。詳細は <a href="/finance-kara-consul/" class="underline">金融×コンサル</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パターン4</span><h4>IT専門人材 → 外資系IT/DX系</h4><p>SIer・IT専門職が外資系IT/DX系コンサルへ転身するパターン。技術理解 + プロジェクト経験が強みとなる傾向にあるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_gaishikei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>外資系コンサル転職の基礎知識：3つの分類と求められる資質</h2><p>外資系コンサルティングファームとは、海外に本社を置く企業の日本法人で、企業の経営課題解決を支援する専門家集団を指します。<br>転職市場において、これらのファームは主に「戦略系」「総合系」「IT系」の3つに大別されるとされます。<br>戦略系はMBB（マッキンゼー、BCG、ベイン）に代表され、企業の全社戦略など最上流の課題を扱います。<br>総合系はBIG4（デロイト、PwC、KPMG、EY）などが含まれ、戦略から実行支援まで幅広いサービスを提供します。<br>IT系はアクセンチュアなどが有名で、IT戦略やシステム導入を軸にコンサルティングを行います。<br>厚生労働省が編纂する「職業分類表」においても、経営コンサルタントは専門的・技術的職業に分類され、高度な分析力と課題解決能力が求められる職種と定義されています。<br>外資系ファームへの転職では、これらに加えて、高いコミュニケーション能力、精神的な強さ、そしてビジネスレベルの英語力が共通して要求される傾向にあります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">外資系コンサルの年収・特徴傾向</h2>
+      <p class="section-lede">外資系コンサルの主なファーム種別を、年収レンジ・特徴で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的とされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="外資系コンサル種別別の傾向">
+          <thead><tr><th>種別</th><th>年収レンジ目安</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (MBB)</td><td>1,000-2,000万円超</td><td>最難関・成果主義・グローバル案件</td></tr>
+            <tr><td>外資系総合系 (アクセンチュア等)</td><td>700-1,500万円</td><td>幅広い案件・門戸が比較的広い</td></tr>
+            <tr><td>外資系会計系 (BIG4)</td><td>750-1,500万円</td><td>会計・財務・専門領域に強み</td></tr>
+            <tr><td>外資系IT/DX系</td><td>700-1,400万円</td><td>IT・DX案件・技術理解を重視</td></tr>
+            <tr><td>外資系FAS系</td><td>800-1,600万円</td><td>M&A・財務アドバイザリー</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>外資系コンサル転職の具体的プロセスと成功の鍵</h2><p>外資系コンサルへの転職プロセスは、一般的な企業とは異なる独自の流れと対策が求められます。<br>公開情報をもとに整理すると、選考は主に「書類選考」「筆記・Webテスト」「複数回の面接」で構成されます。<br>特に面接は、志望動機などを問う通常面接に加え、「ケース面接」が複数回行われるのが大きな特徴です。<br>これは、論理的思考力や問題解決能力を地頭レベルで測るためのもので、十分な対策が合否を分けるといわれます。<br>成功の鍵は、これらの特殊な選考形式への深い理解と、徹底した事前準備にあります。<br>個人の力だけで対策するのは難易度が高いため、多くの候補者はコンサル転職に特化したエージェントを活用します。<br>エージェントは、非公開求人の紹介だけでなく、各ファームの選考傾向に合わせた具体的なアドバイスや、ケース面接の模擬練習などを提供してくれる場合があります。<br>こうした専門的サポートを受けることが、内定獲得の可能性を高める上で重要とされます。<br>なお、採用選考においては、「労働施策総合推進法」に基づき、応募者の適性と能力が客観的に評価されることが基本となります。</p><ul><li>自己分析とキャリアプランの明確化：なぜコンサルなのか、何を実現したいのかを深く掘り下げる。</li><li>業界・企業研究：各ファームの強みやカルチャーを理解し、自身の志向との一致点を見つける。</li><li>ケース面接の反復練習：様々な問題パターンに触れ、思考の型を身につけ、第三者からの客観的フィードバックを得る。</li></ul><div class='career-catch-box'><h4>キャリア志向のあなたへ</h4><ul><li>内定後の辞退も可能</li><li>ご自身の市場価値を最大化</li><li>在職中の慎重な活動をサポート</li></ul></div><div class='benefit-summary'><h3>外資系コンサル転職で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの成功事例多数</li><li>外資系戦略・総合ファームへの豊富な紹介実績</li><li>業界出身者による専門的なキャリア相談</li><li>サービス利用者限定の非公開ハイクラス求人</li><li>応募書類の添削から面接対策まで徹底サポート</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職ガイド</h4><p>戦略系ファームの特徴と選考対策</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>戦略系・総合系・IT系・FAS系・公共系の特徴</p></a>
+        <a class="card-link" href="/consul-eigo/"><h4>コンサル英語ガイド</h4><p>コンサル転職の英語要件と備え</p></a>
+        <a class="card-link" href="/consul-tenshoku-nandido/"><h4>コンサル転職 難易度ガイド</h4><p>「難しい」とされる理由と現実的な突破法</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">外資系コンサルという選択肢を、ファーム種別から現実的に検討する</h2>
+      <p>外資系コンサルは種別で選考も年収も大きく異なります。MyVisionの無料カウンセリングで、外資系ファームの適合診断 + 選考対策 + 英語要件を30秒の会員登録で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_gaishikei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_gaishikei">
+          <span>外資系コンサルの市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-30dai/">30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

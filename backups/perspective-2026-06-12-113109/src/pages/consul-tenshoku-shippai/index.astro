@@ -1,0 +1,189 @@
+---
+/**
+ * consul-tenshoku-shippai LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル 転職 失敗 (sv 推定 600-900・不安解消型・★354 honest 必須)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 転職 失敗 完全ガイド｜5 大失敗パターンと回避する 5 つの行動｜MyVision (PR)';
+const description = 'コンサル転職で失敗する人の 5 大共通パターン (情報不足・ファーム選び・選考対策不足・入社後ミスマッチ・退職判断ミス) と、それぞれを回避する具体的行動を公開情報ベースで整理。元コンサル無料カウンセリングで失敗回避ロードマップを構築する方法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 転職 失敗' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '一度コンサル転職に失敗しており、次の挑戦に不安があります。それでも相談可能でしょうか？', a: 'もちろんです。むしろ、一度ご経験された方だからこそ、より精度の高いマッチングが可能です。前回の転職活動における課題や、入社後のミスマッチの要因を共に分析し、次のキャリアプランに活かすことが重要です。私たちは情報収集のみのご相談も歓迎しており、無理に応募を勧めることは一切ございません。まずは客観的な市場価値を知ることから始めてみませんか。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 失敗回避完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">転職 失敗</span> 完全ガイド<br />5 大失敗パターンと回避する 5 つの行動</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル転職で失敗する人には<strong>5 つの共通パターン</strong>があるとされています: (1) 情報不足 (2) ファーム選びミス (3) 選考対策不足 (4) 入社後ミスマッチ (5) 退職判断ミス。本記事ではそれぞれの詳細と回避する具体的行動を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>失敗パターン 5 タイプの具体的事例</li>
+        <li>失敗回避の 5 つの行動 (準備期間 3-6 ヶ月)</li>
+        <li>元コンサル伴走で品質が変わる 3 ポイント</li>
+        <li>入社後のリアル + ミスマッチ回避法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_shippai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_shippai">
+          <span>失敗回避ロードマップを無料カウンセリングで作る (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">失敗パターン 5 タイプ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター 転職トラブル相談</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>失敗1: 情報不足のまま応募</h4>
+        <p>ファームの実態・案件構成・カルチャー・年収レンジを十分に把握せずに応募し、面接で薄い志望動機を露呈してしまうパターン。情報収集を 1-2 週間しっかり行うことが必須とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>失敗2: ファーム選びのミスマッチ</h4>
+        <p>前職経験 + 志向と合わないファームに応募し、選考通過率が低下するパターン。5 区分 (戦略 / 総合 / FAS / IT / 公共) の特性を理解した上での選定が必要とされています。詳細は <a href="/consul-firm-hikaku/" class="underline">コンサル ファーム比較</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>失敗3: 選考対策不足 (ケース面接 / 志望動機)</h4>
+        <p>ケース面接は独学では到達しにくいレベルとされており、模擬面接 + 添削の伴走なしでは突破が困難です。志望動機も 7 つの落ちるパターンに該当しないよう論理構築が必要です。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a>・<a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>失敗4: 入社後の業務ミスマッチ</h4>
+        <p>「コンサルのカッコいいイメージ」と実際の業務 (資料作成 / 分析 / 議事録 / クライアント対応) のギャップで早期退職してしまうパターン。入社前の現役コンサル / OB ヒアリングが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>失敗5: 退職判断のミス (現職への戻れない後悔)</h4>
+        <p>現職への不満解消だけで転職判断し、コンサル入社後に「現職の方が良かった」と後悔するパターン。現職継続 + コンサル転職 + 他選択肢の3軸比較が必要とされています。</p>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_shippai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_shippai">
+          <span>失敗パターンに該当しないか MyVison 公式の無料診断で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル転職失敗回避で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+200-500万円</strong>のアップが見込めるコンサル転職失敗回避は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        慎重な転職活動の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、失敗回避転職で年収+200-400 万円安定アップのレンジで具体的なキャリア設計が可能と言われます。
+        失敗回避ノウハウ + ミスマッチ事例 + 適切エージェント選定は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">失敗回避の 5 つの行動</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">行動1</span><h4>準備期間 3-6 ヶ月の確保</h4><p>情報収集 → 職務経歴書 → ケース対策 → 応募 → 面接 → 内定 のフェーズに、合計 3-6 ヶ月の準備期間を確保することが基本とされています。短期決戦は失敗リスクを高めるとされています。</p></article>
+        <article class="branch"><span class="tag">行動2</span><h4>複数エージェントの無料カウンセリング</h4><p>1 社のみでなく 2-3 社のコンサル特化エージェントの無料カウンセリングを受け、市場価値 + 適合ファーム + 想定年収を多角的に診断することが推奨されます。</p></article>
+        <article class="branch"><span class="tag">行動3</span><h4>元コンサル伴走によるケース対策</h4><p>独学では到達しにくいケース面接 + 志望動機の品質を、元コンサルとの模擬面接 + 添削で引き上げる方法が業界で一般的とされています。</p></article>
+        <article class="branch"><span class="tag">行動4</span><h4>入社前の現役コンサル / OB ヒアリング</h4><p>面接通過後・内定承諾前に、現役コンサルや OB に業務実態を聞く機会を持つことで、入社後ミスマッチを大幅に減らせるとされています。</p></article>
+        <article class="branch"><span class="tag">行動5</span><h4>3 軸比較 (現職継続 / コンサル転職 / 他選択肢)</h4><p>現職への不満だけで判断せず、現職継続 + コンサル転職 + 他選択肢 (事業会社経営企画 / 他業界転職 / 独立等) の3軸で比較してから決断することが推奨されます。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_shippai_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル転職で失敗が起こる構造的背景</h2><p>コンサルティング業界への転職は、高い専門性と特殊な選考プロセスから、他の業界に比べてミスマッチによる失敗が起こりやすいとされます。<br>その背景には、求職者側が抱く華やかなイメージと、実際の激務や高い成果要求とのギャップが存在します。<br>また、ケース面接のような独自の選考手法は、対策が不十分だと本来の実力を発揮できずに終わる一因です。<br>労働契約法では労働契約は労使対等の立場で締結すべきとされていますが、情報格差があると実質的な対等性は揺らぎます。<br>こうした構造を理解し、適切な情報収集と準備を行うことが、失敗を避ける第一歩と言えるでしょう。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>転職失敗を回避するための具体的な行動計画</h2><p>コンサル転職の失敗を回避するには、体系的な準備が不可欠です。<br>まず、過去の職務経験を棚卸しし、自身の強みやキャリアの軸を明確にする自己分析から始めます。<br>厚生労働省が推進する「ジョブ・カード制度」なども、キャリアプランニングの参考になるでしょう。<br>次に、その軸に基づいて志望するファームを複数リストアップし、各社の特徴やカルチャーを徹底的に比較調査します。<br>最終段階として、元コンサルタントなどの専門家と模擬面接を重ね、客観的なフィードバックを得て思考のクセや弱点を修正していきます。<br>このプロセスを着実に実行することが、成功の確度を高めると期待されます。</p><ul><li>徹底した自己分析とキャリアゴールの言語化</li><li>公開情報と非公開情報を組み合わせた多角的な企業研究</li><li>第三者の視点を取り入れた客観的な選考対策</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>コンサル転職の失敗経験を活かす、5つの理由</h3><ul><li>平均年収アップ+280万円を目指せるデータに基づく交渉力</li><li>全体の8割以上を占める、独自の非公開・ハイクラス求人</li><li>現職に配慮した夜間・土日祝のオンラインキャリア相談</li><li>業界を熟知した専門コンサルタントによる徹底した伴走支援</li><li>ご納得いくまで検討可能、内定後の辞退も自由です</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">5 大失敗パターンを回避し、コンサル転職を成功させる</h2>
+      <p>準備期間 3-6 ヶ月 + 元コンサル伴走で、失敗回避の品質が大きく変わる。MyVisionの無料カウンセリングで、失敗回避ロードマップを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_shippai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_shippai">
+          <span>失敗回避ロードマップを無料カウンセリングで作る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

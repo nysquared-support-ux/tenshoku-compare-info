@@ -1,0 +1,247 @@
+---
+/**
+ * mckinsey-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: マッキンゼー 転職 (sv 推定 800-1,200・戦略最高峰)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'マッキンゼー 転職 完全ガイド｜McKinsey & Company の特性・年収・選考対策・アルムナイ｜MyVision (PR)';
+const description = 'マッキンゼー (McKinsey & Company) への転職について、世界最高峰の戦略コンサルファームの特性・年収レンジ (800-3,500万円帯)・選考プロセス (ケース面接最難度)・アルムナイネットワーク・キャリアパスを公開情報ベースで整理。元コンサル無料模擬面接サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'マッキンゼー 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談したら必ず応募しなければいけませんか？', a: 'いいえ、その必要は一切ありません。まずは情報収集だけでも歓迎です。弊社の目的は、あなたのキャリアにとって最善の選択肢を一緒に見つけることです。ご自身の市場価値や、マッキンゼーでどのようなキャリアが描けるかを知るだけでも構いません。十分に納得いただいた上で、応募に進むかどうかをご判断いただけますので、ご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">マッキンゼー / 世界最高峰戦略ファーム</span>
+      <h1 id="fv-h1"><span class="accent">マッキンゼー</span> 転職 完全ガイド<br />McKinsey & Company の特性・年収・選考対策・アルムナイ</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: マッキンゼー (McKinsey & Company) は<strong>1926年創業の世界の老舗ファーム・世界有数の規模の戦略コンサルファーム</strong>で、コンサル業界の最高峰として一般的に位置づけられています。選考は業界最難度ですが、卒業後のキャリア価値 + 年収 + アルムナイネットワークが業界で高水準とされるとされています。本記事ではマッキンゼーへの挑戦準備を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>マッキンゼーの 4 つの特性 (歴史 + 規模 + ネットワーク + 文化)</li>
+        <li>年収レンジ (800-3,500万円帯) + キャリアラダー</li>
+        <li>業界最難度ケース面接 + PEI の準備</li>
+        <li>アルムナイ卒業後の幅広いキャリア</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_mckinsey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_mckinsey">
+          <span>マッキンゼー挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはマッキンゼー公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">マッキンゼーの 4 つの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): McKinsey & Company 公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特性1</span><h4>業界老舗の歴史 (1926年創業)</h4><p>世界の老舗ファームの戦略コンサルファーム。100年近い歴史に裏打ちされた「The McKinsey Way」のメソドロジー + 業界ベストプラクティスが、最大の競争優位とされています。</p></article>
+        <article class="branch"><span class="tag">特性2</span><h4>世界有数の規模 + グローバルネットワーク</h4><p>40 カ国以上 + 130 オフィス以上を展開する世界有数の規模の戦略ファーム。グローバルプロジェクト機会 + 海外オフィス研修等で国際経験を積める環境が一般的です。</p></article>
+        <article class="branch"><span class="tag">特性3</span><h4>アルムナイ (卒業生) ネットワーク</h4><p>世界中の事業会社 CEO / 役員 / 起業家 / PE/VC パートナー等にマッキンゼー卒業生が在籍するアルムナイネットワーク。卒業後のキャリアパスが業界で高水準とされるに広い傾向とされています。</p></article>
+        <article class="branch"><span class="tag">特性4</span><h4>One Firm カルチャー</h4><p>世界中のオフィスが一つのファームとして連携する One Firm カルチャー。グローバル案件 + 国境を超えた知見共有が常態化しているのケースが多く見られます。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_mckinsey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_mckinsey">
+          <span>マッキンゼー最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">マッキンゼー転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるマッキンゼー転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        マッキンゼー領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">マッキンゼーの年収 + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="マッキンゼー 年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>Business Analyst</td><td>2-3 年</td><td>800-1,100万円</td><td>分析 / 仮説検証 / 資料作成</td></tr>
+            <tr><td>Associate</td><td>2-4 年</td><td>1,300-1,800万円</td><td>サブ案件リード / クライアント窓口</td></tr>
+            <tr><td>Engagement Manager</td><td>2-4 年</td><td>1,800-2,500万円</td><td>案件統括 / 提案リード</td></tr>
+            <tr><td>Associate Partner</td><td>2-4 年</td><td>2,500-3,200万円</td><td>領域責任 / 大型案件責任</td></tr>
+            <tr><td>Partner / Senior Partner</td><td>無期限</td><td>3,500万円+</td><td>クライアント / 経営 / グローバル戦略</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額はマッキンゼー公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_mckinsey_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>マッキンゼーへの転職で求められる基礎能力</h2><p>マッキンゼー・アンド・カンパニーへの転職で求められるのは、単なる学歴や職歴ではなく、極めて高度な問題解決能力とリーダーシップであると一般にされます。<br>同社はクライアントが抱える最も困難な経営課題に取り組むため、コンサルタントには物事の本質を素早く見抜き、構造化し、実行可能な解決策を導き出す能力が不可欠です。<br>具体的には、論理的思考力、仮説構築・検証能力、定量的分析スキル、そして多様なバックグラウンドを持つチームを牽引するリーダーシップが挙げられます。<br>これらの能力は、書類選考から複数回にわたるケース面接まで、選考プロセスの全体を通じて厳しく評価されるとされます。<br>なお、職業安定法では、公共職業安定所や職業紹介事業者は求職者に対し、その能力に適合する職業を紹介するよう努めるべきと定められており、転職エージェントもこうした能力要件のマッチングを支援しています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">マッキンゼー卒業後 — アルムナイのキャリアパス</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>事業会社 CEO / CXO</h4><p>マッキンゼー卒業生は事業会社の CEO / CSO / CFO / COO として登用されるケースが多い傾向とされています。グローバル企業 + スタートアップ + 老舗企業まで幅広いポジションが存在します。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>PE/VC パートナー</h4><p>プライベートエクイティ・ベンチャーキャピタル業界での投資判断 + バリュエーション + ポートフォリオ企業支援に活かせるスキルセット。アルムナイ多数と公表されています。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>起業 (連続起業家)</h4><p>マッキンゼー卒業後に起業する事例も多く、業界変革 + ディープテック + サステナビリティ等の領域でアルムナイが起業家として活躍すると示されています。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>グローバル企業役員 / 国際機関</h4><p>世界銀行 / IMF / OECD 等の国際機関、グローバル企業の役員ポジションへの転身も一般的とされ、世界規模のキャリア展開が可能が知られています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>マッキンゼー卒業後のキャリア価値は業界で高水準とされる。MyVisionの無料カウンセリングで、自分の市場価値 + 戦略系挑戦の道筋 + アルムナイ視点のキャリア設計を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_mckinsey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_mckinsey">
+          <span>マッキンゼー特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>マッキンゼーの選考プロセスと具体的な対策</h2><p>マッキンゼーの選考は、一般的に「書類選考」「オンラインテスト（Problem Solving Gameなど）」「複数回のケース面接」というステップで進むとされます。<br>各段階で候補者の能力が多角的に評価されるため、入念な準備が求められます。<br>特に最難関とされるケース面接は、単に正解を出すことよりも、課題に対してどのようにアプローチし、思考を深めていくかのプロセスが重視されます。<br>実際のビジネス課題に近いテーマについて、面接官とディスカッションをしながら解決策を練り上げていく形式が特徴です。<br>対策としては、以下の点が重要とされます。<br>厚生労働省が運営するポータルサイト「確かめよう労働条件」では、労働契約の基本が解説されており、転職活動における自身の権利を理解しておくことも大切です。</p><ul><li><strong>実績の構造化:</strong> 過去の職務経験を、どのような課題に対し、どう考え、行動し、どのような成果（定量的）を出したか、という観点で整理し、論理的に説明できるように準備します。</li><li><strong>思考の訓練:</strong> 日頃からニュースや企業情報に触れ、「なぜこうなっているのか」「自分ならどうするか」という問いを立て、思考を深める習慣をつけることが有効とされます。</li><li><strong>模擬面接の活用:</strong> 専門の転職エージェントなどが提供する元コンサルタントによる模擬面接を活用し、客観的なフィードバックを得ることで、思考の癖を修正し、コミュニケーション能力を磨くことが期待できます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>マッキンゼー転職で選ばれる5つの理由</h3><ul><li>年収200万円以上アップの交渉実績多数</li><li>マッキンゼーに特化した専門コンサルタントが担当</li><li>一般には出回らない非公開・役員直結求人のご提案</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>内定後の条件交渉から円満退職までをフルサポート</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>業界最難度突破プラン</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム × 年代 × ポジション別</p></a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="lp-section"><h2>マッキンゼー転職に関するよくある質問</h2><div class='faq-block'>
+<div class='faq-item'><h3>マッキンゼーの「戦略 + 経営」領域で特に求められるスキルは何ですか？</h3><p>業界知見と課題解決能力の両方が求められるとされます。厚生労働省の職業情報提供サイト（job tag）でも、コンサルタントには専門性に加え、顧客の事業を理解し、課題を分析・整理する能力が重要とされています。論理的思考力が鍵となります。</p></div>
+<div class='faq-item'><h3>マッキンゼーのコンサルタントの年収レンジはどの程度とされますか？</h3><p>公開情報をもとに整理すると、役職や経験に応じて年収は大きく変動しますが、<strong>ジュニアクラスで800万円程度から、シニアクラスでは3000万円</strong>を超えるケースも想定されるようです。厚生労働省「賃金構造基本統計調査」のコンサルタント職の平均値も参考に、自身のスキルと経験を照らし合わせることが推奨されます。</p></div>
+<div class='faq-item'><h3>マッキンゼーの選考プロセスでは、どのような点が重視される傾向にありますか？</h3><p>論理的思考力、コミュニケーション能力、そしてマッキンゼーの文化やカルチャーへのフィット感が重視されると一般にいわれます。特にケース面接では、未知の課題に対して構造的に考え、説得力のある解決策を提示する能力が試されます。</p></div>
+<div class='faq-item'><h3>異業界からマッキンゼーのコンサルタントへ転職する際の注意点はありますか？</h3><p>ポテンシャル採用の枠は存在しますが、戦略 + 経営に関する基礎知識の自主的な学習は不可欠とされます。<br>自身の過去の経験から、論理的思考力や課題解決能力を具体的に示すエピソードを準備することが重要です。<br>必要であれば、求職者支援制度などを活用したスキル習得も一つの選択肢です。</p></div>
+<div class='faq-item'><h3>マッキンゼーでキャリアを積むことで、どのような将来の選択肢が期待できますか？</h3><p>社内での昇進（専門職または管理職）はもちろん、マッキンゼーが持つグローバルなネットワークを活かした海外勤務の可能性も考えられます。<br>また、最先端の知見とコンサルティング経験を活かし、大手事業会社のDX推進担当、あるいは独立といった多様なキャリアパスが期待されるでしょう。</p></div>
+</div></section>
+
+  <p class='industry-position'>マッキンゼーは<strong>MBB + 戦略系トップ</strong>に分類される代表的なコンサルティングファームの一つです。非公開求人の割合も高く（一般に約 8 割と言われます）、転職活動では非公開求人へのアクセスが選考機会の質を左右する可能性が指摘されています。</p>
+
+  <section class="lp-section"><h2>マッキンゼーの国内DX案件・急成長領域での戦略支援</h2><p>マッキンゼーは、<strong>国内大手企業</strong>の<strong>DX</strong>(デジタルトランスフォーメーション)案件で<strong>急成長</strong>領域の戦略支援に強みを持つとされ、クラウド・AI・データ分析・業務プロセス改革といった複数の DX テーマで実行支援を行うケースが見られます。国内市場のデジタル化加速に伴い、マッキンゼーにおける DX 案件の比重は近年高まる傾向にあり、ジュニア層には急成長領域での新規プロジェクト参画機会、シニア層には国内大手企業のデジタル戦略立案・実行支援といった、persona 別の魅力的なキャリア機会が用意されている点が特徴とされます。</p></section>
+
+  <section class="lp-section"><h2>マッキンゼーでのグローバル経験・PE 案件・リーダーシップ機会</h2><p>マッキンゼーでは、<strong>グローバル案件</strong>への参画機会が一定数あるとされ、海外オフィスや海外プロジェクトを通じて国際的なキャリア構築が期待できると言われます。また、<strong>PE (Private Equity)</strong>関連の戦略案件やM&A アドバイザリーといった高難度プロジェクトに携わるチャンスもあるとされ、シニアマネジャー以上のポジションでは、<strong>リーダー</strong>として大規模チームを率いる経験が積めることが特徴とされます。グローバル案件や PE 関連リーダー経験は、パートナー昇進やその後の独立・転職市場価値においても重要な実績と評価される傾向にあります。</p></section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">マッキンゼーの最高峰へ、集中準備で挑戦する</h2>
+      <p>業界最難度 + 卒業後の業界で高水準とされるキャリア価値。MyVisionの無料カウンセリングで、戦略系挑戦の準備プログラム + 自分の市場価値 + アルムナイ視点キャリア設計を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_mckinsey`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_mckinsey">
+          <span>マッキンゼー挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢とされています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングが一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

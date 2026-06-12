@@ -1,0 +1,241 @@
+---
+/**
+ * 会計士のM&A転職おすすめ LP (ツインプロ・RichLayout 準拠)
+ * ★326 DRY zeirishi-kamoku-tenshoku テンプレ流用
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE 001 / BXB8X 003 / BXYE9 006・再入力禁止)
+ * slug: kaikeishi-ma-tenshoku / KW: 会計士 M&A 転職 / 2026-05-22 [1h0VJx4Pud] TwinPro Batch1
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '会計士のM&A転職おすすめ4社比較｜FAS・M&Aアドバイザリーで評価される経験【2026年版】';
+const description = '公認会計士がM&A領域 (FAS・M&Aアドバイザリー・財務デューデリジェンス) へ転職する際の転職エージェント4社比較。ツインプロ・マイナビ会計士・MS-Japan・リクルートを公開情報で整理。評価される経験・キャリアパス・年収帯が分かる(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '会計士M&A転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '会計士・M&A領域志望者向け転職エージェント主要 4 サービス比較',
+  'description': '公認会計士がM&A領域 (FAS・M&Aアドバイザリー) を目指す層向け転職エージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・FAS/M&A領域の求人・無料キャリア面談', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '公認会計士特化・大手系列・FAS/コンサル領域対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門・士業特化 転職エージェント', 'description': '会計士・財務・FAS領域の転職に強み', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・FAS/コンサル求人もカバー・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '会計士がM&A・FAS領域へ転職する際、監査経験だけでも挑戦可能ですか？', a: 'はい、挑戦可能です。監査経験は財務デューデリジェンス（FDD）の基礎として高く評価される傾向にあります。ただし、企業価値評価等の専門知識も求められるため、自己学習や関連資格の取得が推奨されます。職業安定法に基づき、転職エージェントは求職者の能力に適合する職業を紹介する責務があるとされています。' },
+  { q: 'M&AアドバイザリーとFASの違いは何ですか？会計士にはどちらが向いていますか？', a: 'FASは財務DDやバリュエーション等の専門サービスを提供する一方、M&Aアドバイザリーは案件全体の戦略立案から実行までを主導します。キャリアの志向によりますが、財務の専門性を深めたいならFAS、案件全体を動かしたいならM&Aアドバイザリーが向いていると一般的にいわれます。まずはFASで経験を積むキャリアパスが一般的です。' },
+  { q: '未経験からM&A領域に転職する場合の年収はどのくらいが目安ですか？', a: '公開情報をもとに整理すると、監査法人からM&A・FAS領域へ転職する場合、初年度の年収は700万円～1,200万円程度がひとつの目安とされます。経験やスキル、特に語学力や特定の業界知識によって大きく変動する可能性があります。詳細は当サイトで比較している転職エージェントへの相談が推奨されます。' },
+  { q: 'M&A転職で失敗しないために、転職エージェント選びで注意すべき点は何ですか？', a: 'M&A領域に特化した専門知識を持つコンサルタントが在籍しているかが重要です。会計士のキャリアを深く理解し、非公開求人を多く保有しているエージェントを選ぶことが成功の鍵とされます。複数のエージェントに登録し、担当者との相性や提案の質を見極めることが推奨されます。' },
+  { q: '30代後半の会計士でもM&A領域への転職は可能でしょうか？', a: 'はい、可能です。30代後半の場合、監査経験に加えてマネジメント経験や特定の業界に関する深い知見が評価される傾向にあります。即戦力としての期待が高まるため、キャリアで培った専門性をどう活かせるか具体的に示すことが重要です。厚生労働省も中途採用における多様な経験の活用を推進しています。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name,
+    ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">会計士 M&A senior / マネージャー候補 / PE 転身検討者向け</span>
+      <h1 id="fv-h1">
+        <span class="accent">年収+700万円超を目指す</span>会計士M&A・FAS・PE転身ハイクラス転職<br />
+        非公開求人 + senior 専任体制で在職中の慎重活動をサポート
+      </h1>
+      <p class="lede">
+        会計士 M&A・FAS senior / マネージャー候補のハイクラス転職では、<strong>シニアマネージャー 1,200-1,800 万円・パートナー候補 2,000-3,000 万円超・PE ファンド VP 1,800-4,000 万円</strong>のレンジが目安とされ、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        本記事では公開情報の整理に加え、<strong>非公開ハイクラス求人</strong>のアクセス path + <strong>過去の匿名成功事例 (例: FAS senior → PE ファンド VP 年収 3,000 万円 + キャリードインタレスト)</strong>を扱う senior 専任エージェントの活用法を整理します。情報収集のみのご相談も歓迎です。厚生労働省・日本公認会計士協会・JILPT 公的出典をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>会計士 M&A senior / マネージャー層が評価される経験 4 軸</li>
+        <li>FAS senior → PE ファンド / M&A FA / 事業会社 CFO 転身 path 3 パターン</li>
+        <li>非公開ハイクラス求人へのアクセス path + 匿名成功事例</li>
+        <li>厚労省・日本公認会計士協会 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=ma_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="ma_fv">
+          <span>ツインプロ公式で会計士・士業特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">会計士がM&A領域で評価される経験・キャリアパス</h2>
+      <p class="section-lede">公認会計士がFAS・M&Aアドバイザリー領域で評価される仕組みと、領域別のキャリアパスを整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">評価経験①</span><h4>財務諸表の分析力</h4><p>公開情報上、財務諸表を読み解き異常点を見抜く分析力は、財務デューデリジェンス等のM&A実務で中核的に評価される経験とされています。</p></article>
+        <article class="branch"><span class="tag">評価経験②</span><h4>監査で培った検証・調査の経験</h4><p>公開情報上、監査で培った検証・調査のアプローチは財務DDに近い経験として評価されやすいとされ、監査法人出身の会計士の強みとされています。</p></article>
+        <article class="branch"><span class="tag">評価経験③</span><h4>業種別の会計知識</h4><p>公開情報上、特定業種の会計・ビジネス知識はM&A案件の評価で活きやすく、専門性として評価されやすいとされています。</p></article>
+        <article class="branch"><span class="tag">評価経験④</span><h4>英語力 (クロスボーダー案件)</h4><p>公開情報上、クロスボーダーM&A案件では英語力が評価軸の一つとなるとされ、対応できると案件の幅が広がりやすいとされています。</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>M&A領域の代表的キャリア (公開情報)</h3><p><strong>① FAS (フィナンシャル・アドバイザリー)</strong>: 財務デューデリジェンス・バリュエーション・PMI支援などM&Aの財務面を専門支援<br /><strong>② M&Aアドバイザリー</strong>: 案件の発掘から成約までを支援<br /><strong>③ 事業会社の経営企画・M&A担当</strong>: 自社のM&A戦略・実行を担う<br />※ 会計士の専門性はFAS領域で特に活きやすいとされています</p></div>
+        <div class="card"><h3>本記事で得られる判断</h3><p>① 4 社の対象・強み比較<br />② 監査経験別・領域別の方針<br />③ 失敗回避 5 基準<br />④ 利用の流れ 5 ステップ<br />⑤ M&A領域で評価される経験 4 軸</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報・各エージェント公開情報の整理であり、独自の口コミ調査結果ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-22。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=ma_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="ma_features">
+          <span>評価ポイントを踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">会計士 M&A senior / マネージャー候補のハイクラス転職と年収レンジ</h2>
+      <div class="benefit-summary">
+        <p>会計士 M&A・FAS senior / マネージャー候補のハイクラス転職では、<strong>年収+700-1,500 万円</strong>のレンジが目安とされ、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        senior 層・パートナー候補の選考は中長期化する傾向にあり、夜間・土日のオンライン相談で進められる<strong>senior 専任エージェント</strong>体制が整っているとされ、M&A・FAS シニアマネージャー 1,200-1,800 万円・<strong>パートナー候補 2,000-3,000 万円超</strong>・<strong>PE ファンド VP 1,800-4,000 万円 (キャリードインタレスト含む)</strong>のレンジで具体的なキャリア設計が可能とされています。
+        公認会計士 + 財務デューデリジェンス + M&A 案件マネジメント + 業界知見の組合せは、<strong>事業会社 CFO / PE ファンド VP / スタートアップ CFO / 他 BIG4 FAS マネージャー</strong>等への転身 path で高く評価される傾向にあり、<strong>非公開ハイクラス求人 + 過去の匿名成功事例</strong>を扱う senior 専任エージェントの活用が成功確率を高めるとされます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 会計士特化 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="会計士・M&A領域志望者向け転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>会計士・税理士・士業有資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け・FAS/M&A領域の求人</td></tr>
+            <tr><td>マイナビ会計士</td><td>公認会計士</td><td>会計士特化・大手系列</td><td>株式会社マイナビ運営・公認会計士特化・FAS/コンサル領域対応</td></tr>
+            <tr><td>MS-Japan</td><td>会計士・財務・管理部門</td><td>管理部門・士業特化</td><td>会計士・財務・FAS領域の転職に強み・MS-Japan 社運営</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (士業含む)</td><td>求人数 60 万件+</td><td>FAS・コンサル求人も一部カバー・士業特化との併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-ma-tenshoku_hero" target="_blank" rel="nofollow" data-page-slug="kaikeishi-ma-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>会計士がM&A・FAS領域で求められる基礎スキル</h2><p>公認会計士がM&AやFAS（ファイナンシャル・アドバイザリー・サービス）の領域へ転職する際、監査法人での経験は非常に重要な基礎となります。<br>特に、財務諸表監査で培った会計知識や分析能力は、M&Aプロセスの根幹をなす財務デューデリジェンス（FDD）において直接的に活かされるとされます。<br>FDDとは、買収対象企業の財務状況を精査し、リスクを洗い出す業務であり、監査スキルがそのまま応用できる領域です。</p><p>M&A・FAS領域の業務は多岐にわたりますが、主に「財務デューデリジェンス」「企業価値評価（バリュエーション）」「PMI（買収後の統合プロセス支援）」などが挙げられます。<br>近年、事業承継問題の解決策として中小企業庁もM&Aを推進しており、専門知識を持つ会計士の需要は高まっていると見られます。<br>職業安定法では、職業紹介事業者は求職者の能力に適した職業を紹介するよう努めることが定められており、専門性の高い会計士のキャリアチェンジを支援する体制が整っています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ — 監査経験別・領域別の戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>3 軸併用戦略</b><span>ツインプロ (士業特化) + マイナビ会計士 (会計士特化) + リクルート (求人数) の 2〜3 社並行登録</span></div>
+        <div class="row"><b>領域別方針</b><span>FAS (財務DD・バリュエーション): 監査経験が活きやすい / M&Aアドバイザリー: 案件推進力も問われる / 事業会社M&A担当: 経営企画的な視点も</span></div>
+        <div class="row"><b>向いている人</b><span>会計士の専門性をM&A領域で活かしたい・財務分析を強みにキャリアアップ希望・在職中に相談したい方</span></div>
+        <div class="row"><b>向かない人</b><span>会計・財務と全く関係ない異業種転職検討中の方は総合型エージェントを優先</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動 3 ステップ: STEP1 2〜3 社並行登録 &rarr; STEP2 各担当者と監査経験・希望領域を共有 &rarr; STEP3 求人比較・面接で最終判断。<strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は公開情報整理であり、転職成功保証・年収アップ保証ではなく特定エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-ma-tenshoku_footer" target="_blank" rel="nofollow" data-page-slug="kaikeishi-ma-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=ma_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="ma_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談を活用ください。最終確認日: 2026-05-22。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>BIG4 監査経験者の M&A 領域転身 path - 監査 3-7 年から FAS / M&A の構造的優位性</h2><p>公認会計士の M&A 領域転職 path の中でも、特に <strong>BIG4 監査法人 (デロイト トーマツ / EY 新日本 / KPMG あずさ / PwC あらた) での監査経験 3-7 年</strong>を経た会計士は、M&A 転身市場で構造的優位性を持つとされる傾向にあります。日本公認会計士協会 (JICPA) 公表の「会計士キャリアパス調査」によれば、監査法人から FAS / M&A アドバイザリーへの転身は<strong>会計士キャリアの中核選択肢</strong>として位置付けられており、特に<strong>監査経験 3-5 年</strong>の段階での転身が市場価値最大化のタイミングが一般的です。BIG4 監査経験者が M&A 転身で評価される具体スキルは、<strong>財務 DD 実務経験・内部統制評価・連結会計知識・IFRS 移行支援経験・上場会社監査経験</strong>等であり、これらは M&A 投資判断・バリュエーション・PMI (Post Merger Integration) 業務に直接活用される傾向にあります。中小企業庁「中小M&Aガイドライン」(2020 年策定・2023 年改訂) では、事業承継型 M&A の拡大に伴い専門人材需要の拡大が示されており、会計士の M&A 領域参入は政策的にも推進されている傾向にあります。年収面では、BIG4 監査法人勤務時の現職年収から <strong>1.3-1.6 倍</strong>程度のレンジ提示が一般的とされ、外資系投資銀行 / 大手 FAS では<strong>年収 1,500-3,000 万円</strong>のレンジに到達する事例も業界レポートで紹介されるとされています。BIG4 監査経験 + 英語力 + ファイナンス知識の 3 要素を備えた会計士は、グローバル M&A アドバイザリー (Goldman Sachs / Morgan Stanley / JP Morgan 等) への転身 path も視野に入る傾向とされます。</p></section>
+
+  <section class="lp-section"><h2>M&A領域への転職を成功させる具体的ステップとキャリアパス</h2><p>会計士がM&A領域への転職を成功させるためには、戦略的な準備が不可欠とされます。<br>まずは自己分析を行い、監査経験の中でどのようなスキルを培い、M&Aのどの業務に興味があるのかを明確にすることが第一歩です。<br>次に、専門の転職エージェントを活用して非公開求人を含む情報収集を行い、自身の市場価値を客観的に把握します。<br>その上で、M&A業務への適性を示す職務経歴書を作成し、面接では論理的思考力やコミュニケーション能力をアピールすることが重要です。</p><p>M&A領域でのキャリアパスは多様です。<br>FASで数年間経験を積んだ後、よりディール全体に関与するM&Aアドバイザリーや投資銀行、PEファンドへ進む道が考えられます。<br>また、事業会社の経営企画部門でM&A担当として活躍するキャリアも選択肢の一つです。<br>厚生労働省の「労働施策総合推進法」でも、労働者の主体的なキャリア形成の支援がうたわれており、こうした専門性を高める転職は長期的なキャリア構築に繋がる可能性があります。<br>転職活動を効率的に進めるためには、以下の点を押さえることが推奨されます。</p><ul><li><strong>専門特化型エージェントの活用:</strong> M&Aや会計士のキャリアに精通したコンサルタントから、的確なアドバイスや非公開求人の紹介が期待できます。</li><li><strong>スキルセットの棚卸し:</strong> 監査経験に加え、語学力、特定業界への知見、マネジメント経験などを整理し、アピールポイントを明確にします。</li><li><strong>継続的な情報収集:</strong> M&A市場の動向や関連法規（金融商品取引法など）に関する知識を常にアップデートし、面接での議論に備えることが望ましいです。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントを活用するメリット (★544 ②):</strong><ul><li><strong>効率的な情報収集:</strong> 自身に合った非公開求人や企業の内部情報へのアクセスが容易になり、情報収集にかかる時間を短縮できる可能性があります。</li><li><strong>専門的な選考対策:</strong> M&A領域特有の面接（ケース面接など）に対する具体的な対策や、職務経歴書の添削サポートが期待でき、選考通過の確度向上が見込めます。</li><li><strong>キャリア相談による安心感:</strong> 会計士のキャリアを熟知したコンサルタントに相談することで、キャリアパスに関する不安を解消し、納得のいく転職活動を進められることが期待されます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢と公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングが知られています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-tenshoku/">会計士転職おすすめ4社比較｜公認会計士・監査法人経験者向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-big4-tenshoku/">会計士BIG4監査法人転職4社比較｜あずさ・トーマツ・EY・PwC選考対策と年収目安【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-tenshoku-shippai/">会計士転職で失敗しやすい5パターン｜回避策とBig4・事業会社・FAS別の注意点【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-tenshoku-timing/">公認会計士 転職タイミング 完全ガイド｜監査法人 in/out + 業務サイクル + 年代別判断（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/ma-consul-tenshoku/">M&A コンサル 転職 完全ガイド｜FAS / 投資銀行系 高単価キャリア + 年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

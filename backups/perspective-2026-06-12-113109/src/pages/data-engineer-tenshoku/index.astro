@@ -1,0 +1,170 @@
+---
+/**
+ * データエンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 880 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-data-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）';
+const description = 'データエンジニアの転職を検討中の方向け。DWH/ETL/Spark 必須スキル + 業界別年収帯 + データ駆動企業のキャリアパスを公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'データエンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / データエンジニア</span>
+      <h1 id="fv-h1">
+        <span class="accent">データエンジニア</span>転職完全ガイド<br />
+        DWH/ETL/Spark 年収帯と AI 時代の市場価値
+      </h1>
+      <p class="lede">
+        データエンジニアは AI 時代のデータ基盤需要拡大で年収 600-1,400 万円帯の求人が活発なとされています。
+        SQL + Python + クラウド DWH + ETL (dbt/Airflow) の 4 軸が転職市場価値を決める一般的が一般的です。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>データエンジニア 3 種類 + 必須スキル整理</li>
+        <li>DWH/ETL/Spark スキル体系化</li>
+        <li>経験年数別 年収帯 + 業界別求人傾向</li>
+        <li>JILPT・IPA・経産省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論とデータエンジニアの 3 種類</h2>
+      <p class="section-lede">データエンジニアは AI 時代のデータ基盤需要拡大で年収 600-1,400 万円帯が活発。役割により 3 種類に分かれます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パイプライン</span><h4>データパイプラインエンジニア</h4><p>ETL/ELT 設計・運用が中心。Airflow/dbt 等のオーケストレーション経験が評価される。</p></article>
+        <article class="branch"><span class="tag">データ基盤 (DWH)</span><h4>データ基盤エンジニア</h4><p>BigQuery/Snowflake/Redshift 設計。大規模データの設計・コスト最適化スキルが鍵。</p></article>
+        <article class="branch"><span class="tag">アナリティクス</span><h4>アナリティクスエンジニア</h4><p>dbt + データモデリング + BI 連携。データとビジネスの橋渡し役。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的のケースが多く見られます。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>3 種類を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">データエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>の大幅アップが見込めるデータエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        エンジニア採用市場の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談 + リモート対応</strong>で無理なく転職活動を進められる体制が整っているとされ、データエンジニア 600～1,300 万円 (BigQuery/Snowflake)のレンジで具体的なキャリア設計が可能と言われます。
+        BigQuery/Snowflake + ETL/ELT パイプライン + データレイク設計は、DX 推進市場における技術人材の市場価値を押し上げる重要な実績として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">必須スキルと業界別 求人傾向</h2>
+      <div class="card-grid">
+        <div class="card"><h3>必須スキル</h3><p>SQL (パフォーマンスチューニング含) / Python (Pandas / PySpark) / DWH (BigQuery / Snowflake / Redshift / Databricks) / ETL/ELT (Airflow / dbt / Fivetran / Embulk) / ストリーミング (Kafka / Kinesis / Pub/Sub) / クラウド (AWS/GCP) データサービス</p></div>
+        <div class="card"><h3>業界別 求人傾向</h3><p><strong>SaaS / Web</strong>: データ駆動意思決定の基盤構築<br /><strong>金融 / FinTech</strong>: 大量データ処理 + 規制対応<br /><strong>EC / メディア</strong>: レコメンド + パーソナライゼーション<br /><strong>AI / ML 企業</strong>: 学習データパイプライン構築<br /><strong>外資 IT</strong>: グローバル規模 + 高単価</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>データエンジニアの役割と求められる基礎スキル</h2><p>データエンジニアは、企業がデータを活用して意思決定を行うための「データ基盤」を設計、構築、管理する専門職です。<br>主な役割は、様々なソースからデータを収集し、分析しやすい形に加工（ETL/ELT処理）、そしてデータウェアハウス（DWH）やデータレイクに格納するまでの一連のパイプラインを整備することにあります。<br>データ駆動型の経営が一般化する現代において、その重要性は増しているとされます。<br>厚生労働省の職業情報提供サイト（jobtag）においても、関連職種として「データサイエンティスト」が挙げられており、データ基盤の整備がその前工程として不可欠であることが示唆されています。<br>転職市場で評価される基礎スキルとしては、データベース言語であるSQL、プログラミング言語のPython、そしてAWS、GCP、Azureといった主要なクラウドプラットフォームに関する知識が一般的に求められます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意点と公平な判断材料</h2>
+      <div class="counter-box">
+        <h3>📌 補足 (公開情報整理・公平な判断材料)</h3>
+        <div class="row"><b>データサイエンティストとの違い</b><span>データエンジニアは基盤構築 (パイプライン/DWH)・サイエンティストは分析/モデリングが主軸</span></div>
+        <div class="row"><b>必須スキル</b><span>SQL + Python + DWH + ETL (Airflow/dbt) + Spark/Kafka が評価される</span></div>
+        <div class="row"><b>AI 時代の需要</b><span>AI 活用には高品質データ基盤が前提・需要は継続/拡大傾向</span></div>
+        <div class="row"><b>役割重複</b><span>業界によりサイエンティストと役割が重複する傾向もある</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。具体的判断はデータ特化エージェントへの相談を推奨します。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>年収帯の目安とキャリアパスの詳細</h2><p>データエンジニアの年収は、スキルセットと経験年数に大きく左右されるとされます。<br>ジュニアレベル（1～3年）では年収400～600万円、ミドルレベル（3～5年）では600～900万円、シニアやリードエンジニアになると1000万円を超えることも期待されます。<br>特に、Apache SparkやFlinkを用いた大規模分散処理の経験、dbtなどモダンなETL/ELTツールの知識、Terraform等IaC（Infrastructure as Code）での基盤構築スキルは高く評価される傾向にあります。<br>キャリアパスとしては、データ基盤の専門性を深めるスペシャリスト、チームを率いるマネジメント、あるいはデータアーキテクトや機械学習エンジニアへ転向する道も考えられます。<br>転職活動においては、労働契約法で定められた労働条件の明示義務に基づき、内定時に業務内容や待遇を必ず書面で確認することが重要です。<br>自身のスキルと経験を客観的に棚卸しし、市場価値に見合った条件交渉を行うことが成功の鍵となります。</p><ul><li>クラウドプラットフォーム（AWS, GCP, Azure）の認定資格を取得し、専門性を証明する。</li><li>大規模データ処理（Apache Sparkなど）の実務経験をポートフォリオで具体的に示す。</li><li>データモデリングやDWH/データレイクの設計・構築経験を職務経歴書で詳細に記述する。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>データエンジニア転職で選ばれる5つの理由</h3><ul><li>年収+100〜300万円の成功事例も多数</li><li>データ領域特化、専門コンサルタントが伴走</li><li>全体の80%以上が事業戦略に関わる非公開求人</li><li>現職に配慮した夜間・土日のオンライン相談</li><li>ご納得いくまでサポート、内定後の辞退も可能</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer-tenshoku/">DevOps / SRE エンジニアの転職完全ガイド｜CI/CD・SRE・クラウド経験別の市場価値とキャリアパス｜TechGo (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

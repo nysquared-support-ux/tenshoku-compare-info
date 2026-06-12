@@ -1,0 +1,212 @@
+---
+/**
+ * consul-jiko-pr LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 自己PR (sv 推定 300-500・即実行型・添削サポート合致)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 自己PR 完全ガイド｜評価される 5 アピール軸 + 構成テンプレ + 無料添削｜MyVision (PR)';
+const description = 'コンサル転職の自己PRについて、評価される5つのアピール軸 (論理思考・課題解決・成果インパクト・リーダーシップ・学習意欲) + 構成テンプレート + 前職別の作成例を公開情報ベースで整理。元コンサルによる無料添削サポートの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 自己PR' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'すぐに転職するつもりはないのですが、相談だけでも可能ですか？', a: 'はい、もちろん可能です。ご自身の市場価値の確認やキャリアプランに関する情報収集の目的でご活用いただけます。客観的な視点からのアドバイスを通じて、今後のキャリアを考えるきっかけとしていただければ幸いです。相談したからといって、応募を強要することは一切ございませんので、ご安心ください。' },
+  { q: '自己PRの作成に自信がありません。サポートはありますか？', a: 'ご安心ください。弊社のコンサルタントが、あなたの職務経歴や実績を丁寧にヒアリングし、強みやアピールポイントを言語化するサポートをいたします。コンサルティングファームが求める人物像を熟知しているため、採用担当者に響く効果的な自己PRを一緒に作成することが可能です。' },
+  { q: 'サービスは本当に無料なのでしょうか？', a: 'はい、求職者様からは一切費用をいただいておりません。弊社は、採用が決定した企業様から成功報酬をいただくビジネスモデルです。これは職業安定法にもとづく有料職業紹介事業の一般的な仕組みです。キャリア相談から求人紹介、面接対策まで、すべてのサービスを無料でご利用いただけます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 / 自己PR完全ガイド</span>
+      <h1 id="fv-h1">コンサル転職、<span class="accent">自己PR次第で年収+200万円を目指せる</span>チャンス。<br />在職中でも安心の夜間オンライン相談可</h1>
+      <p class="lede">コンサルティング業界は、DX 推進や事業再編の需要増を背景に、専門知識を持つ人材の採用を活発化させているとされます。自己PRで専門性や実績を的確に伝えられる人材は<strong>平均年収アップ額185万円</strong>(公開情報) を実現するケースも少なくないとされ、現職が多忙な方も<strong>夜間オンライン相談</strong>・<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。コンサル転職の自己PRは、<strong>論理思考力・課題解決志向・成果インパクト・リーダーシップ・学習意欲</strong>の5軸でアピールすることが評価されるとされ、本記事では5アピール軸 + 構成テンプレート + 前職別の作成例 + 元コンサル無料添削の活用法を整理します。</p>
+      <ul class="fv-bullets">
+        <li>評価される 5 つのアピール軸</li>
+        <li>自己PR 構成テンプレート (結論 → 根拠 → 活かし方)</li>
+        <li>前職別の自己PR 作成例 (4 タイプ)</li>
+        <li>元コンサル無料添削サポートの活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_jikopr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_jikopr">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">評価される 5 つのアピール軸</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>軸1: 論理的思考力</h4>
+        <p>複雑な課題を構造化し、論理的に整理して結論を導く力。前職での「問題発見 → 構造化 → 解決策立案」のエピソードでアピールすることが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>軸2: 課題解決志向</h4>
+        <p>現状の問題を発見し、改善案を立案・実行する姿勢。「課題を見つけて自ら動いた」具体エピソードがアピール材料になるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>軸3: 成果インパクト (数値化)</h4>
+        <p>「業務効率 XX% 改善 / 売上 XX 億創出 / コスト XX% 削減」のように、ビジネスインパクトを数値で示すことが評価軸とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>軸4: リーダーシップ</h4>
+        <p>チームリード + 関係者調整 + 巻き込み力の経験。役職の有無に関わらず「主体的に周囲を動かした」エピソードが評価されるとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>軸5: 学習意欲 + 適応性</h4>
+        <p>新しい業界 + 業務を学ぶ意欲 + 環境変化への適応力。コンサルは毎回新しい案件に取り組むため、学習意欲が重視されるとされています。</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_jikopr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_jikopr">
+          <span>5 アピール軸を元コンサルの無料添削で実践する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル自己 PRで実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル自己 PR領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">自己PR 構成テンプレート</h2>
+      <p class="section-lede">コンサル転職の自己PRは「結論 → 根拠エピソード → コンサルでの活かし方」の3部構成が推奨されます。下表が標準テンプレートです。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="自己PR 構成テンプレート">
+          <thead><tr><th>パート</th><th>分量目安</th><th>記載内容</th><th>ポイント</th></tr></thead>
+          <tbody>
+            <tr><td>1. 結論 (強み宣言)</td><td>1-2 文</td><td>「私の強みは〇〇です」</td><td>5 アピール軸から1-2 個選択</td></tr>
+            <tr><td>2. 根拠エピソード</td><td>本文の60%</td><td>強みを発揮した具体経験</td><td>状況 / 課題 / 行動 / 成果 (数値)</td></tr>
+            <tr><td>3. コンサルでの活かし方</td><td>1-3 文</td><td>強みをコンサルでどう活かすか</td><td>志望動機との接続</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_jikopr_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル転職における自己PRの基本</h2><p>コンサルティング業界への転職活動における自己PRは、単に自身の経歴やスキルを並べるだけのものではありません。<br>応募者が将来コンサルタントとして活躍できるポテンシャル、特に「論理的思考力」「課題解決能力」「知的好奇心」などを有しているかを判断するための重要な材料とされます。<br>多くのファームでは、過去の経験において、どのような課題（Situation/Task）に対し、自身がどう考え行動し（Action）、どのような成果（Result）を生み出したのかを構造的に説明する能力を重視します。<br>これは、厚生労働省がキャリア形成支援で活用を推奨する「ジョB・カード」における職務経歴の整理方法にも通じる考え方です。<br>自己PRは、未知の課題に対しても粘り強く、かつ構造的にアプローチできる人材であることを示す絶好の機会であり、その質が選考結果に大きく影響すると一般に考えられています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">元コンサル無料添削で品質が変わる 3 ポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">変化1</span><h4>アピール材料の発掘</h4><p>「自分には実績がない」と思っていても、元コンサルとの対話で 5 アピール軸に該当する経験を発掘できるが一般的です。経験の棚卸しから伴走するサポートです。</p></article>
+        <article class="branch"><span class="tag">変化2</span><h4>コンサル評価軸への翻訳</h4><p>前職実績を「経営課題への貢献」「成果インパクト」の言葉に翻訳する添削。実務担当者視点から経営層視点への変換を、元コンサルが個別カスタマイズで行うのケースが多く見られます。</p></article>
+        <article class="branch"><span class="tag">変化3</span><h4>志望動機との一貫性チェック</h4><p>自己PR + 志望動機の論理的一貫性を、元コンサルが壁打ち形式で磨きます。「強み → なぜコンサル → なぜこのファーム」の接続を整えると公表されています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>自己PRは元コンサル添削で説得力が大きく変わるとされています。MyVisionの無料カウンセリングから添削サポートを会員登録30秒で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_jikopr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_jikopr">
+          <span>元コンサルの無料添削を予約する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>評価される自己PRを作成する具体的ステップ</h2><p>コンサルティングファームから高い評価を得る自己PRを作成するには、戦略的な準備が求められます。以下のステップを参考に、ご自身の経験を効果的なアピールに昇華させることが期待されます。公開情報をもとに、一般的な手順を整理しました。</p><ul><li><strong>1. 経験の棚卸しとアピール軸の選定:</strong> まず、これまでの職務経験を振り返り、特に成果を上げたプロジェクトや困難を乗り越えた経験を具体的に書き出します。その中から「論理的思考力」「リーダーシップ」など、コンサルタントに求められる5つのアピール軸のいずれかに合致するエピソードを選び抜きます。</li><li><strong>2. 構造化とストーリーテリング:</strong> 選んだエピソードを「STARメソッド（状況・課題・行動・結果）」などのフレームワークに沿って整理します。単なる事実の羅列ではなく、なぜその行動を取ったのかという思考プロセスや、結果がもたらしたインパクト（定量的・定性的）を盛り込み、一貫性のあるストーリーとして構成します。</li><li><strong>3. 第三者による客観的なレビュー:</strong> 作成した自己PRは、自分だけでは気づけない論理の飛躍や分かりにくい点が含まれている可能性があります。キャリアコンサルティングの専門家など、第三者からのフィードバックを受けることで、客観性と説得力を高めることができます。これは、職業能力開発促進法で定められたキャリアコンサルタントの役割にも合致するアプローチとされます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>コンサル 自己PR 転職 で選ばれる5つの理由</h3><ul><li>年収アップ実績（平均+185万円、最大+350万円の事例も）</li><li>コンサル業界特化の非公開・独占求人多数</li><li>業界出身者による実践的な自己PR・面接対策</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>内定後の条件交渉まで一貫してサポート</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-shibodouki/"><h4>志望動機ガイド</h4><p>落ちる 7 パターン × 通る論理</p></a>
+        <a class="card-link" href="/consul-shokumukeirekisho/"><h4>職務経歴書ガイド</h4><p>5 翻訳ポイント + 無料添削</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">自己PRを、5 アピール軸 + 元コンサル添削で磨く</h2>
+      <p>論理思考 + 課題解決 + 成果 + リーダーシップ + 学習意欲の 5 軸で、説得力ある自己PRに。MyVisionの無料カウンセリングから添削サポートを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_jikopr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_jikopr">
+          <span>元コンサルの無料自己PR添削を始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

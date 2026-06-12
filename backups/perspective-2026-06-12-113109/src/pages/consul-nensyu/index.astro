@@ -1,0 +1,233 @@
+---
+/**
+ * consul-nensyu LP (MyVision コンサル特化・★326 DRY consul-tenshoku-mikeiken 流用)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル 年収 (sv 推定 2,000-3,500・最大流入候補・全LP補強)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)';
+const description = 'コンサル業界の年収レンジを、ファーム別 (アクセンチュア・BIG4・ベイカレント・戦略系)・年代別 (20代/30代)・ポジション別 (アナリスト〜パートナー) で公開情報ベースに整理。前職業界別の年収アップ事例 + 自分の市場価値診断方法 + 元コンサル無料カウンセリングの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 年収' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談だけでも可能ですか？', a: 'はい、もちろん可能です。すぐに転職を考えていなくても、ご自身の市場価値の確認やキャリアプランに関する情報収集の目的でご活用いただけます。無理に転職をお勧めすることは一切ございません。まずは客観的な視点からのアドバイスを通じて、将来の選択肢を広げるお手伝いができればと考えております。内定後の辞退も可能ですので、お気軽にご相談ください。' },
+  { q: '費用はかかりますか？', a: '求職者様からは一切費用をいただいておりません。当サービスは、採用が決定した際に企業側からコンサルティングフィーをいただくビジネスモデルで運営されています。ご登録からキャリア相談、求人紹介、面接対策、年収交渉、退職サポートまで、全てのサービスを無料でご利用いただけますので、安心してご活用ください。' },
+  { q: '地方在住でも利用できますか？', a: 'はい、全国どこにお住まいの方でもご利用いただけます。キャリアアドバイザーとの面談はすべてオンライン（電話・ビデオ通話）で実施しており、求人もリモートワーク可能な案件や、全国の主要都市のポジションを多数取り扱っております。地方からのUターン・Iターン転職のサポート実績も豊富ですので、まずはお気軽にご希望の勤務地や働き方についてお聞かせください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル senior / マネージャー候補 年収 +700-1,500万円超 ハイクラス | BIG4/MBB senior pool</span>
+      <h1 id="fv-h1">コンサル <span class="accent">senior / マネージャー候補</span> 年収 完全ガイド<br />ファーム別 × senior pool 別 × Director path の現実レンジ</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル業界の<strong>senior pool 年収レンジ</strong>は<strong>マネージャー 1,300-1,800万円 / Director 2,000-2,500万円 / パートナー 3,000-5,000万円帯</strong>とされ、ファーム種別 (戦略系/総合系/FAS系/IT系) + senior 経験 + ポジションの3軸で大きく変動するとされています。本記事では公開情報ベースで <strong>マネージャー候補・パートナー候補・シニア視点</strong> の現実レンジを整理し、前職別の senior career step up + 自分のマネージャー候補市場価値診断方法を解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ファーム別の <strong>senior 年収レンジ</strong> (戦略系/総合系/FAS系/IT系/公共系)</li>
+        <li>senior pool 別 (30代後半マネージャー候補 / 40代パートナー候補) の現実値</li>
+        <li>ポジション別 (マネージャー〜パートナーの senior 階層 + Director path)</li>
+        <li>前職業界別の senior career step up 事例 + マネージャー候補 市場価値診断</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_nensyu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_nensyu">
+          <span>マネージャー候補 / senior consul 市場価値を無料カウンセリングで確認 (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ファーム別 年収レンジ — 4 区分の現実</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 各コンサルファーム公式キャリアサイト・コンサル特化エージェント公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ファーム別年収レンジ">
+          <thead><tr><th>ファーム種別</th><th>新卒〜2-3年目</th><th>30代中堅</th><th>マネージャー</th><th>パートナー</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (BCG・McK・Bain)</td><td>700-1,000万円</td><td>1,200-1,800万円</td><td>1,800-2,500万円</td><td>3,000万円+</td></tr>
+            <tr><td>総合系 (アクセンチュア・PwC・ベイカレント)</td><td>500-800万円</td><td>900-1,400万円</td><td>1,300-2,000万円</td><td>2,000-3,000万円</td></tr>
+            <tr><td>FAS 系 (Deloitte FAS・PwC AS等)</td><td>550-850万円</td><td>1,000-1,500万円</td><td>1,400-2,200万円</td><td>2,500万円+</td></tr>
+            <tr><td>IT 系 (アビーム・IBM・日系IT)</td><td>500-750万円</td><td>800-1,200万円</td><td>1,200-1,800万円</td><td>1,800-2,500万円</td></tr>
+            <tr><td>公共系 (野村総研・三菱総研)</td><td>550-800万円</td><td>900-1,300万円</td><td>1,300-1,800万円</td><td>1,800-2,400万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報・各種転職メディアの公表値をもとにした一般的な目安レンジです。最新の正式金額は各ファーム公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_nensyu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_nensyu">
+          <span>ファーム別の最新年収を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル年収で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル年収領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年代別 年収レンジ — 20代後半 / 30代前半 / 30代後半</h2>
+      <p class="section-lede">コンサル業界では、年代ごとに想定年収レンジ + 市場価値評価軸が変動するとされています。下表は一般的な目安です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">20代後半</span><h4>26-29歳の年収レンジ</h4><p><strong>500-900万円帯</strong>。ポテンシャル採用 + 第二新卒卒業後の活躍期。総合系 + IT 系での未経験採用が積極的とされており、前職年収比 20-40% アップ事例が報告されています。詳細は <a href="/consul-tenshoku-20daikouhan/" class="underline">20代後半 コンサル転職ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">30代前半</span><h4>30-35歳の年収レンジ</h4><p><strong>700-1,200万円帯</strong>。市場価値ピークの一つとされ、コンサルタント〜シニアコンサルタント階層が中心。マネジメント経験 + 案件規模が評価軸の中核。詳細は <a href="/consul-tenshoku-30dai/" class="underline">30代 コンサル転職ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">30代後半</span><h4>36-39歳の年収レンジ</h4><p><strong>900-1,500万円帯</strong>。シニアコンサルタント〜マネージャー候補が中心。専門領域 (IT/会計/官公庁等) + マネジメント実績が評価軸。MyVision 対象年齢 (-39歳) の上限ゾーンです。</p></article>
+        <article class="branch"><span class="tag">40代以上</span><h4>40歳以上の年収レンジ</h4><p><strong>1,000-2,500万円帯</strong>。マネージャー〜パートナークラス。MyVision の対象年齢を超える層ですが、専門特化 (FAS・税務・国際・M&A 等) の即戦力採用で別途オープンとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_nensyu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサルタントの年収構造：基本給・賞与・手当の基礎知識</h2><p>コンサルタントの年収は、主に「ベースサラリー（基本給）」と「パフォーマンスボーナス（業績連動賞与）」の2つの要素で構成されることが一般的です。<br>多くのファームでは年俸制を採用しており、提示される年収額には一定時間分のみなし残業代が含まれているケースが多く見られます。<br>給与体系はポジション（階級）ごとに明確なレンジが設定されており、昇進することで大幅な年収アップが期待できるのが特徴です。<br>これは、個人の成果が評価に直結しやすい実力主義の文化を反映しているとされます。<br>なお、こうした給与の支払われ方についても、日本の企業である以上、通貨で、直接労働者に、その全額を支払うといった原則を定めた労働基準法第24条（賃金支払の五原則）が基本となります。<br>自身のオファー内容がどのような構成になっているか、事前にしっかり確認することが重要です。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">前職業界別 年収アップ事例パターン</h2>
+      <p class="section-lede">コンサル転職時の年収アップ幅は、前職業界 + 年齢 + ポジションの組み合わせで大きく変動するとされています。代表的な前職業界からのアップ事例パターンを整理します。</p>
+      <div class="counter-box">
+        <h4>パターン1: 大手事業会社 (経営企画・事業企画) → 総合系コンサル</h4>
+        <p>前職 600-900万円 → コンサル入社時 800-1,200万円帯が一般的とされています。経営課題への接点 + 案件構造化スキルが評価される傾向にあるとされています。アップ幅 20-40%。</p>
+      </div>
+      <div class="counter-box">
+        <h4>パターン2: IT エンジニア・SIer → アクセンチュア・アビーム・IBM</h4>
+        <p>前職 500-750万円 → IT コンサル入社時 650-1,000万円帯が一般的とされています。クラウド・データ・生成AI・PMO 経験が高評価とされています。アップ幅 20-35%。</p>
+      </div>
+      <div class="counter-box">
+        <h4>パターン3: 銀行・証券・会計士 → BIG4 / FAS 系</h4>
+        <p>前職 600-900万円 → BIG4/FAS 入社時 800-1,300万円帯が一般的とされています。財務知見 + 案件理解力 + M&A・FAS 経験が高評価とされています。アップ幅 25-45%。</p>
+      </div>
+      <div class="counter-box">
+        <h4>パターン4: 官公庁・公的機関 → 公共系コンサル</h4>
+        <p>前職 500-750万円 → 公共系コンサル入社時 650-1,000万円帯が一般的とされています。行政知見 + 政策理解 + 公共調達経験が高評価とされています。アップ幅 20-35%。</p>
+      </div>
+      <div class="counter-box">
+        <h4>パターン5: 戦略コンサル経験者 → 事業会社CXO / 戦略系再転職</h4>
+        <p>前職 1,200-2,000万円 → 同等以上の年収が一般的とされています。コンサル経験者は事業会社のCXOクラス・PE/VC・戦略系再転職で需要が高いとされています。</p>
+      </div>
+
+      <div class="cta-block">
+        <p>前職業界 + 年齢 + 実績の組み合わせで、コンサル転職時の年収予測ができます。MyVisionの無料カウンセリングで、自分の市場価値 + 想定年収レンジ + 狙えるファームを30秒の会員登録で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_nensyu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_nensyu">
+          <span>自分の前職別の年収アップ事例を確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル転職で年収アップを実現する3つの戦略</h2><p>コンサルティング業界への転職を通じて年収アップを目指すには、戦略的なアプローチが求められます。<br>単に転職するだけでなく、自身の市場価値を最大化するための準備と行動が不可欠です。<br>公開情報や専門家の知見を参考に、以下の3つの戦略を検討することが有効とされます。<br>第一に、自身の専門性を活かせる、あるいは今後需要が高まる領域を狙うこと。<br>第二に、業界に精通した転職エージェントをパートナーとして活用すること。<br>そして第三に、面接の場で自身の価値を的確に伝えることです。<br>特に、転職エージェントは職業安定法にもとづく厚生労働大臣の許可を受けた有料職業紹介事業者であり、転職市場に関する豊富な情報やノウハウを有しています。<br>これらの戦略を組み合わせることで、年収アップの可能性を高めることが期待できます。</p><ul><li><strong>専門性の高い領域を狙う:</strong> DX（デジタルトランスフォーメーション）、GX（グリーン・トランスフォーメーション）、M&Aといった需要が高く専門性が求められる領域は、給与水準も高い傾向にあるとされます。自身の経験と親和性の高い成長領域を見極めることが重要です。</li><li><strong>転職エージェントを戦略的に活用する:</strong> コンサル業界に特化したエージェントは、非公開求人の紹介や、ファームごとの選考対策、そして個人では難しい年収交渉の代行など、多岐にわたるサポートを提供してくれます。</li><li><strong>自身の市場価値を的確に伝える:</strong> 前職での実績を「どのような課題に対し、どう行動し、いくらの売上向上やコスト削減に貢献したか」といった形で定量的に示すことで、採用担当者に対して自身の貢献度を具体的にアピールできます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>コンサル 年収 アップ で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+187万円 ※弊社実績）</li><li>コンサル業界特化の専門アドバイザーが担当</li><li>年収1,000万円以上の非公開・独占求人をご紹介</li><li>夜間・土日も対応、在職中でも安心のサポート体制</li><li>内定後の辞退も可能。納得いくまでキャリアを検討</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム</p></a>
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の市場価値 + 4 キャリアパス</p></a>
+        <a class="card-link" href="/consul-tenshoku-20daikouhan/"><h4>20代後半 コンサル転職</h4><p>26-29歳の市場価値ピーク前戦略</p></a>
+        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア 転職</h4><p>最大採用ファームへの戦略的アプローチ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">自分の市場価値 + 想定年収を、30秒の会員登録で診断する</h2>
+      <p>コンサル年収レンジは600-2,500万円帯と幅広く、ファーム + 年齢 + ポジションで大きく変動。MyVisionの無料カウンセリングで、自分の前職実績から想定年収 + 狙えるファーム + キャリアパスを確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_nensyu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_nensyu">
+          <span>自分の市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-shibodouki/">コンサル 志望動機 完全ガイド｜落ちる 7 パターン × 通る論理構造 × 業界別翻訳例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

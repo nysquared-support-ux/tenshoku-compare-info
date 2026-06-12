@@ -1,0 +1,229 @@
+---
+/**
+ * インフラエンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-infra-engineer-tenshoku-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'インフラエンジニア 転職完全ガイド｜SRE/DevOps キャリアパスと年収帯（2026年版・PR）';
+const description = 'インフラ・SRE・DevOps エンジニアの転職を検討中の方向け。オンプレ vs クラウド + 必須スキル + 業界別年収帯 + キャリアパスを公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'インフラエンジニア転職' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'インフラエンジニア転職', 'item': 'https://tenshoku-compare-info.pages.dev/infra-engineer-tenshoku/' },
+  ],
+};
+const faq = [
+  { q: 'SREやDevOpsエンジニアへのキャリアチェンジは未経験から可能ですか？', a: '情報技術分野での実務経験がない状態からの直接的なSRE/DevOpsへの転職は、一般的に挑戦的とされます。まずはクラウドインフラの基礎スキルを習得し、関連業務で経験を積むことが推奨されます。厚生労働省の職業情報提供サイト（jobtag）でも、関連職種にはシステム開発等の経験が求められる傾向が示されており、段階的なキャリア形成が現実的と考えられます。' },
+  { q: 'インフラエンジニアの年収を上げるには、具体的にどのようなスキルが必要ですか？', a: '年収向上には、AWSやGCP等の主要クラウドサービス、Terraform等のIaC（Infrastructure as Code）ツール、Kubernetes等のコンテナ技術の習得が重要とされます。特に、システムの信頼性やセキュリティ、大規模インフラの設計・構築経験は市場価値が高く評価される傾向にあります。これらのスキルを計画的に習得することが年収アップにつながる可能性があります。' },
+  { q: 'オンプレミス環境の経験しかないのですが、クラウドエンジニアに転職できますか？', a: 'オンプレミスで培ったサーバー、ネットワーク、ストレージに関する基礎知識は、クラウド環境を理解する上で強力な土台となります。AWS認定資格の取得などを通じてクラウド技術への学習意欲と知識を客観的に示すことで、転職の可能性は高まると考えられます。これまでの経験を強みとしてアピールすることが重要です。' },
+  { q: 'インフラエンジニア向けの転職エージェントを利用する際の注意点は何ですか？', a: '自身のキャリアプランと合致しない求人を強く勧められた場合でも、安易に妥協しない姿勢が大切です。IT・インフラ分野に精通した担当者が在籍しているかを確認し、複数のエージェントを比較検討することが推奨されます。ハローワークインターネットサービス等も参考にしつつ、多角的な情報収集を心がけることが、より良い選択につながるとされます。' },
+  { q: '将来性のあるインフラエンジニアのキャリアパスにはどのようなものがありますか？', a: 'クラウド技術を深化させ、SRE（Site Reliability Engineering）やDevOpsの専門家を目指す道が代表的です。また、サイバーセキュリティの専門家や、技術的知見を持つプロジェクトマネージャーへのキャリアパスも有望とされます。自身の興味や適性を見極め、専門性を高めていくことが、長期的な市場価値の維持・向上につながるとされています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">インフラエンジニア 転職 / SRE・DevOps キャリアパス</span>
+      <h1 id="fv-h1">
+        <span class="accent">インフラエンジニア 転職</span>完全ガイド<br />
+        SRE/DevOps キャリアパスと年収帯
+      </h1>
+      <p class="lede">
+        インフラエンジニアは SRE / DevOps への進化と年収アップの両立が可能な領域とされ、年収 500-1,500 万円帯の求人が活発なとされています。コード化 (IaC) + 自動化 + 監視の 3 軸習得が転職成否を決める一般的が一般的です。
+      </p>
+      <ul class="fv-bullets">
+        <li>インフラエンジニアの 4 種類を整理</li>
+        <li>必須スキル (オンプレ + クラウド + SRE/DevOps)</li>
+        <li>業界別年収帯 (一般的目安) を提示</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 4 種類 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">インフラエンジニアの 4 種類</h2>
+      <p class="section-lede">インフラエンジニアは以下 4 種類に分類されるとされています。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">種類 1</span>
+          <h4>オンプレ インフラエンジニア</h4>
+          <p>物理サーバー / ネットワーク / DC 運用。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">種類 2</span>
+          <h4>クラウドインフラエンジニア</h4>
+          <p>AWS/GCP/Azure 設計・構築。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">種類 3</span>
+          <h4>SRE (Site Reliability Engineer)</h4>
+          <p>信頼性 + 自動化 + パフォーマンス。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">種類 4</span>
+          <h4>DevOps エンジニア</h4>
+          <p>開発 + 運用統合・CI/CD 設計。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的のケースが多く見られます。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>職種分類を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 必須スキル ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">インフラエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>の大幅アップが見込めるインフラエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        エンジニア採用市場の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談 + リモート対応</strong>で無理なく転職活動を進められる体制が整っているとされ、インフラ 500～1,200 万円・SRE 800～1,500 万円のレンジで具体的なキャリア設計が可能と言われます。
+        Linux/ネットワーク + Kubernetes/IaC + 24/365 運用設計は、DX 推進市場における技術人材の市場価値を押し上げる重要な実績として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">必須スキル (オンプレ + クラウド + SRE/DevOps)</h2>
+      <p class="section-lede">基礎スキル + SRE/DevOps スキルの両軸が評価される傾向とされています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>基礎スキル</h3>
+          <p>Linux (RHEL / Ubuntu) + ネットワーク (TCP/IP / DNS / Load Balancer) / シェル (Bash) + スクリプト (Python) / DB (MySQL / PostgreSQL) + メッセージング (Kafka / RabbitMQ)</p>
+        </div>
+        <div class="card">
+          <h3>SRE/DevOps スキル</h3>
+          <p>IaC (Terraform / Ansible / Pulumi) / コンテナ (Docker / Kubernetes) / CI/CD (GitHub Actions / Jenkins / ArgoCD) / 監視 (Datadog / Prometheus / Grafana / Elasticsearch) / クラウド (AWS / GCP / Azure いずれか + 補完)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 年収帯 ============ -->
+  <section class="lp-section"><h2>インフラエンジニアのキャリアパスと年収の基礎</h2><p>近年のIT業界では、クラウドコンピューティングの普及に伴い、インフラエンジニアに求められる役割が大きく変化しています。<br>従来のオンプレミス環境（自社運用サーバー）の構築・運用に加え、AWS、GCP、Azureといったパブリッククラウドを扱うスキルが不可欠となりつつあります。<br>この技術変化は、インフラエンジニアのキャリアパスを多様化させました。<br>具体的には、システムの信頼性向上を専門とするSRE（Site Reliability Engineer）や、開発と運用の連携を密にするDevOpsエンジニアといった新しい職種への道が開かれています。<br>年収帯は、保有スキルや経験年数によって大きく変動するのが実情です。<br>厚生労働省の「賃金構造基本統計調査」によると、情報通信業は他業種と比較して給与水準が高い傾向にありますが、その中でもクラウドや自動化といった先端技術を持つ人材は、より高い報酬が期待されると一般にいわれます。</p></section>
+
+  <!-- ============ SECTION 04 業界別求人 + 転職戦略 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">業界別 求人傾向と転職戦略 (キャリアパス別)</h2>
+      <p class="section-lede">業界別求人傾向を把握し、キャリアパス別の転職戦略を立てることが推奨されます。</p>
+      <div class="counter-box">
+        <h3>📌 業界別求人傾向 + 転職戦略 (公開情報整理)</h3>
+        <div class="row"><b>SaaS スタートアップ / Web 自社開発</b><span>SRE / DevOps 中心・自動化必須 / クラウドインフラ + 監視 + 信頼性</span></div>
+        <div class="row"><b>金融 / 製造</b><span>オンプレ + ハイブリッド + セキュリティ</span></div>
+        <div class="row"><b>外資 IT / 大手 SI</b><span>SRE / Platform Engineering 高単価 / クラウド移行プロジェクト需要高</span></div>
+        <div class="row"><b>転職戦略</b><span>オンプレ→クラウド (AWS SAA + GitHub IaC) / クラウド→SRE (監視 + Kubernetes 実務) / インフラ→DevOps (CI/CD + IaC + Python/Go) / SRE→Platform Engineer (社内基盤設計 + DevEx)</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>SRE/DevOpsへのキャリアアップ戦略と必須スキル</h2><p>インフラエンジニアからSREやDevOpsといった、より付加価値の高い職種へキャリアアップするためには、戦略的なスキル習得が求められます。<br>従来のインフラ知識に加え、現代的な開発・運用手法への深い理解が不可欠です。<br>具体的には、以下のスキルセットが重要視される傾向にあります。</p><ul><li><strong>クラウドプラットフォーム:</strong> AWS、GCP、Azureなど、少なくとも一つの主要クラウドサービスに関する深い知識と実践経験。</li><li><strong>IaC (Infrastructure as Code):</strong> TerraformやAnsibleといったツールを用い、インフラ構成をコードで管理・自動化するスキル。</li><li><strong>コンテナ技術:</strong> Dockerによるコンテナ化や、Kubernetesを用いたオーケストレーションに関する知識と運用経験。</li><li><strong>CI/CDと監視:</strong> JenkinsやGitLab CIを用いたパイプライン構築スキル、およびPrometheusやDatadog等による監視・分析能力。</li><li><strong>プログラミング:</strong> PythonやGoといった言語を用いた、運用自動化ツールの開発やスクリプティング能力。</li></ul><p>これらのスキルは、独立行政法人情報処理推進機構（IPA）が発行する「IT人材白書」などでも指摘されている、DX推進に不可欠な要素です。自身の経験を棚卸しし、計画的に学習を進めることがキャリアアップの鍵となると考えられます。</p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントの活用で期待できること (★544 ②):</strong><ul><li>自身のスキルセットやキャリアプランに合致した非公開求人を紹介してもらえる可能性があり、情報収集の時間を短縮できることが期待されます。</li><li>業界に精通したキャリアアドバイザーから、市場価値を高めるための具体的な学習計画や職務経歴書の添削といったサポートを受けられる場合があります。</li><li>公的データや業界動向に基づいた客観的な視点からアドバイスを得ることで、納得感を持って転職活動を進めやすくなる可能性があります。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

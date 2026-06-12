@@ -1,0 +1,178 @@
+---
+/**
+ * フロントエンドエンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 2,400 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-frontend-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'フロントエンドエンジニア 転職完全ガイド｜React/Vue/Next.js 年収帯とキャリアパス（2026年版・PR）';
+const description = 'React / Vue / Next.js フロントエンドエンジニアの転職を検討中の方向け。必須スキル + 業界別年収帯 + ポートフォリオ + 転職戦略を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'フロントエンドエンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / フロントエンド</span>
+      <h1 id="fv-h1">
+        <span class="accent">フロントエンドエンジニア</span>転職完全ガイド<br />
+        React/Vue/Next.js 年収帯とキャリアパス
+      </h1>
+      <p class="lede">
+        フロントエンドエンジニアは Web 主流で需要安定とされ、React/Next.js + TypeScript + パフォーマンス最適化スキルが転職市場価値を決める一般的とされています。
+        年収 500-1,200 万円帯が活発なが一般的です。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>React/Vue/Next.js 必須スキル整理</li>
+        <li>経験年数別 年収帯比較</li>
+        <li>業界別求人傾向 + 転職戦略</li>
+        <li>JILPT・IPA・厚労省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と必須スキル</h2>
+      <p class="section-lede">フロントエンドエンジニアは Web 主流で需要安定。React/Next.js + TypeScript + パフォーマンス最適化スキルが転職市場価値を決める一般的のケースが多く見られます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">フレームワーク</span><h4>React/Vue/Angular + Next.js/Nuxt</h4><p>いずれか中心 + メタフレームワーク。国内では React + Next.js 求人が多い傾向。</p></article>
+        <article class="branch"><span class="tag">TypeScript</span><h4>2026 年標準採用</h4><p>React/Next.js 案件で標準採用・必須スキルに近い傾向。型安全な開発が前提。</p></article>
+        <article class="branch"><span class="tag">状態管理</span><h4>Redux / Zustand / Pinia</h4><p>状態管理ライブラリ + CSS-in-JS / Tailwind / CSS Modules のスタイリング。</p></article>
+        <article class="branch"><span class="tag">テスト・最適化</span><h4>Jest/Vitest/Playwright + CWV</h4><p>テスト (Jest/Vitest/Playwright) + パフォーマンス最適化 (Lighthouse / Core Web Vitals)。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的と公表されています。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>必須スキルを踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">フロントエンドエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>の大幅アップが見込めるフロントエンドエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        エンジニア採用市場の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談 + リモート対応</strong>で無理なく転職活動を進められる体制が整っているとされ、フロントエンド 500～1,200 万円・SPA 専門 1,500 万円のレンジで具体的なキャリア設計が可能と言われます。
+        React/Vue + TypeScript + パフォーマンス最適化 + アクセシビリティは、DX 推進市場における技術人材の市場価値を押し上げる重要な実績として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年収帯 (一般的目安)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="経験年数別 フロントエンド年収帯">
+          <thead><tr><th>経験年数</th><th>年収帯</th><th>主要転職先</th></tr></thead>
+          <tbody>
+            <tr><td>1-2 年</td><td>400-550 万</td><td>Web 自社開発・受託</td></tr>
+            <tr><td>3-5 年</td><td>500-750 万</td><td>SaaS / EC / メディア</td></tr>
+            <tr><td>5-10 年</td><td>700-1,200 万</td><td>SaaS Senior / 外資 IT / リード</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 出典: 各転職エージェント公開求人情報サンプル (2026 年 5 月時点・首都圏中心) + JILPT + IPA IT 人材白書。年収帯は対象母集団・スキル・地域・職位・企業規模により大きく異なります。個別保証ではなく一般的とされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>フロントエンドエンジニア転職の基礎：市場動向と必須スキル</h2><p>フロントエンドエンジニアは、Webサイトやアプリケーションにおけるユーザーが直接触れる部分（UI/UX）の設計・構築を担う専門職です。<br>近年、企業のデジタルトランスフォーメーション（DX）化が加速しており、優れたUI/UXを提供できるエンジニアの需要は高い水準で推移しているとされます。<br>厚生労働省が公表する「一般職業紹介状況」においても、情報通信業は有効求人倍率が高い傾向が続いており、売り手市場であることが示唆されています。<br>転職を成功させるには、HTML、CSS、JavaScriptといった基礎技術の習得はもちろん、現代の開発現場で広く採用されているReact、Vue.js、Next.jsといったJavaScriptフレームワークの実践的なスキルが不可欠です。<br>これらの技術を使いこなし、ユーザーにとって価値のある体験を創造できる能力が、自身の市場価値を大きく左右すると考えられます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意点と公平な判断材料</h2>
+      <div class="counter-box">
+        <h3>📌 補足 (公開情報整理・公平な判断材料)</h3>
+        <div class="row"><b>React vs Vue</b><span>国内は React + Next.js 求人が多い・Vue + Nuxt はスタートアップで活用</span></div>
+        <div class="row"><b>デザイナーから転身</b><span>HTML/CSS + JavaScript 基礎 + React 学習 + 個人開発で事例あり・初期は厳しい傾向</span></div>
+        <div class="row"><b>TypeScript</b><span>2026 年は標準採用・必須スキルに近い</span></div>
+        <div class="row"><b>パフォーマンス最適化</b><span>Core Web Vitals 改善実績は高単価交渉の差別化要素</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。具体的判断はフロントエンド特化エージェントへの相談を推奨します。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>実践的転職戦略：React/Vue/Next.jsを活かしたキャリアプラン</h2><p>フロントエンドエンジニアとしての転職を成功に導くためには、戦略的なアプローチが求められます。<br>自身のスキルセットを客観的に証明するポートフォリオの準備が最初のステップです。<br>単に動作するだけでなく、コードの品質、コンポーネント設計の意図、採用した技術の理由などを明確に説明できることが重要です。<br>次に、自身の志向に合った業界や企業を選定します。<br>例えば、自社サービス開発企業、受託開発企業、Web制作会社では、求められるスキルや開発文化が異なります。<br>転職エージェントなどの専門サービスを活用することも有効な手段とされます。<br>ただし、サービス利用にあたっては、契約内容を十分に確認することが大切です。<br>消費者庁も、各種サービス契約に関する注意喚起を行っており、信頼できる情報源を基に判断することが推奨されます。<br>以下のステップを参考に、計画的に転職活動を進めることが期待されます。</p><ul><li><strong>スキルセットの棚卸しとポートフォリオの最適化：</strong> 実務レベルのスキルを証明できる、質の高い作品を準備する。</li><li><strong>ターゲット業界・企業の明確化：</strong> 自身のキャリアプランに合致する企業をリサーチし、応募先を絞り込む。</li><li><strong>専門エージェントの活用：</strong> 非公開求人の紹介やキャリア相談を通じて、効率的に情報収集を行う。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>IT エンジニア業界の選考プロセスに特化した実践的対策</li><li>大手 SIer からスタートアップまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,217 @@
+---
+/**
+ * engineer-mensetsu-taisaku LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: エンジニア 転職 面接対策 (プロセス・比較検討)
+ * ★326 DRY 流用元: engineer-tenshoku-shippai / 2026-05-22 [1h0VJx4Pud] TechGo Batch1
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニア転職の面接対策完全ガイド｜よく聞かれる質問・準備の進め方｜TechGo (PR)';
+const description = 'エンジニア転職の面接対策を、面接の種類・よく聞かれる質問・準備の進め方別に整理。技術面接・人物面接の傾向、対策の5つのステップ、逆質問の準備、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'エンジニア 転職 面接対策' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'サービスは本当に無料ですか？', a: 'はい、完全に無料です。当サービスは採用企業からの成功報酬で運営されておりますので、求職者様から費用をいただくことは一切ございません。キャリア相談から面接対策、内定後の条件交渉まで、全てのサポートを無料でご利用いただけますのでご安心ください。' },
+  { q: '在職中で忙しいのですが、利用可能でしょうか？', a: 'もちろんです。ご利用者の多くが在職中の方です。面談は平日夜間や土日にも対応しており、全てオンラインで完結します。企業との面接日程調整なども代行いたしますので、ご自身のペースで無理なく転職活動を進めることが可能です。' },
+  { q: 'すぐに転職するつもりはないのですが、相談だけでも可能ですか？', a: 'はい、情報収集やキャリア相談のみのご利用も歓迎しております。ご自身の現在の市場価値を客観的に把握する良い機会にもなると考えます。無理に転職をお勧めすることはありませんので、まずはお気軽にご自身のキャリアプランについてお聞かせください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 面接対策ガイド</span>
+      <h1 id="fv-h1">エンジニア転職の<span class="accent">面接対策</span>完全ガイド<br />よく聞かれる質問・準備の進め方</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: エンジニアの面接は<strong>技術面接と人物面接が組み合わされ、経験を具体的に語れるかが鍵</strong>とされています。本記事では面接の種類・よく聞かれる質問・準備の進め方を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>技術面接・人物面接の一般的な傾向</li>
+        <li>よく聞かれる質問のタイプ整理</li>
+        <li>面接対策を進める5つのステップ</li>
+        <li>無料サポートで面接準備の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_mensetsu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_mensetsu">
+          <span>TechGo の無料相談で面接対策の進め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・選考通過・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">エンジニア面接の種類と一般的な傾向</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>エンジニアの選考は複数の面接が組み合わされる傾向があるとされています。下表は公開情報・業界一般論をもとにした面接タイプの整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="エンジニア面接の種類">
+          <thead><tr><th>面接タイプ</th><th>主に見られる点</th><th>準備の方向性</th></tr></thead>
+          <tbody>
+            <tr><td>技術面接</td><td>開発経験・使用技術・課題への取り組み方</td><td>経験を具体的なエピソードで説明できるよう整理</td></tr>
+            <tr><td>コーディング課題 (含む場合)</td><td>基礎的な実装力・思考プロセス</td><td>落ち着いて考え方を言語化する練習</td></tr>
+            <tr><td>人物面接</td><td>志向・コミュニケーション・カルチャー適合</td><td>転職理由・志望動機を一貫した軸で整理</td></tr>
+            <tr><td>最終面接</td><td>入社意欲・キャリアの方向性</td><td>その企業で何を実現したいかの言語化</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_mensetsu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_mensetsu">
+          <span>面接の傾向を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">エンジニア面接対策転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるエンジニア面接対策転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        エンジニア面接対策領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">よく聞かれる質問の4タイプ</h2>
+      <p class="section-lede">エンジニア面接でよく問われる質問を4タイプで整理します。いずれも事前の整理で落ち着いて答えやすくなるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">質問1</span><h4>これまでの開発経験</h4><p>担当した開発・使用技術・役割を問う質問。具体的なエピソードと、そこで何を工夫したかを語れるよう整理しておくことが有効とされています。</p></article>
+        <article class="branch"><span class="tag">質問2</span><h4>転職理由・志望動機</h4><p>なぜ転職するか・なぜその企業かを問う質問。現職への不満ではなく、何を実現したいかの軸で語ることが推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">質問3</span><h4>課題への取り組み方</h4><p>技術的な課題やトラブルにどう向き合ったかを問う質問。状況・行動・結果を整理して語れると伝わりやすいとされています。</p></article>
+        <article class="branch"><span class="tag">質問4</span><h4>今後のキャリアの方向性</h4><p>今後やりたいこと・目指す方向を問う質問。応募先で実現したいことと結びつけて語ることが有効とされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_mensetsu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>エンジニア面接の特性と評価の視点</h2><p>エンジニアの転職面接は、一般的な職務経歴や志望動機を問う「人物面接」に加え、技術的なスキルや問題解決能力を測る「技術面接」が実施される点が大きな特徴です。<br>評価の視点は、主に「技術スキル」「問題解決能力」「カルチャーフィット」の3軸に分類されると一般にいわれます。<br>技術スキルでは、単にプログラミング言語を知っているかだけでなく、なぜその技術を選んだのか、どのような設計思想で実装したのかといった応用力が問われます。<br>厚生労働省が示す「ITスキル標準（ITSS）」のように、エンジニアの能力は体系的にレベル分けされており、企業はこうした基準を参考に、自社が求めるレベルに達しているかを確認する傾向があります。<br>そのため、自身のスキルセットを客観的に把握し、応募するポジションの要求レベルと照らし合わせて準備を進めることが重要とされます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">準備不足の面接 vs 準備が整った面接</h2>
+      <p class="section-lede">面接の準備度合いは選考の落ち着きに影響するとされています。下表は公開情報・業界一般論に基づく傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="面接準備の比較">
+          <thead><tr><th>観点</th><th>準備不足になりがちな状態</th><th>準備が整った状態</th></tr></thead>
+          <tbody>
+            <tr><td>経験の説明</td><td>抽象的・実績が伝わらない</td><td>具体的なエピソードで語れる</td></tr>
+            <tr><td>転職理由</td><td>現職への不満が中心</td><td>実現したいことの軸で語れる</td></tr>
+            <tr><td>企業理解</td><td>志望動機が一般論にとどまる</td><td>その企業ならではの動機を語れる</td></tr>
+            <tr><td>逆質問</td><td>用意していない</td><td>体制・カルチャーを確認する質問を準備</td></tr>
+            <tr><td>当日の落ち着き</td><td>想定外の質問で動揺しやすい</td><td>想定質問の準備で落ち着いて対応</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>技術面接を突破するための具体的な準備戦略</h2><p>技術面接を通過するためには、戦略的な準備が不可欠です。<br>まず、自身の経験を棚卸しし、提出したポートフォリオや職務経歴書に記載したプロジェクトについて、深く説明できるように準備します。<br>特に、なぜそのアーキテクチャや技術を選んだのか、開発中に直面した課題をどう乗り越えたのか、といった背景を論理的に語れることが重要です。<br>経済産業省が「DXレポート」で指摘するように、現代の企業は変化に対応できる自律的なIT人材を求めており、面接ではそうした主体性や思考力が試されるとされます。<br>具体的な準備としては、以下の3点が挙げられます。</p><ul><li><strong>ポートフォリオの深掘り:</strong> 自身が作成した成果物について、使用技術の選定理由、設計思想、苦労した点、そして今後の改善案まで、あらゆる角度からの質問に答えられるように整理しておきましょう。</li><li><strong>コーディングテスト対策:</strong> 競技プログラミングサイトなどを活用し、アルゴリズムとデータ構造の基礎的な問題を時間内に解く練習を重ねることが有効とされます。思考プロセスを言語化する練習も同時に行いましょう。</li><li><strong>システム設計の学習:</strong> 大規模なWebサービスを想定したシステム設計に関する質問に備え、ロードバランサー、キャッシュ、データベースといった基本的な構成要素の役割と連携について理解を深めておくことが推奨されます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値の最大化を支援</li><li>在職中の慎重な活動をサポート</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜300万円の事例も）</li><li>エンジニア特化コンサルタントによる専門的支援</li><li>厳選された非公開・ハイクラス求人のご紹介</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>納得いくまで検討可能、内定後の辞退も自由</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-shokumukeirekisho/"><h4>エンジニア 職務経歴書の書き方</h4><p>STAR フレームワークと技術スタックの伝え方</p></a>
+        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
+        <a class="card-link" href="/engineer-30dai-tenshoku/"><h4>30代エンジニア転職ガイド</h4><p>市場価値とキャリアパス</p></a>
+        <a class="card-link" href="/it-mikeiken-tenshoku/"><h4>IT 未経験転職ガイド</h4><p>未経験からのエンジニア転職の進め方</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">面接準備を整え、納得のいくエンジニア転職に近づく</h2>
+      <p>エンジニア面接は経験の言語化と準備で落ち着いて臨めるとされています。TechGo の無料相談で、想定質問の準備・経験の言語化を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_mensetsu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_mensetsu">
+          <span>TechGo の無料相談で面接対策の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mensetsu-taisaku/">コンサル面接対策 完全ガイド｜ケース面接・行動面接・GDの種類別対策と準備法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-mensetsu-taisaku/">会計士 面接対策ガイド｜よくある質問と回答軸の整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/mensetsu/">転職面接 自己紹介｜評価される構成・1 分 / 3 分テンプレートと職種別例文集 (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

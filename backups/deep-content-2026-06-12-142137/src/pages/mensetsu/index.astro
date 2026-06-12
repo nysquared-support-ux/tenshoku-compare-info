@@ -1,0 +1,249 @@
+---
+/**
+ * 転職面接 自己紹介 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Article/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-mensetsu-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '転職面接 自己紹介｜評価される構成・1 分 / 3 分テンプレートと職種別例文集 (2026年版・PR)';
+const description = '転職面接の自己紹介で第一印象を上げたい方へ。面接官が評価する 3 要素・1 分 / 3 分テンプレート・職種別例文・NG パターンを公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '転職面接 自己紹介' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article', 'headline': title, 'description': description,
+  'datePublished': '2026-05-08', 'dateModified': '2026-05-08',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職面接対策', 'about': '転職面接 自己紹介の構成と例文',
+};
+const faq = [
+  { q: '自己紹介の最適な長さは？1分と3分、どちらを準備すべきですか？', a: '企業の指定に従うのが基本ですが、指定がない場合は1分で簡潔にまとめるのが一般的とされます。ハローワークインターネットサービスでも、面接対策として簡潔な自己PRの準備が推奨されています。状況に応じて調整できるよう、1分版と3分版の両方を準備しておくと、より安心して面接に臨めるでしょう。' },
+  { q: '自己紹介で職務経歴書に書いてあることをそのまま話しても良いですか？', a: '職務経歴書の情報をそのまま読み上げるのは避けるべきとされます。自己紹介は、記載内容の中から応募職種で特に活かせる強みや実績を抽出し、自身の言葉で熱意を伝える場です。例えば「売上を120%達成した経験を、貴社の○○事業で再現したい」など、要点を絞って話すことで面接官の興味を引くことが期待できます。' },
+  { q: '未経験の職種に応募する場合、自己紹介で何をアピールすれば良いですか？', a: '未経験職種への応募では、ポータブルスキル（課題解決能力、学習意欲、コミュニケーション能力など）をアピールすることが有効です。これまでの経験から応募職種との共通点を見つけ出し、貢献できる可能性を示すことが重要になります。当ページの「職種別 自己紹介の差別化ポイント」もご参照ください。' },
+  { q: '自己紹介で避けるべきNGな話題はありますか？', a: '前職への不満やネガティブな退職理由、過度な自慢話、給与や待遇に関する質問などは、自己紹介の段階では避けるのが一般的です。これらの話題はマイナスの印象を与えかねません。あくまで自身の強みと、入社後にどう貢献したいかというポジティブな側面に焦点を当てることが推奨されます。' },
+  { q: '自己紹介を覚えるのが苦手です。丸暗記は必要ですか？', a: '丸暗記は棒読みになりやすく、熱意が伝わりにくい可能性があるため推奨されません。伝えるべき要点（①経歴要約 ②強みと実績 ③入社意欲）を整理し、キーワードを元に話す練習が効果的です。厚生労働省の職業情報提供サイト（job tag）で職務内容を再確認し、自身の言葉と結びつけるのも良い方法とされます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> mensetsu に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は mensetsu に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">転職面接 自己紹介 / 評価される構成 + 例文</span>
+      <h1 id="fv-h1">
+        転職面接 <span class="accent">自己紹介</span><br />
+        評価される構成・1 分 / 3 分テンプレと職種別例文集
+      </h1>
+      <p class="lede">
+        転職面接の自己紹介で評価されるのは「①コミュニケーション力 ②職務との関連性 ③自己 PR の明確性」の 3 要素です。1 分版 (40-60 秒・標準) と 3 分版 (詳細版) の 2 種類を準備し、面接官の指示に応じて使い分けることが推奨されます。
+      </p>
+      <ul class="fv-bullets">
+        <li>面接官が評価する 3 要素を整理</li>
+        <li>5 要素フレームワーク + 1 分 / 3 分テンプレート</li>
+        <li>職種別の差別化ポイント + NG パターン 5 例</li>
+        <li>厚労省・JILPT・国民生活センター・総務省統計局 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-08</span>
+        <span><b>最終更新</b> 2026-05-08</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 最初の 40 秒 + 評価 3 要素 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職面接の自己紹介は「最初の 40 秒」が決める</h2>
+      <p class="section-lede">面接開始時の「まず自己紹介をお願いします」の 40-60 秒間で面接官は第一印象を形成し、その後の質問の方向性を決めます。自己紹介は面接全体の流れを決める重要なオープニングです。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">評価 ①</span>
+          <h4>コミュニケーション力</h4>
+          <p>聞き手に伝わる構成・声量・話すテンポ・言葉の選び方。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">評価 ②</span>
+          <h4>職務との関連性</h4>
+          <p>応募職種にマッチする経歴・スキル・実績の整合性。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">評価 ③</span>
+          <h4>自己 PR の明確性</h4>
+          <p>自分の強み + 根拠となる実績数値の組み合わせ。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">使い分け</span>
+          <h4>1 分 / 3 分</h4>
+          <p>標準は 1 分 (40-60 秒)。「3 分でお願いします」等の指定時のみ 3 分版を使用。両方を準備しておくことが安心。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事は <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> 職業情報提供サイト + <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> + <a href="https://www.stat.go.jp/" target="_blank" rel="noopener">総務省統計局</a> + 各転職エージェント公開情報を整理した一般論であり、断定的事実ではありません。個別状況により大きく異なります。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>評価 3 要素を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 5 要素フレームワーク + テンプレ ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">面接対策転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める面接対策転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        面接対策領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">評価される自己紹介の構成 (5 要素フレームワーク) と例文</h2>
+      <p class="section-lede">高評価を得る自己紹介は 5 要素で構成することが推奨されます。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>5 要素フレームワーク</h3>
+          <p>① 名前と挨拶 (「本日はお時間をいただきありがとうございます。<br>○○と申します」) ② 直近の職務概要 ③ 主要実績 1-2 件 (達成率・改善率・規模等の数値) ④ 強み (応募職種との接点) ⑤ 結び。<br>構成順序は職種・面接官の好みで微調整可・最重要は②③④のバランス。</p>
+        </div>
+        <div class="card">
+          <h3>1 分版テンプレート例文</h3>
+          <p>本日はお時間をいただきありがとうございます。<br>○○と申します。<br>現在は△△株式会社で SaaS 営業として、エンタープライズ企業向けの新規開拓を担当しています。<br>直近では年間目標の 130% を達成し、社内 MVP を受賞しました。<br>お客様の課題を深く理解し、長期的な信頼関係を構築することを強みとしており、御社でもこの経験を活かして成長に貢献したいと考えております。<br>本日はよろしくお願いいたします。(※実績数値・職種は応募先に合わせて置換)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 職種別差別化 ============ -->
+  <section class="lp-section"><h2>転職面接における自己紹介の基本構成</h2><p>転職面接における自己紹介は、応募者の第一印象を形成し、その後の質疑応答への関心を引くための重要なステップとされます。<br>単なる経歴の羅列ではなく、面接官が「この人と一緒に働きたいか」「自社で活躍してくれそうか」を判断する最初の材料となります。<br>公開情報をもとに整理すると、評価される自己紹介は主に3つの要素で構成されるのが一般的です。<br>第一に「経歴の要約」、第二に「応募職種に関連する強みと実績」、そして第三に「入社意欲と貢献への展望」です。<br>これらの要素を1分から3分程度で論理的に繋げ、簡潔かつ具体的に伝えることが求められます。<br>厚生労働省の「ハローワークインターネットサービス」でも、面接準備の重要性が強調されており、自己分析を通じて自身のキャリアを客観的に棚卸しすることが、説得力のある自己紹介に繋がるとされています。</p></section>
+
+  <!-- ============ SECTION 04 NG パターン ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">やりがちな NG パターン (5 例) と練習・エージェント活用</h2>
+      <div class="counter-box">
+        <h3>📌 NG パターンと改善策 (公開情報整理)</h3>
+        <div class="row"><b>職務経歴を全部話す</b><span>時間制限を意識せず網羅的に → 直近 + 関連実績 1-2 件に絞る</span></div>
+        <div class="row"><b>志望動機を長々と</b><span>自己紹介と志望動機の混同 → 志望動機は別質問・1-2 文の概要のみ</span></div>
+        <div class="row"><b>数値が一切ない抽象的な実績</b><span>感想ベース → 達成率・規模・改善率を必ず数値化</span></div>
+        <div class="row"><b>転職理由を最初に話す</b><span>ネガティブ情報を冒頭に → 転職理由は別質問・自己紹介はポジティブに</span></div>
+        <div class="row"><b>早口・棒読みで人柄が見えない</b><span>緊張・テンプレ暗記すぎ → 事前録画チェック・構成理解で柔軟対応</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">※ 自己紹介は事前準備で差がつくセクション。転職エージェントを活用すると模擬面接・実際の自己紹介フィードバック・職種別評価傾向情報を得られます。<br /><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は内定保証・効果保証ではなく、特定企業・エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>面接対策の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、具体的な面接対策は各転職エージェントの模擬面接サービス等を活用してください。最終確認日: 2026-05-08。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>【時間別】自己紹介テンプレートと職種別ポイント</h2><p>自己紹介は、面接官から指定された時間に合わせて内容を調整する能力も評価対象となることがあります。<br>ここでは「1分」と「3分」のケースを想定した構成例と、職種別のポイントを解説します。<br>自身の経験を客観的に整理する際には、厚生労働省が運営する職業情報提供サイト「job tag」で、応募職種に求められるスキルや知識を確認することも参考になるとされます。</p><ul><li><strong>1分テンプレート（約250～300字）</strong>: 結論ファーストで、最も伝えたい強みと実績を簡潔に述べます。「（氏名）と申します。現職では〇〇として△△の経験を積んでまいりました。特に□□のスキルを活かし、売上を120%達成した実績がございます。この経験を活かし、貴社の〇〇事業の拡大に貢献できると考えております。」のように、要点を絞り、熱意を伝える構成が効果的です。</li><li><strong>3分テンプレート（約750～900字）</strong>: 1分の内容を深掘りし、背景や具体的なエピソードを加えて構成します。経歴の要約に始まり、複数の実績やスキルを具体的なエピソードを交えて説明し、最後に応募企業への理解と貢献意欲で締めくくります。ストーリー性を持たせることで、人柄や思考プロセスをより深く伝えることが期待できます。</li><li><strong>職種別のポイント</strong>: 営業職なら「実績の数値化」、エンジニア職なら「使用技術と課題解決プロセス」、企画・マーケティング職なら「担当したプロジェクトの成果と分析力」など、職種で求められる能力を明確に示すことが重要です。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-case-mensetsu/">コンサル ケース面接対策 完全ガイド｜頻出5タイプ + 解法フレームワーク + 4週間ロードマップ｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mensetsu-taisaku/">コンサル面接対策 完全ガイド｜ケース面接・行動面接・GDの種類別対策と準備法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-mensetsu-taisaku/">エンジニア転職の面接対策完全ガイド｜よく聞かれる質問・準備の進め方｜TechGo (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-mensetsu-taisaku/">会計士 面接対策ガイド｜よくある質問と回答軸の整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/twinpro-kaikeishi-mensetsu-junbi/">公認会計士の面接準備の整理｜面接対策の進め方 (2026年版・PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

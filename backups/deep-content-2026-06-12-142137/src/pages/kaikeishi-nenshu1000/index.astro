@@ -1,0 +1,259 @@
+---
+/**
+ * 会計士 年収1000万 転職おすすめ LP (ツインプロ・RichLayout 準拠)
+ * ★326 DRY zeirishi-kamoku-tenshoku テンプレ流用
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE 001 / BXB8X 003 / BXYE9 006・再入力禁止)
+ * slug: kaikeishi-nenshu1000 / KW: 会計士 年収1000万
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '公認会計士で年収1000万を目指す転職おすすめ4社比較｜到達しやすいキャリアパスと選び方【2026年版】';
+const description = '公認会計士で年収1000万円を目指す転職を検討する方向けに、転職エージェント4社 (ツインプロ・マイナビ会計士・MS-Japan・リクルート) を公開情報で整理。年収1000万に届きやすいキャリアパス・年収データ・選び方5基準が分かる(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '会計士 年収1000万 転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '公認会計士の年収アップ転職エージェント主要 4 サービス比較',
+  'description': '公認会計士・高年収帯を目指す士業人材向け転職エージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・年収帯を踏まえた交渉支援', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '税理士・会計士特化・大手系列・若手中堅対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・会計士向け・事業会社管理部門の高年収帯にも強み', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・会計士・経理求人もカバー・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '公認会計士の平均年収は？年収1000万円は現実的ですか？', a: '厚生労働省の「賃金構造基本統計調査」によると、公認会計士・税理士の平均年収は700万円台とされますが、これは全年齢の平均です。経験10年前後でマネージャークラスになれば、監査法人でも年収1000万円に到達することは一般的とされます。事業会社やコンサルティングファームへの転職で、さらに早期に達成できる可能性もあります。' },
+  { q: '年収1000万円を目指すなら、監査法人と事業会社のどちらが良いですか？', a: '監査法人ではシニアやマネージャーへの昇進で到達が期待されます。一方、事業会社ではCFO候補や経営企画など、より経営に近いポジションで高年収が提示されることがあります。自身の専門性やキャリア志向に合わせて選択することが重要です。まずは転職エージェントに相談し、両方の選択肢を比較検討することをおすすめします。' },
+  { q: 'FASやコンサルなど未経験分野への転職で年収1000万円は可能ですか？', a: '可能です。特にBig4系のFASやコンサルティングファームでは、公認会計士資格と監査経験が高く評価され、未経験でもポテンシャル採用で高い年収が提示されるケースが多く見られます。ただし、論理的思考力など監査業務とは異なるスキルセットも求められるため、事前の対策が重要とされます。' },
+  { q: '転職で年収1000万円の求人を得るための注意点は？', a: '自身の経験やスキルが、企業のどの課題を解決できるかを具体的に示すことが重要です。特にマネジメント経験や特定の業界・会計基準に関する専門知識は高く評価される傾向にあります。年収交渉では、自身の市場価値を客観的なデータに基づいて説明できるよう、事前に情報収集しておくことが望ましいとされます。' },
+  { q: '地方在住でも公認会計士が年収1000万円を目指すことはできますか？', a: '可能です。都市部に比べ求人数は限られる傾向にありますが、大手企業の地方拠点や、リモートワークを許容する企業の求人が増えています。また、地域の中核企業のCFO候補といったポジションでは、高い年収が提示されることもあります。地域に特化した求人情報を持つエージェントを活用することが有効な手段とされます。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name,
+    ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">¥</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 価格・料金</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> kaikeishi nenshu1000 に焦点を当てた 価格・料金 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 価格・料金 全体を扱うのに対し、本 LP は kaikeishi-nenshu1000 に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">公認会計士 senior マネージャー候補 +700万円超 両軸 | BIG4 brand 60-100年</span>
+      <h1 id="fv-h1">
+        公認会計士で<span class="accent">年収1000万</span>を目指す転職おすすめ 4 社比較<br />
+        到達しやすいキャリアパスと選び方 5 基準
+      </h1>
+      <p class="lede">
+        公認会計士が年収1000万円帯を目指す転職は ① 士業特化エージェント (ツインプロ等) ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の 3 軸組合せが推奨されます。
+        厚生労働省・日本公認会計士協会・JILPT 公的出典をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>年収1000万帯に届きやすいキャリアパス 5 選</li>
+        <li>監査法人・FAS・コンサル・事業会社の年収目安</li>
+        <li>4 社比較 + 選び方 5 基準 + 利用の流れ 5 ステップ</li>
+        <li>厚労省・日本公認会計士協会 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=nenshu1000_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="nenshu1000_fv">
+          <span>ツインプロ公式で会計士・士業特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">年収1000万に届きやすいキャリアパスと年収目安</h2>
+      <p class="section-lede">公認会計士が高年収帯を目指す際の代表的なキャリアパスと、各パスの年収目安を公開情報ベースで整理します。年収は経験・役職・勤務先により大きく変動します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス①</span><h4>監査法人マネージャー以上</h4><p>公開情報上、監査法人内でシニア→マネージャー→シニアマネージャーと昇進するにつれ年収帯が上がっていくとされ、マネージャー以上で1000万円帯に届くケースがあるとされています。</p></article>
+        <article class="branch"><span class="tag">パス②</span><h4>FAS (財務アドバイザリー)</h4><p>公開情報上、M&A・財務デューデリジェンス・バリュエーション等を扱うFASは専門性が高く、高年収帯につながりやすい領域として挙げられることがあります。</p></article>
+        <article class="branch"><span class="tag">パス③④</span><h4>コンサルファーム / 事業会社経営管理</h4><p>コンサル: 戦略・財務領域で会計士の専門性が評価されるとされる。事業会社: 経営企画・CFO候補など経営管理職で高年収帯の例があるとされています。</p></article>
+        <article class="branch"><span class="tag">パス⑤</span><h4>独立開業</h4><p>公開情報上、独立は収入の上限が広がる一方で変動も大きいとされます。実務経験・顧客基盤の積み上げが前提とされています。</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>年収データ (公開情報)</h3><p><strong>厚生労働省「賃金構造基本統計調査(令和6年)」</strong>: 公認会計士・税理士の平均年収は856.3万円とされています。<br />これは平均値であり、役職・勤務先・経験により上下に大きく分布します。年収1000万円帯は一定の経験・役職を前提とした水準とされ、本記事は特定の年収を保証するものではありません。</p></div>
+        <div class="card"><h3>本記事で得られる判断</h3><p>① 4 社の対象・強み比較<br />② 高年収帯を目指すキャリアパス別の方針<br />③ 失敗回避 5 基準<br />④ 利用の流れ 5 ステップ<br />⑤ 年収交渉でエージェントを活用する考え方</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報・各エージェント公開情報の整理であり、独自の口コミ調査結果ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-23。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=nenshu1000_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="nenshu1000_features">
+          <span>キャリアパスを踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">会計士年収 1000 万円転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める会計士年収 1000 万円転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、公認会計士 700～1,800 万円・M&A/PE 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        会計士年収 1000 万円領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="公認会計士の高年収転職向け転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>会計士・税理士・士業有資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け転職エージェント・年収帯を踏まえた相談</td></tr>
+            <tr><td>マイナビ会計士</td><td>公認会計士・税理士</td><td>大手系列・求人数</td><td>株式会社マイナビ運営・会計士・税理士特化・若手中堅対応</td></tr>
+            <tr><td>MS-Japan</td><td>経理・財務・会計士</td><td>管理部門特化</td><td>事業会社の管理部門・経営管理職転職に強み・MS-Japan 社運営</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (会計・経理含む)</td><td>求人数 60 万件+</td><td>会計士・経理求人も一部カバー・士業特化との併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-nenshu1000_hero" target="_blank" rel="nofollow" data-page-slug="kaikeishi-nenshu1000">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>公認会計士が年収1000万円を目指すためのキャリア基礎</h2><p>公認会計士のキャリアにおいて、年収1000万円は一つの大きな目標とされます。<br>厚生労働省が公表する「賃金構造基本統計調査」によれば、「公認会計士・税理士」の平均年収は700万円台で推移しており、日本の平均給与を大きく上回りますが、これはあくまで全年齢・全キャリアの平均値です。<br>実際には、経験年数、専門性、勤務先の種類（監査法人、コンサルティングファーム、事業会社など）によって年収は大きく変動します。<br>特に、Big4と呼ばれる大手監査法人では、経験5年目前後のシニアスタッフで800万円前後、10年前後のマネージャーで1000万円を超えるのが一般的とされます。<br>転職市場においても公認会計士の専門性は高く評価されており、適切なキャリアパスを選択することで、年収1000万円の達成は十分に現実的な目標と言えるでしょう。<br>自身の市場価値を正しく理解し、長期的な視点でキャリアプランを立てることが重要です。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ — 年収帯を目指すキャリア戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>3 軸併用戦略</b><span>ツインプロ (士業特化) + MS-Japan (管理部門特化) + リクルート (求人数) の 2〜3 社並行登録</span></div>
+        <div class="row"><b>キャリアパス別方針</b><span>監査法人内昇進: 着実な年収上昇 / FAS・コンサル: 専門性で高年収帯 / 事業会社経営管理: 経営に近い役割 / 独立: 上限が広がる一方で変動も大きい</span></div>
+        <div class="row"><b>向いている人</b><span>会計士としての専門性を活かしてキャリアアップ・年収帯の向上を検討したい方・在職中に相談したい方</span></div>
+        <div class="row"><b>向かない人</b><span>会計・士業と全く関係ない異業種転職を検討中の方は総合型エージェントを優先</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動 3 ステップ: STEP1 2〜3 社並行登録 &rarr; STEP2 各担当者と経験・希望年収帯を共有 &rarr; STEP3 求人比較・面接で最終判断。<strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は公開情報整理であり、転職成功保証・年収アップ保証ではなく特定エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-nenshu1000_footer" target="_blank" rel="nofollow" data-page-slug="kaikeishi-nenshu1000">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=nenshu1000_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="nenshu1000_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談を活用ください。最終確認日: 2026-05-23。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>年収1000万円到達への具体的なキャリアパスと転職戦略</h2><p>公認会計士が年収1000万円に到達するためのキャリアパスは多様です。<br>それぞれの特徴を理解し、自身の志向に合った道筋を描くことが成功の鍵となります。<br>転職エージェントのような職業紹介事業者は、求職者と求人者の間の雇用関係の成立を斡旋する役割を担っており（職業安定法 第4条）、専門家の視点から最適なマッチングを支援することが期待されます。<br>公開情報をもとに整理した、具体的なキャリアパスと、そのための戦略は以下の通りです。</p><ul><li><strong>大手監査法人での昇進:</strong> 最も一般的とされるパスです。シニアスタッフからマネージャーへと順調に昇進することで、安定的に年収1000万円を目指すことが可能です。監査や会計の専門性を深めたい方に向いているとされます。</li><li><strong>FAS・コンサルティングファームへの転職:</strong> M&Aアドバイザリーや企業再生など、より専門的で付加価値の高い業務に従事します。監査法人時代より高い年収が提示されることが多く、知的好奇心が旺盛な方におすすめされます。</li><li><strong>事業会社への転職（経理・財務・経営企画）:</strong> 上場企業やIPO準備企業のCFO候補、経営企画担当として、事業の成長に直接貢献するキャリアです。経営に近い立場で働きたいという志向を持つ方に適しているとされます。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>金融出身者のコンサル転職に特化した実践的対策</li><li>戦略系・総合系・FAS、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-20dai/">公認会計士20代の転職おすすめ4社比較｜試験合格直後・監査法人スタッフ向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-30dai/">公認会計士30代の転職おすすめ4社比較｜マネージャー昇進前後・キャリア再考期向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-consul/">会計士コンサル転職おすすめ4社比較｜公認会計士・監査法人経験者→戦略コンサル選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-freelance/">公認会計士フリーランスおすすめ4社比較｜業務委託・週2-3日勤務・独立志向者向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-jigyoukaisha/">会計士 事業会社 転職おすすめ4社比較｜監査法人からCFO・経営企画・管理部門へのキャリアパス【2026年版】</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">¥ 価格・料金 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">職業別の収入と労働条件</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://shigoto.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業情報提供サイト</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

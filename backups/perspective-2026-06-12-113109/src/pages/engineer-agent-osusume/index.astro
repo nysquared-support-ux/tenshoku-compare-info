@@ -1,0 +1,219 @@
+---
+/**
+ * engineer-agent-osusume LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: エンジニア 転職エージェント おすすめ (比較検討・★354 偽ランキング回避=選び方ガイド)
+ * ★326 DRY 流用元: consul-tenshoku-40dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニア転職エージェントの選び方完全ガイド｜タイプ別の特徴と自分に合う選定基準｜TechGo (PR)';
+const description = 'エンジニア向け転職エージェントをタイプ別 (総合型・IT特化型・ハイクラス型・スカウト型) に整理し、自分に合うエージェントの選定基準を解説。総合型と特化型の使い分け、活用で差がつくポイント、無料サポートの活用法までを公開情報ベースで紹介（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'エンジニア 転職エージェント 選び方' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'エンジニア特化型と総合型エージェントの法的な違いはありますか？', a: '法的な枠組みは同じで、いずれも厚生労働省の許可を得た「職業紹介事業」です。大きな違いはサービスの専門性にあります。特化型はIT業界の技術トレンドや職務内容への理解が深い傾向があり、より専門的なキャリア相談が期待できるとされます。一方、総合型は幅広い業界の求人を保有している点が特徴です。' },
+  { q: '未経験からエンジニアを目指す場合、エージェントはどのように活用すれば良いですか？', a: 'まず学習内容や自己PRを職務経歴書にまとめ、相談の準備をします。初回面談で「未経験者向けの求人紹介実績」や「ポートフォリオ作成に関するアドバイス」が可能かを確認しましょう。エージェントによっては、未経験可の求人を非公開で扱っている場合があるため、積極的に情報収集することが重要とされます。' },
+  { q: '複数の転職エージェントに登録する際の注意点は何ですか？', a: '複数のエージェントを利用すること自体に問題はありません。しかし、同じ企業に異なるエージェントから重複して応募すると、企業側に管理が煩雑な印象を与えかねません。どのエージェントからどの企業に応募したか、自身でしっかり管理することが、円滑な転職活動につながると一般にいわれます。' },
+  { q: 'エージェントから強引に応募を勧められた場合、どう対処すれば良いですか？', a: '興味のない求人には、理由を添えて丁寧にお断りしましょう。職業安定法では、求職者が自由に職業を選択できることが基本原則とされています。もし担当者の対応に違和感が続く場合は、そのエージェントの別の担当者に変更を依頼するか、利用を中止するのも一つの選択肢です。' },
+  { q: '自分に合うエンジニア転職エージェントを見つけるための最も重要なポイントは何ですか？', a: '最も重要なのは「担当キャリアアドバイザーとの相性」と「技術への理解度」です。自身のキャリアプランを正確に理解し、的確なアドバイスや質の高い求人を提案してくれるかを見極めることが成功の鍵とされます。複数のエージェントと面談し、比較検討することをおすすめします。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / エージェント選び方ガイド</span>
+      <h1 id="fv-h1">エンジニア<span class="accent">転職エージェント</span>の選び方<br />タイプ別の特徴と、自分に合うエージェントの見極め方</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 転職エージェントは「どこが一番か」ではなく<strong>自分のキャリアフェーズと専門領域に合うタイプを選ぶこと</strong>が重要とされています。本記事ではエージェントをタイプ別に整理し、選定基準と使い分けを現実的に解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、特定サービスの優劣を断定するものではありません。</p>
+      <ul class="fv-bullets">
+        <li>転職エージェントのタイプ別の特徴と向いている人</li>
+        <li>自分に合うエージェントを選ぶ5つの基準</li>
+        <li>総合型と IT 特化型エージェントの使い分け</li>
+        <li>無料サポートで転職の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_agent">
+          <span>IT 特化エージェント TechGo の無料相談を試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職エージェントのタイプ別整理</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> / IT エンジニア特化エージェント公開情報・各社公式サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>転職エージェントはサービスごとに得意領域が異なるとされています。下表は公開情報・業界一般論をもとにしたタイプ別の整理であり、特定サービスの優劣評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="転職エージェントのタイプ別整理">
+          <thead><tr><th>タイプ</th><th>主な特徴</th><th>向いている人</th><th>留意点</th></tr></thead>
+          <tbody>
+            <tr><td>総合型大手</td><td>求人数が多く幅広い業種をカバー</td><td>選択肢を広く見たい人</td><td>エンジニア専門性は担当者により差があるとされる</td></tr>
+            <tr><td>IT・エンジニア特化型</td><td>技術理解のある担当・IT 求人が中心</td><td>技術軸でキャリアを考えたい人</td><td>業種の幅は総合型より狭い傾向</td></tr>
+            <tr><td>ハイクラス特化型</td><td>高年収・管理職層の求人が中心</td><td>年収・ポジションを上げたい経験者</td><td>一定の経験・スキルが前提となる傾向</td></tr>
+            <tr><td>スカウト型サービス</td><td>企業からのオファーを受け取る形式</td><td>自分の市場価値を測りたい人</td><td>受け身になりやすく自走も必要とされる</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_agent">
+          <span>IT 特化型エージェント TechGo の特徴を無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">エンジニアエージェント転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるエンジニアエージェント転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        エンジニアエージェント領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">エージェント活用で差がつく4つのポイント</h2>
+      <p class="section-lede">同じエージェントでも使い方によって得られる支援の質は変わるとされています。差がつきやすいポイントを4つ整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">ポイント1</span><h4>担当者の技術理解度を見る</h4><p>担当者が技術スタックや開発現場を理解しているほど、求人マッチングや書類添削の精度が高まりやすいとされています。初回面談での会話で見極めやすいとされています。</p></article>
+        <article class="branch"><span class="tag">ポイント2</span><h4>非公開求人の比率と質</h4><p>公開求人だけでなく非公開求人をどれだけ扱っているか、また自分の専門性とマッチするかが重要とされています。量よりマッチ度の確認が推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">ポイント3</span><h4>面接対策・書類添削の手厚さ</h4><p>職務経歴書の添削や面接対策をどこまで支援してくれるかはサービス・担当者により差があるとされています。サポート範囲の事前確認が推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">ポイント4</span><h4>連絡頻度・スピード感の相性</h4><p>連絡の頻度やレスポンスの速さは人によって心地よい水準が異なるとされています。相性が合わないと感じたら担当変更の相談も選択肢とされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_agent_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>エンジニア転職エージェントの役割と基本構造</h2><p>エンジニア転職エージェントとは、IT・Web業界の技術職の転職支援に特化した民間の職業紹介サービスを指します。<br>これらのサービスは、厚生労働大臣の許可を得て運営されており、「職業安定法」に基づき、求職者と人材を求める企業との間の雇用関係の成立を斡旋します。<br>一般的な総合型転職エージェントとの大きな違いは、その専門性にあります。<br>エンジニア出身者やIT業界に精通したキャリアアドバイザーが在籍していることが多く、技術的なスキルセットやキャリアパスに関する深い理解に基づいたサポートが期待できるとされます。<br>求職者は無料でキャリア相談、求人紹介、選考対策などのサービスを受けられるのが一般的です。<br>これは、採用が決定した際に企業側がエージェントに成功報酬を支払うビジネスモデルに基づいています。<br>公開情報をもとに整理すると、エンジニアの多様な働き方や専門分野に対応するため、サービスも細分化されています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">総合型と IT 特化型エージェントの使い分け</h2>
+      <p class="section-lede">総合型と IT・エンジニア特化型は対立するものではなく、フェーズに応じて使い分けるものとされています。下表は公開情報・業界一般論に基づく傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="総合型と IT 特化型の使い分け">
+          <thead><tr><th>比較軸</th><th>総合型大手</th><th>IT・エンジニア特化型</th></tr></thead>
+          <tbody>
+            <tr><td>求人の幅</td><td>業種横断で広い</td><td>IT・エンジニア領域が中心</td></tr>
+            <tr><td>担当者の技術理解</td><td>担当により差がある傾向</td><td>技術理解のある担当が多い傾向</td></tr>
+            <tr><td>専門性の言語化支援</td><td>一般的なサポート</td><td>技術スタック軸の支援が得やすい傾向</td></tr>
+            <tr><td>向いているフェーズ</td><td>業種を広く検討する段階</td><td>エンジニアとしての軸が固まった段階</td></tr>
+            <tr><td>おすすめの使い方</td><td>選択肢の把握に活用</td><td>専門性を活かす求人探しに活用</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>自分に合うエンジニア転職エージェントを見極める具体的なステップ</h2><p>自分に最適なエンジニア転職エージェントを見つけるためには、体系的なアプローチが有効とされます。以下のステップを参考に、計画的に進めることが推奨されます。</p><ul><li><strong>ステップ1: 自己分析とキャリアの棚卸し</strong><br>まず、自身の経験言語、フレームワーク、プロジェクト経験、希望年収、そして将来のキャリアパス（例：スペシャリスト、マネジメント、フルリモート希望など）を具体的に書き出します。この自己分析が、エージェントに的確な希望を伝えるための土台となります。</li><li><strong>ステップ2: エージェントのタイプ選定と複数登録</strong><br>自己分析の結果を基に、IT特化型、ハイクラス型、総合型の中から2〜3社に登録します。例えば、特定の技術を極めたいなら特化型、年収アップを目指すならハイクラス型といった使い分けが考えられます。消費者庁も、サービス契約時には複数の事業者から情報を得て比較検討することを推奨しており、この考え方はエージェント選びにも応用できます。</li><li><strong>ステップ3: 初回面談での担当者の見極め</strong><br>初回面談は、担当者の質を見極める重要な機会です。こちらの技術的な話が通じるか、キャリアプランを尊重した提案をしてくれるか、業界の動向に詳しいかなどを確認しましょう。相性が合わないと感じた場合は、担当者の変更を申し出ることも可能です。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>IT エンジニア業界の選考プロセスに特化した実践的対策</li><li>大手 SIer からスタートアップまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/it-mikeiken-tenshoku/"><h4>IT 未経験転職ガイド</h4><p>未経験からのエンジニア転職の進め方</p></a>
+        <a class="card-link" href="/engineer-1000man/"><h4>エンジニア 年収1000万ガイド</h4><p>キャリアパス別の年収レンジと到達戦略</p></a>
+        <a class="card-link" href="/ses-dasshutsu/"><h4>SES 脱出ガイド</h4><p>自社開発・受託への転職と開発形態の違い</p></a>
+        <a class="card-link" href="/full-remote-engineer/"><h4>フルリモートエンジニア転職</h4><p>リモート企業の見極め方と求人の探し方</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">自分に合うエージェントを見極め、納得のいく転職に近づく</h2>
+      <p>転職エージェントは「比較して自分に合うものを選ぶ」のが基本とされています。TechGo の無料相談で、IT 特化のキャリア相談・求人マッチングを登録30秒で比較材料にできます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_agent`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_agent">
+          <span>TechGo の無料相談を試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-agent-osusume/">コンサル転職エージェントの選び方｜特化型と総合型の違い・比較軸・失敗しない基準｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-tenshoku-agent-osusume/">会計士 転職エージェントの選び方ガイド｜複数併用の参考軸（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-tenshoku-agent-osusume/">税理士 転職エージェントの選び方ガイド｜大手vs特化型の整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/osusume/">転職エージェント おすすめ｜失敗しない選び方 5 基準と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

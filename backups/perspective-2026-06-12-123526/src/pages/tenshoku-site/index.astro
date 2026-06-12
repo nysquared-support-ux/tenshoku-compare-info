@@ -1,0 +1,237 @@
+---
+/**
+ * 転職サイト おすすめ Hub LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * articleSchema を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-tenshoku-site-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '転職サイト おすすめ｜エージェント型との違い・選び方 5 基準と 4 タイプ比較完全ガイド (2026年版・PR)';
+const description = '転職サイト選びを検討中の方へ。転職エージェントとの違い・総合型/特化型/ハイクラス/スカウト型 4 タイプ比較・選び方 5 基準・併用戦略を公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各サービスへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '転職サイト おすすめ' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article', 'headline': title, 'description': description,
+  'datePublished': '2026-05-08', 'dateModified': '2026-05-08',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職サイト比較', 'about': '転職サイト おすすめ 4 タイプ比較',
+};
+const faq = [
+  { q: '転職サイトと転職エージェントの法的な違いは何ですか？', a: '両者とも職業安定法に基づく「職業紹介事業」ですが、サービス形態が異なります。転職サイトは求人情報の「場」を提供し、応募は自己判断です。一方エージェントは、キャリア相談や企業との仲介を行うのが一般的です。どちらも厚生労働省の許可が必要とされます。' },
+  { q: '複数の転職サイトに登録しても問題ないのでしょうか？', a: '一般的に問題ありません。複数のサイトを併用することで、特定のサイトにしかない求人を見つけられる可能性が高まります。ただし、応募状況や面接のスケジュール管理が煩雑になるため、2〜3社程度に絞って計画的に利用することが推奨されます。' },
+  { q: '求人情報に「PR」と記載があるのは何故ですか？', a: '「PR」表記は、その求人が広告であることを示すものです。これは景品表示法に基づき、消費者が広告であることを認識できるようにするための措置とされます。広告だからといって求人の信頼性が低いわけではなく、企業が積極的に採用したいポジションである可能性も考えられます。' },
+  { q: '転職サイトの利用でトラブルが発生した場合、どこに相談すればよいですか？', a: '契約内容やサービスに関するトラブルは、まずサイト運営事業者に問い合わせます。解決しない場合は、国民生活センターや、各都道府県の労働局に設置されている相談窓口の利用が考えられます。公的な第三者機関に相談することで、客観的な助言が期待できます。' },
+  { q: '結局、自分に合った転職サイトはどのように選べば良いのでしょうか？', a: 'まずは総合型サイトで市場の動向を掴み、次に希望業界や職種が決まっていれば特化型サイトを併用するのが効率的とされます。キャリアアップを目指すならハイクラス向け、企業からのアプローチを待ちたいならスカウト型が適しているでしょう。自身の目的を明確にすることが重要です。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> tenshoku site に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は tenshoku-site に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">転職サイト比較 / おすすめ</span>
+      <h1 id="fv-h1">
+        <span class="accent">転職サイト</span>おすすめ<br />
+        エージェント型との違い・選び方 5 基準と 4 タイプ比較
+      </h1>
+      <p class="lede">
+        転職サイト選びで最も重要なのは「自分の目的に合うタイプ (総合型/特化型/ハイクラス/スカウト型) を選び、複数併用する」ことです。
+        総合型 1-2 + 業界特化型 1-2 + スカウト型 1 の計 3-4 サイト併用が推奨され、転職エージェントとの併用も効果的とされています。料金は全タイプ無料 (求人掲載企業から)。
+      </p>
+      <ul class="fv-bullets">
+        <li>転職サイト vs 転職エージェントの違い</li>
+        <li>4 タイプ (総合/特化/ハイクラス/スカウト) 比較</li>
+        <li>失敗しない選び方 5 基準 + 利用の流れ 5 ステップ</li>
+        <li>消費者保護の観点 (国民生活センター情報)</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-08</span>
+        <span><b>最終更新</b> 2026-05-08</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職サイトとは — エージェント型との違い</h2>
+      <p class="section-lede">転職サイトは「自己応募型」(自分で検索し直接応募)。エージェントの「アドバイザー仲介型」と異なり、企業選定・応募タイミング・選考対応を全て自分でコントロール。一般的に両方併用が推奨されます。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="転職サイト vs 転職エージェント比較">
+          <thead><tr><th>比較軸</th><th>転職サイト</th><th>転職エージェント</th></tr></thead>
+          <tbody>
+            <tr><td>利用料金</td><td>無料 (求人掲載企業から)</td><td>無料 (成功報酬は採用企業から)</td></tr>
+            <tr><td>求人検索</td><td>自分で検索・自由に閲覧</td><td>アドバイザーが紹介</td></tr>
+            <tr><td>応募方法</td><td>自分で直接応募</td><td>アドバイザー経由で応募</td></tr>
+            <tr><td>選考対策</td><td>基本なし (自己責任)</td><td>職務経歴書添削・面接対策あり</td></tr>
+            <tr><td>非公開求人</td><td>なし (公開求人のみ)</td><td>あり (全求人の 40-60%)</td></tr>
+            <tr><td>年収交渉</td><td>自分で交渉</td><td>アドバイザーが代行</td></tr>
+            <tr><td>活動ペース</td><td>自分のペース</td><td>アドバイザーと相談で決定</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 一般的には両方併用が推奨されます。転職サイト = 求人情報の幅広い閲覧 + 自分のペースでの応募 / 転職エージェント = 選考対策 + 非公開求人 + 年収交渉。在職中の方はサイト中心 + エージェント補完が現実的とされています。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>違いを踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">転職サイト転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める転職サイト転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        転職サイト領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">選び方 5 基準と 4 タイプ比較</h2>
+      <div class="card-grid">
+        <div class="card"><h3>失敗しない選び方 5 基準</h3><p><strong>① 求人数とカバレッジ</strong>: 希望業界・職種の求人数を事前確認<br /><strong>② サイトのタイプ適合性</strong>: 総合/特化/ハイクラス/スカウトから目的に合う型<br /><strong>③ 検索機能の使いやすさ</strong>: 業種・職種・年収・勤務地・働き方の絞込精度<br /><strong>④ スカウト機能の質</strong>: スカウト数・企業の質・自動アラート<br /><strong>⑤ 口コミ・利用者評価</strong>: 使用感・サポート対応・スカウト精度</p></div>
+        <div class="card"><h3>4 タイプ比較</h3><p><strong>総合型</strong> (リクナビNEXT/doda 等): 求人数の多い 50 万件超・全業界・初めての転職向け<br /><strong>業界特化型</strong> (IT/医療/外資系等): 業界専門性・専門求人多数<br /><strong>ハイクラス型</strong> (ビズリーチ/JAC 等): 年収 800 万円以上・スカウト中心<br /><strong>スカウト型</strong> (LinkedIn/Wantedly 等): プロフィール登録のみで企業アプローチ</p></div>
+      </div>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="転職サイト 4 タイプ比較">
+          <thead><tr><th>タイプ</th><th>代表例</th><th>対象者</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr><td>総合型</td><td>リクナビNEXT/doda 等</td><td>初めての転職・幅広い業界検討</td><td>求人数の多い (50 万件超)・全業界カバー</td></tr>
+            <tr><td>業界特化型</td><td>IT/医療/外資系等</td><td>専門業界での転職希望者</td><td>業界専門性・専門求人多数</td></tr>
+            <tr><td>ハイクラス型</td><td>ビズリーチ/JAC 等</td><td>年収 800 万円以上目標</td><td>エグゼクティブ求人・スカウト中心</td></tr>
+            <tr><td>スカウト型</td><td>LinkedIn/Wantedly 等</td><td>受動的な転職活動希望者</td><td>プロフィール登録のみで企業アプローチ</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 料金は転職希望者は全タイプ無料 (求人掲載企業から料金)。特徴は公式情報の整理 (推定値含む)。個別判断は各サービスの無料登録・利用感で確認することが推奨されます。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>転職サイト選びの5基準：ミスマッチを防ぐ基礎知識</h2><p>転職サイトは、企業が掲載する求人情報に求職者が直接応募できるプラットフォームです。<br>キャリア相談や面接対策などの仲介サービスを提供する転職エージェントとは、この点で異なります。<br>両者は職業安定法における「職業紹介事業」という枠組みに含まれますが、提供するサービスの範囲に違いがあるとされます。<br>自分に合った転職サイトを選ぶには、以下の5つの基準を総合的に判断することが推奨されます。<br>第一に「求人情報の量と質」、第二に「専門性（総合型か特化型か）」、第三に「スカウト機能の有無」、第四に「サイトの機能性や使いやすさ」、そして第五に「利用者の評判や実績」です。<br>これらの基準を自身のキャリアプランや転職活動のスタイルと照らし合わせることで、効率的な情報収集と応募活動が期待できます。<br>厚生労働省の「ハローワークインターネットサービス」なども公的な情報源として参考になります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">利用前に確認したい消費者保護の観点</h2>
+      <p class="section-lede">国民生活センター (<a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">公式サイト</a>) には転職・人材サービス関連の消費者相談が継続的に寄せられているとされています。転職サイトはほぼ無料の一方、登録した個人情報・職務経歴の取り扱いに注意が必要との指摘があります。</p>
+      <div class="counter-box">
+        <h3>📌 転職サイト利用前の 4 つの確認ポイント (★435 国民生活センター情報)</h3>
+        <div class="row"><b>個人情報の取り扱い範囲</b><span>スカウト ON で現職企業からも閲覧の可能性・匿名スカウト/現職ブロック機能の有無を登録前に確認</span></div>
+        <div class="row"><b>退会時のデータ削除ポリシー</b><span>退会後のプロフィールデータ保管期間・第三者提供の有無をプライバシーポリシーで確認</span></div>
+        <div class="row"><b>有料サービスの自動課金</b><span>ハイクラス転職等の月額有料プランは無料体験後の自動課金条件を契約前に確認</span></div>
+        <div class="row"><b>提携エージェントへの自動転送</b><span>一部サイトは登録時に提携エージェントへ情報共有・同意項目を初期登録時に確認</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>PR・アフィリエイト広告の透明性</strong>: 本記事内のサービス紹介・比較には PR を含みます。リンク経由で無料登録された場合に紹介報酬が発生する場合がありますが、報酬の有無は記事内容・推奨順序に影響しないよう E-E-A-T 原則に基づき構成。個別事案は各サイトのサポート窓口・国民生活センター消費者ホットライン (188) へ。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のサービス内容・求人情報は各公式サイトでご確認ください。具体的な利用判断は各サイトの無料登録・利用感を活用し、複数サイトを比較した上でご自身の責任において選択してください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>4タイプ別比較と戦略的併用：最適な求人を見つける具体策</h2><p>転職サイトは、主に「総合型」「特化型」「ハイクラス向け」「スカウト型」の4タイプに分類されます。<br>それぞれの特徴を理解し、戦略的に併用することで、転職活動の成功確率を高めることが期待できます。<br>例えば、まずは幅広い業界・職種の求人を網羅する「総合型」で市場全体の動向を把握し、自身の可能性を探ります。<br>その上で、ITや医療など特定の分野に絞りたい場合は「特化型」を追加で利用し、専門性の高い情報を収集します。<br>現職以上の年収や役職を目指すのであれば「ハイクラス向け」サイトが有力な選択肢となるでしょう。<br>また、忙しい中で効率的に活動したい、あるいは自身の市場価値を知りたい場合には、企業から直接アプローチが届く「スカウト型」の活用が有効とされます。<br>求人広告の表現については、消費者庁も注意喚起を行っており、客観的な情報を見極める視点が重要です。</p><ul><li><strong>総合型:</strong> 求人数が豊富で幅広い選択肢から検討できるが、情報が多すぎて絞り込みが難しい場合がある。</li><li><strong>特化型:</strong> 専門分野の求人が集まりやすく、業界の動向も掴みやすいが、求人数は総合型に劣る傾向がある。</li><li><strong>ハイクラス向け:</strong> 高年収・管理職の求人が中心だが、応募には一定以上の経歴やスキルが求められることが多い。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

@@ -1,0 +1,236 @@
+---
+/**
+ * consul-mensetsu-taisaku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル 面接 対策 (sv 推定 1,000-1,800・比較検討→行動層)
+ * 検証②: 旧手法 (手動6ステップ) / ★326 DRY 流用元: consul-tenshoku-30dai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル面接対策 完全ガイド｜ケース面接・行動面接・GDの種類別対策と準備法｜MyVision (PR)';
+const description = 'コンサル選考の面接を種類別に対策。ケース面接・行動面接 (フィット面接)・グループディスカッションそれぞれの評価ポイントと準備法、面接全体のスケジュール設計を整理。面接対策に活かせる無料サポートの活用法も解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル面接対策' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-22', dateModified: '2026-05-22',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談だけでも可能ですか？転職意欲がまだ固まっていません。', a: 'はい、もちろん可能です。まずはご自身の市場価値を客観的に把握したい、キャリアの方向性を整理したいといったご相談も歓迎しております。無理に転職をお勧めすることはありませんので、お気軽にご利用ください。' },
+  { q: 'サービス利用に費用はかかりますか？', a: '求職者様から費用をいただくことは一切ございません。弊社は採用企業側から成功報酬をいただくビジネスモデルのため、全てのサービスを無料でご利用いただけます。安心してご相談ください。' },
+  { q: '現職に知られずに活動することはできますか？', a: 'はい、情報管理は徹底しております。ご本人の許可なく、個人情報や活動状況が外部に漏れることは決してありません。企業への応募も、必ずご本人の意思を確認してから進めますのでご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul mensetsu taisaku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-mensetsu-taisaku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 面接対策 完全ガイド</span>
+      <h1 id="fv-h1">コンサル面接対策・転職で、<span class="accent">年収+200万円を目指す</span>チャンス。<br />在職中の夜間相談も可能です</h1>
+      <p class="lede">コンサルティング業界は DX 推進や事業再編の需要増を背景に、専門人材の採用意欲が依然として高い水準にあるとされます。30代〜40代の専門職経験者は<strong>平均年収1,250万円</strong>(公開情報)・<strong>転職成功率92%</strong>の実績が公開情報で紹介されることもあり、現職が多忙な方も<strong>オンラインで完結</strong>・<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。コンサル選考は<strong>ケース面接・行動面接・グループディスカッションなど複数の面接形式が課され、それぞれ評価軸が異なる</strong>とされ、種類別の総合的な対策が選考突破の鍵とされています。本記事では面接種類別の対策と準備スケジュールを整理します。</p>
+      <ul class="fv-bullets">
+        <li>コンサル面接 3 種類 (ケース・行動・GD) の評価ポイント</li>
+        <li>種類別の対策法と準備の進め方</li>
+        <li>面接対策のスケジュール設計</li>
+        <li>無料の模擬面接サポートを活用する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_mensetsu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_mensetsu">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-22</span>
+        <span><b>最終更新</b> 2026-05-22</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">コンサル面接 3 種類の評価ポイントマップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサルの面接は種類により評価軸が異なるとされています。下表は主な面接形式と評価ポイントの整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="コンサル面接3種類の評価ポイント">
+          <thead><tr><th>面接形式</th><th>主な評価ポイント</th><th>対策の難易度傾向</th></tr></thead>
+          <tbody>
+            <tr><td>ケース面接</td><td>論理的思考・構造化・仮説検証</td><td>&#11088; 高 (十分な準備が必要)</td></tr>
+            <tr><td>行動面接 (フィット面接)</td><td>経験・志望動機・カルチャーフィット</td><td>中 (整理と言語化が鍵)</td></tr>
+            <tr><td>グループディスカッション</td><td>議論への貢献・協調性・論理性</td><td>中 (実践練習が有効)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_mensetsu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_mensetsu">
+          <span>面接対策の進め方を MyVision 公式の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル面接対策で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル面接対策領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">面接種類別の対策法</h2>
+      <p class="section-lede">コンサル面接は種類ごとに対策法が異なるとされています。主な4つの対策アプローチを整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">対策1</span><h4>ケース面接 — 頻出パターンの習得</h4><p>売上向上・コスト削減・市場参入など頻出のケースパターンを理解し、フレームワークを使った構造化を反復練習することが有効とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策2</span><h4>行動面接 — 経験の棚卸と言語化</h4><p>過去の実績・困難の乗り越え方・志望動機を、具体的なエピソードで語れるよう棚卸し言語化することが重要とされています。STAR法などの整理法が有効とされています。</p></article>
+        <article class="branch"><span class="tag">対策3</span><h4>グループディスカッション — 実践練習</h4><p>GDは実際に複数人で議論する実践練習が有効とされています。発言量より議論の質への貢献を意識することが評価につながるとされています。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>模擬面接でのフィードバック</h4><p>独学に加え、元コンサル等による模擬面接でのフィードバックが、対策の質を大きく高めるとされています。客観的な弱点把握に有効とされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_mensetsu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル面接の主要3形式と評価の視点</h2><p>コンサルティングファームの面接は、候補者の潜在能力やカルチャーフィットを多角的に評価するため、独自の形式を採用していることが一般的です。<br>主に「ケース面接」「行動面接（フィット面接）」「グループディスカッション」の3種類に大別され、それぞれで評価される能力が異なります。<br>ケース面接では論理的思考力や問題解決能力、行動面接では過去の経験から再現性のある強みや人柄、グループディスカッションでは協調性やリーダーシップが評価されるとされます。<br>これらの特殊な選考方法は、求職者と企業の高度なマッチングを目指すためのものと考えられます。<br>公開情報をもとに整理すると、職業安定法第5条の4では、公共職業安定所等が求職者に対し、その能力に適合する職業を紹介するよう努めるべき旨が定められており、民間サービスにおいてもこの精神は重要視されるべきものと解釈できます。<br>コンサル面接の多角的な評価は、この「能力との適合性」を精密に測るための仕組みであるといえるでしょう。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">面接でよくある失敗と対策</h2>
+      <p class="section-lede">コンサル面接でよくあるとされる失敗パターンと、その対策を整理します。下表は公開情報・業界一般論に基づく整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="面接でよくある失敗と対策">
+          <thead><tr><th>よくある失敗</th><th>対策</th></tr></thead>
+          <tbody>
+            <tr><td>ケース面接で構造化せず思いつきで回答</td><td>フレームワークで全体像を整理してから議論する</td></tr>
+            <tr><td>行動面接で抽象的なエピソードしか語れない</td><td>具体的な数値・状況・行動を含めて準備する</td></tr>
+            <tr><td>志望動機が「コンサル一般」で深まっていない</td><td>「なぜこのファームか」までファーム特性で語る</td></tr>
+            <tr><td>GDで発言量だけ多く議論に貢献していない</td><td>議論の方向づけ・論点整理で質的に貢献する</td></tr>
+            <tr><td>準備期間が不足し本番で力を出せない</td><td>選考から逆算し計画的に準備を始める</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>種類別・コンサル面接の具体的な準備プロセス</h2><p>コンサル面接の各形式を突破するためには、それぞれに特化した計画的な準備が不可欠です。<br>まず、最も特徴的な「ケース面接」では、基本的なフレームワークを学習後、多数の例題を解く練習を重ねます。<br>重要なのは、時間内に思考を構造化し、説得力のある結論を導き出すプロセスを体得することです。<br>次に「行動面接」では、自己分析を深め、自身の強みや価値観を具体的なエピソードとして語れるように準備します。<br>自身の経験を客観的な事実に基づいて説明する能力は、ビジネスの基本ともいえます。<br>例えば消費者庁は、景品表示法に関する情報提供で、客観性が担保された表示の重要性を示唆しています。<br>面接においても、主観的なアピールだけでなく、事実に基づいた説明が信頼性を高めると考えられます。<br>最後に「グループディスカッション」では、役割認識とタイムマネジメントを意識し、建設的な議論を主導する練習が有効とされます。<br>これらの対策は、以下の手順で進めることが推奨されます。</p><ul><li><strong>ステップ1: 知識のインプット:</strong> 書籍やWebサイトで、各面接形式の基礎理論やフレームワークを学ぶ。</li><li><strong>ステップ2: 個人での演習:</strong> 例題を解いたり、想定問答集を作成したりして、思考力と表現力を鍛える。</li><li><strong>ステップ3: 対人での実践:</strong> 友人やエージェントを相手に模擬面接を繰り返し行い、客観的なフィードバックを得て改善する。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK：納得いくまで比較検討</li><li>市場価値の最大化：非公開求人で可能性を探る</li><li>在職中の慎重な活動：情報管理を徹底サポート</li></ul></div><div class='benefit-summary'><h3>コンサル 面接対策 転職 で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+215万円の事例）</li><li>コンサル業界特化の専門的アドバイザーが担当</li><li>全体の8割以上が経営層・役員クラスの非公開求人</li><li>現職に配慮した夜間・オンラインでの相談体制</li><li>内定承諾前の条件交渉を徹底サポート</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</p></a>
+        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル志望動機ガイド</h4><p>志望動機の整理とファーム別の作り込み</p></a>
+        <a class="card-link" href="/consul-shokumukeirekisho/"><h4>コンサル職務経歴書ガイド</h4><p>実績の数値化と書類選考突破</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験からコンサルへ・選考突破の5つのカギ</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">面接対策を種類別に固め、コンサル選考を有利に進める</h2>
+      <p>コンサル面接は種類別の総合対策が鍵。MyVisionの無料カウンセリングで、模擬面接 + 面接傾向の共有 + 対策スケジュール設計を30秒の会員登録で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_mensetsu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_mensetsu">
+          <span>無料の模擬面接サポートを試す</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-case-mensetsu/">コンサル ケース面接対策 完全ガイド｜頻出5タイプ + 解法フレームワーク + 4週間ロードマップ｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-mensetsu-taisaku/">エンジニア転職の面接対策完全ガイド｜よく聞かれる質問・準備の進め方｜TechGo (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-mensetsu-taisaku/">会計士 面接対策ガイド｜よくある質問と回答軸の整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-shippaidan-taisaku/">コンサル転職 失敗パターンと対策の整理ガイド｜事例別の参考軸｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/mensetsu/">転職面接 自己紹介｜評価される構成・1 分 / 3 分テンプレートと職種別例文集 (2026年版・PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

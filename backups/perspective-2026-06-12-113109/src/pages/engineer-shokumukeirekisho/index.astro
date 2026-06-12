@@ -1,0 +1,225 @@
+---
+/**
+ * エンジニア 職務経歴書 書き方 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-engineer-shokumukeirekisho-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）';
+const description = 'IT エンジニア向け職務経歴書の書き方を、STAR フレームワーク + 技術スタック記載方法 + 採用担当者が見るポイント + NG パターンで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'エンジニア 職務経歴書ガイド' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'エンジニア 職務経歴書ガイド', 'item': 'https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/' },
+  ],
+};
+const faq = [
+  { q: 'まだ転職を決めたわけではないのですが、相談だけでも可能ですか？', a: 'もちろん可能です。まずはご自身の市場価値を客観的に把握したい、キャリアの方向性について相談したい、といった段階でのご利用を歓迎しております。無理に転職をお勧めすることは一切ございません。面談を通じて得た情報をもとに、現職に留まるという選択をされる方もいらっしゃいます。安心してご自身のキャリアを見つめ直す機会としてご活用ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア 職務経歴書 / STAR フレーム + 技術スタック</span>
+      <h1 id="fv-h1">
+        エンジニア <span class="accent">職務経歴書 書き方</span>完全ガイド<br />
+        STAR フレーム + 技術スタック + NG パターン
+      </h1>
+      <p class="lede">
+        エンジニアの職務経歴書は実績 + 数値 + 技術スタックの 3 軸が転職成否を決めると一般的に言われています。本記事では STAR フレームワーク + 技術スタック記載方法 + 採用担当者が見るポイント + NG パターンを整理します。
+      </p>
+      <ul class="fv-bullets">
+        <li>職務経歴書の基本構成 5 点を整理</li>
+        <li>実績の STAR フレームワークを体系化</li>
+        <li>技術スタックの書き方をカテゴリ別に提示</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 基本構成 + STAR ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">職務経歴書の基本構成と STAR フレームワーク</h2>
+      <p class="section-lede">職務経歴書は基本構成 5 点 + 実績の STAR 構造化が一般的に推奨されています。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">構成 1</span>
+          <h4>表紙 (1 ページ目)</h4>
+          <p>氏名 + 連絡先 + 職務要約 (3-5 行)。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">構成 2-3</span>
+          <h4>職務経歴 + 技術スタック</h4>
+          <p>時系列でプロジェクト記載 / カテゴリ別整理 + 習熟度。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">構成 4-5</span>
+          <h4>資格・自己 PR + アウトプット</h4>
+          <p>保有資格 + 自己 PR を端的に / GitHub・技術ブログ・登壇等の URL。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">STAR</span>
+          <h4>実績の構造化</h4>
+          <p>Situation (プロジェクト規模・課題背景) / Task (担当・責任範囲) / Action (技術選定・実装・調整) / Result (数値成果: パフォーマンス X% / コスト Y 円 / ユーザー Z)。<br>例: 決済システムのレスポンス改善 (ピーク 3 秒超 → 平均 0.4 秒・99 パーセンタイル 0.8 秒達成)。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的とされています。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>構成を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 採用担当者が見るポイント ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">エンジニア職務経歴書転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるエンジニア職務経歴書転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        エンジニア職務経歴書領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">採用担当者が見るポイント 5 つ</h2>
+      <p class="section-lede">採用担当者は以下 5 点を重視する傾向とされています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>主要言語の実務年数 / 規模感の数値</h3>
+          <p>1-2 言語の深い実務経験 (3 年+) が重視される。チーム規模 / ユーザー数 / トラフィック数の数値提示。</p>
+        </div>
+        <div class="card">
+          <h3>役割の明確性 / アウトプット / 一貫性</h3>
+          <p>メンバー / リード / マネジメントの区別。GitHub / ブログ / 登壇の有無。大きな飛び (業界・職種) には理由説明。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 技術スタックの書き方 ============ -->
+  <section class="lp-section"><h2>エンジニア職務経歴書の基本と採用担当者の視点</h2><p>エンジニアの転職活動において、職務経歴書は自身の技術力と実績をアピールするための最重要書類とされます。<br>履歴書が応募者のプロフィールを簡潔に示すのに対し、職務経歴書は具体的なプロジェクト経験や使用技術、問題解決能力などを詳細に伝える役割を担います。<br>採用担当者は、応募者が自社の開発環境やプロジェクトにマッチするかを判断するため、特に「技術スタック」と「具体的な業務内容・実績」を注意深く確認する傾向にあります。<br>厚生労働省が推進する「ジョブ・カード制度」においても、キャリアプランの作成にあたり職務経歴の棚卸しが重視されており、自身の経験を客観的かつ分かりやすく整理することの重要性が示唆されています。<br>単に専門用語を羅列するのではなく、プロジェクトの背景や自身の役割、そして成果を明確に記述することが、効果的なアピールにつながると考えられます。</p></section>
+
+  <!-- ============ SECTION 04 NG パターン ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">NG パターン (回避すべき)</h2>
+      <div class="counter-box">
+        <h3>📌 回避すべき NG パターン (公開情報整理)</h3>
+        <div class="row"><b>誇張・嘘</b><span>経験年数・実績水増し (リファレンスチェックで発覚リスク)</span></div>
+        <div class="row"><b>抽象表現</b><span>「大きく貢献」「効率化を実現」等の数値なし表現</span></div>
+        <div class="row"><b>長文</b><span>A4 5 枚以上 (採用担当者の読了率低下)</span></div>
+        <div class="row"><b>技術名の羅列</b><span>習熟度なし・実務利用なしのキーワード列挙</span></div>
+        <div class="row"><b>誤字脱字</b><span>細部の注意力不足を疑われる</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職効果・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>STARフレームワークと技術スタックの効果的なアピール方法</h2><p>エンジニアとしての実績を効果的に伝えるためには、具体的なフレームワークの活用が推奨されます。<br>その代表例が「STARフレームワーク」です。<br>これは、Situation (状況)、Task (課題)、Action (行動)、Result (結果) の頭文字を取ったもので、この構成に沿って業務経験を記述することで、論理的で説得力のあるアピールが可能になります。<br>例えば、「大規模トラフィックによるレスポンス低下(S)」に対し「DBのインデックス最適化とキャッシュ機構の導入(A)」を行い「レスポンスタイムを平均30%改善(R)」といった形で具体的に記述します。<br>また、技術スタックの記載においては、単に言語やツール名を並べるだけでなく、各技術の経験年数や習熟度、具体的な利用シーンを併記することが重要です。<br>独立行政法人情報処理推進機構 (IPA) が公開する「デジタルスキル標準」などを参考に、自身のスキルレベルを客観的に表現することも一つの方法とされます。<br>これにより、採用担当者はあなたのスキルセットを正確に評価しやすくなります。</p><ul><li><strong>Situation (状況):</strong> どのようなプロジェクト、チーム、ビジネス環境だったか。</li><li><strong>Task (課題):</strong> その状況で自身が担った役割や達成すべき目標は何か。</li><li><strong>Action (行動):</strong> 課題解決や目標達成のために、具体的にどのような技術や手法を用いて行動したか。</li><li><strong>Result (結果):</strong> 行動の結果、どのような成果（数値で示すと効果的）が得られたか。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>エンジニア職務経歴書 で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの成功事例多数</li><li>エンジニアのキャリアに特化した専門コンサルタント</li><li>書類通過率の向上を目指す戦略的な職務経歴書添削</li><li>全体の8割以上を占める非公開・高待遇求人</li><li>在職中でも安心の夜間・土日オンライン相談</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-shokumukeirekisho/">コンサル 職務経歴書 完全ガイド｜書類選考通過率を高める 5 翻訳ポイント + 無料添削活用｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-portfolio/">エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

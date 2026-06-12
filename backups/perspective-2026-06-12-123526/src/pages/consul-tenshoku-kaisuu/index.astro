@@ -1,0 +1,233 @@
+---
+/**
+ * consul-tenshoku-kaisuu LP (MyVision 転職・★326 DRY engineer-30dai pattern)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29 / banner 4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル 転職 回数 多い
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル転職回数が多い人の転職完全ガイド｜評価のされ方と伝え方｜MyVision (PR)';
+const description = 'コンサル転職回数が多い人の転職を、評価のされ方・伝え方・選び方で整理。転職回数別の傾向、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル転職回数が多い場合' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '転職回数が多いのですが、選考で不利になりませんか？', a: '一概に不利になるとは言えません。むしろ近年では、多様な環境での経験や適応力をポジティブに評価するファームが増えています。重要なのは、各転職の背景にある一貫したキャリア軸や目的を明確に説明できることです。私たちは、あなたの職務経歴を整理し、転職回数を『強み』としてアピールできるよう、論理的なストーリー構築をサポートしますのでご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul tenshoku kaisuu に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-tenshoku-kaisuu に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>コンサル転職回数が多い方へ、<span style="color:#2563eb;">年収+200万円を目指せる</span>非公開求人。<br />在職中でも夜間相談から始められます</h1>
+      <p class="fv-lede">コンサルティング業界では、DX や新規事業開発の需要増に伴い、多様な業界経験を持つ人材の価値が高まっているとされます。複数のプロジェクトや企業を経験した方は変化対応力や課題解決能力が評価される傾向にあり、転職回数を強みに変えて<strong>平均年収1,250万円</strong>(公開情報) を目指す事例も少なくないとされます。在職中でも<strong>平日21時からのオンライン相談</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。コンサル転職回数が多い (3回以上) 場合の転職について、評価のされ方・伝え方・選び方を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>転職回数別の評価傾向マップ</li>
+        <li>回数が多い人の主な4つのアピール軸</li>
+        <li>回数が多い人の転職を進める5つの対策</li>
+        <li>無料サポートで進路の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_consul-tenshoku-kaisuu">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">転職回数別の評価傾向マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル 転職回数が多い場合の市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="転職回数別の評価傾向マップ">
+          <thead><tr><th>転職回数</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>1-2 回</td><td>一般的な範囲・特に説明不要なケースが多い</td><td>ほぼ全ての求人で問題視されにくい</td></tr>
+            <tr><td>3-4 回</td><td>理由次第・キャリアの一貫性が評価軸</td><td>理由整理が重要・選択肢は一定ある</td></tr>
+            <tr><td>5 回以上</td><td>回数自体が論点になる傾向</td><td>強みと一貫性の説明が特に重要</td></tr>
+            <tr><td>業界横断 (コンサル + 事業会社 + ベンチャー等)</td><td>幅広い経験軸 + 一貫性</td><td>ユニークなキャリア軸として評価される可能性</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_consul-tenshoku-kaisuu">
+          <span>自分の市場価値を MyVision の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル転職回数で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+200-500万円</strong>のアップが見込めるコンサル転職回数は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        慎重な転職活動の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル転職複数回でも +100-300 万円アップ可能のレンジで具体的なキャリア設計が可能と言われます。
+        転職回数複数回でも評価される実績 + 慎重な選定 + 退職理由整理は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">回数が多い人の4つのアピール軸</h2>
+      <p class="section-lede">コンサル 転職回数が多い場合の主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>キャリアの一貫性軸</h4><p>各転職の理由が一貫したテーマ (例: M&A 専門化、特定業界深化) に紐づくと整理するパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>実績累積軸</h4><p>各社で達成した成果を具体的に整理し、回数の多さを補うパス。詳細は <a href="/consul-shokumukeirekisho/" class="underline">コンサル職務経歴書</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>業界・領域シフト軸</h4><p>業界・領域の意図的なシフトとして説明するパス。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル未経験</a> も参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>ユニークキャリア軸</h4><p>コンサル + 事業会社 + ベンチャー等の横断経験をユニークな強みとして打ち出すパス。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_consul_tenshoku_kaisuu_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル転職における「転職回数」の評価の基本</h2><p>コンサルティング業界の転職市場において、転職回数の多さは、候補者の「定着性」や「キャリアの一貫性」を測るための一つの指標と見なされることがあります。<br>一般的に、短期間での転職が繰り返されている場合、採用担当者はその理由や背景に注目するとされます。<br>しかし、単に回数が多いこと自体が決定的なマイナス評価に繋がるわけではありません。<br>重要なのは、それぞれの転職を通じてどのようなスキルや経験を積み上げ、それが応募先のファームでどのように活かせるかを論理的に説明できるかです。<br>厚生労働省が推進する「ジョブ・カード制度」においても、個人のキャリアプランニングと職業能力の証明が重視されており、転職回数の多さを多様な経験の証として提示できるかが鍵となります。<br>公開情報によれば、年齢や経験年数に応じた転職回数の許容範囲も存在するため、自身の状況を客観的に把握することが第一歩です。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">コンサル 転職回数が多い場合の転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>理由の整理度</td><td>各転職理由が断片的</td><td>時系列でキャリアテーマが一貫</td></tr>
+            <tr><td>実績の具体性</td><td>成果が抽象的・数値なし</td><td>案件規模・役割・成果が具体的</td></tr>
+            <tr><td>ネガティブ要素</td><td>前職批判中心の説明</td><td>ポジティブな転換で表現</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>等級・パフォーマンスベースの説明</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>転職回数の多さを強みに変える戦略的アプローチ</h2><p>転職回数の多さという懸念を、多様な経験という強みに転換するためには、戦略的な見せ方が不可欠です。<br>職務経歴書や面接において、以下の点を意識することで、採用担当者からの評価を高めることが期待できます。<br>これは、個人の職業能力開発を支援する「労働施策総合推進法」の趣旨にも合致するアプローチといえるでしょう。</p><ul><li><strong>キャリアストーリーの構築:</strong> これまでの経験を時系列で羅列するのではなく、「特定領域の専門性を深めるため」「多様な業界知見を得るため」といった一貫したテーマや目的で繋ぎ合わせ、自身のキャリアに軸があることを示します。</li><li><strong>ポータブルスキルの強調:</strong> 複数の企業で培った問題解決能力、プロジェクトマネジメントスキル、コミュニケーション能力など、業種や職種を問わず通用する「ポータブルスキル」を具体的にアピールします。どのような環境でも成果を出せる人材であることを印象づけることが重要です。</li><li><strong>ネガティブ理由のポジティブ転換:</strong> 各転職理由を伝える際は、単なる不満ではなく、「より大きな裁量権のある環境で挑戦したかった」など、成長意欲やキャリアアップ志向に繋げて説明します。これにより、主体的なキャリア形成の姿勢を示すことができます。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>転職回数の多さを強みに変える、5つの理由</h3><ul><li>年収交渉で+100〜300万円の提示を実現した事例も少なくありません</li><li>コンサル業界に特化した、元コンサルタントによる専門的支援</li><li>全体の8割以上が、事業責任者クラスの非公開求人</li><li>平日21時まで対応、在職中でも安心のオンライン相談体制</li><li>内定後の辞退も可能、ご自身のペースで慎重に判断できます</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-shibodouki/"><h4>コンサル志望動機</h4><p>伝わる動機の整理</p></a>
+        <a class="card-link" href="/consul-shokumukeirekisho/"><h4>コンサル職務経歴書</h4><p>実績の棚卸し方</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル未経験転職</h4><p>未経験からのコンサル転職</p></a>
+        <a class="card-link" href="/postconsul-tenshoku/"><h4>ポストコンサル転職</h4><p>コンサル後のキャリア</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">転職回数の説明を整え、納得のいく転職に近づく</h2>
+      <p>コンサル 転職回数が多い場合の転職は方向性の整理と判断材料の確保で精度が高まるとされています。MyVision の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_consul_tenshoku_kaisuu`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_consul-tenshoku-kaisuu">
+          <span>MyVision の無料相談でコンサル 転職回数が多い場合の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

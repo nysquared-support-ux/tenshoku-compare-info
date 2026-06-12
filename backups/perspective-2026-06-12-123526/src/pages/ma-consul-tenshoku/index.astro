@@ -1,0 +1,223 @@
+---
+/**
+ * ma-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: M&A コンサル 転職 (sv 推定 500-800・FAS高単価)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'M&A コンサル 転職 完全ガイド｜FAS / 投資銀行系 高単価キャリア + 年収・選考対策｜MyVision (PR)';
+const description = 'M&A コンサル (FAS / 投資銀行系) への転職について、Deloitte FAS / PwC アドバイザリー / KPMG FAS / EY ストラテジー 等の主要ファーム特性比較・年収レンジ (800-3,000万円帯)・採用される人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'M&A コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'M&Aコンサル未経験でも転職は可能ですか？', a: '未経験からの転職も不可能ではありませんが、高度な専門性が求められるのが一般的です。公認会計士や弁護士等の資格保有者、事業会社の経営企画・財務部門での経験者が有利になる傾向があるとされます。金融庁が公表する「M&A指針」においても専門家の活用が推奨されており、高い専門知識が期待される職種です。' },
+  { q: 'M&Aコンサルタントの具体的な業務内容は何ですか？', a: '主な業務は、M&A戦略の立案、買収・売却対象企業の選定、企業価値評価（バリュエーション）、デューデリジェンス（買収監査）、契約交渉支援など多岐にわたります。クライアント企業の経営層と直接対話し、企業の将来を左右する重要な意思決定を専門的見地からサポートする役割を担います。' },
+  { q: '投資銀行のM&A部門（IBD）とFASの違いは何ですか？', a: '一般に、投資銀行のIBDは大規模なM&A案件の仲介（アドバイザリー）や資金調達を主導する役割が中心とされます。一方、FAS（Financial Advisory Service）は、デューデリジェンスやバリュエーションといった財務・会計に関する専門的な実行支援に強みを持つと整理されます。詳しくは本文の「主要ファーム比較」もご参照ください。' },
+  { q: 'M&Aコンサルへの転職活動で特に注意すべき点は何ですか？', a: '高い専門性と激務で知られるため、志望動機の深掘りが不可欠です。「なぜM&Aなのか」「なぜこのファームなのか」を論理的に説明できる必要があります。また、職業安定法で定められている通り、求人情報の内容を正確に理解し、自身のキャリアプランとの整合性を慎重に検討することが重要とされます。' },
+  { q: 'M&Aコンサルタントにはどのようなキャリアパスがありますか？', a: 'ファーム内で昇進しパートナーを目指す道、PEファンドやベンチャーキャピタルへ転身する道、事業会社のCFOや経営企画責任者になる道など、多様なキャリアパスが考えられます。M&A業務で培った高度な財務知識と経営視点は、様々なフィールドで高く評価される傾向にあると一般にいわれます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> ma consul tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は ma-consul-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">M&A コンサル / FAS 高単価ガイド</span>
+      <h1 id="fv-h1">M&A <span class="accent">コンサル 転職</span> 完全ガイド<br />FAS / 投資銀行系 高単価キャリア + 年収・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: M&A コンサル領域は<strong>コンサル業界の中で高水準の年収レンジ</strong>を提供し、FAS (Financial Advisory Services) 系・投資銀行系のファームが主要プレイヤーとされています。本記事では銀行・証券・会計士・財務出身者がM&A コンサルへ転職する道筋を、ファーム比較 + 年収レンジ + 選考対策で公開情報ベースに整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>M&A コンサル主要 4 ファーム (Deloitte FAS / PwC AS / KPMG FAS / EY)</li>
+        <li>年収レンジ (700-3,000万円帯) + キャリアラダー</li>
+        <li>採用される 5 タイプ (銀行 / 証券 / 会計士 / 財務 / コンサル経験者)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_ma`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_ma">
+          <span>M&A コンサル挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトはコンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">M&A コンサル 主要 4 ファーム比較</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各 FAS ファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">Deloitte FAS</span><h4>デロイト トーマツ ファイナンシャルアドバイザリー</h4><p>BIG4 最大規模 + 全領域カバー。M&A アドバイザリー + バリュエーション + 事業再生 + フォレンジック等の総合展開。ディール件数 + 業界カバー範囲が広い傾向とされています。</p></article>
+        <article class="branch"><span class="tag">PwC AS</span><h4>PwC アドバイザリー</h4><p>戦略 + M&A の連携。Strategy& との戦略提携 + クロスボーダー案件強化が特徴とされています。グローバル M&A 経験を積みやすい環境とされています。</p></article>
+        <article class="branch"><span class="tag">KPMG FAS</span><h4>KPMG FAS</h4><p>金融 + コンプライアンス + リスク管理の強み。金融機関向け M&A 案件 + 規制対応 + 統合支援が中心の傾向とされています。</p></article>
+        <article class="branch"><span class="tag">EY</span><h4>EY ストラテジー・アンド・トランザクションズ</h4><p>パーパス + サステナビリティ M&A + 中堅企業案件に注力。クライアントとの長期関係構築が特徴が一般的です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_ma`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_ma">
+          <span>4 FAS ファームの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">M&A コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるM&A コンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        M&A コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">M&A コンサルの年収レンジ + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="M&A コンサル 年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>アナリスト</td><td>1-3 年</td><td>700-1,000万円</td><td>財務 DD / バリュエーション / 資料作成</td></tr>
+            <tr><td>シニアコンサルタント</td><td>2-4 年</td><td>1,000-1,500万円</td><td>サブモジュールリード / クライアント窓口</td></tr>
+            <tr><td>マネージャー</td><td>2-4 年</td><td>1,500-2,200万円</td><td>案件統括 / 提案リード / クライアント主導</td></tr>
+            <tr><td>シニアマネージャー</td><td>3-5 年</td><td>2,000-2,800万円</td><td>大型案件責任 / 領域戦略</td></tr>
+            <tr><td>パートナー</td><td>無期限</td><td>3,000万円+</td><td>クライアント / 経営 / 戦略立案</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額は各 FAS ファーム公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_ma_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>M&Aコンサルタントの役割と市場価値の基礎</h2><p>M&Aコンサルタントは、企業の合併・買収（M&A）に関する専門的な助言や実行支援を提供するプロフェッショナルです。<br>その役割は、財務アドバイザリーサービス（FAS）や投資銀行のM&A部門（IBD）など、所属する組織によって特色がありますが、共通してクライアント企業の成長戦略や事業再編を成功に導く重要な役割を担います。<br>近年、後継者不足による事業承継のニーズ増加や、業界再編の加速を背景に、M&A市場は活発化しています。<br>中小企業庁が「事業承継・引継ぎ補助金」などでM&Aを後押ししていることも、市場拡大の一因と見られます。<br>このような状況から、高度な財務・会計・法務知識を持つM&Aコンサルタントの需要は高まる傾向にあり、その専門性に見合った高い報酬水準が期待される職種とされています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">M&A コンサル 選考対策 — 4 ポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">対策1</span><h4>財務分析力 + バリュエーション理解</h4><p>DCF / マルチプル / NAV 等のバリュエーション手法 + 財務 3 表分析の基礎理解が必須とされています。USCPA や証券アナリスト等の資格 + 実務経験が評価されるとされています。</p></article>
+        <article class="branch"><span class="tag">対策2</span><h4>ケース面接 (M&A 戦略 / DD)</h4><p>FAS のケース面接は「業界 X の M&A 戦略」「企業 Y の財務 DD」等の M&A 特化型シナリオが頻出とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策3</span><h4>業界知見 + ディール経験の言語化</h4><p>担当業界 (金融 / 製造 / ヘルスケア / IT 等) の M&A 動向 + 主要プレイヤー + 過去ディール事例を体系的に整理する必要があります。元コンサル添削で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜ M&A / なぜこの FAS)</h4><p>「M&A 案件への興味」「ファーム別の強み (案件規模 / 業界 / クロスボーダー等) との適合性」を論理的に語る志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>M&A コンサル挑戦は財務知見 + 業界経験の言語化が鍵。MyVisionの無料カウンセリングで、自分の市場価値 + 適合 FAS + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_ma`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_ma">
+          <span>M&A コンサル特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>M&Aコンサル転職を成功に導く選考対策とスキルセット</h2><p>M&Aコンサルタントへの転職は、一般的に「書類選考」「筆記試験・Webテスト」「複数回の面接（ケース面接含む）」というプロセスで進みます。<br>各段階で高い専門性が問われるため、戦略的な準備が不可欠です。<br>書類選考では、財務分析やプロジェクトマネジメントといったM&A業務と親和性の高い経験を具体的に記述することが求められます。<br>特にケース面接では、企業価値評価や事業シナジー分析といったテーマに対し、論理的思考力と的確なコミュニケーション能力を発揮できるかが評価のポイントとされます。<br>自身のキャリアを客観的に棚卸しし、M&Aコンサルタントという職務とどう結びつけるかを明確にすることが重要です。<br>厚生労働省が推進する「ジョブ・カード制度」の考え方を参考に、自身の強みや今後のキャリアプランを整理することも有効な対策の一つと考えられます。</p><ul><li>財務モデリングとバリュエーション（企業価値評価）に関する知識の習得</li><li>会計・税務・法務の観点で行うデューデリジェンスの基礎理解</li><li>ケース面接を想定した論理的思考力とプレゼンテーション能力のトレーニング</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントの活用を検討するメリット (★544 ②):</strong><ul><li>非公開求人へのアクセスや各ファームに特化した選考対策が可能となり、情報収集の<strong>時間短縮</strong>が期待できます。</li><li>自身の経歴やスキルが市場でどう評価されるかを客観的に把握でき、キャリアのミスマッチを防ぐ<strong>安心感</strong>に繋がる可能性があります。</li><li>転職市場の動向や年収水準といった公開情報だけでは得にくい情報を基に、より<strong>有利な条件で交渉</strong>を進められる可能性が生まれます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/big4-consul-tenshoku/"><h4>BIG4 転職</h4><p>Deloitte / PwC / EY / KPMG 4 ファーム</p></a>
+        <a class="card-link" href="/finance-kara-consul/"><h4>金融からコンサル</h4><p>銀行 / 証券 出身者の主戦力</p></a>
+        <a class="card-link" href="/kaikeishi-tenshoku-timing/"><h4>会計士 転職タイミング</h4><p>監査法人 in/out + 業務サイクル</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">M&A コンサルの高水準年収レンジを、財務知見を武器に挑戦する</h2>
+      <p>FAS 高単価 + 元コンサル伴走で、選考突破率が大きく変わる。MyVisionの無料カウンセリングで、適合 FAS + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_ma`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_ma">
+          <span>M&A コンサル挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

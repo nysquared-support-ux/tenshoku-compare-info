@@ -1,0 +1,239 @@
+---
+/**
+ * 税理士 事業会社 転職おすすめ LP (ツインプロ・RichLayout 準拠)
+ * ★326 DRY zeirishi-kamoku-tenshoku テンプレ流用
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE 001 / BXB8X 003 / BXYE9 006・再入力禁止)
+ * slug: zeirishi-jigyoukaisha / KW: 税理士 事業会社 転職
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '税理士の事業会社への転職おすすめ4社比較｜経理・税務・経営企画への道と選び方【2026年版】';
+const description = '税理士が事業会社 (一般企業) の経理・税務・経営企画部門へ転職することを検討する方向けに、転職エージェント4社 (ツインプロ・マイナビ会計士・MS-Japan・リクルート) を公開情報で整理。事業会社転職の職種・働き方・選び方5基準が分かる(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '税理士 事業会社 転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '税理士の事業会社転職向け転職エージェント主要 4 サービス比較',
+  'description': '事業会社の経理・税務・経営企画への転職を希望する税理士向け転職エージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・キャリアの方向性を踏まえた相談', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '税理士・会計士特化・大手系列・若手中堅対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・税務・経営企画など事業会社管理部門の転職に強み', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・事業会社の経理・税務求人を幅広くカバー・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '事業会社に転職する税理士は、会計事務所と比べて年収は下がりますか？', a: '一概には言えませんが、大手企業の経理・税務部門や経営企画職では、会計事務所時代と同等以上の年収が提示されるケースも少なくないとされます。厚生労働省の賃金構造基本統計調査などを参考に、企業の規模や役職によって給与水準は変動するため、転職エージェントに相談し、具体的な求人情報を確認することが重要です。' },
+  { q: '税理士資格を活かせる事業会社の職種には、具体的にどのようなものがありますか？', a: '代表的な職種として、月次・年次決算を担当する「経理」、税務申告やタックスプランニングを担う「税務」、予算策定やM&Aに関わる「経営企画」が挙げられます。その他、内部監査やIR（インベスター・リレーションズ）部門でも専門知識が求められることがあり、キャリアの選択肢は多岐にわたると言えます。' },
+  { q: '未経験でも事業会社の経営企画部門に転職することは可能ですか？', a: '会計事務所での実務経験は高く評価されるため、経営企画が未経験でも転職できる可能性は十分にあります。特に、財務分析やデューデリジェンスの経験は、経営企画の業務と親和性が高いとされます。まずは経理・財務部門で経験を積み、社内でキャリアチェンジを目指す道も考えられます。詳細は「選び方5基準」のセクションもご参照ください。' },
+  { q: '事業会社への転職活動で、職務経歴書に書くべき重要なポイントは何ですか？', a: '会計事務所での担当業務（法人税申告、組織再編、連結納税など）を具体的に記述することに加え、クライアントの課題をどのように解決したかという実績を盛り込むことが重要です。事業会社は「当事者」として企業価値向上に貢献できる人材を求めるため、受け身ではない姿勢を示すことがポイントとされます。' },
+  { q: '税理士が事業会社への転職で転職エージェントを利用するメリットは何ですか？', a: '非公開求人を含む多様な選択肢を得られる点、企業文化や内部情報といった個人では得にくい情報を提供してもらえる点が大きなメリットです。また、職務経歴書の添削や面接対策、年収交渉の代行など、職業安定法に基づき許可を得た専門家によるサポートを受けることで、転職活動を効率的かつ有利に進めることが期待できます。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name,
+    ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">士業転職 / 事業会社への転職を検討する税理士</span>
+      <h1 id="fv-h1">
+        税理士の<span class="accent">事業会社への転職</span>おすすめ 4 社比較<br />
+        経理・税務・経営企画への道と選び方 5 基準
+      </h1>
+      <p class="lede">
+        税理士が事業会社 (一般企業) へ転職する際は ① 士業特化エージェント (ツインプロ等) ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の 3 軸組合せが推奨されます。
+        厚生労働省・日本税理士会連合会・JILPT 公的出典をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>事業会社転職の代表的な職種 4 区分</li>
+        <li>会計事務所と事業会社の働き方の違い</li>
+        <li>4 社比較 + 選び方 5 基準 + 利用の流れ 5 ステップ</li>
+        <li>厚労省・日本税理士会連合会 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=jigyo_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="jigyo_fv">
+          <span>ツインプロ公式で税理士・士業特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">事業会社転職の職種と会計事務所との働き方の違い</h2>
+      <p class="section-lede">税理士が事業会社へ転職する際の代表的な職種と、会計事務所との働き方の違いを公開情報ベースで整理します。職種の分かれ方は企業規模により異なります。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">職種①</span><h4>経理 (決算・連結)</h4><p>公開情報上、月次・年次決算や連結決算を担う経理職は、税理士の会計知識が活きる職種の一つとして挙げられることがあります。</p></article>
+        <article class="branch"><span class="tag">職種②</span><h4>税務 (申告・税務戦略)</h4><p>自社の税務申告・税務戦略を担う税務専任ポジション。公開情報上、税務専任職は比較的規模の大きい企業に多いとされます。</p></article>
+        <article class="branch"><span class="tag">職種③</span><h4>経営企画・財務</h4><p>予算策定・資金計画・経営分析など、経営に近い立場で財務に携わる職種。会計・税務の知識が判断材料の一つになるとされます。</p></article>
+        <article class="branch"><span class="tag">職種④</span><h4>内部監査</h4><p>社内の業務・会計プロセスの monitoring を担う内部監査。会計・税務の専門性が活きる職種として挙げられることがあります。</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>会計事務所と事業会社の違い (公開情報)</h3><p><strong>① 担当範囲</strong>: 事務所は複数顧問先 / 事業会社は自社に専念<br /><strong>② 繁忙期</strong>: 事務所は確定申告期 (1〜3月) / 事業会社は決算期 (企業による)<br /><strong>③ 顧客対応</strong>: 事務所は顧問先対応 / 事業会社は社内が中心<br /><strong>④ 年収</strong>: 企業規模・職種・役割により異なり一律ではない</p></div>
+        <div class="card"><h3>本記事で得られる判断</h3><p>① 4 社の対象・強み比較<br />② 事業会社の職種別の考え方<br />③ 失敗回避 5 基準<br />④ 利用の流れ 5 ステップ<br />⑤ 士業特化と管理部門特化の使い分け</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報・各エージェント公開情報の整理であり、独自の口コミ調査結果ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・<a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-23。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=jigyo_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="jigyo_features">
+          <span>事業会社の選択肢を踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">税理士事業会社転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める税理士事業会社転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、税理士 600～1,500 万円・税理士法人代表 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        税理士事業会社領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="事業会社転職を希望する税理士向け転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>税理士・会計士・士業有資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け転職エージェント・キャリアの方向性を踏まえた相談</td></tr>
+            <tr><td>マイナビ会計士</td><td>税理士・公認会計士</td><td>大手系列・求人数</td><td>株式会社マイナビ運営・税理士・会計士特化・若手中堅対応</td></tr>
+            <tr><td>MS-Japan</td><td>経理・財務・税務・経営企画</td><td>管理部門特化</td><td>事業会社の管理部門転職に強み・経理/税務/経営企画求人をカバー・MS-Japan 社運営</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (経理・税務含む)</td><td>求人数 60 万件+</td><td>事業会社の経理・税務求人を幅広くカバー・士業特化との併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi-jigyoukaisha_hero" target="_blank" rel="nofollow" data-page-slug="zeirishi-jigyoukaisha">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>税理士が事業会社へ転職する際の役割と働き方の違い</h2><p>税理士が会計事務所から事業会社へ転職する場合、その役割と働き方には大きな違いがあるとされます。<br>会計事務所では、外部の専門家として複数のクライアントを担当し、税務申告やコンサルティングを提供します。<br>一方、事業会社では、一社の従業員（当事者）として、自社の経理・税務・財務戦略に深く関与することになります。<br>日々の業務は、月次・四半期・年次決算、税務申告書の作成、税効果会計、移転価格税制への対応など、より事業に密着したものとなります。<br>働き方に関しても、会計事務所の繁忙期は確定申告時期に集中する傾向がありますが、事業会社では決算期や予算策定時期が主な繁忙期となり、年間を通じた業務量の平準化が期待できる場合があります。<br>労働基準法で定められた労働時間や休日に関する規定は双方に適用されますが、事業会社の方がワークライフバランスを重視した制度（フレックスタイム制、在宅勤務など）が整っていることが多いと一般に言われます。<br>このように、専門性を活かしつつ、より安定した環境で企業経営に貢献できる点が、事業会社への転職の魅力とされています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ — 事業会社転職のキャリア戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>3 軸併用戦略</b><span>ツインプロ (士業特化) + MS-Japan (管理部門特化) + リクルート (求人数) の 2〜3 社並行登録</span></div>
+        <div class="row"><b>職種別の方針</b><span>経理: 決算・連結の経験を活かす / 税務: 税務専任は規模の大きい企業に多い / 経営企画: 経営に近い役割 / 内部監査: 専門性が活きる</span></div>
+        <div class="row"><b>向いている人</b><span>一つの企業の会計・税務に深く関わりたい・経営に近い立場を志向する税理士・在職中に相談したい方</span></div>
+        <div class="row"><b>向かない人</b><span>複数の顧問先に幅広く関わる働き方を希望する方は会計事務所・税理士法人を中心に検討</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動 3 ステップ: STEP1 2〜3 社並行登録 &rarr; STEP2 各担当者と希望職種・働き方を共有 &rarr; STEP3 求人比較・面接で最終判断。<strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は公開情報整理であり、転職成功保証・年収アップ保証ではなく特定エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi-jigyoukaisha_footer" target="_blank" rel="nofollow" data-page-slug="zeirishi-jigyoukaisha">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=jigyo_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="jigyo_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談を活用ください。最終確認日: 2026-05-23。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>転職成功に向けた具体的な準備とエージェント選定</h2><p>税理士が事業会社への転職を成功させるためには、計画的な準備が不可欠です。<br>まず、自身のキャリアプランを明確にし、「なぜ事業会社なのか」「どのような業務に挑戦したいのか」を言語化することが重要です。<br>次に、そのプランに基づき、職務経歴書を準備します。<br>単なる業務の羅列ではなく、担当した業務を通じてどのような実績を上げたか、どのようなスキルが身についたかを具体的に記述することが求められます。<br>特に、マネジメント経験や特定の業界に関する深い知見は、高く評価される傾向にあります。<br>これらの準備と並行して、信頼できる転職エージェントを選定します。<br>厚生労働大臣の許可を受けた民間の職業紹介事業者（転職エージェント）は、職業安定法に基づき運営されており、求職者にとって有益なサービスを提供します。<br>エージェントを選ぶ際は、以下の点を考慮すると良いでしょう。</p><ul><li>税理士や会計分野の転職支援実績が豊富か</li><li>事業会社の経理・税務・経営企画部門との太いパイプを持っているか</li><li>キャリア相談に対して、親身かつ的確なアドバイスを提供してくれるか</li></ul><p>優れたエージェントは、非公開求人の紹介だけでなく、面接対策や年収交渉においても力強い味方となり、転職活動の成功確率を高めることが期待されます。</p><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントを検討するメリット (★544 ②):</strong><ul><li>専門エージェントを活用することで、非公開求人を含む多数の選択肢から、自身の希望に合う求人を効率的に探せる可能性が高まります。</li><li>会計事務所での経験を活かせる経理・税務部門だけでなく、経営企画といった専門性を活かした多様なキャリアパスの提案が期待できます。</li><li>労働施策総合推進法などに基づき運営される紹介事業者を利用することで、安心して転職活動を進められる環境が整っているとされます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-jigyoukaisha/">会計士 事業会社 転職おすすめ4社比較｜監査法人からCFO・経営企画・管理部門へのキャリアパス【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-20dai/">税理士20代の転職おすすめ4社比較｜試験合格直後・税理士法人スタッフ向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-nenshu/">税理士年収相場2026｜Big4・大手・中堅・個人事務所・事業会社別の年収統計と転職アップ戦略【公開情報】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-shokumukeirekisho/">税理士 職務経歴書の書き方ガイド｜業務領域別の整理軸（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-sozokuzei/">相続税専門税理士キャリア｜大手相続部・個人事務所代表・信託銀行連携選び方5基準【2026年版】</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

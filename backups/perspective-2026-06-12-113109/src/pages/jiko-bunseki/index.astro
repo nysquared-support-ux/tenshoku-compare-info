@@ -1,0 +1,238 @@
+---
+/**
+ * 転職 自己分析 やり方 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 3種 (Article/Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-jiko-bunseki-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '転職 自己分析 やり方｜Will/Can/Must フレーム・3 ステップ進め方とおすすめツール 5 種 (2026年版・PR)';
+const description = '転職活動の自己分析で何から始めればよいか迷う方へ。Will/Can/Must の 3 軸フレームワーク・自己分析の 3 ステップ進め方・無料ツール 5 種比較・職種別の深掘り例を公開情報ベースに整理した情報提供記事です (PR・アフィリエイト広告を含みます)。個別判断は各エージェントへご相談ください。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '転職 自己分析 やり方' },
+];
+
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article', 'headline': title, 'description': description,
+  'datePublished': '2026-05-11', 'dateModified': '2026-05-11',
+  'author': { '@type': 'Organization', 'name': 'NY-squared', 'url': 'https://nysquared.com/' },
+  'publisher': { '@type': 'Organization', 'name': 'NY-squared' },
+  'articleSection': '転職自己分析', 'about': '転職活動における自己分析のフレームワークと進め方',
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': '転職 自己分析 やり方', 'item': 'https://tenshoku-compare-info.pages.dev/jiko-bunseki/' },
+  ],
+};
+const faq = [
+  { q: '転職の自己分析で「Will/Can/Must」フレームワークを使うメリットは何ですか？', a: '自身の「やりたいこと(Will)」「できること(Can)」「やるべきこと(Must)」を整理し、キャリアの方向性を明確にする点です。厚生労働省の「ジョブ・カード」制度でもキャリアプランニングの重要性が示されており、このフレームワークは客観的な自己評価を助け、企業とのミスマッチを防ぐ効果が期待されるとされます。' },
+  { q: '自己分析がうまく進まない場合、具体的にどうすれば良いですか？', a: 'まず過去の経験を時系列で書き出し、成功や失敗から「なぜそうなったか」を深掘りするのが有効とされます。一人で難しい場合は、第三者の視点を取り入れるのがおすすめです。ハローワークが提供するキャリアコンサルティングなどを活用し、客観的なフィードバックを得るのも一つの方法です。' },
+  { q: '職務経歴書を作成する前に自己分析は必要ですか？', a: 'はい、自己分析は職務経歴書の質を高める上で重要とされます。自己分析を通じて自身の強みやスキル、実績を言語化することで、採用担当者に響く説得力のある書類を作成できるからです。本記事で紹介している「自己分析の3ステップ」を参考に、まずはご自身のキャリアの棚卸しから始めることをお勧めします。' },
+  { q: '自己分析を行う上で特に注意すべき点はありますか？', a: '主観だけで完結させず、客観的な視点を取り入れることが重要です。また完璧を求めすぎず、まずは全体像を掴むことを目指しましょう。職業安定法では求職者の能力に適合する職業紹介が求められており、そのためにも自分を過大・過小評価しない正確な自己理解が大切になると一般にいわれます。' },
+  { q: '自己分析の結果を、転職の面接でどのように活かせば良いですか？', a: '自己分析で明確になった強みや価値観を、志望動機や自己PRに具体的に結びつけて話すことが重要です。Will/Can/Mustで整理した内容をもとに、「なぜこの会社か」「入社後どう貢献できるか」を一貫性を持って説明することで、採用担当者への説得力が高まることが期待されます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">転職 自己分析 / Will・Can・Must フレーム</span>
+      <h1 id="fv-h1">
+        転職 <span class="accent">自己分析 やり方</span><br />
+        Will/Can/Must フレーム・3 ステップとツール 5 種
+      </h1>
+      <p class="lede">
+        転職の自己分析は「Will (やりたいこと)・Can (できること)・Must (求められること)」の 3 軸フレームで整理することが推奨されます。基本版は 1-2 時間で完遂可能、詳細版はキャリア棚卸しを含めて 5-10 時間が目安とされています。
+      </p>
+      <ul class="fv-bullets">
+        <li>自己分析を行う 3 つの目的を整理</li>
+        <li>Will/Can/Must フレームワーク (3 軸統合)</li>
+        <li>3 ステップ進め方 + 無料診断ツール 5 種比較</li>
+        <li>厚労省・JILPT・国民生活センター・経産省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-11</span>
+        <span><b>最終更新</b> 2026-05-11</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 自己分析の目的 + Will/Can/Must ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">自己分析は「方向性の決定」を担う</h2>
+      <p class="section-lede">自己分析を行わずに求人を眺めると表層的な条件で判断しミスマッチに繋がる可能性があるとされています。自己分析は転職活動全体の方向性を決める最重要工程です。標準は 3-5 時間 (基本版 1-2 時間 / 詳細版 5-10 時間)。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">目的 ①</span>
+          <h4>応募職種の絞り込み</h4>
+          <p>適性のある業界・職種を特定し、求人サーチを効率化。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">目的 ②</span>
+          <h4>強み・志望動機の言語化</h4>
+          <p>職務経歴書 + 面接で説得力のあるエピソードを構築。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">目的 ③</span>
+          <h4>入社後ミスマッチの回避</h4>
+          <p>自分の価値観 + 求められる役割の一致を事前確認。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">フレーム</span>
+          <h4>Will / Can / Must (3 軸統合)</h4>
+          <p>Will (価値観・将来ビジョン) × Can (職務スキル・実績) × Must (応募職種の役割・要件)。3 軸が重なる領域が転職の方向性。Will のみ=現実性欠ける/Can のみ=成長性欠ける/Must のみ=満足度欠ける。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事は <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> 職業情報提供サイト + <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> + <a href="https://www.meti.go.jp/policy/economy/jinzai/" target="_blank" rel="noopener">経済産業省 人材政策</a> + 各転職エージェント公開情報を整理した一般論であり、断定的事実ではありません。個別状況により大きく異なります。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>フレームを踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 3 ステップ + テンプレ ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">自己分析転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める自己分析転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        自己分析領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">自己分析 3 ステップ進め方 + テンプレート</h2>
+      <p class="section-lede">基本版 (1-2 時間) と詳細版 (5-10 時間) の 2 段階で進めることが推奨されます。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>基本版 (1-2 時間・Will/Can/Must の整理)</h3>
+          <p>構成: ① 価値観の書き出し → ② 職務スキル棚卸し → ③ 求められる役割の整理 → ④ 3 軸の重なり領域特定。<br>STEP 1 価値観 5-10 個 (成長・自由・安定・社会貢献等) / STEP 2 直近 3 年の習得スキル・経験を箇条書き / STEP 3 応募業界・職種の役割を求人票から抽出 / STEP 4 Will × Can × Must の交点を転職の方向性として整理。<br>初めての転職・時間制約あり時に推奨。</p>
+        </div>
+        <div class="card">
+          <h3>詳細版 (5-10 時間・キャリア全体の棚卸し)</h3>
+          <p>基本版 + 過去エピソード深掘り + 他者フィードバック収集 + 強み弱み再評価 + キャリアプラン作成。<br>過去の楽しかった/つらかった出来事を各 3-5 件・なぜそう感じたか深掘り + 元上司/同僚からのフィードバック 2-3 件入手 + 5 年後/10 年後の理想像描写。<br>キャリアチェンジ・40 代以降の転職時に推奨。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 無料ツール 5 種 ============ -->
+  <section class="lp-section"><h2>転職における自己分析の重要性と基本フレームワーク</h2><p>転職活動における自己分析は、自身のキャリアの方向性を定める羅針盤のような役割を担うとされます。<br>なぜなら、自己分析を通じて自身の強みや価値観、興味の方向性を深く理解することで、入社後のミスマッチを防ぎ、長期的に活躍できる企業を見つける可能性が高まるからです。<br>厚生労働省が推進する「ジョブ・カード制度」においても、キャリアプランの作成段階で自己理解が重視されており、公的な観点からもその重要性が示唆されています。<br>転職の自己分析で一般的に用いられるのが「Will/Can/Must」のフレームワークです。<br>これは「Will（やりたいこと・興味関心）」「Can（できること・スキル・経験）」「Must（やるべきこと・企業からの要求）」の3つの円が重なる部分を見つけ出す手法です。<br>この重なりが大きいほど、仕事に対する満足度や貢献度が高まると考えられており、転職の軸を定める上で有効な考え方として広く知られています。</p></section>
+
+  <!-- ============ SECTION 04 職種別深掘り + NG ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">職種別 深掘りポイントとやりがちな NG パターン</h2>
+      <p class="section-lede">職種別の深掘りポイント (営業=数値実績振り返り / エンジニア=技術スタック年表化 / マーケ=KPI 改善実績 / コンサル=成果指標言語化 / 管理職=マネジメント実績棚卸し) を押さえつつ、NG パターンを回避することが推奨されます。</p>
+      <div class="counter-box">
+        <h3>📌 やりがちな NG パターン (5 例・公開情報整理)</h3>
+        <div class="row"><b>診断ツール結果を鵜呑みにする</b><span>機械的判定への過信 → 複数ツール比較 + 他者フィードバックで補正</span></div>
+        <div class="row"><b>Will だけで方向性決定</b><span>Can/Must の検討不足 → 3 軸統合で重なり領域を必ず特定</span></div>
+        <div class="row"><b>過去の失敗を整理せず棚卸し終了</b><span>ポジティブ偏重 → 失敗からの学び・改善行動も書き出す</span></div>
+        <div class="row"><b>他者フィードバックを一切取らない</b><span>自己評価のみで完結 → 元上司/同僚 2-3 名から強み/弱みヒアリング</span></div>
+        <div class="row"><b>時間制限なしで永遠に分析</b><span>完璧主義で行動が止まる → 基本版 1-2 時間で一旦締切・行動しながら更新</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">※ 自己分析は他者視点を取り入れることで質が大きく向上します。転職エージェントのキャリア面談・職種別キャリア相談・第三者視点での強み深掘りが有効。<br /><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職成功保証・効果保証ではなく、特定エージェント・診断ツールを推奨するものでもありません。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>自己分析サポートの最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、具体的な自己分析サポートは各転職エージェントのキャリア面談サービス等を活用してください。最終確認日: 2026-05-11。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>自己分析を深める3ステップと具体的な進め方</h2><p>効果的な自己分析は、体系的なステップを踏むことでより深く進めることができるとされます。以下に、具体的な3ステップの進め方を公開情報をもとに整理します。</p><ul><li><strong>ステップ1: キャリアの棚卸し（過去の経験の洗い出し）</strong><br>まず、これまでの職務経歴を時系列で書き出します。成功体験や失敗体験、得意だった業務、苦手だった業務、やりがいを感じた瞬間などを具体的にリストアップします。この作業は、自身の思考や行動のパターンを客観的に把握するための基礎となります。</li><li><strong>ステップ2: Will/Can/Mustへの分類と深掘り</strong><br>ステップ1で洗い出した要素を「Will（やりたいこと）」「Can（できること）」「Must（やるべきこと）」の3軸で分類・整理します。そして、それぞれの項目について「なぜそう感じたのか？」を繰り返し自問し、根底にある動機や価値観を深掘りしていきます。</li><li><strong>ステップ3: 転職の軸の言語化</strong><br>整理した内容をもとに、「どのような環境で」「何を活かして」「何を実現したいか」という転職活動の軸を明確な言葉に落とし込みます。このプロセスは、職業能力開発促進法で示される職業能力の体系的な開発・向上にもつながるアプローチであると一般に解釈されています。</li></ul><p>これらのステップを一人で進めるのが難しい場合は、転職エージェントなどの専門的なサポートを活用することも有効な選択肢の一つです。</p><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/cfo-jiko-suishin/">CFO自薦転職ガイド｜エグゼクティブ自薦の戦略（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-jiko-pr/">コンサル 自己PR 完全ガイド｜評価される 5 アピール軸 + 構成テンプレ + 無料添削｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/30dai/">30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-koukai/">40代転職で死ぬほど後悔しないために｜失敗パターンと回避策（PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-revenge/">40代転職リベンジ｜失敗からの復活ガイド (公開情報・PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

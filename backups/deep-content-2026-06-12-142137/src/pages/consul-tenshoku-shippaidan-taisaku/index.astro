@@ -1,0 +1,232 @@
+---
+/**
+ * consul-firm-hikaku LP (MyVision コンサル特化・★326 DRY・Hub 兼用)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル ファーム 比較 (sv 推定 500-1,000・比較検討段階・全LP Hub兼用)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル転職 失敗パターンと対策の整理ガイド｜事例別の参考軸｜MyVision (PR)';
+const description = 'コンサルティングファーム 5 区分 (戦略系 / 総合系 / FAS系 / IT系 / 公共系) の特性・年収レンジ・採用傾向・自分に合うファームの選び方を、公開情報ベースで徹底比較。タイプ別診断 + 元コンサル無料カウンセリングの活用法も解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル ファーム比較' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を具体的に考えていないのですが、相談だけでも可能ですか？', a: 'はい、もちろん可能です。ご自身の市場価値を客観的に把握したい、今後のキャリアパスについて専門家の意見を聞きたい、といった段階でのご相談も歓迎しております。無理に転職をお勧めすることはありませんので、ご安心ください。まずは情報収集の一環として、お気軽にご利用いただければと存じます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul tenshoku shippaidan に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-tenshoku-shippaidan-taisaku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル 5 区分比較 junior〜senior 両軸 | BIG4/MBB brand 60-100年 + 制度成熟 30年+</span>
+      <h1 id="fv-h1">コンサル <span class="accent">ファーム 比較</span> 完全ガイド<br />戦略 / 総合 / FAS / IT / 公共 5 区分の決定版</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサルティングファームは大きく<strong>戦略系 / 総合系 / FAS系 / IT系 / 公共系の 5 区分</strong>で整理されることが一般的とされ、各区分で年収レンジ・案件特性・採用傾向・キャリアパスが大きく異なります。本記事では公開情報ベースで5区分を徹底比較し、自分に合うファーム選びの 4 軸を解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>5 区分の特性 + 代表ファーム + 年収レンジ</li>
+        <li>区分別の採用傾向 + 主要採用層</li>
+        <li>自分に合うファーム選びの 4 軸 (前職 / 志向 / ライフ / 中長期)</li>
+        <li>タイプ別おすすめ + 元コンサル無料診断の活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_firmhikaku">
+          <span>自分に合うファームを無料カウンセリングで診断する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは各コンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">5 区分の特性比較</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各コンサルファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="コンサル 5 区分 特性比較">
+          <thead><tr><th>区分</th><th>代表ファーム</th><th>年収レンジ</th><th>採用枠</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系</td><td>BCG / McK / Bain</td><td>700-3,500万円</td><td>狭い (最難度)</td><td>20代後半-30代前半 / 高学歴 / 戦略素養</td></tr>
+            <tr><td>総合系</td><td>アクセンチュア / PwC / ベイカレント / アビーム / IBM</td><td>500-2,500万円</td><td>&#11088; 最大</td><td>IT / 業務系 / 大手出身</td></tr>
+            <tr><td>FAS 系</td><td>Deloitte FAS / PwC AS / KPMG FAS</td><td>550-2,800万円</td><td>中</td><td>会計士 / 銀行 / 証券 / 財務出身</td></tr>
+            <tr><td>IT 系</td><td>アクセンチュア Tech / IBM / アビーム</td><td>500-2,200万円</td><td>大 (IT 需要旺盛)</td><td>SIer / SE / PM / クラウド</td></tr>
+            <tr><td>公共系</td><td>野村総研 / 三菱総研 / NTT データ経営研</td><td>500-2,000万円</td><td>中</td><td>官公庁 / 公共機関 / シンクタンク経験者</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_firmhikaku">
+          <span>5 区分のどれが自分に適合するか MyVision 公式の無料相談で診断する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル転職失敗団対策転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職失敗団対策転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル転職失敗団対策領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">自分に合うファーム選びの 4 軸</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">軸1</span><h4>前職業界・経験</h4><p>IT/SIer 出身 → 総合系 (アクセンチュア Tech) や IT 系 / 金融・会計出身 → FAS / BIG4 / 大手事業会社経営企画 → 総合系 (戦略/業務改革) / 官公庁 → 公共系 の流れが一般的とされています。</p></article>
+        <article class="branch"><span class="tag">軸2</span><h4>キャリア志向</h4><p>「経営層への戦略提案中心」→ 戦略系 / 「戦略 + 実装まで責任」→ 総合系 / 「M&A・財務深耕」→ FAS / 「テクノロジー深耕」→ IT系 / 「政策・公共深耕」→ 公共系 の対応関係とされています。</p></article>
+        <article class="branch"><span class="tag">軸3</span><h4>ライフスタイル要望</h4><p>労働時間 + 出張頻度 + 案件サイクルがファーム区分で異なるとされています。戦略系は短期高負荷、総合系・FAS は案件単位、IT 系は実装フェーズ次第、公共系は安定傾向。</p></article>
+        <article class="branch"><span class="tag">軸4</span><h4>中長期キャリア構想</h4><p>コンサル後の選択肢 (事業会社 CXO / PE/VC / 起業 / 専門特化) を見据えたファーム選びが推奨されます。戦略系卒業後は事業会社 CEO/CSO 等のオプションが広い傾向とされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_firmhikaku_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル転職における「失敗」の構造的要因</h2><p>コンサルティング業界への転職で「失敗した」と感じるケースには、いくつかの構造的な要因が背景にあるとされます。<br>第一に、業界特有の「Up or Out（昇進か退職か）」という文化や、高い成果を求められるプレッシャーが挙げられます。<br>これにより、入社前に抱いていたイメージとのギャップが生じやすいと指摘されています。<br>第二に、求人情報だけでは判断しにくいファームごとの専門性やカルチャーの違いです。<br>同じ「戦略コンサル」でも、得意なインダストリーや働き方は大きく異なります。<br>厚生労働省が推進する「働き方改革」の文脈においても、労働時間だけでなく業務の質や裁量権が重要視されており、転職者は自身のキャリアプランと企業の文化を慎重に照らし合わせる必要があります。<br>これらの要因を理解せず、年収や知名度だけで転職先を決めると、入社後のミスマッチにつながる可能性が高まると一般に考えられています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>事例から学ぶ、転職失敗を回避する具体的な対策ステップ</h2><p>コンサル転職の失敗を回避するためには、体系的な準備と客観的な情報収集が不可欠です。<br>過去の事例を基に、具体的な対策ステップを以下に整理します。<br>まず、徹底した自己分析を行い、自身の強み・弱み、キャリアにおける価値観を言語化します。<br>次に、その自己分析を基に、戦略系、総合系、IT系など、どのファーム区分が自分に合っているのか仮説を立てます。<br>この段階で、転職エージェントのような第三者の視点を取り入れることで、思い込みや視野の狭さを補うことが期待できます。<br>職業安定法第5条の4では、求人者等が求職者等に対して的確な情報提供を行う努力義務が定められており、信頼できる情報源の活用が重要です。<br>最終的に、複数のファームの情報を比較検討し、OB/OG訪問などを通じて現場のリアルな声を聞くことで、入社後のギャップを最小限に抑えることが可能になるとされます。</p><ul><li><strong>自己分析の深化:</strong> 自身のスキルセットとキャリアの価値観を客観的に棚卸しする。</li><li><strong>情報収集の多角化:</strong> 公開情報に加え、口コミサイトや専門エージェントから非公開情報を得る。</li><li><strong>第三者の視点の活用:</strong> キャリアアドバイザーとの面談を通じて、自身の市場価値や適性を客観的に評価してもらう。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>コンサル転職の失敗を避ける、弊社が選ばれる5つの理由</h3><ul><li>年収200万円以上アップの交渉実績多数</li><li>コンサル業界に特化した専門アドバイザーが担当</li><li>全体の約8割。事業戦略に関わる非公開求人</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>ご自身の市場価値確認だけでも歓迎。内定後辞退も可能</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">5 区分 + 4 軸 = 自分に最適なファームを 30 秒で発見する</h2>
+      <p>MyVisionの無料カウンセリングで、自分の前職経験 + 志向 + ライフ + キャリア構想から、適合ファーム + 想定年収 + 選考対策ロードマップを会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_firmhikaku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_firmhikaku">
+          <span>自分に合うファームを無料カウンセリングで診断する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mensetsu-taisaku/">コンサル面接対策 完全ガイド｜ケース面接・行動面接・GDの種類別対策と準備法｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

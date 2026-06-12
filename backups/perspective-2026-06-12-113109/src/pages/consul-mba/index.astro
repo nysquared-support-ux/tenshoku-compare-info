@@ -1,0 +1,213 @@
+---
+/**
+ * consul-mba LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル MBA (sv 推定 300-500・MBA 検討者・高学歴層)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)';
+const description = 'コンサル転職と MBA の関係について、MBA がコンサル選考で評価される度合い・取得タイミング (転職前 / コンサル在籍中 / 派遣)・国内/海外 MBA の違い・MBA なしでの転職を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル MBA' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を具体的に考えていませんが、相談可能ですか？', a: 'はい、もちろん可能です。まずはご自身の市場価値を客観的に把握したい、キャリアの選択肢を知りたいといった段階でのご相談も歓迎しております。無理に転職をお勧めすることは一切ございません。中長期的なキャリアプランニングの壁打ち相手として、お気軽にご活用ください。' },
+  { q: 'サービスは本当に無料ですか？', a: 'はい、候補者様からは一切費用をいただきません。当サービスは、採用が決定した際に企業側から成功報酬をいただくビジネスモデルです。そのため、ご登録からご相談、内定まで全てのサポートを無料で提供しております。安心してご利用ください。' },
+  { q: '現職に転職活動が知られることはありませんか？', a: 'ご安心ください。候補者様の個人情報や活動状況は、ご本人の許可なく外部に公開されることは一切ありません。企業への応募も、必ず候補者様の同意を得てから行います。情報管理を徹底しておりますので、在職中でも安心して活動いただけます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル MBA / 完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">MBA</span> 完全ガイド<br />MBA はコンサル転職に必要か・取得タイミング・活かし方</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: MBA は<strong>コンサル転職の必須条件ではない</strong>とされ、コンサル特化エージェントの公開情報によれば利用者の9割が業界未経験で MBA なしの転職成功事例も多いとされています。本記事では MBA の評価度合い + 取得タイミング + 国内/海外 MBA の違い + MBA なしでの転職を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>MBA がコンサル選考で評価される度合い</li>
+        <li>MBA 取得の 3 タイミング (転職前 / 在籍中 / 入社後)</li>
+        <li>国内 MBA と海外 MBA の違い</li>
+        <li>MBA なしでコンサル転職する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_mba`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_mba">
+          <span>MBA 有無別のキャリア戦略を無料カウンセリングで相談 (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">MBA はコンサル選考でどう評価されるか</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">評価1</span><h4>必須条件ではない</h4><p>一般的に MBA はコンサル転職の必須条件ではないとされています。未経験者の9割が MBA なしで転職に成功しているとされ、MBA の有無より「論理思考 + ケース面接突破力」が重視されるとされています。</p></article>
+        <article class="branch"><span class="tag">評価2</span><h4>一定のプラス評価</h4><p>MBA はロジカルシンキング + ビジネス知識 + ネットワークの証明として、書類選考 + 一部のケース面接で一定のプラス評価を受ける傾向とされています。「MBA 保有 = 内定」ではない点に注意です。</p></article>
+        <article class="branch"><span class="tag">評価3</span><h4>戦略系・海外案件で評価上昇</h4><p>戦略系ファームの一部 + 海外案件 + グローバルキャリア志向の場合、海外トップ MBA が評価されやすい傾向とされています。詳細は <a href="/senryaku-consul-tenshoku/" class="underline">戦略コンサル 転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">評価4</span><h4>入社後のキャリアで活きる</h4><p>MBA で得たビジネス知識 + ネットワークは、コンサル入社後のマネージャー昇格 + 卒業後の経営層キャリアでも活きるが一般的です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_mba`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_mba">
+          <span>MBA 有無別の戦略を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">MBA コンサルで実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        MBA コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">MBA 取得の 3 タイミング</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="MBA 取得タイミング比較">
+          <thead><tr><th>タイミング</th><th>特徴</th><th>費用負担</th><th>適した人</th></tr></thead>
+          <tbody>
+            <tr><td>コンサル転職前に取得</td><td>MBA → コンサル転職の王道パス</td><td>自費 (or 奨学金)</td><td>キャリアチェンジ志向 + 時間に余裕</td></tr>
+            <tr><td>コンサル在籍中に企業派遣</td><td>スポンサー付きで海外 MBA 派遣</td><td>会社負担 (条件あり)</td><td>戦略系入社者 + 評価優秀者</td></tr>
+            <tr><td>コンサル入社後に自費取得</td><td>働きながら国内 MBA 等</td><td>自費</td><td>在籍中にスキル強化したい層</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 戦略系ファームの一部では、入社後数年でスポンサー付き海外 MBA 派遣の制度があるのケースが多く見られます。制度の有無 + 条件は各ファームでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_mba_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル転職におけるMBAの価値と評価の基礎</h2><p>コンサルティングファームへの転職において、MBA（経営学修士）は候補者の能力を測る一つの指標とされます。<br>ファームが求める論理的思考力、問題解決能力、そして経営全般にわたる体系的な知識を、MBAプログラムは提供するためです。<br>特に、異業種からコンサル業界を目指す場合、ビジネスの共通言語を習得している証明として有利に働くことが期待されます。<br>文部科学省が推進する専門職大学院制度においても、高度で専門的な職業能力の育成が目的とされており、MBAはその代表格です。<br>ただし、MBAホルダーであることが採用を保証するわけではありません。<br>あくまでポテンシャルや実務経験、人物像などを総合的に評価するプロセスの一部と捉えるのが適切とされます。<br>公開情報をもとに整理すると、MBAは「強力な武器」にはなり得るものの、それだけで選考を突破できるわけではない、という位置づけが一般的です。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>MBA取得タイミング別戦略と転職での活かし方</h2><p>コンサル転職を見据えたMBA取得には、主に3つのタイミングが考えられ、それぞれ戦略が異なります。<br>自身のキャリアプランやライフステージに合わせて最適な選択をすることが重要です。<br>厚生労働省の「労働経済の分析」でも指摘されるように、人的資本への投資はキャリアの可能性を広げる上で重要な要素とされます。</p><ul><li><strong>転職前に取得する戦略:</strong> 社会人経験を数年積んだ後、フルタイムのMBAプログラムに入学するケースです。卒業後は「ポストMBA採用」として、未経験者採用とは異なる選考ルートに乗れる可能性があります。経営知識を武器に、即戦力として高いポジションでの転職が期待できます。</li><li><strong>コンサル在籍中に取得する戦略:</strong> コンサルファームに在籍しながら、企業派遣（スポンサーシップ）制度などを利用してMBAを取得するケースです。実務で得た課題意識を学びに繋げ、卒業後はマネージャー以上への昇進や、より専門的な領域へのキャリアチェンジを目指すことが一般的です。</li><li><strong>MBAなしで転職し、必要に応じて取得する戦略:</strong> まずは実務経験を武器にコンサル業界へ転職し、キャリアを積む中で自身の課題や目標が明確になった時点で、パートタイムやエグゼクティブMBAの取得を検討するアプローチです。現場での経験と学びを両立させやすいメリットがあります。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>MBA 取得後 コンサル転職 で選ばれる5つの理由</h3><ul><li>年収200万円以上のアップを目指せる実績多数</li><li>MBAホルダーに特化した非公開ハイクラス求人のご提案</li><li>業界を熟知したアドバイザーによる徹底した面接対策</li><li>在職中でも安心の夜間・土日オンライン相談体制</li><li>納得いくまで検討できる「内定後の辞退OK」</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">MBA 有無に関わらず、最適なコンサル転職戦略を描く</h2>
+      <p>MBA 取得 / 非取得のキャリア戦略を、元コンサルが個別整理。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_mba`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_mba">
+          <span>無料カウンセリングでキャリア戦略を相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的と公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢が知られています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングが確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-post-mba-restart/">Post-MBA リスタート転職ガイド｜MBA 後のキャリア戦略（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

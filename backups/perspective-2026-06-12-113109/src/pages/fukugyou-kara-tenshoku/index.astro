@@ -1,0 +1,120 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const slug = "fukugyou-kara-tenshoku";
+const title = "副業からの転職ガイド｜副業実績を活かした転職戦略（2026年6月時点・PR）";
+const description = "副業実績を活かした転職を検討するエンジニア・専門職向けに、副業実績の活用法・転職戦略を公開情報をもとに中立に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。";
+const breadcrumb = [
+  { name: "ホーム", item: "/" },
+  { name: "エンジニア転職", item: "/" },
+  { name: title, item: `/${slug}/` }
+];
+const faq = [
+  { q: '副業実績は転職時にプラスになりますか？', a: '専門スキルの証明手段として活用される選択肢があるとされています。' },
+  { q: '副業実績の評価は会社により異なりますか？', a: '評価基準は会社により異なるが一般的です。スタートアップ・モダン企業で高評価の選択肢があるとされます。' },
+  { q: '副業実績は職務経歴書のどこに記載？', a: '「副業・社外活動」セクションに明示する選択肢が一般的のケースが多く見られます。' },
+];
+---
+
+<RichLayout {title} {description} {breadcrumb} {faq} {slug}
+  publishedDate="2026-06-03" modifiedDate="2026-06-03">
+
+  <section class="fv">
+    <div class="fv-pill">副業転職 / 公開情報整理</div>
+    <h1>副業からの転職を検討する方へ — 市場価値と進め方ガイド</h1>
+    <p class="lede">本記事では <strong>副業からの転職の市場価値・キャリアパス・進め方</strong> を公開情報をもとに中立に整理します。本ページは A8.net 経由のアフィリエイト広告（PR）を含む情報提供記事です。</p>
+    <ul class="fv-bullets">
+      <li>副業転職の基本知識</li>
+      <li>市場価値・年収帯の目安</li>
+      <li>キャリアパスの選択肢</li>
+      <li>転職エージェント活用の選択肢</li>
+    </ul>
+    <PRBadge pageSlug={slug} />
+    <div class="fv-meta">最終更新: 2026年6月3日 | 公開情報ベース | 数値は個人差あり</div>
+  </section>
+
+  <BannerAB pageSlug={slug} position="hero" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 01</div>
+    <h2>副業からの転職の基本</h2>
+    <p>副業実績は、転職時の市場価値証明の手段として活用される選択肢の一つとされる傾向にあります。<br>厚生労働省「副業・兼業の促進に関するガイドライン」では、副業・兼業の制度普及が進められており、副業実績を職務経歴書に明示する選択肢が一般的となっていると公表されています。<br>エンジニアの場合、副業案件 (CrowdWorks/Lancers/Wantedly 等) での実績・GitHub での個人開発・OSS 貢献等が、本業の経験を補完する選択肢として活用されるとされています。<br>年収帯は、副業実績が市場価値向上に寄与した場合、本業転職時に +50-200 万円の上乗せが可能になる選択肢があるとされており、特にエンジニア・PM・コンサル等の高度専門職で顕著と示されています。</p>
+  </section>
+
+  <BannerAB pageSlug={slug} position="middle" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 02</div>
+    <h2>副業転職の進め方とアピール法</h2>
+    <p>副業転職の進め方は、副業実績の整理・職務経歴書への明示・面接でのアピールの 3 点が出発点となります。</p>
+    <ul>
+        <li><strong>副業実績の整理</strong>: 副業案件・GitHub・OSS 貢献等の実績を整理することが現実的アプローチが知られています。</li>
+        <li><strong>職務経歴書への明示</strong>: 副業実績を職務経歴書に明示することが推奨されるが一般的です。</li>
+        <li><strong>面接でのアピール</strong>: 副業から得た学び・スキル・成果を面接で具体的にアピールすることが推奨されるのケースが多く見られます。</li>
+    </ul>
+  </section>
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 03</div>
+    <h2>TechGo の公開情報整理</h2>
+    <p>本サイトが PR として取り上げる「TechGo」について、副業からの転職に関係する公開情報を整理します。</p>
+    <ul>
+      <li>✅ <strong>エンジニア転職特化型</strong>: TechGo はエンジニア専門特化型の転職エージェントが確認されています。</li>
+      <li>✅ <strong>専門領域の深さ</strong>: 業界に精通したコンサルタント対応とされる傾向</li>
+      <li>✅ <strong>非公開求人</strong>: 公開情報による表記 (詳細は公式公開情報をご確認ください)</li>
+      <li>✅ <strong>面接対策</strong>: 面接対策・職務経歴書添削の選択肢があるとされる傾向</li>
+      <li>✅ <strong>無料利用</strong>: 求職者は無料で利用可能とされる傾向</li>
+    </ul>
+  </section>
+
+  <BannerAB pageSlug={slug} position="bottom" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 04</div>
+    <h2>まとめ — 自分に合うエージェントと一緒に進める</h2>
+    <p>
+      副業からの転職は、<strong>市場価値の理解 + キャリアパスの整理 + エージェント活用</strong> の 3 点を整理した上で、自分に合う選択肢を専門家と相談するのが現実的アプローチとして運用されています。「業界 No.1」等の断定表現に惑わされず、複数エージェントの比較で公正な判断を。
+    </p>
+  </section>
+
+  <BannerAB pageSlug={slug} position="final" />
+
+  <section class="faq-section">
+    <h2>よくある質問</h2>
+    {faq.map((item) => (
+      <details class="faq-item">
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="lp-section">
+    <h2>参考情報・公開出典</h2>
+    <ul class="source-list">
+      <li>厚生労働省「労働経済の分析」</li>
+      <li>経済産業省「IT 人材需給に関する調査」</li>
+      <li>金融庁「金融商品取引法・投資運用業」</li>
+      <li>日本内部監査協会 (IIA Japan)</li>
+      <li>日本公認会計士協会 (JICPA)</li>
+      <li>国民生活センター「雇用関連トラブル相談事例」</li>
+    </ul>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

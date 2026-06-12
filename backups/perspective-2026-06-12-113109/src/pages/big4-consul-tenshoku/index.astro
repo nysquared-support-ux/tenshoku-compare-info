@@ -1,0 +1,200 @@
+---
+/**
+ * big4-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: BIG4 転職 (sv 推定 1,200・4社特定・年収高・採用枠大)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)';
+const description = 'BIG4 (Deloitte / PwC / EY / KPMG) への転職について、4 大ファームの特性比較・年収レンジ・部門別案件・採用される人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング + 添削サポートの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'BIG4 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談だけでも可能ですか？', a: 'はい、もちろん可能です。すぐに転職をお考えでない方も、ご自身の市場価値の確認やキャリアプランの壁打ちなど、情報収集目的でのご相談を歓迎しております。費用は一切かかりませんので、お気軽にご予約ください。無理な勧誘もございませんのでご安心ください。' },
+  { q: '現職に知られずに転職活動はできますか？', a: 'はい、可能です。ご登録いただいた個人情報や活動状況は、ご本人の許可なく企業に開示することは一切ございません。応募企業も事前にご確認いただけます。情報管理を徹底し、あなたのプライバシーを最優先に、安全な転職活動をサポートします。' },
+  { q: '年収交渉はしてもらえますか？', a: 'はい、当社の得意分野です。過去の豊富な転職支援データや業界の給与水準に基づき、あなたのスキルや経験が最大限評価されるよう、プロとして交渉を代行します。ご自身で交渉するよりも有利な条件を引き出せるケースが一般的です。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">BIG4 junior〜senior パートナー候補 両軸 | brand 60-100年 + 制度成熟 30年+</span>
+      <h1 id="fv-h1">Big4コンサル転職、<span class="accent">年収+250万円を目指せる</span>チャンス。<br />在職中の夜間・土日相談も歓迎</h1>
+      <p class="lede">企業のDX推進や事業再編が加速する中、FAS・FAA・戦略領域の専門コンサルタントの需要は高まり続けているとされます。特にBig4ファーム (Deloitte / PwC / EY / KPMG) では、高度な専門性を持つ人材に対して、<strong>現年収から+200万円以上</strong>の提示がなされる事例も少なくないとされ、転職成功者の平均年収<strong>1,250万円</strong>を目指せるポジションも公開情報で紹介されています。現職に配慮した<strong>非公開求人</strong>のご提案、オンライン面談調整も万全。<strong>内定後の辞退も可能</strong>なため、まずはご自身の市場価値をご確認いただける傾向とされます。本記事では 4 大ファームの特性比較・年収レンジ・部門別案件・採用人材像を公開情報ベースで整理します。</p>
+      <ul class="fv-bullets">
+        <li>4 大ファーム特性 (Deloitte / PwC / EY / KPMG)</li>
+        <li>部門別案件 (コンサル / FAS / リスク / Tech)</li>
+        <li>年収レンジ (700-2,500万円帯) + 採用人材像</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_big4`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_big4">
+          <span>無料でキャリア相談を予約 (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは BIG4 公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">BIG4 4 大ファームの特性比較</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各 BIG4 公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">Deloitte</span><h4>デロイト トーマツ グループ</h4><p>BIG4 で最大規模 + 全領域カバー。<br>Tech + Strategy + Risk + FAS + Tax の総合展開。<br>Deloitte Tohmatsu Consulting + Deloitte FAS + Tohmatsu 監査法人で構成。<br>コンサルティング採用枠が広い傾向とされています。</p></article>
+        <article class="branch"><span class="tag">PwC</span><h4>PwC Japan グループ</h4><p>戦略系 + 業界変革に注力。PwC コンサルティング + PwC アドバイザリー (FAS) + PwC あらた監査法人で構成。Strategy& (元 Booz) との連携で戦略案件が強い傾向とされています。</p></article>
+        <article class="branch"><span class="tag">EY</span><h4>EY Japan</h4><p>パーパス + サステナビリティを軸に、人材 + 組織変革領域に強み。<br>EY ストラテジー・アンド・コンサルティング + EY 新日本監査法人で構成。<br>Building a better working world のパーパスが特徴とされています。</p></article>
+        <article class="branch"><span class="tag">KPMG</span><h4>KPMG Japan</h4><p>リスク + 金融サービス + コンプライアンスに強み。<br>KPMG コンサルティング + KPMG FAS + あずさ監査法人で構成。<br>Audit + Tax + Advisory の3軸で金融機関・大手事業会社向け案件が多い傾向とされています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_big4`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_big4">
+          <span>BIG4 4 ファームの適合を MyVision 公式の無料診断で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">BIG4 コンサルで実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるBIG4 コンサルは、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、BIG4 コンサル 700～1,800 万円・パートナー候補 2,500 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        BIG4 コンサル経験 + 戦略/業務/DX 領域専門性 + 上場企業案件実績は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">BIG4 部門別の案件 + 年収レンジ</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="BIG4 部門別 年収レンジ">
+          <thead><tr><th>部門</th><th>主な案件</th><th>年収レンジ目安</th><th>主な採用層</th></tr></thead>
+          <tbody>
+            <tr><td>コンサルティング (戦略 / 業務変革)</td><td>経営戦略 / DX 推進 / 業務改革</td><td>700-2,000万円</td><td>事業会社経営企画 / IT 出身</td></tr>
+            <tr><td>FAS (Financial Advisory)</td><td>M&A / バリュエーション / 事業再生</td><td>750-2,300万円</td><td>銀行 / 証券 / 会計士 / 財務出身</td></tr>
+            <tr><td>リスク・アドバイザリー</td><td>リスク管理 / コンプライアンス / セキュリティ</td><td>700-2,000万円</td><td>金融 / 法務 / IT セキュリティ</td></tr>
+            <tr><td>Technology (Tech Consulting)</td><td>クラウド / データ / AI / システム</td><td>650-1,900万円</td><td>SIer / SE / クラウドエンジニア</td></tr>
+            <tr><td>People Advisory (組織人事)</td><td>HR 変革 / 組織開発 / 人材戦略</td><td>650-1,800万円</td><td>人事 / 組織コンサル経験者</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_big4_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>BIG4コンサルティングファームの役割と構造</h2><p>BIG4と呼ばれるDeloitte、PwC、EY、KPMGは、会計事務所を母体とする世界的なプロフェッショナルファームです。<br>その中核をなすコンサルティング部門は、企業の経営戦略、M&A、業務改革、IT導入、人事制度設計、リスク管理など、多岐にわたる課題解決を支援します。<br>これらファームはグローバルなネットワークを有し、国内外の大企業を主要クライアントとしています。<br>日本においても各法人が独立して事業を展開しつつ、グローバルブランドの一員として緊密に連携しています。<br>近年では、デジタルトランスフォーメーション（DX）やサステナビリティ（ESG）といった新しい領域でのサービス提供を強化しており、社会の変化に対応する企業の変革パートナーとしての役割がますます重要になっています。<br>厚生労働省の「職業情報提供サイト（jobtag）」でも、経営コンサルタントは「企業の成長や問題解決のための助言や支援を行う」職種として定義されており、その社会的意義は大きいと言えるでしょう。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">BIG4 選考対策 — 4 つのポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">対策1</span><h4>業界 + 部門別の傾向把握</h4><p>BIG4 各社 + 部門ごとに採用人材像 + 案件特性 + 評価軸が異なります。元コンサルの傾向情報 + 模擬面接で個別対策が必要とされています。</p></article>
+        <article class="branch"><span class="tag">対策2</span><h4>ケース面接 (実務寄り)</h4><p>BIG4 のケース面接は戦略系より実務寄り (収益改善 / 業務変革 / リスク評価等) の傾向とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">対策3</span><h4>業界専門性の言語化</h4><p>前職業界の専門知見 + コンサル評価軸への翻訳が、BIG4 採用の核心評価ポイントとされています。元コンサルの添削で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">対策4</span><h4>志望動機 (なぜ BIG4 + なぜこのファーム)</h4><p>「監査連携 + 総合展開」「業界知見深化」等の BIG4 特性に踏み込む志望動機が必要とされています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>BIG4 採用は元コンサル伴走で品質が変わる。MyVisionの無料カウンセリングで、自分の市場価値 + 適合ファーム + 想定年収を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_big4`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_big4">
+          <span>BIG4 特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>BIG4転職を成功に導く選考対策とエージェント活用法</h2><p>BIG4への転職を成功させるには、特有の選考プロセスへの深い理解と準備が不可欠とされます。<br>選考は一般的に「書類選考」「Webテスト」「複数回の面接（ケース面接・行動評価面接）」という流れで進みます。<br>書類選考では、これまでの実績を具体的な数値で示すことが求められます。<br>特に、どのような課題に対し、どう行動し、どのような成果を出したかを明確に記述することが重要です。<br>面接の核となるのが「ケース面接」です。<br>ここでは、与えられた課題に対して論理的に解決策を導き出す思考プロセスが評価されます。<br>フレームワークの知識だけでなく、柔軟な発想や説得力のあるコミュニケーション能力も試される場です。<br>このような専門的な対策を独力で行うのは容易ではありません。<br>そこで、コンサル業界に特化した転職エージェントの活用が有効な選択肢となります。<br>職業安定法に基づき運営されるこれらの事業者は、求職者に対して適切な職業紹介を行う責務を負っています。</p><ul><li><strong>非公開求人の紹介:</strong> 一般市場には出回らない、各ファームの特定部門からの限定的な求人情報にアクセスできる可能性があります。</li><li><strong>専門的な選考対策:</strong> 各ファームの出題傾向や評価基準を熟知したキャリアアドバイザーによる、実践的な書類添削や模擬面接が受けられるとされます。</li><li><strong>年収・条件交渉の代行:</strong> 個人の立場では交渉しにくい給与や待遇について、豊富な実績を基に代理で交渉してくれることが期待できます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>Big4 コンサルタント転職 (FAS・FAA・戦略コンサル) で選ばれる5つの理由</h3><ul><li>年収200万円以上アップの交渉実績多数</li><li>FAS・FAA・戦略領域に特化した専門コンサルタントが担当</li><li>全体の8割を占める、高待遇の非公開求人</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>内定後の辞退も可能。納得いくまでキャリアを検討</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分 (戦略 / 総合 / FAS / IT / 公共)</p></a>
+        <a class="card-link" href="/accenture-tenshoku/"><h4>アクセンチュア転職</h4><p>4 部門 × 年収 × 選考</p></a>
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/sogo-consul-tenshoku/"><h4>総合コンサル転職</h4><p>主戦場 5 ファーム</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">BIG4 への挑戦を、最適な部門選びから始める</h2>
+      <p>4 大ファーム × 部門別の特性把握 + 元コンサル伴走で、選考突破率が大きく変わる。MyVisionの無料カウンセリングで、自分に合う BIG4 ファーム + 部門 + 年収を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_big4`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_big4">
+          <span>BIG4 挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-tenshoku/">Big4転職おすすめ4社比較｜KPMG・EY・PwC・Deloitte出身者向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,234 @@
+---
+/**
+ * boutique-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: ブティック系コンサル 転職 (sv 推定 250-450・専門特化ブティック包括)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)';
+const description = 'ブティック系コンサル (コーポレイト・ディレクション・ドリームインキュベータ・経営共創基盤・フロンティア・マネジメント等) への転職について、専門特化ファームの特性・年収レンジ・大手ファームとの違い・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'ブティック系コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談やサポートは本当に無料ですか？', a: 'はい、全てのサービスを無料でご利用いただけます。弊社は、厚生労働省の認可を受けた有料職業紹介事業者です。採用が決定した際に、求人企業側から成功報酬をいただく仕組みのため、求職者様から費用をいただくことは一切ございません。安心してご相談ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">⚖️</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 比較・選択</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> boutique consul tenshoku に焦点を当てた 比較・選択 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 比較・選択 全体を扱うのに対し、本 LP は boutique-consul-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">ブティック系コンサル junior〜senior パートナー候補 両軸 | 専門特化ファーム + 制度成熟</span>
+      <h1 id="fv-h1">ブティック系コンサル転職、<span class="accent">年収+200万円を目指せる</span>チャンス。<br />在職中の夜間・土日相談も歓迎します</h1>
+      <p class="lede">専門特化型ファームだからこそ実現できる、<strong>平均年収アップ率120%超</strong>といった実績が公開情報で紹介されることが多くなっています。ブティック系コンサルは<strong>特定領域・業界に専門特化した中小規模ファーム</strong>を指し、少数精鋭 + 裁量大 + 専門性深耕が特徴とされ、戦略系ブティック・事業創造系・ハンズオン経営支援系等の多様なタイプが存在するとされています。現職に配慮した<strong>非公開求人のオンライン提案</strong>・<strong>内定後の辞退も可能</strong>な体制で活動を進められる事例も少なくありません。本記事ではブティック系コンサルの特性 + 年収レンジ + 大手との違い + 選考対策を公開情報ベースで整理します。</p>
+      <ul class="fv-bullets">
+        <li>ブティック系コンサル 4 タイプの特性</li>
+        <li>主要ブティックファームの領域比較</li>
+        <li>大手ファームとの違い (専門特化 vs 幅広さ)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_boutique">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは各コンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ブティック系コンサル 4 タイプの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各コンサルファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">タイプ1</span><h4>戦略系ブティック</h4><p>経営戦略立案・新規事業創出に特化した独立系ファーム (コーポレイト・ディレクション/ドリームインキュベータ/経営共創基盤等)。戦略案件 + 少数精鋭 + 専門性深耕が特徴とされています。</p></article>
+        <article class="branch"><span class="tag">タイプ2</span><h4>事業創造・新規事業系</h4><p>新規事業創造 + ベンチャー支援 + イノベーションに特化 (ドリームインキュベータ等)。自ら事業を生み出す志向の人材に適しているが一般的です。</p></article>
+        <article class="branch"><span class="tag">タイプ3</span><h4>ハンズオン経営支援系</h4><p>事業再生 + ハンズオン経営支援に特化 (経営共創基盤等)。提言だけでなく経営の現場に入り込んで実行支援する特徴のケースが多く見られます。</p></article>
+        <article class="branch"><span class="tag">タイプ4</span><h4>業界・機能特化系</h4><p>特定業界 (医療 / 金融 / IT 等) や特定機能 (人事 / マーケティング / SCM 等) に特化したブティック。専門領域を深く極めたい人材に適していると公表されています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_boutique">
+          <span>適合するブティックタイプを MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">ブティック系コンサルで実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるブティック系コンサルは、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、ブティック系 800～2,000 万円・専門特化型高待遇のレンジで具体的なキャリア設計が可能と言われます。
+        業界/領域特化型 + パートナー昇進機会早 + フラット組織は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ブティック系 vs 大手ファームの違い</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ブティック系 vs 大手ファーム比較">
+          <thead><tr><th>項目</th><th>ブティック系</th><th>大手ファーム</th></tr></thead>
+          <tbody>
+            <tr><td>規模</td><td>少数精鋭 (数十〜数百名)</td><td>大規模 (数千名以上)</td></tr>
+            <tr><td>案件</td><td>専門領域に特化</td><td>幅広い領域をカバー</td></tr>
+            <tr><td>裁量</td><td>若手にも大きい裁量</td><td>階層的・段階的に拡大</td></tr>
+            <tr><td>研修</td><td>OJT 中心・実践型</td><td>体系的な研修制度</td></tr>
+            <tr><td>専門性</td><td>特定領域を深く極める</td><td>多様な経験を積める</td></tr>
+            <tr><td>年収レンジ</td><td>600-2,500万円 (ファーム差大)</td><td>500-3,500万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的傾向の整理です。ファームにより実態は大きく異なります。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_boutique_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>ブティック系コンサルティングファームの基礎知識</h2><p>ブティック系コンサルティングファームとは、特定の産業分野（例：医療、金融）や特定の機能（例：M&A、人事戦略、事業再生）に特化した、専門性の高いコンサルティングサービスを提供する企業群を指すと一般にいわれます。<br>総合系（Big4など）や戦略系の大手ファームが幅広い領域をカバーするのに対し、ブティック系は少数精鋭で特定のテーマを深く掘り下げる点に特徴があります。<br>これにより、クライアントの個別具体的な課題に対し、より専門的で迅速な解決策を提供することが可能とされます。<br>厚生労働省の職業情報提供サイト（job tag）では、経営コンサルタントに求められるスキルとして高度な分析力や課題解決能力が挙げられており、ブティック系ファームでは、これに加えて特定の専門領域に関する深い知見が不可欠となります。<br>企業の規模は様々ですが、その多くは専門家が独立して設立したケースであり、独自のカルチャーや方法論を持つことが多いのも特徴の一つです。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>ブティック系コンサル転職の具体的な選考対策</h2><p>ブティック系コンサルティングファームへの転職を成功させるには、大手ファームとは異なる、より専門性に特化した対策が求められます。<br>選考プロセスは一般的に書類選考、複数回の面接（ケース面接、フィット面接を含む）で構成されますが、各段階で「なぜこのファームなのか」「自身の専門性をどう活かせるのか」を明確に伝えることが重要です。<br>特にケース面接では、ファームの専門領域に関連した、具体的で深い知識を問われる問題が出題される傾向があるとされます。<br>例えば、事業再生系ファームであれば財務諸表を基にした分析、DX特化型ファームであれば特定の技術トレンドに関する考察などが求められる可能性があります。<br>転職エージェントを活用する場合、職業安定法で定められている通り、求人内容や労働条件について正確な情報の提供を受ける権利があります。<br>信頼できるエージェントを選び、的確なサポートを受けることが選考を有利に進める上で有効な手段となり得ます。</p><ul><li>自身のキャリアと専門知識を棚卸しし、ファームの専門性と合致する点を言語化する。</li><li>ターゲット企業のウェブサイトや公開資料を読み込み、プロジェクト実績やコンサルタントの経歴を徹底的にリサーチする。</li><li>想定される専門領域のケース面接について、情報収集と模擬演習を重ねる。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>ブティック系コンサル転職で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの実現事例多数</li><li>業界・テーマに特化した専門コンサルタントが担当</li><li>経営層に近いポジションなど、質の高い非公開求人</li><li>在職中でも無理なく進められる徹底したサポート体制</li><li>業界の給与データを基にした的確な年収交渉力</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">専門特化のブティック系コンサルで、深い専門性を極める</h2>
+      <p>少数精鋭 + 裁量大 + 専門性深耕のブティック系。MyVisionの無料カウンセリングで、自分の志向 + 適合ブティック + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_boutique`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_boutique">
+          <span>ブティック系挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的と示されています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が知られています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとして運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢とされています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-30dai/">30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">⚖️ 比較・選択 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職活動時のトラブル事例</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.kokusen.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 国民生活センター 転職トラブル</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

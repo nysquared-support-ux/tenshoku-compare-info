@@ -1,0 +1,244 @@
+---
+/**
+ * SES 脱出 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY: engineer-1000man rich-v3 実証済テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L248/372/458 照合済)
+ * ★327 backup: backups/2026-05-17-ses-dasshutsu-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'SES 脱出 完全ガイド｜自社開発・元請への転職判断と年収アップの目安（2026年5月時点・公開情報整理・PR）';
+const description = 'SES (システムエンジニアリングサービス) から自社開発・元請企業への転職を検討中の IT エンジニア向け。脱出理由・判断軸・転職活動の流れ・年収アップ目安を JILPT/IPA/厚労省 公的統計 + 各転職エージェント 2026 年 5 月時点公開求人情報サンプルに基づき整理した情報提供記事です (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'SES 脱出ガイド' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> ses dasshutsu に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は ses-dasshutsu に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / SES 脱出</span>
+      <h1 id="fv-h1">
+        <span class="accent">SES 脱出</span>完全ガイド<br />
+        自社開発・元請への転職判断と年収アップの目安
+      </h1>
+      <p class="lede">
+        SES から自社開発・元請への転職は、実務 2-3 年経験 + 主要スキル習得後が一つの目安とされています。
+        JILPT・IPA・厚生労働省等の公的出典と各転職エージェント公開求人情報サンプルをもとに、編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>脱出を検討する 5 つの理由を整理</li>
+        <li>判断軸 4 つ + 転職活動の流れ</li>
+        <li>経験年数別 年収アップ目安表</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 結論 + 脱出理由 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と SES から脱出を検討する 5 つの理由</h2>
+      <p class="section-lede">
+        SES から自社開発・元請への転職は、実務 2-3 年経験 + 主要スキル習得後が一つの目安とされています。
+        年収アップ + 技術選定の自由度 + 長期キャリア構築が主要メリットとされていますが、個別状況により判断は大きく異なります。
+      </p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">年収アップ</span>
+          <h4>年収帯に差が観察されるケース</h4>
+          <p>公開求人情報サンプルの整理では、同等スキル層で年収帯に差が観察されるケースが報告されています (個別状況により大きく異なります・後述年収目安表参照)。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">技術選定</span>
+          <h4>技術選定の自由度</h4>
+          <p>自社開発では事業に合わせた技術選定が行われる傾向 (但しレガシースタック維持の自社開発企業も存在します)。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">スキル蓄積</span>
+          <h4>長期スキル蓄積</h4>
+          <p>同一プロダクト長期担当でドメイン知識深化 (但し SES でも長期プロジェクト常駐は可能)。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">キャリアパス</span>
+          <h4>キャリアパス明確化</h4>
+          <p>テックリード・PM・CTO 候補等の昇進ルートが提示される事例 (但し企業規模・組織体制により異なります)。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">ライフスタイル</span>
+          <h4>働き方の選択肢</h4>
+          <p>公開求人情報ではフルリモート・フレックス制度を提示する企業が観察されます (但し職種・プロジェクト性質により異なります)。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/institute/research/2024/229.html" target="_blank" rel="noopener">JILPT 報告書 No.229 (2024)</a> + <a href="https://www.ipa.go.jp/jinzai/whitepaper/2024/" target="_blank" rel="noopener">IPA IT 人材白書 2024</a> + <a href="https://shigoto.mhlw.go.jp/User/Occupation/Detail/108" target="_blank" rel="noopener">厚労省 job tag「システムエンジニア」</a> + 各転職エージェント公開求人情報サンプル (2026 年 5 月時点) を整理した一般的傾向であり、断定的事実ではありません。個別状況により大きく異なります。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>脱出理由を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 判断軸 + 転職活動の流れ ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">SES 脱出転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるSES 脱出転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円のレンジで具体的なキャリア設計が可能と言われます。
+        SES 脱出領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">SES 脱出の判断軸 4 つと転職活動の流れ</h2>
+      <p class="section-lede">脱出判断は単一要素ではなく、スキル・市場価値・キャリア志向・ライフイベントの 4 軸 + SES のメリットとの両面比較が推奨されます。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>判断軸 4 つ</h3>
+          <p><strong>① スキル成熟度</strong>: 1-2 個の主要言語/フレームワーク習得 + 実務 2 年以上<br /><strong>② 市場価値</strong>: GitHub・技術ブログ・LT 登壇等のアウトプット<br /><strong>③ キャリア志向</strong>: スペシャリスト or マネジメント路線の明確化<br /><strong>④ ライフイベント</strong>: 結婚・家族計画・住宅購入のタイミング</p>
+        </div>
+        <div class="card">
+          <h3>転職活動の流れ (一般的目安)</h3>
+          <p><strong>3 ヶ月前</strong>: エージェント登録 + 職務経歴書作成 + ポートフォリオ整備<br /><strong>2 ヶ月前</strong>: カジュアル面談 + コーディングテスト対策<br /><strong>1 ヶ月前</strong>: 本面接 + 内定 + 条件交渉<br /><strong>退職通告 → 引き継ぎ</strong>: 1-2 ヶ月の引き継ぎ期間が一般的</p>
+        </div>
+        <div class="card">
+          <h3>SES に居続けるメリット (公開情報整理)</h3>
+          <p>プロジェクト多様性 (短期間で複数業界・企業文化を経験) / 顧客折衝スキル (クライアント直接対応) / 転職市場での実績アピール (多様な案件経験は経歴書差別化要素) / 福利厚生 (大手 SES では教育研修・資格支援が充実する傾向)。<br>一方的な脱出推奨ではなく両面比較を推奨します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 年収アップ目安表 ============ -->
+  <section class="lp-section"><h2>SESからの転職を考える前に知るべき基礎知識</h2><p>SES(システムエンジニアリングサービス)からの転職を検討する際、まずその契約形態とビジネス構造の理解が重要です。<br>SESは多くの場合、クライアント企業に技術者を派遣する準委任契約に基づきます。<br>これは、特定の業務の遂行を目的とし、指揮命令権は雇用元にあるのが特徴です。<br>一方、自社開発企業は自社のプロダクトやサービスを開発し、元請SIerは顧客から直接システム開発を請け負います。<br>SESからの転職がキャリアパスとして検討される背景には、多重下請け構造による待遇の問題や、断片的な業務によるキャリア形成の難しさなどが挙げられるとされます。<br>厚生労働省の「労働者派遣事業と請負により行われる事業との区分に関する基準」でも適正な業務委託のあり方が示されており、自身の労働環境がこれに沿っているかを確認することも、転職を判断する一つの材料となるでしょう。<br>自身のキャリアプランと現状が合致しているかを見極めることが、後悔のない選択に繋がると考えられます。</p></section>
+
+  <!-- ============ SECTION 04 脱出後転職先 + 反例 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">脱出後に多い転職先カテゴリと注意点</h2>
+      <ul>
+        <li><strong>Web 系自社開発企業</strong>: モダン技術・フルリモート・フレックス</li>
+        <li><strong>事業会社の社内 SE</strong>: 上流工程 + DX 推進・年収安定</li>
+        <li><strong>SaaS スタートアップ</strong>: ストックオプション + 急成長環境</li>
+        <li><strong>外資系 IT 企業</strong>: 高年収 + グローバル経験</li>
+        <li><strong>元請 SI (一次請け)</strong>: 上流工程 + 大規模プロジェクト</li>
+      </ul>
+
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断はエージェント相談を推奨)</h3>
+        <div class="row"><b>脱出タイミング</b><span>実務 2-3 年 + 主要スキル習得後が一般的目安 (個別スキル・キャリア志向により異なる)</span></div>
+        <div class="row"><b>脱出メリット</b><span>年収アップの可能性・技術選定自由度・長期スキル蓄積 (但し企業・職種により異なる)</span></div>
+        <div class="row"><b>判断軸</b><span>スキル / 市場価値 / キャリア志向 / ライフイベント の 4 軸 + SES メリットとの両面比較</span></div>
+        <div class="row"><b>活動開始</b><span>退職予定日 3 ヶ月前から開始が一般的 (スキル獲得状況・経済状況により前後可)</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。SES vs 自社開発はキャリア志向・スキル・年収・ライフイベントを統合的に判断する事項です。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>SES脱出を成功に導くための具体的な転職活動ステップ</h2><p>SESから自社開発・元請企業への転職を成功させるためには、計画的かつ戦略的な活動が求められます。<br>公開情報をもとに整理すると、一般に以下のステップが有効とされます。<br>各ステップを着実に進めることで、希望するキャリアへの道筋が明確になることが期待されます。</p><ul><li><strong>1. 自己分析とスキルの棚卸し:</strong> これまで関わったプロジェクト内容、担当業務、使用技術、そして具体的な成果を詳細に書き出します。IPA(情報処理推進機構)が公開する「i コンピテンシ ディクショナリ」などを参考に、自身のスキルセットを客観的に評価することが推奨されます。</li><li><strong>2. ポートフォリオの作成:</strong> 特に自社開発企業への転職では、技術力を示す具体的な成果物が重要視されます。GitHub等でソースコードを公開できる自主制作のアプリケーションや、技術ブログでの情報発信は、スキルを証明する強力な武器となり得ます。</li><li><strong>3. 企業研究と応募書類の最適化:</strong> 企業の技術ブログやエンジニアの登壇資料などを通じて、開発文化や求める人物像を深く理解します。その上で、応募先企業ごとに職務経歴書を最適化し、「なぜその企業なのか」「何に貢献できるのか」を明確に記述することが、職業安定法で求められる適切なマッチングにも繋がります。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門の転職サービスを検討するメリット (★544 ②):</strong><ul><li>専門のコンサルタントによるサポートを通じて、自身の市場価値を客観的に把握し、効率的な転職活動を進められる可能性が高まります。</li><li>一般には公開されていない求人情報へのアクセス機会が得られ、自身のキャリアプランに合致した優良な自社開発・元請企業と出会えることが期待されます。</li><li>公的データや法令に基づいた客観的な情報収集と、プロによる個別のサポートを組み合わせることで、安心して次のキャリアステップを検討できます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/techgo-ses-dasshutsu-tetsuduki/">SES からの転職手続きの整理｜次のキャリアへの進め方 (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/sier-dasshutsu/">SIer脱出転職の進め方ガイド｜事業会社/Web系/SES比較整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/30dai/">30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-koukai/">40代転職で死ぬほど後悔しないために｜失敗パターンと回避策（PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-revenge/">40代転職リベンジ｜失敗からの復活ガイド (公開情報・PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

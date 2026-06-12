@@ -1,0 +1,140 @@
+---
+import RichLayout from '../../layouts/RichLayout.astro';
+import PRBadge from '../../components/PRBadge.astro';
+import BannerAB from '../../components/BannerAB.astro';
+
+const slug = "devops-engineer";
+const title = "DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）";
+const description = "DevOps エンジニアへの転職を検討する方向けに、SRE/Platform/Infra as Code 等の市場価値・キャリアパスを公開情報をもとに中立に整理した情報提供記事です（PR・アフィリエイト広告を含みます）。";
+const breadcrumb = [
+  { name: "ホーム", item: "/" },
+  { name: "エンジニア転職", item: "/" },
+  { name: title, item: `/${slug}/` }
+];
+const faq = [
+  { q: 'DevOps と SRE は同じですか？', a: '関連するが異なる職種とされています。SRE は信頼性工学に特化した職種とされます。' },
+  { q: '未経験で DevOps 転職は可能ですか？', a: 'インフラ・開発の基礎経験があれば社内転換・ジュニア求人での選択肢があるが一般的です。' },
+  { q: '必須の技術スタックは？', a: 'K8s・CI/CD・クラウド (AWS/GCP/Azure)・Terraform 等が標準的のケースが多く見られます。' },
+];
+---
+
+<RichLayout {title} {description} {breadcrumb} {faq} {slug}
+  publishedDate="2026-06-03" modifiedDate="2026-06-03">
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> devops engineer に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は devops-engineer に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+
+  <section class="fv">
+    <div class="fv-pill">DevOpsエンジニア転職 / 公開情報整理</div>
+    <h1>DevOps エンジニア転職を検討する方へ — 市場価値と進め方ガイド</h1>
+    <p class="lede">本記事では <strong>DevOps エンジニア転職の市場価値・キャリアパス・進め方</strong> を公開情報をもとに中立に整理します。本ページは A8.net 経由のアフィリエイト広告（PR）を含む情報提供記事です。</p>
+    <ul class="fv-bullets">
+      <li>DevOpsエンジニア転職の基本知識</li>
+      <li>市場価値・年収帯の目安</li>
+      <li>キャリアパスの選択肢</li>
+      <li>転職エージェント活用の選択肢</li>
+    </ul>
+    <PRBadge pageSlug={slug} />
+    <div class="fv-meta">最終更新: 2026年6月3日 | 公開情報ベース | 数値は個人差あり</div>
+  </section>
+
+  <BannerAB pageSlug={slug} position="hero" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 01</div>
+    <h2>DevOps エンジニア転職の基本</h2>
+    <p>DevOps エンジニアは、開発と運用の橋渡しを担う職種とされており、SRE (Site Reliability Engineering)・Platform Engineer・Infra as Code 等の領域に拡大していると公表されています。<br>CI/CD・Kubernetes・Terraform・GitHub Actions・GitOps 等の技術スタックが標準的とされ、クラウドネイティブ開発 (AWS/GCP/Azure) と密接に関連すると示されています。<br>年収帯は、ジュニア (3-5 年) で 600-900 万円、シニア (5-10 年) で 900-1400 万円、Staff/Principal (10 年以上) で 1400-2000 万円が目安として紹介されるとされています。<br>AWS Solutions Architect・Kubernetes Administrator (CKA) 等の認定資格が市場価値向上に寄与する選択肢が知られています。</p>
+  </section>
+
+  <BannerAB pageSlug={slug} position="middle" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 02</div>
+    <h2>DevOps 転職の進め方とスキル整理</h2>
+    <p>DevOps 転職の進め方は、技術スタック整理・認定資格の取得・エンジニア専門エージェント活用の 3 点が出発点となります。</p>
+    <ul>
+        <li><strong>技術スタック整理</strong>: CI/CD・K8s・IaC・GitOps 等の経験を職務経歴書に明示することが推奨されるが一般的です。</li>
+        <li><strong>認定資格の取得</strong>: AWS SAP・CKA 等の認定資格が市場価値向上に寄与するのケースが多く見られます。</li>
+        <li><strong>エンジニア専門エージェント</strong>: 技術理解の深いエージェントの活用が推奨されると公表されています。</li>
+    </ul>
+  </section>
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 03</div>
+    <h2>TechGo の公開情報整理</h2>
+    <p>本サイトが PR として取り上げる「TechGo」について、DevOps エンジニア転職に関係する公開情報を整理します。</p>
+    <ul>
+      <li>✅ <strong>エンジニア転職特化型</strong>: TechGo はエンジニア専門特化型の転職エージェントが確認されています。</li>
+      <li>✅ <strong>専門領域の深さ</strong>: 業界に精通したコンサルタント対応とされる傾向</li>
+      <li>✅ <strong>非公開求人</strong>: 公開情報による表記 (詳細は公式公開情報をご確認ください)</li>
+      <li>✅ <strong>面接対策</strong>: 面接対策・職務経歴書添削の選択肢があるとされる傾向</li>
+      <li>✅ <strong>無料利用</strong>: 求職者は無料で利用可能とされる傾向</li>
+    </ul>
+  </section>
+
+  <BannerAB pageSlug={slug} position="bottom" />
+
+  <section class="lp-section">
+    <div class="section-num">SECTION 04</div>
+    <h2>まとめ — 自分に合うエージェントと一緒に進める</h2>
+    <p>
+      DevOps エンジニア転職は、<strong>市場価値の理解 + キャリアパスの整理 + エージェント活用</strong> の 3 点を整理した上で、自分に合う選択肢を専門家と相談するのが現実的アプローチとして運用されています。「業界 No.1」等の断定表現に惑わされず、複数エージェントの比較で公正な判断を。
+    </p>
+  </section>
+
+  <BannerAB pageSlug={slug} position="final" />
+
+  <section class="faq-section">
+    <h2>よくある質問</h2>
+    {faq.map((item) => (
+      <details class="faq-item">
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="lp-section">
+    <h2>参考情報・公開出典</h2>
+    <ul class="source-list">
+      <li>厚生労働省「労働経済の分析」</li>
+      <li>経済産業省「IT 人材需給に関する調査」</li>
+      <li>金融庁「金融商品取引法・投資運用業」</li>
+      <li>日本内部監査協会 (IIA Japan)</li>
+      <li>日本公認会計士協会 (JICPA)</li>
+      <li>国民生活センター「雇用関連トラブル相談事例」</li>
+    </ul>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer-tenshoku/">DevOps / SRE エンジニアの転職完全ガイド｜CI/CD・SRE・クラウド経験別の市場価値とキャリアパス｜TechGo (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-portfolio/">エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

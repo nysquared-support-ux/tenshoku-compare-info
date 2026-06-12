@@ -1,0 +1,216 @@
+---
+/**
+ * consul-tenshoku-mikeiken LP (MyVision コンサル特化・★326 DRY kaikeishi-tenshoku-timing 流用)
+ * ★480 MyVision a8mat verbatim 保持 (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル転職 未経験 (sv 推定 1,500-2,500・利用者9割未経験ターゲット)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル転職 未経験 完全ガイド｜20代後半-30代前半が狙える戦略的キャリアパス｜MyVision (PR)';
+const description = 'コンサル業界未経験から20代後半-30代前半でハイクラス転職を実現する方法を、利用者の9割が未経験というMyVision活用視点で整理。アクセンチュア・BIG4・ベイカレント等の主要ファームへの未経験転職の選考突破ポイント・無料ケース面接対策・志望動機の作り方を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル転職 未経験' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'コンサルティング業界は未経験です。本当に転職可能なのでしょうか？', a: 'はい、可能です。多くのコンサルティングファームでは、IT・製造・金融といった特定分野の専門知識を持つ人材を積極的に採用しています。現職でのご経験が大きな強みとなるケースが一般的です。私たちは、あなたのスキルが活かせる求人を厳選し、未経験からでも成功できるようサポートする体制を整えていますのでご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 未経験〜マネージャー候補 両軸ガイド</span>
+      <h1 id="fv-h1">コンサル転職 未経験 <span class="accent">+200万 / senior マネージャー候補 +700万円超</span>。<br />BIG4・MBB brand 60-100年 + 制度成熟30年+ の path 成熟度を踏まえた両軸転職ガイド。在職中でも夜間・オンライン相談可</h1>
+      <p class="lede">コンサルティング業界は、DX 推進や事業再編の需要増を背景に、未経験者の採用を拡大しているとされます。異業種の専門知識を持つ人材は高く評価される傾向にあり、<strong>平均年収アップ額+180万円</strong>(公開情報) といったデータも紹介されています。現職に知られず<strong>非公開求人</strong>のご紹介・<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。コンサル特化エージェントの公開情報によれば、<strong>利用者の約9割が業界未経験</strong>で、20代後半-30代前半の大手企業・IT・官公庁出身者が主な転職層とされています。本記事では未経験者がコンサル転職を成功させるための<strong>5つのカギ</strong>と、独学では超えにくいケース面接対策の現実を整理します。</p>
+      <ul class="fv-bullets">
+        <li>未経験者の9割が辿る選考突破の5つのカギ</li>
+        <li>狙えるファーム別の特徴 (アクセンチュア / BIG4 / ベイカレント)</li>
+        <li>無料で受けられる元コンサルからのケース面接対策</li>
+        <li>志望動機・職務経歴書の翻訳ポイント (前職経験 → コンサル評価軸)</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_mikeiken`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_mikeiken">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">なぜ未経験でもコンサル転職は可能なのか</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル業界が未経験者を積極採用する背景には、<strong>業界の急成長 + 構造的人材不足 + 多様性志向</strong>の3要因があるとされています。アクセンチュア・BIG4・ベイカレント等の大手ファームは、20代後半-30代前半のポテンシャル層を中心に、毎年大量採用を継続している傾向が公開情報から読み取れます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>業界の急成長</h4><p>DX 推進・経営改革・サステナビリティ・生成AI 等の経営課題増加により、コンサル業界は2020年以降も年率10-20%規模で拡大しているとされています。需要 > 供給の構造的人材不足が継続中です。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>多様性志向 (バックグラウンド不問)</h4><p>従来の戦略コンサル中心モデルから、業界知見・テクノロジー・データサイエンス・組織変革等の多様な専門性が必要となり、コンサル経験よりも「他業界での実務経験」が重視される傾向に移行しているとされています。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>未経験者9割という現実</h4><p>コンサル特化エージェントの公開情報によれば、利用者の<strong>約9割が業界未経験</strong>で転職に成功しているとされています。「コンサル経験必須」というイメージは実態と乖離しており、ポテンシャル + 論理的思考力 + 学習意欲があれば挑戦可能です。</p></article>
+        <article class="branch"><span class="tag">理由4</span><h4>大手企業・IT・官公庁出身者が主力</h4><p>未経験者の主な前職は、大手事業会社・IT エンジニア・SIer・官公庁・銀行/金融機関等とされており、これらの実務経験はコンサル業界で高く評価される傾向にあります。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_mikeiken`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_mikeiken">
+          <span>未経験から狙える求人を MyVision 公式の無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">未経験コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める未経験コンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        未経験コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">未経験から狙えるファーム別の特徴</h2>
+      <p class="section-lede">未経験者の主な転職先となる大手・人気ファームを、特徴・年収レンジ・採用傾向で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的傾向であり、最新条件は各社公式情報でご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="未経験から狙えるコンサルファーム比較">
+          <thead><tr><th>ファーム種別</th><th>未経験採用傾向</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (総合系・IT)</td><td>&#11088; 積極採用</td><td>500-900万円</td><td>IT・SIer・大手事業会社出身</td></tr>
+            <tr><td>BIG4 (Deloitte・PwC・EY・KPMG)</td><td>積極採用</td><td>550-950万円</td><td>会計・財務・監査経験者・大手出身</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>&#11088; 積極採用</td><td>600-1,000万円</td><td>業界知見・実務経験豊富な層</td></tr>
+            <tr><td>戦略系 (BCG・McK・Bain)</td><td>狭き門 (ポテンシャル重視)</td><td>800-1,500万円</td><td>新卒系・高学歴・ケース面接強者</td></tr>
+            <tr><td>アビーム・IBM・日系 IT 系</td><td>&#11088; 積極採用 (IT 出身者)</td><td>500-850万円</td><td>SIer・SE・PM 経験者</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_mikeiken_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>20代後半・30代前半の未経験コンサル転職：基礎知識と市場背景</h2><p>20代後半から30代前半における未経験からのコンサルタント転職は、第二新卒とは異なり、社会人として培った特定の業界知識や専門スキルを武器にするキャリアチェンジを指します。<br>近年、企業のDX（デジタルトランスフォーメーション）やサステナビリティ経営への対応など、経営課題が複雑化しており、多様なバックグラウンドを持つ人材への需要が高まっているとされます。<br>厚生労働省が公表する「労働経済動向調査」においても、専門的・技術的職業の労働者不足感は依然として高い状況が示されています。<br>そのため、コンサルティングファームは即戦力となるポテンシャルを持つ異業種の人材を積極的に採用する傾向にあると一般に考えられています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">独学では限界 — 元コンサルからの無料サポートが鍵</h2>
+      <p>コンサル選考突破の現実的な壁として、<strong>独学では到達しにくい水準</strong>がケース面接・職務経歴書の翻訳・志望動機の論理性の3点とされています。コンサル特化エージェントの公開情報によれば、これらは元コンサルが伴走する形でのトレーニングで品質が大きく向上するとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">サポート1</span><h4>元コンサルとの模擬面接</h4><p>本番想定の模擬面接を複数回繰り返し、フィードバックを受けながら改善するスタイルが一般的とされています。実際のケース問題 + 質疑応答 + 振る舞いまで含めた総合トレーニングです。</p></article>
+        <article class="branch"><span class="tag">サポート2</span><h4>職務経歴書の添削</h4><p>前職経験をコンサル評価軸に翻訳する添削です。数値化 + ストーリー化 + ファーム別カスタマイズまで含めた専門的添削が一般的とされています。</p></article>
+        <article class="branch"><span class="tag">サポート3</span><h4>志望動機の壁打ち</h4><p>「なぜコンサル・なぜ今・なぜこのファーム」の論理を、複数回の壁打ちで磨き上げるサポートです。面接通過率に直結する要素とされています。</p></article>
+        <article class="branch"><span class="tag">サポート4</span><h4>ケース問題のレクチャー</h4><p>フェルミ推定 / 収益改善 / 市場参入 / 新規事業の4タイプを、解法フレームワーク (MECE / イシューツリー / 仮説思考) からトレーニングするレクチャーです。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>コンサル特化エージェントの無料カウンセリングでは、上記サポートの利用方法 + 自分の市場価値 + 狙えるファームを30秒の会員登録で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_mikeiken`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_mikeiken">
+          <span>元コンサルの無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>未経験からコンサルへ：戦略的キャリアパスを実現する3つのステップ</h2><p>未経験からコンサルティング業界への転職を成功させるためには、計画的な準備が不可欠です。<br>単に憧れだけで応募するのではなく、自身のキャリアとコンサルタントという職業を接続させる戦略的なアプローチが求められます。<br>公開されている情報をもとに、具体的なステップを以下に整理します。</p><ul><li><strong>ステップ1：自己分析とスキルの棚卸し</strong><br>まずは自身の職務経歴を振り返り、コンサル業務に活かせるポータブルスキル（論理的思考力、仮説検証能力、コミュニケーション能力など）を洗い出します。厚生労働省の職業情報提供サイト「job tag」などを参考に、コンサルタントに求められる能力と自身の経験を客観的に照らし合わせることが有効とされます。</li><li><strong>ステップ2：企業研究と志望動機の具体化</strong><br>総合系、戦略系、IT系など、コンサルティングファームの種類は多岐にわたります。各ファームの強みやカルチャーを研究し、「なぜそのファームなのか」「入社後、自身の経験をどう活かして貢献したいのか」を具体的に言語化し、一貫性のある志望動機を構築します。</li><li><strong>ステップ3：専門的な選考対策の実施</strong><br>コンサル転職特有の「ケース面接」は、未経験者にとって最大の関門とされます。思考力やコミュニケーション能力を短時間で評価されるため、書籍や転職エージェントが提供する模擬面接などを活用し、実践的なトレーニングを重ねることが選考突破の可能性を高める上で重要です。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>未経験からのコンサル転職で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+215万円の事例も）</li><li>専門職に特化した非公開求人が80%以上</li><li>在職中でも安心のフルリモート・夜間土日対応</li><li>経験豊富なキャリアアドバイザーによる徹底サポート</li><li>納得いくまで選べる、内定承諾後の辞退も可能</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">コンサル転職検討で読まれている関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職ガイド</h4><p>30代でコンサル転職を成功させる人の共通点 + 4 つのキャリアパス + 年収レンジ</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職ガイド</h4><p>IT エンジニアからコンサル + 狙えるファーム + 評価される 5 領域</p></a>
+        <a class="card-link" href="/kaikeishi-tenshoku-timing/"><h4>公認会計士 転職タイミング</h4><p>監査法人 in/out + 業務サイクル + 年代別判断</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">コンサル業界未経験から、20代後半-30代前半でハイクラス転職を実現する</h2>
+      <p>利用者の9割が業界未経験。MyVisionの無料カウンセリングで、自分の市場価値 + 狙えるファーム + 選考突破のロードマップを確認できます。会員登録は所要30秒・キャリア相談だけでも利用可能です。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_mikeiken`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_mikeiken">
+          <span>無料カウンセリングで自分の市場価値を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mikeiken-kenshu/">コンサル未経験向け研修の整理ガイド｜入社前後の学習軸｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

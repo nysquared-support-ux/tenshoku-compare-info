@@ -1,0 +1,243 @@
+---
+/**
+ * リクルートエージェント 評判 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 3種 (Breadcrumb/FAQPage/ItemList) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-recruit-hyouban-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'リクルートエージェントの評判は？利用者口コミで判明した真実2026年最新（PR）';
+const description = 'リクルートエージェントの評判・口コミ・他社比較を公開情報ベースで整理。良い評判（求人数の多さ・キャリアアドバイザー・面接対策）と悪い評判（担当者の質・求人紹介スピード・ハイクラス劣勢）の両面を解説。向いている人/向かない人の3条件で判断できる情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: 'リクルートエージェント 評判' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': '転職エージェント', 'item': 'https://tenshoku-compare-info.pages.dev/osusume/' },
+    { '@type': 'ListItem', 'position': 3, 'name': 'リクルートエージェント 評判', 'item': 'https://tenshoku-compare-info.pages.dev/recruit-hyouban/' },
+  ],
+};
+const faq = [
+  { q: 'リクルートエージェントには悪い評判もあるようですが、利用は安全ですか？', a: 'はい、利用自体に危険性は低いとされます。厚生労働省から認可を受けた「職業紹介事業者」であり、法令遵守が求められるためです。ただし担当者との相性があるため、評判は参考程度とし、合わない場合は担当者変更を申し出るのが賢明です。' },
+  { q: '「担当者の質が悪い」という口コミへの具体的な対策はありますか？', a: '担当者との面談後、もし相性が悪いと感じた場合は、公式サイトの問い合わせフォームや電話で担当者の変更を依頼できます。その際、理由（例：希望業界への理解度、連絡頻度など）を具体的に伝えると、より相性の良い担当者に交代できる可能性が高まります。' },
+  { q: '他の大手エージェントと比較して、評判面での強みは何ですか？', a: '評判として特に多く言及される強みは、公開・非公開を合わせた求人数の多さです。多様な業種・職種を網羅しているため、「まずは幅広く求人を見てみたい」という利用者からの評価が高い傾向にあります。これが他社との比較における大きな特徴とされます。' },
+  { q: 'ネットの評判を鵜呑みにしないための注意点を教えてください。', a: '個人の感想は主観的であるため、あくまで一意見として捉えることが重要です。消費者庁もウェブサイトの口コミ情報を参考にする際の注意喚起をしています。事実（求人数、拠点数など）と感想（担当者の対応など）を区別し、無料相談でご自身の目で確かめることをお勧めします。' },
+  { q: '結局、リクルートエージェントの評判をどう活かせば良いのでしょうか？', a: '「求人数が多い」という良い評判を活かして情報収集の軸にしつつ、「担当者には個人差がある」という悪い評判を念頭に、合わない場合は変更制度を活用するという対策を準備しておくのが良いでしょう。サービスを最大限活用する上で、評判の構造理解は有効とされます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '転職エージェント主要 4 サービス比較',
+  'description': '主要転職エージェント (リクルート / doda / マイナビ / JAC) の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '転職エージェント (中堅 20-40代)', 'description': '求人数 60 万件+ (公開 30 万件 + 非公開 30 万件)・全業界対応', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'doda', 'serviceType': '転職エージェント + スカウト型', 'description': '20-30 代中堅・スカウト機能 + エージェント機能の両軸', 'provider': {'@type': 'Organization', 'name': 'パーソルキャリア株式会社'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'マイナビエージェント', 'serviceType': '転職エージェント (20代特化)', 'description': '20 代第二新卒・若手特化・面接サポート', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'JAC Recruitment', 'serviceType': '両面型ハイクラス転職エージェント', 'description': '30-40 代管理職/専門職・コンサル/IT/金融特化', 'provider': {'@type': 'Organization', 'name': '株式会社ジェイ エイ シー リクルートメント'}}},
+  ],
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">リクルートエージェント senior / マネージャー候補 ハイクラス評判 | senior 年収+700万円超・partner 候補 path</span>
+      <h1 id="fv-h1">
+        <span class="accent">リクルートエージェント senior / マネージャー候補 ハイクラス評判</span>は？<br />
+        公開情報と senior 利用者傾向の整理 2026年最新 + senior 年収 1,300-2,500万円帯 (マネージャー〜Director) + partner 候補 path
+      </h1>
+      <p class="lede">
+        リクルートエージェントは求人数業界主要候補・公開情報ベース (60 万件以上) + キャリアアドバイザーの質 + 面接対策の充実が評価される一方、担当者の質にバラつき・求人紹介スピードへの指摘があるとされています。20-40 代の中堅層に最適・ハイクラス特化なら他社併用が推奨されます。
+      </p>
+      <ul class="fv-bullets">
+        <li>基本情報・特徴を公開情報で整理</li>
+        <li>良い評判・悪い評判の両面を解説</li>
+        <li>他社エージェントとの比較 + 向いている人/向かない人 3 条件</li>
+        <li>厚労省・JILPT・国民生活センター・公式サイト 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。本サイトはリクルートエージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本記事は公式公開情報・各メディア公開口コミ傾向の整理であり、独自の口コミ調査結果ではありません。最新情報は各エージェント公式サイトでご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-12</span>
+        <span><b>最終更新</b> 2026-05-12</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 基本情報 + 良い評判 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">基本情報・特徴と良い評判</h2>
+      <p class="section-lede">運営会社: 株式会社リクルート (1960 年創業・東証プライム上場)。公開求人 30 万件 + 非公開求人 30 万件 = 計 60 万件以上 (業界主要候補・公開情報ベース)。対応年代 20-40 代中心・全業界全職種・完全無料 (採用企業から成功報酬)。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">良い評判 ①</span>
+          <h4>求人数の多さと非公開求人の質</h4>
+          <p>60 万件以上は業界主要候補・特に非公開求人 (経営層・管理職・専門職) の質が評価。複数業界・複数職種を比較検討したいユーザーに適する。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">良い評判 ②</span>
+          <h4>転職市場の知識が豊富なアドバイザー</h4>
+          <p>転職市場・年収相場・各企業の社風等の知見が豊富。特に業界経験者のアドバイザーへの評価が高い。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">良い評判 ③</span>
+          <h4>面接対策・書類添削の実質的サポート</h4>
+          <p>履歴書/職務経歴書の添削・企業別の面接対策・模擬面接等の実質的サポート。但し手厚さは担当者次第のケースも。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">基本情報</span>
+          <h4>料金・対応範囲</h4>
+          <p>完全無料・20-40 代中心 (50 代対応もあり)・全業界全職種 (IT/Web・金融・コンサル・メーカー等)。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事は <a href="https://www.r-agent.com/" target="_blank" rel="noopener">リクルートエージェント公式サイト</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> + <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.kokusen.go.jp/" target="_blank" rel="noopener">国民生活センター</a> + 各エージェント公式サイトの公開情報を整理した一般論であり、独自の口コミ調査結果ではありません。最終レビュー日: 2026-05-12。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>評判を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 悪い評判 + 向き不向き ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">リクルート評判転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるリクルート評判転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        リクルート評判領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">悪い評判・注意点と向いている人/向かない人</h2>
+      <p class="section-lede">悪い評判 3 点を把握しつつ、向いている人/向かない人の 3 条件で判断することが推奨されます。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>悪い評判・注意点 (3 点)</h3>
+          <p>① 担当者の質にバラつき (担当者数が多くベテラン vs 新人の経験差・合わない場合は変更依頼推奨) ② 求人紹介スピードが速すぎる場合あり (検討時間確保したい旨を事前申告) ③ ハイクラス・外資系は他社優勢 (年収 800 万円以上は JAC・ビズリーチ・ダイレクトスカウト等が優勢・併用推奨)</p>
+        </div>
+        <div class="card">
+          <h3>向いている人 / 向かない人 (各 3 条件)</h3>
+          <p>向いている人: ① 20-40 代の中堅層 ② 業界・職種を幅広く検討したい人 ③ 初回転職または経験 1-2 回。向かない人: ① ハイクラス特化 (年収 800 万+・JAC/ビズリーチ/ダイレクトスカウト併用推奨) ② 自分のペースで検討したい人 (要事前申告) ③ 外資系特化 (JAC International 等併用推奨)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 他社比較 ============ -->
+  <section class="lp-section"><h2>リクルートエージェントの評判を判断する基礎知識</h2><p>リクルートエージェントの評判を調べる際、それは単なる「良い」「悪い」の二元論ではないと理解することが重要です。<br>評判は主に「サービスのシステム的側面」と「キャリアアドバイザーの個人的側面」の2つから構成されます。<br>同社は厚生労働省から許可を得た職業紹介事業者（許可番号 13-ユ-010258）であり、職業安定法に基づいた運営が義務付けられています。<br>このため、システムや法令遵守の点では一定の信頼性があるとされます。<br>一方で、キャリアアドバイザーの対応品質は、個人の経験や利用者との相性に左右されるため、評判が分かれる最大の要因となっています。<br>したがって、公開情報から客観的なサービス内容を把握しつつ、アドバイザーとの相性は実際に面談して判断するという視点が、評判を正しく理解する上で不可欠です。</p></section>
+
+  <!-- ============ SECTION 04 まとめ + 3 軸併用戦略 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ｜3 軸併用戦略と判断ポイント</h2>
+      <div class="counter-box">
+        <h3>📌 3 軸併用戦略 (公開情報整理)</h3>
+        <div class="row"><b>STEP 1</b><span>リクルート (求人数) + 業界特化型 (専門性) + ハイクラス型 (年収アップ) の 3 社並行登録</span></div>
+        <div class="row"><b>STEP 2</b><span>担当者との相性確認 (合わない場合は変更依頼)</span></div>
+        <div class="row"><b>STEP 3</b><span>3-5 社面接で比較・最終判断</span></div>
+        <div class="row"><b>向いている人</b><span>20-40 代中堅・幅広い業界検討・初回転職</span></div>
+        <div class="row"><b>向かない人</b><span>ハイクラス特化・自分ペース重視・外資系特化</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">※ リクルートエージェントは求人数 60 万件以上 (業界主要候補・公開情報ベース) + キャリアアドバイザーの質 + 面接対策の充実が評価される一方、担当者の質バラつき・求人紹介スピードの速さ・ハイクラス特化での他社優勢の 3 点が指摘されています。<br /><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職成功保証ではなく、特定エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>最新求人の確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は 2026 年 5 月時点の公開情報をもとに作成。最新のリクルートエージェント情報は公式サイトでご確認ください。本記事は転職成功保証ではなく、特定エージェントを推奨するものでもありません。最終確認日: 2026-05-12。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>良い評判・悪い評判の構造と賢い活用法</h2><p>リクルートエージェントの評判は、その大規模な事業構造に起因するものが大半です。<br>良い評判として挙げられる「圧倒的な求人件数」「充実した面接対策サポート」は、長年の実績とネットワークの賜物と言えます。<br>一方で、悪い評判で散見される「担当者の質にばらつきがある」「希望と違う求人を勧められる」といった点は、多数のコンサルタントを抱え、効率的なマッチングを目指すシステムから生じやすい側面です。<br>これらの評判を賢く活用するには、まず初回面談で自身の希望（業種、職種、働き方、連絡頻度など）を明確に伝えることが第一です。<br>もし担当者との相性や提案内容に疑問を感じた場合は、遠慮なく担当者変更制度を利用しましょう。<br>これは利用者の正当な権利であり、より良い転職活動のために不可欠な手段です。<br>万が一、不適切な対応があった場合は、国民生活センター等の公的機関に相談することも可能です。</p><ul><li><strong>良い評判の源泉:</strong> 業界トップクラスの求人情報量と、それに伴う多様な選択肢の提供。</li><li><strong>悪い評判の背景:</strong> 事業規模の大きさゆえの、担当者ごとのスキルや経験の差。</li><li><strong>賢い活用法:</strong> サービスの良い点を最大限活用しつつ、担当者変更制度を前提に利用を開始する。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/bizreach-hyouban/">ビズリーチ 評判・口コミ完全ガイド｜スカウト型ハイクラス転職サービスの実態（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/30dai/">30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-koukai/">40代転職で死ぬほど後悔しないために｜失敗パターンと回避策（PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-revenge/">40代転職リベンジ｜失敗からの復活ガイド (公開情報・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

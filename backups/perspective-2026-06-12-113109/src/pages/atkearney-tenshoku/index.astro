@@ -1,0 +1,230 @@
+---
+/**
+ * atkearney-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: A.T.カーニー 転職 (sv 推定 300-500・戦略系名門)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)';
+const description = 'A.T.カーニー (Kearney) への転職について、戦略系名門ファームの特性・年収レンジ・選考プロセス・実行重視文化・狙える人材像を公開情報ベースで整理。元コンサル無料模擬面接サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'A.T.カーニー 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '現職が忙しく、転職活動の時間が取れるか不安です。', a: 'ご安心ください。弊社のサポートは、在職中の方を前提に設計されています。キャリア相談は平日の夜間や土日にも対応しており、全てのプロセスはオンラインで完結可能です。企業との面接日程も、候補者様のご都合を最優先で調整しますので、現職に支障をきたすことなく、効率的に活動を進めていただけます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">A.T.カーニー junior〜senior パートナー候補 両軸 | brand 90年+ + 戦略系名門</span>
+      <h1 id="fv-h1">A.T. カーニー転職、<span class="accent">年収+200万円を目指す</span>好機。<br />在職中でも夜間・オンライン相談が可能です</h1>
+      <p class="lede">DX やサステナビリティ経営の加速に伴い、高度な専門性を持つ戦略コンサルタントの需要は高まり続けているとされます。A.T.カーニー (Kearney) は<strong>1926年創業の戦略コンサル名門ファーム</strong>で、MBB に次ぐ戦略系ファームの一つとされ、戦略コンサルへの転職は<strong>平均年収1,000万円以上</strong>を目指せるキャリアパスとして公開情報で紹介されています。厚生労働省の調査でも専門的・技術的職業の有効求人倍率は高い水準で推移しており、現職に配慮した<strong>夜間オンライン面談</strong>・<strong>内定後の辞退も可能</strong>な体制で活動を進められる事例も少なくありません。「戦略の実行までこだわる」実行重視文化 + オペレーション戦略 + 調達/SCM 領域の強みが特徴とされています。本記事では A.T.カーニーへの挑戦準備を公開情報ベースで整理します。</p>
+      <ul class="fv-bullets">
+        <li>A.T.カーニーの 4 つの特性 (実行重視 + 強み領域)</li>
+        <li>年収レンジ (600-3,000万円帯) + キャリアラダー</li>
+        <li>戦略系ファームの選考準備</li>
+        <li>狙える人材像 + キャリアパス</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_atk`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_atk">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは A.T.カーニー公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">A.T.カーニーの 4 つの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): A.T.カーニー公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特性1</span><h4>実行重視文化</h4><p>「戦略の実行までこだわる」文化が特徴。提言だけでなく実装 + 成果創出まで責任を持つスタイルとされており、実行力を重視するコンサルティングが評価軸が一般的です。</p></article>
+        <article class="branch"><span class="tag">特性2</span><h4>オペレーション戦略の強み</h4><p>調達 / SCM (サプライチェーンマネジメント) / オペレーション改革に深い知見。製造業 + 消費財業界向けのオペレーション戦略案件が多い傾向のケースが多く見られます。</p></article>
+        <article class="branch"><span class="tag">特性3</span><h4>業界特化 (消費財・自動車・通信)</h4><p>消費財・小売・自動車・通信業界に特に強み。業界深耕型の戦略コンサルティングを展開していると公表されています。</p></article>
+        <article class="branch"><span class="tag">特性4</span><h4>少数精鋭 + フラットな組織</h4><p>戦略系ファームとして少数精鋭。フラットな組織文化 + 若手にも裁量が与えられる環境と示されています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_atk`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_atk">
+          <span>A.T.カーニーの最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">A.T.カーニー転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるA.T.カーニー転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        A.T.カーニー領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">A.T.カーニーの年収レンジ + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="A.T.カーニー 年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>ビジネスアナリスト</td><td>1-3 年</td><td>600-900万円</td><td>分析 / 仮説検証 / 資料作成</td></tr>
+            <tr><td>アソシエイト</td><td>2-4 年</td><td>1,000-1,500万円</td><td>サブ案件リード / クライアント窓口</td></tr>
+            <tr><td>マネージャー</td><td>2-4 年</td><td>1,500-2,200万円</td><td>案件統括 / 提案リード</td></tr>
+            <tr><td>プリンシパル</td><td>3-5 年</td><td>2,200-2,800万円</td><td>領域責任 / 大型案件責任</td></tr>
+            <tr><td>パートナー</td><td>無期限</td><td>3,000万円+</td><td>クライアント / 経営 / 戦略立案</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額は A.T.カーニー公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_atk_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>A.T.カーニーの転職で求められる「実行重視」文化の基礎</h2><p>A.T.カーニーへの転職を考える上で、同社の根幹をなす「実行重視 (Tangible Results)」の文化を理解することは不可欠です。<br>これは、単に戦略を立案するだけでなく、クライアントが実際に成果を出し、変革を遂げるまで伴走することを最重要視する姿勢を指します。<br>机上の空論ではなく、現場に深く入り込み、現実的でインパクトのある結果を出すことがコンサルタントに求められるとされます。<br>このような文化の背景には、グローバルな競争環境で企業が直面する課題が、より複雑かつ実践的な解決策を必要としていることがあります。<br>厚生労働省が推進する「人への投資」の方針においても、企業が持続的に成長するためには、個々の従業員が実践的なスキルを習得し、現場で価値を創出することの重要性が示唆されています。<br>A.T.カーニーが求める人材像は、まさにこの「価値創出」を体現できる、分析能力と実行力を兼ね備えたプロフェッショナルであると言えるでしょう。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>A.T.カーニーへの転職成功に向けた具体的な選考対策</h2><p>A.T.カーニーの選考を突破するためには、戦略的かつ具体的な準備が求められます。<br>特に「実行重視」の文化を体現できることを示すことが重要です。<br>まず、職務経歴書では、過去の経験の中から、自らが主体となってプロジェクトを推進し、困難を乗り越えて具体的な成果（売上向上、コスト削減など）を達成したエピソードを定量的に記述することが有効です。<br>次に、選考の核となるケース面接では、一般的なフレームワークをなぞるだけでなく、提案する戦略の「実行可能性」や「現場への影響」まで踏み込んで論じることが求められます。<br>そのためには、模擬面接を繰り返し行い、第三者から客観的なフィードバックを得ることが推奨されます。<br>こうした転職支援サービスは、職業安定法に基づき厚生労働大臣の許可を受けた事業者が提供しており、安心して利用できる環境が整備されています。<br>最終面接では、なぜA.T.カーニーなのか、自身のキャリアビジョンと同社の方向性がどう合致するのかを、熱意をもって語ることが大切です。</p><ul><li>過去の職務経験から、具体的な成果とプロセスを定量的に整理し、自身の「実行力」を証明する準備を行う。</li><li>模擬ケース面接を複数回行い、思考の瞬発力と、提案の現実性・具体性を高める練習を重ねる。</li><li>企業の公式情報や関連ニュースを深く読み込み、同社の価値観や最近の動向に対する自分なりの見解を構築する。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>A.T. カーニー転職 (戦略コンサル) で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの交渉実績多数</li><li>A.T. カーニー等のトップファーム非公開求人</li><li>コンサル業界出身者による専門的キャリア相談</li><li>在職中でも安心の夜間・オンライン面談対応</li><li>内定後の辞退も可能、納得いくまで徹底サポート</li></ul></div></section>
+
+  
+  <section class="lp-section"><h2>A.T.カーニー転職に関するよくある質問</h2><div class='faq-block'>
+<div class='faq-item'><h3>A.T.カーニーの「戦略 + オペレーション」領域で特に求められるスキルは何ですか？</h3><p>業界知見と課題解決能力の両方が求められるとされます。厚生労働省の職業情報提供サイト（job tag）でも、コンサルタントには専門性に加え、顧客の事業を理解し、課題を分析・整理する能力が重要とされています。論理的思考力が鍵となります。</p></div>
+<div class='faq-item'><h3>A.T.カーニーのコンサルタントの年収レンジはどの程度とされますか？</h3><p>公開情報をもとに整理すると、役職や経験に応じて年収は大きく変動しますが、<strong>ジュニアクラスで700万円程度から、シニアクラスでは2200万円</strong>を超えるケースも想定されるようです。厚生労働省「賃金構造基本統計調査」のコンサルタント職の平均値も参考に、自身のスキルと経験を照らし合わせることが推奨されます。</p></div>
+<div class='faq-item'><h3>A.T.カーニーの選考プロセスでは、どのような点が重視される傾向にありますか？</h3><p>論理的思考力、コミュニケーション能力、そしてA.T.カーニーの文化やカルチャーへのフィット感が重視されると一般にいわれます。特にケース面接では、未知の課題に対して構造的に考え、説得力のある解決策を提示する能力が試されます。</p></div>
+<div class='faq-item'><h3>異業界からA.T.カーニーのコンサルタントへ転職する際の注意点はありますか？</h3><p>ポテンシャル採用の枠は存在しますが、戦略 + オペレーションに関する基礎知識の自主的な学習は不可欠とされます。<br>自身の過去の経験から、論理的思考力や課題解決能力を具体的に示すエピソードを準備することが重要です。<br>必要であれば、求職者支援制度などを活用したスキル習得も一つの選択肢です。</p></div>
+<div class='faq-item'><h3>A.T.カーニーでキャリアを積むことで、どのような将来の選択肢が期待できますか？</h3><p>社内での昇進（専門職または管理職）はもちろん、A.T.カーニーが持つグローバルなネットワークを活かした海外勤務の可能性も考えられます。<br>また、最先端の知見とコンサルティング経験を活かし、大手事業会社のDX推進担当、あるいは独立といった多様なキャリアパスが期待されるでしょう。</p></div>
+</div></section>
+
+  <p class='industry-position'>A.T.カーニーは<strong>戦略系 + グローバル</strong>に分類される代表的なコンサルティングファームの一つです。非公開求人の割合も高く（一般に約 8 割と言われます）、転職活動では非公開求人へのアクセスが選考機会の質を左右する可能性が指摘されています。</p>
+
+  <section class="lp-section"><h2>A.T.カーニーの国内DX案件・急成長領域での戦略支援</h2><p>A.T.カーニーは、<strong>国内大手企業</strong>の<strong>DX</strong>(デジタルトランスフォーメーション)案件で<strong>急成長</strong>領域の戦略支援に強みを持つとされ、クラウド・AI・データ分析・業務プロセス改革といった複数の DX テーマで実行支援を行うケースが見られます。国内市場のデジタル化加速に伴い、A.T.カーニーにおける DX 案件の比重は近年高まる傾向にあり、ジュニア層には急成長領域での新規プロジェクト参画機会、シニア層には国内大手企業のデジタル戦略立案・実行支援といった、persona 別の魅力的なキャリア機会が用意されている点が特徴とされます。</p></section>
+
+  <section class="lp-section"><h2>A.T.カーニーに関する補足情報・キャリア事例</h2><p>A.T.カーニーは、戦略コンサルティング業界において一定の存在感を持つファームの一つとされ、多様な業界・領域での案件経験を通じてキャリアを構築できる環境が特徴とされます。<br>A.T.カーニーでの就業経験は、その後の転職市場における評価軸の一つとして認識される傾向にあり、シニアマネジャー以降のキャリアパスとしては、A.T.カーニー内部での昇進・他ファームへの移籍・事業会社への転身・独立といった複数の選択肢が一般的とされます。<br>A.T.カーニーの選考プロセスやカルチャー fit については、転職エージェントを通じた最新情報の取得が推奨されると言われます。</p></section>
+
+  <section class="lp-section"><h2>A.T.カーニーでのグローバル経験・PE 案件・リーダーシップ機会</h2><p>A.T.カーニーでは、<strong>グローバル案件</strong>への参画機会が一定数あるとされ、海外オフィスや海外プロジェクトを通じて国際的なキャリア構築が期待できると言われます。また、<strong>PE (Private Equity)</strong>関連の戦略案件やM&A アドバイザリーといった高難度プロジェクトに携わるチャンスもあるとされ、シニアマネジャー以上のポジションでは、<strong>リーダー</strong>として大規模チームを率いる経験が積めることが特徴とされます。グローバル案件や PE 関連リーダー経験は、パートナー昇進やその後の独立・転職市場価値においても重要な実績と評価される傾向にあります。</p></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">A.T.カーニー 戦略系名門へ、実行力を武器に挑戦する</h2>
+      <p>実行重視文化 + オペレーション戦略の名門ファーム。MyVisionの無料カウンセリングで、戦略系挑戦準備 + 自分の市場価値 + 想定年収を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_atk`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_atk">
+          <span>A.T.カーニー挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が知られています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとされています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bcg-tenshoku/">BCG 転職 完全ガイド｜ボストン コンサルティング グループの特性・年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,238 @@
+---
+/**
+ * engineer-zangyou-sukunai LP (TechGo IT エンジニア転職・★326 DRY)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 003 HVNAP)
+ * メイン KW: 残業の少ない エンジニア 求人 探し方 (情報・ライフスタイル軸)
+ * ★326 DRY 流用元: engineer-tenshoku-shippai
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '残業の少ないエンジニア求人の探し方ガイド｜見極めの観点と確認方法・進め方｜TechGo (PR)';
+const description = '残業の少ないエンジニア求人を探す際の見極めの観点・確認方法を整理。求人票での見極めポイント、選考での確認方法、注意したい表現、無料サポートでの情報の補い方を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: '残業の少ないエンジニア求人の探し方' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談だけでも可能ですか？', a: 'はい、もちろん可能です。まずは情報収集をしたい、自身の市場価値を知りたいといった目的でのご相談も歓迎しております。無理に転職をお勧めすることは一切ございません。客観的な視点から、あなたのキャリアプランについてアドバイスさせていただきますので、お気軽にご利用ください。' },
+  { q: 'サービス利用に費用はかかりますか？', a: 'ご登録からご相談、内定、ご入社まで、求職者の方に費用は一切かかりません。弊社は採用企業様から成功報酬をいただくビジネスモデルのため、安心して全てのサービスを無料でご利用いただけます。履歴書・職務経歴書の添削や面接対策なども、追加費用なしでサポートいたします。' },
+  { q: 'どのような求人が多いですか？', a: '自社開発企業や大手SIerを中心に、ワークライフバランスを重視した企業の求人を多く取り扱っております。特に、残業時間が月平均20時間以下で、かつ専門性を正当に評価する年収800万円以上の求人が中心です。事業戦略上、一般には公開されていない非公開求人が大半を占めます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> engineer zangyou sukunai に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は engineer-zangyou-sukunai に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア転職 / 働き方の見極めガイド</span>
+      <h1 id="fv-h1"><span class="accent">残業の少ない</span>エンジニア求人の探し方<br />見極めの観点と確認方法を整理する</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 残業の少ないエンジニア求人を探すには、<strong>求人票の数値だけでなく、選考の場で配属部署の実態を確認すること</strong>が重要とされています。本記事では、見極めの観点・確認方法・注意したい表現を現実的に整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>求人票で見るべき残業関連の項目</li>
+        <li>残業の少なさを見極める4つの観点</li>
+        <li>選考で実態を確認する5つの方法</li>
+        <li>無料サポートで情報を補う方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_zangyou">
+          <span>TechGo の無料相談で働き方の見極め方を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">求人票で見るべき残業関連の項目</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省「労働時間・働き方に関する公開情報」</a> / IT エンジニア特化エージェント公開情報・各社公式採用サイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>残業の少なさを見極める第一歩は、求人票に記載される労働時間関連の項目を確認することとされています。下表は公開情報・業界一般論をもとにした確認項目の整理です。記載数値は平均値であり、部署・時期により実態が異なる場合があるとされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人票で見るべき残業関連の項目">
+          <thead><tr><th>確認項目</th><th>見るポイント</th><th>留意点</th></tr></thead>
+          <tbody>
+            <tr><td>平均残業時間</td><td>月あたりの記載時間</td><td>全社平均か部署別か・平均値である点</td></tr>
+            <tr><td>みなし残業 (固定残業)</td><td>固定残業の時間数</td><td>時間数が大きいとその前提の働き方になり得る</td></tr>
+            <tr><td>勤務制度</td><td>フレックス・裁量労働・リモートの有無</td><td>制度の有無と実際の運用は別</td></tr>
+            <tr><td>有給取得率</td><td>取得率の記載</td><td>休暇の取りやすさの参考</td></tr>
+            <tr><td>繁忙期の記載</td><td>繁忙期の時期・状況</td><td>記載がない場合は選考で確認</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_zangyou">
+          <span>求人の見極め方を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">残業少ないエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める残業少ないエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        残業少ないエンジニア領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">残業の少なさを見極める4つの観点</h2>
+      <p class="section-lede">求人票の数値だけでは実態は分かりにくいとされています。以下の4観点を組み合わせて見極めることが推奨されるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">観点1</span><h4>全社平均か配属部署か</h4><p>求人票の残業時間は全社平均であることが多いとされています。実際に働くのは配属部署のため、部署単位の状況を確認することが重要とされています。</p></article>
+        <article class="branch"><span class="tag">観点2</span><h4>繁忙期と通常期の差</h4><p>年間を通じて一定とは限らず、繁忙期に残業が集中するケースがあるとされています。ピーク時の状況を確認することが推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">観点3</span><h4>みなし残業の運用実態</h4><p>固定残業時間が設定されている場合、その時間が「上限の目安」か「前提」かは企業により異なるとされています。運用の実態確認が推奨されるとされています。</p></article>
+        <article class="branch"><span class="tag">観点4</span><h4>開発形態・プロジェクト性質</h4><p>開発形態やプロジェクトの納期の厳しさにより働き方の傾向が異なるとされています。ただし企業差が大きいため個別確認が推奨されるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_zangyou_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>残業の少ない求人を見極めるための基礎知識</h2><p>エンジニアの求人で「残業が少ない」という基準を判断するには、まず労働基準法における時間外労働の定義を理解することが基本です。<br>法律では、労働時間は原則として1日8時間、週40時間以内と定められています。<br>これを超える労働には、企業と労働者の間で「36（サブロク）協定」の締結が義務付けられており、この協定で定められた上限時間を超える残業は認められません。<br>一般的にIT業界では、月間の平均残業時間が20時間未満の場合、「残業が少ない」と評価される傾向にあるとされます。<br>求人票に記載されている「月平均残業時間」の数値だけでなく、その算出根拠や「みなし残業（固定残業代）」制度の有無と、それに含まれる時間数を確認することが、実態を把握する上で重要なポイントです。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意したい表現 vs 参考になりやすい情報</h2>
+      <p class="section-lede">求人情報の表現には、実態が見えにくいものと参考になりやすいものがあるとされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人情報の表現の見極め">
+          <thead><tr><th>軸</th><th>注意したい表現の傾向</th><th>参考になりやすい情報の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>残業の記載</td><td>「残業ほぼなし」など根拠が曖昧</td><td>平均残業時間が数値で示される</td></tr>
+            <tr><td>対象範囲</td><td>全社か部署か不明</td><td>部署・職種別の情報が示される</td></tr>
+            <tr><td>繁忙期</td><td>繁忙期の記載がない</td><td>繁忙期の時期・状況が説明される</td></tr>
+            <tr><td>制度の運用</td><td>制度名のみで運用が不明</td><td>制度の利用状況まで説明される</td></tr>
+            <tr><td>選考での回答</td><td>働き方の質問をはぐらかす</td><td>働き方を率直に共有してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>求人票と選考で残業実態を確認する具体的なステップ</h2><p>残業の少ないエンジニア求人を確実に見極めるためには、段階的な情報収集と確認が不可欠です。<br>公開情報をもとに、以下のステップで進めることが推奨されます。<br>まず、求人票で「月平均残業時間の実績」や「固定残業代（みなし残業）の有無とその時間数」を精査します。<br>特に固定残業代が長時間で設定されている場合は注意が必要です。<br>次に、選考段階では、面接官に直接質問します。<br>ただし、単に「残業はありますか」と聞くのではなく、「繁忙期の残業時間はどの程度ですか」「プロジェクトの納期管理はどのように行っていますか」といった具体的な質問をすることで、実態を引き出しやすくなります。<br>厚生労働省も、求職者が適切な職業選択を行えるよう、労働条件の明示を事業主に求めています。<br>これらの自己収集情報に加え、転職エージェントのような第三者サービスを活用し、内部情報や客観的なデータを補うことで、入社後のミスマッチを減らすことが期待できます。</p><ul><li>求人票の「月平均残業時間」と「固定残業代」の内訳を確認する</li><li>面接で「繁忙期の状況」や「チームの働き方」について具体的に質問する</li><li>転職エージェントなどを活用し、第三者の視点から客観的な情報を得る</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>エンジニア残業少ない で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+152万円の事例も）</li><li>残業月平均20時間以下の求人のみご紹介</li><li>全体の8割以上が非公開の優良企業求人</li><li>現職に配慮した夜間・土日のオンライン相談</li><li>内定後の辞退も可能、納得いくまでサポート</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/full-remote-engineer/"><h4>フルリモートエンジニア求人ガイド</h4><p>リモート求人の探し方と見極め</p></a>
+        <a class="card-link" href="/engineer-tenshoku-shippai/"><h4>エンジニア転職の失敗パターン</h4><p>よくある後悔と回避戦略</p></a>
+        <a class="card-link" href="/ses-dasshutsu/"><h4>SES 脱出ガイド</h4><p>開発形態の違いと働き方</p></a>
+        <a class="card-link" href="/engineer-tenshoku-fuan/"><h4>エンジニア転職の不安を整理する</h4><p>よくある不安と和らげる準備</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">働き方を見極め、納得のいくエンジニア転職に近づく</h2>
+      <p>残業の少ない求人選びは、求人票の数値と配属部署の実態の両方を確認することで精度が高まるとされています。TechGo の無料相談で、条件の整理・求人の見極め・逆質問の準備を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_zangyou">
+          <span>TechGo の無料相談で働き方の見極め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-portfolio/">エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

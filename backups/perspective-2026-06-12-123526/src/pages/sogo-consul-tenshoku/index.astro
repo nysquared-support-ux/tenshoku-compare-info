@@ -1,0 +1,236 @@
+---
+/**
+ * sogo-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 総合コンサル 転職 (sv 推定 800・主戦場・採用枠が大規模・IT/業務系メイン)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '総合コンサル 転職 完全ガイド｜アクセンチュア / PwC / ベイカレント等 主戦場 5 ファーム比較｜MyVision (PR)';
+const description = '総合コンサルティングファーム (アクセンチュア・PwC・ベイカレント・アビーム・IBM 等) への転職について、5 大主戦場ファームの特性比較・年収レンジ・選考対策・狙えるキャリアパスを公開情報ベースで整理。元コンサル無料カウンセリングの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '総合コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '未経験から総合コンサルティングファームへの転職は可能ですか？', a: 'はい、可能です。近年、DX推進などの需要拡大を背景に、多様な業界経験を持つ人材の採用が活発化しているとされます。ただし、論理的思考力や課題解決能力は必須です。職業安定法第3条が示す均等な機会の原則に基づき、ポテンシャルを重視した採用も行われるため、事前の対策が重要になります。' },
+  { q: '総合コンサルタントの年収レンジはどのくらいですか？', a: '公開情報や各種調査によると、アナリストクラスで500〜800万円、コンサルタントで800〜1,300万円、マネージャークラス以上では1,500万円を超えることが一般的とされます。厚生労働省の「賃金構造基本統計調査」でも専門的・技術的職業従事者の賃金は高い水準にあり、経験やスキルに応じて変動します。' },
+  { q: '選考で重視される「ケース面接」とはどのようなものですか？', a: 'ケース面接とは、特定のビジネス課題（例：「ある企業の売上を3年で2倍にするには？」）を提示され、制限時間内に解決策を論理的に導き出す面接形式です。思考プロセスやコミュニケーション能力が評価されます。当サイトの「総合系の選考対策 — 5つのポイント」でも詳しく解説していますので、ご参照ください。' },
+  { q: '転職エージェントを利用する際の注意点はありますか？', a: 'コンサル業界に特化したエージェントを選ぶことが重要です。一般的なエージェントでは得られない、ファームごとの詳細な情報や非公開求人を保有している可能性があるためです。また、利用する際は、厚生労働大臣の許可を受けた「職業紹介事業者」であることを確認すると、より安心して相談できるでしょう。' },
+  { q: '総合コンサル転職後のキャリアパスにはどのような選択肢がありますか？', a: '多様なキャリアパスが考えられます。ファーム内で昇進しパートナーを目指す道、特定領域の専門性を深める道、事業会社の経営企画や新規事業担当へ転身する道、あるいは独立・起業する道などが一般的です。自身のキャリアプランに合わせた選択が期待されます。キャリア形成については、公的な相談窓口としてハローワークも情報提供を行っています。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> sogo consul tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は sogo-consul-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">総合コンサル senior / マネージャー候補 主戦場 5 ファーム ハイクラス比較ガイド</span>
+      <h1 id="fv-h1"><span class="accent">総合コンサル</span> ハイクラス転職 完全ガイド<br />アクセンチュア / PwC / ベイカレント等 5 ファーム senior / マネージャー候補 比較</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 総合コンサルは<strong>戦略立案 → 実装 → 運用の一気通貫</strong>と<strong>シニア・マネージャー候補の採用枠の広さ</strong>が特徴とされ、コンサル業界の主戦場として<strong>senior pool (マネージャー 1,300-2,500万円帯・Director 2,500-4,000万円帯)</strong> の中途採用が活発な層です。本記事ではアクセンチュア・PwC・ベイカレント・アビーム・IBM の 5 大主戦場ファームの特性比較を<strong>マネージャー候補・パートナー候補・シニア視点</strong>で整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>5 大主戦場ファーム (アクセンチュア / PwC / ベイカレント / アビーム / IBM)</li>
+        <li><strong>マネージャー年収レンジ 1,300-2,500万円帯</strong> + Director 2,500-4,000万円帯</li>
+        <li>戦略系との違い + 総合系 senior pool を選ぶメリット</li>
+        <li>マネージャー・パートナー候補 採用枠の広さ + Director path</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_sogo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_sogo">
+          <span>senior consul / マネージャー候補 キャリアを無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは総合コンサルファーム公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">5 大主戦場ファームの特性比較</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): 各総合コンサルファーム公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="総合コンサル 5 ファーム比較">
+          <thead><tr><th>ファーム</th><th>採用規模</th><th>強み領域</th><th>年収レンジ</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア</td><td>&#11088; 大規模 (業界有数)</td><td>DX / クラウド / AI / Tech 実装</td><td>500-2,000万円</td><td>IT・SIer 出身</td></tr>
+            <tr><td>PwC コンサルティング</td><td>大</td><td>監査連携 / リスク / 業界変革</td><td>600-2,200万円</td><td>金融・財務出身 / 監査経験者</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>大</td><td>業界知見 / 経営改革 / 高単価</td><td>700-2,500万円</td><td>業界経験豊富な実務派</td></tr>
+            <tr><td>アビームコンサルティング</td><td>大</td><td>SAP / 基幹業務 / 日系流</td><td>550-1,800万円</td><td>SAP・SIer・業務系出身</td></tr>
+            <tr><td>IBM コンサルティング</td><td>大</td><td>クラウド / AI / ハイブリッド IT</td><td>600-2,000万円</td><td>クラウド・データ・AI 系</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_sogo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_sogo">
+          <span>適合ファームを MyVision 公式の無料相談で診断する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">総合コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める総合コンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        総合コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">総合系を選ぶ 4 つのメリット</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">メリット1</span><h4>採用枠の広さ</h4><p>戦略系より採用枠が広く広く、中途採用機会が多いとされています。20代後半-30代前半の主戦場として、IT・SIer・大手事業会社出身者が主要採用層です。</p></article>
+        <article class="branch"><span class="tag">メリット2</span><h4>戦略 + 実装の一気通貫</h4><p>戦略立案だけでなく、システム実装 + 業務運用までを担当する案件構造のため、「戦略 → 実装 → 結果検証」の全工程に責任を持つ働き方ができるとされています。</p></article>
+        <article class="branch"><span class="tag">メリット3</span><h4>業界カバー範囲の広さ</h4><p>金融・製造・流通・通信・公共・ヘルスケア等の多業界をカバーし、複数業界経験を積めるとされています。専門性 + 横展開知見が育つ環境です。</p></article>
+        <article class="branch"><span class="tag">メリット4</span><h4>キャリア拡張性</h4><p>マネージャー昇格後は事業会社 CXO・PE/VC・専門領域特化への転身も選択肢として広く、キャリアパスが多様とされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_sogo_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>総合コンサルティングファームとは？その役割と近年の動向</h2><p>総合コンサルティングファームとは、企業の経営戦略立案からITシステムの導入、業務プロセスの改善、人事組織改革まで、幅広い経営課題に対して総合的な解決策を提供する企業群を指します。<br>特定の領域に特化する戦略系ファームとは異なり、構想から実行支援までを一気通貫で手掛けるのが大きな特徴とされます。<br>近年では、経済産業省が推進するデジタルトランスフォーメーション（DX）の潮流を受け、多くのファームがIT・デジタル領域のコンサルティングを強化しています。<br>アクセンチュア、PwCコンサルティング、ベイカレント・コンサルティングなどが代表的なプレイヤーとして挙げられ、多様なバックグラウンドを持つ人材を積極的に採用する傾向にあると一般にいわれます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>総合コンサル転職を成功に導くための具体的ステップ</h2><p>総合コンサルティングファームへの転職活動は、特有の選考プロセスへの対策が求められるため、計画的な準備が不可欠です。<br>公開情報をもとに整理すると、一般的なステップは以下のようになります。<br>まず、自身の経験やスキルを棚卸しし、なぜコンサルタントを目指すのかという志望動機を明確にします。<br>次に、各ファームの強みやカルチャーを研究し、自身のキャリアプランと合致する企業を選定します。<br>書類選考を通過すると、複数回の面接が待っています。<br>特に「ケース面接」と呼ばれる課題解決型の面接は、論理的思考力やコミュニケーション能力を測るための重要な関門です。<br>これらの対策を個人で行うことも可能ですが、コンサル転職に特化したエージェントを活用することで、より効率的に準備を進めることが期待できます。<br>職業安定法で定められた民間の職業紹介事業者は、求職者に対して適切な情報提供を行う役割を担っています。</p><ul><li><strong>自己分析とキャリアの棚卸し:</strong> これまでの経験で得たスキルや実績を言語化し、コンサルタントとして貢献できる点を明確にする。</li><li><strong>ファーム研究と情報収集:</strong> 各社のウェブサイトや説明会、OB/OG訪問などを通じて、事業内容や社風、求める人物像を深く理解する。</li><li><strong>ケース面接・ビヘイビア面接対策:</strong> 関連書籍や対策講座、模擬面接などを活用し、実践的なアウトプット能力を繰り返しトレーニングする。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>コンサル業界の選考プロセスに特化した実践的対策</li><li>大手ファームから専門ブティックまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">総合コンサルの主戦場で、キャリアを拡張する</h2>
+      <p>採用枠の広さ + 業界カバー + キャリア拡張性。MyVisionの無料カウンセリングで、適合する 5 大ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_sogo`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_sogo">
+          <span>総合系挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

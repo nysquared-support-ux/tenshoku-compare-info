@@ -1,0 +1,259 @@
+---
+/**
+ * 税理士 リモート 転職おすすめ LP (ツインプロ・RichLayout 準拠)
+ * ★326 DRY zeirishi-kamoku-tenshoku テンプレ流用
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE 001 / BXB8X 003 / BXYE9 006・再入力禁止)
+ * slug: zeirishi-remote-tenshoku / KW: 税理士 リモート 転職
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '税理士のリモート転職おすすめ4社比較｜在宅・テレワーク求人の実態と選び方【2026年版】';
+const description = '税理士がリモートワーク可能な職場への転職を検討する方向けに、転職エージェント4社 (ツインプロ・マイナビ会計士・MS-Japan・リクルート) を公開情報で整理。リモート求人の実態・働き方の選択肢・選び方5基準が分かる(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '税理士 リモート 転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '税理士のリモート転職向け転職エージェント主要 4 サービス比較',
+  'description': 'リモートワーク可能な職場を希望する税理士向け転職エージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・働き方を踏まえた相談', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '税理士・会計士特化・大手系列・若手中堅対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・税理士向け・事業会社経理のリモート求人にも対応', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・リモート求人の母数が大きい・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '税理士のリモートワークは本当に可能ですか？セキュリティ面が心配です。', a: 'はい、可能です。多くの会計事務所ではVPN接続やクラウドシステムの導入でセキュリティを確保しています。厚生労働省の「テレワークにおけるセキュリティ確保」に関する資料でも対策の重要性が示されており、各社はこれに準じた対策を講じているとされます。' },
+  { q: 'リモートワーク可能な税理士求人を探す具体的な方法はありますか？', a: '会計業界に特化した転職エージェントの利用が効率的です。非公開のリモート求人を保有している場合が多く、登録後にキャリアアドバイザーへ希望を伝えることで、自身のスキルや経験に合った求人の紹介を受ける流れが一般的とされます。' },
+  { q: '実務経験が浅い税理士でもリモート転職はできますか？', a: '経験者向けの求人が中心ですが、一部には若手向けの求人も存在します。ただし、OJTが難しいため、最初は出社とリモートを組み合わせたハイブリッド勤務を提案されることが多いとされます。詳細は当ページの比較情報などもご参照ください。' },
+  { q: '税理士がリモート転職する際に特に注意すべき点は何ですか？', a: '労働条件の書面確認が重要です。特に、残業代の扱いや通信費・光熱費の補助、業務用PCの貸与など、リモートワーク特有の条件を事前に確認することが推奨されます。労働基準法に基づき、労働条件は明確に提示される必要があります。' },
+  { q: '税理士のリモート転職を成功させるための要点を教えてください。', a: '自身の希望（フルリモートかハイブリッドか等）を明確にし、リモートワークの実績が豊富な事務所を選ぶことが重要です。転職エージェントを活用し、企業のセキュリティ体制やコミュニケーション環境を事前に確認することで、入社後のミスマッチを防げます。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name,
+    ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">📍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> アクセス・地域</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> zeirishi remote tenshoku に焦点を当てた アクセス・地域 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に アクセス・地域 全体を扱うのに対し、本 LP は zeirishi-remote-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">士業転職 / リモート勤務を希望する税理士</span>
+      <h1 id="fv-h1">
+        税理士の<span class="accent">リモート転職</span>おすすめ 4 社比較<br />
+        在宅・テレワーク求人の実態と選び方 5 基準
+      </h1>
+      <p class="lede">
+        リモートワークを希望する税理士の転職は ① 士業特化エージェント (ツインプロ等) ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の 3 軸組合せが推奨されます。
+        厚生労働省・日本税理士会連合会・JILPT 公的出典をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>税理士のリモート求人の実態と働き方の選択肢</li>
+        <li>フルリモート / ハイブリッド / クラウド会計事務所</li>
+        <li>4 社比較 + 選び方 5 基準 + 利用の流れ 5 ステップ</li>
+        <li>厚労省・日本税理士会連合会 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=remote_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="remote_fv">
+          <span>ツインプロ公式で税理士・士業特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">税理士のリモート求人の実態と働き方の選択肢</h2>
+      <p class="section-lede">税理士がリモートワークを取り入れて働く際の代表的な選択肢を、公開情報ベースで整理します。勤務形態は事務所・企業により異なります。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">形態①</span><h4>フルリモート</h4><p>公開情報上、原則出社しないフルリモートの求人も存在するとされますが、税理士業務では数が限られる傾向があるとされます。顧客対応や繁忙期の扱いを確認することが推奨されます。</p></article>
+        <article class="branch"><span class="tag">形態②</span><h4>ハイブリッド勤務</h4><p>出社とリモートを組み合わせる勤務形態。公開情報上、税理士業務ではフルリモートよりハイブリッドのほうが一般的とされることがあります。</p></article>
+        <article class="branch"><span class="tag">形態③</span><h4>クラウド会計事務所</h4><p>クラウド会計ソフトを活用する事務所は業務のオンライン化が進んでいることが多く、リモート勤務と相性がよいとされることがあります。</p></article>
+        <article class="branch"><span class="tag">形態④</span><h4>事業会社の経理・税務</h4><p>事業会社の経理・税務部門でも在宅勤務制度を持つ企業があるとされます。職種・企業の方針により勤務形態は異なります。</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>確認しておきたいポイント (公開情報)</h3><p><strong>① 出社頻度</strong>: フルリモートか、週何日出社かを確認<br /><strong>② 繁忙期の扱い</strong>: 確定申告期 (1〜3月) の勤務形態<br /><strong>③ 顧客対応の方法</strong>: 訪問・オンラインのいずれか<br /><strong>④ 設備・環境</strong>: 在宅環境の整備支援の有無<br />※ 求人票だけでは分かりにくい点はエージェント経由で確認が推奨されます</p></div>
+        <div class="card"><h3>本記事で得られる判断</h3><p>① 4 社の対象・強み比較<br />② リモート勤務形態別の考え方<br />③ 失敗回避 5 基準<br />④ 利用の流れ 5 ステップ<br />⑤ 勤務実態をエージェントで確認する方法</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報・各エージェント公開情報の整理であり、独自の口コミ調査結果ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-23。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=remote_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="remote_features">
+          <span>働き方の希望を踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">リモート税理士転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるリモート税理士転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、税理士 600～1,500 万円・税理士法人代表 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        リモート税理士領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="リモート希望の税理士向け転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>税理士・会計士・士業有資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け転職エージェント・働き方を踏まえた相談</td></tr>
+            <tr><td>マイナビ会計士</td><td>税理士・公認会計士</td><td>大手系列・求人数</td><td>株式会社マイナビ運営・税理士・会計士特化・若手中堅対応</td></tr>
+            <tr><td>MS-Japan</td><td>経理・財務・税理士</td><td>管理部門特化</td><td>事業会社経理・税理士法人転職に強み・MS-Japan 社運営</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (税務・経理含む)</td><td>求人数 60 万件+</td><td>求人母数が大きくリモート求人もカバー・士業特化との併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi-remote-tenshoku_hero" target="_blank" rel="nofollow" data-page-slug="zeirishi-remote-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>税理士のリモート転職｜働き方の実態と基礎知識</h2><p>近年、税理士業界でもデジタルトランスフォーメーション（DX）の進展や働き方の多様化を受け、リモートワークを導入する会計事務所が増加傾向にあるとされます。<br>特にクラウド会計ソフトの普及は、場所を選ばない働き方を後押しする大きな要因となっています。<br>リモートワークには、完全在宅で業務を行う「フルリモート」と、出社と在宅を組み合わせる「ハイブリッド勤務」の2種類が主に存在します。<br>記帳代行や月次決算、申告書作成といった業務はリモート化しやすく、一方でクライアントとの対面コンサルティング等が求められるケースも見られます。<br>厚生労働省が運営する「テレワーク総合ポータルサイト」でも、柔軟な働き方の選択肢としてテレワークが紹介されており、労働生産性の向上やワークライフバランスの実現が期待されています。<br>リモート転職を検討する際は、こうした働き方の実態を理解し、自身のスキルやキャリアプランに合った求人を見極めることが重要です。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ — リモート勤務を実現するための戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>3 軸併用戦略</b><span>ツインプロ (士業特化) + MS-Japan (管理部門特化) + リクルート (求人数) の 2〜3 社並行登録</span></div>
+        <div class="row"><b>勤務形態別の方針</b><span>フルリモート: 数が限られるため求人母数の大きいエージェントも活用 / ハイブリッド: 出社頻度を確認 / クラウド会計事務所: 導入状況を面談で確認</span></div>
+        <div class="row"><b>向いている人</b><span>通勤負担の軽減・柔軟な働き方を重視する税理士・在職中に相談したい方</span></div>
+        <div class="row"><b>向かない人</b><span>対面での顧客対応・出社を前提とした働き方を希望する方は通常の求人を中心に検討</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動 3 ステップ: STEP1 2〜3 社並行登録 &rarr; STEP2 各担当者と希望する勤務形態を共有 &rarr; STEP3 勤務実態を面談で確認し最終判断。<strong>YMYL リスク認識</strong>: 年収・キャリア・働き方は就業判断に直結。本記事は公開情報整理であり、転職成功保証ではなく特定エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi-remote-tenshoku_footer" target="_blank" rel="nofollow" data-page-slug="zeirishi-remote-tenshoku">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=remote_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="remote_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談を活用ください。最終確認日: 2026-05-23。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>リモート転職を成功させるための具体的な手順と求人の選び方</h2><p>税理士がリモートワーク可能な職場への転職を成功させるには、計画的な準備と情報収集が不可欠です。<br>まず、自身のスキルや経験、希望する働き方（フルリモートかハイブリッドか等）を明確にする自己分析から始めます。<br>次に、会計業界に特化した転職エージェントに登録し、専門のキャリアアドバイザーに相談します。<br>職業安定法に基づき運営される転職エージェント（職業紹介事業者）は、非公開求人を含む多くの情報を持っており、客観的な視点から最適な求人を提案してくれると期待されます。<br>応募する求人を選ぶ際は、以下の点を確認することが推奨されます。</p><ul><li><strong>セキュリティ体制:</strong> VPN接続の有無や業務用PCの貸与など、情報漏洩対策が適切に講じられているか。</li><li><strong>コミュニケーション環境:</strong> ビジネスチャットツールが導入され、円滑な意思疎通が図れる体制か。</li><li><strong>評価制度:</strong> リモート環境下でも業務の成果が公平に評価される仕組みが整っているか。</li><li><strong>費用負担の規定:</strong> 在宅勤務に伴う通信費や光熱費の一部補助など、経費に関する取り決めが明確か。</li></ul><p>これらのポイントを面接時などに確認し、入社後のミスマッチを防ぐことが重要です。信頼できるエージェントを活用し、納得のいく転職を実現させましょう。</p><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-tenshoku/">税理士転職おすすめ4社比較｜税理士法人経験者・税理士有資格者向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-40dai-tenshoku/">税理士40代転職は可能?即戦力評価と年収維持の現実｜エージェント4社比較【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-houjin-tenshoku/">税理士法人転職おすすめ4社比較｜Big4・大手・中堅・個人事務所別の選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-juken-tenshoku/">税理士受験生の転職完全ガイド｜試験勉強と両立できる職場の選び方｜ツインプロ (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-kamoku-tenshoku/">税理士科目合格者の転職おすすめ4社比較｜1科目から評価される理由・選び方5基準【2026年版】</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">📍 アクセス・地域 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">全国のハローワーク情報</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.hellowork.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 ハローワーク所在地</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

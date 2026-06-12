@@ -1,0 +1,224 @@
+---
+/**
+ * consul-fermi-suitei LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル フェルミ推定 (sv 推定 300-500・選考対策即実行型)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル フェルミ推定 完全ガイド｜解法 4 ステップ + 頻出問題 + 練習法｜MyVision (PR)';
+const description = 'コンサル選考のケース面接で最頻出のフェルミ推定について、解法 4 ステップ (前提確認・要素分解・数値設定・検算) + 頻出問題タイプ + 効率的な練習法を公開情報ベースで整理。元コンサルとの無料模擬面接サポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル フェルミ推定' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談だけでも可能ですか？費用はかかりますか？', a: 'はい、もちろん可能です。まずは情報収集やご自身の市場価値を知りたいという段階でも歓迎しております。キャリア相談から求人紹介、面接対策、内定後の条件交渉まで、全てのサービスは無料でご利用いただけます。費用は採用企業側から成功報酬としていただく仕組みのため、候補者様にご負担いただくことは一切ございません。' },
+  { q: '在職中で忙しいのですが、活動は可能でしょうか？', a: '多くの方が在職中に活動されています。私どもは、現職に支障が出ないよう最大限配慮いたします。キャリア相談や面接対策は、平日の夜間や土日を中心にオンラインで実施。企業との面接日程も、候補者様のご都合を最優先で調整します。ご自身のペースで、納得のいく転職活動を進められるよう、全面的にサポートさせていただきます。' },
+  { q: '紹介された求人に必ず応募しなければなりませんか？', a: 'いいえ、その必要は全くございません。私どもは、候補者様ご自身のキャリアプランやご意向を最も尊重します。ご紹介した求人がご希望に沿わない場合は、気兼ねなくお断りください。理由をお聞かせいただければ、より精度の高い求人を再提案いたします。無理に応募を勧めることは決してありませんので、ご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 / フェルミ推定完全ガイド</span>
+      <h1 id="fv-h1">コンサル <span class="accent">フェルミ推定</span> 完全ガイド<br />解法 4 ステップ + 頻出問題 + 練習法</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: フェルミ推定は<strong>コンサル選考のケース面接で最頻出の問題タイプ</strong>とされ、論理的な構造化 + 仮説 + 概算のセンスが評価されます。本記事では解法 4 ステップ + 頻出問題タイプ + 効率的な練習法を公開情報ベースで整理し、元コンサルとの無料模擬面接を活用した習得法を解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>フェルミ推定の解法 4 ステップ</li>
+        <li>頻出問題タイプ (市場規模 / 個数 / 売上等)</li>
+        <li>独学 + 模擬面接の効率的練習法</li>
+        <li>元コンサル無料模擬面接の活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_fermi">
+          <span>フェルミ推定対策を元コンサルの無料模擬面接で始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">フェルミ推定の解法 4 ステップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="counter-box">
+        <h4>ステップ1: 前提確認</h4>
+        <p>「何を求めるのか」を明確化し、対象範囲 + 定義 + 時間軸を面接官と確認します。例:「日本のカフェの市場規模」なら、カフェの定義 (チェーン店のみか個人店含むか)・地域 (全国か)・時間軸 (年間売上か) を確認します。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ2: 要素分解 (MECE)</h4>
+        <p>求める数量を、もれなく重複なく (MECE) 要素分解します。例: 市場規模 = 店舗数 × 1 店舗あたり客数 × 客単価 × 営業日数。分解の論理性が評価軸の核心とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ3: 数値設定</h4>
+        <p>各要素に妥当な数値を、根拠を示しながら設定します。「日本の人口 1.2 億人」「カフェ利用率 X%」等、自分の知識 + 常識的推論で数値を置きます。根拠の説明が重要とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>ステップ4: 検算・現実性チェック</h4>
+        <p>算出した数値を、別の角度から検証し現実性を確認します。「この市場規模は GDP 比でどのくらいか」等のサニティチェックで、桁違いのミスを防ぎます。最後の振り返りが評価につながるとされています。</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_fermi">
+          <span>4 ステップを元コンサルの無料模擬面接で実践練習する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">フェルミ推定対策で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        フェルミ推定対策領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">フェルミ推定の頻出問題タイプ</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="フェルミ推定 頻出問題タイプ">
+          <thead><tr><th>タイプ</th><th>問題例</th><th>分解アプローチ</th></tr></thead>
+          <tbody>
+            <tr><td>市場規模算出</td><td>「日本のカフェ市場の規模は?」</td><td>店舗数 × 客数 × 客単価 × 営業日数</td></tr>
+            <tr><td>個数推定</td><td>「日本にある電柱の数は?」</td><td>国土面積 × 設置密度 (地域別)</td></tr>
+            <tr><td>需要推定</td><td>「ある駅の1日の乗降客数は?」</td><td>沿線人口 × 利用率 × 時間帯分布</td></tr>
+            <tr><td>売上推定</td><td>「あるコンビニ1店舗の日商は?」</td><td>来店客数 × 客単価 × 時間帯係数</td></tr>
+            <tr><td>保有数推定</td><td>「日本のピアノの台数は?」</td><td>世帯数 × 保有率 + 施設保有数</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_fermi_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>フェルミ推定の基礎：なぜコンサル選考で問われるのか</h2><p>フェルミ推定とは、正確に把握することが難しい数値を、既知の知識や論理的な仮説を組み合わせて短時間で概算する思考法です。<br>例えば「日本全国にある電柱の数は？」といった、一見すると見当もつかないような問いが典型例として挙げられます。<br>コンサルティングファームの選考、特にケース面接でこの種の課題が頻出する理由は、コンサルタントに求められる本質的な能力を測るのに適しているためとされます。<br>コンサルタントの日常業務は、情報が不完全な中でクライアントの課題を構造的に捉え、仮説を立て、解決策を導き出すことの連続です。<br>フェルミ推定のプロセスは、この業務の縮図と言えます。<br>経済産業省が提唱する「社会人基礎力」においても、「課題発見力」や「計画力」といった論理的思考に関連する能力が重要視されており、フェルミ推定はこれらの能力を評価する効果的な手法として、採用選考の場で活用されていると考えられます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>フェルミ推定の具体的な解法ステップと評価ポイント</h2><p>フェルミ推定を効果的に解くためには、一般的に以下の4つのステップを踏むことが推奨されます。面接官は最終的な答えの近さだけでなく、各ステップにおける思考の質を評価しているとされます。</p><ul><li><strong>ステップ1：前提確認</strong><br>まず、お題の定義を明確にします。例えば「日本の年間コーヒー消費量」という問いなら、「コーヒー」の範囲（インスタントは含むか？缶コーヒーは？）、単位（杯数か、金額か）などを面接官に質問し、解くべき問題のスコープを限定します。</li><li><strong>ステップ2：要素分解</strong><br>問題を計算可能な小さな要素に分解し、全体の構造を設計します。例えば、人口を基点に「人口 × コーヒーを飲む人の割合 × 一人当たりの年間消費杯数」といった式を立てます。この構造化能力が、論理的思考力の中核として評価されるポイントです。</li><li><strong>ステップ3：数値設定</strong><br>分解した各要素に、自身の知識や常識に基づいた妥当な数値を設定します。例えば日本の人口約1.2億人といった、総務省統計局が公表しているような信頼性の高いデータを知っていれば、説得力が増します。全ての数値を正確に知っている必要はなく、合理的な仮定を置くことが重要です。</li><li><strong>ステップ4：検算</strong><br>算出した最終的な数値が、常識的に考えて妥当な範囲に収まっているかを確認します。例えば、あまりに非現実的な数値になった場合は、計算ミスや仮定の誤りを疑い、思考プロセスを修正します。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>コンサル業界のフェルミ推定面接に特化した実践的対策</li><li>大手ファームから専門ブティックまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">フェルミ推定を、元コンサルの伴走で確実に習得する</h2>
+      <p>解法 4 ステップ + 独学 + 元コンサル模擬面接で、ケース面接最頻出問題を突破。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_fermi`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_fermi">
+          <span>元コンサル無料模擬面接を始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

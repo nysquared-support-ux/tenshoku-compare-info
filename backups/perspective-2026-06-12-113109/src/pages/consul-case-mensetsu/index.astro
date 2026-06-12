@@ -1,0 +1,216 @@
+---
+/**
+ * consul-case-mensetsu LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル ケース面接対策 (sv 推定 800-1,500・即実行型・MyVision無料サポート完全合致)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル ケース面接対策 完全ガイド｜頻出5タイプ + 解法フレームワーク + 4週間ロードマップ｜MyVision (PR)';
+const description = 'コンサル選考の最大の関門であるケース面接対策を、頻出問題5タイプ (フェルミ推定・市場規模・収益改善・市場参入・新規事業) + 解法フレームワーク (MECE/イシューツリー/仮説思考) + 4週間トレーニングロードマップで整理。元コンサルとの模擬面接 + 添削が無料で受けられるMyVisionの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル ケース面接対策' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談した場合、必ず転職する必要はありますか？', a: 'いいえ、その必要は一切ございません。まずはご自身の市場価値を客観的に把握したり、キャリアの選択肢について情報収集したりする場としてご活用ください。弊社から転職を強要することはなく、内定が出た後でも、ご自身の判断で辞退することが可能です。納得のいくキャリアプランを一緒に考えることが我々の目的です。' },
+  { q: '現職が忙しく、転職活動の時間が取れるか心配です。', a: 'ご安心ください。多くのご登録者様が在職中にお忙しい中で活動されています。平日の夜間や土日祝のオンライン面談、メールやチャットでの効率的なコミュニケーションなど、ご状況に合わせて柔軟に対応いたします。隙間時間を活用できる独自の対策ツールもご用意し、現職へのご負担を最小限に抑えながら進められるようサポートするのが一般的です。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル選考 junior〜senior 両軸 | ケース面接対策 + BIG4/MBB brand 訴求</span>
+      <h1 id="fv-h1">コンサル <span class="accent">ケース面接対策</span> 完全ガイド<br />頻出 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル特化エージェントの公開情報によれば、ケース面接はコンサル選考の<strong>最大の関門</strong>とされており、独学では到達しにくい水準の対策が必要とされています。本記事では頻出問題5タイプ・解法フレームワーク3種・4週間トレーニングロードマップを整理し、元コンサルとの<strong>無料模擬面接</strong>を活用した突破方法を解説します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>頻出ケース問題 5 タイプの解法アプローチ</li>
+        <li>解法フレームワーク 3 種 (MECE・イシューツリー・仮説思考)</li>
+        <li>4 週間トレーニングロードマップ (独学 + 模擬面接)</li>
+        <li>元コンサルの無料模擬面接 + 添削の活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_case">
+          <span>元コンサルとの無料模擬面接を受ける (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事はケース面接通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ケース面接とは — コンサル選考の核心</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / 大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>ケース面接は、コンサル選考の中核となる面接形式です。<strong>制限時間 30-60 分</strong>で経営課題・市場規模算出等の問題を解き、論理的思考力・問題解決能力・コミュニケーション能力を総合評価される形式とされています。コンサル特化エージェントの公開情報によれば、ケース面接の通過率は一般的に20-40%程度とされており、選考全体の最大の関門となっています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特徴1</span><h4>制限時間内の構造化</h4><p>30-60分の制限時間内に、問題の構造化 → 解法の論理的展開 → 結論の提示までを完遂する必要があります。MECE + イシューツリーで論点分解する能力が前提とされています。</p></article>
+        <article class="branch"><span class="tag">特徴2</span><h4>対話型の進行</h4><p>面接官との対話を通じて仮説検証 → 仮説修正を繰り返す進行スタイルです。「正解」より「思考プロセス」が評価されるとされています。コミュニケーション能力 + 柔軟性が重要視されます。</p></article>
+        <article class="branch"><span class="tag">特徴3</span><h4>定量・定性の両軸</h4><p>フェルミ推定 (定量) + 経営判断 (定性) の両軸で問題が出題されるとされています。数値計算能力 + 戦略思考の両方が評価対象となります。</p></article>
+        <article class="branch"><span class="tag">特徴4</span><h4>ファーム別の特性</h4><p>戦略系 (BCG/McK/Bain) は難易度高 + 抽象度高・総合系 (アクセンチュア/BIG4) は実務寄り + 業界特化・ベイカレント等は業界知見重視と、ファーム別に特性が異なるとされています。</p></article>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_case">
+          <span>ファーム別のケース面接特性を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">ケース面接対策で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        ケース面接対策領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">頻出ケース問題 5 タイプ</h2>
+      <p class="section-lede">コンサル特化エージェントの公開情報・元コンサルの公開ブログによれば、以下5タイプがケース面接で頻出とされています。各タイプで解法アプローチが異なります。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="頻出ケース問題 5 タイプ">
+          <thead><tr><th>問題タイプ</th><th>頻度</th><th>難易度</th><th>解法アプローチ</th></tr></thead>
+          <tbody>
+            <tr><td>1. フェルミ推定 (市場規模算出)</td><td>&#11088; 最頻出</td><td>中</td><td>需要分解 (人口 × 利用率 × 単価) + ボトムアップ計算</td></tr>
+            <tr><td>2. 収益改善 (売上 / コスト)</td><td>&#11088; 頻出</td><td>中-高</td><td>売上分解 (客数 × 客単価) + コスト分解 (固定 / 変動) + 改善打ち手</td></tr>
+            <tr><td>3. 市場参入 (新市場進出)</td><td>頻出</td><td>高</td><td>市場魅力度 (規模 / 成長率 / 競合) + 自社適合性 (強み / リソース) + 参入戦略</td></tr>
+            <tr><td>4. 新規事業 (アイディア → 評価)</td><td>頻出</td><td>高</td><td>市場ニーズ + 自社強み + 収益性 + 実現可能性の4軸評価</td></tr>
+            <tr><td>5. 定性問題 (経営判断・戦略)</td><td>中</td><td>中-高</td><td>論点整理 + 仮説提示 + 検証ロジック + 結論導出</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_case_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>ケース面接の評価基準と頻出5タイプ</h2><p>コンサルティングファームの選考でケース面接が重視されるのは、実際のコンサルティング業務で求められる問題解決能力を疑似体験し、候補者のポテンシャルを測るためとされます。<br>経済産業省の「特定サービス産業動態統計調査」によると、コンサルタント業は社会経済の複雑化を背景に需要が拡大しており、高度な分析力や論理的思考力を持つ人材が求められています。<br>ケース面接では、単に正解を出すことよりも、課題を構造的に分解し、論理的な根拠に基づいて仮説を立て、検証していく思考プロセスそのものが評価対象となります。<br>頻出する問題タイプは主に5つに分類されます。<br>①市場規模の推定を行う「フェルミ推定」、②特定の企業の「収益改善策」、③新たな市場への「市場参入戦略」、④ゼロから事業を考える「新規事業立案」、⑤その他特定の社会課題などを扱う「ビジネストピック」です。<br>これらのタイプを理解し、それぞれに適した思考フレームワークを使いこなすことが対策の第一歩となります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">4 週間トレーニングロードマップ</h2>
+      <p class="section-lede">ケース面接対策の標準的ロードマップを4週間で整理します。独学 + 模擬面接の組み合わせが一般的とされています。個別状況により大きく変動するため、参考目安としてご活用ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ケース面接 4 週間ロードマップ">
+          <thead><tr><th>週</th><th>独学パート</th><th>模擬面接パート</th><th>達成目標</th></tr></thead>
+          <tbody>
+            <tr><td>Week 1: 基礎</td><td>参考書 + フレームワーク学習</td><td>準備 (まだ模擬面接なし)</td><td>MECE/イシューツリー/仮説思考の理解</td></tr>
+            <tr><td>Week 2: 問題演習</td><td>ケース問題集 (フェルミ推定中心)</td><td>1-2 回目の模擬面接</td><td>フェルミ推定の解法習得</td></tr>
+            <tr><td>Week 3: 応用</td><td>ケース問題集 (収益改善・市場参入)</td><td>3-5 回目の模擬面接</td><td>5タイプの解法アプローチ習得</td></tr>
+            <tr><td>Week 4: 仕上げ</td><td>ファーム別過去問 + 振り返り</td><td>6-10 回目の模擬面接</td><td>本番想定の通過水準到達</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>4週間は標準ペースですが、フルタイム勤務 + 独学のみだと到達困難なケースが一般的とされています。元コンサルの伴走 (模擬面接 + 添削) があると効率が大きく変わるとされています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>4週間で実践するケース面接トレーニングロードマップ</h2><p>ケース面接の対策を効果的に進めるためには、計画的なトレーニングが不可欠です。<br>厚生労働省が推進する「キャリア形成サポート」においても、目標達成に向けた計画的な能力開発の重要性が示されています。<br>以下に、4週間で実力を高めるためのトレーニングロードマップの一例を整理します。<br>まず【第1週】は、MECEやイシューツリーといった基本的な解法フレームワークを学び、書籍などで知識をインプットします。<br>【第2週】では、フェルミ推定や市場規模算出など、比較的シンプルな頻出タイプの問題を時間を計りながら解き、思考の瞬発力を鍛えます。<br>【第3週】は、収益改善や新規事業立案といった、より複雑なビジネスケース問題に取り組み、思考プロセスを構造的に言語化する練習を重ねます。<br>そして【第4週】では、模擬面接を積極的に活用し、第三者からの客観的なフィードバックを受けます。<br>自分の思考の癖を修正し、プレッシャーのかかる状況でのコミュニケーション能力を向上させることが最終目標です。</p><ul><li><strong>第1週: 基礎知識の習得</strong> - 主要な解法フレームワーク（MECE、ロジックツリー等）を理解し、基本的な問題集を1冊読み通す。</li><li><strong>第2週: 問題演習（基礎）</strong> - フェルミ推定や市場規模の問題を中心に、毎日1問以上、時間を意識して解く練習を行う。</li><li><strong>第3週: 問題演習（応用）</strong> - 収益改善や新規事業立案など、より複雑なビジネスケースに挑戦し、思考プロセスを紙に書き出す訓練を積む。</li><li><strong>第4週: 実践とフィードバック</strong> - 模擬面接サービスなどを活用し、他者からの客観的な評価を受けて思考の質と伝え方を改善する。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>コンサル業界の選考プロセスに特化した実践的対策</li><li>大手ファームから専門ブティックまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム + 5つのカギ</p></a>
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の市場価値 + 4 つのキャリアパス + 年収レンジ</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職ガイド</h4><p>IT エンジニアからコンサル + 狙えるファーム + 評価される 5 領域</p></a>
+        <a class="card-link" href="/kaikeishi-tenshoku-timing/"><h4>公認会計士 転職タイミング</h4><p>監査法人 in/out + 業務サイクル + 年代別判断</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">独学では超えにくいケース面接の壁を、元コンサルの伴走で突破する</h2>
+      <p>ケース面接はコンサル選考の最大の関門。MyVisionの無料カウンセリングで、模擬面接 + 添削 + ファーム別対策を会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_case`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_case">
+          <span>元コンサルの無料模擬面接を試す</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mensetsu-taisaku/">コンサル面接対策 完全ガイド｜ケース面接・行動面接・GDの種類別対策と準備法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/mensetsu/">転職面接 自己紹介｜評価される構成・1 分 / 3 分テンプレートと職種別例文集 (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,234 @@
+---
+/**
+ * consul-zangyou-jikan LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 残業時間 (sv 推定 400-700・不安解消・★354 honest)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 残業時間 完全ガイド｜ファーム別の実態 + 働き方改革 + ワークライフバランス｜MyVision (PR)';
+const description = 'コンサル業界の残業時間について、ファーム別 (戦略系 / 総合系 / FAS / IT 系) の実態 + 働き方改革の進捗 + ワークライフバランスの実情を公開情報ベースで整理。元コンサルからの実態ヒアリングサポート活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 残業時間' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を具体的に考えていないのですが、相談だけでも可能ですか？', a: 'もちろん可能です。まずはご自身の市場価値を知りたい、今後のキャリアパスについて客観的な意見が欲しい、といった情報収集段階の方のご相談も歓迎しております。無理に転職をお勧めすることは一切ございません。面談を通じて得た情報が、現職でのキャリアを考える上での参考になるケースも多いため、お気軽にご利用ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul zangyou jikan に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-zangyou-jikan に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル junior〜senior マネージャー候補 両軸 | 残業時間 + BIG4/MBB brand</span>
+      <h1 id="fv-h1">コンサル <span class="accent">残業時間</span> 完全ガイド<br />ファーム別の実態 + 働き方改革 + ワークライフバランス</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル業界の残業時間は<strong>ファーム別 + 案件別に大きく変動</strong>する傾向とされ、月 40-80 時間程度が一般的水準とされています。2019年の働き方改革関連法施行以降、大手ファームでは長時間労働是正 + リモートワーク導入が進んでいるとされています。本記事ではファーム別の実態 + 働き方改革進捗 + ワークライフバランスの実情を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>ファーム別 (戦略 / 総合 / FAS / IT) の残業実態</li>
+        <li>働き方改革 (働き方改革関連法 / 36協定) の進捗</li>
+        <li>ワークライフバランス改善 5 ポイント</li>
+        <li>元コンサル実態ヒアリングサポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_zangyou">
+          <span>ファーム別の働き方を元コンサル無料相談で確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は労働環境の絶対的判断ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ファーム別 残業時間の実態</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/" target="_blank" rel="noopener">厚生労働省 労働基準ガイドライン</a> / コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="ファーム別残業時間目安">
+          <thead><tr><th>ファーム種別</th><th>月残業目安</th><th>繁忙期</th><th>働き方の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>戦略系 (BCG / McK / Bain)</td><td>60-100 時間</td><td>100 時間超のケース</td><td>短期高負荷 + 案件サイクル速い</td></tr>
+            <tr><td>総合系 (アクセンチュア / PwC / ベイカレント)</td><td>40-80 時間</td><td>80-100 時間</td><td>案件単位で変動</td></tr>
+            <tr><td>FAS 系 (Deloitte FAS / PwC AS)</td><td>50-90 時間</td><td>90-110 時間</td><td>M&A 案件期は高負荷</td></tr>
+            <tr><td>IT 系 (アクセンチュア Tech / IBM)</td><td>40-70 時間</td><td>80-90 時間</td><td>実装フェーズで変動</td></tr>
+            <tr><td>公共系 (野村総研 / 三菱総研)</td><td>30-60 時間</td><td>70-80 時間</td><td>比較的安定傾向</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。実際の労働時間は案件 + ポジション + 個人の働き方により大きく変動します。詳細はファーム面談 + 元コンサル実態ヒアリングで確認することが推奨されます。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_zangyou">
+          <span>ファーム別の実態を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル残業時間転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル残業時間転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル残業時間領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">働き方改革の進捗 — 4 つの変化</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">変化1</span><h4>働き方改革関連法 (2019年〜)</h4><p>2019年4月施行の働き方改革関連法以降、大手コンサルファームでも 36協定遵守 + 月60時間超残業の割増賃金率引上げ等への対応が進んでいるが一般的です。長時間労働の是正に向けた取り組みが業界で標準化されつつあります。</p></article>
+        <article class="branch"><span class="tag">変化2</span><h4>ハイブリッドワーク導入 (2020年〜)</h4><p>COVID-19 以降、大手コンサルファームではハイブリッドワーク (出社 + リモート) が主流化したのケースが多く見られます。週 2-3 日のリモート勤務が一般的水準とされる傾向にあります。</p></article>
+        <article class="branch"><span class="tag">変化3</span><h4>有給休暇取得率向上</h4><p>働き方改革により有給休暇の年5日取得義務化が施行され、コンサルファームでも取得促進が進む傾向とされています。但し案件期 + 納期前は取得が難しいケースもあると公表されています。</p></article>
+        <article class="branch"><span class="tag">変化4</span><h4>女性活躍 + ダイバーシティ推進</h4><p>女性活躍推進法 + ダイバーシティ経営の流れで、コンサルファームでも女性管理職比率向上 + 育休復帰サポート + 時短勤務制度の整備が進んでいると示されています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_zangyou_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル業界の残業時間と労働法の基本</h2><p>コンサルティング業界は、クライアント企業の経営課題解決という業務の性質上、プロジェクトの納期や成果への高いコミットメントが求められ、結果として労働時間が長くなる傾向にあると一般にされます。<br>しかし、日本国内で事業を行う以上、コンサルティングファームも他の企業と同様に労働基準法をはじめとする各種法令を遵守する義務があります。<br>特に、時間外労働（残業）に関しては、労働基準法第36条に基づく労使協定、通称「36（サブロク）協定」の締結と届出が不可欠です。<br>厚生労働省が示す「時間外労働の上限規制」により、残業時間は原則として月45時間・年360時間までと定められており、臨時的な特別な事情がなければこれを超えることはできません。<br>一部の専門職では「専門業務型裁量労働制」が適用されるケースもありますが、その場合でも健康・福祉確保措置が求められます。<br>これらの法的な枠組みを理解することは、自身の労働環境を客観的に評価する上で基礎的な知識となります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>残業の実態把握と転職活動での確認ポイント</h2><p>コンサルティングファームへの転職を検討する際、残業時間の実態を正確に把握することは、入社後のミスマッチを防ぐ上で極めて重要です。<br>求人情報や公式サイトだけでは、部署やプロジェクトごとの実情まで知ることは困難とされます。<br>そこで、より解像度の高い情報を得るための具体的なアクションが求められます。<br>例えば、面接の場で残業時間について直接的に尋ねるだけでなく、具体的な聞き方を工夫することが有効です。<br>また、内部情報に詳しい転職エージェントの活用は、有力な手段の一つとなり得ます。<br>特に、元コンサルタントが在籍するエージェントであれば、企業文化や働き方のリアルな実態について、公開情報からは得られないインサイトを提供してくれる可能性があります。<br>職業安定法では、求人企業は労働条件を明示する義務が定められており、エージェントを通じて客観的な情報を得ることは、自身の権利を守ることにも繋がります。</p><ul><li><strong>具体的な質問の準備:</strong> 面接時に「繁忙期における1日の典型的なスケジュールを教えていただけますか？」や「プロジェクト終了後の休暇取得実績について伺えますか？」といった具体的な質問を用意し、実態を探ることが期待されます。</li><li><strong>固定残業代制の確認:</strong> 求人票に「固定残業代を含む」と記載がある場合、基本給と固定残業代の内訳、および固定残業が何時間分に相当するのかを必ず確認することが重要です。</li><li><strong>働き方改革の進捗確認:</strong> 全社的な残業削減目標、PCの強制シャットダウン制度、稼働管理システムの導入状況など、具体的な取り組みについて確認することで、企業の姿勢を評価する材料となり得ます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>当社が選ばれる5つの理由</h3><ul><li>コンサル業界特化ならではの豊富な非公開求人</li><li>年収アップ実績多数（平均+187万円の事例）</li><li>元コンサルタントによる専門的なキャリア相談</li><li>在職中でも安心の夜間・土日オンライン面談</li><li>書類添削から面接対策、年収交渉まで徹底サポート</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">コンサルの働き方を、元コンサルから honest に聞く</h2>
+      <p>ファーム別の残業実態 + 働き方改革進捗 + ワークライフバランスの実情を、元コンサルから直接ヒアリング。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_zangyou`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_zangyou">
+          <span>元コンサル無料ヒアリングを始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が知られています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとされています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

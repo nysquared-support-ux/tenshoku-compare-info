@@ -1,0 +1,234 @@
+---
+/**
+ * consul-tekisei LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 適性 (sv 推定 500-800・自己診断 → CV 直結)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 適性 完全ガイド｜10 項目セルフチェック + 適性タイプ別の狙えるファーム｜MyVision (PR)';
+const description = 'コンサルタントとしての適性を10項目セルフチェックで診断 + 適性タイプ別の狙えるファーム (戦略系 / 総合系 / FAS / IT 系 / 公共系) を公開情報ベースで整理。元コンサルの無料適性診断 + キャリア相談の活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 適性' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を具体的に考えていないのですが、相談可能ですか？', a: 'はい、もちろん可能です。まずはご自身の市場価値を知りたい、キャリアの選択肢を広げたいといった情報収集段階の方のご相談も歓迎しております。無理に転職をお勧めすることは一切ございません。客観的な視点からあなたのキャリアを分析し、今後の可能性について一緒に考えさせていただきますので、お気軽にご利用ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul tekisei に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-tekisei に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル適性 junior〜senior 両軸 | BIG4/MBB brand 60-100年 path</span>
+      <h1 id="fv-h1">コンサル適性検査で市場価値を把握、<span class="accent">年収+250万円を目指す</span>。<br />在職中でも可能な夜間オンライン キャリア相談</h1>
+      <p class="lede">DX 推進や事業再編が加速する現代、専門知識を持つコンサルタントの需要は高まり続けているとされます。IT・戦略領域では即戦力人材に対して<strong>現年収から200万円以上のアップ</strong>を提示する事例も少なくないとされ、<strong>平均年収アップ額215万円</strong>(公開情報) といったデータも紹介されています。在職中の方も<strong>夜間・オンライン相談</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。コンサル適性は<strong>論理思考 + 仮説思考 + 学習意欲 + 課題解決志向 + コミュニケーション</strong>等の10項目で総合判断されることが一般的とされ、適性タイプ別に狙えるファームが変わるとされています。本記事ではセルフチェックリスト + 適性タイプ別マッチング + 元コンサル無料診断の活用法を公開情報ベースで整理します。</p>
+      <ul class="fv-bullets">
+        <li>10 項目セルフ適性チェックリスト</li>
+        <li>5 つの適性タイプ別 狙えるファーム</li>
+        <li>適性を磨く方法 (該当数が少ない場合)</li>
+        <li>元コンサル無料適性診断の活用法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_tekisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_tekisei">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は適性診断の絶対的判断ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">10 項目セルフ適性チェックリスト</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>以下10項目で当てはまる数を数えてみてください。<strong>7項目以上</strong>該当する場合、コンサルへの適性が高い可能性があるとされています。</p>
+      <div class="counter-box">
+        <h4>項目1: 論理的に物事を整理できる</h4>
+        <p>複雑な情報を MECE (もれなく重複なく) に分解し、論理的に整理できるか。コンサルの中核スキルとされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目2: 仮説を立てて検証するのが好き</h4>
+        <p>網羅調査より「まず仮説 → データで検証」のアプローチを好むか。仮説思考はコンサル業務の基盤とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目3: 新しい業界・業務領域を学ぶのが好き</h4>
+        <p>担当する案件で毎回新しい業界 + 業務を学ぶ必要があります。学習意欲 + 知的好奇心が必須が一般的です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目4: 抽象的な経営課題に取り組むのが好き</h4>
+        <p>「売上を伸ばすには」「事業を再構築するには」等の抽象的な問いに取り組むのが好きか。戦略系・総合系コンサルの核心です。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目5: 数値分析が得意 (Excel / 計算 等)</h4>
+        <p>定量データを Excel / SQL / BI ツール等で分析する能力。財務 / 市場 / 売上等の数値分析がコンサル業務の中心とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目6: プレゼン + 文章作成が得意</h4>
+        <p>クライアント向け資料 + 提案書 + 報告書を作成する機会が多いです。論理構造 + ビジュアル化 + 説得力の3軸が評価軸とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目7: 体力 + ストレス耐性がある</h4>
+        <p>納期 + 高い要求水準 + 長時間労働の環境に対応する体力 + ストレス耐性が必要のケースが多く見られます。詳細は <a href="/consul-zangyou-jikan/" class="underline">コンサル 残業時間</a> 参照。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目8: コミュニケーション + 関係構築が得意</h4>
+        <p>クライアント + チーム + 上司との対話 + 関係構築。経営層へのアプローチ力 + 説得力が高評価軸とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目9: 課題解決 + 改善提案が好き</h4>
+        <p>「現状の問題を発見 → 改善案を提案 → 実行する」プロセスを好むか。コンサル業務の本質とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>項目10: チームワーク + リーダーシップ志向</h4>
+        <p>複数メンバーでのプロジェクト推進 + サブチームのリード + 部下育成等を志向するか。シニアレベル以降の評価軸と公表されています。</p>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_tekisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_tekisei">
+          <span>セルフチェック結果を元コンサルの無料診断で深掘りする</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル適性で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル適性領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">5 つの適性タイプ別 狙えるファーム</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="適性タイプ別 狙えるファーム">
+          <thead><tr><th>適性タイプ</th><th>該当項目</th><th>狙えるファーム</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr><td>戦略思考型</td><td>1, 2, 4, 6, 9</td><td>戦略系 (BCG / McK / Bain)</td><td>抽象度高 + 経営戦略立案</td></tr>
+            <tr><td>実装志向型</td><td>1, 3, 5, 7, 10</td><td>総合系 (アクセンチュア / IBM)</td><td>戦略 + 実装の一気通貫</td></tr>
+            <tr><td>業界深耕型</td><td>3, 4, 8, 9, 10</td><td>ベイカレント / アビーム</td><td>業界知見 + 経営改革</td></tr>
+            <tr><td>財務分析型</td><td>1, 2, 5, 6, 9</td><td>FAS 系 (Deloitte FAS / PwC AS)</td><td>M&A + 財務 DD + バリュエーション</td></tr>
+            <tr><td>公共志向型</td><td>3, 6, 7, 8, 9</td><td>公共系 (野村総研 / 三菱総研)</td><td>政策 + 公共 + 行政</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_tekisei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサルタントに求められる適性の基礎知識</h2><p>コンサルタントとは、企業の経営層が抱える課題に対し、専門的な知見から解決策を提示し、その実行を支援する職業です。<br>そのため、特有の適性が求められるとされます。<br>一般的に重要とされるのは、「論理的思考力」「仮説構築力」「コミュニケーション能力」の3つです。<br>論理的思考力は、複雑な事象を構造的に整理し、問題の根本原因を特定するために不可欠です。<br>仮説構築力は、限られた情報から「おそらくこうではないか」という仮説を立て、検証を繰り返すことで、効率的に結論へ導く力です。<br>そして、クライアントとの信頼関係を築き、チームを動かすためには高いコミュニケーション能力が求められます。<br>厚生労働省の職業情報提供サイト（job tag）においても、経営コンサルタントには「課題を分析し、解決策を考案、実行する能力」が求められると記載されており、これらの能力が業務の根幹をなすことが示唆されています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>適性タイプ別に見るコンサルティングファームの選び方とキャリア相談の活用</h2><p>コンサルティングファームは、その専門領域によって求められる適性が異なります。ご自身のタイプを理解し、それに合ったファームを選ぶことがキャリア成功の鍵となります。公開情報をもとに整理すると、主に以下のタイプに分類できるとされます。</p><ul><li><strong>戦略思考タイプ:</strong> 抽象度の高い経営課題に対し、ゼロベースで思考することが得意なタイプ。論理的思考力や知的好奇心が強く求められ、戦略系ファームが主な選択肢となります。</li><li><strong>実行支援タイプ:</strong> 策定された戦略を現場に落とし込み、着実に成果を出すことにやりがいを感じるタイプ。高いコミュニケーション能力と粘り強さが求められ、総合系ファームで活躍が期待されます。</li><li><strong>専門特化タイプ:</strong> 特定の業界（金融、製造など）や機能（M&A、IT、人事など）に関する深い知識を持つタイプ。FAS（Financial Advisory Service）やIT系、公共系ファームなどで専門性を活かすことができます。</li></ul><p>厚生労働省の「労働経済動向調査」によると、コンサルティングを含む「学術研究,専門・技術サービス業」は依然として人手不足感があり、専門人材の需要は高い水準にあると見られます。<br>自身の適性に合ったキャリアを築くため、元コンサルタントなどが在籍する転職エージェントの無料キャリア相談を活用し、客観的な視点からアドバイスを受けることも有効な手段の一つです。</p><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値の最大化を目指す</li><li>在職中の慎重な活動を支援</li></ul></div><div class='benefit-summary'><h3>コンサル適性検査転職で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+187万円の事例）</li><li>コンサル業界特化の非公開求人が8割以上</li><li>元コンサルタントによる実践的な選考対策</li><li>平日21時まで対応のオンラインキャリア相談</li><li>納得いくまでサポート、内定後の辞退も可能</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">自分のコンサル適性を、元コンサルが無料で診断する</h2>
+      <p>10 項目セルフチェック + 元コンサル伴走で、適性タイプ + 狙えるファーム + キャリアパスを明確化できる。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_tekisei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_tekisei">
+          <span>元コンサルの無料適性診断を始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

@@ -1,0 +1,215 @@
+---
+/**
+ * consul-portfolio-career LP (MyVision 転職・★326 DRY engineer-30dai pattern)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29 / banner 4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: コンサル ポートフォリオキャリア 転職
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサルのポートフォリオキャリア完全ガイド｜複業・独立・パラレルワークの選び方｜MyVision (PR)';
+const description = 'コンサルのポートフォリオキャリアを、複業 / 独立 / パラレルワークの選び方で整理。選択肢別の特徴、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル ポートフォリオキャリア' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談だけでも可能ですか？すぐに転職するつもりはありません。', a: 'はい、もちろん可能です。まずはご自身の市場価値を知りたい、中長期的なキャリアプランについて相談したい、といった目的でのご利用も歓迎しております。無理に転職をお勧めすることはありません。客観的な視点から、あなたのキャリアの可能性について情報提供をさせていただきますので、お気軽にご相談ください。' },
+  { q: '費用はかかりますか？', a: '候補者様から費用をいただくことは一切ございません。当社のサービスは、採用企業からの成功報酬で運営されています。キャリア相談から求人紹介、面接対策、年収交渉、退職サポートまで、全てのサービスを無料でご利用いただけますので、安心してご活用ください。' },
+  { q: '現職に知られずに活動できますか？', a: 'はい、個人情報の管理は徹底しております。ご本人の許可なく、企業様へ個人情報を開示することは一切ございません。また、特定の企業への応募をブロックする設定も可能です。在職中の皆様が安心して転職活動を進められるよう、プライバシー保護には細心の注意を払っていますのでご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>コンサル ポートフォリオキャリアで、<span style="color:#2563eb;">年収+200万円を目指す</span>。<br />在職中でも安心の夜間・オンライン相談に対応</h1>
+      <p class="fv-lede">DX の加速に伴い、専門知識を持つコンサルタントの需要は高まり続けているとされます。事業ポートフォリオの再構築や新規事業開発を担える人材は多くの企業が求める存在とされ、<strong>平均年収アップ額180万円</strong>といったデータも公開情報で紹介されています。在職中の方も<strong>夜間・オンライン相談</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。コンサル経験を活かしたポートフォリオキャリア (複業・独立・パラレルワーク) について、選択肢・始め方・選び方を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>キャリア類型別のポートフォリオマップ</li>
+        <li>ポートフォリオキャリアの主な4つのパス</li>
+        <li>ポートフォリオキャリアを進める5つの対策</li>
+        <li>無料サポートで進路の精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_consul_portfolio_career`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_consul-portfolio-career">
+          <span>MyVision の無料相談でコンサル ポートフォリオキャリアの市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">キャリア類型別のポートフォリオマップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>コンサル ポートフォリオキャリアの市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="キャリア類型別のポートフォリオマップ">
+          <thead><tr><th>キャリア類型</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>複業 (本業 + 副業)</td><td>本業の安定 + 副業で新しい挑戦</td><td>リスク低く始めたい層</td></tr>
+            <tr><td>フリーランス独立</td><td>案件単位での働き方・複数クライアント</td><td>独立志向・経験豊富な層</td></tr>
+            <tr><td>パラレルワーク (複数本業)</td><td>複数の組織で並行的に重要な役割</td><td>経営者・専門家層</td></tr>
+            <tr><td>起業 + 顧問</td><td>自社経営 + 他社顧問の組み合わせ</td><td>起業志向 + 専門性を持つ層</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_consul_portfolio_career`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_consul-portfolio-career">
+          <span>自分の市場価値を MyVision の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル portfolio careerで実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル portfolio career領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ポートフォリオキャリアの4つのパス</h2>
+      <p class="section-lede">コンサル ポートフォリオキャリアの主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>複業先行パス</h4><p>本業を続けながら副業で経験を蓄積し、徐々に独立を検討するパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>フリーランス独立パス</h4><p>コンサル経験を活かし、案件単位のフリーランスとして独立するパス。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>起業 + 顧問パス</h4><p>自社を立ち上げつつ、他社の顧問・アドバイザーも兼ねるパス。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>業務委託 + 正社員パス</h4><p>業務委託でリモート参画しつつ、別の正社員ポジションも持つパス。詳細は <a href="/full-remote-engineer/" class="underline">フルリモートワーク</a> も参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_consul_portfolio_career_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサルタントのポートフォリオキャリアとは？その基礎知識</h2><p>コンサルタントにおけるポートフォリオキャリアとは、伝統的な一つの企業に所属するキャリアパスとは異なり、複数の専門性や収入源を戦略的に組み合わせる働き方を指します。<br>具体的には、コンサルティングファームでの本業を続けながら、週末や夜間に専門知識を活かして複業（副業）を行ったり、独立してフリーランスとして複数のプロジェクトを同時に請け負ったり、あるいは非営利団体の理事を兼任するなど、多様な形態が考えられます。<br>この背景には、終身雇用制度の変化や、個人の専門性をより多角的に活かしたいという価値観の広がりがあります。<br>厚生労働省が公表する「副業・兼業の促進に関するガイドライン」でも、労働者が主体的にキャリアを形成できる環境整備が推奨されており、社会全体として多様な働き方を後押しする動きがみられます。<br>コンサルタントのような専門職にとって、ポートフォリオキャリアはリスク分散だけでなく、新たなスキルの獲得や人脈形成の機会にもなり得ると期待されています。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">コンサル ポートフォリオキャリアの転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>案件情報の具体性</td><td>案件規模・期間・報酬が曖昧</td><td>規模・期間・報酬・役割が明記</td></tr>
+            <tr><td>提供価値の明確性</td><td>求める専門性が不明確</td><td>求めるスキル・経験が具体的</td></tr>
+            <tr><td>契約条件の透明性</td><td>契約形態・更新条件が不明</td><td>業務委託・契約期間が明確</td></tr>
+            <tr><td>報酬提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>案件難易度・実績に応じた説明</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>ポートフォリオキャリア構築の具体的な3ステップと注意点</h2><p>コンサルタントがポートフォリオキャリアを構築するための具体的な手順は、一般に以下の3つのステップで整理されます。各ステップを着実に進めることで、本業との両立を図りながら、スムーズにキャリアの多角化を目指すことが可能とされます。<br>まず、第一に「自己分析とスキルの棚卸し」です。自身のコンサルタントとしての専門領域、得意な業界、プロジェクトマネジメント能力などを客観的に評価し、市場で価値を提供できるスキルを明確にします。第二に「市場調査と案件の探索」です。自身のスキルがどのような分野で求められているか、複業マッチングプラットフォームや専門エージェントを活用して調査します。最初は小規模なスポットコンサルティングなどから始め、実績を積むのが一般的です。第三のステップは「実践と実績の構築」です。実際に案件をこなしながら、クライアントからの評価を高め、ポートフォリオ（実績集）を充実させていきます。注意点として、複業で得た所得が年間20万円を超える場合は、確定申告が必要です。手続きについては、国税庁のウェブサイト等で事前に確認することが不可欠です。</p><ul><li><strong>ステップ1: 自己分析とスキルの棚卸し</strong><br>自身の専門性や市場価値を客観的に評価し、提供できる価値を言語化する。</li><li><strong>ステップ2: 市場調査と案件の探索</strong><br>複業プラットフォームやエージェントを活用し、自身のスキルに合った案件を探す。</li><li><strong>ステップ3: 実践と実績の構築</strong><br>小規模案件から着実にこなし、信頼とポートフォリオを積み上げる。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>コンサル ポートフォリオ キャリア で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの実現事例多数</li><li>コンサル業界に特化した専門コンサルタントが伴走</li><li>事業会社役員・戦略ポジションなどの非公開求人をご紹介</li><li>夜間・土日も対応。現職に配慮した柔軟なサポート体制</li><li>納得いくまで比較検討。内定後の辞退も可能な安心感</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/postconsul-tenshoku/"><h4>ポストコンサル転職</h4><p>コンサル後のキャリア選択肢</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサルファーム比較</h4><p>ファーム別の特徴</p></a>
+        <a class="card-link" href="/consul-tenshoku-40dai/"><h4>40代コンサル転職</h4><p>40代のキャリア選択</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル年収</h4><p>ファーム別・等級別年収</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">ポートフォリオキャリアの選択肢を整え、納得のいく進路に近づく</h2>
+      <p>コンサル ポートフォリオキャリアの転職は方向性の整理と判断材料の確保で精度が高まるとされています。MyVision の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_consul_portfolio_career`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_consul-portfolio-career">
+          <span>MyVision の無料相談でコンサル ポートフォリオキャリアの進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

@@ -1,0 +1,188 @@
+---
+/**
+ * AI エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 1,900 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-ai-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'SIer脱出転職の進め方ガイド｜事業会社/Web系/SES比較整理（2026年版・PR）';
+const description = 'AI / 機械学習エンジニアの転職を検討中の方向け。LLM 時代の必須スキル + 業界別年収帯 + キャリアパス + 求人傾向を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'AI エンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> sier dasshutsu に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は sier-dasshutsu に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / AI エンジニア</span>
+      <h1 id="fv-h1">
+        <span class="accent">AI エンジニア</span>転職完全ガイド<br />
+        LLM 時代の市場価値と年収帯
+      </h1>
+      <p class="lede">
+        2026 年現在、AI エンジニア市場は LLM (生成 AI) 急成長で需要急増中とされ、年収 700-2,000 万円帯の求人が活発なとされています。
+        ML 基礎 + Deep Learning + LLM 活用の 3 段階スキルが転職成否を決める一般的が一般的です。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>AI エンジニア 4 種類 + 必須スキル整理</li>
+        <li>LLM 時代の技術/数学スキル体系化</li>
+        <li>経験年数別 年収帯 + 業界別求人傾向</li>
+        <li>JILPT・IPA・経産省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と AI エンジニアの 4 種類</h2>
+      <p class="section-lede">2026 年現在、AI エンジニア市場は LLM 急成長で需要急増中。役割により 4 種類に分かれ、ML 基礎 + Deep Learning + LLM 活用の 3 段階スキルが転職成否を決めます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">ML エンジニア</span><h4>モデル設計・学習・チューニング</h4><p>機械学習モデルの設計・学習・ハイパーパラメータチューニングが中心。数学・統計基礎が前提。</p></article>
+        <article class="branch"><span class="tag">MLOps エンジニア</span><h4>機械学習基盤・継続学習</h4><p>機械学習基盤・継続学習パイプライン構築。クラウド ML サービス + DevOps スキルが評価される。</p></article>
+        <article class="branch"><span class="tag">LLM アプリエンジニア</span><h4>GPT/Claude API + RAG + Agent</h4><p>LLM API 活用・RAG・Agent 実装。2026 年最も需要が伸びている領域とされる。</p></article>
+        <article class="branch"><span class="tag">データサイエンティスト</span><h4>統計分析 + ビジネス課題解決</h4><p>統計分析 + ビジネス課題解決。技術深度とビジネス貢献の両立が問われる。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的のケースが多く見られます。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>4 種類を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">SIer 脱出転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるSIer 脱出転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円のレンジで具体的なキャリア設計が可能と言われます。
+        SIer 脱出領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">必須スキル (LLM 時代)</h2>
+      <p class="section-lede">年収高単価帯では技術スキルに加えて数学・統計基礎の両立が評価されると公表されています。</p>
+      <div class="card-grid">
+        <div class="card"><h3>技術スキル</h3><p>Python + ML フレームワーク (PyTorch / TensorFlow / scikit-learn) / LLM API (OpenAI / Anthropic / Google) / RAG + ベクトル DB (Pinecone / Weaviate) / プロンプトエンジニアリング + Few-shot / Chain-of-Thought / MLOps (MLflow / Vertex AI / SageMaker) / クラウド (AWS/GCP) ML サービス</p></div>
+        <div class="card"><h3>数学・統計基礎</h3><p>線形代数 / 確率統計 / 微分積分 / 機械学習アルゴリズム理解 (教師あり/教師なし/強化学習)。<br>文系出身でも数学基礎 + Python + ML フレームワーク習得で転身事例があるとされていますが、キャリア初期は厳しい傾向もあります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>SIer脱出転職の基本と市場背景</h2><p>SIer（システムインテグレーター）からの転職、通称「SIer脱出」は、キャリアアップや働き方の改善を目指すエンジニアにとって主要な選択肢の一つとされます。<br>その背景には、SIer特有の多重下請け構造や、技術選定の自由度の低さ、硬直的な組織文化などから、より主体的に開発に関われる環境を求める傾向があると指摘されています。<br>主な転職先としては、自社サービスを開発・運営する「事業会社」、最新技術を駆使したサービス展開が特徴の「Web系企業」、特定の技術領域で専門性を発揮する「SES（システムエンジニアリングサービス）」などが挙げられます。<br>経済産業省の「IT人材需給に関する調査」によれば、IT人材の需要は今後も拡大が見込まれており、SIerで培った顧客折衝能力やプロジェクト管理能力は、異業種でも高く評価される可能性があると公開情報をもとに整理できます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">転職戦略 5 ステップ</h2>
+      <div class="card-grid">
+        <div class="card"><h3>転職戦略 5 ステップ</h3><p>① GitHub に ML プロジェクト + Kaggle / SIGNATE 実績公開<br />② LLM 活用個人開発 (RAG / Agent) でアウトプット<br />③ 論文輪読 + 技術ブログ / Zenn 投稿<br />④ AI 特化エージェント + スカウト型 (LinkedIn) 併用<br />⑤ 年収交渉では市場価値 + 実績 + 論文/OSS で示す</p></div>
+        <div class="card"><h3>YMYL リスク認識</h3><p>年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。AI 領域は技術変化が速く、継続学習が前提となるレンジです。具体的判断は AI 特化エージェントへの相談を推奨します。</p></div>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>SIer脱出を成功させる具体的な手順と比較</h2><p>SIerからの転職を成功させるためには、計画的な準備が不可欠です。<br>まずは自己分析を行い、SIerで得たスキル（要件定義、設計、プロジェクト管理等）と、今後伸ばしたい技術領域を明確にします。<br>次に、事業会社、Web系、SESといった選択肢それぞれの特徴を比較検討し、自身のキャリアプランに合致する業界を絞り込みます。<br>例えば、事業会社は安定性やビジネスへの貢献実感が得やすく、Web系は技術的裁量やスピード感が魅力とされます。<br>職務経歴書には、担当したプロジェクトの規模や自身の役割、貢献度を具体的に記述することが重要です。<br>ハローワークインターネットサービスなどの公的機関も情報源として活用できますが、専門性の高い求人を探す場合は転職エージェントの利用が効率的とされます。<br>面接では、なぜSIerから転職したいのか、転職先で何を成し遂げたいのかを論理的に説明できるよう準備しましょう。</p><ul><li><strong>自己分析とスキルの棚卸し:</strong> 自身の強みとキャリアの方向性を明確化する。</li><li><strong>業界・企業研究:</strong> 事業会社、Web系、SES等の文化や開発スタイルの違いを理解する。</li><li><strong>応募書類の準備と面接対策:</strong> SIerでの経験を転職先でどう活かせるかを具体的にアピールする。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ses-dasshutsu/">SES 脱出 完全ガイド｜自社開発・元請への転職判断と年収アップの目安（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/techgo-ses-dasshutsu-tetsuduki/">SES からの転職手続きの整理｜次のキャリアへの進め方 (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/30dai/">30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-koukai/">40代転職で死ぬほど後悔しないために｜失敗パターンと回避策（PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/40dai-revenge/">40代転職リベンジ｜失敗からの復活ガイド (公開情報・PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

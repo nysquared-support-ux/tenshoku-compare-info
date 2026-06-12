@@ -1,0 +1,216 @@
+---
+/**
+ * consul-tenshoku-30dai LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 30代 コンサル 転職 (sv 推定 1,200-2,000・24-39歳メインターゲット)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)';
+const description = '30代でコンサル転職を成功させる人の共通点と、30代前半・後半別の市場価値・狙えるファーム・年収レンジを、MyVision 公開情報視点で整理。30代特有の選考対策 (マネジメント経験の翻訳・案件経験の数値化) + 年収アップ事例 + 無料カウンセリング活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '30代 コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談は無料ですか？また、どのような情報が必要ですか？', a: 'はい、ご相談から内定、ご入社まで一切費用はかかりません。初回のご相談では、これまでのご経歴やスキル、今後のキャリアに関するご希望をお伺いします。事前に職務経歴書をご準備いただけると、より具体的で深いご提案が可能ですが、必須ではございませんので、まずはお気軽にご状況をお聞かせください。' },
+  { q: '現職が忙しく、活動時間が限られていますが大丈夫でしょうか？', a: 'もちろんです。多くの方が在職中に活動されています。平日夜間や土日のオンライン面談、メールやチャットツールでの細やかな連絡、企業との柔軟な面接日程調整など、ご負担を最小限に抑えながら効率的に活動を進められるよう、最大限サポートいたしますのでご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル30代 senior マネージャー候補 +700万円超 両軸 | BIG4/MBB brand</span>
+      <h1 id="fv-h1">30代 <span class="accent">コンサル 転職</span> 完全ガイド<br />30代前半・後半別の市場価値と狙えるファーム</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 30代前半 (31-35歳) は<strong>スキル成熟 + ポテンシャルの両軸で評価される市場価値ピークの一つ</strong>とされ、30代後半 (36-39歳) も専門領域・マネジメント経験があれば対象とされています。本記事では30代特有の選考対策・年収レンジ・狙えるファーム・キャリアパスを整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>30代前半・後半別の市場価値と採用傾向</li>
+        <li>狙えるファーム別の年収レンジ (600-1,200万円帯)</li>
+        <li>マネジメント経験 + 案件実績の翻訳ポイント</li>
+        <li>無料カウンセリングで30代の市場価値を確認する方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_30dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_30dai">
+          <span>30代の市場価値を無料カウンセリングで確認する (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">30代前半・後半別の市場価値マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>30代のコンサル転職市場価値は、年齢区分とバックグラウンドの組み合わせで大きく変動するとされています。下表は一般的な傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="30代の市場価値マップ">
+          <thead><tr><th>年齢区分</th><th>市場価値</th><th>評価軸</th><th>狙えるポジション</th></tr></thead>
+          <tbody>
+            <tr><td>30代前半 (31-33歳)</td><td>&#11088; ピーク</td><td>スキル成熟 + ポテンシャル</td><td>アナリスト〜コンサルタント</td></tr>
+            <tr><td>30代前半後期 (34-35歳)</td><td>高</td><td>実務スキル + マネジメント素養</td><td>コンサルタント〜シニアコンサルタント</td></tr>
+            <tr><td>30代後半 (36-37歳)</td><td>中-高 (専門特化型)</td><td>専門領域 + マネジメント経験</td><td>シニア〜マネージャー候補</td></tr>
+            <tr><td>30代後半 (38-39歳)</td><td>中 (即戦力型)</td><td>マネジメント実績 + 業界知見</td><td>シニア〜マネージャー</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_30dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_30dai">
+          <span>自分の市場価値を MyVision 公式の無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">30 代コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        30 代コンサル転職領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">30代コンサル転職 4 つのキャリアパス</h2>
+      <p class="section-lede">30代でコンサル転職する人の主なキャリアパスを4タイプで整理します。前職業界 + 志向性 + ファーム特性で適合性が変わるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>大手事業会社 → 総合系 / IT 系コンサル</h4><p>事業企画・経営企画・IT部門出身者が、アクセンチュア・アビーム・ベイカレント等の総合系/IT系へ転身するパス。プロジェクト経験 + 経営視点が評価される傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>IT エンジニア → IT/DX 系コンサル</h4><p>SIer・SE・PM 出身者が、アクセンチュア・IBM・アビーム等の IT/DX 案件で価値発揮するパス。技術理解 + プロジェクトマネジメント経験が強みとなる傾向にあるとされています。詳細は <a href="/it-consul-tenshoku/" class="underline">IT コンサル転職ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>金融・会計 → BIG4 / 戦略 / FAS 系</h4><p>銀行・証券・会計士・経理財務出身者が、BIG4 (Deloitte/PwC/EY/KPMG)・戦略系・FAS 系へ転身するパス。財務知見 + 案件理解力が評価される傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>官公庁・公的機関 → 公共系コンサル</h4><p>官公庁・独立行政法人出身者が、公共系コンサル (野村総研・三菱総研・PwC 公共部門等) へ転身するパス。行政知見 + 政策理解が強みとなる傾向にあるとされています。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_30dai_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>30代のコンサル転職市場における価値と基礎知識</h2><p>30代のビジネスパーソンは、コンサルティングファームにとって魅力的な採用ターゲットとされます。<br>その背景には、20代にはない実務経験と、特定の業界や職種における深い知見が期待されるためです。<br>特に30代前半では、これまでの経験に加えて今後の成長ポテンシャルが評価され、30代後半になると、管理職としてのマネジメント経験や、より高度な専門性が求められる傾向にあります。<br>事業会社で培った現場感覚や課題解決の実績は、クライアントに具体的なソリューションを提案する上で強力な武器となり得ます。<br>職業能力開発促進法においても、労働者が主体的に職業能力開発を行うことの重要性が示されており、30代でのキャリアチェンジは、自身の市場価値を再定義し、向上させるための重要なステップと位置づけられるでしょう。<br>自身の経験を客観的に棚卸しし、どのファームで価値を発揮できるかを見極めることが、転職活動の第一歩となります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">30代向けファームの年収・採用傾向</h2>
+      <p class="section-lede">30代の主な転職先ファームを、年収レンジ・採用傾向・特徴で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的とされています。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="30代向けコンサルファーム比較">
+          <thead><tr><th>ファーム種別</th><th>30代採用傾向</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (総合系・IT)</td><td>&#11088; 積極採用</td><td>700-1,200万円</td><td>大手・IT・SIer出身</td></tr>
+            <tr><td>BIG4 (Deloitte・PwC・EY・KPMG)</td><td>積極採用</td><td>750-1,300万円</td><td>金融・会計・財務出身</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>&#11088; 積極採用</td><td>800-1,400万円</td><td>業界経験豊富な実務派</td></tr>
+            <tr><td>戦略系 (BCG・McK・Bain)</td><td>狭き門 (専門領域)</td><td>1,000-1,800万円</td><td>専門特化型・MBA・高度専門</td></tr>
+            <tr><td>FAS 系 (M&A・財務)</td><td>積極採用</td><td>800-1,500万円</td><td>金融・会計・FAS経験者</td></tr>
+            <tr><td>公共系 (野村総研・三菱総研)</td><td>積極採用</td><td>700-1,200万円</td><td>官公庁・公共機関出身</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>30代向けコンサル転職の具体的戦略と選考対策</h2><p>30代のコンサル転職を成功に導くためには、戦略的な準備が不可欠です。単に求人に応募するだけでなく、自身のキャリアを最大限に活かすための対策が求められます。特に以下の3点が重要とされます。</p><ul><li><strong>マネジメント経験の翻訳:</strong> 30代、特に後半では管理職経験が問われることが多くなります。単に「チームを管理した」ではなく、「5人のチームを率い、KPIを前年比120%達成した」のように、具体的な規模・役割・成果を数値で示すことが重要です。これにより、再現性のあるスキルとして評価されやすくなります。</li><li><strong>案件・業務経験の数値化:</strong> 担当したプロジェクトや業務の成果を定量的に示すことは、30代の選考において極めて重要です。「業務効率化に貢献」ではなく、「新システム導入により、月間20時間分の作業工数を削減した」といった具体的な記述が、即戦力性をアピールする上で効果的です。</li><li><strong>ケース面接での視座の高さ:</strong> 30代に期待されるのは、現場レベルの解決策だけでなく、経営的な視点や実現可能性を踏まえた提言です。ケース面接では、自身の経験に基づいた業界構造への深い理解や、組織を動かす上での現実的な制約を考慮した回答を心がけることが求められます。なお、採用選考は、男女雇用機会均等法に基づき、性別ではなく個人の能力と実績によって公正に行われるべきものです。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>30代のコンサル転職で選ばれる5つの理由</h3><ul><li>年収100万円～300万円アップの実現事例多数</li><li>戦略・IT・財務など各分野の専門コンサルタントが担当</li><li>全体の8割以上が経営層に近い非公開求人</li><li>在職中でも無理のないオンライン相談・選考調整</li><li>キャリアプランの壁打ちから丁寧に対応</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験ガイド</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム + 5つのカギ</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク + 4 週間ロードマップ</p></a>
+        <a class="card-link" href="/it-consul-tenshoku/"><h4>IT コンサル転職ガイド</h4><p>IT エンジニアからコンサル + 狙えるファーム + 評価される 5 領域</p></a>
+        <a class="card-link" href="/40dai-koukai/"><h4>40代 転職リベンジ</h4><p>40代でも狙える専門特化キャリア + 戦略</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">30代の今、コンサル転職という選択肢を真剣に検討する</h2>
+      <p>30代前半は市場価値ピーク。30代後半も専門領域があれば対象。MyVisionの無料カウンセリングで、年齢別の市場価値 + 狙えるファーム + 年収レンジを30秒の会員登録で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_30dai`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_30dai">
+          <span>30代の市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

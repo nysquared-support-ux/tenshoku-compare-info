@@ -1,0 +1,259 @@
+---
+/**
+ * soshiki-jinji-consul LP (MyVision コンサル特化・★326 DRY consul-chuto-saiyo)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: 組織人事コンサル (sv 300-500・ブティック特化)
+ * 収益最大化: hr-consul と差別化（ブティック特化軸・マーサー/コーン・フェリー等）
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '組織人事コンサル 転職完全ガイド｜マーサー/コーン・フェリー等の特性・年収・選考｜MyVision (PR)';
+const description = '組織人事コンサル (マーサー / コーン・フェリー / タワーズワトソン等) への転職について、ファームの特性・年収レンジ・狙える領域・選考プロセスを公開情報ベースで整理。元コンサルが在籍する MyVision の無料キャリア面談で市場価値を把握する流れも解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '組織人事コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-23', dateModified: '2026-05-23',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '一般的な戦略コンサルと組織人事コンサルの違いは何ですか？', a: '戦略コンサルが全社的な経営課題を扱うのに対し、組織人事コンサルは「人」と「組織」に特化します。具体的には、組織設計、人材育成、人事制度構築、M&Aに伴う組織統合などを扱います。厚生労働省の職業情報提供サイト（jobtag）でも、経営コンサルタントとは別に人事・労務の専門職として分類されており、専門性の違いが示されています。' },
+  { q: '組織人事コンサルへの転職に社会保険労務士などの資格は必須ですか？', a: '必須ではありませんが、保有していると有利に働く場合があります。特に人事制度や労務関連のプロジェクトでは、社会保険労務士法に定められた専門知識が役立つためです。しかし、資格よりも論理的思考力や課題解決能力、コミュニケーション能力といったコンサルタントとしての基礎能力が重視される傾向が強いとされます。' },
+  { q: '未経験から組織人事コンサルに転職する場合、年収はどの程度期待できますか？', a: '公開情報や転職エージェントの情報によると、未経験者の場合、アナリストやコンサルタントクラスで年収500万円～900万円程度が一般的なレンジとされます。前職の経験やスキル、年齢によって大きく変動します。入社後のパフォーマンス次第で、数年後には1,000万円を超えることも期待できるポジションです。' },
+  { q: '組織人事コンサルティングファームの選考におけるケース面接では、どのような点に注意すべきですか？', a: '一般的な戦略ファームのケース面接と異なり、財務的な視点だけでなく「人」や「組織」の観点を強く求められます。例えば、施策の実行可能性を考える際に、従業員のモチベーションや企業文化といった定性的な要素をどう構造的に捉え、解決策に落とし込むかが評価のポイントになると一般に言われています。' },
+  { q: '事業会社の人事経験しかありませんが、コンサルタントとして通用するでしょうか？', a: '事業会社での人事経験は大きな強みとなり得ます。現場で培った制度運用の知見や従業員との折衝経験は、クライアントへの提案に説得力を持たせるからです。コンサルタントに求められる構造的思考や仮説検証能力を面接で示すことができれば、ポテンシャルを評価され、採用に至る可能性は十分にあるとされます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> soshiki jinji consul に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は soshiki-jinji-consul に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 組織人事ブティック特化ガイド</span>
+      <h1 id="fv-h1"><span class="accent">組織人事コンサル</span> 転職完全ガイド<br />マーサー / コーン・フェリー等の特性・年収・選考</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: 組織人事コンサル (マーサー / コーン・フェリー等のブティック系) は <strong>人事制度設計・組織開発・人材戦略</strong>の専門性が中心とされる領域。総合系の人事部門との差別化軸 + 年収レンジ + 狙える領域を整理した上で応募戦略を組むことが重要とされます。本記事ではファーム特性 + 評価される経験 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>組織人事コンサルの代表的ファームと特性比較</li>
+        <li>年代別の市場価値と年収レンジ</li>
+        <li>評価される経験 4 軸 (人事 / 戦略 / 組織開発 / 業界知見)</li>
+        <li>選考プロセスと志望動機の設計法</li>
+        <li>hr-consul / 総合系人事部門との使い分け</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_jinji`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_jinji">
+          <span>組織人事コンサルの市場価値を MyVision の無料カウンセリングで確認 (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ コンサル特化エージェント MyVision 公開情報: 利用者の9割が業界未経験で選考突破 / 元コンサル在籍コンサルタント担当 / 完全無料・在職中相談可・オンライン完結 / 内定後の年収交渉支援。本ページはアフィリエイト広告（PR）を含み、本サイトは転職エージェント公式ではなく公開情報整理サイトです。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">代表的ファームと特性比較</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル業界 / 各ファーム 公開採用情報 / コンサル特化エージェント 公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>組織人事コンサル領域には複数のブティック系ファームが存在するとされます。下表は公開情報ベースの一般論であり、特定ファームの内部情報を断定するものではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="組織人事コンサル代表ファームの一般的傾向">
+          <thead><tr><th>ファーム</th><th>強み領域 (一般論)</th><th>備考</th></tr></thead>
+          <tbody>
+            <tr><td>マーサー (Mercer)</td><td>報酬・年金・福利厚生 + 組織開発</td><td>外資系・グローバル拠点</td></tr>
+            <tr><td>コーン・フェリー (Korn Ferry)</td><td>リーダーシップ + サクセッション + 人事評価</td><td>外資系・ヘイ・グループ統合</td></tr>
+            <tr><td>タワーズワトソン (WTW)</td><td>報酬・年金 + リスクマネジメント</td><td>外資系</td></tr>
+            <tr><td>リクルートマネジメントソリューションズ</td><td>組織人事 + 国内市場深耕</td><td>国内・大手系列</td></tr>
+            <tr><td>総合系の人事部門</td><td>人事 + 他領域 (戦略 / 業務 / IT) 連携</td><td>BIG4 / アクセンチュア等</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ ファーム選びは志向 (専門特化 vs 横断連携) + キャリア方向 + 報酬体系により判断するとされる傾向。応募前に最新の採用方針と組織体制を確認することが推奨されます。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_jinji`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_jinji">
+          <span>ファーム選びを MyVision の無料カウンセリングで相談する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">組織人事コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める組織人事コンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        組織人事コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">評価される経験 4 軸 + 年収レンジ</h2>
+      <p class="section-lede">組織人事コンサルでは <strong>人事 / 戦略 / 組織開発 / 業界知見</strong> の組み合わせが評価軸とされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">経験1</span><h4>人事領域の実務</h4><p>制度設計 / 評価・報酬設計 / 人材開発 / サクセッションプラン等の経験が評価される傾向。人事の幅広い経験 + 特定領域の深い知見が望ましいとされます。</p></article>
+        <article class="branch"><span class="tag">経験2</span><h4>戦略 / 経営企画</h4><p>経営戦略を人事に翻訳するスキルが評価されるとされ、戦略コンサル経験 / 事業会社の経営企画経験からの転身もパスとされます。</p></article>
+        <article class="branch"><span class="tag">経験3</span><h4>組織開発 / 変革推進</h4><p>組織変革・M&A 統合 (PMI)・カルチャー変革等の経験が評価されるとされ、戦略 + 実行の両面を担える人材は希少とされます。</p></article>
+        <article class="branch"><span class="tag">経験4</span><h4>業界・規模知見</h4><p>特定業界 (製造 / 金融 / IT / 医療など) や大企業/中堅企業の規模感に関する知見が、コンサルとしての価値提供の幅を広げるとされます。</p></article>
+      </div>
+      <p class="compare-note">※ 年収レンジは未経験中途 500-800万円 / 経験者中途 700-1,500万円 / マネージャー以上 1,000-2,000万円帯が中心とされる傾向。詳細 <a href="/consul-nensyu/" class="underline">コンサル年収ガイド</a>。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec2_jinji`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec2_jinji">
+          <span>自分の経験の市場価値を MyVision の無料カウンセリングで確認</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>組織人事コンサルティングの基本と役割</h2><p>組織人事コンサルティングとは、企業の経営課題を「人」と「組織」の側面から解決に導く専門職です。<br>企業の持続的成長には、優れた経営戦略だけでなく、それを実行するための組織構造や人材が不可欠とされます。<br>具体的には、M&A後の組織統合支援、グローバルな人事制度の設計、次世代リーダーの育成計画策定、従業員エンゲージメントの向上施策など、多岐にわたるテーマを扱います。<br>近年、厚生労働省が推進する「働き方改革」や人的資本経営への関心の高まりを背景に、その重要性は増しています。<br>単に人事部門の業務を代行するのではなく、経営者の視点から組織全体のパフォーマンスを最大化するための変革を支援するのが、組織人事コンサルタントの基本的な役割であるです。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">MyVision を活用する 4 つの理由 (公開情報ベース)</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">理由1</span><h4>元コンサル在籍コンサルタント</h4><p>コンサル業界の選考プロセスを深く理解した元コンサル出身者が担当するとされる公開情報。組織人事ブティックの応募戦略・ケース面接対策も具体的とされます。</p></article>
+        <article class="branch"><span class="tag">理由2</span><h4>専門特化型ファームの求人カバレッジ</h4><p>マーサー / コーン・フェリー等のブティック系ファームを含めた幅広い求人が紹介可能とされる公開情報。総合系の人事部門との比較相談も可能とされます。</p></article>
+        <article class="branch"><span class="tag">理由3</span><h4>未経験 9 割の支援実績</h4><p>利用者の9割が業界未経験で選考突破実績があるとされる公開情報。人事 / 戦略 / 事業会社からの転身ノウハウが蓄積されているとされます。</p></article>
+        <article class="branch"><span class="tag">理由4</span><h4>内定後の年収交渉支援</h4><p>業界相場・役職別年収帯を踏まえた交渉知見があり、適正な条件提示につながりやすいとされる公開情報 (交渉結果保証ではありません)。</p></article>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_jinji`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_jinji">
+          <span>MyVision の無料カウンセリングを試す (登録30秒・在職中相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ MyVision 公開情報: 完全無料 / オンライン完結 / 在職中相談可 / 退会自由。利用者の負担はありません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>組織人事コンサルへの転職を成功させる具体的ステップ</h2><p>組織人事コンサルへの転職は、専門性が高く、計画的な準備が求められます。<br>成功の可能性を高めるための具体的なステップは以下の通りです。<br>第一に、自身の経験の棚卸しです。<br>事業会社での人事経験や関連プロジェクトの経験を、「どのような課題に対し、どう分析し、いかなる成果を出したか」というコンサルティング的な思考で整理することが重要です。<br>第二に、ファームごとの特性理解です。<br>マーサーは年金・福利厚生、コーン・フェリーは役員報酬やリーダーシップ開発など、各社に強みがあります。<br>自身のキャリアプランと合致するファームを見極める必要があります。<br>第三に、徹底した選考対策です。<br>特にケース面接では、人事制度設計や組織改革といったテーマが頻出します。<br>労働契約法などの関連法規の基礎知識も踏まえつつ、論理的かつ現実的な解決策を提示する訓練が不可欠です。<br>これらのステップを独力で進めるのは困難な場合も多いため、専門のエージェントを活用することも有効な手段とされます。</p><ul><li><strong>Step 1: 経験の棚卸しとコンサル思考での言語化</strong>: 自身の実績を課題解決のフレームワークで再整理する。</li><li><strong>Step 2: ファーム研究と専門領域の特定</strong>: 各社の強みと自身のキャリア志向を照らし合わせる。</li><li><strong>Step 3: 専門領域に特化した選考対策</strong>: 人事領域のケース面接やビヘイビア面接の準備を重点的に行う。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 MyVisionのような専門サービスを検討するメリット (★544 ②):</strong><ul><li>専門エージェントの活用により、非公開求人へのアクセスやファーム毎の選考情報収集にかかる時間を短縮できる可能性があります。</li><li>組織人事コンサル領域に特化したキャリア相談を通じて、自身の市場価値を客観的に把握し、最適なファーム選定が期待できます。</li><li>厚生労働省の職業情報提供サイト（jobtag）等の公的データも参考に、客観的な情報に基づいたキャリアプランを安心して設計できます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/hr-consul-tenshoku/"><h4>HR コンサル 転職</h4><p>人事系コンサル全般のガイド</p></a>
+        <a class="card-link" href="/boutique-consul-tenshoku/"><h4>ブティック系コンサル 転職</h4><p>ブティックファーム全般のガイド</p></a>
+        <a class="card-link" href="/keiei-consul-tenshoku/"><h4>経営コンサル 転職</h4><p>経営戦略系の選考対策</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>ファーム 5 区分比較</h4><p>戦略/総合/FAS/IT/公共 特性</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">組織人事コンサルの市場価値を MyVision の無料カウンセリングで確認</h2>
+      <p>組織人事コンサルへの転職はファーム特性 + 自分の経験 + キャリア方向の組み合わせで判断することが重要とされます。<br>MyVision の無料相談で、ファーム選び・職務経歴書の整理・ケース面接対策を登録 30 秒で始められます (完全無料・在職中相談可・オンライン完結)。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_jinji`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_jinji">
+          <span>MyVision の無料カウンセリングを試す (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢と公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと示されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢が知られています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

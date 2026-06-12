@@ -1,0 +1,199 @@
+---
+/**
+ * バックエンドエンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 1,300 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-backend-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）';
+const description = 'バックエンドエンジニアの転職を検討中の方向け。Go/Python/Java/Rust 言語別 + API/マイクロサービス + 業界別年収帯を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'バックエンドエンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> backend engineer tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は backend-engineer-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / バックエンド</span>
+      <h1 id="fv-h1">
+        <span class="accent">バックエンドエンジニア</span>転職、年収+200万円を目指すチャンス。<br />
+        在職中のまま、夜間オンライン相談も可能です
+      </h1>
+      <p class="lede">
+        DX 化の加速に伴い、企業の根幹を支えるバックエンドエンジニアの需要は高まり続けているとされます。バックエンドエンジニアは API/分散システム/DB 設計の需要が安定的で、年収 500-1,300 万円帯の求人が活発な傾向で、<strong>転職成功者の平均年収アップ額215万円</strong>といったデータも公開情報で紹介されています。現職が多忙な方も<strong>夜間・土日オンライン対応</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められる事例も少なくありません。
+        言語選定 (Go/Python/Java/Rust) + マイクロサービス + クラウドの 3 軸が転職市場価値を決める一般的とされています。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>言語別 (Go/Python/Java/Rust) 必須スキル整理</li>
+        <li>API/マイクロサービス/DB 設計体系化</li>
+        <li>言語別 年収帯比較 + 業界別求人傾向</li>
+        <li>JILPT・IPA・厚労省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と必須スキル</h2>
+      <p class="section-lede">バックエンドエンジニアは API/分散システム/DB 設計の需要が安定的。言語選定 + マイクロサービス + クラウドの 3 軸が転職市場価値を決める一般的が一般的です。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">言語</span><h4>Go/Python/Java/Node.js/Rust/Kotlin</h4><p>いずれか中心。国内は Go/Python/Java/TypeScript 求人が多い・Rust は外資 + 新規 SaaS で急増中。</p></article>
+        <article class="branch"><span class="tag">API 設計</span><h4>REST / GraphQL / gRPC</h4><p>API 設計力 + DB (RDB: PostgreSQL/MySQL + NoSQL: Redis/MongoDB/DynamoDB) の設計経験。</p></article>
+        <article class="branch"><span class="tag">分散システム</span><h4>マイクロサービス + メッセージング</h4><p>マイクロサービス + メッセージング (Kafka / RabbitMQ)。SaaS/大規模 Web で必須要件化が進行。</p></article>
+        <article class="branch"><span class="tag">クラウド・運用</span><h4>サーバーレス + コンテナ + CI/CD</h4><p>クラウド (AWS/GCP) サーバーレス + コンテナ + テスト + CI/CD + 監視。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的のケースが多く見られます。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>必須スキルを踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">バックエンドエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>の大幅アップが見込めるバックエンドエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        エンジニア採用市場の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談 + リモート対応</strong>で無理なく転職活動を進められる体制が整っているとされ、バックエンド 500～1,200 万円・テックリード 1,500 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        Java/Python/Go + AWS/クラウド設計 + DB/API 設計力は、DX 推進市場における技術人材の市場価値を押し上げる重要な実績として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">言語別 年収帯 (一般的目安)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="言語別 バックエンド年収帯">
+          <thead><tr><th>言語</th><th>3 年</th><th>5 年</th><th>10 年</th></tr></thead>
+          <tbody>
+            <tr><td>Go</td><td>550-800 万</td><td>750-1,200 万</td><td>1,000-1,500 万+</td></tr>
+            <tr><td>Python</td><td>500-750 万</td><td>700-1,100 万</td><td>900-1,400 万</td></tr>
+            <tr><td>Java</td><td>450-700 万</td><td>650-1,000 万</td><td>850-1,300 万</td></tr>
+            <tr><td>Rust</td><td>600-900 万</td><td>850-1,400 万</td><td>1,100-1,800 万+</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 出典: 各転職エージェント公開求人情報サンプル (2026 年 5 月時点・首都圏中心) + JILPT + IPA IT 人材白書。年収帯は対象母集団・スキル・地域・職位・企業規模により大きく異なります。Go/Rust 専門は高単価傾向。個別保証ではなく一般的と公表されています。</p>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>バックエンドエンジニアの役割と転職市場の基礎</h2><p>バックエンドエンジニアは、Webサービスやアプリケーションにおいて、ユーザーの目に見えないサーバーサイドの処理を担う専門職です。<br>具体的には、データベースの管理、APIの設計・開発、サーバーの構築・運用など、システムの根幹を支える重要な役割を担います。<br>近年のDX（デジタルトランスフォーメーション）推進やクラウドサービスの普及に伴い、その需要は非常に高い水準で推移しているとされます。<br>転職市場においては、JavaやPython、Goといったプログラミング言語のスキルに加え、AWSなどのクラウドインフラに関する知識、そしてセキュリティに関する理解が広く求められる傾向にあります。<br>厚生労働省が運営する職業情報提供サイト「jobtag」でも、ソフトウェア開発技術者（Web・オープン系）の仕事内容や求められるスキルが紹介されており、キャリアを考える上での参考情報として活用が推奨されます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意点と公平な判断材料</h2>
+      <div class="counter-box">
+        <h3>📌 補足 (公開情報整理・公平な判断材料)</h3>
+        <div class="row"><b>言語選定</b><span>国内は Go/Python/Java/TypeScript 求人が多い・Rust は外資+新規 SaaS で急増中</span></div>
+        <div class="row"><b>マイクロサービス経験</b><span>SaaS/大規模 Web で必須要件化が進行・但しモノリス + 段階的分割の設計力も評価</span></div>
+        <div class="row"><b>フロントから転身</b><span>Node.js / Next.js API Routes + DB 基礎学習で事例あり・フルスタック志向なら両方継続も選択肢</span></div>
+        <div class="row"><b>システムデザイン</b><span>面接対策 5-10 件シナリオ準備が高単価交渉の差別化要素</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。具体的判断はバックエンド特化エージェントへの相談を推奨します。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>年収向上を目指すための転職戦略とAPI/分散システムの重要性</h2><p>バックエンドエンジニアが年収向上を実現するためには、戦略的なスキルセットの構築が鍵となります。<br>特に、現代的なシステムで多用されるAPI（Application Programming Interface）設計能力や、大規模なトラフィックを処理するための分散システムの構築経験は、市場価値を大きく高める要因と一般にされます。<br>具体的な戦略としては、まず自身のスキルを棚卸しし、求人市場の需要と照らし合わせることが第一歩です。<br>その上で、GoやRustといった比較的新しく高パフォーマンスな言語の習得や、マイクロサービスアーキテクチャに関する知識を深めることが有効と考えられます。<br>厚生労働省の「賃金構造基本統計調査」を参照すると、専門的・技術的職業従事者の賃金は経験やスキルレベルに応じて上昇する傾向が示されており、計画的なスキルアップが収入に直結する可能性を示唆しています。<br>転職活動においては、以下の点を意識することが推奨されます。</p><ul><li>GitHub等でポートフォリオを公開し、具体的な実装能力を提示する。</li><li>マイクロサービスやコンテナ技術（Docker, Kubernetes）に関するプロジェクト経験をアピールする。</li><li>複数の転職エージェントに登録し、非公開求人を含めた幅広い選択肢から検討する。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>バックエンドエンジニア転職 で選ばれる5つの理由</h3><ul><li>転職者の平均年収アップ額 +215万円の実績</li><li>年収1000万円以上の非公開求人が80%以上</li><li>技術を熟知した専門コンサルタントが担当</li><li>夜間・土日も対応、在職中でも安心のサポート体制</li><li>納得いくまで検討可能、内定後の辞退も自由</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer-tenshoku/">DevOps / SRE エンジニアの転職完全ガイド｜CI/CD・SRE・クラウド経験別の市場価値とキャリアパス｜TechGo (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

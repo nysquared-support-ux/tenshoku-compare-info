@@ -1,0 +1,249 @@
+---
+/**
+ * kaikeishi-20dai LP (ツインプロ・Claude Design 完全 class 構造準拠・★503 案2)
+ * ★326 DRY rich-techgo.css 汎用流用・★480 ツインプロ a8mat verbatim 保持
+ * ★327 backup: backups/2026-05-17-kaikeishi-20dai-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '公認会計士20代の転職おすすめ4社比較｜試験合格直後・監査法人スタッフ向け選び方5基準【2026年版】';
+const description = '20 代公認会計士向け転職エージェント 4 社比較。試験合格直後・監査法人 2-5 年目の最適な転職タイミング・キャリア初期戦略を公開情報で整理(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '公認会計士20代転職' },
+];
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': '公認会計士20代の転職おすすめ 4 サービス比較',
+  'description': '公認会計士20代 (試験合格直後・監査法人スタッフ) 向け転職エージェント 4 社の公開情報整理 (★480 テーマ特化)',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・年収アップ実績', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士特化 転職エージェント', 'description': '公認会計士特化・大手系列・若手中堅対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・会計士・税理士向け・事業会社経理転職に強み', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・士業求人もカバー・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '公認会計士試験合格直後でも転職は可能ですか？', a: 'はい、可能です。一般的には監査法人で実務経験を積みますが、コンサルティングファームや事業会社への道も存在します。ただし求人の選択肢は実務経験者に比べ限定的になる可能性があります。厚生労働省の「若者雇用促進法」に基づく情報公開なども参考に、ご自身のキャリアプランに合った企業選びが重要とされます。' },
+  { q: '監査法人2〜3年目での転職は早すぎますか？', a: '一概に早すぎるとは言えません。主査（インチャージ）経験を積むと市場価値が高まる傾向にありますが、20代のポテンシャルを評価する求人も多数存在します。ご自身の専門性や希望キャリアを明確にし、適切なタイミングを見極めることが肝心です。転職エージェントとの面談で客観的な評価を聞くのも有効な手段とされます。' },
+  { q: '20代公認会計士の年収は転職で上がりますか？', a: '転職先や役職によりますが、年収アップは十分に期待できます。特にコンサルティングファームやFAS、PEファンドなどは高い水準の給与が提示される傾向にあります。ただし事業会社では福利厚生を含めたトータルパッケージでの比較が重要です。詳細は本記事の「おすすめ転職エージェント比較」もご参照ください。' },
+  { q: '未経験の業界へ転職する際の注意点は何ですか？', a: '監査法人での経験が直接活かせない業務もあるため、キャッチアップへの意欲が問われます。また、企業文化や働き方が大きく異なる場合があるため、事前の情報収集が不可欠です。職業安定法で定められた求人情報の明示義務に基づき、労働条件などを書面でしっかり確認することがトラブル防止につながります。' },
+  { q: '20代で転職エージェントを使うメリットは何ですか？', a: 'キャリア初期の20代にとって、一般には公開されていない求人の紹介を受けられる点が大きなメリットです。また、自身の市場価値を客観的に把握し、キャリアプランについて専門家のアドバイスを受けられます。職務経歴書の添削や面接対策など、多忙な中で効率的に転職活動を進めるためのサポートが期待できると一般にいわれます。' },
+];
+const faqExtra = [
+  { q: '士業特化と総合型エージェントの違いは?', a: '公開情報上、士業特化エージェントは ①担当者の士業知見が深い ②監査法人・税理士法人ハイクラス非公開求人へのアクセス ③年収交渉時の業界相場知見、の 3 点が強みとされています。一方、総合型は求人数の多さ・他業界比較が強みとされています。両者併用が推奨されるケースが多いとされています。' },
+  { q: '会計事務所から税理士法人への転職は可能ですか?', a: '公開情報上、会計事務所 (中小) から税理士法人 (Big4・大手) への転職は可能とされていますが、実務経験・スキル・年齢により難易度が異なるとされています。税理士有資格者の場合は比較的選択肢が広いとされています。詳細は士業特化エージェントへご相談ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.concat(faqExtra).map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> kaikeishi 20dai に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は kaikeishi-20dai に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">公認会計士20代〜マネージャー候補 両軸ガイド | BIG4 brand 60-100年</span>
+      <h1 id="fv-h1">公認会計士20代の転職おすすめ4社比較｜junior +200万 / senior マネージャー候補 +700万円超｜BIG4 監査法人 (Deloitte/PwC/EY/KPMG) brand 60-100年・公認会計士制度 70年+ path 成熟度を踏まえた両軸選び方5基準</h1>
+      <p class="lede"><strong>結論</strong>: <strong>公認会計士 20代 senior / マネージャー候補</strong>の<strong>ハイクラス転職</strong>は <strong>① 士業特化エージェント (ツインプロ等)</strong> ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の <strong>3 軸組合せ</strong>が推奨されます。本記事では 20代後半 senior 有資格者向け <strong>senior / マネージャー候補</strong> 転職エージェント 4 社比較と選び方 5 基準を整理します。公認会計士 senior の専門性 + 業界知見 + 非公開求人アクセスの 3 点で士業特化型が強みとされ、求人数の多さで総合型が補完するとされています。<strong>senior 年収 1,000-1,800万円帯 (シニアスタッフ〜マネージャー候補) + Director / パートナー候補 path</strong>を想定。</p>
+      <ul class="fv-bullets">
+        <li>会計士 20代 senior / マネージャー候補 転職で失敗しやすい点と回避法</li>
+        <li>4 社の対象・強み比較 + senior / マネージャー候補 選び方 5 基準</li>
+        <li>利用の流れ 5 ステップ + senior career step up タイミング</li>
+        <li>公認会計士協会・税理士会連合会 出典明示 + マネージャー partner 候補 path</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>ツインプロ公式で会計士・税理士特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">&#8251; 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-13</span>
+        <span><b>最終更新</b> 2026-05-17</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">士業転職で失敗しやすい点・基本情報・選び方 5 基準</h2>
+      <p class="section-lede">① 公認会計士 20 代転職 に最適なエージェント 4 社比較 ② 失敗回避 5 基準 ③ 利用の流れ ④ タイミング判断軸</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">失敗1</span><h4>試験合格直後の早すぎる転職</h4><p>監査法人 2-3 年は実務経験積む方が市場価値高・連結・内部統制経験必須</p></article><article class="branch"><span class="tag">失敗2</span><h4>20 代でハイクラス求人期待</h4><p>30 代以降の市場価値最大期に転職タイミング再考・20 代は経験積み期間</p></article><article class="branch"><span class="tag">失敗3</span><h4>結婚・育児タイミング考慮不足</h4><p>30 代以降のライフプランを 20 代に検討・士業特化エージェントで長期視点</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>士業転職の基本情報</h3><p><strong>主な求人タイプ</strong>: ① 監査法人 (Big4・準大手・中堅) ② 税理士法人 (大手・中堅・個人) ③ 事業会社経理 (CFO 候補・経理マネージャー) ④ コンサルティングファーム (FAS・税務 DD 等)<br /><strong>年収相場 (推定・公開情報ベース)</strong>: 600 万-1,500 万円 (経験年数・役職・業態別で大きく異なる・JILPT 公開統計参考)<br /><strong>転職タイミング 3 パターン</strong>: ① 繁忙期前 (4-5 月) ② 期末後 (7-9 月) ③ 異動シーズン (10-12 月)<br /><strong>必要書類</strong>: 履歴書 + 職務経歴書 + 各種資格証明書 (公認会計士登録・税理士登録・修了考査合格証等)<br /><strong>会員数 (参考)</strong>: 公認会計士 約 4 万人 (日本公認会計士協会・公開情報) / 税理士 約 8 万人 (日本税理士会連合会・公開情報)</p></div>
+        <div class="card"><h3>失敗しない選び方 5 基準</h3><p><strong>① 士業特化度</strong>: 担当者が業界経験者か (会計士・税理士・経理出身) を確認・士業特化エージェントは知見が深いとされる<br /><strong>② 非公開求人比率</strong>: 監査法人パートナー候補・税理士法人マネージャー等のハイクラス求人は非公開比率が高いとされる<br /><strong>③ 年収交渉力</strong>: 業界相場の知見 + 過去の成約実績で年収交渉の質が決まるとされる<br /><strong>④ アフター対応</strong>: 入社後フォロー (3 ヶ月-1 年) の有無・カウンセリング体制を確認<br /><strong>⑤ 求人数 vs 専門性のバランス</strong>: 士業特化型 (専門性) + 総合型 (求人数) の組合せが推奨されるケースが多い</p></div>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>選び方を踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">20 代公認会計士転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める20 代公認会計士転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、公認会計士 700～1,800 万円・M&A/PE 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        20 代公認会計士領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap"><table class="compare" aria-label="士業転職エージェント比較"><thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead><tbody><tr><td>&#11088; ツインプロ</td><td>会計士・税理士・簿記資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け転職エージェント (公開情報)</td></tr><tr><td>マイナビ会計士</td><td>公認会計士・税理士</td><td>大手系列・求人数</td><td>株式会社マイナビ運営・若手中堅対応 (公開情報)</td></tr><tr><td>MS-Japan</td><td>経理・財務・会計士・税理士</td><td>管理部門特化</td><td>事業会社経理転職に強み・MS-Japan 社運営 (公開情報)</td></tr><tr><td>リクルートエージェント</td><td>総合型 (士業含む)</td><td>求人数 60 万件+</td><td>士業求人も一部カバー・併用推奨 (公開情報)</td></tr></tbody></table></div>
+      <p class="compare-note">&#8251; 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-20dai_hero"
+         target="_blank" rel="nofollow"
+         data-cta="ツインプロ公式" data-material="banner_003_300x250" data-page-slug="shigyo-tenshoku">
+        <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント"
+             src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
+             loading="lazy" style="max-width:100%;height:auto;" />
+      </a>
+      <img border="0" width="1" height="1"
+           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
+           alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-20dai_hero_text"
+         target="_blank" rel="nofollow"
+         style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
+        会計士・税理士特化の転職エージェントで無料キャリア面談（PR）
+      </a>
+      <p style="font-size:12px;color:var(--c-text-sub,#6b7280);margin-top:8px;">
+        PR / 公開情報サイト (coreda.jp) 経由でツインプロ公式へ / 無料キャリア面談 / 在職中相談可 / 退会自由
+      </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>20代公認会計士の転職｜キャリア初期の基本戦略</h2><p>20代、特に公認会計士試験合格直後や監査法人での実務経験が数年の段階は、キャリアの方向性を決定づける重要な時期とされます。<br>監査法人で培った会計・監査の専門知識は、あらゆるビジネスの土台となる強力な武器です。<br>この時期の転職では、主に「専門性を深めるキャリア（例：FAS、税務）」と「専門性を広げるキャリア（例：経営コンサル、事業会社の経営企画）」の2つの方向性が考えられます。<br>厚生労働省が推進する「働き方改革」の影響もあり、多様な働き方やキャリアパスを提供する企業が増加傾向にあります。<br>まずはご自身の強みや興味を棚卸しし、どのような環境で価値を発揮したいかを明確にすることが、後悔のない転職活動の第一歩となると考えられます。<br>公開情報をもとに、ご自身の市場価値と将来性を冷静に分析することが推奨されます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ &mdash; 3 軸併用戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>&#128204; まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><span>会計士・税理士・簿記資格者の転職は <strong>士業特化エージェント (ツインプロ等) + 総合型 (リクルート等) の併用</strong> が推奨されます。士業特化は ① 業界知見の深さ ② 非公開ハイクラス求人 ③ 業界相場ベースの年収交渉力 で強みを持つとされる一方、総合型は ① 求人数 60 万件以上 ② 他業界比較 で補完するとされています。</span></div><div class="row"><span><strong>3 軸併用戦略</strong>: <strong>STEP 1</strong> ツインプロ (士業特化) + マイナビ会計士 or MS-Japan (専門性) + リクルート (求人数) の 3 社並行登録 → <strong>STEP 2</strong> 各担当者との面談で希望条件擦り合わせ → <strong>STEP 3</strong> 3-5 社面接で比較 → <a href="/osusume/" class="underline">転職エージェント全般比較</a> も参考に最終判断。</span></div><div class="row"><span><strong>向いている人</strong>: 会計士・税理士有資格者・簿記 1 級保持者・士業特化サポート希望 / <strong>向かない人</strong>: 士業未経験で他業界転職検討中の方は総合型を優先。</span></div><div class="row"><span>※関連情報: <a href="/recruit-hyouban/" class="underline">リクルートエージェント評判</a> ・<a href="/high-class/" class="underline">ハイクラス転職</a> ・<a href="/nenshu-up/" class="underline">転職 年収アップ</a> もあわせてご参照ください。本記事は転職成功保証・年収アップ保証ではなく、特定エージェントを推奨するものでもありません。</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">向いている人: 会計士・税理士・簿記資格者で士業特化サポートを希望する方</p>
+      </div>
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-20dai_footer"
+         target="_blank" rel="nofollow"
+         data-cta="ツインプロ公式" data-material="banner_003_300x250" data-page-slug="shigyo-tenshoku">
+        <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント"
+             src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1"
+             loading="lazy" style="max-width:100%;height:auto;" />
+      </a>
+      <img border="0" width="1" height="1"
+           src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X"
+           alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_kaikeishi-20dai_footer_text"
+         target="_blank" rel="nofollow"
+         style="display:block;margin-top:8px;font-size:14px;color:var(--c-primary,#2563eb);text-decoration:underline;">
+        後悔しない選択のために、まず無料キャリア面談（PR）
+      </a>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>監査法人経験者向け｜具体的な転職活動の進め方と注意点</h2><p>監査法人での実務経験を持つ20代公認会計士が転職を成功させるには、戦略的な活動が不可欠です。<br>公開情報をもとに、具体的な進め方を整理します。<br>まず、職務経歴書では、担当したクライアントの業種・規模、インチャージ（主査）経験の有無、特定の会計基準に関する知見などを具体的に記述し、専門性をアピールすることが重要とされます。<br>次に、公認会計士のキャリアに特化した転職エージェントに複数登録し、面談を通じて客観的なアドバイスを得ることが推奨されます。<br>その際、職業安定法に基づき厚生労働大臣の許可を受けた事業者かを確認することも安心材料の一つです。<br>注意点として、在職中の転職活動は情報管理が極めて重要です。<br>現在の勤務先に知られることのないよう、個人メールアドレスを使用し、連絡の時間帯にも配慮が求められます。</p><ul><li><strong>情報収集と自己分析:</strong> 自身の強み・弱み、5年後・10年後のキャリアビジョンを明確にする。</li><li><strong>職務経歴書のブラッシュアップ:</strong> 監査経験や実績を、転職先の企業が求めるスキルセットと関連付けて具体的に記述する。</li><li><strong>専門エージェントの活用:</strong> 非公開求人の紹介や面接対策、年収交渉の代行など、専門家のサポートを最大限に活用する。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>金融出身者のコンサル転職に特化した実践的対策</li><li>戦略系・総合系・FAS、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-30dai/">公認会計士30代の転職おすすめ4社比較｜マネージャー昇進前後・キャリア再考期向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-consul/">会計士コンサル転職おすすめ4社比較｜公認会計士・監査法人経験者→戦略コンサル選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-freelance/">公認会計士フリーランスおすすめ4社比較｜業務委託・週2-3日勤務・独立志向者向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-jigyoukaisha/">会計士 事業会社 転職おすすめ4社比較｜監査法人からCFO・経営企画・管理部門へのキャリアパス【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-nenshu/">会計士年収相場2026｜Big4・準大手・中堅・事業会社別の年収統計と転職アップ戦略【公開情報】</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

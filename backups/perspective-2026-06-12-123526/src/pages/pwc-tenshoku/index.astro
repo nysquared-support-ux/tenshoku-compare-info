@@ -1,0 +1,251 @@
+---
+/**
+ * pwc-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: PwC 転職 (sv 推定 500-800・BIG4 個別深掘り)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'PwC 転職 完全ガイド｜PwC コンサルティング / アドバイザリー の年収・部門・選考対策｜MyVision (PR)';
+const description = 'PwC Japan グループ (PwC コンサルティング / PwC アドバイザリー / PwC あらた監査法人) への転職について、部門別の特性・年収レンジ・採用される人材像・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'PwC 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '相談したら必ず応募しなければいけませんか？', a: 'いいえ、その必要は一切ありません。まずはご自身の市場価値を客観的に把握したり、今後のキャリアプランについて情報収集したりする目的でのご相談も歓迎しております。私たちは、あなたが心から納得できる選択肢が見つかるまで、無理に応募を勧めることはありません。ご自身のペースで、慎重にキャリアを検討するためのパートナーとしてご活用ください。内定が出た後でも、熟慮の結果として辞退されるケースもございます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> pwc tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は pwc-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">PwC / BIG4 個別完全ガイド</span>
+      <h1 id="fv-h1"><span class="accent">PwC</span> 転職 完全ガイド<br />PwC コンサルティング / アドバイザリー の年収・部門・選考対策</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: PwC は<strong>BIG4 の中で戦略 + 業界変革に注力</strong>するファームの一つとされ、PwC コンサルティング + PwC アドバイザリー (FAS) + PwC あらた監査法人 の4法人で日本展開しているとされています。本記事では PwC 各部門の特性 + 年収レンジ + 採用人材像 + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>PwC Japan グループ 4 法人の構成</li>
+        <li>部門別 (コンサル / FAS / リスク / Tech) の特性</li>
+        <li>年収レンジ (700-2,500万円帯) + 採用人材像</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_pwc`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_pwc">
+          <span>PwC 挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは PwC 公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">PwC Japan グループ 4 法人の構成</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): PwC Japan グループ公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jicpa.or.jp/" target="_blank" rel="noopener">日本公認会計士協会</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">法人1</span><h4>PwC コンサルティング合同会社</h4><p>戦略立案 + 業界変革 + DX 推進が中心。Strategy& (元 Booz) との連携で戦略案件も強化中。BIG4 の中で戦略系案件比率が高い傾向とされています。</p></article>
+        <article class="branch"><span class="tag">法人2</span><h4>PwC アドバイザリー合同会社 (FAS)</h4><p>M&A + 財務 DD + バリュエーション + 事業再生 + フォレンジック等の FAS 業務を担当。BIG4 FAS の中で中堅企業 M&A 案件に強みとされています。</p></article>
+        <article class="branch"><span class="tag">法人3</span><h4>PwC あらた監査法人</h4><p>大手企業 + 上場企業向け監査業務 + 内部統制 + IT 監査が中心。会計士 + USCPA 出身者の主要キャリアパスとされています。</p></article>
+        <article class="branch"><span class="tag">法人4</span><h4>PwC 税理士法人</h4><p>大手企業向け税務 + 国際税務 + 移転価格 + M&A 税務が中心。税理士 + USCPA 出身者のキャリアパスが一般的です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_pwc`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_pwc">
+          <span>PwC 4 法人の最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">PwC転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるPwC転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        PwC領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">PwC 部門別 年収レンジ + 採用人材像</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="PwC 部門別 年収・採用層">
+          <thead><tr><th>部門</th><th>主な案件</th><th>年収レンジ目安</th><th>主な採用層</th></tr></thead>
+          <tbody>
+            <tr><td>Strategy& (戦略部門)</td><td>経営戦略 / 全社変革 / 新規事業</td><td>900-2,500万円</td><td>戦略系経験者 / MBA / 高度専門</td></tr>
+            <tr><td>Management Consulting</td><td>業務変革 / DX / 業界特化</td><td>700-1,800万円</td><td>事業会社 (経営企画 / 業務改革) 出身</td></tr>
+            <tr><td>Technology Consulting</td><td>クラウド / データ / AI / システム</td><td>650-1,700万円</td><td>SIer / SE / PM / クラウド</td></tr>
+            <tr><td>Risk Assurance (リスク)</td><td>リスク管理 / 内部統制 / 規制対応</td><td>700-1,800万円</td><td>金融 / 法務 / IT セキュリティ</td></tr>
+            <tr><td>PwC アドバイザリー (FAS)</td><td>M&A / 財務 DD / 事業再生</td><td>800-2,300万円</td><td>銀行 / 証券 / 会計士 / 財務</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_pwc_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>PwCへの転職：求められる人材像の基礎</h2><p>PwC Japanグループへの転職を考える際、まず理解すべきは同社が求める人材像の基礎です。<br>PwCは公式サイトで「社会における信頼を構築し、重要な課題を解決する」というPurpose（存在意義）を掲げています。<br>この理念を実現するため、単に専門知識が豊富なだけでなく、高い倫理観、チームワーク、そして変化に対応する柔軟性を備えた人材が求められるとされます。<br>具体的には、クライアントの課題を深く理解し、論理的に分析する能力、そして多様なバックグラウンドを持つチームメンバーと協働して解決策を導き出すコミュニケーション能力が不可欠です。<br>厚生労働省が推進する「職業能力評価基準」においても、多くの職種で課題分析能力や対人関係能力が重視されており、PwCが求めるスキルセットと共通する部分が多いと言えるでしょう。<br>自身の経験を棚卸しする際は、これらの普遍的なビジネススキルとPwCの理念を関連付けてアピールすることが、選考の第一歩となると考えられます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>PwC転職の具体的選考対策とエージェント活用法</h2><p>PwCの選考プロセスは、一般的に「書類選考」「Webテスト」「複数回の面接（ケース面接含む）」で構成されます。<br>各段階で適切な対策を講じることが、内定獲得の可能性を高めます。<br>特に、コンサルティングファーム特有の「ケース面接」は、与えられたビジネス上の課題に対し、制限時間内に論理的な解決策を提示する能力が問われるため、事前のトレーニングが欠かせません。<br>こうした専門的な選考対策を独力で行うには限界があるため、転職エージェントの活用が有効な選択肢となり得ます。<br>職業安定法に基づき厚生労働省から認可を受けた転職エージェントは、PwCの部門ごとの最新の採用動向や、過去の面接事例といった非公開情報を提供してくれる場合があります。<br>エージェントを通じて、自身の経歴に合ったポジションの紹介を受けたり、職務経歴書の添削や模擬面接といった具体的なサポートを受けたりすることが期待できます。</p><ul><li><strong>書類選考対策:</strong> 応募する部門の業務内容と自身の経験を関連付け、具体的な実績を数値で示すことが重要とされます。</li><li><strong>Webテスト対策:</strong> SPI、玉手箱、GABなど、ファームや職種によって形式が異なるため、市販の問題集などで事前に対策を行うことが推奨されます。</li><li><strong>ケース面接対策:</strong> フェルミ推定やビジネスケースといった頻出問題のフレームワークを学び、時間を計りながら繰り返し演習することが効果的です。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退も可能です</li><li>現職以上の市場価値最大化を支援</li><li>在職中の慎重な活動を徹底サポート</li></ul></div><div class='benefit-summary'><h3>PwC転職で選ばれる5つの理由</h3><ul><li>年収+100〜300万円の実現事例が多数</li><li>全体の8割以上を占める質の高い非公開求人</li><li>各業界に精通した専門コンサルタントが伴走</li><li>書類通過率を高める戦略的な職務経歴書支援</li><li>多忙な方向けの柔軟なオンライン面談設定</li></ul></div></section>
+
+  
+  <section class="lp-section"><h2>PwC転職に関するよくある質問</h2><div class='faq-block'>
+<div class='faq-item'><h3>PwCの「戦略 + Deals + 監査」領域で特に求められるスキルは何ですか？</h3><p>業界知見と課題解決能力の両方が求められるとされます。厚生労働省の職業情報提供サイト（job tag）でも、コンサルタントには専門性に加え、顧客の事業を理解し、課題を分析・整理する能力が重要とされています。論理的思考力が鍵となります。</p></div>
+<div class='faq-item'><h3>PwCのコンサルタントの年収レンジはどの程度とされますか？</h3><p>公開情報をもとに整理すると、役職や経験に応じて年収は大きく変動しますが、<strong>ジュニアクラスで600万円程度から、シニアクラスでは1500万円</strong>を超えるケースも想定されるようです。厚生労働省「賃金構造基本統計調査」のコンサルタント職の平均値も参考に、自身のスキルと経験を照らし合わせることが推奨されます。</p></div>
+<div class='faq-item'><h3>PwCの選考プロセスでは、どのような点が重視される傾向にありますか？</h3><p>論理的思考力、コミュニケーション能力、そしてPwCの文化やカルチャーへのフィット感が重視されると一般にいわれます。特にケース面接では、未知の課題に対して構造的に考え、説得力のある解決策を提示する能力が試されます。</p></div>
+<div class='faq-item'><h3>異業界からPwCのコンサルタントへ転職する際の注意点はありますか？</h3><p>ポテンシャル採用の枠は存在しますが、戦略 + Deals + 監査に関する基礎知識の自主的な学習は不可欠とされます。<br>自身の過去の経験から、論理的思考力や課題解決能力を具体的に示すエピソードを準備することが重要です。<br>必要であれば、求職者支援制度などを活用したスキル習得も一つの選択肢です。</p></div>
+<div class='faq-item'><h3>PwCでキャリアを積むことで、どのような将来の選択肢が期待できますか？</h3><p>社内での昇進（専門職または管理職）はもちろん、PwCが持つグローバルなネットワークを活かした海外勤務の可能性も考えられます。<br>また、最先端の知見とコンサルティング経験を活かし、大手事業会社のDX推進担当、あるいは独立といった多様なキャリアパスが期待されるでしょう。</p></div>
+</div></section>
+
+  <p class='industry-position'>PwCは<strong>Big4 + 監査法人系</strong>に分類される代表的なコンサルティングファームの一つです。非公開求人の割合も高く（一般に約 8 割と言われます）、転職活動では非公開求人へのアクセスが選考機会の質を左右する可能性が指摘されています。</p>
+
+  <section class="lp-section"><h2>PwCの国内DX案件・急成長領域での戦略支援</h2><p>PwCは、<strong>国内大手企業</strong>の<strong>DX</strong>(デジタルトランスフォーメーション)案件で<strong>急成長</strong>領域の戦略支援に強みを持つとされ、クラウド・AI・データ分析・業務プロセス改革といった複数の DX テーマで実行支援を行うケースが見られます。国内市場のデジタル化加速に伴い、PwCにおける DX 案件の比重は近年高まる傾向にあり、ジュニア層には急成長領域での新規プロジェクト参画機会、シニア層には国内大手企業のデジタル戦略立案・実行支援といった、persona 別の魅力的なキャリア機会が用意されている点が特徴とされます。</p></section>
+
+  <section class="lp-section"><h2>PwCでのグローバル経験・PE 案件・リーダーシップ機会</h2><p>PwCでは、<strong>グローバル案件</strong>への参画機会が一定数あるとされ、海外オフィスや海外プロジェクトを通じて国際的なキャリア構築が期待できると言われます。また、<strong>PE (Private Equity)</strong>関連の戦略案件やM&A アドバイザリーといった高難度プロジェクトに携わるチャンスもあるとされ、シニアマネジャー以上のポジションでは、<strong>リーダー</strong>として大規模チームを率いる経験が積めることが特徴とされます。グローバル案件や PE 関連リーダー経験は、パートナー昇進やその後の独立・転職市場価値においても重要な実績と評価される傾向にあります。</p></section>
+
+  <section class="lp-section"><h2>PwC の BIG4 監査→アドバイザリー転身 path - 監査経験者の独自優位性</h2><p>PwC Japan の最大の差別化軸は、<strong>BIG4 グループ内の監査法人 (PwC あらた有限責任監査法人) から、Risk Assurance・Deals・Consulting・Tax 各部門への内部転身 path が制度化</strong>されている点とされます。特に<strong>公認会計士資格保有者の あらた監査経験 5-7 年 + PwC コンサル転身</strong>は、財務 DD・M&A 案件・内部統制構築・IFRS 移行支援等の<strong>監査知識を活かす高付加価値案件</strong>に直接接続する典型キャリアパスとされます。日本公認会計士協会 (JICPA) 公表の「会計士キャリアパス調査」によれば、BIG4 監査法人からアドバイザリー部門への異動は<strong>会計士キャリアの中核選択肢</strong>として認識されており、PwC はこの転身 path を組織的に整備していると業界レポートで紹介される傾向にあります。</p></section>
+
+  <section class="lp-section"><h2>PwC Japan グループ規模 + Global Network 活用</h2><p>PwC Japan グループは、PwC あらた有限責任監査法人・PwC 京都監査法人・PwC コンサルティング・PwC アドバイザリー・PwC 税理士法人等で構成されており、グループ全従業員数は <strong>10,000 名超</strong>（公開情報ベース・2024 年時点）と業界レポートで紹介される傾向にあります。PwC の独自 brand value として、<strong>PwC Global Network（150 ヶ国超・全世界従業員 360,000 名超）への接続性</strong>が挙げられる傾向にあり、特に北米・欧州・アジア各拠点との<strong>クロスボーダー M&A 案件・グローバル統合プロジェクト・海外拠点立ち上げ支援</strong>での連携機会が豊富とされます。年収交渉では、現職年収の <strong>1.2-1.5 倍</strong>程度のレンジ提示が一般的とされ、前職での<strong>プロジェクト実績・チームマネジメント経験・専門領域 (M&A / Deals / Tax / 監査経験) の深さ</strong>が交渉材料として有力とされます。シニアマネジャー以降のキャリアパスとして、<strong>海外オフィス赴任（米国・英国・シンガポール等）・グローバルプログラム責任者・海外子会社経営支援</strong>といった選択肢が業界内で認知されている傾向にあります。エージェント活用では、<strong>非公開求人へのアクセス・選考プロセス各段階での対策・年収交渉支援・BIG4 監査経験者向けキャリアコンサル・グローバル案件マッチング</strong>が在職中活動の効率を高める要素として挙げられる傾向にあります。</p></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">PwC 戦略 + 業界変革のキャリアへ挑戦する</h2>
+      <p>PwC Japan グループ 4 法人 + 部門別の特性把握で、最適な挑戦先を見極める。MyVisionの無料カウンセリングで、適合部門 + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_pwc`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_pwc">
+          <span>PwC 挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢と公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングが知られています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

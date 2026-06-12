@@ -1,0 +1,215 @@
+---
+/**
+ * consul-josei LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 女性 (sv 推定 300-500・女性キャリア層)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)';
+const description = '女性のコンサルタント転職について、コンサル業界の女性活躍推進の進捗・ライフイベント (結婚・出産・育児) との両立・育休/時短制度・狙えるファームを公開情報ベースで整理。元コンサル女性キャリアアドバイザーによる無料相談の活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '女性のコンサル転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '在職中のため、転職活動をしていることを現在の職場に知られたくありません。個人情報の管理は徹底されていますか？', a: 'はい、ご安心ください。ご登録いただいた個人情報は厳重に管理し、ご本人の許可なく企業へ開示することは一切ございません。応募や面接に進む際も、必ず事前にご本人の意思を確認いたします。特定の企業への応募をブロックする設定も可能です。守秘義務を遵守し、あなたのプライバシーを最優先に考えたサポートをお約束します。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">女性のコンサル転職 / キャリア両立ガイド</span>
+      <h1 id="fv-h1">女性の <span class="accent">コンサル転職</span> 完全ガイド<br />女性活躍推進 + ライフイベント両立 + 狙えるファーム</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: コンサル業界でも<strong>女性活躍推進法 + ダイバーシティ経営</strong>の流れで、女性コンサルタントの採用拡大 + 両立支援制度の整備が進む傾向とされています。本記事では女性のコンサル転職について、女性活躍の進捗・ライフイベント両立・育休/時短制度・狙えるファームを公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>コンサル業界の女性活躍推進 3 つの変化</li>
+        <li>ライフイベント (結婚・出産・育児) との両立</li>
+        <li>育休 / 時短 / リモート等の両立支援制度</li>
+        <li>女性キャリアアドバイザーによる無料相談</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_josei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_josei">
+          <span>女性向けキャリア相談を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・キャリア成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">コンサル業界の女性活躍推進 — 3 つの変化</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyoukintou/danjokintou/" target="_blank" rel="noopener">厚生労働省 女性活躍推進・男女雇用機会均等</a> / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">変化1</span><h4>女性活躍推進法 (2016年〜)</h4><p>2016年施行の女性活躍推進法以降、大手コンサルファームでも女性管理職比率の数値目標設定 + 女性採用拡大が進む傾向とされています。新卒・中途ともに女性採用比率が向上傾向にあるとされています。</p></article>
+        <article class="branch"><span class="tag">変化2</span><h4>両立支援制度の整備</h4><p>育児休業 + 時短勤務 + ベビーシッター補助 + リモートワーク等の両立支援制度が大手ファームで整備が進む傾向とされています。育休復帰後のキャリア継続サポートも強化されるとされています。</p></article>
+        <article class="branch"><span class="tag">変化3</span><h4>女性ロールモデルの増加</h4><p>女性パートナー + 女性マネージャーのロールモデルが増加傾向とされています。女性向けのメンタリング + ネットワーキング施策を展開するファームも増えているが一般的です。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_josei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_josei">
+          <span>女性活躍の実態を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">女性コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        女性コンサル転職領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">ライフイベントとコンサルキャリアの両立</h2>
+      <div class="counter-box">
+        <h4>結婚 + パートナーとのキャリア調整</h4>
+        <p>コンサルは出張 + 案件サイクルがあるため、パートナーとの生活設計 + キャリア調整が重要とされています。リモート可案件 + 国内案件中心のファーム選びで両立しやすくなる傾向のケースが多く見られます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>出産 + 育児休業</h4>
+        <p>大手ファームでは育児休業制度が整備される傾向とされています。育休取得 + 復帰後のキャリア継続サポート (時短 + 案件配慮) が整うファームを選ぶことが推奨されます。</p>
+      </div>
+      <div class="counter-box">
+        <h4>育児期 + 時短勤務 / リモート活用</h4>
+        <p>育児期は時短勤務 + リモートワーク + ベビーシッター補助を活用しながらキャリア継続するスタイルが一般的になりつつあると公表されています。案件選びの柔軟性が両立の鍵とされています。</p>
+      </div>
+      <div class="counter-box">
+        <h4>キャリアの長期設計</h4>
+        <p>ライフイベントを見据えた長期キャリア設計 (昇進時期 + 案件タイプ + ファーム選び) が、女性のコンサルキャリア継続の鍵とされています。元コンサル女性アドバイザーとの相談が推奨されます。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_josei_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル業界における女性活躍推進の現状</h2><p>近年、コンサルティング業界では、多様な人材の確保と定着が経営課題として認識され、女性活躍の推進が加速しているとされます。<br>背景には、2016年に施行された「女性の職業生活における活躍の推進に関する法律（女性活躍推進法）」に基づき、企業に女性の活躍状況の把握や行動計画の策定が求められるようになった影響も大きいと考えられます。<br>かつては長時間労働が常態化しやすいイメージもありましたが、現在では多くのファームが働き方改革に着手。<br>リモートワークやフレックスタイム制度の導入、育児や介護と両立するための時短勤務制度の整備など、柔軟な働き方を支援する環境が整いつつあります。<br>これにより、ライフイベントを経てもキャリアを継続したいと考える女性にとって、コンサルタントという職種が現実的な選択肢の一つとして注目されています。<br>公開情報をもとに整理すると、各社が積極的に女性管理職の登用目標を掲げるなど、業界全体で変化が起きていることがうかがえます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>ライフイベントと両立できるファーム選びの具体的なポイント</h2><p>女性がコンサル転職を成功させ、長期的なキャリアを築くためには、自身のライフプランに合ったファームを戦略的に選ぶことが重要です。<br>単に企業の知名度や規模だけでなく、女性の働きやすさに関する具体的な制度や実績を確認することが推奨されます。<br>厚生労働省が所管する「育児・介護休業法」の基準を満たすことはもちろん、企業独自のサポート体制がどの程度充実しているかが鍵となります。<br>情報収集と選考の過程では、以下の点を特に意識するとよいでしょう。</p><ul><li><strong>制度の充実度と利用実績:</strong> 産休・育休制度はもちろん、時短勤務、ベビーシッター補助などの福利厚生を確認します。制度があるだけでなく、実際に利用されているか、取得後の復帰がスムーズかといった実績も重要な判断材料とされます。</li><li><strong>女性ロールモデルの存在:</strong> 管理職やパートナーとして活躍する女性社員がどれだけいるかは、その企業における女性のキャリアパスの可能性を示唆します。企業のウェブサイトや採用イベントなどで、ロールモデルとなる社員の話を聞く機会を探すことが有効です。</li><li><strong>カルチャーとダイバーシティへの意識:</strong> 面接や社員との面談を通じて、多様性を尊重し、個々の事情に配慮するカルチャーがあるかを見極めます。長時間労働を是としない風土や、チームでサポートし合う文化が根付いているかがポイントになります。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>女性コンサルタント転職 で選ばれる5つの理由</h3><ul><li>平均+215万円の年収アップ実績（交渉代行）</li><li>戦略ファーム・事業会社の幹部候補など非公開求人80%以上</li><li>業界出身者による専門的で具体的なキャリア相談</li><li>夜間・土日対応で、現職と両立しやすい活動サポート</li><li>内定後の辞退も可能。納得いくまで慎重に検討できます</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">女性のコンサルキャリアを、ライフイベントと両立しながら築く</h2>
+      <p>女性活躍推進 + 両立支援制度の理解 + 元コンサル女性アドバイザーの伴走で、安心してコンサル転職に挑戦できる。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_josei`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_josei">
+          <span>女性向けキャリア相談を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的と示されています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が知られています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとして運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢とされています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-shibodouki/">コンサル 志望動機 完全ガイド｜落ちる 7 パターン × 通る論理構造 × 業界別翻訳例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

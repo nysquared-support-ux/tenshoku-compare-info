@@ -1,0 +1,218 @@
+---
+/**
+ * consul-chuto-saiyo LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: コンサル 中途採用 (sv 推定 400-700・転職検討中全方位)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'コンサル 中途採用 完全ガイド｜未経験〜経験者まで採用枠・年代別の市場価値・選考対策｜MyVision (PR)';
+const description = 'コンサル業界の中途採用について、未経験〜経験者の採用枠・年代別 (20代〜40代) の市場価値・狙えるファーム・選考プロセスを公開情報ベースで全方位整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'コンサル 中途採用' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を具体的に考えていないのですが、相談だけでも可能ですか？', a: 'もちろん可能です。まずはご自身の市場価値を客観的に把握することが、キャリアプランを考える上で重要です。中長期的な視点でのキャリアパスのご相談や、将来的な可能性について情報収集したいという方も歓迎しております。費用は一切かかりませんので、お気軽にご利用ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul chuto saiyo に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-chuto-saiyo に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル 中途採用 / 全方位ガイド</span>
+      <h1 id="fv-h1">コンサル転職、<span class="accent">現年収+200万円以上を目指す</span>。<br />在職中でも夜間オンライン相談で、慎重な活動を</h1>
+      <p class="lede">DX 推進や事業変革の加速に伴い、コンサルティング業界の採用意欲は依然として高い水準を維持しているとされます。コンサル業界は2020年以降も年率10-20%規模で拡大しているとされ、<strong>未経験〜経験者・20代〜40代まで広く中途採用が活発</strong>な状況とされています。事業会社での経験を持つ異業種からの転職者が専門性を活かして<strong>平均年収+215万円</strong>(公開情報ベース) を実現する事例も少なくないとされます。在職中の方には<strong>夜間・オンライン相談</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。本記事では年代別の市場価値 + 狙えるファーム + 選考プロセスを公開情報ベースで全方位整理します。</p>
+      <ul class="fv-bullets">
+        <li>中途採用が活発な 3 つの背景 (DX + 生成AI + 人材不足)</li>
+        <li>年代別 (20代後半 / 30代前半・後半 / 40代) の市場価値</li>
+        <li>5 区分 (戦略 / 総合 / FAS / IT / 公共) 別の採用傾向</li>
+        <li>選考プロセス 5 ステップ + 対策ポイント</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_chuto`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_chuto">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">中途採用が活発な 3 つの背景</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.meti.go.jp/policy/it_policy/dx/dx.html" target="_blank" rel="noopener">経済産業省 DX 推進ガイドライン</a> / コンサル特化エージェント公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">背景1</span><h4>DX 推進 + 「2025 年の崖」</h4><p>経済産業省「DX レポート」(2018年) で日系企業のレガシー IT 刷新の必要性が指摘されて以降、DX 推進案件が業界横断で急増。需要 > 供給の構造的人材不足が続いているが一般的です。詳細は <a href="/dx-consul-tenshoku/" class="underline">DX コンサル 転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">背景2</span><h4>生成 AI / LLM の業務活用</h4><p>2023年以降、ChatGPT / Claude / Gemini 等の生成 AI を業務活用する案件が爆増。AI 戦略立案 + 業務プロセス再設計 + ガバナンス整備の領域でコンサル需要が急増しているのケースが多く見られます。</p></article>
+        <article class="branch"><span class="tag">背景3</span><h4>構造的人材不足 + 多様性志向</h4><p>コンサル業界の急成長と人材供給の追いつかない状況で、未経験者 + 多様なバックグラウンドの中途採用が活発化。コンサル特化エージェントの公開情報によれば利用者の9割が業界未経験と公表されています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_chuto`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_chuto">
+          <span>中途採用市場の最新状況を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">コンサル中途採用で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        コンサル中途採用領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">年代別の中途採用市場価値マップ</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="年代別 中途採用市場価値">
+          <thead><tr><th>年代</th><th>市場価値</th><th>主な狙えるポジション</th><th>年収レンジ目安</th></tr></thead>
+          <tbody>
+            <tr><td>第二新卒 (24-26歳)</td><td>ポテンシャル採用</td><td>アナリスト</td><td>450-700万円</td></tr>
+            <tr><td>20代後半 (27-29歳)</td><td>&#11088; 高 (主要帯)</td><td>アナリスト〜コンサルタント</td><td>500-900万円</td></tr>
+            <tr><td>30代前半 (30-34歳)</td><td>&#11088; ピーク</td><td>コンサルタント〜シニア</td><td>600-1,200万円</td></tr>
+            <tr><td>30代後半 (35-39歳)</td><td>中-高 (専門特化型)</td><td>シニア〜マネージャー候補</td><td>800-1,500万円</td></tr>
+            <tr><td>40代以降</td><td>専門特化型 (即戦力)</td><td>マネージャー〜シニアマネージャー</td><td>1,200-2,000万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_chuto_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>コンサル中途採用の基礎知識：採用枠と選考プロセス</h2><p>コンサルティング業界の中途採用は、企業のDX（デジタルトランスフォーメーション）推進や新規事業開発といった需要の高まりを背景に、活発な状態が続いているとされます。<br>採用枠は主に、①未経験者向けのポテンシャル採用、②特定の専門スキル（IT、会計等）を持つ経験者採用、③同業のコンサルティングファームからの経験者採用、の3つに大別されます。<br>選考プロセスは一般的に「書類選考 → Webテスト（能力・性格） → 複数回の面接（ケース面接を含む） → オファー」という流れで進みます。<br>特に、論理的思考力や問題解決能力を測るケース面接が重視される点が特徴です。<br>厚生労働省の職業安定業務統計を見ても、専門的・技術的職業の有効求人倍率は高い水準にあり、高度人材の需要が継続していることがうかがえます。<br>自身の経歴がどの採用枠に合致するのかを理解し、適切な準備をすることが最初のステップとなります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">選考プロセス 5 ステップ + 対策ポイント</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">ステップ1</span><h4>書類選考 (職務経歴書 + レジュメ)</h4><p>前職実績のコンサル評価軸への翻訳が必須。元コンサル添削で品質が大きく変わる。詳細は <a href="/consul-shokumukeirekisho/" class="underline">職務経歴書ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">ステップ2</span><h4>適性検査 (WEB)</h4><p>論理・計数・言語の3軸を中心とした SPI / 玉手箱形式が標準。市販対策本での事前準備が推奨されます。</p></article>
+        <article class="branch"><span class="tag">ステップ3</span><h4>ケース面接 (選考の核心)</h4><p>フェルミ推定 + 経営課題を制限時間内に論理的に解く形式。独学では限界があり、元コンサル模擬面接が一般的に推奨。詳細は <a href="/consul-case-mensetsu/" class="underline">ケース面接対策</a> 参照。</p></article>
+        <article class="branch"><span class="tag">ステップ4</span><h4>役員面接 (志望動機 + キャリア構想)</h4><p>「なぜコンサル + なぜこのファーム + 中長期キャリア」を論理的に語る面接。志望動機の質が内定可否を分けると示されています。詳細は <a href="/consul-shibodouki/" class="underline">志望動機ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">ステップ5</span><h4>内定 + 条件交渉</h4><p>年収・入社時期・配属交渉。エージェント経由の応募ではエージェントが交渉サポートしてくれるケースが一般的が知られています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>中途採用全体プロセスを元コンサル伴走で支援。MyVisionの無料カウンセリングで、自分の市場価値 + 狙えるファーム + 選考対策ロードマップを会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_chuto`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_chuto">
+          <span>中途採用サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>中途採用の成功確度を高める具体的な選考対策</h2><p>コンサルティング業界の中途採用を突破するには、戦略的な選考対策が不可欠です。<br>特に「職務経歴書」と「ケース面接」の2点が合否を分ける重要なポイントとされます。<br>職務経歴書では、過去の業務内容を羅列するのではなく、「どのような課題に対し、どう分析・行動し、どのような成果（定量的実績）を出したか」という問題解決のプロセスを明確に示すことが求められます。<br>一方、ケース面接は付け焼き刃の知識では対応が困難です。<br>対策としては、以下のステップが有効と一般に考えられています。</p><ul><li><strong>基礎固め：</strong>主要なフレームワーク（3C、4P、SWOT等）を学び、ビジネスの基礎体力をつけます。</li><li><strong>思考の言語化：</strong>様々なビジネス課題に対し、自分の頭の中で考えるだけでなく、思考プロセスを声に出して説明する練習を繰り返します。</li><li><strong>実践練習：</strong>転職エージェントや知人などを相手に模擬面接を重ね、客観的なフィードバックを得て改善サイクルを回します。</li></ul><p>なお、転職活動においては、信頼できる情報源を選ぶことが重要です。国民生活センターも、転職サービスに関する注意喚起を行っており、サポート内容を事前にしっかり確認することが賢明です。</p><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>コンサル転職で選ばれる5つの理由</h3><ul><li>年収アップ実績多数（平均+215万円の事例も）</li><li>コンサル業界特化ならではの深い知見と情報網</li><li>全体の約8割。事業会社の経営企画など非公開求人</li><li>在職中の活動を前提とした夜間・オンライン相談体制</li><li>経験と実績に基づく、的確な年収・ポジション交渉</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の比較整理</p></a>
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>未経験 コンサル転職</h4><p>9 割未経験者の選考突破</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>選考の核心を 4 週間で突破</p></a>
+        <a class="card-link" href="/consul-tekisei/"><h4>コンサル 適性</h4><p>10 項目セルフチェック</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">コンサル中途採用の市場価値を、元コンサルから honest に聞く</h2>
+      <p>年代別の市場価値 + 5 区分別の狙えるファーム + 選考プロセスを、元コンサルから直接ヒアリング。MyVisionの無料カウンセリングを会員登録30秒で開始できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_chuto`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_chuto">
+          <span>中途採用無料カウンセリングを始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-josei/">女性のコンサル転職 完全ガイド｜女性活躍推進 + ライフイベント両立 + 狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

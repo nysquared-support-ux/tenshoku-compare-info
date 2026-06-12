@@ -1,0 +1,233 @@
+---
+/**
+ * engineer-startup-tenshoku LP (TechGo 転職・★326 DRY engineer-30dai pattern)
+ * ★480 TechGo a8mat verbatim (4B1LPN+E39C6Q+5B0Y+HV7V6 / banner 4B1LPN+E39C6Q+5B0Y+HVNAP)
+ * メイン KW: スタートアップ エンジニア 転職
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'スタートアップエンジニアの転職完全ガイド｜フェーズ別の市場価値・働き方・選び方｜TechGo (PR)';
+const description = 'スタートアップエンジニアの転職を、シード～レイターのフェーズ別市場価値・働き方・選び方で整理。ストックオプション・労働環境・カルチャー、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'エンジニア転職ガイド', url: '/' },
+  { name: 'スタートアップ エンジニア 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を決めたわけではありません。情報収集だけでも相談可能ですか？', a: 'はい、もちろん可能です。まずはご自身の市場価値を客観的に把握したい、今後のキャリアパスについて専門家の意見を聞きたい、といった段階でのご相談を歓迎しております。無理に転職をお勧めすることは一切ございません。最新の市場動向や、あなたのスキルセットに合う求人の傾向など、有益な情報提供をさせていただきますので、お気軽にご予約ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> engineer startup tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は engineer-startup-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>スタートアップエンジニアの転職完全ガイド｜フェーズ別の市場価値・働き方・選び方 (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">スタートアップ (シード・アーリー・ミドル・レイター) でエンジニアとして働く際の、フェーズ別の市場価値・働き方・企業の選び方を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>シード〜レイターのフェーズ別市場価値マップ</li>
+        <li>スタートアップエンジニアの主な4つのキャリアパス</li>
+        <li>スタートアップ転職を進める5つの対策</li>
+        <li>無料サポートで企業選びの精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_engineer_startup_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_engineer-startup-tenshoku">
+          <span>TechGo の無料相談でスタートアップ エンジニアの市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">シード〜レイターのフェーズ別市場価値マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>スタートアップ エンジニアの市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="シード〜レイターのフェーズ別市場価値マップ">
+          <thead><tr><th>フェーズ</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>シード (創業期)</td><td>ゼロイチ開発・幅広い技術領域への対応力</td><td>1〜数人目のエンジニア・CTO 候補</td></tr>
+            <tr><td>アーリー (PMF 探索期)</td><td>プロダクト改善のスピード・少人数チームでの設計</td><td>プロダクト中核を担うシニア層</td></tr>
+            <tr><td>ミドル (グロース期)</td><td>スケール・組織化対応の経験</td><td>テックリード / EM 候補</td></tr>
+            <tr><td>レイター (上場準備期)</td><td>大規模システム運用・セキュリティ対応</td><td>エンジニアリングマネージャー / 部長候補</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_engineer_startup_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_engineer-startup-tenshoku">
+          <span>自分の市場価値を TechGo の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">スタートアップエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるスタートアップエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        スタートアップエンジニア領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">スタートアップエンジニアの4つのキャリアパス</h2>
+      <p class="section-lede">スタートアップ エンジニアの主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>CTO/技術責任者方向</h4><p>シード期から参画し、技術選定・組織立ち上げを担うパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>テックリード方向</h4><p>ミドル期に参画し、複数チームの技術リードを担うパス。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>ジェネラリスト方向</h4><p>アーリー期に参画し、幅広い技術領域を経験するパス。詳細は <a href="/full-remote-engineer/" class="underline">フルリモートエンジニア</a> も参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>シニアスペシャリスト方向</h4><p>特定領域 (ML/インフラ等) の専門家として参画するパス。詳細は <a href="/ai-engineer-tenshoku/" class="underline">AI エンジニア転職</a> も参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP&sitemicros=banner_engineer_startup_tenshoku_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www21.a8.net/svt/bgt?aid=260415275852&wid=001&eno=01&mid=s00000024757003003000&mc=1" alt="IT エンジニアのハイクラス転職 TechGo (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B1LPN+E39C6Q+5B0Y+HVNAP" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>スタートアップの成長フェーズとエンジニアの役割：基礎知識</h2><p>スタートアップへの転職を考える際、企業の成長フェーズを理解することは極めて重要です。一般に、スタートアップは「シード」「アーリー」「ミドル」「レイター」といった段階を経て成長します。各フェーズで事業の目標や組織文化、そしてエンジニアに求められる役割は大きく異なります。<br><b>シード期</b>は、アイデアを形にする0→1のプロダクト開発が中心です。少人数のチームで、迅速なプロトタイピングと試行錯誤が求められます。<b>アーリー期</b>に入ると、プロダクトの市場適合性（PMF）を証明し、初期の顧客を獲得することが目標となり、機能追加や改善のスピードが重視されます。<b>ミドル期からレイター期</b>にかけては、事業が拡大し、ユーザー数も増加します。ここでは、スケーラビリティの確保、技術的負債の返済、そしてエンジニア組織の構築やマネジメントといった、より専門的で高度なスキルが求められるようになります。経済産業省もスタートアップ育成を重要な政策課題としており、こうした企業群が新たなイノベーションを生み出す原動力として期待されています。自身のスキルやキャリアプランがどのフェーズに最も合致するかを見極めることが、転職成功の第一歩とされます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">スタートアップ エンジニアの転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>求人情報の具体性</td><td>フェーズ・組織体制が曖昧</td><td>フェーズ・チーム構成・役割が明記</td></tr>
+            <tr><td>ストックオプション情報</td><td>SO の説明がない・不透明</td><td>条件・付与時期・行使価格が明記</td></tr>
+            <tr><td>入社後のイメージ</td><td>担当範囲・初期業務が不明確</td><td>担当領域・初期 90 日プランが具体的</td></tr>
+            <tr><td>資金調達情報</td><td>資金調達状況の説明なし</td><td>資金調達ラウンド・ランウェイの説明</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>フェーズ別・スタートアップの選び方と待遇面の確認ポイント</h2><p>スタートアップを選ぶ際は、成長フェーズに応じて着眼点を変えることが推奨されます。シード期やアーリー期の企業では、経営陣のビジョンやプロダクトの将来性に強く共感できるかが重要です。まだ何もない状態から作り上げるため、自走力と学習意欲が不可欠となります。一方、ミドル期やレイター期の企業では、組織が拡大しているため、自身の専門性をどう活かせるか、提示されるキャリアパスが魅力的か、そして既存のチームとのカルチャーフィットが重要な判断基準となるでしょう。<br>待遇面の確認も慎重に行う必要があります。特に以下の点は、入社後のミスマッチを防ぐために不可欠です。</p><ul><li><strong>給与とストックオプション:</strong> 給与水準だけでなく、評価制度や昇給モデルを確認しましょう。ストックオプションについては、付与の有無だけでなく、権利確定（ベスティング）の条件や行使価格、有効期限といった詳細まで把握することが重要です。</li><li><strong>労働環境:</strong> 裁量労働制や固定残業代制度が採用されている場合、その具体的な運用ルールを確認します。リモートワークやフレックスタイムの導入状況も、働きやすさを左右する大きな要素です。</li><li><strong>雇用契約:</strong> 最終的な条件は、必ず書面で確認します。労働契約法では、労働者と使用者の合意によって契約が成立すると定められており、口約束ではなく、雇用契約書の内容を十分に理解した上で署名することが、後のトラブルを防ぐ上で極めて重要です。</li></ul><p>これらの情報を個人で収集・判断するのは容易ではありません。専門的な知見を持つ転職エージェントなどを活用することで、より精度の高い情報収集が期待できます。</p><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>エンジニアスタートアップ転職で選ばれる5つの理由</h3><ul><li>年収アップ実績 平均+187万円</li><li>CTO/VPoE候補など非公開求人が8割以上</li><li>エンジニア出身コンサルタントによる技術理解</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>納得いくまで検討可能、内定後の辞退もOK</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/engineer-1000man/"><h4>エンジニア 年収1000万ガイド</h4><p>キャリアパス別の年収レンジ</p></a>
+        <a class="card-link" href="/full-remote-engineer/"><h4>フルリモートエンジニア転職</h4><p>働き方軸でのエンジニア転職</p></a>
+        <a class="card-link" href="/engineer-agent-osusume/"><h4>エンジニア転職エージェント選び方</h4><p>エージェント選定の5軸</p></a>
+        <a class="card-link" href="/jisha-kaihatsu-engineer/"><h4>自社開発エンジニア転職</h4><p>自社開発と SES・受託の違い</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">スタートアップ転職の判断材料を整え、納得のいく選択に近づく</h2>
+      <p>スタートアップ エンジニアの転職は方向性の整理と判断材料の確保で精度が高まるとされています。TechGo の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_engineer_startup_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_engineer-startup-tenshoku">
+          <span>TechGo の無料相談でスタートアップ エンジニアの進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

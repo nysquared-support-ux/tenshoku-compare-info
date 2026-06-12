@@ -1,0 +1,221 @@
+---
+/**
+ * consul-tenshoku-20daikouhan LP (MyVision コンサル特化・★326 DRY)
+ * ★480 MyVision a8mat verbatim (4B3SN7+KU6YA+5B0Y+5ZU29)
+ * メイン KW: 20代後半 コンサル (sv 推定 600-1,000・26-29歳完全合致・ターゲット最適層)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = '20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)';
+const description = '26-29歳の20代後半でコンサル転職を成功させるための戦略を、市場価値・第二新卒卒業後のタイミング・狙えるファーム・ポテンシャル採用の評価軸の4軸で整理。MyVisionの無料カウンセリング + 元コンサル添削サポートの活用法も解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: '20代後半 コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'まだ転職を決めたわけではありませんが、相談だけでも可能ですか？', a: 'もちろんです。転職を前提としないキャリア相談も歓迎しております。まずはご自身の市場価値やキャリアの選択肢を知ることが重要です。客観的な視点から、現職に留まる選択肢も含めて最適なキャリアプランを一緒に考えさせていただきます。相談したからといって、無理に転職をお勧めすることはありませんので、ご安心ください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> consul tenshoku 20daikouhan に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は consul-tenshoku-20daikouhan に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">コンサル転職 / 20代後半向け完全ガイド</span>
+      <h1 id="fv-h1">20代後半のコンサル転職、<span class="accent">年収+200万円を目指せる</span>チャンス。<br />在職中でも夜間・土日相談が可能です</h1>
+      <p class="lede">20代後半は専門スキルとポテンシャルを武器に、キャリアを大きく飛躍させる重要な時期とされます。DX や事業再生領域ではコンサルタントの需要が高まっており、<strong>平均年収1,000万円超の非公開求人</strong>も公開情報で紹介されることがあります。現職と並行しながら<strong>夜間・土日のオンライン面談</strong>と<strong>内定後の辞退も可能</strong>な体制で活動を進められるとされています。26-29歳の20代後半は<strong>第二新卒卒業後のポテンシャル + 実務経験のバランスが取れた最適タイミングの一つ</strong>とされ、コンサル特化エージェントの公開情報によれば総合系 + IT系での未経験採用が積極的に行われている層です。本記事では20代後半特有の市場価値 + 狙えるファーム + 選考対策を整理します。</p>
+      <ul class="fv-bullets">
+        <li>20代後半の市場価値 (ポテンシャル + 経験のバランス)</li>
+        <li>第二新卒卒業後の最適タイミング判断</li>
+        <li>狙えるファーム (アクセンチュア・BIG4・アビーム等)</li>
+        <li>ポテンシャル採用の評価軸 + 無料 MyVision サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_20kouhan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_20kouhan">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">20代後半の市場価値 — 3 つの強み</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a> / コンサル特化エージェント公開情報・大手ファーム公式キャリアサイト。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">強み1</span><h4>ポテンシャル + 実務経験のバランス</h4><p>新卒入社後 4-7 年の実務経験を持ち、業界知見 + 基礎スキル + 学習能力のバランスが評価されるとされています。30代前半より柔軟性が高く、新しい環境への適応が期待される層です。</p></article>
+        <article class="branch"><span class="tag">強み2</span><h4>第二新卒卒業後の主戦力</h4><p>一般的に「第二新卒」は新卒〜入社3年程度を指し、26-29歳は卒業後の本格戦力としてポテンシャル + 主体性を評価される段階とされています。コンサル業界の中途採用市場で需要が高い層です。</p></article>
+        <article class="branch"><span class="tag">強み3</span><h4>市場価値ピーク前の伸びしろ</h4><p>30代前半が市場価値ピークとされる中、20代後半は<strong>ピーク前の伸びしろ枠</strong>として評価されるとされています。コンサル転職時の年収アップ幅も大きく、長期的キャリア構築の起点として最適な時期の一つです。</p></article>
+        <article class="branch"><span class="tag">強み4</span><h4>未経験 9 割の主力層</h4><p>コンサル特化エージェントの公開情報によれば、利用者の約9割が業界未経験で、20代後半-30代前半が主要層とされています。詳細は <a href="/consul-tenshoku-mikeiken/" class="underline">コンサル転職 未経験ガイド</a> 参照。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_20kouhan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_20kouhan">
+          <span>20代後半の市場価値を MyVision 公式の無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">20 代後半コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるコンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        コンサル選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサルジュニア 600～900 万円・シニア 1,000～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        20 代後半コンサル転職領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">20代後半で狙える主要ファーム</h2>
+      <p class="section-lede">20代後半の主な転職先となる大手・人気ファームを、特徴・年収レンジ・採用傾向で整理します。下表は公開情報・各ファーム公式キャリアサイトに基づく一般的が一般的です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="20代後半向けコンサルファーム比較">
+          <thead><tr><th>ファーム</th><th>20代後半採用</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>アクセンチュア (Technology / 総合)</td><td>&#11088; 最大規模採用</td><td>600-900万円</td><td>IT・SIer・大手出身</td></tr>
+            <tr><td>BIG4 (Deloitte・PwC・EY・KPMG)</td><td>&#11088; 積極採用</td><td>600-950万円</td><td>会計・財務・大手出身</td></tr>
+            <tr><td>アビームコンサルティング</td><td>&#11088; 積極採用</td><td>550-850万円</td><td>SAP・基幹業務・IT 出身</td></tr>
+            <tr><td>ベイカレント・コンサルティング</td><td>積極採用</td><td>650-1,000万円</td><td>業界経験豊富な層</td></tr>
+            <tr><td>IBM コンサルティング</td><td>積極採用</td><td>600-900万円</td><td>クラウド・AI・データ系</td></tr>
+            <tr><td>戦略系 (BCG・McK・Bain)</td><td>狭き門 (ケース対策必須)</td><td>800-1,200万円</td><td>高学歴・ポテンシャル大きい</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_20kouhan_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>20代後半のコンサル転職 — 市場価値とポテンシャル採用の基礎</h2><p>20代後半（26歳〜29歳）でのコンサルティング業界への転職は、キャリアにおける重要な転換点と位置づけられます。<br>この年代は、社会人として数年間の実務経験を積み、基本的なビジネスマナーや業界知識を習得している一方で、新しい環境への適応力や学習意欲も高いと評価される傾向にあります。<br>そのため、多くのコンサルティングファームでは「ポテンシャル採用」の対象として重視しています。<br>ここでの「ポテンシャル」とは、単なる若さや意欲だけでなく、これまでの経験から培われた問題解決能力の素養や論理的思考力を指します。<br>厚生労働省が公表する「労働経済の分析」においても、若年層の能力開発と円滑な労働移動の重要性が指摘されており、20代後半はスキルとポテンシャルの両面から市場価値が高い時期であると、一般に解釈されています。<br>この特有の立ち位置を理解し、戦略的にアピールすることが成功の鍵となります。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">20代後半の選考対策 — 4 つのアクション</h2>
+      <p class="section-lede">20代後半でコンサル転職を成功させるための、具体的選考アクションを 4 つに整理します。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">行動1</span><h4>無料カウンセリングで市場価値診断</h4><p>まず複数のコンサル特化エージェントの無料カウンセリングを受け、自分の前職実績 + 年齢から市場価値 + 想定年収 + 狙えるファームを診断してもらうのが一般的とされています。所要30秒の会員登録から開始可能です。</p></article>
+        <article class="branch"><span class="tag">行動2</span><h4>ケース面接対策の開始</h4><p>独学では到達しにくいケース面接対策を、元コンサルの模擬面接 + 添削で磨きます。4-8 週間が標準期間とされています。詳細は <a href="/consul-case-mensetsu/" class="underline">コンサル ケース面接対策ガイド</a> 参照。</p></article>
+        <article class="branch"><span class="tag">行動3</span><h4>職務経歴書の翻訳</h4><p>前職の実務経験を、コンサル評価軸 (成果インパクト・関係者数・主体性) に翻訳する作業です。元コンサルの添削で品質が大きく変わるとされています。</p></article>
+        <article class="branch"><span class="tag">行動4</span><h4>志望動機の論理構築</h4><p>「なぜ20代後半でコンサル」 + 「なぜこのファーム」 + 「中長期キャリア」の3軸で論理性を構築します。詳細は <a href="/consul-shibodouki/" class="underline">コンサル 志望動機ガイド</a> 参照。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>20代後半の今が、コンサル転職の最適タイミングの一つ。MyVisionの無料カウンセリングから、市場価値診断 + ケース対策 + 添削サポートを30秒の会員登録で開始できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_20kouhan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_20kouhan">
+          <span>20代後半向け無料サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>26歳〜29歳の戦略的キャリアチェンジ — 成功に向けた3つのステップ</h2><p>20代後半でコンサル転職を成功させるためには、計画的な準備が不可欠です。以下の3つのステップに沿って、自身の市場価値を最大化する戦略を立てることが推奨されます。公開情報等をもとに、一般的なプロセスを整理しました。</p><ul><li><strong>ステップ1：経験の棚卸しと論理的再構築</strong><br>現職や前職での経験を単に羅列するのではなく、「どのような課題に対し、どのような仮説を立て、どう行動し、結果としてどのような成果を出したか」を論理的に説明できるように整理します。特に、定量的な成果（売上〇%向上など）を盛り込むことで、説得力が増すとされます。</li><li><strong>ステップ2：ファーム研究とケース面接対策</strong><br>総合系、戦略系、専門分野特化型など、コンサルティングファームの種類は多岐にわたります。自身のキャリアプランに合致するファームを研究し、志望動機を明確化します。同時に、コンサル転職特有の「ケース面接」対策は必須です。思考体力と論理的構造化能力を鍛えるため、早期から準備を始めることが重要です。</li><li><strong>ステップ3：第三者の客観的視点の活用</strong><br>自己分析や面接対策は、独力では限界がある場合があります。政府統計ポータルサイト「e-Stat」の労働力調査を見ても、転職市場は常に変化しています。最新の動向や客観的な評価を得るために、転職エージェントなど専門家の支援を活用することも有効な選択肢の一つとされます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>コンサル転職 20代後半 で選ばれる5つの理由</h3><ul><li>転職成功事例の平均年収アップ額 +215万円の実績</li><li>大手ファームからブティックまで、非公開・独占求人80%以上</li><li>業界特化アドバイザーによる徹底した書類・面接対策</li><li>夜間/土日も対応、オンラインで完結する柔軟なサポート体制</li><li>あなたの市場価値を最大化するプロフェッショナルな年収交渉</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/consul-tenshoku-mikeiken/"><h4>コンサル転職 未経験</h4><p>未経験者の9割が辿る選考突破 + 狙えるファーム</p></a>
+        <a class="card-link" href="/consul-tenshoku-30dai/"><h4>30代 コンサル転職</h4><p>30代前半・後半別の市場価値 + キャリアパス</p></a>
+        <a class="card-link" href="/consul-nensyu/"><h4>コンサル 年収</h4><p>ファーム × 年代 × ポジション別レンジ</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>コンサル ケース面接対策</h4><p>頻出問題 5 タイプ + 解法フレームワーク</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">20代後半の今、コンサル転職という選択肢を真剣に検討する</h2>
+      <p>26-29歳は市場価値ピーク前の最適タイミング。MyVisionの無料カウンセリングで、自分の市場価値 + 狙えるファーム + 選考対策ロードマップを会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_20kouhan`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_20kouhan">
+          <span>20代後半の市場価値を無料カウンセリングで確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-30dai/">30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">転職判断の研究データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.jil.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 労働政策研究・研修機構</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

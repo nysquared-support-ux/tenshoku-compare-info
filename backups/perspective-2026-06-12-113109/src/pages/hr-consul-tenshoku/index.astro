@@ -1,0 +1,216 @@
+---
+/**
+ * hr-consul-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: HR コンサル 転職 (sv 推定 300-500・人事系特化)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'HR コンサル 転職 完全ガイド｜人事・組織コンサルタントの仕事・年収・狙えるファーム｜MyVision (PR)';
+const description = 'HR コンサル (人事・組織コンサルタント) への転職について、組織人事領域の案件タイプ・年収レンジ・狙えるファーム・人事出身者が評価されるスキル・選考対策を公開情報ベースで整理。元コンサル無料カウンセリング活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'HR コンサル 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: 'HRコンサルタントの仕事は、企業の人事部とどう違うのですか？', a: '企業人事は自社の制度運用が主ですが、HRコンサルは外部から客観的な視点で経営課題解決を目指します。人事戦略立案やM&A後の組織統合など、より上流の課題を扱います。厚生労働省の「働き方の未来2035」でも多様な働き方や組織変革の重要性が示されており、専門性が求められる領域とされます。' },
+  { q: '未経験からHRコンサルタントに転職する場合、どのようなスキルが評価されますか？', a: '事業会社での人事経験（採用、労務、制度設計など）は直接的に活かせます。特に、課題解決能力、論理的思考力、コミュニケーション能力が重視される傾向にあります。例えば、人事データ分析から課題を特定し、改善策を立案・実行した経験は高く評価される可能性があります。' },
+  { q: 'HRコンサルタントの平均年収はどのくらいですか？', a: '経験や役職、ファームの規模によりますが、ジュニアクラスで500〜800万円、シニアクラス以上では1,000万円を超えることも一般的とされます。国税庁の「民間給与実態統計調査」における平均給与と比較すると高い水準ですが、成果に応じた変動も大きい職種です。' },
+  { q: '転職活動で注意すべき「ケース面接」とは何ですか？', a: 'ケース面接は、特定のビジネス課題（例：「ある企業の離職率を3年で10%改善する施策は？」）を与えられ、その場で解決策を論理的に説明する面接形式です。地頭の良さや問題解決能力を測る目的で行われます。付け焼き刃の対策は難しく、事前のトレーニングが重要とされます。' },
+  { q: 'HRコンサルへの転職を成功させるために、転職エージェントの活用は有効ですか？', a: 'はい、有効な選択肢の一つです。特にコンサル業界に特化したエージェントは、非公開求人の紹介や選考対策に関する情報提供が期待できます。職業安定法に基づき運営されているため、安心して相談できると一般に考えられています。専門家の視点を取り入れることで、活動を効率的に進められるでしょう。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">HR コンサル junior〜senior パートナー候補 両軸 | 制度成熟 + 人事・組織特化</span>
+      <h1 id="fv-h1"><span class="accent">HR コンサル</span> 転職 完全ガイド<br />人事・組織コンサルタントの仕事・年収・狙えるファーム</h1>
+      <p class="lede"><strong>結論 (一般的傾向)</strong>: HR コンサル (人事・組織コンサルタント) は<strong>企業の組織人事課題を分析し解決策を立案・実行支援する仕事</strong>とされ、組織人事系専門ファーム + 総合系の People Advisory 部門が主要プレイヤーとされています。本記事では HR コンサルの案件タイプ + 年収レンジ + 狙えるファーム + 選考対策を公開情報ベースで整理します。※ 以下はすべて公開情報・業界一般論ベースの整理であり、断定的結論ではありません。</p>
+      <ul class="fv-bullets">
+        <li>HR コンサルの 5 つの案件タイプ</li>
+        <li>年収レンジ (600-2,500万円帯) + キャリアパス</li>
+        <li>狙えるファーム (専門系 / 総合系 People Advisory)</li>
+        <li>選考対策 + 元コンサル無料サポート活用</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_hr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_hr">
+          <span>HR コンサル挑戦準備を無料カウンセリングで始める (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">HR コンサルの 5 つの案件タイプ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): コンサル特化エージェント公開情報 / 元コンサルの公開ブログ / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">タイプ1</span><h4>組織設計・組織変革</h4><p>組織構造の再設計 + 機能配置 + ガバナンス強化案件。M&A 後の組織統合 (PMI) + グローバル組織再編等が含まれる傾向とされています。</p></article>
+        <article class="branch"><span class="tag">タイプ2</span><h4>人事制度設計</h4><p>評価制度 + 報酬制度 + 等級制度の設計・改定案件。ジョブ型雇用への移行支援等、近年需要が高い領域が一般的です。</p></article>
+        <article class="branch"><span class="tag">タイプ3</span><h4>人材戦略・タレントマネジメント</h4><p>人材ポートフォリオ + 後継者計画 + リーダー育成 + サクセッションプランニング案件。経営戦略と連動した人材戦略立案が中心のケースが多く見られます。</p></article>
+        <article class="branch"><span class="tag">タイプ4</span><h4>企業文化変革・エンゲージメント</h4><p>企業文化の変革 + 従業員エンゲージメント向上 + ダイバーシティ&インクルージョン推進案件。組織風土の変革支援と公表されています。</p></article>
+        <article class="branch"><span class="tag">タイプ5</span><h4>HR テック・人事 DX</h4><p>HR システム導入 + 人事データ活用 + ピープルアナリティクス案件。データドリブンな人事への変革支援で需要が高まっていると示されています。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_hr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_hr">
+          <span>適合する案件タイプを MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">HR コンサル転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるHR コンサル転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        HR コンサル領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">HR コンサルで狙えるファーム比較</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="HR コンサル ファーム比較">
+          <thead><tr><th>ファーム種別</th><th>得意領域</th><th>年収レンジ目安</th><th>主な対象層</th></tr></thead>
+          <tbody>
+            <tr><td>組織人事系専門ファーム</td><td>報酬制度 / タレントマネジメント</td><td>600-2,200万円</td><td>人事 / 組織コンサル経験者</td></tr>
+            <tr><td>BIG4 People Advisory (EY 等)</td><td>HR 変革 / 組織再編 / 人事 DX</td><td>650-2,000万円</td><td>人事 / 組織開発 / コンサル経験者</td></tr>
+            <tr><td>総合系の組織人事部門</td><td>組織変革 / チェンジマネジメント</td><td>600-1,900万円</td><td>事業会社人事 / 組織開発出身</td></tr>
+            <tr><td>戦略系の組織変革部門</td><td>経営戦略連動の組織設計</td><td>800-2,500万円</td><td>戦略系 + 組織変革経験者</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_hr_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>HRコンサルタントの役割と求められる専門性</h2><p>HRコンサルタント（人事・組織コンサルタント）は、企業の経営課題を「ヒト」の側面から解決に導く専門家です。<br>自社の制度運用を主とする企業の人事部とは異なり、第三者の客観的な視点から、人事戦略の策定、組織構造の設計、人材育成体系の構築、M&A後の組織統合（PMI）といった、より経営の根幹に関わる課題に取り組みます。<br>現代の企業は、労働人口の減少やグローバル化、働き方の多様化といった複雑な課題に直面しています。<br>厚生労働省が推進する「働き方改革」においても、長時間労働の是正や多様で柔軟な働き方の実現が求められており、これに対応するための専門的な知見を持つHRコンサルタントの需要は高まっているとされます。<br>単なる人事の専門知識だけでなく、経営層と対話し、事業戦略と連動した人事施策を立案・実行する能力が不可欠です。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>人事領域出身者がHRコンサル転職で成功するための戦略</h2><p>事業会社の人事経験者がHRコンサルタントへ転職を目指す場合、自身の強みと補うべきスキルを明確にすることが重要です。<br>採用や労務、制度設計といった実務経験は、現場感のある提案を行う上で大きな武器となります。<br>一方で、コンサルタント特有の論理的思考力、仮説検証能力、そして経営層を納得させる高いレベルのコミュニケーション能力は、意識的に鍛える必要があるとされます。<br>転職活動を成功に導くためには、以下のステップが有効と考えられます。<br>これらは、自身のキャリアプランを主体的に形成していく上で、職業能力開発促進法が示すキャリアコンサルティングの考え方にも通じるものです。</p><ul><li><strong>経験の棚卸しと定量化:</strong> これまでの人事経験において、どのような課題を、どのような手法で解決し、どのような定量的成果（例：採用コストXX%削減、離職率Y%改善）に繋がったかを具体的に整理します。</li><li><strong>ファーム研究と志望動機の明確化:</strong> 総合系、戦略系、人事特化系ブティックなど、コンサルティングファームごとの特徴を深く理解し、自身の経験やキャリア志向がどのファームで最も活かせるかを分析し、志望動機を固めます。</li><li><strong>実践的な選考対策:</strong> 職務経歴書をコンサルタントの視点で見直すとともに、HR領域のテーマに特化したケース面接のトレーニングを重ねることが、選考を通過する上で重要とされます。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+150〜350万円の事例もございます）</li><li>コンサル業界の選考プロセスに特化した実践的対策</li><li>大手ファームから専門ブティックまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">人事の専門性を、HR コンサルで経営の中心へ</h2>
+      <p>組織人事の知見を、経営戦略と連動した HR コンサルで最大化。MyVisionの無料カウンセリングで、適合ファーム + 想定年収 + 選考対策を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_hr`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_hr">
+          <span>HR コンサル挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が知られています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングとされています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

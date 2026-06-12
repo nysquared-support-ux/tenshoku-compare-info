@@ -1,0 +1,268 @@
+---
+/**
+ * bcg-tenshoku LP (MyVision コンサル特化・★326 DRY)
+ * ★480 a8mat 4B3SN7+KU6YA+5B0Y+5ZU29 verbatim
+ * メイン KW: BCG 転職 (sv 推定 600-1,000・戦略系最高峰)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29';
+const title = 'BCG 転職 完全ガイド｜ボストン コンサルティング グループの特性・年収・選考対策｜MyVision (PR)';
+const description = 'BCG (ボストン コンサルティング グループ) への転職について、戦略系最高峰ファームの特性・年収レンジ・選考プロセス・アルムナイネットワーク・キャリアパスを公開情報ベースで整理。元コンサル無料模擬面接サポートの活用法を解説 (PR・アフィリエイト広告を含みます)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'コンサル転職ガイド', url: '/' },
+  { name: 'BCG 転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-21', dateModified: '2026-05-21',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '現職が忙しく、転職活動に時間を割けるか不安です。サポートは受けられますか？', a: 'はい、ご安心ください。弊社のサポートは、ご多忙なプロフェッショナルの方を前提に設計されています。面談は平日夜間や土日にも対応しており、全てオンラインで完結可能です。現職への配慮を最優先し、無理のないスケジュールで選考を進めますので、ご自身のペースで最高のキャリアを目指していただけます。' },
+  { q: 'コンサルティング業界は未経験ですが、挑戦可能でしょうか？', a: 'はい、可能です。事業会社での経営企画、マーケティング、エンジニアリング等のご経験は、コンサルティング業務で高く評価されることが一般的です。弊社では異業種からの転職成功事例も豊富にございます。まずは無料相談にて、あなたのキャリアの可能性を一緒に探らせてください。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> bcg tenshoku に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は bcg-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">BCG junior〜senior パートナー候補 両軸 | brand 60年+ + MBB 3 大戦略ファーム</span>
+      <h1 id="fv-h1">BCGへの転職、<span class="accent">年収+200万円を目指せる</span>チャンス。<br />在職中でも夜間・オンライン相談が可能です</h1>
+      <p class="lede">戦略コンサルへの転職成功者の<strong>平均年収は1,250万円</strong>とされるデータもあり、専門人材の需要は拡大傾向にあるとされます。BCG (ボストン コンサルティング グループ) は<strong>1963年創業の戦略コンサルファーム</strong>で、McKinsey・Bain と並ぶ「3 大戦略ファーム (MBB)」の一角とされ、データドリブン + 業界深耕 + コラボレーティブな組織文化が特徴です。現職に配慮した非公開求人のご紹介・<strong>オンラインでのキャリア相談</strong>・<strong>内定後の辞退も可能</strong>な体制で、あなたの市場価値を最大化できる事例も公開情報で紹介されています。本記事では BCG への挑戦準備を公開情報ベースで整理します。</p>
+      <ul class="fv-bullets">
+        <li>BCG の 4 つの特性 (データ + 業界 + コラボ + テクノロジー)</li>
+        <li>年収レンジ (700-3,000万円帯) + キャリアラダー</li>
+        <li>業界最難度クラスの選考準備</li>
+        <li>アルムナイ卒業後の幅広いキャリア</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_bcg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_bcg">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは BCG 公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は選考通過保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-21</span>
+        <span><b>最終更新</b> 2026-05-21</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 12 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">BCG の 4 つの特性</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): BCG (Boston Consulting Group) 公式キャリアサイト / コンサル特化エージェント公開情報 / <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT 労働政策研究・研修機構</a>。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">特性1</span><h4>データドリブン分析</h4><p>業界統計 + 顧客データ + 市場分析をフル活用したファクトベースのアプローチが特徴とされています。BCG GAMMA (データサイエンス専門部門) + BCG X (デジタル組織) で先進的データ活用に注力するとされています。</p></article>
+        <article class="branch"><span class="tag">特性2</span><h4>業界深耕</h4><p>テクノロジー / ヘルスケア / 金融 / 消費財 / 産業財等の主要業界に深く入り込んだ案件構成。業界別の専門組織が確立しており、業界知見を深耕しやすい環境とされています。</p></article>
+        <article class="branch"><span class="tag">特性3</span><h4>コラボレーティブな文化</h4><p>個人主義的な競争より、チーム + ファーム全体での協働を重視する文化とされています。アソシエイト〜パートナーまで一貫してコラボ重視の評価軸が一般的が一般的です。</p></article>
+        <article class="branch"><span class="tag">特性4</span><h4>テクノロジー強化</h4><p>BCG Digital Ventures (起業支援) + BCG X (デジタル組織) + BCG GAMMA (AI/データ) の3部門で、テクノロジー領域への大規模投資が続いているのケースが多く見られます。</p></article>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_bcg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_bcg">
+          <span>BCG の最新情報を MyVision 公式の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">BCG転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるBCG転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        BCG領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">BCG の年収レンジ + キャリアラダー</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="BCG 年収レンジ">
+          <thead><tr><th>ポジション</th><th>滞在年数</th><th>年収レンジ</th><th>主な役割</th></tr></thead>
+          <tbody>
+            <tr><td>Associate</td><td>1-3 年</td><td>700-1,000万円</td><td>分析 / 仮説検証 / 資料作成</td></tr>
+            <tr><td>Consultant</td><td>2-4 年</td><td>1,200-1,800万円</td><td>サブ案件リード / クライアント窓口</td></tr>
+            <tr><td>Project Leader</td><td>2-4 年</td><td>1,800-2,500万円</td><td>案件統括 / 提案リード</td></tr>
+            <tr><td>Principal</td><td>3-5 年</td><td>2,300-2,900万円</td><td>領域責任 / 大型案件責任</td></tr>
+            <tr><td>Partner / Managing Director</td><td>無期限</td><td>3,000万円+</td><td>クライアント / 経営 / 戦略立案</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>※ 上記は公開情報に基づく一般的目安レンジです。最新の正式金額は BCG 公式キャリアサイト・エージェント面談でご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29&sitemicros=banner_bcg_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www27.a8.net/svt/bgt?aid=260517571035&wid=001&eno=01&mid=s00000024757001007000&mc=1" alt="コンサル特化転職エージェント MyVision (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B3SN7+KU6YA+5B0Y+5ZU29" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>BCG転職の基礎知識：求められる能力と役割</h2><p>ボストン コンサルティング グループ（BCG）は、世界的に展開する経営戦略コンサルティングファームの一つとされます。<br>同社への転職は、様々な業界のトップ企業が抱える経営課題の解決に携わる機会を提供します。<br>求められるのは、単なる分析力に留まらず、複雑な情報を構造化し、本質的な課題を特定する高度な問題解決能力です。<br>また、クライアントやチームメンバーと円滑に協業するためのコミュニケーション能力も不可欠とされます。<br>コンサルタントの役割は、企業の成長戦略立案から組織改革、新規事業開発まで多岐にわたります。<br>なお、国内における職業紹介事業者は、求職者に対して公正な機会を提供することが職業安定法によって定められており、BCGの採用活動もこれに準拠して行われるものと考えられます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">BCG 卒業後のキャリアパス</h2>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>事業会社 CEO / CXO</h4><p>BCG 卒業生は事業会社の CEO / CSO / CFO / COO として登用されるケースが多い傾向とされています。グローバル企業 + スタートアップ + 老舗企業まで幅広いポジションが存在します。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>PE/VC パートナー / 投資家</h4><p>プライベートエクイティ・ベンチャーキャピタル業界での投資判断 + バリュエーション + ポートフォリオ企業支援に活かせるスキルセット。BCG アルムナイ多数と公表されています。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>起業 (連続起業家)</h4><p>BCG Digital Ventures での起業支援経験 + 卒業後の起業事例が多い傾向。ディープテック + サステナビリティ + 業界変革等の領域でアルムナイが起業家として活躍すると示されています。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>グローバル企業役員 / 国際機関</h4><p>世界銀行 / IMF / OECD 等の国際機関、グローバル企業の役員ポジションへの転身も一般的とされ、世界規模のキャリア展開が可能が知られています。</p></article>
+      </div>
+
+      <div class="cta-block">
+        <p>BCG 卒業後のキャリア価値は圧倒的。MyVisionの無料カウンセリングで、自分の市場価値 + 戦略系挑戦の道筋 + アルムナイ視点のキャリア設計を会員登録30秒で確認できます。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=sec4_bcg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec4_bcg">
+          <span>BCG 特化サポートを試す (会員登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>BCGの選考プロセスと効果的な対策</h2><p>BCGへの転職活動を成功させるためには、その独特な選考プロセスを理解し、適切な準備を行うことが重要です。<br>一般的に、選考は「書類選考」「筆記・Webテスト」「複数回のケース面接」「最終面接」というステップで構成されます。<br>特に重要視されるのが、思考力を試されるケース面接です。<br>ここでは、提示されたビジネス上の課題に対し、制限時間内に論理的な分析と説得力のある解決策を提示する能力が評価されます。<br>効果的な対策としては、以下の点が挙げられます。</p><ul><li><strong>ケース面接対策:</strong> 市販の対策本やオンライン教材を活用し、数多くのケース問題に触れることが推奨されます。思考のプロセスを言語化する練習を重ねることが重要です。</li><li><strong>企業・業界研究:</strong> BCGが手掛けた過去のプロジェクトや、公式サイトで公開されているインサイト（論文・レポート）を読み込み、同社の思想やアプローチへの理解を深めることが求められます。</li><li><strong>第三者の活用:</strong> コンサルティング業界に詳しい転職エージェントや、元コンサルタントによる模擬面接サービスを活用することで、客観的なフィードバックを得て改善点を発見することが期待できます。なお、採用後の労働条件については、労働基準法に定められた基準を満たす必要があります。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>BCG転職で選ばれる5つの理由</h3><ul><li>年収+100〜300万円の実現事例多数</li><li>BCG出身者による実践的なケース面接対策</li><li>全体の90%以上が非公開の独占ハイクラス求人</li><li>在職中でも安心の夜間・土日オンライン相談</li><li>内定後の条件交渉まで徹底サポート</li></ul></div></section>
+
+  <section class="lp-section alt" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/mckinsey-tenshoku/"><h4>マッキンゼー 転職</h4><p>戦略最高峰 + アルムナイ</p></a>
+        <a class="card-link" href="/senryaku-consul-tenshoku/"><h4>戦略コンサル 転職</h4><p>BCG / McKinsey / Bain</p></a>
+        <a class="card-link" href="/consul-firm-hikaku/"><h4>コンサル ファーム比較</h4><p>5 区分の決定版</p></a>
+        <a class="card-link" href="/consul-case-mensetsu/"><h4>ケース面接対策</h4><p>業界最難度突破プラン</p></a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="lp-section"><h2>BCG転職に関するよくある質問</h2><div class='faq-block'>
+<div class='faq-item'><h3>BCGの「戦略 + デジタル + イノベーション」領域で特に求められるスキルは何ですか？</h3><p>業界知見と課題解決能力の両方が求められるとされます。厚生労働省の職業情報提供サイト（job tag）でも、コンサルタントには専門性に加え、顧客の事業を理解し、課題を分析・整理する能力が重要とされています。論理的思考力が鍵となります。</p></div>
+<div class='faq-item'><h3>BCGのコンサルタントの年収レンジはどの程度とされますか？</h3><p>公開情報をもとに整理すると、役職や経験に応じて年収は大きく変動しますが、<strong>ジュニアクラスで800万円程度から、シニアクラスでは2500万円</strong>を超えるケースも想定されるようです。厚生労働省「賃金構造基本統計調査」のコンサルタント職の平均値も参考に、自身のスキルと経験を照らし合わせることが推奨されます。</p></div>
+<div class='faq-item'><h3>BCGの選考プロセスでは、どのような点が重視される傾向にありますか？</h3><p>論理的思考力、コミュニケーション能力、そしてBCGの文化やカルチャーへのフィット感が重視されると一般にいわれます。特にケース面接では、未知の課題に対して構造的に考え、説得力のある解決策を提示する能力が試されます。</p></div>
+<div class='faq-item'><h3>異業界からBCGのコンサルタントへ転職する際の注意点はありますか？</h3><p>ポテンシャル採用の枠は存在しますが、戦略 + デジタル + イノベーションに関する基礎知識の自主的な学習は不可欠とされます。<br>自身の過去の経験から、論理的思考力や課題解決能力を具体的に示すエピソードを準備することが重要です。<br>必要であれば、求職者支援制度などを活用したスキル習得も一つの選択肢です。</p></div>
+<div class='faq-item'><h3>BCGでキャリアを積むことで、どのような将来の選択肢が期待できますか？</h3><p>社内での昇進（専門職または管理職）はもちろん、BCGが持つグローバルなネットワークを活かした海外勤務の可能性も考えられます。<br>また、最先端の知見とコンサルティング経験を活かし、大手事業会社のDX推進担当、あるいは独立といった多様なキャリアパスが期待されるでしょう。</p></div>
+</div></section>
+
+  <p class='industry-position'>BCGは<strong>MBB + 戦略系トップ</strong>に分類される代表的なコンサルティングファームの一つです。非公開求人の割合も高く（一般に約 8 割と言われます）、転職活動では非公開求人へのアクセスが選考機会の質を左右する可能性が指摘されています。</p>
+
+  <section class="lp-section"><h2>BCGの国内DX案件・急成長領域での戦略支援</h2><p>BCGは、<strong>国内大手企業</strong>の<strong>DX</strong>(デジタルトランスフォーメーション)案件で<strong>急成長</strong>領域の戦略支援に強みを持つとされ、クラウド・AI・データ分析・業務プロセス改革といった複数の DX テーマで実行支援を行うケースが見られます。国内市場のデジタル化加速に伴い、BCGにおける DX 案件の比重は近年高まる傾向にあり、ジュニア層には急成長領域での新規プロジェクト参画機会、シニア層には国内大手企業のデジタル戦略立案・実行支援といった、persona 別の魅力的なキャリア機会が用意されている点が特徴とされます。</p></section>
+
+  <section class="lp-section"><h2>BCGでのグローバル経験・PE 案件・リーダーシップ機会</h2><p>BCGでは、<strong>グローバル案件</strong>への参画機会が一定数あるとされ、海外オフィスや海外プロジェクトを通じて国際的なキャリア構築が期待できると言われます。また、<strong>PE (Private Equity)</strong>関連の戦略案件やM&A アドバイザリーといった高難度プロジェクトに携わるチャンスもあるとされ、シニアマネジャー以上のポジションでは、<strong>リーダー</strong>として大規模チームを率いる経験が積めることが特徴とされます。グローバル案件や PE 関連リーダー経験は、パートナー昇進やその後の独立・転職市場価値においても重要な実績と評価される傾向にあります。</p></section>
+
+  <section class="lp-section cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">BCG 戦略最高峰へ、集中準備で挑戦する</h2>
+      <p>業界最難度クラス + 卒業後の圧倒的キャリア価値。MyVisionの無料カウンセリングで、戦略系挑戦準備プログラム + 自分の市場価値 + アルムナイ視点キャリア設計を会員登録30秒で確認できます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_bcg`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_bcg">
+          <span>BCG 挑戦を無料カウンセリングで始める</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的が確認されています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢として運用されています。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢とされています。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングが一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

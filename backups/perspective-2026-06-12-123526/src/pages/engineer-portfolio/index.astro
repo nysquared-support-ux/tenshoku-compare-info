@@ -1,0 +1,240 @@
+---
+/**
+ * エンジニア ポートフォリオ 作り方 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-engineer-portfolio-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）';
+const description = 'IT エンジニア向けポートフォリオ作成方法を、GitHub 整備 + 個人開発作品 + 採用担当者が見るポイント + NG パターンで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'エンジニア ポートフォリオ' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'エンジニア ポートフォリオ', 'item': 'https://tenshoku-compare-info.pages.dev/engineer-portfolio/' },
+  ],
+};
+const faq = [
+  { q: 'まだ転職を具体的に考えていないのですが、相談だけでも可能ですか？', a: 'はい、もちろん可能です。まずはご自身の市場価値を知りたい、今後のキャリアパスについて情報収集したい、といった段階でのご相談も歓迎しております。無理に転職をお勧めすることは一切ございません。客観的な視点から、あなたのスキルやご経験が市場でどのように評価されるかをお伝えし、中長期的なキャリアプランニングのお手伝いをさせていただきます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> engineer portfolio に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は engineer-portfolio に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">エンジニア ポートフォリオ / GitHub + 個人開発 + 採用視点</span>
+      <h1 id="fv-h1">
+        エンジニア <span class="accent">ポートフォリオ 作り方</span>完全ガイド<br />
+        GitHub + 個人開発 + 採用担当者視点
+      </h1>
+      <p class="lede">
+        エンジニアのポートフォリオは「GitHub 整備 + 個人開発 1-3 作品 + 技術ブログ / 登壇」の 3 軸が一般的に推奨されているとされています。Star 数より中身の質 (README + コミット履歴 + 設計意図) が重視されるとされています。
+      </p>
+      <ul class="fv-bullets">
+        <li>ポートフォリオの 3 構成要素を整理</li>
+        <li>GitHub プロフィール整備 + 作品選定を体系化</li>
+        <li>採用担当者が見るポイント 5 つ</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 3 構成要素 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">ポートフォリオの 3 構成要素</h2>
+      <p class="section-lede">ポートフォリオは以下 3 構成要素が推奨されているとされています。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">構成 1</span>
+          <h4>GitHub プロフィール</h4>
+          <p>README + ピン留めリポジトリ + コミット履歴。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">構成 2</span>
+          <h4>個人開発作品 1-3 件</h4>
+          <p>Web アプリ / CLI / OSS コントリビュート。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">構成 3</span>
+          <h4>技術ブログ / 登壇</h4>
+          <p>Zenn / Qiita / 個人ブログ + LT / カンファレンス。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的が一般的です。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>構成要素を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 GitHub 整備 + 作品選定 ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">エンジニア portfolio転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるエンジニア portfolio転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        エンジニア portfolio領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">GitHub プロフィール整備と個人開発作品の選定</h2>
+      <p class="section-lede">GitHub プロフィール整備と作品選定は以下が推奨されています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>GitHub プロフィール整備</h3>
+          <p>プロフィール README (自己紹介 + 主要スキル + 連絡先・1 ページで完結) / ピン留め 6 リポジトリ (個人開発 + OSS PR + 学習リポジトリ) / コミット履歴の継続性 (草を緑に保つ) / README の質 (概要 + 技術スタック + 工夫点 + 動作スクリーンショット)</p>
+        </div>
+        <div class="card">
+          <h3>個人開発作品の選定 (推奨パターン + 作品例 5 種)</h3>
+          <p>推奨: 実用性 (自分や友人が使う Web アプリ) / 応募先と類似技術 / 1 機能の深掘り (設計 + デプロイ + 運用) / 動作デモ公開 (Vercel / Netlify / Render)。作品例: 家計簿アプリ (React + Firebase) / ToDo + Pomodoro 統合 / 技術記事 RSS リーダー / 料理レシピ検索 + LLM 提案 / OSS への PR + 課題解決ストーリー</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 採用担当者が見るポイント ============ -->
+  <section class="lp-section"><h2>エンジニア転職におけるポートフォリオの基本</h2><p>近年のITエンジニア転職市場では、職務経歴書だけでは伝わらない技術力を証明する手段として、ポートフォリオの重要性が増しているとされます。<br>ポートフォリオとは、自身のスキルや実績をまとめた作品集であり、主にGitHubアカウント、個人開発アプリケーション、技術ブログなどが含まれます。<br>これらは、採用担当者が応募者の技術レベル、学習意欲、問題解決能力を客観的に評価するための重要な判断材料となります。<br>独立行政法人情報処理推進機構（IPA）が発行する「IT人材白書」でも指摘されている通り、先端IT人材の需給ギャップは大きな課題です。<br>質の高いポートフォリオは、自身のスキルを具体的に提示し、企業が求める人物像と合致することを示すための効果的なツールと言えるでしょう。<br>公開情報をもとに整理すると、ポートフォリオは単なる作品集ではなく、自身の市場価値を高めるための戦略的なプレゼンテーション資料と位置づけられます。</p></section>
+
+  <!-- ============ SECTION 04 NG パターン ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">NG パターン (回避すべき)</h2>
+      <div class="counter-box">
+        <h3>📌 回避すべき NG パターン (公開情報整理)</h3>
+        <div class="row"><b>チュートリアルコード丸写し</b><span>学習過程としては良いが、転職用には弱い</span></div>
+        <div class="row"><b>README なし</b><span>コードがあっても何をするか分からない</span></div>
+        <div class="row"><b>動作デモなし</b><span>採用担当者が動作確認できない</span></div>
+        <div class="row"><b>業務コード公開</b><span>守秘義務違反で重大な信用失墜</span></div>
+        <div class="row"><b>技術スタックのキーワード羅列</b><span>実装と乖離した過大表現</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職効果・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。守秘義務違反は重大な信用問題となります。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>採用担当者に響くポートフォリオの具体的な作り方</h2><p>採用担当者の評価を高めるポートフォリオを作成するには、戦略的なアプローチが求められます。<br>単に作品を並べるだけでなく、自身の強みを効果的に見せることが重要です。<br>まず、GitHubプロフィールの整備から始めましょう。<br>最も自信のあるリポジトリをピン留めし、各リポジトリのREADME.mdにはプロジェクトの目的、使用技術、アーキテクチャ図、工夫した点などを分かりやすく記載します。<br>これは、あなたのドキュメンテーション能力を示すことにも繋がります。<br>次に個人開発ですが、厚生労働省が運営する「職業情報提供サイト（job tag）」などを参考に、市場で需要の高い技術を取り入れるのも一つの手です。<br>例えば、クラウドサービスへのデプロイ経験や、API連携の実装は高く評価される傾向にあるとされます。<br>重要なのは、これら一連の活動について「なぜそうしたのか」を自身の言葉で説明できることです。</p><ul><li><strong>GitHubの整備:</strong> プロジェクトの概要、使用技術、工夫した点を記載したREADME.mdを作成し、技術的な背景を明確に伝えます。</li><li><strong>個人開発のテーマ設定:</strong> 自身の興味や解決したい課題に基づき、オリジナリティのあるテーマを選び、主体性や問題解決能力をアピールします。</li><li><strong>技術選定の言語化:</strong> なぜそのフレームワークや言語を選んだのか、設計思想と共に説明できるように準備し、面接での質疑応答に備えます。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>エンジニアポートフォリオ で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの交渉実績多数</li><li>IT/Web業界に特化した非公開・独占求人</li><li>現職に配慮した夜間・土日のオンライン相談</li><li>キャリアプランを共に描く専門コンサルタント</li><li>納得いくまでサポート、内定後の辞退も可能</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

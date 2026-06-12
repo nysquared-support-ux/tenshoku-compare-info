@@ -1,0 +1,228 @@
+---
+/**
+ * フルリモート エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 2,900 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-fullremote-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'フルリモート エンジニア 転職完全ガイド｜企業の見極め方 5 基準 + 求人探し方（2026年版・PR）';
+const description = 'フルリモート可能企業への転職を検討中の IT エンジニア向け。フルリモート企業の特徴 + 求人を見つける 3 ステップ + 必須スキル + 年収帯 + 失敗パターンを公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'フルリモートエンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">🔍</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 判断・診断</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> full remote engineer に焦点を当てた 判断・診断 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 判断・診断 全体を扱うのに対し、本 LP は full-remote-engineer に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">IT エンジニア転職 / フルリモート</span>
+      <h1 id="fv-h1">
+        <span class="accent">フルリモート エンジニア</span>転職完全ガイド<br />
+        企業の見極め方 5 基準 + 求人探し方
+      </h1>
+      <p class="lede">
+        フルリモート可能な IT 企業は実在し、Web 自社開発・SaaS スタートアップ・外資 IT で一定数の求人が存在するとされています。
+        但し企業選別基準 + 業務スタイル理解 (非同期コミュニケーション等) が必須とされています。公的出典 + 公開求人情報をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>フルリモート企業の見極め 5 基準</li>
+        <li>求人を見つける 3 ステップ</li>
+        <li>必須スキル + 業界別年収帯 + フルリモート率</li>
+        <li>JILPT・IPA・厚労省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 結論 + 見極め5基準 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論とフルリモート企業の見極め 5 基準</h2>
+      <p class="section-lede">
+        フルリモート可能な IT 企業は実在し、Web 自社開発・SaaS スタートアップ・外資 IT で一定数の求人が存在するとされています。
+        但し企業選別基準 + 業務スタイル理解が必須です。以下 5 基準で見極めます。
+      </p>
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">① 制度の明示性</span>
+          <h4>採用ページに「フルリモート可」明記</h4>
+          <p>採用ページ・職務記述書に「フルリモート可」が明記されているかを確認。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">② 勤続実績</span>
+          <h4>既存社員のフルリモート勤続 1 年以上</h4>
+          <p>既存社員のフルリモート勤続実績 (1 年以上) があるか。制度はあっても形骸化していないか。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">③ 業務ツール整備</span>
+          <h4>Slack/Notion/Figma/Linear</h4>
+          <p>非同期前提ツール (Slack / Notion / Figma / Linear 等) が整備されているか。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">④ 1on1 文化</span>
+          <h4>定期 1on1・チームミーティング体制</h4>
+          <p>マネージャーとの定期 1on1・チームミーティング体制があるか。孤独感対策の有無。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">⑤ 給与制度</span>
+          <h4>居住地で給与差別がない</h4>
+          <p>居住地で給与差別がない (or 透明な差別基準) か。地方在住者の実質可処分所得に直結。</p>
+        </article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的とされています。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>見極め基準を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 求人探し3ステップ + 必須スキル ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">フルリモートエンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込めるフルリモートエンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        フルリモートエンジニア領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">求人を見つける 3 ステップと必須スキル</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>求人を見つける 3 ステップ</h3>
+          <p><strong>Step 1: IT 特化転職エージェント登録</strong> — ハイクラス・IT 特化エージェント (TechGo / レバテックキャリア 等)。フルリモート希望を明示し紹介求人を絞り込み<br /><strong>Step 2: スカウト型サービス併用</strong> — LinkedIn / ビズリーチ / Findy 等。プロフィールに「フルリモート希望」明示で企業側アプローチが受けやすい<br /><strong>Step 3: フルリモート特化求人サイト</strong> — We Work Remotely / Remote OK / Remotive 等。但し業務委託契約・税務処理に注意</p>
+        </div>
+        <div class="card">
+          <h3>フルリモートで必須のスキル</h3>
+          <p><strong>自己管理力</strong>: 勤務時間管理・タスク管理・モチベーション維持<br /><strong>非同期コミュニケーション</strong>: Slack/Notion での明確な文書化<br /><strong>主体的な情報共有</strong>: 進捗・課題を能動的に発信<br /><strong>オンライン会議スキル</strong>: 簡潔な発言・ファシリテーション<br /><strong>文書化能力</strong>: 議事録・設計書・ドキュメントの作成</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 年収帯 + フルリモート率 ============ -->
+  <section class="lp-section"><h2>フルリモートエンジニア転職の基礎知識：定義と市場動向</h2><p>フルリモートワークとは、原則として出社義務がなく、自宅や任意の場所で業務を完結させる働き方を指します。<br>週に数日出社するハイブリッドワークとは明確に区別されます。<br>エンジニア職でフルリモートが普及している背景には、業務の多くがPC上で完結すること、そしてSlackやGitHubといったコミュニケーション・開発ツールの進化が挙げられます。<br>これにより、物理的な場所に縛られずに高い生産性を維持できる環境が整ったとされます。</p><p>近年の市場動向として、多くのIT企業がフルリモート制度を導入・継続していますが、一方で一部企業ではコミュニケーション活性化などを目的に出社回帰の動きも見られます。<br>厚生労働省が「テレワーク総合ポータルサイト」等で多様な働き方を推進しているように、フルリモートは働き方の選択肢として定着しつつあります。<br>フルリモートでの転職を成功させるためには、こうした市場全体の流れを理解し、求人情報だけでなく、企業の文化やリモートワークへの本気度を慎重に見極めることが不可欠と言えるでしょう。<br>公開情報をもとに整理すると、企業のステージや事業内容によってもリモートワークの方針は大きく異なるため、事前の情報収集が重要となります。</p></section>
+
+  <!-- ============ SECTION 04 失敗パターン + 反例 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">フルリモートで回避すべき失敗パターン</h2>
+      <div class="counter-box">
+        <h3>📌 失敗パターン (回避すべき・公開情報整理)</h3>
+        <div class="row"><b>孤独感・モチベーション低下</b><span>1on1 不在 / 雑談機会なし</span></div>
+        <div class="row"><b>キャリア停滞</b><span>評価が不透明 / 昇進機会少ない</span></div>
+        <div class="row"><b>業務範囲縮小</b><span>重要案件はオフィス勤務者優先</span></div>
+        <div class="row"><b>勤怠管理過剰</b><span>監視ツール・常時カメラ ON 等のミスマッチ</span></div>
+        <div class="row"><b>給与差別</b><span>居住地での不当な差別</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。フルリモート企業選別時は SECTION 01 の 5 基準で見極め、失敗パターンを事前に回避することが推奨されます。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連 ============ -->
+  <section class="lp-section"><h2>失敗しないフルリモート企業の選び方：具体的な3つのステップ</h2><p>フルリモートという働き方は魅力的ですが、企業選びを誤ると「孤独感」「評価への不安」「コミュニケーション不足」といった問題に直面する可能性があります。<br>入社後のミスマッチを防ぐため、以下の3ステップで企業を慎重に見極めることが推奨されます。<br>求人広告と実際の労働条件が異なるケースについては、消費者庁も注意を呼びかけており、事前の確認が極めて重要です。</p><p>まず、企業の「リモートワーク文化」が本当に根付いているかを確認します。<br>求人票の「フルリモート可」という言葉だけでなく、企業の技術ブログや社員のSNS、口コミサイトからリアルな働き方を調査しましょう。<br>次に、面接の場で「コミュニケーション設計」について具体的に質問します。<br>テキストベースでのやり取りのルール、使用ツール、ドキュメント文化の有無などを確認することで、円滑に業務を遂行できる環境か判断できます。<br>最後に、「評価制度とキャリアパスの透明性」を確かめます。<br>リモート環境では業務プロセスが見えにくいため、成果を正当に評価する仕組みが不可欠です。<br>労働契約法で定められた労働条件の明示義務に基づき、評価基準や昇進・昇格の実績について、契約前に明確にしておくことが望ましいとされます。</p><ul><li><strong>ステップ1：リモートワーク文化の確認</strong>: 制度（手当・備品貸与）と実態（社員ブログ・口コミ）の両面から情報収集を行う。</li><li><strong>ステップ2：コミュニケーション設計の評価</strong>: 面接時に、非同期コミュニケーションのルールや使用ツール、ドキュメント文化の有無を質問する。</li><li><strong>ステップ3：評価制度とキャリアパスの透明性</strong>: 成果を評価する仕組みや、リモート環境での昇進実績について確認する。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>IT エンジニア業界の選考プロセスに特化した実践的対策</li><li>大手 SIer からスタートアップまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-portfolio/">エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">🔍 判断・診断 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">適職判断ガイドライン</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業診断</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

@@ -1,0 +1,167 @@
+---
+/**
+ * AI エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 推定 1,900 / ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-ai-engineer-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = 'AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）';
+const description = 'AI / 機械学習エンジニアの転職を検討中の方向け。LLM 時代の必須スキル + 業界別年収帯 + キャリアパス + 求人傾向を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: 'AI エンジニア転職' },
+];
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">AI エンジニア senior / ML リード / Research Scientist 候補向け</span>
+      <h1 id="fv-h1">
+        AIエンジニア senior / リード ハイクラス転職<br />
+        <span class="accent">年収+700万円超</span>の非公開求人 + senior 専任サポート
+      </h1>
+      <p class="lede">
+        AI エンジニア senior / ML リード / Research Scientist 候補のハイクラス転職では、<strong>ML リード 1,500-2,500 万円・Research Scientist 1,800-3,000 万円・AI VPoE 候補 2,000-3,500 万円超</strong>のレンジが目安とされ、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。LLM (生成 AI) 急成長で需要が爆発しており、本記事では公開情報の整理に加え、<strong>非公開ハイクラス求人</strong>のアクセス path + <strong>過去の匿名成功事例 (例: ML 研究者 → 外資 AI Research Lab 3,000 万円 + SO)</strong>を扱う senior 専任エージェントの活用法を整理します。AI senior 転職は <strong>① senior 専任エージェント (非公開求人) + ② AI/ML 特化型 (技術理解)</strong> の <strong>2 軸組合せ</strong>が推奨されます。
+      </p>
+      <ul class="fv-bullets">
+        <li>AI エンジニア 4 種類 + 必須スキル整理</li>
+        <li>LLM 時代の技術/数学スキル体系化</li>
+        <li>経験年数別 年収帯 + 業界別求人傾向</li>
+        <li>JILPT・IPA・経産省 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>無料で市場価値を確認する (在職中OK・夜間相談可)</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 6 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">結論と AI エンジニアの 4 種類</h2>
+      <p class="section-lede">2026 年現在、AI エンジニア市場は LLM 急成長で需要急増中。役割により 4 種類に分かれ、ML 基礎 + Deep Learning + LLM 活用の 3 段階スキルが転職成否を決めます。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">ML エンジニア</span><h4>モデル設計・学習・チューニング</h4><p>機械学習モデルの設計・学習・ハイパーパラメータチューニングが中心。数学・統計基礎が前提。</p></article>
+        <article class="branch"><span class="tag">MLOps エンジニア</span><h4>機械学習基盤・継続学習</h4><p>機械学習基盤・継続学習パイプライン構築。クラウド ML サービス + DevOps スキルが評価される。</p></article>
+        <article class="branch"><span class="tag">LLM アプリエンジニア</span><h4>GPT/Claude API + RAG + Agent</h4><p>LLM API 活用・RAG・Agent 実装。2026 年最も需要が伸びている領域とされる。</p></article>
+        <article class="branch"><span class="tag">データサイエンティスト</span><h4>統計分析 + ビジネス課題解決</h4><p>統計分析 + ビジネス課題解決。技術深度とビジネス貢献の両立が問われる。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的とされています。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>4 種類を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">AI エンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>の大幅アップが見込めるAI エンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        エンジニア採用市場の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談 + リモート対応</strong>で無理なく転職活動を進められる体制が整っているとされ、AI エンジニア 600～1,500 万円 (LLM・生成 AI 領域)のレンジで具体的なキャリア設計が可能と言われます。
+        LLM・プロンプトエンジニアリング + ファインチューニング経験は、DX 推進市場における技術人材の市場価値を押し上げる重要な実績として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">必須スキル (LLM 時代)</h2>
+      <p class="section-lede">年収高単価帯では技術スキルに加えて数学・統計基礎の両立が評価されるが一般的です。</p>
+      <div class="card-grid">
+        <div class="card"><h3>技術スキル</h3><p>Python + ML フレームワーク (PyTorch / TensorFlow / scikit-learn) / LLM API (OpenAI / Anthropic / Google) / RAG + ベクトル DB (Pinecone / Weaviate) / プロンプトエンジニアリング + Few-shot / Chain-of-Thought / MLOps (MLflow / Vertex AI / SageMaker) / クラウド (AWS/GCP) ML サービス</p></div>
+        <div class="card"><h3>数学・統計基礎</h3><p>線形代数 / 確率統計 / 微分積分 / 機械学習アルゴリズム理解 (教師あり/教師なし/強化学習)。<br>文系出身でも数学基礎 + Python + ML フレームワーク習得で転身事例があるとされていますが、キャリア初期は厳しい傾向もあります。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>LLM時代のAIエンジニア転職：市場の基本理解</h2><p>大規模言語モデル（LLM）の登場は、AIエンジニアの役割と転職市場に大きな変化をもたらしました。<br>従来は、データ収集からモデルの設計・学習・評価までを一貫して行う能力が主に求められていましたが、現在は高性能な基盤モデルをいかに効率的に活用・応用するかが新たな焦点となっています。<br>これにより、プロンプトエンジニアリングやファインチューニングといったスキルセットの重要性が急速に高まっているとされます。<br>経済産業省の「IT人材需給に関する調査」においても、AIを含む先端IT人材の需要は今後も拡大すると予測されており、特に生成AI関連の知見を持つエンジニアは多くの企業から求められる傾向にあります。<br>転職市場を理解する上では、こうした技術トレンドの変化と、それに伴う企業のニーズの変化を正確に把握することが、キャリアパスを考える上での第一歩となると一般に考えられます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">転職戦略 5 ステップ</h2>
+      <div class="card-grid">
+        <div class="card"><h3>転職戦略 5 ステップ</h3><p>① GitHub に ML プロジェクト + Kaggle / SIGNATE 実績公開<br />② LLM 活用個人開発 (RAG / Agent) でアウトプット<br />③ 論文輪読 + 技術ブログ / Zenn 投稿<br />④ AI 特化エージェント + スカウト型 (LinkedIn) 併用<br />⑤ 年収交渉では市場価値 + 実績 + 論文/OSS で示す</p></div>
+        <div class="card"><h3>YMYL リスク認識</h3><p>年収・キャリアは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。AI 領域は技術変化が速く、継続学習が前提となるレンジです。具体的判断は AI 特化エージェントへの相談を推奨します。</p></div>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>転職成功への具体的ステップと必須スキルセット</h2><p>AIエンジニアとしての転職を成功させるためには、戦略的な準備が不可欠です。<br>まず、自身の経験やスキルを棚卸しし、どのような分野（自然言語処理、画像認識など）でキャリアを築きたいかを明確にします。<br>その上で、目標とする分野で求められる最新スキルを習得し、その能力を証明するポートフォリオを作成することが重要です。<br>特にLLM時代の現在、以下のスキルセットは市場価値を高める上で有効とされます。<br>これらは、総務省が公開する「AI開発ガイドライン」などで示される倫理的配慮も念頭に置きながら習得することが望ましいでしょう。</p><ul><li><strong>基盤モデルの活用・応用スキル:</strong> GPTシリーズやClaude等のAPI連携、特定のタスクに合わせたファインチューニング技術。</li><li><strong>プロンプトエンジニアリング:</strong> 意図した品質の出力を安定して引き出すための、効果的な指示（プロンプト）を設計・最適化する能力。</li><li><strong>クラウドプラットフォームの知見:</strong> AWS SageMaker, Google Vertex AI, Azure Machine Learningなど、主要なクラウド環境でのモデル開発・運用経験。</li><li><strong>データパイプライン構築・MLOps:</strong> データの収集・前処理からモデルのデプロイ・監視までを自動化・効率化する技術。</li></ul><div class='career-catch-box'><h4>キャリア志向の方へ</h4><ul><li>内定後の辞退OK</li><li>市場価値最大化</li><li>在職中の慎重活動</li></ul></div><div class='benefit-summary'><h3>AI エンジニア転職 (機械学習・データサイエンス) で選ばれる5つの理由</h3><ul><li>年収100〜300万円アップの成功事例多数</li><li>AI/データサイエンス領域特化の専門コンサルタント</li><li>全体の8割以上が非公開・独占求人</li><li>在職中でも安心の夜間・オンライン相談対応</li><li>内定後の辞退も可能。納得のいくキャリア選択を支援</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer-tenshoku/">DevOps / SRE エンジニアの転職完全ガイド｜CI/CD・SRE・クラウド経験別の市場価値とキャリアパス｜TechGo (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

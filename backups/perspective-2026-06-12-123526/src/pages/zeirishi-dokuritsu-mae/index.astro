@@ -1,0 +1,259 @@
+---
+/**
+ * 税理士 独立前の転職おすすめ LP (ツインプロ・RichLayout 準拠)
+ * ★326 DRY zeirishi-kamoku-tenshoku テンプレ流用
+ * ★480 ツインプロ a8mat verbatim copy-paste (BWVTE 001 / BXB8X 003 / BXYE9 006・再入力禁止)
+ * slug: zeirishi-dokuritsu-mae / KW: 税理士 独立前 転職
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '税理士の独立前の転職おすすめ4社比較｜開業前に積んでおきたい経験と選び方【2026年版】';
+const description = '税理士が独立開業前に経験を積むための転職を検討する方向けに、転職エージェント4社 (ツインプロ・マイナビ会計士・MS-Japan・リクルート) を公開情報で整理。独立前に積んでおきたい経験・転職先の選び方5基準が分かる(PR)。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '転職エージェント', url: '/osusume/' },
+  { name: '税理士 独立前 転職' },
+];
+
+const itemListSchema = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  'name': '税理士の独立準備向け転職エージェント主要 4 サービス比較',
+  'description': '独立開業を視野に入れる税理士向け転職エージェント 4 社の公開情報整理',
+  'itemListOrder': 'https://schema.org/ItemListUnordered',
+  'itemListElement': [
+    {'@type': 'ListItem', 'position': 1, 'item': {'@type': 'Service', 'name': 'ツインプロ', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '士業有資格者特化・無料キャリア面談・実務領域を踏まえた相談', 'provider': {'@type': 'Organization', 'name': 'MyVision 株式会社'}}},
+    {'@type': 'ListItem', 'position': 2, 'item': {'@type': 'Service', 'name': 'マイナビ会計士', 'serviceType': '会計士・税理士特化 転職エージェント', 'description': '税理士・会計士特化・大手系列・若手中堅対応', 'provider': {'@type': 'Organization', 'name': '株式会社マイナビ'}}},
+    {'@type': 'ListItem', 'position': 3, 'item': {'@type': 'Service', 'name': 'MS-Japan', 'serviceType': '管理部門特化 転職エージェント', 'description': '経理・財務・税理士向け・税理士法人/事業会社経理に強み', 'provider': {'@type': 'Organization', 'name': '株式会社 MS-Japan'}}},
+    {'@type': 'ListItem', 'position': 4, 'item': {'@type': 'Service', 'name': 'リクルートエージェント', 'serviceType': '総合型転職エージェント (士業含む)', 'description': '求人数 60 万件以上・税理士・経理求人もカバー・併用推奨', 'provider': {'@type': 'Organization', 'name': '株式会社リクルート'}}},
+  ],
+};
+
+const faq = [
+  { q: '税理士が独立前に転職を経験するケースは多いのでしょうか？', a: '公的な統計は限定的ですが、多様な実務経験を積むために転職を選ぶ税理士は少なくないとされます。特に、資産税や事業承継など特定の専門性を高める目的で会計事務所を移るケースが見られます。厚生労働省の「令和4年賃金構造基本統計調査」によると会計士・税理士の平均年齢は42.9歳であり、キャリア形成の中で転職を経験する機会は十分にあると考えられます。' },
+  { q: '独立開業を見据えた場合、どのような業務経験が特に重要ですか？', a: '法人・個人の税務申告に加え、資金繰り相談、事業計画策定支援、相続・事業承継コンサルティングなどの経験が重要とされます。特に、中小企業庁の調査でも多くの経営者が課題として挙げる資金調達や販路開拓に関するアドバイス経験は、独立後に顧客からの信頼を直接得るための強力な武器になる可能性があります。多様な課題解決能力が求められます。' },
+  { q: '大手税理士法人と中小会計事務所、独立前にはどちらで経験を積むべきですか？', a: 'それぞれに利点があります。大手では大規模クライアントの複雑な案件や特定分野の深い専門知識が期待できます。一方、中小事務所では経営者との距離が近く、税務に限らず経営全般の相談に応じる機会が多いとされます。ご自身の目指す独立後の税理士像（専門特化型か、地域密着の総合型か）に応じて選択することが肝要です。' },
+  { q: '独立を視野に入れた転職活動で、現職のうちに注意すべき点はありますか？', a: 'まず、税理士法第38条で定められた守秘義務の遵守が絶対です。顧客情報や業務上の機密情報を持ち出すことは厳禁です。また、円満な退職のために、後任者への引継ぎを丁寧に行うことが重要です。自身の経験やスキルを客観的に棚卸しし、次の職場で何を学びたいのかを明確にしておくことで、転職活動がスムーズに進むと期待されます。' },
+  { q: '独立準備と転職活動を効率的に両立させるコツはありますか？', a: '将来の独立後の事業計画から逆算し、それに必要なスキルや経験は何かを明確にすることが重要です。その上で、転職エージェントのような第三者の専門サービスを活用することで、効率的な情報収集や面接日程の調整が可能になります。客観的な視点からのキャリア相談は、自身の計画を具体化し、時間的な負担を軽減する上で有効な手段とされます。' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', 'position': i + 1,
+    'name': b.name,
+    ...(b.url ? { 'item': `https://tenshoku-compare-info.pages.dev${b.url}` } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">¥</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 価格・料金</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> zeirishi dokuritsu mae に焦点を当てた 価格・料金 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 価格・料金 全体を扱うのに対し、本 LP は zeirishi-dokuritsu-mae に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">士業転職 / 独立開業を視野に入れる税理士</span>
+      <h1 id="fv-h1">
+        税理士の<span class="accent">独立前の転職</span>おすすめ 4 社比較<br />
+        開業前に積んでおきたい経験と選び方 5 基準
+      </h1>
+      <p class="lede">
+        独立開業を視野に入れる税理士の転職は ① 士業特化エージェント (ツインプロ等) ② 管理部門特化 (MS-Japan) ③ 総合型併用 (リクルート等) の 3 軸組合せが推奨されます。
+        厚生労働省・日本税理士会連合会・JILPT 公的出典をもとに編集部が中立に整理した記事です。
+      </p>
+      <ul class="fv-bullets">
+        <li>独立前に積んでおきたい実務経験 4 区分</li>
+        <li>独立後の業務を見据えた転職先の選び方</li>
+        <li>4 社比較 + 選び方 5 基準 + 利用の流れ 5 ステップ</li>
+        <li>厚労省・日本税理士会連合会 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=dokuritsu_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="dokuritsu_fv">
+          <span>ツインプロ公式で税理士・士業特化の無料キャリア面談を見る</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。完全無料 / オンライン完結 / 在職中相談可 / 退会自由 (公開情報)。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-23</span>
+        <span><b>最終更新</b> 2026-05-23</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 8 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">独立前に積んでおきたい経験・転職でできること</h2>
+      <p class="section-lede">独立開業を見据えた税理士が、転職を通じて補える代表的な実務経験を公開情報ベースで整理します。何が必要かは目指す事務所像により異なります。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">経験①</span><h4>幅広い税目の実務</h4><p>公開情報上、法人税務・所得税務・消費税務・相続税務など、扱う税目の幅を広げておくことが独立後の対応力につながるとされることがあります。</p></article>
+        <article class="branch"><span class="tag">経験②</span><h4>顧客対応・面談の経験</h4><p>独立後は顧問先との関係構築が業務の中心になるとされ、顧客対応・面談・提案の経験を積める職場が選択肢として挙げられることがあります。</p></article>
+        <article class="branch"><span class="tag">経験③</span><h4>申告書作成の一連の業務</h4><p>記帳から申告書作成・チェックまでの一連の業務を主体的に担う経験が、独立後の業務遂行の基礎になるとされています。</p></article>
+        <article class="branch"><span class="tag">経験④</span><h4>事務所運営・マネジメント</h4><p>スタッフのマネジメント・事務所運営の経験は、開業後に従業員を雇う場合の準備として挙げられることがあります。</p></article>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>年収データ (公開情報)</h3><p><strong>厚生労働省「賃金構造基本統計調査(令和6年)」</strong>: 公認会計士・税理士の平均年収は856.3万円とされています。<br />独立前の転職は年収そのものより「不足する経験を補う」目的で検討されることがあり、年収と経験のバランスをどう取るかは個別判断とされています。本記事は特定の年収を保証するものではありません。</p></div>
+        <div class="card"><h3>本記事で得られる判断</h3><p>① 4 社の対象・強み比較<br />② 独立後の方向性別の転職先の考え方<br />③ 失敗回避 5 基準<br />④ 利用の流れ 5 ステップ<br />⑤ 独立準備をエージェントに共有する考え方</p></div>
+      </div>
+      <p class="compare-note">※ 本記事は公開情報・各エージェント公開情報の整理であり、独自の口コミ調査結果ではありません。情報源: <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a>・<a href="https://www.nichizeiren.or.jp/" target="_blank" rel="noopener">日本税理士会連合会</a>・<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a>・<a href="https://www.nta.go.jp/" target="_blank" rel="noopener">国税庁</a>・各エージェント公式サイト / 最終レビュー日: 2026-05-23。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=dokuritsu_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="dokuritsu_features">
+          <span>独立準備を踏まえ ツインプロ公式で無料キャリア面談を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">税理士独立前転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める税理士独立前転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、税理士 600～1,500 万円・税理士法人代表 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        税理士独立前領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">おすすめ 4 社比較表 (士業特化 + 管理部門 + 総合型)</h2>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="独立準備中の税理士向け転職エージェント 4 社比較">
+          <thead><tr><th>エージェント</th><th>対象</th><th>強み</th><th>特徴 (公開情報)</th></tr></thead>
+          <tbody>
+            <tr><td>&#11088; ツインプロ</td><td>税理士・会計士・士業有資格者</td><td>士業特化・無料キャリア面談</td><td>MyVision 社運営・士業有資格者向け転職エージェント・事務所の業務範囲を踏まえた相談</td></tr>
+            <tr><td>マイナビ会計士</td><td>税理士・公認会計士</td><td>大手系列・求人数</td><td>株式会社マイナビ運営・税理士・会計士特化・若手中堅対応</td></tr>
+            <tr><td>MS-Japan</td><td>経理・財務・税理士</td><td>管理部門特化</td><td>税理士法人・事業会社経理転職に強み・MS-Japan 社運営</td></tr>
+            <tr><td>リクルートエージェント</td><td>総合型 (税務・経理含む)</td><td>求人数 60 万件+</td><td>税理士・経理求人も一部カバー・士業特化との併用推奨</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">※ 比較は各エージェント公開情報の整理 (参考値)。実際の求人数・対応範囲・年収相場は変動します。最新情報は各エージェント公式サイトでご確認ください。</p>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi-dokuritsu-mae_hero" target="_blank" rel="nofollow" data-page-slug="zeirishi-dokuritsu-mae">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>税理士が独立前に転職する意義と目的</h2><p>税理士が独立開業を目指す上で、なぜ一度転職を挟むという選択肢が有効なのでしょうか。<br>その主な目的は、将来の顧客に提供できる価値を最大化するための戦略的な経験獲得にあるとされます。<br>具体的には、「経験の幅の拡大」「専門性の深化」「人脈の構築」の3点が挙げられます。<br>例えば、これまで法人税務が中心だった方が、資産税や事業承継に強みを持つ事務所へ移ることで、対応可能な業務領域を広げることができます。<br>逆に、中小の会計事務所でクライアントの経営全般に深く関わる経験を積むことも、独立後の総合的なコンサルティング能力の基盤となります。<br>税理士法第一条では、税理士の使命として「納税義務者の信頼にこたえ、租税に関する法令に規定された納税義務の適正な実現を図ること」が定められていますが、この信頼に応えるためには、多様な実務経験に裏打ちされた深い知見が不可欠です。<br>独立前の転職は、この使命をより高いレベルで全うするための、重要な準備期間と位置づけることができるでしょう。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">まとめ — 独立を見据えたキャリア戦略と向き不向き</h2>
+      <div class="counter-box">
+        <h3>📌 まとめ (一般的傾向・個別判断は各エージェント相談を推奨)</h3>
+        <div class="row"><b>3 軸併用戦略</b><span>ツインプロ (士業特化) + MS-Japan (管理部門特化) + リクルート (求人数) の 2〜3 社並行登録</span></div>
+        <div class="row"><b>独立準備の方針</b><span>独立後に扱いたい分野を明確にし、その分野の経験を積める職場を選ぶ / 顧客対応・事務所運営の経験も視野に</span></div>
+        <div class="row"><b>向いている人</b><span>将来の独立開業を視野に入れ、不足する実務経験を計画的に補いたい税理士・在職中に相談したい方</span></div>
+        <div class="row"><b>向かない人</b><span>独立の意向がなく、税理士・士業と無関係の異業種転職を検討中の方は総合型エージェントを優先</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);">転職活動 3 ステップ: STEP1 2〜3 社並行登録 &rarr; STEP2 各担当者と独立の方向性・補いたい経験を共有 &rarr; STEP3 求人比較・面接で最終判断。<strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は公開情報整理であり、転職成功保証・独立成功保証ではなく特定エージェントを推奨するものでもありません。</p>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi-dokuritsu-mae_footer" target="_blank" rel="nofollow" data-page-slug="zeirishi-dokuritsu-mae">
+          <img border="0" width="300" height="250" alt="ツインプロ - 会計士・税理士特化 転職エージェント" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" loading="lazy" style="position:absolute;left:-9999px" />
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=dokuritsu_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="dokuritsu_final">
+          <span>後悔しない選択のために ツインプロ公式で無料キャリア面談</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は転職成功保証・独立成功保証ではなく、特定エージェントを推奨するものでもありません。具体的判断は各エージェントの無料キャリア面談を活用ください。最終確認日: 2026-05-23。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>独立を見据えた転職先の選び方：5つの具体的視点</h2><p>独立開業というゴールから逆算して転職先を選ぶ際には、目先の待遇だけでなく、将来に繋がる経験が得られるかを慎重に見極める必要があります。公開情報や専門家の意見を参考に、以下の5つの視点から検討することが推奨されます。</p><ul><li><strong>業務内容の多様性と専門性:</strong> 独立後に主力としたい分野（例：相続、M&A、スタートアップ支援）の実務経験が積めるかが重要です。単なる記帳代行や申告書作成だけでなく、付加価値の高いコンサルティング業務に関与できる環境かを確認することが望ましいとされます。</li><li><strong>クライアントの規模と業種:</strong> 日本経済の根幹を支える中小企業の支援経験は、独立後に大きな強みとなります。中小企業庁の「中小企業白書」でも示されている通り、多様な業種の経営課題に触れることは、対応力の向上に直結します。</li><li><strong>事務所の経営方針と将来性:</strong> 所長税理士の経営哲学やビジョンに共感できるかは、働く上でのモチベーションに影響します。将来の事業承継の可能性なども含め、事務所の方向性を理解することが大切です。</li><li><strong>働き方と裁量権:</strong> 独立後は自身で全てを管理するため、早い段階で自己完結できる業務スタイルを経験しておくことが有効です。どの程度の裁量権を持ってクライアントを担当できるかは、成長速度を左右する要素です。</li><li><strong>人脈形成の機会:</strong> 弁護士や司法書士など、他士業との連携機会が豊富な事務所は、独立後のネットワーク構築の基盤となり得ます。所内外の研修制度の充実度も確認したいポイントです。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 専門エージェントを活用して転職先を探すメリット (★544 ②):</strong><ul><li><strong>キャリアプランの明確化と時間短縮:</strong> 独立という目標から逆算した最適なキャリアパスの提案を受けられ、手探りで情報収集する時間を短縮できる可能性があります。</li><li><strong>非公開求人へのアクセス:</strong> 独立志向の税理士を歓迎する会計事務所や、将来の幹部候補を求める求人など、一般には公開されていない選択肢に出会えることが期待されます。</li><li><strong>客観的な市場価値の把握と安心感:</strong> 自身の経験が市場でどう評価されるかを知ることは、計画的なキャリア形成に繋がります。これは厚生労働省が推進する「職業能力開発促進法」の趣旨にも沿うものであり、将来への安心感を得られると考えられます。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-20dai/">税理士20代の転職おすすめ4社比較｜試験合格直後・税理士法人スタッフ向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-jigyoukaisha/">税理士の事業会社への転職おすすめ4社比較｜経理・税務・経営企画への道と選び方【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-nenshu/">税理士年収相場2026｜Big4・大手・中堅・個人事務所・事業会社別の年収統計と転職アップ戦略【公開情報】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-shokumukeirekisho/">税理士 職務経歴書の書き方ガイド｜業務領域別の整理軸（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-sozokuzei/">相続税専門税理士キャリア｜大手相続部・個人事務所代表・信託銀行連携選び方5基準【2026年版】</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">¥ 価格・料金 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">業種別年収の公的データ</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://www.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 賃金構造基本統計調査</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

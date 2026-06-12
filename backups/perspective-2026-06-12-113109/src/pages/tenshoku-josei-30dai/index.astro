@@ -1,0 +1,190 @@
+---
+/**
+ * 30代女性 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * sv 8,100 / seo-flow cycle 0547 LP候補 (A2 8.0/8.5/7.5 avg 8.00 ★382 80+ クリア)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・seo-flow 本文流し込み
+ * ★365 重複チェック済 (tenshoku-josei-30dai 新規・既存 slug 重複なし)
+ * ★480 TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (critical-urls.md L458)
+ * 景表法配慮: 「業界最大」→「業界最大級」softening (★499)
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '30代女性の転職 完全ガイド｜成功戦略 5 ステップとエージェント選び（2026年版・PR）';
+const description = '30代女性の転職を検討中の方向け。転職市場の現状・ベストタイミング 3 サイン・成功戦略 5 ステップ・エージェント選び・よくある失敗を JILPT/厚労省 公的統計 + 各社公開情報に基づき整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '30代女性の転職' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': [
+    { '@type': 'Question', 'name': '30代で未経験の職種に転職することはできますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可能ですが 20 代と比べ難易度は上がります。スキル親和性の高い職種選び + 学習への積極性をポートフォリオで示すことが鍵。営業→マーケは比較的スムーズ・専門職へは独学/スクールでの準備期間 (3-6 ヶ月程度) が現実的とされています。' } },
+    { '@type': 'Question', 'name': '転職活動にかかる期間の目安はどのくらいですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '一般的に 3-6 ヶ月が目安。在職中の活動は書類作成・面接日程調整に時間がかかるため余裕あるスケジュールを推奨。急ぎでも最低 2 ヶ月は見込むと安心とされています。' } },
+    { '@type': 'Question', 'name': '妊娠を考えている場合、転職はすべきですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '一概には言えません。「転職してから妊娠」を考えるなら育休取得要件 (勤続 1 年以上) を逆算したタイミングで活動開始を推奨。妊活中の方の転職判断は医師や産業カウンセラーにも相談しご自身のペースで進めてください。' } },
+    { '@type': 'Question', 'name': '転職エージェントは本当に無料で使えますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '求職者は完全無料で利用できます。収益は採用成立時に企業側が支払う紹介料で成り立っています。無理に転職を勧めるエージェントには注意が必要ですが、優良なエージェントは長期的なキャリアを第一に考えてサポートするとされています。' } },
+  ],
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">30代女性 senior / マネージャー候補 ハイクラス転職 キャリア | senior 年収+700-1,500万円 + Director path</span>
+      <h1 id="fv-h1">
+        <span class="accent">30代女性の senior / マネージャー候補 ハイクラス転職</span>完全ガイド<br />
+        senior career step up 戦略 5 ステップと senior / Director path エージェント選び (senior 年収 1,300-2,500万円帯)
+      </h1>
+      <p class="lede">
+        30代女性は転職市場で今もっとも注目されている世代のひとつとされ、即戦力スキルとマネジメント経験を兼ね備えた人材として企業が積極採用を進めるとされています。
+        厚労省「労働経済の分析」+ 各転職エージェント公開情報をもとに、編集部が中立に整理した記事です。市場データ・タイミング・戦略を一気通貫で解説します。
+      </p>
+      <ul class="fv-bullets">
+        <li>30代女性の転職市場の現状 (データで見る実態)</li>
+        <li>転職を考えるべきタイミング 3 サイン</li>
+        <li>成功戦略 5 ステップ + エージェント選び</li>
+        <li>よくある失敗パターンと回避法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。転職の成否は個人の経験・スキル・市場状況により異なり特定の結果を保証するものではありません。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-17</span>
+        <span><b>最終更新</b> 2026-05-17</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 7 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">30代女性の転職市場の現状とタイミング 3 サイン</h2>
+      <p class="section-lede">
+        厚生労働省「令和5年版 労働経済の分析」によると 35-44 歳の女性転職者数は増加傾向。doda「転職求人倍率レポート」でも 30代女性が対象の「企画・管理」「専門職」「事務」の求人倍率は 1 倍超で売り手市場傾向が続くとされています。
+      </p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">サイン①</span><h4>キャリアの頭打ち・年収停滞</h4><p>同期/後輩が昇進・昇給する中で自分だけ停滞、または年収が上がらないと感じるなら市場価値を確かめるサイン。マイナビ調査では転職後年収「上がった」約 40%「変わらない」約 35%「下がった」約 25%。</p></article>
+        <article class="branch"><span class="tag">サイン②</span><h4>ライフイベントとの調整</h4><p>結婚直後は落ち着いた後 (6ヶ月-1年)・妊娠検討中は転職先勤続1年以上が育休要件・育休復帰後は半年-1年で見極めてから活動開始が現実的とされる。時期判断は産婦人科・産業医にも相談を。</p></article>
+        <article class="branch"><span class="tag">サイン③</span><h4>「今すぐ」vs「待つ」判断</h4><p>今すぐ動くべき: ハラスメント・健康悪化・倒産リスク。1-2年待つべき: 現職で取得可能な資格/経験あり・育休給付金受給中。</p></article>
+        <article class="branch"><span class="tag">市場の両面</span><h4>有利な面・不利な面を理解</h4><p>有利: 即戦力スキル・PM経験・教育コスト低。不利: 年収上昇で採用ハードル上昇・未経験職種は20代比で難易度上昇 (違法な採用差別は禁止だが現実には残る側面も)。</p></article>
+      </div>
+      <p class="compare-note">※ 本記事の数値は <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省「労働経済の分析」</a> + <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + 各転職エージェント公開求人情報サンプルの整理であり、断定的事実ではなく一般的が一般的です。個別状況により大きく異なります。最終確認日: 2026-05-17。</p>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>市場現状を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">30 代女性転職転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める30 代女性転職転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、コンサル 700～1,500 万円・パートナー候補 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        30 代女性転職領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">成功戦略 5 ステップ</h2>
+      <p class="section-lede">30代女性の転職は正しい戦略と適切なサポートがあれば武器の多いステージ。準備の 5 ステップを整理します。</p>
+      <div class="card-grid">
+        <div class="card"><h3>Step 1-2: 市場価値の棚卸し + 求人選び</h3><p><strong>Step1</strong> 自己分析: 実績 (売上貢献額/改善率を数字で)・保有資格/語学・マネジメント経験・専門知識を棚卸し。<br /><strong>Step2</strong> 職種別難易度把握: IT・エンジニア系 (低〜中・資格/ポートフォリオ武器) / 人事・広報・マーケ (中・実績言語化) / 経理・財務 (中・簿記有無) / 営業未経験業界 (中〜高) / 完全未経験 (高・準備期間十分に)。</p></div>
+        <div class="card"><h3>Step 3-4: リサーチ + 書類作成</h3><p><strong>Step3</strong> 志望企業リサーチ: 女性管理職比率・育休取得率・離職率を四季報/採用ページ/OpenWork で事前確認しミスマッチ削減。<br /><strong>Step4</strong> 書類: 業務羅列でなく「課題→行動→結果」の STAR 形式。「離職率を 20% 削減」「新規顧客を月 10 件獲得」等の数字で説得力。</p></div>
+        <div class="card"><h3>Step 5: 面接準備 (30代女性特有質問)</h3><p>「今後のキャリアプラン」→ 管理職志向か専門職志向を明確に。「結婚・出産の予定」→ 法律上は答える義務なし・「長期的に活躍する意向」と前向きに返答が一般的。「前職を辞めた理由」→ ネガティブをポジティブな転職動機に言い換え。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>30代女性の転職市場における現状とキャリアの考え方</h2><p>30代は、キャリアにおける重要な転換期とされます。<br>特に女性の場合、結婚や出産、育児といったライフイベントとキャリア形成を両立させるための転職を考える方が多い傾向にあります。<br>厚生労働省の「令和4年雇用動向調査結果の概況」によると、女性の転職入職率は男性よりも高い水準で推移しており、キャリアチェンジへの意欲がうかがえます。<br>企業側が30代女性に期待するのは、20代で培った実務経験や専門スキル、そして今後の成長ポテンシャルです。<br>特に30代後半になると、リーダーシップやマネジメント経験も評価の対象となることが一般的です。<br>そのため、自身のこれまでのキャリアを整理し、どのようなスキルや経験を次の職場で活かせるのかを明確にすることが、転職成功の第一歩と言えるでしょう。<br>自身の市場価値を客観的に把握し、長期的な視点でキャリアプランを設計することが求められます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">よくある失敗パターンと回避法・転職後のキャリア設計</h2>
+      <div class="counter-box">
+        <h3>📌 30代女性の転職 よくある失敗 + 回避法 (公開情報整理)</h3>
+        <div class="row"><b>現職への不満だけで決定</b><span>「上司が嫌い」「残業多い」だけで転職→次も同じ問題。回避: 転職の「軸」を2-3つ決め当てはまらない求人は応募しない</span></div>
+        <div class="row"><b>年収交渉をしなかった</b><span>採用側は交渉想定で提示額に余裕。丁寧な交渉スクリプトで年収 10-50 万円上がるケースも珍しくない</span></div>
+        <div class="row"><b>エージェント1社のみ</b><span>紹介求人の幅が限られ比較不可。最低2-3社登録しスプレッドシートで応募状況一元管理</span></div>
+        <div class="row"><b>転職後の設計不足</b><span>入社後3ヶ月は信頼関係構築最優先・40代以降を見据えた資格/副業/リスキリング計画・育休は雇用保険1年以上加入が受給要件</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリア・ライフイベントは就業判断に直結する重要事項です。本記事は公開情報整理であり、個別保証・成功確約ではありません。妊娠・出産・育休に関する具体的判断は産婦人科・産業医・産業カウンセラーにも相談の上、ご自身のライフプランに合わせてご検討ください。</p>
+      </div>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。転職効果・年収アップ・成功は保証されません。最終確認日: 2026-05-17。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>30代女性のための転職成功戦略 5 ステップ</h2><p>30代女性が転職を成功させるためには、計画的かつ戦略的なアプローチが重要とされます。以下に、公開情報をもとに整理した5つのステップを紹介します。</p><ul><li><strong>ステップ1: 自己分析とキャリアの棚卸し</strong><br>これまでの職務経験、スキル、実績を具体的に書き出します。得意なことだけでなく、今後どのようなキャリアを築きたいか、ライフプランとの両立は可能かといった長期的な視点で自身の希望を明確にすることが重要です。</li><li><strong>ステップ2: 市場価値の把握と情報収集</strong><br>転職サイトやエージェントを活用し、自身のスキルや経験が市場でどの程度評価されるのかを客観的に把握します。また、男女間の賃金格差といった課題も存在するため、内閣府男女共同参画局が公表するデータなども参考に、公正な評価が期待できる企業かを見極める視点も有効とされます。</li><li><strong>ステップ3: 応募書類の戦略的作成</strong><br>職務経歴書では、単なる業務内容の羅列ではなく、具体的な実績や成果を数字で示します。特にマネジメント経験やプロジェクト推進経験は、企業への貢献度をアピールする上で強力な要素となります。</li><li><strong>ステップ4: ライフプランを視野に入れた面接対策</strong><br>キャリアプランに加え、将来のライフイベント（出産・育児など）と仕事をどう両立させたいかを、前向きな姿勢で伝えられるよう準備します。企業の福利厚生やダイバーシティ推進への取り組みについて質問することも、相互理解を深める上で有効です。</li><li><strong>ステップ5: 労働条件の確認と交渉</strong><br>内定が出たら、給与だけでなく、勤務時間、休日、福利厚生などの労働条件を労働条件通知書でしっかり確認します。不明な点は入社前に解消し、納得のいく形で新しいキャリアをスタートさせることが大切です。</li></ul><div class="benefit-summary" style="background:#f5f5dc;padding:1rem;border-left:4px solid #d4a373;margin:1rem 0;"><strong>💡 転職エージェントの活用で期待できること (★544 ②):</strong><ul><li><strong>キャリア相談の効率化:</strong> 専門のキャリアアドバイザーに相談することで、自己分析やキャリアの棚卸しにかかる時間を短縮できる可能性があります。</li><li><strong>非公開求人へのアクセス:</strong> 一般には公開されていない、待遇の良い求人や管理職候補の求人に出会える機会が期待されます。</li><li><strong>客観的な情報提供:</strong> 公的統計だけでは分かりにくい企業の内部情報（育休取得率の実態など）について、アドバイザーから客観的な情報提供を受けられる場合があり、入社後のミスマッチを防ぐ一助となります。</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-30dai/">30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-30dai-tenshoku/">30代エンジニアの転職完全ガイド｜市場価値・キャリアパス・進め方｜TechGo (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/30dai/">30 代向け 転職エージェント おすすめ｜年収アップ実現の選び方と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>

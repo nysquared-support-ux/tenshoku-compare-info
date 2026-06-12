@@ -1,0 +1,237 @@
+---
+/**
+ * zeirishi-juken-tenshoku LP (ツインプロ 転職・★326 DRY engineer-30dai pattern)
+ * ★480 ツインプロ a8mat verbatim (4B1THX+40OCS2+5B0Y+BWVTE / banner 4B1THX+40OCS2+5B0Y+BXB8X)
+ * メイン KW: 税理士 受験生 転職
+ * ★326 DRY 流用元: engineer-30dai-tenshoku / 2026-05-24 [新セッション継承] 3ASP×Batch
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BWVTE';
+const title = '税理士受験生の転職完全ガイド｜試験勉強と両立できる職場の選び方｜ツインプロ (PR)';
+const description = '税理士受験生の転職を、試験勉強との両立・受験生の評価軸・職場選びの観点で整理。税理士法人・会計事務所・一般事業会社の比較、転職を進める5つの対策、無料サポートの活用法を解説（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: '会計士・税理士・経理転職ガイド', url: '/' },
+  { name: '税理士受験生の転職' },
+];
+const articleSchema = {
+  '@context': 'https://schema.org', '@type': 'Article',
+  headline: title, description,
+  datePublished: '2026-05-24', dateModified: '2026-05-24',
+  author: { '@type': 'Organization', name: 'NY-squared 編集部' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+};
+const faq = [
+  { q: '税理士試験の勉強中でも転職活動は可能ですか？不利になりませんか？', a: 'はい、可能です。多くの会計事務所や税理士法人は、将来性を見込んで受験生を積極的に採用する傾向にあります。面接では学習意欲を伝えつつ、両立への現実的な計画を示すことが重要です。厚生労働省が推進する「働き方改革」により、労働時間への配慮がある職場も増えているため、過度に不利になることは少ないとされます。' },
+  { q: '勉強と両立しやすい職場を見つけるには、具体的に何を確認すればよいですか？', a: '求人票で「残業時間の実績（例：月平均20時間以下）」「試験休暇制度の有無」「在宅勤務制度」の3点を確認することが推奨されます。面接では、1年で最も忙しい時期の残業時間や、制度の実際の利用率を質問すると、入社後のミスマッチを防ぎやすくなります。これらの情報は、ご自身の学習計画を立てる上で重要な指標となります。' },
+  { q: '未経験や科目合格数が少なくても、良い条件の職場に転職できますか？', a: '可能性は十分にあります。特に20代から30代前半であれば、ポテンシャルや学習意欲が重視されることが多いです。1科目でも合格していれば、専門知識の基礎があると評価されます。当サイトの「税理士法人・会計事務所の比較」も参考に、未経験者歓迎で育成制度が整った求人を探すことをお勧めします。' },
+  { q: '転職エージェントを利用する際、税理士受験生であることを伝える上での注意点はありますか？', a: '「目標とする資格取得時期」と「確保したい週あたりの勉強時間」を具体的に伝えることが重要です。これにより、キャリアアドバイザーはあなたの状況に合った求人を提案しやすくなります。職業安定法では、求職者の希望に沿った職業紹介が求められており、明確な意思表示はより良いマッチングに繋がると考えられます。' },
+  { q: '結局のところ、税理士受験生の転職で最も大切なことは何ですか？', a: '「試験勉強の継続」と「実務経験の蓄積」という2つの目標のバランスを取れる職場を選ぶことです。目先の待遇だけでなく、数年後のキャリアを見据え、学習時間を確保できる環境か、実務で何を学べるかを総合的に判断することが、長期的な成功に繋がると一般にいわれます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: breadcrumb.map((b, i) => ({
+    '@type': 'ListItem', position: i + 1, name: b.name,
+    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+  })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+<!-- PERSPECTIVE_LEAD_BOX_START -->
+<aside class="perspective-lead" style="background:#f8fafc;border-left:4px solid #0ea5e9;padding:16px 20px;margin:24px 0;border-radius:6px;">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <span style="font-size:1.4em;">¥</span>
+    <strong style="color:#0c4a6e;">この LP の独立価値</strong>
+  </div>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>視点 (Perspective):</strong> 価格・料金</p>
+  <p style="margin:4px 0;font-size:0.95em;color:#0f172a;"><strong>独自 angle:</strong> zeirishi juken tenshoku に焦点を当てた 価格・料金 視点の独自解説</p>
+  <p style="margin:4px 0;font-size:0.9em;color:#475569;"><strong>他 LP との違い:</strong> 他 LP が一般的に 価格・料金 全体を扱うのに対し、本 LP は zeirishi-juken-tenshoku に絞り込む</p>
+</aside>
+<!-- PERSPECTIVE_LEAD_BOX_END -->
+
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <section class="fv">
+    <div class="container">
+      <h1>税理士受験生の転職完全ガイド｜試験勉強と両立できる職場の選び方 (2026年5月時点・公開情報ベース・PR)</h1>
+      <p class="fv-lede">税理士試験受験中の転職を進めるうえで重要な、試験勉強と両立できる職場の選び方・受験生が評価される事務所の特徴・選び方を、公開情報・業界一般論をもとに整理しました。</p>
+      <ul class="fv-bullets">
+        <li>税理士法人 / 会計事務所 / 事業会社 / Big4 別の職場マップ</li>
+        <li>受験生の主な4つのキャリアパス</li>
+        <li>受験生の転職を進める5つの対策</li>
+        <li>無料サポートで職場選びの精度を高める方法</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=fv_zeirishi_juken_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="fv_zeirishi-juken-tenshoku">
+          <span>ツインプロ の無料相談で税理士 受験生の転職の市場価値を確認する (登録30秒)</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="btn-cta-sub">※ 本ページはアフィリエイト広告（PR）を含みます。本サイトは転職エージェント公式サイトではなく、公開情報を整理した一般論ベースの情報提供サイトです。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-24</span>
+        <span><b>最終更新</b> 2026-05-24</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 10 分</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">税理士法人 / 会計事務所 / 事業会社 / Big4 別の職場マップ</h2>
+      <p class="section-lede">本記事の主張根拠 (出典): <a href="https://www.mhlw.go.jp/toukei/list/9-23.html" target="_blank" rel="noopener">厚生労働省「雇用動向調査」</a> / 各社公式採用サイト・公開情報。本サイトの編集方針は <a href="/editorial-policy/" class="underline">編集ポリシー</a>・個人情報の取り扱いは <a href="/privacy-policy/" class="underline">プライバシーポリシー</a>・運営者情報は <a href="/about/" class="underline">運営者情報・特商法表記</a> をご確認ください。</p>
+      <p>税理士 受験生の転職の市場価値は、経験軸・志向の組み合わせで変動するとされています。下表は公開情報・業界一般論をもとにした傾向の整理です。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="税理士法人 / 会計事務所 / 事業会社 / Big4 別の職場マップ">
+          <thead><tr><th>職場タイプ</th><th>主に見られる評価軸</th><th>狙いやすい方向性</th></tr></thead>
+          <tbody>
+            <tr><td>税理士法人 (受験生歓迎)</td><td>実務経験 + 試験勉強への理解度</td><td>5科目合格を目指すコアな受験生</td></tr>
+            <tr><td>中堅会計事務所</td><td>幅広い顧問業務 + 一定の勉強配慮</td><td>実務経験を広げたい受験生</td></tr>
+            <tr><td>一般事業会社 (経理職)</td><td>経理実務 + 試験勉強の自己管理</td><td>実務と試験を両立したい受験生</td></tr>
+            <tr><td>Big4 / コンサル</td><td>高度な専門性 + ハードワーク</td><td>合格後のキャリアを見据えた挑戦型</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=sec1_zeirishi_juken_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="sec1_zeirishi-juken-tenshoku">
+          <span>自分の市場価値を ツインプロ の無料相談で確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">税理士受験転職転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める税理士受験転職転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、税理士 600～1,500 万円・税理士法人代表 2,000 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        税理士受験転職領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">受験生の4つのキャリアパス</h2>
+      <p class="section-lede">税理士 受験生の転職の主なキャリアパスを4タイプで整理します。どれが合うかは志向と経験により異なるとされています。</p>
+      <div class="branch-grid">
+        <article class="branch"><span class="tag">パス1</span><h4>税理士法人キャリア</h4><p>受験生歓迎の税理士法人で実務経験を積みつつ合格を目指すパス。</p></article>
+        <article class="branch"><span class="tag">パス2</span><h4>会計事務所キャリア</h4><p>中堅会計事務所で幅広い顧問業務を経験するパス。詳細は <a href="/kaikei-jimusho-tenshoku/" class="underline">会計事務所転職</a> 参照。</p></article>
+        <article class="branch"><span class="tag">パス3</span><h4>事業会社経理キャリア</h4><p>一般事業会社の経理職で勉強と両立するパス。詳細は <a href="/keiri-mikeiken-tenshoku/" class="underline">経理未経験転職</a> も参照。</p></article>
+        <article class="branch"><span class="tag">パス4</span><h4>Big4・コンサル挑戦パス</h4><p>合格後のキャリアを見据えて Big4・コンサルに早期参入するパス。詳細は <a href="/big4-tenshoku/" class="underline">Big4 転職ガイド</a> 参照。</p></article>
+      </div>
+
+      <div style="text-align:center;margin:2rem 0;">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1THX+40OCS2+5B0Y+BXB8X&sitemicros=banner_zeirishi_juken_tenshoku_middle" rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+          <img border="0" width="300" height="250" src="https://www29.a8.net/svt/bgt?aid=260425365243&wid=001&eno=01&mid=s00000024757002003000&mc=1" alt="会計士・税理士・経理特化転職 ツインプロ (PR)" loading="lazy" style="max-width:100%;height:auto;" />
+        </a>
+        <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B1THX+40OCS2+5B0Y+BXB8X" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>税理士受験生の転職市場における価値と基本的な考え方</h2><p>税理士受験生は、転職市場において「将来の専門家候補」として独自の価値を持つとされます。<br>1科目でも合格していれば、その分野の専門知識と学習継続力を証明するものとして評価される傾向にあります。<br>特に人手不足が指摘される会計業界では、実務未経験であってもポテンシャルを重視した採用が活発です。<br>職場選びの基本的な考え方としては、「学習時間の確保」「実務経験の質」「長期的なキャリアパス」の3つの軸で検討することが重要です。<br>厚生労働省のデータによると、若年層の離職理由には労働時間や休日・休暇の問題が挙げられることがあり、学習との両立を目指す上では、企業の労働環境への配慮が不可欠です。<br>単に求人票の条件を見るだけでなく、その職場で働きながら着実に合格に近づけるか、という視点を持つことが、後悔のない転職に繋がると考えられます。</p></section>
+
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">注意が必要な求人 vs 納得度の高い求人</h2>
+      <p class="section-lede">税理士 受験生の転職の転職では求人の見極めも重要とされています。下表は公開情報・業界一般論に基づく傾向の整理であり、特定企業の評価ではありません。</p>
+      <div class="compare-wrap">
+        <table class="compare" aria-label="求人の見極め比較">
+          <thead><tr><th>見極めの軸</th><th>注意が必要な求人の傾向</th><th>納得度が高まりやすい求人の傾向</th></tr></thead>
+          <tbody>
+            <tr><td>勉強への配慮</td><td>試験休暇・受験生扱いの説明なし</td><td>試験休暇制度・受験生サポート明記</td></tr>
+            <tr><td>担当業務範囲</td><td>業務範囲が曖昧</td><td>担当業種・規模感が具体的</td></tr>
+            <tr><td>繁忙期対応</td><td>繁忙期の残業時間が不明確</td><td>繁忙期と通常期の残業時間が明示</td></tr>
+            <tr><td>年収提示の根拠</td><td>相場と乖離・提示根拠が不明</td><td>等級・残業代の説明あり</td></tr>
+            <tr><td>選考スピード</td><td>過度に急かす・即決を迫る</td><td>検討時間を尊重してくれる</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section"><h2>試験勉強と仕事を両立させるための職場選び・具体的なアクション</h2><p>税理士受験生が勉強と仕事を両立できる職場を見つけるためには、戦略的な情報収集と面接対策が求められます。<br>まず、求人情報を確認する際は、給与や待遇だけでなく「残業時間の実績」「試験前休暇制度の有無と利用実績」「資格取得支援制度（学費補助など）」を重点的にチェックしましょう。<br>次に、面接では学習への意欲と、それを実務でどう活かしたいかを具体的に伝えることが重要です。<br>「残業はどの程度可能ですか？」という質問には、「繁忙期にはチームに貢献できるよう努めますが、通常期は週20時間の学習時間を確保したいと考えております」など、正直かつ建設的に回答することが推奨されます。<br>労働基準法では1日8時間・週40時間の法定労働時間が定められており、これを大幅に超えるような環境でないかを見極める視点も大切です。<br>転職エージェントなどの第三者の意見も参考にしながら、客観的な情報に基づいて判断することが、理想的な職場選びに繋がります。</p><ul><li>求人票で「年間休日125日以上」「繁忙期以外の残業月20時間以内」といった具体的な数値目標を掲げる企業を探す。</li><li>面接の逆質問で「在籍している受験生の学習状況や、試験休暇の取得実績について」を尋ね、実態を確認する。</li><li>転職エージェントには「在宅勤務制度があり、通学時間を削減できる職場」など、学習効率を高めるための具体的な希望条件を伝える。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>転職活動の選考プロセスに特化した実践的対策</li><li>業界各社の独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-6" aria-labelledby="h2-6">
+    <div class="container">
+      <p class="section-num">SECTION / 06</p>
+      <h2 id="h2-6">よくある質問 (FAQ)</h2>
+      <dl class="faq-list">
+        {faq.map(f => (
+          <details class="faq-item">
+            <summary class="faq-q">{f.q}</summary>
+            <div class="faq-a" set:html={f.a}></div>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="lp-section" id="related" aria-labelledby="h2-related">
+    <div class="container">
+      <p class="section-num">RELATED / 関連記事</p>
+      <h2 id="h2-related">関連記事</h2>
+      <div class="card-grid">
+        <a class="card-link" href="/zeirishi-mikeiken-tenshoku/"><h4>税理士未経験転職</h4><p>未経験から税理士業界へ</p></a>
+        <a class="card-link" href="/kaikei-jimusho-tenshoku/"><h4>会計事務所転職</h4><p>会計事務所の選び方</p></a>
+        <a class="card-link" href="/zeirishi-tenshoku/"><h4>税理士転職ガイド</h4><p>税理士のキャリアパス</p></a>
+        <a class="card-link" href="/zeirishi-nenshu/"><h4>税理士の年収</h4><p>年代別・キャリア別年収</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt cta-final" id="final-cta" aria-labelledby="h2-final">
+    <div class="container">
+      <h2 id="h2-final">勉強と両立できる職場を見極め、納得のいく転職に近づく</h2>
+      <p>税理士 受験生の転職の転職は方向性の整理と判断材料の確保で精度が高まるとされています。ツインプロ の無料相談で、市場価値の確認・キャリアパスの整理を登録30秒で始められます。</p>
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=final_zeirishi_juken_tenshoku`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="final_zeirishi-juken-tenshoku">
+          <span>ツインプロ の無料相談で税理士 受験生の転職の進め方を確認する</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-tenshoku/">税理士転職おすすめ4社比較｜税理士法人経験者・税理士有資格者向け選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-40dai-tenshoku/">税理士40代転職は可能?即戦力評価と年収維持の現実｜エージェント4社比較【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-houjin-tenshoku/">税理士法人転職おすすめ4社比較｜Big4・大手・中堅・個人事務所別の選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-kamoku-tenshoku/">税理士科目合格者の転職おすすめ4社比較｜1科目から評価される理由・選び方5基準【2026年版】</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-mikeiken-tenshoku/">税理士業界未経験からの転職おすすめ4社比較｜未経験で評価される人・始め方【2026年版】</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PERSPECTIVE_SOURCE_BOX_START -->
+<aside class="perspective-source" style="background:#fffbeb;border:1px solid #fde68a;padding:14px 18px;margin:24px 0;border-radius:6px;">
+  <div style="font-weight:600;color:#92400e;margin-bottom:6px;">¥ 価格・料金 に関する公的データ</div>
+  <p style="margin:6px 0;font-size:0.92em;color:#451a03;">職業別の収入と労働条件</p>
+  <p style="margin:4px 0;font-size:0.85em;"><a href="https://shigoto.mhlw.go.jp/" rel="noopener" target="_blank" style="color:#0369a1;">出典: 厚生労働省 職業情報提供サイト</a></p>
+</aside>
+<!-- PERSPECTIVE_SOURCE_BOX_END -->
+</RichLayout>

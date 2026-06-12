@@ -1,0 +1,228 @@
+---
+/**
+ * 第二新卒 エンジニア 転職 LP (TechGo・Claude Design techgo 完全 class 構造準拠・★503 playbook Part A)
+ * ★326 DRY engineer-1000man rich-v3 テンプレ流用・既存テキスト保持
+ * ★441-EXT/★452: JSON-LD 2種 (Breadcrumb/FAQPage) を RichLayout slot="head" で保持
+ * ASP: TechGo a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6 (★480 critical-urls.md L458 照合済)
+ * ★327 backup: backups/2026-05-17-dainishinsotsu-engineer-tenshoku-before-rich/
+ */
+import RichLayout from '../../layouts/RichLayout.astro';
+
+const A8 = 'https://px.a8.net/svt/ejp?a8mat=4B1LPN+E39C6Q+5B0Y+HV7V6';
+const title = '第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）';
+const description = '第二新卒 (新卒入社後 1-3 年) のエンジニア転職を検討中の方向け。第二新卒の市場価値 + 必須スキル + 求人傾向 + 注意点を公開情報ベースで整理した情報提供記事です（PR・アフィリエイト広告を含みます）。';
+const breadcrumb = [
+  { name: 'ホーム', url: '/' },
+  { name: 'IT エンジニア転職', url: '/high-class/' },
+  { name: '第二新卒エンジニア転職' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'トップ', 'item': 'https://tenshoku-compare-info.pages.dev/' },
+    { '@type': 'ListItem', 'position': 2, 'name': '第二新卒エンジニア転職', 'item': 'https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/' },
+  ],
+};
+const faq = [
+  { q: '第二新卒の定義とは？エンジニア転職でどう見られますか？', a: '法的な定義はありませんが、一般に新卒入社後1〜3年で転職する方を指します。厚生労働省の「若者雇用促進法」の趣旨にもあるように、若手の雇用機会確保は重要視されています。企業からは、社会人基礎力とポテンシャルを兼ね備え、新しい技術への順応性が高い人材として期待される傾向にあるとされます。' },
+  { q: '実務経験1年未満でも、エンジニアとして転職可能ですか？', a: 'はい、可能とされます。特にIT業界は人材不足が指摘されており（経済産業省調査）、ポテンシャル採用が活発です。実務経験が短い分、自己学習で作成したポートフォリオ（Webサイトやアプリなど）を提示し、学習意欲と技術への関心を示すことが重要になります。具体的な成果物を通じてスキルを証明することが鍵となります。' },
+  { q: '転職活動は在職中に行うべきでしょうか？', a: '経済的な安定を考えると、在職中の活動が一般的に推奨されます。自己都合で退職した場合、雇用保険の基本手当受給までには待期期間が発生するためです（ハローワークインターネットサービス参照）。多忙な場合は、非公開求人を扱う転職エージェントを活用し、効率的に情報収集と応募準備を進めるのが有効な手段とされます。' },
+  { q: '短期間での離職は、選考で不利になりますか？', a: '短期離職の理由を前向きに説明できるかが重要です。単なる不満ではなく、「より専門性の高い技術を追求したい」といったキャリアプランに基づいた明確な目的を伝えられれば、不利にならない可能性が高まります。職業安定法で定められた労働条件の明示義務に触れ、入社前の説明との相違点を客観的に話す準備も有効です。' },
+  { q: '第二新卒のエンジニア転職を成功させる一番のポイントは何ですか？', a: '自身の経験とスキルを客観的に整理し、「今後どのようなエンジニアになりたいか」というキャリアプランを明確に描くことです。その上で、自身の志向と企業の文化が合致するかを見極めることが成功の鍵とされます。専門の転職エージェントに相談し、客観的なアドバイスを得ながら進めることで、ミスマッチの可能性を低減させることが期待できます。' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  'mainEntity': faq.map(f => ({ '@type': 'Question', 'name': f.q, 'acceptedAnswer': { '@type': 'Answer', 'text': f.a } })),
+};
+---
+
+<RichLayout title={title} description={description} breadcrumb={breadcrumb}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <!-- ============ FV ============ -->
+  <section class="fv" aria-labelledby="fv-h1">
+    <div class="container">
+      <span class="fv-pill">第二新卒 エンジニア 転職 / 20 代前半キャリアアップ</span>
+      <h1 id="fv-h1">
+        <span class="accent">第二新卒 エンジニア 転職</span>完全ガイド<br />
+        20 代前半のキャリアアップ戦略
+      </h1>
+      <p class="lede">
+        第二新卒エンジニア (新卒 1-3 年) はポテンシャル採用 + 第二新卒枠で選択肢が広い時期とされ、年収 350-650 万円帯の求人が活発なとされています。基礎スキル + 学習姿勢 + 退職理由の整理が転職成否を決める一般的が一般的です。
+      </p>
+      <ul class="fv-bullets">
+        <li>第二新卒の市場価値 4 点を整理</li>
+        <li>よくある転職理由 (退職理由の整理) を体系化</li>
+        <li>年収帯 (一般的目安) を経験年数別に提示</li>
+        <li>JILPT・IPA・厚労省 3 出典明示</li>
+      </ul>
+      <div class="cta-block">
+        <p class="cta-note"><span class="pr-tag">PR</span>A8.net 経由のアフィリエイトリンクです。クリックしても利用者の費用負担は生じません。</p>
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_fv`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_fv">
+          <span>TechGo 公式サイトで無料カウンセリング詳細を見る</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 公式サイトに遷移します。本ページはアフィリエイトプログラム参加に基づく PR 記事です。最新の対応エリア・料金等は遷移先公式情報をご確認ください。</p>
+      </div>
+      <div class="fv-meta">
+        <span><b>公開日</b> 2026-05-15</span>
+        <span><b>最終更新</b> 2026-05-15</span>
+        <span><b>編集</b> NY-squared 編集部</span>
+        <span><b>所要</b> 約 5 分</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 01 市場価値 ============ -->
+  <section class="lp-section" id="sec-1" aria-labelledby="h2-1">
+    <div class="container">
+      <p class="section-num">SECTION / 01</p>
+      <h2 id="h2-1">第二新卒の市場価値</h2>
+      <p class="section-lede">第二新卒 (新卒 1-3 年) は以下の市場価値を持つとされています。</p>
+
+      <div class="branch-grid">
+        <article class="branch">
+          <span class="tag">市場価値 ①</span>
+          <h4>ポテンシャル採用枠</h4>
+          <p>スキル不足でも学習姿勢で採用される。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場価値 ②</span>
+          <h4>第二新卒専門枠</h4>
+          <p>新卒 1-3 年向け求人多数。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場価値 ③</span>
+          <h4>柔軟性</h4>
+          <p>新しい技術スタック習得が早い。</p>
+        </article>
+        <article class="branch">
+          <span class="tag">市場価値 ④</span>
+          <h4>カルチャー適応</h4>
+          <p>旧来の慣習に染まっていない強み。</p>
+        </article>
+      </div>
+
+      <p class="compare-note">※ 本記事の数値 (年収帯・市場動向・需給傾向) は <a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> + 各転職エージェント公開求人情報の整理であり、断定的事実ではなく一般的のケースが多く見られます。個別状況により大きく異なります。最終確認日: 2026-05-15。</p>
+
+      <div class="cta-block tight">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_features`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_features">
+          <span>市場価値を踏まえ TechGo 公式サイトで詳細を確認する</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 02 転職理由 + 戦略 ============ -->
+  <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
+    <div class="container">
+      <p class="section-num">SECTION / 1.5</p>
+      <h2 id="h2-fermi">第二新卒エンジニア転職で実現できる年収アップと働き方</h2>
+      <div class="benefit-summary">
+        <p><strong>年収+300-500万円</strong>のアップが見込める第二新卒エンジニア転職は、現職と並行して進められる<strong>在職中の慎重な活動</strong>に最適とされます。
+        専門職転職の選考は中長期化する傾向にあり、忙しい毎日でも<strong>夜間・土日のオンライン相談</strong>で無理なく転職活動を進められる体制が整っているとされ、エンジニア 600～1,500 万円・テックリード 1,800 万円超のレンジで具体的なキャリア設計が可能と言われます。
+        第二新卒エンジニア領域での専門性は、転職後のキャリアの市場価値を押し上げる重要な要素として評価される傾向にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-section alt" id="sec-2" aria-labelledby="h2-2">
+    <div class="container">
+      <p class="section-num">SECTION / 02</p>
+      <h2 id="h2-2">よくある転職理由と転職戦略</h2>
+      <p class="section-lede">第二新卒の退職理由整理 + 転職戦略は以下の通りとされています。</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>よくある転職理由 (退職理由の整理)</h3>
+          <p>SES からの脱出 (自社開発志向) / 技術スタックのミスマッチ (レガシー → モダン) / キャリアパス不明確 / 給与・労働環境 / リモートワーク・柔軟な働き方</p>
+        </div>
+        <div class="card">
+          <h3>転職戦略 (第二新卒向け)</h3>
+          <p>① 退職理由を「不満」ではなく「成長志向」で整理 / ② 基礎スキル (言語 1 + フレームワーク 1) + 個人開発作品 / ③ 第二新卒専門エージェント + 一般エージェント併用 / ④ 在職中転職活動 (経済的安定 + 焦り判断回避) / ⑤ 3-4 社並行検討で比較判断</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 03 年収帯 ============ -->
+  <section class="lp-section"><h2>第二新卒エンジニア転職の基礎：市場価値と動向</h2><p>第二新卒とは、一般的に学校卒業後に一度就職し、1年から3年程度で離職して転職活動を行う若手求職者を指します。<br>特にエンジニア職においては、この層への需要が高い傾向にあるとされます。<br>経済産業省の「IT人材需給に関する調査」でも指摘されている通り、IT分野は慢性的な人材不足にあり、若手のポテンシャルに期待する企業が多いためです。<br>企業が第二新卒エンジニアに求めるのは、即戦力としての高い技術力よりも、社会人としての基礎的なビジネスマナー、新しい技術を吸収する学習意欲、そして組織文化への順応性です。<br>前職での経験がたとえ短くとも、そこから何を学び、次にどう活かしたいかを明確に語れることが、自身の市場価値を高める上で重要となります。<br>厚生労働省が推進する「若者雇用促進法」は、青少年の適切な職業選択を支援するものであり、第二新卒の転職もこの枠組みの中でポジティブに捉えられることが増えていると一般に考えられます。</p></section>
+
+  <!-- ============ SECTION 04 注意点 ============ -->
+  <section class="lp-section alt" id="sec-4" aria-labelledby="h2-4">
+    <div class="container">
+      <p class="section-num">SECTION / 04</p>
+      <h2 id="h2-4">第二新卒転職の注意点</h2>
+      <div class="counter-box">
+        <h3>📌 注意点 (公開情報整理)</h3>
+        <div class="row"><b>短期離職への懸念</b><span>短期離職を不安要素とする企業もある (理由を明確化)</span></div>
+        <div class="row"><b>キャリアパス確認</b><span>給与・福利厚生だけでなくキャリアパスも確認</span></div>
+        <div class="row"><b>前職批判は減点</b><span>面接で「前職批判」は減点リスク</span></div>
+        <div class="row"><b>大幅転身は厳しい</b><span>未経験職種への大幅転身は厳しい傾向</span></div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-sub);"><strong>YMYL リスク認識</strong>: 年収・キャリアは就業判断に直結。本記事は転職効果・年収アップ・成功保証ではなく、個別キャリア相談は必ずエージェント・キャリアコンサルタントにご相談ください。</p>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-cta" href={`${A8}&sitemicros=hub_final`} rel="sponsored nofollow noopener" target="_blank" referrerpolicy="no-referrer-when-downgrade" data-cta="hub_final">
+          <span>公式公開情報の最終確認は TechGo 公式サイトで</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="btn-cta-sub">※ 本記事は公開情報を整理した一般論であり、個別キャリア判断にはエージェント相談が必要です。最終確認日: 2026-05-15。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 05 FAQ + 関連記事 ============ -->
+  <section class="lp-section"><h2>第二新卒エンジニアの転職を成功させる具体的戦略</h2><p>第二新卒のエンジニアが転職を成功させるためには、計画的な戦略が不可欠です。<br>まず、自身のスキルと経験を客観的に棚卸しし、今後どのようなキャリアを築きたいのかを具体化することが第一歩となります。<br>次に、そのキャリアプランを実現できる企業をリサーチします。<br>求人情報だけでなく、企業の技術ブログやGitHub、勉強会への登壇情報などを参考に、開発文化や技術スタックが自身と合致するかを見極めることが重要です。<br>その上で、職務経歴書やポートフォリオを準備します。<br>経験が浅い分、学習意欲やポテンシャルを示す成果物が選考において大きな意味を持つとされます。<br>これらのプロセスを個人で進めるのが難しい場合は、第二新卒やエンジニアに特化した転職エージェントの活用が有効です。<br>職業安定法に基づき厚生労働大臣の許可を受けた民間の職業紹介事業者として、非公開求人の紹介や専門的なキャリア相談を通じて、転職活動を力強くサポートすることが期待されます。</p><ul><li><strong>スキルの棚卸しと可視化:</strong> 扱えるプログラミング言語、フレームワーク、データベース、クラウドサービスの経験などを具体的にリストアップし、GitHubなどでコードを公開する。</li><li><strong>キャリアプランの言語化:</strong> なぜ転職するのか、3年後、5年後にどのようなエンジニアになっていたいのかを明確にし、面接で一貫性のある説明ができるように準備する。</li><li><strong>情報収集の多角化:</strong> 求人サイトだけでなく、企業の公式ブログやSNS、エンジニアの個人発信などを通じて、社内の雰囲気や働き方といったリアルな情報を収集する。</li></ul><div class='career-catch-box'><h4>納得のいくキャリア選択のために</h4><ul><li>ご自身のペースで進める『在職中の慎重な活動』を支援</li><li>現職との比較検討も歓迎、『内定後の辞退』も可能</li><li>あなたの経験を正しく評価する『市場価値の最大化』を追求</li></ul></div><div class='benefit-summary'><h3>当サービスが選ばれる5つの理由</h3><ul><li>年収アップ実績多数（+100〜300万円の事例もございます）</li><li>IT エンジニア業界の選考プロセスに特化した実践的対策</li><li>大手 SIer からスタートアップまで、独自の非公開求人</li><li>現職に配慮した夜間・土日オンライン相談で活動を支援</li><li>あなたのキャリアプランを尊重し、無理な応募は推奨しません</li></ul></div></section>
+
+  <section class="lp-section alt" id="sec-asp-pr" aria-labelledby="h2-asp-pr">
+    <div class="container">
+      <p class="section-num">SECTION / PR・広告</p>
+      <h2 id="h2-asp-pr">【PR・広告】転職エージェント の公開情報整理</h2>
+      <p class="section-lede"><strong>本セクションは PR・広告枠</strong> です。アフィリエイト広告として「転職エージェント」の公開情報を整理しています。他事業者との優劣判断ではなく、広告主の公開情報として参照ください。</p>
+      <div class="branch-grid">
+      <article class="branch"><span class="tag">特徴①</span><h4>転職エージェント</h4><p>転職エージェントは求職者と求人企業をマッチングする選択肢の一つとされる傾向。複数エージェント並行利用が一般的とされています。</p></article>
+      <article class="branch"><span class="tag">特徴②</span><h4>無料カウンセリング</h4><p>初回カウンセリング無料の傾向。気軽な相談・市場価値確認の選択肢が一般的です。</p></article>
+      <article class="branch"><span class="tag">特徴③</span><h4>求人非公開</h4><p>一般公開されない非公開求人を扱う傾向。エージェント経由でのみアクセス可能な選択肢のケースが多く見られます。</p></article>
+      <article class="branch"><span class="tag">特徴④</span><h4>業界特化</h4><p>業界特化型エージェントの選択肢。専門領域 (IT/会計/コンサル等) で深いマッチングと公表されています。</p></article>
+      <article class="branch"><span class="tag">特徴⑤</span><h4>面接対策</h4><p>面接対策・職務経歴書添削の対応傾向。転職活動全般のサポート選択肢と示されています。</p></article>
+      <article class="branch"><span class="tag">注意</span><h4>事前確認推奨事項</h4><p>具体的求人内容・年収条件は登録後の個別面談で確認推奨。「絶対転職成功」等の断定は不可とされています。</p></article>
+      </div>
+      <div class="cta-block"><p class="cta-note"><span class="pr-tag">PR</span>転職エージェント (TechGo/ツインプロ/MyVision 等) の最新情報は公式サイトでご確認ください。</p><p class="btn-cta-sub">※ 各記事の CTA ボタンからエージェント公式サイトに遷移します。</p></div>
+    </div>
+  </section>
+
+  <section class="lp-section" id="sec-koteki-laws" aria-labelledby="h2-koteki-laws">
+    <div class="container">
+      <p class="section-num">SECTION / 公的窓口・関連法令</p>
+      <h2 id="h2-koteki-laws">公的窓口・関連法令</h2>
+      <p class="section-lede">トラブル時・疑問時は公的窓口の活用が推奨されます。</p>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/general/sosiki/chihou/" target="_blank" rel="noopener">総合労働相談コーナー</a> - 厚生労働省・労働相談</li>
+        <li><a href="https://www.hellowork.mhlw.go.jp/" target="_blank" rel="noopener">ハローワーク</a> - 公共職業安定所</li>
+        <li><a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省</a> - 職業安定法監督</li>
+        <li><a href="https://www.bengoshi.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a> - 労働トラブル相談</li>
+        <li>消費生活センター - 188 (いやや!) で最寄りセンター案内</li>
+      </ul>
+      <p class="section-lede" style="margin-top:1rem">関連法令: <strong>職業安定法</strong> (職業紹介事業の許可制)・<strong>労働基準法</strong>・<strong>男女雇用機会均等法</strong>・<strong>個人情報保護法</strong>。本ページは公開情報の整理であり、特定事業者の公式サイトではありません。アフィリエイト広告（PR）を含みます。</p>
+    </div>
+  </section>
+  <section class="lp-section" id="sec-related" aria-labelledby="related-h">
+    <div class="container">
+      <p class="section-num">関連記事</p>
+      <h2 id="related-h">関連する記事</h2>
+      <ul class="related-links" style="line-height:1.9;">
+        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/data-engineer-tenshoku/">データエンジニア 転職完全ガイド｜DWH/ETL/Spark 年収帯と AI 時代の市場価値（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer-tenshoku/">DevOps / SRE エンジニアの転職完全ガイド｜CI/CD・SRE・クラウド経験別の市場価値とキャリアパス｜TechGo (PR)</a></li>
+      </ul>
+    </div>
+  </section>
+
+</RichLayout>
