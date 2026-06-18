@@ -1,0 +1,27 @@
+﻿engineer-shokumukeirekisho LP 固有深化 (22 回目: P33 重要書類サンプル + 読み方解説 path)
+
+★666 真の最深 honest 反省 (ultrathink 22 回目):
+過去 21 path 全て「概念整理」だった構造的気づき
+22 回目真の打破 = 「実物書類サンプル + Before/After + NG 解説」で構造的に違う軸
+
+【修正前 → 修正後 diff 明示】
+修正前: SECTION 01 (基本構成+STAR) -> SECTION 1.5 (年収) -> SECTION 02 (採用ポイント)
+修正後: SECTION 01 -> 【新規挿入 SECTION 1.4: サンプル Before/After + NG 5 件】 -> SECTION 1.5 -> SECTION 02
+- 挿入位置: line 128-129 (SECTION 01 末尾 + SECTION 1.5 前)
+- 追加行数: +88 行
+- 既存 SECTION 改変 0 件 (追加のみ)
+
+LP 固有 path: SECTION 1.4 として新規追加
+- サンプル 1: プロジェクト記述 Before (NG) vs After (STAR + 数値)
+  - Before: 規模不明 + 役割不明 + 数値ゼロ + 技術簡素 = 5 NG 理由解説
+  - After: 月 8,000 万件決済 + リード 5 名 + STAR フル + 数値 4 軸 + 技術 11 件
+- サンプル 2: 技術スタック Before (羅列) vs After (★3 段階 + バージョン + 資格)
+- 5 大 NG パターン (数値ゼロ / 主語不明 / 羅列 / 業務のみ / 自己 PR 抽象)
+
+★asp-constraint 通常制約クリア
+★480 verbatim: TechGo a8mat (4B1LPN+E39C6Q+5B0Y+HV7V6) 維持 (Edit対象外)
+★273 NG 表現 0 件 (絶対/必ず/100% 全件文脈確認済)
+公的引用 3 件: JILPT + IPA IT 人材白書 + 厚労省職業情報
+
+build: Astro 216 pages success
+本 sess 累計 25 LP 完全別軸 LP 固有性 demonstrate (★666 体現 22 連続)
