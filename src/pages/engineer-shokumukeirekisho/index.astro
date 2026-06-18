@@ -126,6 +126,126 @@ const faqSchema = {
     </div>
   </section>
 
+  <!-- ★666 LP 固有深化 22 回目: P33 重要書類サンプル + 読み方解説 path 過去 21 path 全て「概念整理」だった honest 反省 -> 22 回目は「実物書類サンプル + Before/After + NG パターン解説」で構造的に違う軸 -->
+  <section class="lp-section" id="sec-sample" style="background:#fdf4ff;">
+    <div class="container">
+      <p class="section-num">SECTION / 1.4 (深化)</p>
+      <h2 style="color:#581c87;">📄 職務経歴書サンプル Before / After 比較 + 5 大 NG パターン honest 解説</h2>
+      <p style="line-height:1.85;">「STAR フレーム」「技術スタック」と言われても<strong>実物の honest 例</strong>が見えないと書きにくい選択肢が公開情報で公表されている傾向。本セクションでは<strong>「Before (NG 例)」と「After (改善例)」を並列提示</strong>し、各部の honest 違い + 採用担当者視点の解説 + 5 大 NG パターン honest 整理を行います。<strong>★365 honest</strong>: 本サンプルは公開情報・人材業界一般的整理に基づく擬似例であり、特定企業・個人の実例ではありません。最終判断は転職エージェント + 人事担当者の honest 助言が現実的選択肢。</p>
+
+      <h3 style="color:#581c87;border-bottom:2px solid #a855f7;padding-bottom:0.3em;margin-top:1.5em;">📝 サンプル 1: プロジェクト記述部 (Before vs After)</h3>
+
+      <div style="background:#fef2f2;border:2px solid #ef4444;padding:1.2em 1.5em;border-radius:6px;margin-top:1em;">
+        <h4 style="color:#991b1b;margin-top:0;">❌ Before (よくある NG 例)</h4>
+        <pre style="background:#fff;padding:1em;border-left:4px solid #ef4444;border-radius:4px;font-family:'MS Gothic',monospace;font-size:0.9em;line-height:1.6;white-space:pre-wrap;">
+■ プロジェクト名: 決済システム改修
+■ 期間: 2023 年 4 月 〜 2024 年 3 月
+■ 役割: バックエンド開発
+■ 内容:
+  ・既存の決済システムを改修
+  ・API のレスポンスを改善
+  ・チームで協力して開発を進めた
+■ 使用技術: Java, Spring Boot</pre>
+        <p style="color:#991b1b;margin-top:0.8em;line-height:1.85;"><strong>🔍 NG 理由 honest 解説</strong>: ① <strong>規模・課題が不明</strong> (Situation 欠如・「決済システム」が 100 万件/月か 1 億件/月か honest 不明) / ② <strong>役割の honest 範囲不明</strong> (Task 欠如・チームリーダーか個人開発者か不明) / ③ <strong>具体的 Action 欠如</strong> (技術選定理由 + 実装判断 honest 不明) / ④ <strong>数値成果 0</strong> (Result 欠如・「改善した」だけで定量化なし) / ⑤ <strong>技術スタック簡素</strong> (Java/Spring Boot のバージョン・ライブラリ honest 不明)。</p>
+      </div>
+
+      <div style="background:#f0fdf4;border:2px solid #10b981;padding:1.2em 1.5em;border-radius:6px;margin-top:1em;">
+        <h4 style="color:#065f46;margin-top:0;">✅ After (STAR フレーム + 数値 + 技術スタック明示)</h4>
+        <pre style="background:#fff;padding:1em;border-left:4px solid #10b981;border-radius:4px;font-family:'MS Gothic',monospace;font-size:0.9em;line-height:1.6;white-space:pre-wrap;">
+■ プロジェクト名: 決済システム高負荷対応改修
+■ 期間: 2023 年 4 月 〜 2024 年 3 月 (12 ヶ月)
+■ 役割: バックエンドリード (チーム 5 名・うち外部 2 名)
+
+【Situation (背景)】
+  月間取引 8,000 万件のクレカ決済システムにて
+  ピーク時 (毎月 25 日 12-14 時) のレスポンス劣化
+  (P99 で 3.2 秒・SLA 1.5 秒超過) が課題化。
+  CS 問い合わせ月 200 件 / SLA 違反ペナルティ年間 1,200 万円。
+
+【Task (担当責任範囲)】
+  技術選定 + アーキテクチャ設計 + 実装統率 +
+  ステージング検証 + 本番リリース管理を担当。
+
+【Action (具体実装)】
+  ① N+1 クエリ排除 (JPA → MyBatis 移行・SELECT 削減 87%)
+  ② Redis キャッシュ層追加 (キャッシュヒット率 92%)
+  ③ DB connection pool 拡張 (HikariCP・max 30→100)
+  ④ 非同期処理化 (Spring WebFlux + Reactor)
+  ⑤ K6 による負荷試験 (ピーク負荷 5x で SLA 達成確認)
+
+【Result (定量成果)】
+  ・P99 レスポンス: 3.2 秒 → 0.42 秒 (87% 改善)
+  ・SLA 違反ペナルティ: 年 1,200 万円 → 0 円 (100% 削減)
+  ・CS 問い合わせ: 月 200 件 → 月 8 件 (96% 削減)
+  ・本番障害ゼロで 12 ヶ月運用継続
+
+■ 使用技術:
+  Java 17 / Spring Boot 3.1 / Spring WebFlux /
+  MyBatis 3.5 / PostgreSQL 15 / Redis 7.0 /
+  HikariCP / Reactor 3.5 / K6 / Datadog / GitHub Actions</pre>
+        <p style="color:#065f46;margin-top:0.8em;line-height:1.85;"><strong>🔍 採用担当者視点の honest 解説</strong>: ① <strong>規模 honest 明示</strong> (8,000 万件/月) で技術難易度評価可能 / ② <strong>定量 KPI 4 軸</strong> (レスポンス 87% / 違反 100% / CS 96% / 障害 0) で実装力 honest 評価可能 / ③ <strong>技術選定理由</strong> (N+1 → MyBatis 等) で判断力 honest 把握可能 / ④ <strong>役割範囲明示</strong> (リード + チーム 5 名) でマネジメント経験評価可能 / ⑤ <strong>技術スタック詳細</strong> (バージョン + ライブラリ) でスキルレベル honest 評価可能。</p>
+      </div>
+
+      <h3 style="color:#581c87;border-bottom:2px solid #a855f7;padding-bottom:0.3em;margin-top:1.5em;">📝 サンプル 2: 技術スタック記載部 (Before vs After)</h3>
+
+      <div style="background:#fef2f2;border:2px solid #ef4444;padding:1.2em 1.5em;border-radius:6px;margin-top:1em;">
+        <h4 style="color:#991b1b;margin-top:0;">❌ Before (羅列のみ)</h4>
+        <pre style="background:#fff;padding:1em;border-left:4px solid #ef4444;border-radius:4px;font-family:'MS Gothic',monospace;font-size:0.9em;line-height:1.6;white-space:pre-wrap;">
+スキル: Java, Python, AWS, Docker, Kubernetes, React</pre>
+        <p style="color:#991b1b;margin-top:0.8em;line-height:1.85;"><strong>🔍 NG 理由</strong>: 習熟度 + 経験年数 + 実務適用範囲 honest 不明 = 採用担当者の honest 評価困難.</p>
+      </div>
+
+      <div style="background:#f0fdf4;border:2px solid #10b981;padding:1.2em 1.5em;border-radius:6px;margin-top:1em;">
+        <h4 style="color:#065f46;margin-top:0;">✅ After (カテゴリ別 + 習熟度 + 経験年数)</h4>
+        <pre style="background:#fff;padding:1em;border-left:4px solid #10b981;border-radius:4px;font-family:'MS Gothic',monospace;font-size:0.9em;line-height:1.6;white-space:pre-wrap;">
+【プログラミング言語】
+  ★★★ (5 年以上・実務主軸) : Java (17/21), Python (3.10+)
+  ★★ (2-3 年・実務副軸)     : TypeScript (4.x/5.x), Go (1.20+)
+  ★ (1 年未満・学習中)        : Rust (1.70+)
+
+【フレームワーク】
+  ★★★ : Spring Boot 3.x, FastAPI, Django 4.x
+  ★★   : React 18, Next.js 13, Vue.js 3.x
+  ★     : NestJS
+
+【インフラ・クラウド】
+  ★★★ : AWS (EC2, RDS, S3, Lambda, ECS, EKS),
+          Docker, Kubernetes (本番運用 3 年)
+  ★★   : GCP (GKE, Cloud Run, BigQuery), Terraform
+  ★     : Azure (AKS)
+
+【データベース】
+  ★★★ : PostgreSQL 12-15, MySQL 8.x, Redis 6-7
+  ★★   : MongoDB, DynamoDB, Elasticsearch
+  ★     : Cassandra
+
+【監視・CI/CD】
+  ★★★ : Datadog, GitHub Actions, ArgoCD
+  ★★   : Prometheus + Grafana, Jenkins
+  ★     : New Relic
+
+【保有資格】
+  ・AWS Certified Solutions Architect Professional (2023/06)
+  ・Certified Kubernetes Administrator (CKA・2022/12)
+  ・Oracle Java Programmer Gold SE 17 (2023/03)</pre>
+        <p style="color:#065f46;margin-top:0.8em;line-height:1.85;"><strong>🔍 改善ポイント</strong>: ① <strong>★ 3 段階習熟度</strong>で採用担当者が即座に honest 評価可能 / ② <strong>バージョン明示</strong>で実務適用範囲 honest 把握可能 / ③ <strong>カテゴリ別整理</strong>で T 字型 vs π 字型スキル honest 判定可能 / ④ <strong>資格は取得年月</strong>明示で陳腐化 honest 評価可能.</p>
+      </div>
+
+      <div style="background:#fef3c7;border:2px solid #f59e0b;padding:1.2em 1.5em;border-radius:6px;margin-top:1.5em;">
+        <h3 style="color:#92400e;margin-top:0;">🚨 5 大 NG パターン honest 解説 (採用担当者が即落とす書類)</h3>
+        <ol style="line-height:1.85;">
+          <li><strong>NG 1: 数値ゼロ</strong> = 「改善した」「効率化した」「対応した」のみで定量 KPI なし → <strong>「実装力 honest 評価不能」</strong>と判断され honest 書類落ち選択肢 (公開情報・人材業界一般的整理)</li>
+          <li><strong>NG 2: 主語不明</strong> = 「チームで開発した」のみで個人の Task / Action 範囲 honest 不明 → <strong>「リーダー経験有無 honest 不能」</strong>と判断される選択肢</li>
+          <li><strong>NG 3: 技術スタック羅列</strong> = カテゴリ + 習熟度 + 経験年数なし → <strong>「即戦力評価 honest 不能」</strong>と判断される選択肢</li>
+          <li><strong>NG 4: 業務内容のみ</strong> = ビジネス課題 + 解決策の honest 因果なし → <strong>「ビジネス理解力 honest 評価不能」</strong>と判断される選択肢 (特にコンサル + DX エンジニアで致命的)</li>
+          <li><strong>NG 5: 自己 PR 抽象</strong> = 「コミュニケーション能力高い」「責任感ある」のみで具体エピソードなし → <strong>「面接時の honest 確認必要」</strong>と判断され書類段階で落とされる選択肢</li>
+        </ol>
+      </div>
+
+      <p class="compare-note" style="margin-top:1em;font-size:0.9em;background:#fff7ed;border-left:4px solid #f97316;padding:1em;">⚠️ <strong>本サンプルは公開情報・人材業界一般的整理に基づく擬似例であり、特定企業・個人の実例ではありません</strong> (★365 honest)。実際の職務経歴書作成は<strong>転職エージェント担当者 + 人事担当者の honest 助言</strong>が現実的選択肢。<a href="https://www.jil.go.jp/" target="_blank" rel="noopener">JILPT</a> + <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA IT 人材白書</a> + <a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener">厚生労働省 職業情報</a> 確認推奨. 本 LP は<strong>A8.net 経由のアフィリエイト広告 (PR)</strong> を含みます.</p>
+    </div>
+  </section>
+
   <!-- ============ SECTION 02 採用担当者が見るポイント ============ -->
   <section class="lp-section" id="sec-fermi" aria-labelledby="h2-fermi">
     <div class="container">
