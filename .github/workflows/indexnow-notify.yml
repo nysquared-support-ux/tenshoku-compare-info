@@ -1,0 +1,29 @@
+name: IndexNow API Notify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/pages/**'
+      - 'public/sitemap.xml'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Notify IndexNow (Bing/Yandex)
+        run: |
+          URLS=$(grep -oE '<loc>[^<]+' public/sitemap.xml | sed 's/<loc>//' | head -100 | jq -R . | jq -s -c .)
+          if [ -z "$URLS" ] || [ "$URLS" = "null" ]; then
+            URLS='[\"https://tenshoku-compare-info.pages.dev/\"]'
+          fi
+          curl -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"host\": \"tenshoku-compare-info.pages.dev\",
+              \"key\": \"227cc642419bb18b2b2477cba90b1349\",
+              \"keyLocation\": \"https://tenshoku-compare-info.pages.dev/227cc642419bb18b2b2477cba90b1349.txt\",
+              \"urlList\": $URLS
+            }"
