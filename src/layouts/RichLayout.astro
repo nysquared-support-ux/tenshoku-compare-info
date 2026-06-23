@@ -27,6 +27,8 @@ interface Props {
   description?: string;
   breadcrumb?: BreadcrumbItem[];
   ogUrl?: string;
+  datePublished?: string;
+  dateModified?: string;
 }
 
 const {
@@ -34,6 +36,8 @@ const {
   description = 'IT エンジニアのハイクラス転職を公的出典で整理。公開情報ベースの中立的判断材料を提供します。',
   breadcrumb = [{ name: 'ホーム', url: '/' }],
   ogUrl = '',
+  datePublished = '2026-04-21',
+  dateModified = new Date().toISOString().split('T')[0],
 } = Astro.props;
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://tenshoku-compare-info.pages.dev';
@@ -58,6 +62,29 @@ const canonical = ogUrl || Astro.url.href;
   <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="tenshoku-compare-info" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- 構造化データ: Article + BreadcrumbList (★326 守破離・★660 Rich Result 対象化) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': title,
+    'description': description,
+    'datePublished': datePublished,
+    'dateModified': dateModified,
+    'author': { '@type': 'Organization', 'name': 'NY-squared 編集部', 'url': siteUrl },
+    'publisher': { '@type': 'Organization', 'name': 'NY-squared', 'url': siteUrl },
+    'mainEntityOfPage': { '@type': 'WebPage', '@id': canonical },
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': breadcrumb.map((b, i) => ({
+      '@type': 'ListItem',
+      'position': i + 1,
+      'name': b.name,
+      ...(b.url && i < breadcrumb.length - 1 ? { 'item': `${siteUrl}${b.url}` } : {}),
+    })),
+  })} />
 
   <!-- Claude Design リッチデザイン (★365 訂正・フル採用・簡素化しない) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
