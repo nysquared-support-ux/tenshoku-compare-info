@@ -22,6 +22,7 @@
  * → Claude Design の .fv .compare .toc .box 等 class が rich-techgo.css で全適用
  */
 interface BreadcrumbItem { name: string; url?: string; }
+interface FAQItem { q: string; a: string; }
 interface Props {
   title: string;
   description?: string;
@@ -29,6 +30,7 @@ interface Props {
   ogUrl?: string;
   datePublished?: string;
   dateModified?: string;
+  faq?: FAQItem[];
 }
 
 const {
@@ -38,6 +40,7 @@ const {
   ogUrl = '',
   datePublished = '2026-04-21',
   dateModified = new Date().toISOString().split('T')[0],
+  faq = [],
 } = Astro.props;
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://tenshoku-compare-info.pages.dev';
@@ -85,6 +88,17 @@ const canonical = ogUrl || Astro.url.href;
       ...(b.url && i < breadcrumb.length - 1 ? { 'item': `${siteUrl}${b.url}` } : {}),
     })),
   })} />
+
+  {/* 構造化データ: FAQPage (★326 横展開・条件付き出力・faq prop が 2 件以上で生成) */}
+  {faq.length >= 2 && <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faq.map((item) => ({
+      '@type': 'Question',
+      'name': item.q,
+      'acceptedAnswer': { '@type': 'Answer', 'text': item.a },
+    })),
+  })} />}
 
   <!-- Claude Design リッチデザイン (★365 訂正・フル採用・簡素化しない) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
