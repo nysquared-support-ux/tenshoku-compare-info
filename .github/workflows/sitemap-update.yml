@@ -1,33 +1,108 @@
-name: Auto Update Sitemap Lastmod
+# sitemap-update.yml — 2026-08-02 全面改訂
+#
+# 【改訂前に何をしていたか】
+#   毎日 09:00 JST に cron で起動し、public/sitemap.xml の <lastmod> を
+#   sed で全件「今日」に書き換えて自動 commit していました（2026-06-23 導入）。
+#
+# 【なぜ止めたか】（2026-08-02 実測）
+#   1. 中身が変わっていない全 URL が毎日「今日更新」を主張し続けるため、
+#      Google の「lastmod は検証可能に正確な場合に使う」という仕様に照らして
+#      lastmod シグナルが無効化されていました。
+#   2. 導入から 40 日間、8/8 のサイトマップが 1 度も読み込まれておらず、
+#      効果が確認できませんでした。
+#   3. そもそも URL 一覧を更新しないため、新規ページが sitemap に入りません。
+#      実測: taishoku は src/pages 90 に対し sitemap 89（/henkin-hoshou/ が欠落）。
+#
+# 【改訂後の役割】
+#   書き換えは一切しません。「src/pages と public/sitemap.xml が一致しているか」を
+#   検査し、ズレていれば CI を落とします。二度と静かに乖離しないための番人です。
+#   sitemap の再生成はローカルで実行します:
+#       python scripts\sitemap-rebuild.py --apply
+#
+name: Sitemap Consistency Check
 
 on:
   push:
     branches: [main]
     paths:
       - 'src/pages/**'
+      - 'public/sitemap.xml'
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'  # 毎日 09:00 JST (UTC 00:00)
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  update:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Update sitemap lastmod
-        run: |
-          TODAY=$(date +%Y-%m-%d)
-          if [ -f public/sitemap.xml ]; then
-            sed -i "s|<lastmod>[0-9-]*</lastmod>|<lastmod>$TODAY</lastmod>|g" public/sitemap.xml
-            echo "Updated lastmod to $TODAY"
-          else
-            echo "public/sitemap.xml not found, skipping"
-          fi
-      - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: actions/setup-node@v4
         with:
-          commit_message: 'auto: sitemap lastmod update'
-          file_pattern: 'public/sitemap.xml'
+          node-version: '20'
+      - name: Check sitemap against src/pages
+        run: |
+          cat > /tmp/check-sitemap.mjs <<'CHECK_EOF'
+          // check-sitemap.mjs — public/sitemap.xml が src/pages と一致しているかを検査する（書き換えはしない）
+          // 2026-08-02 追加。sitemap に新規ページが入らない状態を二度と見逃さないための番人。
+          import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
+          import { join, extname, sep } from 'node:path';
+
+          const SRC = 'src/pages';
+          const SITEMAP = 'public/sitemap.xml';
+          // .html も Astro のルートになる（2026-08-02 修正）
+          const EXT = new Set(['.astro', '.md', '.mdx', '.html']);
+          const EXCLUDE_STEMS = new Set(['404', '500']);
+
+          function walk(dir, acc = []) {
+            for (const name of readdirSync(dir)) {
+              const p = join(dir, name);
+              if (statSync(p).isDirectory()) walk(p, acc);
+              else if (EXT.has(extname(name))) acc.push(p);
+            }
+            return acc;
+          }
+
+          function toPath(file) {
+            let rel = file.slice(SRC.length + 1).split(sep).join('/');
+            rel = rel.replace(/\.(astro|md|mdx|html)$/, '');
+            const parts = rel.split('/').filter(Boolean);
+            if (parts[parts.length - 1] === 'index') parts.pop();
+            return parts.length ? '/' + parts.join('/') + '/' : '/';
+          }
+
+          if (!existsSync(SRC)) { console.log('src/pages がないためスキップ'); process.exit(0); }
+          if (!existsSync(SITEMAP)) { console.error(`ERROR: ${SITEMAP} がありません`); process.exit(1); }
+
+          const files = walk(SRC).filter(f => {
+            const base = f.split(sep).pop().replace(/\.(astro|md|mdx|html)$/, '');
+            if (EXCLUDE_STEMS.has(base)) return false;
+            if (/[\[\]]/.test(f)) return false;   // 動的ルート
+            return true;
+          });
+          const expected = new Set(files.map(toPath));
+
+          const raw = readFileSync(SITEMAP);
+          const hasBom = raw[0] === 0xef && raw[1] === 0xbb && raw[2] === 0xbf;
+          const xml = raw.toString('utf8').replace(/^﻿/, '');
+          const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+          if (!locs.length) { console.error('ERROR: sitemap に <loc> が 1 件もありません'); process.exit(1); }
+
+          const origin = new URL(locs[0]).origin;
+          const actual = new Set(locs.map(u => new URL(u).pathname));
+
+          const missing = [...expected].filter(p => !actual.has(p)).sort();
+          const stale   = [...actual].filter(p => !expected.has(p)).sort();
+
+          console.log(`origin=${origin}  src/pages=${expected.size}  sitemap=${actual.size}  BOM=${hasBom}`);
+          for (const p of missing) console.log(`  MISSING  (ページはあるが sitemap にない): ${p}`);
+          for (const p of stale)   console.log(`  STALE    (sitemap にあるがページがない): ${p}`);
+          if (hasBom) console.log('  BOM      sitemap.xml の先頭に UTF-8 BOM があります');
+
+          if (missing.length || stale.length || hasBom) {
+            console.error('\nNG: sitemap を再生成してください  ->  python scripts\\sitemap-rebuild.py --apply');
+            process.exit(1);
+          }
+          console.log('OK: sitemap は src/pages と一致しています');
+          CHECK_EOF
+          node /tmp/check-sitemap.mjs
