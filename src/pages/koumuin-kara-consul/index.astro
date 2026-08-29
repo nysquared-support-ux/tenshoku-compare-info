@@ -19,7 +19,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-21', dateModified: '2026-05-21',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '公務員の経験は、コンサルティング業界で本当に評価されるのでしょうか？', a: 'はい、特に公共系コンサルティングファームでは高く評価される傾向にあります。政策立案や予算執行、法制度に関する深い知見は、官公庁や自治体の課題解決に直結するためです。また、「国家公務員法」等で培われた高い倫理観や守秘義務への意識も、信頼性が重視されるコンサルタント業務において強みになるとされます。' },
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -230,11 +230,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/eigyou-kara-consul/">営業からコンサル転職 完全ガイド｜評価される営業経験・狙えるファーム・選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/finance-kara-consul/">金融からコンサル 完全ガイド｜銀行/証券/投資銀行出身者が狙うキャリアパス｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/igyoushu-kara-consul/">異業種からコンサル 完全ガイド｜前職別の転身パス + 評価ポイント + 選考対策 全方位整理｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/maker-kara-consul/">メーカーからコンサル 完全ガイド｜製造業出身者が狙えるキャリアパス・年収・選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/shosha-kara-consul/">商社からコンサル 完全ガイド｜総合商社出身者が狙うキャリアパス・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/eigyou-kara-consul/">営業からコンサル転職 完全ガイド｜評価される営業経験・狙えるファーム・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/finance-kara-consul/">金融からコンサル 完全ガイド｜銀行/証券/投資銀行出身者が狙うキャリアパス｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/igyoushu-kara-consul/">異業種からコンサル 完全ガイド｜前職別の転身パス + 評価ポイント + 選考対策 全方位整理｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/maker-kara-consul/">メーカーからコンサル 完全ガイド｜製造業出身者が狙えるキャリアパス・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/shosha-kara-consul/">商社からコンサル 完全ガイド｜総合商社出身者が狙うキャリアパス・年収・選考対策｜MyVision (PR)</a></li>
       </ul>
     </div>
   </section>

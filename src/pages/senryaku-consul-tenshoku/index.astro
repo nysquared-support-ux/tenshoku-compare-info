@@ -19,7 +19,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-21', dateModified: '2026-05-21',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '戦略コンサル未経験でも転職は可能ですか？', a: 'はい、未経験からの転職は一般的とされます。特に第二新卒や20代ではポテンシャルが重視される傾向にあります。ただし、論理的思考力や問題解決能力を証明する必要があり、職業能力開発促進法が示すように、主体的な能力開発と準備が不可欠です。事前のケース面接対策が合否を分ける重要な要素となります。' },
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -241,11 +241,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-genshoku-tenshoku/">在職中のコンサル転職完全ガイド｜現職を続けながら転職を進める方法｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
       </ul>
     </div>
   </section>

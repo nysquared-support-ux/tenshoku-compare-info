@@ -20,7 +20,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-22', dateModified: '2026-05-22',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: 'コンサルティング業界は未経験ですが、転職は可能でしょうか？', a: 'はい、可能です。近年は事業会社での専門知識（例：IT、製造、金融）やエンジニアリング経験を高く評価する求人が増加傾向にあります。未経験から挑戦される方向けの選考対策も充実しており、異業種でのご経験をどうアピールすれば良いか、具体的な戦略からサポートさせていただきますのでご安心ください。' },
@@ -35,7 +35,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -219,11 +219,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-agent-osusume/">エンジニア転職エージェントの選び方完全ガイド｜タイプ別の特徴と自分に合う選定基準｜TechGo (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-agent-hikaku/">コンサル転職エージェント比較ガイド｜主要5社の特徴整理｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/kaikeishi-tenshoku-agent-osusume/">会計士 転職エージェントの選び方ガイド｜複数併用の参考軸（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/zeirishi-tenshoku-agent-osusume/">税理士 転職エージェントの選び方ガイド｜大手vs特化型の整理（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/osusume/">転職エージェント おすすめ｜失敗しない選び方 5 基準と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/engineer-agent-osusume/">エンジニア転職エージェントの選び方完全ガイド｜タイプ別の特徴と自分に合う選定基準｜TechGo (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-tenshoku-agent-hikaku/">コンサル転職エージェント比較ガイド｜主要5社の特徴整理｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/kaikeishi-tenshoku-agent-osusume/">会計士 転職エージェントの選び方ガイド｜複数併用の参考軸（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/zeirishi-tenshoku-agent-osusume/">税理士 転職エージェントの選び方ガイド｜大手vs特化型の整理（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/osusume/">転職エージェント おすすめ｜失敗しない選び方 5 基準と 4 社比較・利用の流れ完全ガイド (2026年版・PR)</a></li>
       </ul>
     </div>
   </section>

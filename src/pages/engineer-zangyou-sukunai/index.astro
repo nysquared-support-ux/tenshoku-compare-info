@@ -20,7 +20,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-23', dateModified: '2026-05-23',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '相談だけでも可能ですか？', a: 'はい、もちろん可能です。まずは情報収集をしたい、自身の市場価値を知りたいといった目的でのご相談も歓迎しております。無理に転職をお勧めすることは一切ございません。客観的な視点から、あなたのキャリアプランについてアドバイスさせていただきますので、お気軽にご利用ください。' },
@@ -35,7 +35,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -218,11 +218,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-portfolio/">エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/devops-engineer/">DevOps エンジニア転職ガイド｜SRE/プラットフォームの市場価値（2026年6月時点・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/engineer-1000man/">エンジニア 年収 1000 万円への道｜キャリアパス 5 種 + 必須スキル整理（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/engineer-portfolio/">エンジニア ポートフォリオ 作り方完全ガイド｜GitHub + 個人開発 + 採用担当者視点（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/engineer-shokumukeirekisho/">エンジニア 職務経歴書 書き方完全ガイド｜STAR フレーム + 技術スタック + NG パターン（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/startup-engineer/">スタートアップエンジニア転職ガイド｜成長機会と選び方（2026年6月時点・PR）</a></li>
       </ul>
     </div>
   </section>

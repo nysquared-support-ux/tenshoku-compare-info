@@ -20,7 +20,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-22', dateModified: '2026-05-22',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '40代での転職は初めてで不安です。どのようなサポートが受けられますか？', a: 'ご安心ください。私たちは40代で初めて転職を検討される方のサポート実績が豊富です。まずは丁寧なカウンセリングで、これまでのご経験や今後の希望を整理します。その上で、市場価値の客観的な評価、職務経歴書の添削、想定問答集を用いた面接対策、そして年収交渉の代行まで、一貫して手厚くサポートいたします。' },
@@ -33,7 +33,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -215,11 +215,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-40dai/">40代 コンサル 転職 完全ガイド｜専門特化×マネジメント実績で狙えるファームと現実的戦略｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-tenshoku-40dai/">40代 コンサル 転職 完全ガイド｜専門特化×マネジメント実績で狙えるファームと現実的戦略｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
       </ul>
     </div>
   </section>

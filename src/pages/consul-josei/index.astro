@@ -19,7 +19,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-21', dateModified: '2026-05-21',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '在職中のため、転職活動をしていることを現在の職場に知られたくありません。個人情報の管理は徹底されていますか？', a: 'はい、ご安心ください。ご登録いただいた個人情報は厳重に管理し、ご本人の許可なく企業へ開示することは一切ございません。応募や面接に進む際も、必ず事前にご本人の意思を確認いたします。特定の企業への応募をブロックする設定も可能です。守秘義務を遵守し、あなたのプライバシーを最優先に考えたサポートをお約束します。' },
@@ -32,7 +32,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -215,11 +215,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-shibodouki/">コンサル 志望動機 完全ガイド｜落ちる 7 パターン × 通る論理構造 × 業界別翻訳例｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-eigo/">コンサル 英語 完全ガイド｜ファーム別の英語要件 + 必要レベル + 入社後の使い方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-gakureki/">コンサル転職 学歴フィルター完全ガイド｜学歴の影響範囲・選考での評価軸・対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-mba/">コンサル MBA 完全ガイド｜MBA はコンサル転職に必要か・取得タイミング・活かし方｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-nensyu/">コンサル 年収 完全ガイド｜ファーム別・年代別・ポジション別レンジと年収アップ事例｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-shibodouki/">コンサル 志望動機 完全ガイド｜落ちる 7 パターン × 通る論理構造 × 業界別翻訳例｜MyVision (PR)</a></li>
       </ul>
     </div>
   </section>

@@ -20,7 +20,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-22', dateModified: '2026-05-22',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: 'IT業界未経験からでも社内SEに転職することは可能ですか？', a: '未経験からの転職は挑戦的ですが、不可能ではありません。特に、社内ヘルプデスクやITサポートといったポジションからキャリアを始めるケースが見られます。職業能力開発促進法で示されるように、計画的な職業能力開発が重要とされ、基本的なIT知識や資格（基本情報技術者試験など）の取得が評価される傾向にあります。' },
@@ -37,7 +37,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -220,11 +220,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/se-consul-tenshoku/">SEからコンサル転職ガイド｜システムエンジニアの強みとIT/DXコンサルへの道｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/se-consul-tenshoku/">SEからコンサル転職ガイド｜システムエンジニアの強みとIT/DXコンサルへの道｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
       </ul>
     </div>
   </section>

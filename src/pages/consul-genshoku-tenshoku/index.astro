@@ -20,7 +20,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-24', dateModified: '2026-05-24',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '在職中の会社に転職活動が知られることはありませんか？', a: 'ご登録者様の個人情報や活動状況は、ご本人の許可なく外部に開示することは一切ございません。応募先企業への情報開示も、必ず事前にご本人の同意を得てから行います。安心してご自身のペースで、慎重に転職活動を進めていただけます。' },
@@ -35,7 +35,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -215,11 +215,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-30dai/">30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/big4-consul-tenshoku/">BIG4 転職 完全ガイド｜Deloitte / PwC / EY / KPMG 4 大ファーム特性比較｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/boutique-consul-tenshoku/">ブティック系コンサル 転職 完全ガイド｜専門特化ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-gaishikei-tenshoku/">外資系コンサル転職ガイド｜主要ファームの特徴・選考・年収・英語要件｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-tenshoku-20daikouhan/">20代後半 コンサル 転職 完全ガイド｜26-29歳が市場価値ピーク前に決断する戦略｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-tenshoku-30dai/">30代 コンサル 転職 完全ガイド｜30代前半・後半別の市場価値と狙えるファーム｜MyVision (PR)</a></li>
       </ul>
     </div>
   </section>

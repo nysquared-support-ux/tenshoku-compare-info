@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 // TODO: Step 7 GSC登録前に手動 public/sitemap.xml 作成 or sitemapバージョン調整
 
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'https://tenshoku-compare-info.pages.dev',
+  site: process.env.PUBLIC_SITE_URL || 'https://tenshoku.trypromptguard.com',
   integrations: [
     tailwind(),
     // sitemap(),  // 一時無効化（上記コメント参照）

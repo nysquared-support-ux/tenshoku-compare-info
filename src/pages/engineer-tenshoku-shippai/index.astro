@@ -20,7 +20,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-22', dateModified: '2026-05-22',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: 'エンジニア転職で「失敗した」と感じる主な原因は何ですか？', a: 'スキルや企業文化のミスマッチが主な原因とされます。厚生労働省の雇用動向調査でも、労働条件への不満が離職理由の上位に挙げられています。これを避けるためには、事前の自己分析と企業研究が極めて重要になると考えられます。' },
@@ -37,7 +37,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -220,11 +220,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/consul-tenshoku-shippai/">コンサル 転職 失敗 完全ガイド｜5 大失敗パターンと回避する 5 つの行動｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/ai-engineer-tenshoku/">AI エンジニア 転職完全ガイド｜LLM 時代の市場価値と年収帯（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/backend-engineer-tenshoku/">バックエンドエンジニア 転職完全ガイド｜API/分散システム 年収帯とキャリアパス（2026年版・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/cloud-engineer-tenshoku/">クラウドエンジニア 転職完全ガイド｜AWS/GCP/Azure キャリアパスと年収帯（2026年5月時点・公開情報整理・PR）</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/consul-tenshoku-shippai/">コンサル 転職 失敗 完全ガイド｜5 大失敗パターンと回避する 5 つの行動｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/dainishinsotsu-engineer-tenshoku/">第二新卒 エンジニア 転職完全ガイド｜20代前半のキャリアアップ戦略（2026年版・PR）</a></li>
       </ul>
     </div>
   </section>

@@ -19,7 +19,7 @@ const articleSchema = {
   headline: title, description,
   datePublished: '2026-05-21', dateModified: '2026-05-21',
   author: { '@type': 'Organization', name: 'NY-squared 編集部' },
-  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku-compare-info.pages.dev/' },
+  publisher: { '@type': 'Organization', name: 'NY-squared 編集部', url: 'https://tenshoku.trypromptguard.com/' },
 };
 const faq = [
   { q: '三菱総合研究所 (MRI) のシンクタンク部門とコンサルティング部門の主な違いは何ですか？', a: 'シンクタンク部門は官公庁を主なクライアントとし、政策提言や社会課題解決に関する調査研究が中心です。一方、コンサルティング部門は民間企業向けに経営戦略や事業戦略の立案・実行支援を行います。両者が連携するプロジェクトも多く、幅広い領域をカバーするのがMRIの特色とされます。事業内容は、総務省の日本標準産業分類などを参考に分類されることがあります。' },
@@ -36,7 +36,7 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: breadcrumb.map((b, i) => ({
     '@type': 'ListItem', position: i + 1, name: b.name,
-    ...(b.url ? { item: 'https://tenshoku-compare-info.pages.dev' + b.url } : {}),
+    ...(b.url ? { item: 'https://tenshoku.trypromptguard.com' + b.url } : {}),
   })),
 };
 ---
@@ -216,11 +216,11 @@ const breadcrumbSchema = {
       <p class="section-num">関連記事</p>
       <h2 id="related-h">関連する記事</h2>
       <ul class="related-links" style="line-height:1.9;">
-        <li><a href="https://tenshoku-compare-info.pages.dev/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
-        <li><a href="https://tenshoku-compare-info.pages.dev/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/abeam-tenshoku/">アビーム 転職 完全ガイド｜アビームコンサルティングの SAP / 基幹業務特化 + 年収・選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/accenture-tenshoku/">アクセンチュア 転職 完全ガイド｜中途採用 4 部門 × 年収レンジ × 選考対策｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/atkearney-tenshoku/">A.T.カーニー 転職 完全ガイド｜戦略系名門ファームの特性・年収・選考対策・実行重視文化｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/bain-tenshoku/">ベイン 転職 完全ガイド｜Bain & Company の特性・年収・選考対策・PE 連携｜MyVision (PR)</a></li>
+        <li><a href="https://tenshoku.trypromptguard.com/baycurrent-tenshoku/">ベイカレント 転職 完全ガイド｜日系総合高単価ファームの特性・年収・選考対策｜MyVision (PR)</a></li>
       </ul>
     </div>
   </section>

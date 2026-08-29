@@ -10,4 +10,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://tenshoku-compare-info.pages.dev/sitemap.xml
+Sitemap: https://tenshoku.trypromptguard.com/sitemap.xml

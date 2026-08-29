@@ -17,13 +17,13 @@ jobs:
         run: |
           URLS=$(grep -oE '<loc>[^<]+' public/sitemap.xml | sed 's/<loc>//' | head -100 | jq -R . | jq -s -c .)
           if [ -z "$URLS" ] || [ "$URLS" = "null" ]; then
-            URLS='[\"https://tenshoku-compare-info.pages.dev/\"]'
+            URLS='[\"https://tenshoku.trypromptguard.com/\"]'
           fi
           curl -X POST "https://api.indexnow.org/IndexNow" \
             -H "Content-Type: application/json" \
             -d "{
-              \"host\": \"tenshoku-compare-info.pages.dev\",
+              \"host\": \"tenshoku.trypromptguard.com\",
               \"key\": \"227cc642419bb18b2b2477cba90b1349\",
-              \"keyLocation\": \"https://tenshoku-compare-info.pages.dev/227cc642419bb18b2b2477cba90b1349.txt\",
+              \"keyLocation\": \"https://tenshoku.trypromptguard.com/227cc642419bb18b2b2477cba90b1349.txt\",
               \"urlList\": $URLS
             }"

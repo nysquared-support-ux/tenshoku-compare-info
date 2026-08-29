@@ -2,7 +2,7 @@
 
 30-50代男性向け 転職エージェント比較情報サイト（PR）
 
-**公開URL**: https://tenshoku-compare-info.pages.dev/
+**公開URL**: https://tenshoku.trypromptguard.com/
 **Cloudflare Pages**: 自動デプロイ (main branch push → auto-rebuild)
 **運営者**: NY-squared (個人事業)
 
@@ -64,7 +64,7 @@ npm run build    # → dist/
 
 1. main ブランチへ push
 2. Cloudflare Pages が auto-detect → ビルド (約 1-2 min)
-3. https://tenshoku-compare-info.pages.dev/ に反映
+3. https://tenshoku.trypromptguard.com/ に反映
 4. ★297 アフィリエイト新規 URL 公開時の外部連携:
    - A8.net 副サイト登録 + 広告掲載URL追加提出
    - GSC サイトマップ送信 + URL 検査
